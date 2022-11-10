@@ -8,3 +8,9 @@ url: https://tabarecapitan.github.io/tabarecapitan.github.io
 # e.g, UA-1234567-89
 ga_tracking: UA-5555555-55
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
+
+# External navigation links
+nav_external_links:
+  - title: CV
+    url: https://github.com/just-the-docs/just-the-docs
+    hide_icon: true # set to true to hide the external link icon - defaults to false
