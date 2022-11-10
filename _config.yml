@@ -13,4 +13,4 @@ ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (t
 nav_external_links:
   - title: CV
     url: https://github.com/just-the-docs/just-the-docs
-    hide_icon: true # set to true to hide the external link icon - defaults to false
+    hide_icon: false # set to true to hide the external link icon - defaults to false
