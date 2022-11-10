@@ -9,7 +9,7 @@ I am an economist with a broad interest in **applied microeconomics**. My curren
 
 These days I live in [Uppsala], Sweden, where I work as a **postdoc** at **[SLU]**. I'm a member of the _environmental economics_ group within the **department of economics**.
 
-Please reach out if you want to talk; my email is tabare.capitan at gmail. I also have profiles in [google scholar] and [LinkedIn]. 
+Please reach out if you want to talk; my email is **tabare.capitan at gmail**. I also have profiles in [google scholar] and [LinkedIn]. 
 
 
 
