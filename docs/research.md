@@ -4,7 +4,7 @@ title: research
 permalink: /research/
 nav_order: 2
 ---
-🧠 Behavioral  |  🌲 environmental  |  🌍 development
+🧠 behavioral  |  🌲 environmental  |  🌍 development
 
 
 ## working papers
