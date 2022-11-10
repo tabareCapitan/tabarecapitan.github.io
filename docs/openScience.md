@@ -15,6 +15,7 @@ When possible[^4], I include a link to a replication package that contains instr
 
 In addition to my efforts to make my own work transparent, I've also (recently) joined a few larger projects that aim to study generalizability and replicability of research in social sciences. I'll add more information as these projects start to produce outcomes. 
 
+---
 
 [^1]: A [paywall](https://en.wikipedia.org/wiki/Paywall) is a method to restrict access to content. Unfortunately, most academic research is behind a paywall. ([This](https://paywallthemovie.com/) documentary provides a quick description of the problem). That said, there are alternative ways to get access to work behind a paywall. One such alternative is the legal service [Unpaywall](https://unpaywall.org/). 
 
