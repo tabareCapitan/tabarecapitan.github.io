@@ -4,7 +4,7 @@ title: research
 permalink: /research/
 nav_order: 2
 ---
-🧠 Behavioral economics  |  🌲 Environmental Economics  
+🧠 Behavioral  |  🌲 environmental  |  🌍 development
 
 
 ## working papers
