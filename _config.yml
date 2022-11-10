@@ -4,5 +4,7 @@ theme: just-the-docs
 
 url: https://tabarecapitan.github.io/tabarecapitan.github.io
 
-aux_links:
-  
+# Google Analytics Tracking (optional)
+# e.g, UA-1234567-89
+ga_tracking: UA-5555555-55
+ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
