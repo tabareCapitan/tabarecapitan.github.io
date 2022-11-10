@@ -1,5 +1,5 @@
 ---
-title: About me
+title: about me
 layout: home
 nav_order: 1
 ---
