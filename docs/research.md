@@ -9,11 +9,11 @@ nav_order: 2
 
 ## working papers
 
-**Capitán, T.**, Thunström, L., Van ‘t Veld, K. Shogren, J., and Nordström, J. Increasing calorie information uptake with a prenudge.
+**Capitán, T.**; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. Increasing calorie information uptake with a prenudge.
 [soon] 
 🧠 
 
-**Capitán, T.**, Nordström, J., Thunström, L., and Van ‘t Veld, K. Expecting to Get It: An Endowment Effect for Information.
+**Capitán, T.**; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. Expecting to Get It: An Endowment Effect for Information.
 [soon] 
 🧠 
 
