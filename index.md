@@ -11,6 +11,7 @@ Please reach out if you want to talk; my email is (``Tabare.Capitan`` at Gmail).
 
 
 
+---
 
 [^1]: Want to present your work in our group? Do let me know and we'll see what we can do.
 
