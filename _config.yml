@@ -2,12 +2,13 @@ title: Tabaré Capitán
 description: Personal website - Economist
 theme: just-the-docs
 
+
 url: https://tabarecapitan.github.io/tabarecapitan.github.io
 
-# Google Analytics Tracking (optional)
-# e.g, UA-1234567-89
-ga_tracking: UA-5555555-55
+# Google Analytics
+google_analytics: G-5XPBJKXZNK
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
+
 
 # External navigation links
 nav_external_links:
