@@ -7,7 +7,7 @@ nav_order: 2
 
 {::options parse_block_html="true" /}
 
-🧠 ** behavioral**  |  🌲 **environmental**  |  🌍 **development**
+🧠 **behavioral**  |  🌲 **environmental**  |  🌍 **development**
 {: .text-center}
 
 ---
