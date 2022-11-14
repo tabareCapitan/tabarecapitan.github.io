@@ -5,15 +5,17 @@ nav_order: 1
 ---
 
 
-I am an economist with a broad interest in **applied microeconomics**. My current research lies within **behavioral economics** (🧠) and **environmental economics** (🌲). For the former, I have mostly relied on lab experiments, and more recently, field experiments. For the latter, my research is in the context of **development economics** (🌎); most of it inspired by issues in Central America, where I spent many years before becoming a researcher. 
+I am an economist with a broad interest in **applied microeconomics**. My current research lies within **behavioral economics** (🧠) and **environmental economics** (🌲). For the former, I have mostly relied on lab experiments, and more recently, field experiments. For the latter, my research is (mostly) in the context of **development economics** (🌎); inspired by issues in Central America, where I spent many years before becoming a researcher. 
 
-These days I live in [Uppsala], Sweden, where I work as a **postdoc** at **[SLU]**. I'm a member of the **environmental economics group** within the **department of economics**.
+These days I live in [Uppsala], Sweden, where I work as a **postdoc** at [**SLU**](https://www.slu.se/en/departments/economics/research/research-groups/environmental-economics/){:target="_blank"}. I'm a member of the **environmental economics group** within the **department of economics**.
 
-Please reach out if you want to talk; my email is **tabare.capitan at gmail**. I also have profiles in [google scholar] and [LinkedIn]. 
+Please reach out if you want to talk; my email is **tabare.capitan at gmail**. 
+
+[google scholar](https://scholar.google.com/citations?user=uqivDeoAAAAJ&hl=en){: .btn }{:target="_blank"}
+
+[linkedIn](https://www.linkedin.com/in/tabareCapitan/){: .btn }{:target="_blank"}
 
 
 
-[SLU]: https://www.slu.se/en/departments/economics/research/research-groups/environmental-economics/
 [Uppsala]: https://visitsweden.com/where-to-go/middle-sweden/uppland/uppsala/
-[google scholar]: https://scholar.google.com/citations?user=uqivDeoAAAAJ&hl=en
-[LinkedIn]: https://www.linkedin.com/in/tabareCapitan/
+
