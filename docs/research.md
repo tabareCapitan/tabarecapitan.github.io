@@ -27,8 +27,7 @@ nav_order: 2
 {: .lh-0 }
 
 <details>
-  <summary markdown="span">**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying
-pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy Economics_, 66, 101264 🌲 🌍  </summary>
+  <summary markdown="span">**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy Economics_, 66, 101264 🌲 🌍  </summary>
 
 > **Links**: 
 [[pdf](https://osf.io/preprints/socarxiv/wcz8s/){:target="_blank"}]
@@ -52,8 +51,7 @@ pricing may increase total electricity consumption: Evidence from Costa Rica. _R
 {: .lh-0 }
 
 <details>
-  <summary markdown="span">Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021).
-MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 36(4) 🌲 🌍  </summary>
+  <summary markdown="span">Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021). MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 36(4) 🌲 🌍  </summary>
 
 > **Links**: 
 [[pdf](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf){:target="_blank"}]
@@ -78,9 +76,7 @@ MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 
 {: .lh-0 }
 
 <details>
-  <summary markdown="span">Albers, H. J.; Preonas, L.; **Capitán, T.**; Robinson, E.; and Madrigal-Ballestero, R. (2020).
-Optimal siting, sizing, and enforcement of marine protected areas. _Environmental and Resource
-Economics_, 77(1) 🌲 🌍  </summary>
+  <summary markdown="span">Albers, H. J.; Preonas, L.; **Capitán, T.**; Robinson, E.; and Madrigal-Ballestero, R. (2020). Optimal siting, sizing, and enforcement of marine protected areas. _Environmental and Resource Economics_, 77(1) 🌲 🌍  </summary>
 
 > **Links**: 
 [[doi](https://doi.org/10.1007/s10640-020-00472-7){:target="_blank"}]
@@ -106,7 +102,7 @@ prioritization, systematic conservation planning, marine spatial planning
 {: .lh-0 }
 
 <details>
-  <summary markdown="span">Alpízar, F.; Saborío-Rodríguez, M.; Martínez-Rodríguez, R.; Viguera, B.; Vignola, R.; **Capitán, T.**; and Harvey, C. (2020). Determinants of food insecurity among smallholder farmer households in Central America: Recurrent versus extreme weather-driven events. _Regional Environmental Change_, 20(1)</summary>
+  <summary markdown="span">Alpízar, F.; Saborío-Rodríguez, M.; Martínez-Rodríguez, R.; Viguera, B.; Vignola, R.; **Capitán, T.**; and Harvey, C. (2020). Determinants of food insecurity among smallholder farmer households in Central America: Recurrent versus extreme weather-driven events. _Regional Environmental Change_, 20(1) 🌲 🌍</summary>
 
 > **Links**: 
 [[doi](https://doi.org/10.1007/s10113-020-01592-y){:target="_blank"}]
@@ -125,25 +121,50 @@ prioritization, systematic conservation planning, marine spatial planning
 &nbsp;
 {: .lh-0 }
 
+<details>
+  <summary markdown="span">Madrigal-Ballestero, R.; **Capitán, T.**; Salas, A.; and Córdoba, D. (2019). Household and community responses to seasonal droughts in rural areas of Costa Rica. _Waterlines_, 38(4) 🌲 🌍</summary>
+
+> **Links**: 
+[[pdf](https://www.researchgate.net/publication/338340783_Household_and_community_responses_to_seasonal_droughts_in_rural_areas_of_Costa_Rica){:target="_blank"}]
+[[doi](https://doi.org/10.3362/1756-3488.18-00020){:target="_blank"}]
+{: .fs-2 }
+> 
+> **Abstract:** This paper describes the adaptive responses of rural households and community-based drinking water organizations (CWOs) during seasonal droughts in Costa Rica. It empirically characterizes the adaptive measures used by 3,410 households and 81 CWOs in the driest area of the country. Volumetric pricing is a powerful adaptation option for managing water scarcity during these periods. However, these pricing schemes are not properly set to recover costs for adequate investment in water infrastructure. As a result, many CWOs rely on external financial support to cover these investments. The financial and governance restrictions characterizing most CWOs must be overcome in order to implement most of the adaptation measures identified for preparedness against seasonal drought. On the other hand, some rural households use water sources in addition to the tap water provided by CWOs (e.g. bottled water), as well as water-storing devices (e.g. buckets). The lack of effective adaptation of CWOs to water scarcity, expressed by unreliable piped-water systems, would probably lead to a higher use of these alternatives. This would entail higher costs to households, due to the time and resources invested in these activities. These costs and the potential additional costs on health represent the social costs of community failures to adapt to drier scenarios in existing piped-water systems.
+{: .fs-2 }
+> 
+> **Keywords:** institutions, adaptation, climate change, governance, volumetric pricing
+{: .fs-2 }
+
+</details>   
 
 
-Madrigal-Ballestero, R.; **Capitán, T.**; Salas, A.; and Córdoba, D. (2019). Household and community responses to seasonal droughts in rural areas of Costa Rica. _Waterlines_, 38(4)
-[[pdf](https://www.researchgate.net/publication/338340783_Household_and_community_responses_to_seasonal_droughts_in_rural_areas_of_Costa_Rica)]
-[[doi](https://doi.org/10.3362/1756-3488.18-00020)]
-🌲 🌍
+<!-- ------------------------------------------------------------------------- -->
 
+&nbsp;
+{: .lh-0 }
 
-<!-- -------------------------------------------------------------------------------------- -->
+<details>
+  <summary markdown="span">Madrigal-Ballestero, R.; Albers, H. J.; **Capitán, T.**; and Salas, A. (2017). Marine protected areas in Costa Rica: How do artisanal fishers respond? Ambio, 46(7) 🌲 🌍</summary>
 
+> **Links**: 
+[[pdf](https://www.researchgate.net/profile/Roger_Madrigal-Ballestero/publication/316896515_Marine_protected_areas_in_Costa_Rica_How_do_artisanal_fishers_respond/links/5a2c89ae45851552ae7c9bdb/Marine-protected-areas-in-Costa-Rica-How-do-artisanal-fishers-respond.pdf){:target="_blank"}]
+[[doi](https://doi.org/10.1007/s13280-017-0921-y){:target="_blank"}]
+{: .fs-2 }
+> 
+> **Abstract:** Costa Rica is considering expanding their marine protected areas (MPAs) to conserve marine resources. Due to the importance of households’ responses to an MPA in defining the MPA’s ecological and economic outcomes, this paper uses an economic decision framework to interpret data from near-MPA household surveys to inform this policy discussion. The model and data suggest that the impact of expanding MPAs relies on levels of enforcement and on-shore wages. If larger near-shore MPAs can produce high wages through increased tourism, MPA expansions could provide ecological benefits with low burdens to communities. Due to distance costs and gear investments, however, MPAs farther off-shore may place high burdens on off-shore fishers.
+{: .fs-2 }
+> 
+> **Keywords:** enforcement, marine reserves, no-take zones, perceptions, tourism
+{: .fs-2 }
 
-Madrigal-Ballestero, R.; Albers, H. J.; **Capitán, T.**; and Salas, A. (2017). Marine protected areas in Costa Rica: How do artisanal fishers respond? Ambio, 46(7)
-[[pdf](https://www.researchgate.net/profile/Roger_Madrigal-Ballestero/publication/316896515_Marine_protected_areas_in_Costa_Rica_How_do_artisanal_fishers_respond/links/5a2c89ae45851552ae7c9bdb/Marine-protected-areas-in-Costa-Rica-How-do-artisanal-fishers-respond.pdf)]
-[[doi](https://doi.org/10.1007/s13280-017-0921-y)]
-🌲 🌍
+</details>  
 
 
 ---
 ## resting papers
+
+&nbsp;
+{: .lh-0 }
 
 
 **Capitan T.**, Madrigal-Ballestero, R.; Albers, H. J., White, B. Siting marine protected areas with area targets: protecting rural incomes, fish Stocks, and turtles
