@@ -10,6 +10,8 @@ nav_order: 2
 🧠 behavioral  |  🌲 environmental  |  🌍 development
 {: .text-center}
 
+test $$\beta$$
+
 
 ## working papers
 
@@ -22,14 +24,6 @@ nav_order: 2
 🧠 
 
 ## selected papers
-
-<!-- **Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying
-pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy
-Economics_, 66 
-[[pdf](https://osf.io/preprints/socarxiv/wcz8s/)]
-[[code](https://github.com/tabareCapitan/CNFL)]
-[[doi](https://doi.org/10.1016/j.reseneeco.2021.101264)]
-🌲 🌍 -->
 
 <details>
   <summary markdown="span">**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying
