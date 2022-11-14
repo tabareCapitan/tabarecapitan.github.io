@@ -30,9 +30,10 @@ nav_order: 2
 pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy
 Economics_, 66, 101264 🌲 🌍</summary>
 
-> **Links**: [[pdf](https://osf.io/preprints/socarxiv/wcz8s/)]
-[[code](https://github.com/tabareCapitan/CNFL)]
-[[doi](https://doi.org/10.1016/j.reseneeco.2021.101264)]
+> **Links**: 
+[[pdf](https://osf.io/preprints/socarxiv/wcz8s/){:target="_blank"}]
+[[code](https://github.com/tabareCapitan/CNFL){:target="_blank"}]
+[[doi](https://doi.org/10.1016/j.reseneeco.2021.101264){:target="_blank"}]
 {: .fs-2 }
 > 
 > **Abstract:** We study the implementation of a time-varying pricing (TVP) program by a major electricity utility in Costa Rica. Because of particular features of the data, we use recently developed understanding of the two-way fixed effects differences-in-differences estimator along with event-study specifications to interpret our results. Similar to previous research, we find that the program reduces consumption during peak-hours. However, in contrast with previous research, we find that the program increases total consumption. With a stylized economic model, we show how these seemingly conflicted results may not be at odds. The key element of the model is that previous research used data from rich countries, in which the use of heating and cooling devices drives electricity consumption, but we use data from a tropical middle-income country, where very few households have heating or cooling devices. Since there is not much room for technological changes (which might reduce consumption at all times), behavioral changes to reduce consumption during peak hours are not enough to offset the increased consumption during off-peak hours (when electricity is cheaper). Our results serve as a cautionary piece of evidence for policy makers interested in reducing consumption during peak hours—the goal can potentially be achieved with TVP, but the cost is increased total consumption.
@@ -53,9 +54,9 @@ Economics_, 66, 101264 🌲 🌍</summary>
 MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 36(4) 🌲 🌍</summary>
 
 > **Links**: 
-[[pdf](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf)
-[[online appendix](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b3910782701d6f77534940/1639158044424/Albers_etal_MRE_appendix.pdf)
-[[doi](https://www.journals.uchicago.edu/doi/10.1086/715818)
+[[pdf](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf){:target="_blank"}]
+[[online appendix](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b3910782701d6f77534940/1639158044424/Albers_etal_MRE_appendix.pdf){:target="_blank"}]
+[[doi](https://www.journals.uchicago.edu/doi/10.1086/715818){:target="_blank"}]
 {: .fs-2 }
 > 
 > **Abstract:** Using a spatially explicit framework with low/middle-income country coastal characteristics, we explore whether aspatial policies augment the impact of marine protected areas (MPAs) and identify when MPAs create income burdens on communities. When MPAs are small and budget-constrained, they cannot resolve all of the marinescape’s open-access issues, but they can create win-win opportunities for ecological and economic goals at lower levels of enforcement. Aspatial policies—taxes, gear restrictions, license restrictions, and livelihood programs—improve the MPA’s ability to generate ecological gains, and licenses and livelihood policies can mitigate MPA-induced income burdens. Managers can use MPA location and enforcement level, in conjunction with the MPA’s impact on fish dispersal, to induce exit from fishing and to direct the spatial leakage of effort. Our framework provides further insights for conservation-development policy in coastal settings, and we explore stylized examples in Costa Rica and Tanzania.
@@ -71,11 +72,27 @@ MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 
   
 <!-- -------------------------------------------------------------------------------------- -->
 
-Albers, H. J.; Preonas, L.; **Capitán, T.**; Robinson, E.; and Madrigal-Ballestero, R. (2020).
+
+<details>
+  <summary markdown="span">Albers, H. J.; Preonas, L.; **Capitán, T.**; Robinson, E.; and Madrigal-Ballestero, R. (2020).
 Optimal siting, sizing, and enforcement of marine protected areas. _Environmental and Resource
-Economics_, 77(1) 
-[[doi](https://doi.org/10.1007/s10640-020-00472-7)]
-🌲 🌍
+Economics_, 77(1) 🌲 🌍</summary>
+
+> **Links**: 
+[[doi](https://doi.org/10.1007/s10640-020-00472-7){:target="_blank"}]
+{: .fs-2 }
+> 
+> **Abstract:** ...
+{: .fs-2 }
+> 
+<!-- > **JEL classification:** ...
+{: .fs-2 } -->
+>
+> **Keywords:** additionality, bio-economic model, enforcement, leakage, nash equilibrium, no-take reserves, park efectiveness, reserve site selection, spatial
+prioritization, systematic conservation planning, marine spatial planning
+{: .fs-2 }
+
+</details>  
 
 
 <!-- -------------------------------------------------------------------------------------- -->
