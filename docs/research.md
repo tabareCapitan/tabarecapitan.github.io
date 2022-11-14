@@ -10,6 +10,7 @@ nav_order: 2
 🧠 behavioral  |  🌲 environmental  |  🌍 development
 {: .text-center}
 
+---
 ## working papers
 
 **Capitán, T.**; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. Increasing calorie information uptake with a prenudge.
@@ -19,6 +20,7 @@ nav_order: 2
 **Capitán, T.**; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. Expecting to Get It: An Endowment Effect for Information.
 [soon] 🧠 
 
+---
 ## selected papers
 
 <details>
@@ -92,9 +94,7 @@ prioritization, systematic conservation planning, marine spatial planning
 </details>  
 
 
-<!-- -------------------------------------------------------------------------------------- -->
-
-
+---
 ## more papers
 
 Alpízar, F.; Saborío-Rodríguez, M.; Martínez-Rodríguez, R.; Viguera, B.; Vignola, R.; **Capitán, T.**; and Harvey, C. (2020). Determinants of food insecurity among smallholder farmer households in
@@ -121,9 +121,7 @@ Madrigal-Ballestero, R.; Albers, H. J.; **Capitán, T.**; and Salas, A. (2017). 
 🌲 🌍
 
 
-<!-- -------------------------------------------------------------------------------------- -->
-
-
+---
 ## resting papers
 
 
