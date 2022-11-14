@@ -24,7 +24,7 @@ nav_order: 2
 ## selected papers
 
 <details>
-  <summary markdown="span">**&emsp Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying
+  <summary markdown="span">**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying
 pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy
 Economics_, 66, 101264 🌲 🌍</summary>
 
@@ -48,8 +48,9 @@ Economics_, 66, 101264 🌲 🌍</summary>
 
 <!-- -------------------------------------------------------------------------------------- -->
 
+
 <details>
-  <summary markdown="span">&emsp Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021).
+  <summary markdown="span">Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021).
 MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 36(4) 🌲 🌍</summary>
 
 > **Links**: 
@@ -72,8 +73,9 @@ MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 
 
 <!-- -------------------------------------------------------------------------------------- -->
 
+
 <details>
-  <summary markdown="span">&emsp Albers, H. J.; Preonas, L.; **Capitán, T.**; Robinson, E.; and Madrigal-Ballestero, R. (2020).
+  <summary markdown="span">Albers, H. J.; Preonas, L.; **Capitán, T.**; Robinson, E.; and Madrigal-Ballestero, R. (2020).
 Optimal siting, sizing, and enforcement of marine protected areas. _Environmental and Resource
 Economics_, 77(1) 🌲 🌍</summary>
 
