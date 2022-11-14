@@ -10,9 +10,6 @@ nav_order: 2
 🧠 behavioral  |  🌲 environmental  |  🌍 development
 {: .text-center}
 
-test $ \sqrt{3x-1}+(1+x)^2 $
-
-
 ## working papers
 
 **Capitán, T.**; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. Increasing calorie information uptake with a prenudge.
@@ -25,12 +22,15 @@ test $ \sqrt{3x-1}+(1+x)^2 $
 
 ## selected papers
 
+
+<!-- -------------------------------------------------------------------------------------- -->
+
 <details>
   <summary markdown="span">**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying
 pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy
 Economics_, 66, 101264 🌲 🌍</summary>
 
-> Links: [[pdf](https://osf.io/preprints/socarxiv/wcz8s/)]
+> **Links**: [[pdf](https://osf.io/preprints/socarxiv/wcz8s/)]
 [[code](https://github.com/tabareCapitan/CNFL)]
 [[doi](https://doi.org/10.1016/j.reseneeco.2021.101264)]
 {: .fs-2 }
@@ -41,23 +41,45 @@ Economics_, 66, 101264 🌲 🌍</summary>
 > **JEL classification:** Q41, Q47, Q50
 {: .fs-2 }
 >
-> **Keywords:** Dynamic pricing, EnergyBehavioral, adjustmentsLMICs
+> **Keywords:** dynamic pricing, energy, behavioral adjustments, LMICs
 {: .fs-2 }
 
 </details>
 
-Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021).
-MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 36(4)
-[[pdf](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf)]
-[[online appendix](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b3910782701d6f77534940/1639158044424/Albers_etal_MRE_appendix.pdf)]
-[[doi](https://doi.org/10.1086/715818)] 
-🌲 🌍
+<!-- -------------------------------------------------------------------------------------- -->
+
+<details>
+  <summary markdown="span">Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021).
+MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 36(4) 🌲 🌍</summary>
+
+> **Links**: 
+[[pdf](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf)
+[[online appendix](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b3910782701d6f77534940/1639158044424/Albers_etal_MRE_appendix.pdf)
+[[doi](https://www.journals.uchicago.edu/doi/10.1086/715818)
+{: .fs-2 }
+> 
+> **Abstract:** Using a spatially explicit framework with low/middle-income country coastal characteristics, we explore whether aspatial policies augment the impact of marine protected areas (MPAs) and identify when MPAs create income burdens on communities. When MPAs are small and budget-constrained, they cannot resolve all of the marinescape’s open-access issues, but they can create win-win opportunities for ecological and economic goals at lower levels of enforcement. Aspatial policies—taxes, gear restrictions, license restrictions, and livelihood programs—improve the MPA’s ability to generate ecological gains, and licenses and livelihood policies can mitigate MPA-induced income burdens. Managers can use MPA location and enforcement level, in conjunction with the MPA’s impact on fish dispersal, to induce exit from fishing and to direct the spatial leakage of effort. Our framework provides further insights for conservation-development policy in coastal settings, and we explore stylized examples in Costa Rica and Tanzania.
+{: .fs-2 }
+> 
+> **JEL classification:** O13, Q22, Q56, Q57
+{: .fs-2 }
+>
+> **Keywords:** artisanal fishery, fishery management, leakage, marine protected areas, marine reserves, no-take zones, people–park conflict, spatial bioeconomic model, spatial prioritization
+{: .fs-2 }
+
+</details>  
+  
+<!-- -------------------------------------------------------------------------------------- -->
 
 Albers, H. J.; Preonas, L.; **Capitán, T.**; Robinson, E.; and Madrigal-Ballestero, R. (2020).
 Optimal siting, sizing, and enforcement of marine protected areas. _Environmental and Resource
 Economics_, 77(1) 
 [[doi](https://doi.org/10.1007/s10640-020-00472-7)]
 🌲 🌍
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+
 
 ## more papers
 
@@ -66,17 +88,30 @@ Central America: Recurrent versus extreme weather-driven events. _Regional Envir
 [[doi](https://doi.org/10.1007/s10113-020-01592-y)]
 🌲 🌍
 
+
+<!-- -------------------------------------------------------------------------------------- -->
+
+
 Madrigal-Ballestero, R.; **Capitán, T.**; Salas, A.; and Córdoba, D. (2019). Household and community responses to seasonal droughts in rural areas of Costa Rica. _Waterlines_, 38(4)
 [[pdf](https://www.researchgate.net/publication/338340783_Household_and_community_responses_to_seasonal_droughts_in_rural_areas_of_Costa_Rica)]
 [[doi](https://doi.org/10.3362/1756-3488.18-00020)]
 🌲 🌍
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+
 
 Madrigal-Ballestero, R.; Albers, H. J.; **Capitán, T.**; and Salas, A. (2017). Marine protected areas in Costa Rica: How do artisanal fishers respond? Ambio, 46(7)
 [[pdf](https://www.researchgate.net/profile/Roger_Madrigal-Ballestero/publication/316896515_Marine_protected_areas_in_Costa_Rica_How_do_artisanal_fishers_respond/links/5a2c89ae45851552ae7c9bdb/Marine-protected-areas-in-Costa-Rica-How-do-artisanal-fishers-respond.pdf)]
 [[doi](https://doi.org/10.1007/s13280-017-0921-y)]
 🌲 🌍
 
+
+<!-- -------------------------------------------------------------------------------------- -->
+
+
 ## resting papers
+
 
 **Capitan T.**, Madrigal-Ballestero, R.; Albers, H. J., White, B. Siting marine protected areas with area targets: protecting rural incomes, fish Stocks, and turtles
 in Costa Rica. _Environment for Development Discussion Paper Series_: 20-08
