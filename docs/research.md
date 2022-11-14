@@ -13,17 +13,13 @@ nav_order: 2
 ## working papers
 
 **Capitán, T.**; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. Increasing calorie information uptake with a prenudge.
-[soon] 
-🧠 
+[soon] 🧠 
+
 
 **Capitán, T.**; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. Expecting to Get It: An Endowment Effect for Information.
-[soon] 
-🧠 
+[soon] 🧠 
 
 ## selected papers
-
-
-<!-- -------------------------------------------------------------------------------------- -->
 
 <details>
   <summary markdown="span">**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying
@@ -47,6 +43,7 @@ Economics_, 66, 101264 🌲 🌍</summary>
 
 </details>
 
+
 <!-- -------------------------------------------------------------------------------------- -->
 
 <details>
@@ -69,9 +66,9 @@ MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 
 {: .fs-2 }
 
 </details>  
-  
-<!-- -------------------------------------------------------------------------------------- -->
 
+
+<!-- -------------------------------------------------------------------------------------- -->
 
 <details>
   <summary markdown="span">Albers, H. J.; Preonas, L.; **Capitán, T.**; Robinson, E.; and Madrigal-Ballestero, R. (2020).
