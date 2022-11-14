@@ -4,9 +4,12 @@ title: research
 permalink: /research/
 nav_order: 2
 ---
-🧠 behavioral  |  🌲 environmental  |  🌍 development
 
 {::options parse_block_html="true" /}
+
+🧠 behavioral  |  🌲 environmental  |  🌍 development
+{: .text-center}
+
 
 ## working papers
 
@@ -20,16 +23,22 @@ nav_order: 2
 
 ## selected papers
 
-**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying
+<!-- **Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying
 pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy
 Economics_, 66 
 [[pdf](https://osf.io/preprints/socarxiv/wcz8s/)]
 [[code](https://github.com/tabareCapitan/CNFL)]
 [[doi](https://doi.org/10.1016/j.reseneeco.2021.101264)]
-🌲 🌍
+🌲 🌍 -->
 
 <details>
-  <summary markdown="span">This is the **summary** text, click me to expand</summary>
+  <summary markdown="span">**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying
+pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy
+Economics_, 66 
+[[pdf](https://osf.io/preprints/socarxiv/wcz8s/)]
+[[code](https://github.com/tabareCapitan/CNFL)]
+[[doi](https://doi.org/10.1016/j.reseneeco.2021.101264)]
+🌲 🌍</summary>
 
   This is the detailed text.
 
