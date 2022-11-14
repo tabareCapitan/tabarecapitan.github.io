@@ -47,6 +47,7 @@ pricing may increase total electricity consumption: Evidence from Costa Rica. _R
 </details> 
 
 <!-- ------------------------------------------------------------------------- -->
+
 &nbsp;
 {: .lh-0 }
 
@@ -72,6 +73,7 @@ MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 
 </details>    
 
 <!-- ------------------------------------------------------------------------- -->
+
 &nbsp;
 {: .lh-0 }
 
@@ -100,13 +102,29 @@ prioritization, systematic conservation planning, marine spatial planning
 ---
 ## more papers
 
-Alpízar, F.; Saborío-Rodríguez, M.; Martínez-Rodríguez, R.; Viguera, B.; Vignola, R.; **Capitán, T.**; and Harvey, C. (2020). Determinants of food insecurity among smallholder farmer households in
-Central America: Recurrent versus extreme weather-driven events. _Regional Environmental Change_, 20(1)
-[[doi](https://doi.org/10.1007/s10113-020-01592-y)]
-🌲 🌍
+&nbsp;
+{: .lh-0 }
 
+<details>
+  <summary markdown="span">Alpízar, F.; Saborío-Rodríguez, M.; Martínez-Rodríguez, R.; Viguera, B.; Vignola, R.; **Capitán, T.**; and Harvey, C. (2020). Determinants of food insecurity among smallholder farmer households in Central America: Recurrent versus extreme weather-driven events. _Regional Environmental Change_, 20(1)</summary>
 
-<!-- -------------------------------------------------------------------------------------- -->
+> **Links**: 
+[[doi](https://doi.org/10.1007/s10113-020-01592-y){:target="_blank"}]
+{: .fs-2 }
+> 
+> **Abstract:** To ensure food security among rural communities under a changing climate, policymakers need information on the prevalence and determinants of food insecurity, the role of extreme weather events in exacerbating food insecurity, and the strategies that farmers use to cope with food insecurity. Using household surveys in Guatemala and Honduras, we explore the prevalence of food insecurity among smallholder farmers on both a recurrent (seasonal) and episodic (resulting from extreme weather events) basis, analyze the factors associated with both types of food insecurity, and document farmer coping strategies. Of the 439 households surveyed, 56% experienced recurrent food insecurity, 36% experienced episodic food insecurity due to extreme weather events, and 24% experienced both types. Food insecurity among smallholder farmers was correlated with sociodemographic factors (e.g., age, education, migration) and asset ownership. The factors affecting food insecurity differed between type and prevalence of food insecurity. Our results highlight the urgent need for policies and programs to help smallholder farmers improve their overall food security and resilience to extreme weather shocks. Such policies should focus on enhancing farmer education levels, securing land tenure, empowering women, promoting generational knowledge exchange, and providing emergency food support in the lean season or following extreme weather events.
+{: .fs-2 }
+> 
+> **Keywords:** coping strategies, extreme weather events, food insecurity, Guatemala, Honduras, small-scale farming
+{: .fs-2 }
+
+</details>    
+
+<!-- ------------------------------------------------------------------------- -->
+
+&nbsp;
+{: .lh-0 }
+
 
 
 Madrigal-Ballestero, R.; **Capitán, T.**; Salas, A.; and Córdoba, D. (2019). Household and community responses to seasonal droughts in rural areas of Costa Rica. _Waterlines_, 38(4)
