@@ -6,6 +6,7 @@ nav_order: 2
 ---
 🧠 behavioral  |  🌲 environmental  |  🌍 development
 
+{::options parse_block_html="true" /}
 
 ## working papers
 
@@ -26,6 +27,16 @@ Economics_, 66
 [[code](https://github.com/tabareCapitan/CNFL)]
 [[doi](https://doi.org/10.1016/j.reseneeco.2021.101264)]
 🌲 🌍
+
+<details>
+  <summary markdown="span">This is the **summary** text, click me to expand</summary>
+
+  This is the detailed text.
+
+  We can still use markdown, but we need to take the additional step of using the `parse_block_html` option as described in the [Mix HTML + Markdown Markup section](#mix-html--markdown-markup).
+
+  You can learn more about expected usage of this approach in the [GitLab UI docs](https://gitlab-org.gitlab.io/gitlab-ui/?path=/story/base-collapse--default) though the solution we use above is specific to usage in markdown.
+</details>
 
 Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021).
 MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 36(4)
@@ -61,5 +72,5 @@ Madrigal-Ballestero, R.; Albers, H. J.; **Capitán, T.**; and Salas, A. (2017). 
 
 **Capitan T.**, Madrigal-Ballestero, R.; Albers, H. J., White, B. Siting marine protected areas with area targets: protecting rural incomes, fish Stocks, and turtles
 in Costa Rica. _Environment for Development Discussion Paper Series_: 20-08
-[[pdf](https://www.efdinitiative.org/publications/siting-marine-protected-areas-area-targets-protecting-rural-incomes-fish-stocks-and]
+[[pdf](https://www.efdinitiative.org/publications/siting-marine-protected-areas-area-targets-protecting-rural-incomes-fish-stocks-and)]
 🌲 🌍
