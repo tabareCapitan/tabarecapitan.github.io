@@ -46,7 +46,7 @@ pricing may increase total electricity consumption: Evidence from Costa Rica. _R
 .
 {: .lh-0 }
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<details>
+<details>
   <summary markdown="span">Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021).
 MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 36(4) 🌲 🌍  </summary>
 
@@ -67,9 +67,8 @@ MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 
 
 </details>    
 
-
-<!-- -------------------------------------------------------------------------------------- -->
-
+.
+{: .lh-0 }
 
 <details>
   <summary markdown="span">Albers, H. J.; Preonas, L.; **Capitán, T.**; Robinson, E.; and Madrigal-Ballestero, R. (2020).
