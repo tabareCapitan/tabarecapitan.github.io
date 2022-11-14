@@ -14,19 +14,18 @@ nav_order: 2
 ## working papers
 
 **Capitán, T.**; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. Increasing calorie information uptake with a prenudge.
-[soon] 🧠 
+[soon] 🧠  
 
 
 **Capitán, T.**; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. Expecting to Get It: An Endowment Effect for Information.
-[soon] 🧠 
+[soon] 🧠  
 
 ---
 ## selected papers
 
 <details>
   <summary markdown="span">**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying
-pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy
-Economics_, 66, 101264 🌲 🌍</summary>
+pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy Economics_, 66, 101264 🌲 🌍  </summary>
 
 > **Links**: 
 [[pdf](https://osf.io/preprints/socarxiv/wcz8s/){:target="_blank"}]
@@ -51,7 +50,7 @@ Economics_, 66, 101264 🌲 🌍</summary>
 
 <details>
   <summary markdown="span">Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021).
-MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 36(4) 🌲 🌍 {: .lh-default }</summary>
+MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 36(4) 🌲 🌍  </summary>
 
 > **Links**: 
 [[pdf](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf){:target="_blank"}]
@@ -77,7 +76,7 @@ MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 
 <details>
   <summary markdown="span">Albers, H. J.; Preonas, L.; **Capitán, T.**; Robinson, E.; and Madrigal-Ballestero, R. (2020).
 Optimal siting, sizing, and enforcement of marine protected areas. _Environmental and Resource
-Economics_, 77(1) 🌲 🌍</summary>
+Economics_, 77(1) 🌲 🌍  </summary>
 
 > **Links**: 
 [[doi](https://doi.org/10.1007/s10640-020-00472-7){:target="_blank"}]
