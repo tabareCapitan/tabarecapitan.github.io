@@ -43,7 +43,8 @@ pricing may increase total electricity consumption: Evidence from Costa Rica. _R
 {: .fs-2 }
 </details> 
 
--
+<!-- ------------------------------------------------------------------------- -->
+&nbsp;
 {: .lh-0 }
 
 <details>
@@ -67,6 +68,7 @@ MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 
 
 </details>    
 
+<!-- ------------------------------------------------------------------------- -->
 &nbsp;
 {: .lh-0 }
 
