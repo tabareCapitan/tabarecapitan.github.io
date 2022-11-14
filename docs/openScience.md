@@ -17,8 +17,7 @@ In addition to my efforts to make my own work transparent, I've also (recently) 
 
 ---
 
-[^1]: A [paywall](https://en.wikipedia.org/wiki/Paywall) is a method to restrict access to content. Unfortunately, most academic research is behind a paywall. ([This](https://paywallthemovie.com/) documentary provides a quick description of the problem). That said, there are alternative ways to get access to work behind a paywall. One such alternative is the legal service [Unpaywall](https://unpaywall.org/). 
-{: .fs-2 }
+[^1]: A [paywall](https://en.wikipedia.org/wiki/Paywall) is a method to restrict access to content. Unfortunately, most academic research is behind a paywall. ([This](https://paywallthemovie.com/) documentary provides a quick description of the problem). That said, there are alternative ways to get access to work behind a paywall. One such alternative is the legal service [Unpaywall](https://unpaywall.org/). {: .fs-2 }
 
 [^2]: I use [SocArxiv](https://osf.io/preprints/socarxiv) to publish my work before submitting to a journal for publication (i.e., as a _preprint_). This is a service provided by the [Center for Open Science](https://www.cos.io/) and works better than any of the alternatives I have seen. One such alternatives, SSRN (which is owned by [Elsevier](https://en.wikipedia.org/wiki/Elsevier)) is particularly popular in economics. [SocArxiv](https://osf.io/preprints/socarxiv) is better than the alternatives in every way and does not restrict access like SSRN does (see a comparison [here](https://socopen.org/frequently-asked-questions/#Why%20use%20SocArXiv%20versus%20other%20sites)). 
 
