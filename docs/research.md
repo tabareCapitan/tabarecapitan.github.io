@@ -43,7 +43,7 @@ Economics_, 66, 101264 🌲 🌍</summary>
 > **Keywords:** dynamic pricing, energy, behavioral adjustments, LMICs
 {: .fs-2 }
 
-</details>
+</details>  
 
 
 <!-- -------------------------------------------------------------------------------------- -->
@@ -68,7 +68,7 @@ MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 
 > **Keywords:** artisanal fishery, fishery management, leakage, marine protected areas, marine reserves, no-take zones, people–park conflict, spatial bioeconomic model, spatial prioritization
 {: .fs-2 }
 
-</details>  
+</details>    
 
 
 <!-- -------------------------------------------------------------------------------------- -->
