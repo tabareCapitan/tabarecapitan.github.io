@@ -44,7 +44,7 @@ pricing may increase total electricity consumption: Evidence from Costa Rica. _R
 </details> 
 
 .
-{: .lh-0 }
+{: .lh-0 }{: .fw-100 }
 
 <details>
   <summary markdown="span">Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021).
