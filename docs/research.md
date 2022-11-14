@@ -41,8 +41,10 @@ pricing may increase total electricity consumption: Evidence from Costa Rica. _R
 >
 > **Keywords:** dynamic pricing, energy, behavioral adjustments, LMICs
 {: .fs-2 }
-</details>  
-<br />
+</details> 
+
+
+
 <details>
   <summary markdown="span">Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021).
 MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 36(4) 🌲 🌍  </summary>
