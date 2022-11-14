@@ -13,7 +13,7 @@ Please reach out if you want to talk; my email is **tabare.capitan at gmail**. I
 
 
 
-[SLU]: https://www.slu.se/en/departments/economics/research/research-groups/environmental-economics/ {:target="_blank"}
+[SLU]: https://www.slu.se/en/departments/economics/research/research-groups/environmental-economics/
 [Uppsala]: https://visitsweden.com/where-to-go/middle-sweden/uppland/uppsala/
 [google scholar]: https://scholar.google.com/citations?user=uqivDeoAAAAJ&hl=en
 [LinkedIn]: https://www.linkedin.com/in/tabareCapitan/
