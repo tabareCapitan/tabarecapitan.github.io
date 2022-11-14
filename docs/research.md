@@ -10,7 +10,7 @@ nav_order: 2
 🧠 behavioral  |  🌲 environmental  |  🌍 development
 {: .text-center}
 
-test $$\beta$$
+test $\sqrt{3x-1}+(1+x)^2$
 
 
 ## working papers
