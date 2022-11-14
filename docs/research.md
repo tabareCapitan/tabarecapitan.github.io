@@ -24,7 +24,7 @@ nav_order: 2
 ## selected papers
 
 <details>
-  <summary markdown="span">**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying
+  <summary markdown="span">**&emsp Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying
 pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy
 Economics_, 66, 101264 🌲 🌍</summary>
 
@@ -49,7 +49,7 @@ Economics_, 66, 101264 🌲 🌍</summary>
 <!-- -------------------------------------------------------------------------------------- -->
 
 <details>
-  <summary markdown="span">Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021).
+  <summary markdown="span">&emsp Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021).
 MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 36(4) 🌲 🌍</summary>
 
 > **Links**: 
@@ -73,7 +73,7 @@ MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_, 
 <!-- -------------------------------------------------------------------------------------- -->
 
 <details>
-  <summary markdown="span">Albers, H. J.; Preonas, L.; **Capitán, T.**; Robinson, E.; and Madrigal-Ballestero, R. (2020).
+  <summary markdown="span">&emsp Albers, H. J.; Preonas, L.; **Capitán, T.**; Robinson, E.; and Madrigal-Ballestero, R. (2020).
 Optimal siting, sizing, and enforcement of marine protected areas. _Environmental and Resource
 Economics_, 77(1) 🌲 🌍</summary>
 
@@ -81,7 +81,7 @@ Economics_, 77(1) 🌲 🌍</summary>
 [[doi](https://doi.org/10.1007/s10640-020-00472-7){:target="_blank"}]
 {: .fs-2 }
 > 
-> **Abstract:** ...
+> **Abstract:** The design of protected areas, whether marine or terrestrial, rarely considers how people respond to the imposition of no-take sites with complete or incomplete enforcement. Consequently, these protected areas may fail to achieve their intended goal. We present and solve a spatial bio-economic model in which a manager chooses the optimal location, size, and enforcement level of a marine protected area (MPA). This manager acts as a Stackelberg leader, and her choices consider villagers’ best response to the MPA in a spatial Nash equilibrium of fishing site and effort decisions. Relevant to lower income country settings but general to other settings, we incorporate limited enforcement budgets, distance costs of traveling to fishing sites, and labor allocation to onshore wage opportunities. The optimal MPA varies markedly across alternative manager goals and budget sizes, but always induce changes in villagers’ decisions as a function of distance, dispersal, and wage. We consider MPA managers with ecological conservation goals and with economic goals, and identify the shortcomings of several common manager decision rules, including those focused on: (1) fishery outcomes rather than broader economic goals, (2) fish stocks at MPA sites rather than across the full marinescape, (3) absolute levels rather than additional values, and (4) costless enforcement. Our results demonstrate that such naïve or overly narrow decision rules can lead to inefficient MPA designs that miss economic and conservation opportunities.
 {: .fs-2 }
 > 
 <!-- > **JEL classification:** ...
