@@ -171,7 +171,7 @@ prioritization, systematic conservation planning, marine spatial planning
 
 
 <details>
-  <summary markdown="span">**Capitan T.**, Madrigal-Ballestero, R.; Albers, H. J., White, B. Siting marine protected areas with area targets: protecting rural incomes, fish Stocks, and turtles
+  <summary markdown="span">**Capitán T.**, Madrigal-Ballestero, R.; Albers, H. J., White, B. Siting marine protected areas with area targets: protecting rural incomes, fish Stocks, and turtles
 in Costa Rica. _Environment for Development Discussion Paper Series_ 🌲 🌍</summary>
 
 > **Links**: 
