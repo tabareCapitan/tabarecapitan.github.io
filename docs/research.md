@@ -7,7 +7,7 @@ nav_order: 2
 
 {::options parse_block_html="true" /}
 
-🧠 **behavioral**  |  🌲 **environmental**  |  🌍 **development**
+🧠 **behavioral**  |  🌱 **environmental**  |  🌍 **development**
 {: .text-center}
 
 ---
@@ -30,7 +30,7 @@ nav_order: 2
 {: .lh-0 }
 
 <details>
-  <summary markdown="span">**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy Economics_ 🌲 🌍</summary>
+  <summary markdown="span">**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy Economics_ 🌱 🌍</summary>
 
 > **Links**: 
 [[pdf](https://osf.io/preprints/socarxiv/wcz8s/){:target="_blank"}]
@@ -54,7 +54,7 @@ nav_order: 2
 {: .lh-0 }
 
 <details>
-  <summary markdown="span">Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021). MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_ 🌲 🌍</summary>
+  <summary markdown="span">Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021). MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_ 🌱 🌍</summary>
 
 > **Links**: 
 [[pdf](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf){:target="_blank"}]
@@ -79,7 +79,7 @@ nav_order: 2
 {: .lh-0 }
 
 <details>
-  <summary markdown="span">Albers, H. J.; Preonas, L.; **Capitán, T.**; Robinson, E.; and Madrigal-Ballestero, R. (2020). Optimal siting, sizing, and enforcement of marine protected areas. _Environmental and Resource Economics_ 🌲 🌍</summary>
+  <summary markdown="span">Albers, H. J.; Preonas, L.; **Capitán, T.**; Robinson, E.; and Madrigal-Ballestero, R. (2020). Optimal siting, sizing, and enforcement of marine protected areas. _Environmental and Resource Economics_ 🌱 🌍</summary>
 
 > **Links**: 
 [[doi](https://doi.org/10.1007/s10640-020-00472-7){:target="_blank"}]
@@ -105,7 +105,7 @@ prioritization, systematic conservation planning, marine spatial planning
 {: .lh-0 }
 
 <details>
-  <summary markdown="span">Alpízar, F.; Saborío-Rodríguez, M.; Martínez-Rodríguez, R.; Viguera, B.; Vignola, R.; **Capitán, T.**; and Harvey, C. (2020). Determinants of food insecurity among smallholder farmer households in Central America: Recurrent versus extreme weather-driven events. _Regional Environmental Change_ 🌲 🌍</summary>
+  <summary markdown="span">Alpízar, F.; Saborío-Rodríguez, M.; Martínez-Rodríguez, R.; Viguera, B.; Vignola, R.; **Capitán, T.**; and Harvey, C. (2020). Determinants of food insecurity among smallholder farmer households in Central America: Recurrent versus extreme weather-driven events. _Regional Environmental Change_ 🌱 🌍</summary>
 
 > **Links**: 
 [[doi](https://doi.org/10.1007/s10113-020-01592-y){:target="_blank"}]
@@ -125,7 +125,7 @@ prioritization, systematic conservation planning, marine spatial planning
 {: .lh-0 }
 
 <details>
-  <summary markdown="span">Madrigal-Ballestero, R.; **Capitán, T.**; Salas, A.; and Córdoba, D. (2019). Household and community responses to seasonal droughts in rural areas of Costa Rica. _Waterlines_ 🌲 🌍</summary>
+  <summary markdown="span">Madrigal-Ballestero, R.; **Capitán, T.**; Salas, A.; and Córdoba, D. (2019). Household and community responses to seasonal droughts in rural areas of Costa Rica. _Waterlines_ 🌱 🌍</summary>
 
 > **Links**: 
 [[pdf](https://www.researchgate.net/publication/338340783_Household_and_community_responses_to_seasonal_droughts_in_rural_areas_of_Costa_Rica){:target="_blank"}]
@@ -147,7 +147,7 @@ prioritization, systematic conservation planning, marine spatial planning
 {: .lh-0 }
 
 <details>
-  <summary markdown="span">Madrigal-Ballestero, R.; Albers, H. J.; **Capitán, T.**; and Salas, A. (2017). Marine protected areas in Costa Rica: How do artisanal fishers respond? Ambio 🌲 🌍</summary>
+  <summary markdown="span">Madrigal-Ballestero, R.; Albers, H. J.; **Capitán, T.**; and Salas, A. (2017). Marine protected areas in Costa Rica: How do artisanal fishers respond? Ambio 🌱 🌍</summary>
 
 > **Links**: 
 [[pdf](https://www.researchgate.net/profile/Roger_Madrigal-Ballestero/publication/316896515_Marine_protected_areas_in_Costa_Rica_How_do_artisanal_fishers_respond/links/5a2c89ae45851552ae7c9bdb/Marine-protected-areas-in-Costa-Rica-How-do-artisanal-fishers-respond.pdf){:target="_blank"}]
@@ -172,7 +172,7 @@ prioritization, systematic conservation planning, marine spatial planning
 
 <details>
   <summary markdown="span">**Capitán T.**, Madrigal-Ballestero, R.; Albers, H. J., White, B. Siting marine protected areas with area targets: protecting rural incomes, fish Stocks, and turtles
-in Costa Rica. _Environment for Development Discussion Paper Series_ 🌲 🌍</summary>
+in Costa Rica. _Environment for Development Discussion Paper Series_ 🌱 🌍</summary>
 
 > **Links**: 
 [[pdf](https://www.efdinitiative.org/publications/siting-marine-protected-areas-area-targets-protecting-rural-incomes-fish-stocks-and){:target="_blank"}]
