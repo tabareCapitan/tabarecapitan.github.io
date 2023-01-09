@@ -5,15 +5,17 @@ permalink: /research/
 nav_order: 2
 ---
 
-1. TOC
-{:toc}
-
----
-
 {::options parse_block_html="true" /}
+
+## fields and content
 
 🧠 **behavioral**  |  🌱 **environmental**  |  🌍 **development**
 {: .text-center}
+
+
+- TOC
+{: .no_toc .text-delta }
+
 
 ---
 ## working papers
