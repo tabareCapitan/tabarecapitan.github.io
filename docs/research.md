@@ -5,6 +5,11 @@ permalink: /research/
 nav_order: 2
 ---
 
+1. TOC
+{:toc}
+
+---
+
 {::options parse_block_html="true" /}
 
 🧠 **behavioral**  |  🌱 **environmental**  |  🌍 **development**
