@@ -10,7 +10,7 @@ I live in [Uppsala](https://visitsweden.com/where-to-go/middle-sweden/uppland/up
 
 These days you can find me in **Buenos Aires, Argentina**. Specifically, I'm temporarily working from UCEMA as part of a **visiting fellowship at [JILAEE](https://www.jilaee.org/)** (Joint Initiative for Latin American Experimental Economics: UChicago and UCEMA). If you are nearby and want to meet, **please send me an email**.
 
-**I welcome new connections, both from academia and from practicioners**; my gmail or linkedin are good for that.
+**I welcome new connections**, both from academia and from practicioners.
 
 [Tabare.Capitan at GMAIL](mailto:tabare.capitan@gmail.com){: .btn } [google scholar](https://scholar.google.com/citations?user=uqivDeoAAAAJ&hl=en){: .btn }{:target="_blank"} [linkedIn](https://www.linkedin.com/in/tabareCapitan/){: .btn }{:target="_blank"}
 
