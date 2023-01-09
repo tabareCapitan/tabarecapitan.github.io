@@ -7,14 +7,15 @@ nav_order: 2
 
 {::options parse_block_html="true" /}
 
-🧠 **behavioral**  |  🌱 **environmental**  |  🌍 **development**
-{: .text-center}
-
+## contents
+{: .no_toc }
 
 - TOC
 {: toc}
 
-
+---
+🧠 **behavioral**  |  🌱 **environmental**  |  🌍 **development**
+{: .text-center}
 ---
 ## working papers
 
