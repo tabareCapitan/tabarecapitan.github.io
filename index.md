@@ -10,11 +10,6 @@ I live in [Uppsala](https://visitsweden.com/where-to-go/middle-sweden/uppland/up
 
 **I welcome new connections**, both from academia and from practicioners.
 
-Example: $x^2$
-
-Another example:
-
-$$X=23$$
 
 [Tabare.Capitan at GMAIL](mailto:tabare.capitan@gmail.com){: .btn } [google scholar](https://scholar.google.com/citations?user=uqivDeoAAAAJ&hl=en){: .btn }{:target="_blank"} [linkedIn](https://www.linkedin.com/in/tabareCapitan/){: .btn }{:target="_blank"}
 
