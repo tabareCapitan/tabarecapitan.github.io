@@ -19,3 +19,6 @@ nav_external_links:
 mathjax:
   enable: true
   cdn: https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML
+  
+  markdown: Redcarpet
+
