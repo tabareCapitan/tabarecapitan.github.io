@@ -16,12 +16,7 @@ nav_order: 2
 - TOC
 {: toc} -->
 
----
 
-🧠 **behavioral**  |  🌱 **environmental**  |  🌍 **development**
-{: .text-center}
-
----
 ## working papers
 
 &nbsp;
