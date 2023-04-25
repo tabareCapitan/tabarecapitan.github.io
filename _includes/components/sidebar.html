@@ -5,6 +5,11 @@
       <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
     </a>
   </div>
+  <aside class="sidebar">
+
+  <p>This is some text in the sidebar.</p>
+
+</aside>
   <nav aria-label="Main" id="site-nav" class="site-nav">
     {% assign pages_top_size = site.html_pages
           | where_exp:"item", "item.title != nil"
