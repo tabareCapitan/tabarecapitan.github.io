@@ -23,6 +23,10 @@ nav_external_links:
 aux_links:
   "🧠 Behavioral":
 #     - "//github.com/just-the-docs/just-the-docs"
+  "🌱 Environmental":
+#     - "//github.com/just-the-docs/just-the-docs"
+  "🌎 Development":
+#     - "//github.com/just-the-docs/just-the-docs"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
