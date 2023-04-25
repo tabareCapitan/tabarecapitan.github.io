@@ -19,10 +19,10 @@ nav_external_links:
     hide_icon: false # set to true to hide the external link icon - defaults to false
 
 
-# Aux links for the upper right navigation
-aux_links:
-  "Behavioral:
-    - "//github.com/just-the-docs/just-the-docs"
+# # Aux links for the upper right navigation
+# aux_links:
+#   "Behavioral:
+#     - "//github.com/just-the-docs/just-the-docs"
 
-# Makes Aux links open in a new tab. Default is false
-aux_links_new_tab: false
+# # Makes Aux links open in a new tab. Default is false
+# aux_links_new_tab: false
