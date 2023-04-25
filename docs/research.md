@@ -34,6 +34,14 @@ nav_order: 2
 **Capitán, T.**; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. Expecting to Get It: An Endowment Effect for Information.
 [soon] 🧠  
 
+**Capitán, T.** & Méndez, E. Decision error decreases with risk aversion: A replication.
+[soon]  🧠
+
+Marcoci, A.; Wilkinson, D.; Baskin, E.; Berkman, H.; Buchanan, E.; **et al.** Predicting the
+replicability of social and behavioural science claims from the COVID19 Preprint Replication Project
+with structured expert and novice groups. _Submitted_
+[[pdf]([https://osf.io/preprints/socarxiv/wcz8s/](https://osf.io/preprints/metaarxiv/xdsjf/)){:target="_blank"}]
+
 ---
 ## selected papers
 
