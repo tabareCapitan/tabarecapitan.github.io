@@ -4,10 +4,10 @@ layout: home
 nav_order: 1
 ---
 
-{: .warning }
+{: .highlight2 }
 NEWS: A
 
-{: .note }
+{: .highlight3 }
 NEWS: B
 
 
