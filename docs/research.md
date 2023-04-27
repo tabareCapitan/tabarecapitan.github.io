@@ -29,8 +29,9 @@ nav_order: 2
 
 {: .highlightYellow }
 > Increasing calorie information uptake with a prenudge." 🧠 
-> w/ Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. 
-> [pdf] [doi]
+> 
+>   w/ Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. [pdf] [doi]
+
 
 {: .highlightYellow }
 >***Capitán, T.***; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge." 🧠 [pdf] [doi]   
