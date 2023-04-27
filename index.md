@@ -8,7 +8,7 @@ NEWS: XXX
 {: .warning }
 
 NEWS: B
-{: .morado }
+{: .note }
 
 I am an economist with broad interests within **applied microeconomics**:
 
