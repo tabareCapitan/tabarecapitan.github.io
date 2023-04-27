@@ -14,7 +14,7 @@ I currently work as a **postdoc** in the **environmental economics group** withi
 
 I welcome new connections, both from academia and from practicioners.
 
-
+<center>
 [📫 Tabare.Capitan at GMAIL](mailto:tabare.capitan@gmail.com){: .btn }
 
-
+</center>
