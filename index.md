@@ -4,11 +4,8 @@ layout: home
 nav_order: 1
 ---
 
-{: .highlight2 }
+{: .highlight }
 NEWS: A
-
-{: .highlight3 }
-NEWS: B
 
 
 
