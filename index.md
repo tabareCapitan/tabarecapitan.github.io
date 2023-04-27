@@ -6,8 +6,7 @@ nav_order: 1
 
 NEWSB
 {: .warning }
-
-News
+>News
 
 
 I am an economist with broad interests within **applied microeconomics**:
