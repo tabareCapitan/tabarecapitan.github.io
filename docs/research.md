@@ -25,7 +25,15 @@ nav_order: 2
 {: .highlightYellow }
 >***Capitán, T.***; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge." 
 >
-> 🧠    
+> 🧠 [pdf] [doi]   
+
+{: .highlightYellow }
+> Increasing calorie information uptake with a prenudge." 🧠 
+> w/ Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. 
+> [pdf] [doi]
+
+{: .highlightYellow }
+>***Capitán, T.***; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge." 🧠 [pdf] [doi]   
  
  {: .highlightYellow }
 **Capitán, T.**; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. 🧠Expecting to Get It: An Endowment Effect for Information.🧠
