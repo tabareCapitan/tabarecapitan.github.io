@@ -23,23 +23,24 @@ nav_order: 2
 {: .lh-0 }
 
 {: .highlightYellow }
->***Capitán, T.***; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge." 🧠 
+🧠 ***Capitán, T.***; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge." 
  
  {: .highlightYellow }
-**Capitán, T.**; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. 🧠Expecting to Get It: An Endowment Effect for Information. 🧠
+🧠 **Capitán, T.**; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. "Expecting to Get It: An Endowment Effect for Information." 
 
 {: .highlightYellow }
-**Capitán, T.** & Méndez, E. Decision error decreases with risk aversion: A replication.🧠 
+🧠 **Capitán, T.** & Méndez, E. "Decision error decreases with risk aversion: A replication."
 
 {: .highlightYellow }
-Marcoci, A.; Wilkinson, D.; Baskin, E.; Berkman, H.; Buchanan, E.; **et al.** Predicting the replicability of social and behavioural science claims from the COVID19 Preprint Replication Project with structured expert and novice groups.🧠 _Submitted_
+Marcoci, A.; Wilkinson, D.; Baskin, E.; Berkman, H.; Buchanan, E.; **et al.** "Predicting the replicability of social and behavioural science claims from the COVID19 Preprint Replication Project with structured expert and novice groups."  
 [[pdf](https://osf.io/preprints/metaarxiv/xdsjf/){:target="_blank"}]
+_Submitted_
 
 ---
 ## selected papers
 
 {: .highlightGreen }
-**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy Economics_ 🌱 🌍
+🌱 🌍 **Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy Economics_ 
 [[pdf](https://osf.io/preprints/socarxiv/wcz8s/){:target="_blank"}]
 [[code](https://github.com/tabareCapitan/CNFL){:target="_blank"}]
 [[doi](https://doi.org/10.1016/j.reseneeco.2021.101264){:target="_blank"}]
