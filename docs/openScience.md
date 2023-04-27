@@ -4,11 +4,9 @@ layout: page
 nav_order: 3
 ---
 
-<!-- ### Access -->
+### Access
 {: highlightPurple}
-> Access
->
-> Despite my own preferences, my work often ends up behind a paywall.[^1] In this website I provide easy and free access to [my work](https://www.tabarecapitan.com/research/). For each research article, you should be able to find a link to the article as published by the journal (so it's easy to cite my work) and a link to the article in PDF (so you can read my work).[^2] If the article is published under the open access model[^3], there might be only one link. If you cannot access any of the papers listed in my website, _please_ send me an email.
+Despite my own preferences, my work often ends up behind a paywall.[^1] In this website I provide easy and free access to [my work](https://www.tabarecapitan.com/research/). For each research article, you should be able to find a link to the article as published by the journal (so it's easy to cite my work) and a link to the article in PDF (so you can read my work).[^2] If the article is published under the open access model[^3], there might be only one link. If you cannot access any of the papers listed in my website, _please_ send me an email.
 
 ### Transparency
 
