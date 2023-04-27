@@ -22,6 +22,7 @@ nav_order: 2
 &nbsp;
 {: .lh-0 }
 
+
 {: .highlightYellow }
 🧠 ***Capitán, T.***; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge." 
  
@@ -32,12 +33,15 @@ nav_order: 2
 🧠 **Capitán, T.** & Méndez, E. "Decision error decreases with risk aversion: A replication."
 
 {: .highlightYellow }
-Marcoci, A.; Wilkinson, D.; Baskin, E.; Berkman, H.; Buchanan, E.; **et al.** "Predicting the replicability of social and behavioural science claims from the COVID19 Preprint Replication Project with structured expert and novice groups."  
+Marcoci, A.; Wilkinson, D.; Baskin, E.; Berkman, H.; Buchanan, E.; **et al.** "Predicting the replicability of social and behavioural science claims from the COVID19 Preprint Replication Project with structured expert and novice groups." _Submitted_
 [📄](https://osf.io/preprints/metaarxiv/xdsjf/){:target="_blank"}
-_Submitted_
+
 
 ---
 ## selected papers
+
+&nbsp;
+{: .lh-0 }
 
 {: .highlightGreen }
 🌱 🌍 **Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy Economics_ 
@@ -45,31 +49,16 @@ _Submitted_
 [💾](https://github.com/tabareCapitan/CNFL){:target="_blank"}
 [🔗](https://doi.org/10.1016/j.reseneeco.2021.101264){:target="_blank"}
 
-&nbsp;
-{: .lh-0 }
-<details>
-  <summary markdown="span">**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy Economics_ 🌱 🌍</summary>
-
-> **Links**: 
-[📄](https://osf.io/preprints/socarxiv/wcz8s/){:target="_blank"}
-[💾](https://github.com/tabareCapitan/CNFL){:target="_blank"}
-[🔗](https://doi.org/10.1016/j.reseneeco.2021.101264){:target="_blank"}
-{: .fs-2 }
->
-**Abstract:** We study the implementation of a time-varying pricing (TVP) program by a major electricity utility in Costa Rica. Because of particular features of the data, we use recently developed understanding of the two-way fixed effects differences-in-differences estimator along with event-study specifications to interpret our results. Similar to previous research, we find that the program reduces consumption during peak-hours. However, in contrast with previous research, we find that the program increases total consumption. With a stylized economic model, we show how these seemingly conflicted results may not be at odds. The key element of the model is that previous research used data from rich countries, in which the use of heating and cooling devices drives electricity consumption, but we use data from a tropical middle-income country, where very few households have heating or cooling devices. Since there is not much room for technological changes (which might reduce consumption at all times), behavioral changes to reduce consumption during peak hours are not enough to offset the increased consumption during off-peak hours (when electricity is cheaper). Our results serve as a cautionary piece of evidence for policy makers interested in reducing consumption during peak hours—the goal can potentially be achieved with TVP, but the cost is increased total consumption.
-{: .fs-2 }
->
-> **JEL classification:** Q41, Q47, Q50
-{: .fs-2 }
->
-> **Keywords:** dynamic pricing, energy, behavioral adjustments, LMICs
-{: .fs-2 }
-</details> 
-
-<!-- ------------------------------------------------------------------------- -->
 
 &nbsp;
 {: .lh-0 }
+
+{: .highlightGreen }
+🌱 🌍 Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021). MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_ 
+[📄](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf){:target="_blank"}
+[🔍](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b3910782701d6f77534940/1639158044424/Albers_etal_MRE_appendix.pdf){:target="_blank"}
+[🔗](https://www.journals.uchicago.edu/doi/10.1086/715818){:target="_blank"}
+
 
 <details>
   <summary markdown="span">Albers, H. J.; Ashworth, M.; **Capitán, T.**; Madrigal-Ballestero, R.; and Preonas, L. (2021). MPAs and Aspatial Policies in Artisanal Fisheries. _Marine Resource Economics_ 🌱 🌍</summary>
