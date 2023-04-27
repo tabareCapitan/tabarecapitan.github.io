@@ -51,6 +51,6 @@ callouts:
     color: red
     
 callouts:     
-  warning:
+   morado:
     title: 
     color: purple
