@@ -44,7 +44,7 @@ with structured expert and novice groups. _Submitted_
 
 &nbsp;
 {: .lh-0 }
-
+{: .highlightA }
 <details>
   <summary markdown="span">**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy Economics_ 🌱 🌍</summary>
 
