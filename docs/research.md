@@ -70,10 +70,6 @@ Marcoci, A.; Wilkinson, D.; Baskin, E.; Berkman, H.; Buchanan, E.; **et al.** "P
 
 {: .highlightRed }
 🌱 🌍 Madrigal-Ballestero, R.; Albers, H. J.; **Capitán, T.**; and Salas, A. (2017). Marine protected areas in Costa Rica: How do artisanal fishers respond? _Ambio_
-<details>
- 
- 
-  <summary markdown="span">Madrigal-Ballestero, R.; Albers, H. J.; **Capitán, T.**; and Salas, A. (2017). Marine protected areas in Costa Rica: How do artisanal fishers respond? Ambio 🌱 🌍</summary>
 [📄](https://www.researchgate.net/profile/Roger_Madrigal-Ballestero/publication/316896515_Marine_protected_areas_in_Costa_Rica_How_do_artisanal_fishers_respond/links/5a2c89ae45851552ae7c9bdb/Marine-protected-areas-in-Costa-Rica-How-do-artisanal-fishers-respond.pdf){:target="_blank"}
 [🔗](https://doi.org/10.1007/s13280-017-0921-y){:target="_blank"}
  
@@ -83,24 +79,19 @@ Marcoci, A.; Wilkinson, D.; Baskin, E.; Berkman, H.; Buchanan, E.; **et al.** "P
 &nbsp;
 {: .lh-0 }
 
+{: .highlightGray }
+🌱 🌍 **Capitán T.**, Madrigal-Ballestero, R.; Albers, H. J., White, B. Siting marine protected areas with area targets: protecting rural incomes, fish Stocks, and turtles in Costa Rica. _Environment for Development Discussion Paper Series_ 
+[📄](https://www.efdinitiative.org/publications/siting-marine-protected-areas-area-targets-protecting-rural-incomes-fish-stocks-and){:target="_blank"}
 
-<details>
-  <summary markdown="span">**Capitán T.**, Madrigal-Ballestero, R.; Albers, H. J., White, B. Siting marine protected areas with area targets: protecting rural incomes, fish Stocks, and turtles
-in Costa Rica. _Environment for Development Discussion Paper Series_ 🌱 🌍</summary>
 
-> **Links**: 
-[[pdf](https://www.efdinitiative.org/publications/siting-marine-protected-areas-area-targets-protecting-rural-incomes-fish-stocks-and){:target="_blank"}]
-{: .fs-2 }
-> 
-> **Abstract:** With many countries seeking to increase the area conserved in marine protected areas (MPAs) to achieve the Convention on Biodiversity’s protected area targets by 2020, we employ a bioeconomic model to determine which configurations of MPAs that meet area targets perform the best for secondary goals, including fishing yield, rural income, fish stocks, and sea turtle conservation. Motivated by observations in the northern Caribbean coast of Costa Rica, the paper models the reactions of fishers to various MPA policies and the impact of policies on income and yield in two different communities, in addition to the impact on fish stock and turtle populations. This region’s tourism relies on wildlife observation, including sea turtle nesting, which links MPA conservation outcomes to on-shore wage opportunities such as turtle tour guides, but fishing activities can disrupt turtle reproduction. With artisanal fishers allocating time between fishing, traveling to fishing locations, and on-shore wage opportunities, the framework provides information about how the configuration of the MPA that achieves a target amount of MPA area affects turtle conservation and differentially affects two artisanal villages’ fishers. Overall, this analysis moves beyond achieving area targets to determine how different MPA configurations affect subsets of fishers, fish stocks, and turtle conservation. 
-{: .fs-2 }
-> 
-> **Keywords:** marine protected areas, fish stocks, turtles, Costa Rica
-{: .fs-2 }
 
-</details>  
 
----
+
+
+
+
+
+
 
 <!-- EXAMPLE HIDDEN SUMMARY
 &nbsp;
