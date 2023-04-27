@@ -43,10 +43,10 @@ aux_links_new_tab: false
 # grey-lt, grey-dk, purple, blue, green, yellow, and red are available
 callouts:
   warning:
-    title: Warning
+    title: 
     color: red
 
 callouts:
-  warning:
-    title: PurpleBox
+  cajita:
+    title: 
     color: purple
