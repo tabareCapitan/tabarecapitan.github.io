@@ -46,8 +46,10 @@ aux_links_new_tab: false
 
 callouts_level: quiet # or loud
 callouts:
-  highlight:
-    color: red
+  highlightA:
+    color: purple
+  highlightB:
+    color: red    
   important:
     title: Important
     color: blue
