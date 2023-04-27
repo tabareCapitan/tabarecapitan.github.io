@@ -6,9 +6,9 @@ nav_order: 1
 
 I am an economist with broad interests within **applied microeconomics**:
 
- - behavioral economics (🧠)
- - environmental economics (🌱)
- - development economics (🌎)
+ - **behavioral economics** (🧠)
+ - **environmental economics** (🌱)
+ - **development economics** (🌎)
 
 I currently work as a **postdoc** in the **environmental economics group** within the **department of economics** of [SLU](https://www.slu.se/en/departments/economics/research/research-groups/environmental-economics/){:target="_blank"} (Sweden).
 
