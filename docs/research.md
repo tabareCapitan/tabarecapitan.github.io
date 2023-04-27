@@ -45,24 +45,24 @@ with structured expert and novice groups. _Submitted_
 &nbsp;
 {: .lh-0 }
 {: .highlightA }
-<details>
-  <summary markdown="span">**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy Economics_ 🌱 🌍</summary>
-
-> **Links**: 
-[[pdf](https://osf.io/preprints/socarxiv/wcz8s/){:target="_blank"}]
-[[code](https://github.com/tabareCapitan/CNFL){:target="_blank"}]
-[[doi](https://doi.org/10.1016/j.reseneeco.2021.101264){:target="_blank"}]
-{: .fs-2 }
+><details>
+>  <summary markdown="span">**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying pricing may increase total electricity >consumption: Evidence from Costa Rica. _Resource and Energy Economics_ 🌱 🌍</summary>
 >
-**Abstract:** We study the implementation of a time-varying pricing (TVP) program by a major electricity utility in Costa Rica. Because of particular features of the data, we use recently developed understanding of the two-way fixed effects differences-in-differences estimator along with event-study specifications to interpret our results. Similar to previous research, we find that the program reduces consumption during peak-hours. However, in contrast with previous research, we find that the program increases total consumption. With a stylized economic model, we show how these seemingly conflicted results may not be at odds. The key element of the model is that previous research used data from rich countries, in which the use of heating and cooling devices drives electricity consumption, but we use data from a tropical middle-income country, where very few households have heating or cooling devices. Since there is not much room for technological changes (which might reduce consumption at all times), behavioral changes to reduce consumption during peak hours are not enough to offset the increased consumption during off-peak hours (when electricity is cheaper). Our results serve as a cautionary piece of evidence for policy makers interested in reducing consumption during peak hours—the goal can potentially be achieved with TVP, but the cost is increased total consumption.
-{: .fs-2 }
->
-> **JEL classification:** Q41, Q47, Q50
-{: .fs-2 }
->
-> **Keywords:** dynamic pricing, energy, behavioral adjustments, LMICs
-{: .fs-2 }
-</details> 
+>> **Links**: 
+>[[pdf](https://osf.io/preprints/socarxiv/wcz8s/){:target="_blank"}]
+>[[code](https://github.com/tabareCapitan/CNFL){:target="_blank"}]
+>[[doi](https://doi.org/10.1016/j.reseneeco.2021.101264){:target="_blank"}]
+>{: .fs-2 }
+>>
+>**Abstract:** We study the implementation of a time-varying pricing (TVP) program by a major electricity utility in Costa Rica. Because of particular features of the data, we use recently developed understanding of the two-way fixed effects differences-in-differences estimator along with event-study specifications to interpret our results. Similar to previous research, we find that the program reduces consumption during peak-hours. However, in contrast with previous research, we find that the program increases total consumption. With a stylized economic model, we show how these seemingly conflicted results may not be at odds. The key element of the model is that previous research used data from rich countries, in which the use of heating and cooling devices drives electricity consumption, but we use data from a tropical middle-income country, where very few households have heating or cooling devices. Since there is not much room for technological changes (which might reduce consumption at all times), behavioral changes to reduce consumption during peak hours are not enough to offset the increased consumption during off-peak hours (when electricity is cheaper). Our results serve as a cautionary piece of evidence for policy makers interested in reducing consumption during peak hours—the goal can potentially be achieved with TVP, but the cost is increased total consumption.
+>{: .fs-2 }
+>>
+>> **JEL classification:** Q41, Q47, Q50
+>{: .fs-2 }
+>>
+>> **Keywords:** dynamic pricing, energy, behavioral adjustments, LMICs
+>{: .fs-2 }
+></details> 
 
 <!-- ------------------------------------------------------------------------- -->
 
