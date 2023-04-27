@@ -37,3 +37,16 @@ aux_links:
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
+
+
+
+# grey-lt, grey-dk, purple, blue, green, yellow, and red are available
+callouts:
+  warning:
+    title: Warning
+    color: red
+
+callouts:
+  warning:
+    title: PurpleBox
+    color: purple
