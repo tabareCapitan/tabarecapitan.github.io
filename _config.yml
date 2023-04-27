@@ -49,5 +49,8 @@ callouts:
   warning:
     title: 
     color: red
-
-
+    
+callouts:     
+  warning:
+    title: 
+    color: purple
