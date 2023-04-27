@@ -5,9 +5,11 @@ nav_order: 1
 ---
 
 NEWS: XXX
-{: .warning }
+
+{: .highlights }
 
 NEWS: B
+
 {: .note }
 
 I am an economist with broad interests within **applied microeconomics**:
