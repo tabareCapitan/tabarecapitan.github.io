@@ -22,18 +22,18 @@ nav_order: 2
 &nbsp;
 {: .lh-0 }
 
-{: .highlightPurple }
+{: .highlightYellow }
 **Capitán, T.**; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. Increasing calorie information uptake with a prenudge. [soon] 🧠  
  
- {: .highlightPurple }
+ {: .highlightYellow }
 **Capitán, T.**; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. Expecting to Get It: An Endowment Effect for Information.
 [soon] 🧠  
 
-{: .highlightPurple }
+{: .highlightYellow }
 **Capitán, T.** & Méndez, E. Decision error decreases with risk aversion: A replication.
 [soon]  🧠
 
-{: .highlightPurple }
+{: .highlightYellow }
 Marcoci, A.; Wilkinson, D.; Baskin, E.; Berkman, H.; Buchanan, E.; **et al.** Predicting the
 replicability of social and behavioural science claims from the COVID19 Preprint Replication Project
 with structured expert and novice groups. _Submitted_
@@ -202,3 +202,25 @@ in Costa Rica. _Environment for Development Discussion Paper Series_ 🌱 🌍</
 </details>  
 
 ---
+
+<!-- EXAMPLE HIDDEN SUMMARY
+&nbsp;
+{: .lh-0 }
+<details>
+  <summary markdown="span">**Capitán, T.**; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying pricing may increase total electricity consumption: Evidence from Costa Rica. _Resource and Energy Economics_ 🌱 🌍</summary>
+
+> **Links**: 
+[[pdf](https://osf.io/preprints/socarxiv/wcz8s/){:target="_blank"}]
+[[code](https://github.com/tabareCapitan/CNFL){:target="_blank"}]
+[[doi](https://doi.org/10.1016/j.reseneeco.2021.101264){:target="_blank"}]
+{: .fs-2 }
+>
+**Abstract:** We study the implementation of a time-varying pricing (TVP) program by a major electricity utility in Costa Rica. Because of particular features of the data, we use recently developed understanding of the two-way fixed effects differences-in-differences estimator along with event-study specifications to interpret our results. Similar to previous research, we find that the program reduces consumption during peak-hours. However, in contrast with previous research, we find that the program increases total consumption. With a stylized economic model, we show how these seemingly conflicted results may not be at odds. The key element of the model is that previous research used data from rich countries, in which the use of heating and cooling devices drives electricity consumption, but we use data from a tropical middle-income country, where very few households have heating or cooling devices. Since there is not much room for technological changes (which might reduce consumption at all times), behavioral changes to reduce consumption during peak hours are not enough to offset the increased consumption during off-peak hours (when electricity is cheaper). Our results serve as a cautionary piece of evidence for policy makers interested in reducing consumption during peak hours—the goal can potentially be achieved with TVP, but the cost is increased total consumption.
+{: .fs-2 }
+>
+> **JEL classification:** Q41, Q47, Q50
+{: .fs-2 }
+>
+> **Keywords:** dynamic pricing, energy, behavioral adjustments, LMICs
+{: .fs-2 }
+</details>  -->
