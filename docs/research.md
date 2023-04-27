@@ -23,7 +23,7 @@ nav_order: 2
 {: .lh-0 }
 
 {: .highlightA }
-**Capitán, T.**; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. Increasing calorie information uptake with a prenudge. [soon] 🧠  
+**Capitán, T.**; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. Increasing calorie information uptake with a prenudge. [[pdf](https://osf.io/preprints/metaarxiv/xdsjf/){:target="_blank"}] 🧠  
  
  {: .highlightA }
 **Capitán, T.**; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. Expecting to Get It: An Endowment Effect for Information.
@@ -53,8 +53,6 @@ with structured expert and novice groups. _Submitted_
 [[doi](https://doi.org/10.1016/j.reseneeco.2021.101264){:target="_blank"}]
 {: .fs-2 }
 >
-{: .highlightA } 
-A
 **Abstract:** We study the implementation of a time-varying pricing (TVP) program by a major electricity utility in Costa Rica. Because of particular features of the data, we use recently developed understanding of the two-way fixed effects differences-in-differences estimator along with event-study specifications to interpret our results. Similar to previous research, we find that the program reduces consumption during peak-hours. However, in contrast with previous research, we find that the program increases total consumption. With a stylized economic model, we show how these seemingly conflicted results may not be at odds. The key element of the model is that previous research used data from rich countries, in which the use of heating and cooling devices drives electricity consumption, but we use data from a tropical middle-income country, where very few households have heating or cooling devices. Since there is not much room for technological changes (which might reduce consumption at all times), behavioral changes to reduce consumption during peak hours are not enough to offset the increased consumption during off-peak hours (when electricity is cheaper). Our results serve as a cautionary piece of evidence for policy makers interested in reducing consumption during peak hours—the goal can potentially be achieved with TVP, but the cost is increased total consumption.
 {: .fs-2 }
 >
