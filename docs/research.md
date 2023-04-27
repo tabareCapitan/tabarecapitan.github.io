@@ -2,6 +2,7 @@
 layout: page
 title: research
 permalink: /research/
+has_children: true
 nav_order: 2
 ---
 
