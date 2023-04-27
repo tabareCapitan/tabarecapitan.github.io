@@ -48,6 +48,8 @@ callouts_level: quiet # or loud
 callouts:
   highlightPurple:
     color: purple
+  highlightGray:
+    color: grey-lt
   highlightRed:
     color: red
   highlightGreen:
