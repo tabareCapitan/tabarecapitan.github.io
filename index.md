@@ -4,13 +4,15 @@ layout: home
 nav_order: 1
 ---
 
+{: .highlight }
+
 NEWS: XXX
 
-{: .highlights }
+{: .note }
 
 NEWS: B
 
-{: .note }
+
 
 I am an economist with broad interests within **applied microeconomics**:
 
