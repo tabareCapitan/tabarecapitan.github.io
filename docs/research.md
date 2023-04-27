@@ -2,7 +2,6 @@
 layout: page
 title: research
 permalink: /research/
-has_children: true
 nav_order: 2
 ---
 
@@ -23,18 +22,18 @@ nav_order: 2
 &nbsp;
 {: .lh-0 }
 
-{: .highlightA }
-**Capitán, T.**; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. Increasing calorie information uptake with a prenudge. [[pdf](https://osf.io/preprints/metaarxiv/xdsjf/){:target="_blank"}] 🧠  
+{: .highlightPurple }
+**Capitán, T.**; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. Increasing calorie information uptake with a prenudge. [soon] 🧠  
  
- {: .highlightA }
+ {: .highlightPurple }
 **Capitán, T.**; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. Expecting to Get It: An Endowment Effect for Information.
 [soon] 🧠  
 
-{: .highlightA }
+{: .highlightPurple }
 **Capitán, T.** & Méndez, E. Decision error decreases with risk aversion: A replication.
 [soon]  🧠
 
-{: .highlightA }
+{: .highlightPurple }
 Marcoci, A.; Wilkinson, D.; Baskin, E.; Berkman, H.; Buchanan, E.; **et al.** Predicting the
 replicability of social and behavioural science claims from the COVID19 Preprint Replication Project
 with structured expert and novice groups. _Submitted_
