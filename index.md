@@ -4,9 +4,11 @@ layout: home
 nav_order: 1
 ---
 
-<!-- NEWS: XXX
-{: .warning } -->
+NEWS: XXX
+{: .warning }
 
+NEWS: B
+{: .morado }
 
 I am an economist with broad interests within **applied microeconomics**:
 
