@@ -4,10 +4,9 @@ layout: home
 nav_order: 1
 ---
 
-{: .warning-title }
-News
+{: .warning }
 
-xxxxxxxxxxxxxxxxx
+News
 
 
 I am an economist with broad interests within **applied microeconomics**:
