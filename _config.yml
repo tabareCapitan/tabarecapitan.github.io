@@ -54,6 +54,8 @@ callouts:
     color: green
   highlightYellow:
     color: yellow     
+  highlightBlue:
+    color: blue      
   important:
     title: Important
     color: blue
