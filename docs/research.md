@@ -13,12 +13,17 @@ nav_order: 2
 &nbsp;
 {: .lh-0 }
 
+<!-- Add a blank line before the HTML -->
+
 <details>
   <summary class="summary-callout">This is a custom callout summary</summary>
-  <p>
-    This is the content that will be displayed when the collapsible section is expanded.
-  </p>
+
+  This is the content that will be displayed when the collapsible section is expanded.
+
 </details>
+
+<!-- Add a blank line after the HTML -->
+
  
 {: .highlightYellow }
 🧠 ***Capitán, T.***; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge." 
