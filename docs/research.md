@@ -6,11 +6,11 @@ nav_order: 2
 ---
 
 <style>
-  .summary-callout {
+  .summary-workingPaper {
     padding: 8px 12px;
     background-color: #ffde2b;
     border-left: 4px solid #ccc;
-    font-weight: bold;
+<!--     font-weight: bold; -->
     cursor: pointer;
     display: inline-block;
   }
@@ -25,17 +25,15 @@ nav_order: 2
 &nbsp;
 {: .lh-0 }
 
-<!-- Add a blank line before the HTML -->
 
 <details>
   
-  <summary class="summary-callout"> This is a custom callout summary </summary>
+  <summary class="summary-workingPaper"> 🧠 ***Capitán, T.***; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge." </summary>
   <p>
   This is the content that will be displayed when the collapsible section is expanded.
   </p>
 </details>
 
-<!-- Add a blank line after the HTML -->
 
 
  
