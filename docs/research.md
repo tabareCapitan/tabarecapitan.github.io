@@ -10,15 +10,13 @@ nav_order: 2
     padding: 8px 12px;
     background-color: #ffde2b;
     border-left: 4px solid #ccc;
-<!--     font-weight: bold; -->
+    border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
     display: inline-block;
   }
 </style>
 
-
 <!-- {::options parse_block_html="true" /} -->
-
 
 ## working papers
 
@@ -28,7 +26,7 @@ nav_order: 2
 
 <details>
   
-  <summary class="summary-workingPaper"> 🧠 ***Capitán, T.***; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge." </summary>
+  <summary class="summary-workingPaper"> 🧠 <b>Capitán, T.</b>; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge." </summary>
   <p>
   This is the content that will be displayed when the collapsible section is expanded.
   </p>
