@@ -9,7 +9,7 @@ nav_order: 2
   .summary-workingPaper {
     padding: 8px 12px;
     background-color: #ffde2b;
-    border-left: 4px solid #ccc;
+    border-left: 4px solid #751aff;
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
     display: inline-block;
@@ -18,35 +18,54 @@ nav_order: 2
 
 <!-- {::options parse_block_html="true" /} -->
 
+ {: .highlightYellow }
+ xxxx
+ 
 ## working papers
 
 &nbsp;
 {: .lh-0 }
 
-
+<!-- NEW PAPER -->
 <details>
-  
   <summary class="summary-workingPaper"> 🧠 <b>Capitán, T.</b>; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge." </summary>
   <p>
-  This is the content that will be displayed when the collapsible section is expanded.
+  Coming soon. 
   </p>
 </details>
 
 
+<!-- NEW PAPER -->
+<details>
+  
+  <summary class="summary-workingPaper"> 🧠 <b>Capitán, T.</b>; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. "Expecting to Get It: An Endowment Effect for Information." 
+ </summary>
+  <p>
+  Coming soon. 
+  </p>
+</details>
 
- 
-{: .highlightYellow }
-🧠 ***Capitán, T.***; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge." 
- 
- {: .highlightYellow }
-🧠 **Capitán, T.**; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. "Expecting to Get It: An Endowment Effect for Information." 
+<!-- NEW PAPER -->
+<details>
+  
+  <summary class="summary-workingPaper"> 🧠 <b>Capitán, T.</b> & Méndez, E. "Decision error decreases with risk aversion: A replication."
+ </summary>
+  <p>
+  Coming soon. 
+  </p>
+</details>
 
-{: .highlightYellow }
-🧠 **Capitán, T.** & Méndez, E. "Decision error decreases with risk aversion: A replication."
-
-{: .highlightYellow }
-Marcoci, A.; Wilkinson, D.; Baskin, E.; Berkman, H.; Buchanan, E.; **et al.** "Predicting the replicability of social and behavioural science claims from the COVID19 Preprint Replication Project with structured expert and novice groups." _Submitted_.
-[📄](https://osf.io/preprints/metaarxiv/xdsjf/){:target="_blank"}
+<!-- NEW PAPER -->
+<details>
+  
+  <summary class="summary-workingPaper"> 
+    Marcoci, A.; Wilkinson, D.; Baskin, E.; Berkman, H.; Buchanan, E.; <b>et al.</b> "Predicting the replicability of social and behavioural science claims from the COVID19 Preprint Replication Project with structured expert and novice groups." <em>Submitted<em>.
+    <a href="https://osf.io/preprints/metaarxiv/xdsjf/" target="_blank">📄</a>
+ </summary>
+  <p>
+  Replication is an important “credibility control” mechanism for clarifying the reliability of published findings. However, replication is costly, and it is infeasible to replicate everything. Accurate, fast, lower cost alternatives such as eliciting predictions from experts or novices could accelerate credibility assessment and improve allocation of replication resources for important and uncertain findings. We elicited judgments from experts and novices on 100 claims from preprints about an emerging area of research (COVID-19 pandemic) using a new interactive structured elicitation protocol and we conducted 35 new replications. Participants’ average estimates were similar to the observed replication rate of 60%. After interacting with their peers, novices updated both their estimates and confidence in their judgements significantly more than experts and their accuracy improved more between elicitation rounds. Experts’ average accuracy was 0.54 (95% CI: [0.454, 0.628]) after interaction and they correctly classified 55% of claims; novices’ average accuracy was 0.55 (95% CI: [0.455, 0.628]), correctly classifying 61% of claims. The difference in accuracy between experts and novices was not significant and their judgments on the full set of claims were strongly correlated (r=.48). These results are consistent with prior investigations eliciting predictions about the replicability of published findings in established areas of research and suggest that expertise may not be required for credibility assessment of some research findings.
+  </p>
+</details>
 
 
 ## selected papers
