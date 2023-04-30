@@ -5,6 +5,17 @@ permalink: /research/
 nav_order: 2
 ---
 
+<style>
+  .summary-callout {
+    padding: 8px 12px;
+    background-color: #ffde2b;
+    border-left: 4px solid #ccc;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+  }
+</style>
+
 {::options parse_block_html="true" /}
 
 
@@ -23,6 +34,7 @@ nav_order: 2
 </details>
 
 <!-- Add a blank line after the HTML -->
+
 
  
 {: .highlightYellow }
