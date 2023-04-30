@@ -12,7 +12,8 @@ nav_order: 2
     border-left: 4px solid #751aff;
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
-    display: inline-block;
+    display: block; /* Change display to block */
+    width: 100%; /* Set the width to 100% */
   }
 </style>
 
