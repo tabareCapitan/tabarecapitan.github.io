@@ -7,13 +7,13 @@ nav_order: 2
 
 <style>
   .abstract {
-    font-size: 14px; /* Adjust this value to change the text size */
+    font-size: 13px; /* Adjust this value to change the text size */
   }  
   .summary-workingPaper {
     padding: 8px 12px;
     background-color: #ffde2b;
     border-left: 4px solid #751aff;
-    font-size: 20px; /* Adjust this value to change the text size */
+    font-size: 17px; /* Adjust this value to change the text size */
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
     display: block; /* Change display to block */
@@ -68,7 +68,7 @@ nav_order: 2
 
 
 &nbsp;
-<!-- {: .lh-0 } -->
+{: .lh-0 }
 
 <!-- NEW PAPER -->
 <details>
