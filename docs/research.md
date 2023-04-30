@@ -13,10 +13,12 @@ nav_order: 2
 &nbsp;
 {: .lh-0 }
 
-{: .highlightYellow }
-🧠 ***Capitán, T.***; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge."<details> <summary markdown="span">abstract</summary>
- hello
- </details>
+<details>
+  <summary class="summary-callout">This is a custom callout summary</summary>
+  <p>
+    This is the content that will be displayed when the collapsible section is expanded.
+  </p>
+</details>
  
 {: .highlightYellow }
 🧠 ***Capitán, T.***; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge." 
