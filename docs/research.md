@@ -18,15 +18,19 @@ nav_order: 2
     cursor: pointer;
     display: block; /* Change display to block */
     width: 100%; /* Set the width to 100% */
+    opacity: 0.8; /* Add this line to control the opacity */
+
   }
   .summary-selectedPaper {
     padding: 8px 12px;
-    background-color: #00b33c;
+    background-color: #00cc00;
     border-left: 4px solid #751aff;
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
     display: block; /* Change display to block */
     width: 100%; /* Set the width to 100% */
+    opacity: 0.8; /* Add this line to control the opacity */
+
   }
   .summary-morePaper {
     padding: 8px 12px;
@@ -36,6 +40,8 @@ nav_order: 2
     cursor: pointer;
     display: block; /* Change display to block */
     width: 100%; /* Set the width to 100% */
+    opacity: 0.8; /* Add this line to control the opacity */
+
   }  
   .summary-restingPaper {
     padding: 8px 12px;
@@ -45,6 +51,7 @@ nav_order: 2
     cursor: pointer;
     display: block; /* Change display to block */
     width: 100%; /* Set the width to 100% */
+    opacity: 0.8; /* Add this line to control the opacity */
   }    
 </style>
 
@@ -123,7 +130,7 @@ nav_order: 2
   <summary class="summary-selectedPaper"> 
     🌱 🌍 <b>Capitán, T.</b>; Alpízar, F.; Madrigal-Ballestero, R.; and Pattanayak, S. (2021). Time-varying pricing may increase total electricity consumption: Evidence from Costa Rica. <em>Resource and Energy Economics</em>.
     <a href="https://osf.io/preprints/socarxiv/wcz8s/" target="_blank">📄</a>
-    <a href="https://github.com/tabareCapitan/CNFL" target="_blank".💾</a>
+    <a href="https://github.com/tabareCapitan/CNFL" target="_blank">💾</a>
     <a href="https://doi.org/10.1016/j.reseneeco.2021.101264" target="_blank">🔗</a>
     </summary>
   <p>
