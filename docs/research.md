@@ -28,7 +28,8 @@ nav_order: 2
 <!-- Add a blank line before the HTML -->
 
 <details>
-  <summary class="summary-callout">This is a custom callout summary</summary>
+  
+  <summary class="summary-callout"> This is a custom callout summary </summary>
 
   This is the content that will be displayed when the collapsible section is expanded.
 
