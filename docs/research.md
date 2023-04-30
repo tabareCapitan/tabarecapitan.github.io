@@ -51,7 +51,7 @@ nav_order: 2
     cursor: pointer;
     display: block; /* Change display to block */
     width: 100%; /* Set the width to 100% */
-    opacity: 0.8; /* Add this line to control the opacity */
+    opacity: 1; /* Add this line to control the opacity */
   }    
 </style>
 
