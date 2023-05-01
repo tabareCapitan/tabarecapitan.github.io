@@ -80,6 +80,7 @@ nav_order: 2
 ## working papers
 <div class="custom-padding"> &nbsp;  </div>
 
+
 <!-- NEW PAPER -->
 
 <div class="callout-wrapper">
@@ -145,6 +146,7 @@ nav_order: 2
 ## selected papers
 <div class="custom-padding"> &nbsp;  </div>
 
+
 <!-- NEW PAPER -->
 
 <div class="callout-wrapper">
@@ -203,6 +205,7 @@ nav_order: 2
 ## more papers
 <div class="custom-padding"> &nbsp;  </div>
 
+
 <!-- NEW PAPER -->
 
 <div class="callout-wrapper">
@@ -259,12 +262,13 @@ nav_order: 2
 ## resting papers
 <div class="custom-padding"> &nbsp;  </div>
 
+
 <!-- NEW PAPER -->
 
 <div class="callout-wrapper">
   <details>
     <summary class="summary-restingPaper"> 
-      🌱 🌍 <b>Capitán T.</b>, Madrigal-Ballestero, R.; Albers, H. J., White, B. Siting marine protected areas with area targets: protecting rural incomes, fish Stocks, and turtles in Costa Rica. <em>Environment for Development Discussion Paper Series</em>.
+      🌱 🌍 <b>Capitán T.</b>, Madrigal-Ballestero, R.; Albers, H. J., White, B. (2020) Siting marine protected areas with area targets: protecting rural incomes, fish Stocks, and turtles in Costa Rica. <em>Environment for Development Discussion Paper Series</em>.
       <a href="https://www.efdinitiative.org/publications/siting-marine-protected-areas-area-targets-protecting-rural-incomes-fish-stocks-and" target="_blank">📄</a>
       </summary>
     <p>
