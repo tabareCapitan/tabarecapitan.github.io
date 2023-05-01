@@ -67,7 +67,7 @@ nav_order: 2
     padding-bottom: 0px; /* Adjust this value to control the space below the content */
   }
   .callout-wrapper {
-    margin-bottom: 8px; /* Adjust this value to control the vertical space between callouts */
+    margin-bottom: 9px; /* Adjust this value to control the vertical space between callouts */
   }
 </style>
 
