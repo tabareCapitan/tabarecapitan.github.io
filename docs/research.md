@@ -52,8 +52,8 @@ nav_order: 2
     opacity: 1; /* Add this line to control the opacity */
   }    
   .custom-padding {
-    padding-top: 20px;    /* Adjust this value to control the space above the content */
-    padding-bottom: 20px; /* Adjust this value to control the space below the content */
+    padding-top: 5px;    /* Adjust this value to control the space above the content */
+    padding-bottom: 5px; /* Adjust this value to control the space below the content */
   }
 </style>
 
@@ -78,7 +78,7 @@ nav_order: 2
 
 <!-- &nbsp;
 {: .lh-0 } -->
-<div class="custom-padding"> &nbsp  </div>
+<div class="custom-padding"> &nbsp;  </div>
 
 <!-- NEW PAPER -->
 <details>
