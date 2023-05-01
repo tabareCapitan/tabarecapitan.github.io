@@ -59,8 +59,8 @@ nav_order: 2
     text-decoration: none; /* Remove the underline from links */
   }   
   .custom-padding {
-    padding-top: -3px;    /* Adjust this value to control the space above the content */
-    padding-bottom: -3px; /* Adjust this value to control the space below the content */
+    padding-top: -5px;    /* Adjust this value to control the space above the content */
+    padding-bottom: -5px; /* Adjust this value to control the space below the content */
   }
 </style>
 
@@ -71,13 +71,13 @@ nav_order: 2
  
 ## working papers
 
-<div class="custom-padding"> &nbsp;  </div>
+<!-- <div class="custom-padding"> &nbsp;  </div> -->
 
 <!-- NEW PAPER -->
 <details>
   <summary class="summary-workingPaper"> 🧠 <b>Capitán, T.</b>; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge." </summary>
   <p>
-  <div class="abstract">Coming soon.</div>
+  <div class="abstract"><b>Abstract. </b>Coming soon.</div>
   </p>
 </details>
 
@@ -91,7 +91,7 @@ nav_order: 2
   <summary class="summary-workingPaper"> 🧠 <b>Capitán, T.</b>; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. "Expecting to Get It: An Endowment Effect for Information." 
  </summary>
   <p>
-  <div class="abstract">Coming soon.</div>
+  <div class="abstract"><b>Abstract. </b>Coming soon.</div>
   </p>
 </details>
 
@@ -105,7 +105,7 @@ nav_order: 2
   <summary class="summary-workingPaper"> 🧠 <b>Capitán, T.</b> & Méndez, E. "Decision error decreases with risk aversion: A replication."
  </summary>
   <p>
-  <div class="abstract">Coming soon.</div>
+  <div class="abstract"><b>Abstract. </b>Coming soon.</div>
   </p>
 </details>
 
@@ -121,7 +121,7 @@ nav_order: 2
  </summary>
   <p>
   <div class="abstract">
-    <b>Abstract.</b> Replication is an important “credibility control” mechanism for clarifying the reliability of published findings. However, replication is costly, and it is infeasible to replicate everything. Accurate, fast, lower cost alternatives such as eliciting predictions from experts or novices could accelerate credibility assessment and improve allocation of replication resources for important and uncertain findings. We elicited judgments from experts and novices on 100 claims from preprints about an emerging area of research (COVID-19 pandemic) using a new interactive structured elicitation protocol and we conducted 35 new replications. Participants’ average estimates were similar to the observed replication rate of 60%. After interacting with their peers, novices updated both their estimates and confidence in their judgements significantly more than experts and their accuracy improved more between elicitation rounds. Experts’ average accuracy was 0.54 (95% CI: [0.454, 0.628]) after interaction and they correctly classified 55% of claims; novices’ average accuracy was 0.55 (95% CI: [0.455, 0.628]), correctly classifying 61% of claims. The difference in accuracy between experts and novices was not significant and their judgments on the full set of claims were strongly correlated (r=.48). These results are consistent with prior investigations eliciting predictions about the replicability of published findings in established areas of research and suggest that expertise may not be required for credibility assessment of some research findings.
+    <b>Abstract. </b>Replication is an important “credibility control” mechanism for clarifying the reliability of published findings. However, replication is costly, and it is infeasible to replicate everything. Accurate, fast, lower cost alternatives such as eliciting predictions from experts or novices could accelerate credibility assessment and improve allocation of replication resources for important and uncertain findings. We elicited judgments from experts and novices on 100 claims from preprints about an emerging area of research (COVID-19 pandemic) using a new interactive structured elicitation protocol and we conducted 35 new replications. Participants’ average estimates were similar to the observed replication rate of 60%. After interacting with their peers, novices updated both their estimates and confidence in their judgements significantly more than experts and their accuracy improved more between elicitation rounds. Experts’ average accuracy was 0.54 (95% CI: [0.454, 0.628]) after interaction and they correctly classified 55% of claims; novices’ average accuracy was 0.55 (95% CI: [0.455, 0.628]), correctly classifying 61% of claims. The difference in accuracy between experts and novices was not significant and their judgments on the full set of claims were strongly correlated (r=.48). These results are consistent with prior investigations eliciting predictions about the replicability of published findings in established areas of research and suggest that expertise may not be required for credibility assessment of some research findings.
   </div>
   </p>
 </details>
