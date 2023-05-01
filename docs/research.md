@@ -74,7 +74,7 @@ nav_order: 2
  
 ## working papers
 
-<p class="negative-margin"> &nbsp;  </div>
+<p class="negative-margin"> &nbsp;  </p>
 
 <!-- NEW PAPER -->
 <details>
