@@ -52,8 +52,8 @@ nav_order: 2
     opacity: 1; /* Add this line to control the opacity */
   }    
   .custom-padding {
-    padding-top: 2px;    /* Adjust this value to control the space above the content */
-    padding-bottom: 2px; /* Adjust this value to control the space below the content */
+    padding-top: 0px;    /* Adjust this value to control the space above the content */
+    padding-bottom: 0px; /* Adjust this value to control the space below the content */
   }
 </style>
 
