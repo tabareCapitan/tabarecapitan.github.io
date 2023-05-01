@@ -23,7 +23,7 @@ nav_order: 2
   }
   .summary-selectedPaper {
     padding: 8px 12px;
-    background-color: #00cc00;
+    background-color: #d9f7e9;
     border-left: 4px solid #751aff;
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
