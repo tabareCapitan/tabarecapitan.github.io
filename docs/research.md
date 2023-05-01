@@ -62,6 +62,9 @@ nav_order: 2
     padding-top: 0px;    /* Adjust this value to control the space above the content */
     padding-bottom: 0px; /* Adjust this value to control the space below the content */
   }
+  .callout-wrapper {
+    margin-bottom: 3px; /* Adjust this value to control the vertical space between callouts */
+  }
 </style>
 
 <!-- {::options parse_block_html="true" /} -->
@@ -74,16 +77,17 @@ nav_order: 2
 <!-- NEW PAPER -->
 <div class="custom-padding"> &nbsp;  </div>
 
+<div class="callout-wrapper">
 <details>
   <summary class="summary-workingPaper"> 🧠 <b>Capitán, T.</b>; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge." </summary>
   <p>
   <div class="abstract"><b>Abstract. </b>Coming soon.</div>
   </p>
 </details>
-
+</div>
 
 <!-- NEW PAPER -->
-<div class="custom-padding"> &nbsp;  </div>
+<!-- <div class="custom-padding"> &nbsp;  </div> -->
 
 <details>
   <summary class="summary-workingPaper"> 🧠 <b>Capitán, T.</b>; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. "Expecting to Get It: An Endowment Effect for Information." 
