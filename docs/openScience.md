@@ -4,8 +4,11 @@ layout: page
 nav_order: 3
 ---
 
-<!-- {::options parse_block_html="true" /} -->
-
+<style>
+  .footnotes li {
+    font-size: 0.8em; /* Adjust this value to control the text size of footnotes */
+  }
+</style>
 
 ### Access
 
