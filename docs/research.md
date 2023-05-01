@@ -59,8 +59,11 @@ nav_order: 2
     text-decoration: none; /* Remove the underline from links */
   }   
   .custom-padding {
-    padding-top: -5px;    /* Adjust this value to control the space above the content */
-    padding-bottom: -8px; /* Adjust this value to control the space below the content */
+    padding-top: 0px;    /* Adjust this value to control the space above the content */
+    padding-bottom: 0px; /* Adjust this value to control the space below the content */
+  }
+  .negative-margin {
+    margin-top: -10px; /* Adjust this value to control the negative space */
   }
 </style>
 
@@ -71,7 +74,7 @@ nav_order: 2
  
 ## working papers
 
-<!-- <div class="custom-padding"> &nbsp;  </div> -->
+<p class="negative-margin"> &nbsp;  </div>
 
 <!-- NEW PAPER -->
 <details>
