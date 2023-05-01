@@ -12,12 +12,12 @@ nav_order: 3
 
 ### Access
 
-<!-- {: .highlightPurple } -->
+{: .highlightBlue }
 > Despite my own preferences, my work often ends up behind a paywall.[^1] In this website I provide easy and free access to [my work](https://www.tabarecapitan.com/research/). For each research article, you should be able to find a link to the article as published by the journal (🔗) and a link to the article in PDF (📄).[^2] If the article is published under the open access model[^3], there might be only one link. If you cannot access any of the papers listed in my website, _please_ send me an email.
 
 ### Transparency
 
-<!-- {: .highlightPurple } -->
+{: .highlightBlue }
 > The production of knowledge in economics (and beyond) is an open conversation and everything in such production is up for debate. But it's a lot harder to debate when one cannot see the full results, code, or data underlying the conclusion of a research article. My goal is to facilitate that debate, at least around my work.
 > 
 > When possible[^4], I include a link to a replication package (💾) that contains instructions to replicate the analyses, as well as data and code when possible. When I succeed in my quest for transparency, my work can be replicated with one click (provided you have the right software and basic folder structure). However, this is an ongoing effort that is better reflected in my ongoing research.
