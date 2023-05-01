@@ -18,7 +18,7 @@ nav_order: 2
     cursor: pointer;
     display: block; /* Change display to block */
     width: 100%; /* Set the width to 100% */
-    opacity: 0.8; /* Add this line to control the opacity */
+    opacity: 1; /* Add this line to control the opacity */
 
   }
   .summary-selectedPaper {
@@ -29,7 +29,7 @@ nav_order: 2
     cursor: pointer;
     display: block; /* Change display to block */
     width: 100%; /* Set the width to 100% */
-    opacity: 0.8; /* Add this line to control the opacity */
+    opacity: 1; /* Add this line to control the opacity */
 
   }
   .summary-morePaper {
@@ -40,7 +40,7 @@ nav_order: 2
     cursor: pointer;
     display: block; /* Change display to block */
     width: 100%; /* Set the width to 100% */
-    opacity: 0.8; /* Add this line to control the opacity */
+    opacity: 1; /* Add this line to control the opacity */
 
   }  
   .summary-restingPaper {
@@ -57,8 +57,8 @@ nav_order: 2
 
 <!-- {::options parse_block_html="true" /} -->
 
- {: .highlightYellow }
- xxxx
+<!--  {: .highlightYellow }
+ xxxx -->
  
 ## working papers
 
