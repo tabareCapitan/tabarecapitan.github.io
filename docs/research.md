@@ -11,7 +11,7 @@ nav_order: 2
   }  
   .summary-workingPaper {
     padding: 8px 12px;
-    background-color: rgba(255, 230, 102, 0.8); /* Use an RGBA color value for the background */
+    background-color: rgba(255, 230, 102, 1); /* Use an RGBA color value for the background */
     border-left: 4px solid #751aff;
 <!--     font-size: 17px; /* Adjust this value to change the text size */ -->
     border-radius: 4px; /* Add this line for rounded corners */
@@ -21,7 +21,7 @@ nav_order: 2
   }
   .summary-selectedPaper {
     padding: 8px 12px;
-    background-color: #d9f7e9;
+    background-color: rgba(217, 247, 233, 1); /* Use an RGBA color value for the background */
     border-left: 4px solid #751aff;
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
@@ -32,7 +32,7 @@ nav_order: 2
   }
   .summary-morePaper {
     padding: 8px 12px;
-    background-color: #f68888;
+    background-color: rgba(246, 136, 136, 1);
     border-left: 4px solid #751aff;
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
@@ -43,7 +43,7 @@ nav_order: 2
   }  
   .summary-restingPaper {
     padding: 8px 12px;
-    background-color: #dedeed;
+    background-color: rgba(222, 222, 237, 1);
     border-left: 4px solid #751aff;
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
@@ -51,6 +51,10 @@ nav_order: 2
     width: 100%; /* Set the width to 100% */
     opacity: 1; /* Add this line to control the opacity */
   }    
+  .custom-padding {
+    padding-top: 20px;    /* Adjust this value to control the space above the content */
+    padding-bottom: 20px; /* Adjust this value to control the space below the content */
+  }
 </style>
 
 <!-- {::options parse_block_html="true" /} -->
@@ -72,8 +76,9 @@ nav_order: 2
 </details>
 
 
-&nbsp;
-{: .lh-0 }
+<!-- &nbsp;
+{: .lh-0 } -->
+<div class="custom-padding"> &nbsp  </div>
 
 <!-- NEW PAPER -->
 <details>
