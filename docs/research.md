@@ -35,7 +35,7 @@ nav_order: 2
   }
   .summary-morePaper {
     padding: 8px 12px;
-    background-color: rgba(250, 184, 184, 1);
+    background-color: rgba(198, 140, 83, 1);
     border-left: 4px solid #751aff;
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
