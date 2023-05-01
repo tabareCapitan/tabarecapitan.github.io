@@ -36,6 +36,7 @@ nav_order: 2
   .summary-morePaper {
     padding: 8px 12px;
     background-color: rgba(204, 230, 255, 0.4);
+    color: #333333;
     border-left: 4px solid #751aff;
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
@@ -48,7 +49,7 @@ nav_order: 2
   .summary-restingPaper {
     padding: 8px 12px;
     background-color: rgba(222, 222, 237, 0.4);
-    color: #000000;
+    color: #333333;
     border-left: 4px solid #751aff;
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
