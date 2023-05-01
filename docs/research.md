@@ -11,7 +11,7 @@ nav_order: 2
   }  
   .summary-workingPaper {
     padding: 8px 12px;
-    background-color: #ffde2b;
+    background-color: #ffe666;
     border-left: 4px solid #751aff;
 <!--     font-size: 17px; /* Adjust this value to change the text size */ -->
     border-radius: 4px; /* Add this line for rounded corners */
@@ -34,7 +34,7 @@ nav_order: 2
   }
   .summary-morePaper {
     padding: 8px 12px;
-    background-color: #cc3300;
+    background-color: #f68888;
     border-left: 4px solid #751aff;
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
@@ -45,7 +45,7 @@ nav_order: 2
   }  
   .summary-restingPaper {
     padding: 8px 12px;
-    background-color: #b3b3cc;
+    background-color: #dedeed;
     border-left: 4px solid #751aff;
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
