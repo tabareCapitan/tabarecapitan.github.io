@@ -63,7 +63,7 @@ nav_order: 2
     padding-bottom: 0px; /* Adjust this value to control the space below the content */
   }
   .negative-margin {
-    margin-top: -10px; /* Adjust this value to control the negative space */
+    margin-top: -20px; /* Adjust this value to control the negative space */
   }
 </style>
 
