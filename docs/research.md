@@ -11,7 +11,7 @@ nav_order: 2
   }  
   .summary-workingPaper {
     padding: 8px 12px;
-    background-color: rgba(255, 230, 102, 1); /* Use an RGBA color value for the background */
+    background-color: rgba(255, 230, 102, 0.8); /* Use an RGBA color value for the background */
     border-left: 4px solid #751aff;
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
@@ -23,7 +23,7 @@ nav_order: 2
   }
   .summary-selectedPaper {
     padding: 8px 12px;
-    background-color: rgba(77, 166, 255, 0.8); /* Use an RGBA color value for the background */
+    background-color: rgba(255, 69, 0, 0.8); /* Use an RGBA color value for the background */
     border-left: 4px solid #751aff;
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
@@ -35,7 +35,7 @@ nav_order: 2
   }
   .summary-morePaper {
     padding: 8px 12px;
-    background-color: rgba(198, 140, 83, 1);
+    background-color: rgba(102, 179, 255, 0.8);
     border-left: 4px solid #751aff;
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
@@ -47,7 +47,7 @@ nav_order: 2
   }  
   .summary-restingPaper {
     padding: 8px 12px;
-    background-color: rgba(222, 222, 237, 1);
+    background-color: rgba(222, 222, 237, 0.8);
     border-left: 4px solid #751aff;
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
