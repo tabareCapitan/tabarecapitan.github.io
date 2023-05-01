@@ -19,6 +19,9 @@ nav_order: 2
     display: block; /* Change display to block */
     width: 100%; /* Set the width to 100% */
   }
+  .summary-workingPaper a {
+    text-decoration: none; /* Remove the underline from links */
+  }
   .summary-selectedPaper {
     padding: 8px 12px;
     background-color: rgba(217, 247, 233, 1); /* Use an RGBA color value for the background */
@@ -53,7 +56,7 @@ nav_order: 2
   }    
   .custom-padding {
     padding-top: 0px;    /* Adjust this value to control the space above the content */
-    padding-bottom: 0px; /* Adjust this value to control the space below the content */
+    padding-bottom: -2px; /* Adjust this value to control the space below the content */
   }
 </style>
 
