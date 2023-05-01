@@ -34,7 +34,6 @@ nav_order: 2
     text-decoration: none; /* Remove the underline from links */
   }
   .summary-morePaper {
-    color: #000000
     padding: 8px 12px;
     background-color: rgba(204, 230, 255, 0.4);
     border-left: 4px solid #751aff;
