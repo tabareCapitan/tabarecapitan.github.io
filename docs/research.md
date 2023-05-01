@@ -13,7 +13,6 @@ nav_order: 2
     padding: 8px 12px;
     background-color: rgba(255, 230, 102, 1); /* Use an RGBA color value for the background */
     border-left: 4px solid #751aff;
-<!--     font-size: 17px; /* Adjust this value to change the text size */ -->
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
     display: block; /* Change display to block */
@@ -30,8 +29,9 @@ nav_order: 2
     cursor: pointer;
     display: block; /* Change display to block */
     width: 100%; /* Set the width to 100% */
-    opacity: 1; /* Add this line to control the opacity */
-
+  }
+  .summary-selectedPaper a {
+    text-decoration: none; /* Remove the underline from links */
   }
   .summary-morePaper {
     padding: 8px 12px;
@@ -41,8 +41,9 @@ nav_order: 2
     cursor: pointer;
     display: block; /* Change display to block */
     width: 100%; /* Set the width to 100% */
-    opacity: 1; /* Add this line to control the opacity */
-
+  }  
+  .summary-morePaper a {
+    text-decoration: none; /* Remove the underline from links */
   }  
   .summary-restingPaper {
     padding: 8px 12px;
@@ -54,9 +55,12 @@ nav_order: 2
     width: 100%; /* Set the width to 100% */
     opacity: 1; /* Add this line to control the opacity */
   }    
+  .summary-restingPaper a {
+    text-decoration: none; /* Remove the underline from links */
+  }   
   .custom-padding {
-    padding-top: 0px;    /* Adjust this value to control the space above the content */
-    padding-bottom: -2px; /* Adjust this value to control the space below the content */
+    padding-top: -3px;    /* Adjust this value to control the space above the content */
+    padding-bottom: -3px; /* Adjust this value to control the space below the content */
   }
 </style>
 
@@ -67,8 +71,7 @@ nav_order: 2
  
 ## working papers
 
-&nbsp;
-{: .lh-0 }
+<div class="custom-padding"> &nbsp;  </div>
 
 <!-- NEW PAPER -->
 <details>
@@ -79,11 +82,10 @@ nav_order: 2
 </details>
 
 
-<!-- &nbsp;
-{: .lh-0 } -->
+<!-- NEW PAPER -->
+
 <div class="custom-padding"> &nbsp;  </div>
 
-<!-- NEW PAPER -->
 <details>
   
   <summary class="summary-workingPaper"> 🧠 <b>Capitán, T.</b>; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. "Expecting to Get It: An Endowment Effect for Information." 
