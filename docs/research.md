@@ -60,7 +60,7 @@ nav_order: 2
   }   
   .custom-padding {
     padding-top: -5px;    /* Adjust this value to control the space above the content */
-    padding-bottom: -5px; /* Adjust this value to control the space below the content */
+    padding-bottom: -8px; /* Adjust this value to control the space below the content */
   }
 </style>
 
