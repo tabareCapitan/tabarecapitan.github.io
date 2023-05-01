@@ -204,7 +204,7 @@ nav_order: 2
 <div class="callout-wrapper">
   <details>
     <summary class="summary-morePaper"> 
-      🌱 🌍 Alpízar, F.; Saborío-Rodríguez, M.; Martínez-Rodríguez, R.; Viguera, B.; Vignola, R.; <b>Capitán, T.</b>; and Harvey, C. (2020). Determinants of food insecurity among smallholder farmer households in Central America: Recurrent versus extreme weather-driven events. <em>Regional Environmental Change</em>.
+      🌱 🌍 Alpízar, F.; Saborío-Rodríguez, M.; Martínez-Rodríguez, R.; Viguera, B.; <b>et al.</b> (2020). Determinants of food insecurity among smallholder farmer households in Central America: Recurrent versus extreme weather-driven events. <em>Regional Environmental Change</em>.
       <a href="https://doi.org/10.1007/s10113-020-01592-y" target="_blank">🔗</a>
       </summary>
     <p>
