@@ -11,15 +11,13 @@ nav_order: 2
   }  
   .summary-workingPaper {
     padding: 8px 12px;
-    background-color: #ffe666;
+    background-color: rgba(255, 230, 102, 0.8); /* Use an RGBA color value for the background */
     border-left: 4px solid #751aff;
 <!--     font-size: 17px; /* Adjust this value to change the text size */ -->
     border-radius: 4px; /* Add this line for rounded corners */
     cursor: pointer;
     display: block; /* Change display to block */
     width: 100%; /* Set the width to 100% */
-    opacity: 1; /* Add this line to control the opacity */
-
   }
   .summary-selectedPaper {
     padding: 8px 12px;
