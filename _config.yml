@@ -11,7 +11,7 @@ url: https://tabarecapitan.github.io/tabarecapitan.github.io
 
 
 # Google Analytics
-google_analytics: "G-5XPBJKXZNK"
+google_analytics: G-5XPBJKXZNK
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
 
 
