@@ -18,7 +18,6 @@ with a non-exclusive focus in **Latin America** (🌎).
 [selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple }
 [working papers](https://www.tabarecapitan.com/workingPapers/){: .btn .btn-purple }
 
-
 ---
 Postdoc in the environmental econ group at [SLU](https://www.slu.se/en/departments/economics/research/research-groups/environmental-economics/){:target="_blank"} (Sweden). 
 {: .text-center }
