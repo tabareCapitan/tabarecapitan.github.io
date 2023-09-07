@@ -5,7 +5,7 @@ nav_order: 1
 ---
 
 {: .highlightYellow }
-NEWS: A 
+I am slowly making some changes to this website, please let me know if you see anything that is not working properly.
 
 
 I am an economist with broad interests in <br> 
