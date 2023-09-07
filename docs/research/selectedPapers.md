@@ -39,7 +39,6 @@ nav_order: 2
  xxxx -->
 
 
-## selected papers
 <div class="custom-padding"> &nbsp;  </div>
 
 
