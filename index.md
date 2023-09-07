@@ -8,7 +8,9 @@ nav_order: 1
 NEWS: A -->
 
 
-I am an economist with broad interests in **behavioral economics** (🧠) and **environmental economics** (🌱), with a non-exclusive focus in **Latin America** (🌎).
+I am an economist with broad interests in 
+**behavioral economics** (🧠) and **environmental economics** (🌱),
+with a non-exclusive focus in **Latin America** (🌎).
 {: .text-center }
 
 --- 
