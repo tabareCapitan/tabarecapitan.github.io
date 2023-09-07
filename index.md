@@ -14,13 +14,14 @@ I am an economist with broad interests in <br>
 with a non-exclusive focus in **Latin America** (🌎).
 {: .text-center }
 
-[selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple .mr-4}
+[selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-red .mr-4}
 [working papers](https://www.tabarecapitan.com/workingPapers/){: .btn .btn-yellow .mr-4}
 {: .text-center }
+
 ---
 Postdoc in the environmental econ group at [SLU](https://www.slu.se/en/departments/economics/research/research-groups/environmental-economics/){:target="_blank"} (Sweden). 
 {: .text-center }
 
 --- 
-[📫 Tabare.Capitan at GMAIL](mailto:tabare.capitan@gmail.com){: .btn .btn-purple }
+[📫 Tabare.Capitan at GMAIL](mailto:tabare.capitan@gmail.com){: .btn .btn-outline }
 {: .text-center }
