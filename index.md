@@ -10,9 +10,8 @@ nav_order: 1
 
 ---
 I am an economist with broad interests in <br> 
-**behavioral economics** (🧠) & <br> 
-**environmental economics** (🌱), <br>
-with a non-exclusive focus in **Latin America** (🌎).
+**behavioral economics** (🧠) & **environmental economics** (🌱), <br>
+with a non-exclusive focus in Latin America (🌎).
 {: .text-center }
 
 [selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple .mr-4}
