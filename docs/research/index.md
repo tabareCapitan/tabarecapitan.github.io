@@ -14,15 +14,15 @@ Here you can find all my research:
 [more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-purple .mr-4}
 {: .text-center }
 
----
-In these sections,  use a few symbols to represent links to...
+
+In these sections, I use a few symbols to represent links to...
 
 - 📄 PDF 
 - 🔗 journal article
 - 🔍 online appendix
 - 💾 replication package
 
---- 
+
 Finally, you can find out more about how I do research in these sections:
 
 [research tools](https://www.tabarecapitan.com/tools/){: .btn .btn-purple .mr-4}
