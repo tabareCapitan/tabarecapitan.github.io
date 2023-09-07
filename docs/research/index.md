@@ -8,6 +8,11 @@ has_toc: false
 ---
 
 - explain symbols
+📄 🔍 🔗 🌱 🌍  🧠 
+
 - link to each section
+
 - open science
+
+
 - tools
