@@ -7,11 +7,11 @@ has_children: true
 has_toc: false
 ---
 
-See my research in 
+See my
 
-[working papers](https://www.tabarecapitan.com/workingPapers/){: .btn .btn-purple .mr-4}
-[selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple .mr-4}
-[more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-purple .mr-4}
+[working papers](https://www.tabarecapitan.com/workingPapers/){: .btn .btn-purple .mr-4},
+[selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple .mr-4}, and
+[more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-purple .mr-4};
 {: .text-left }
 
 where you the following symbols are links to...
@@ -19,7 +19,7 @@ where you the following symbols are links to...
 - 📄 PDF 
 - 🔗 journal article
 - 🔍 online appendix
-- 💾 replication package
+- 💾 replication package.
 
 Also, click on each reference for the abstract. 
 
