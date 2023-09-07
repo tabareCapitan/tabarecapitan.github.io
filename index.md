@@ -13,4 +13,4 @@ I am an economist with broad interests in **behavioral economics** (🧠) and **
 [📫 Tabare.Capitan at GMAIL](mailto:tabare.capitan@gmail.com){: .btn .btn-purple }
 {: .text-left }
 
-Position: Postdoc in the environmental econ group at [SLU](https://www.slu.se/en/departments/economics/research/research-groups/environmental-economics/){:target="_blank"} (Sweden).
+Current position: Postdoc in the environmental econ group at [SLU](https://www.slu.se/en/departments/economics/research/research-groups/environmental-economics/){:target="_blank"} (Sweden). 
