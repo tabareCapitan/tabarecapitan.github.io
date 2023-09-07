@@ -16,5 +16,5 @@ I am an economist with broad interests in **behavioral economics** (🧠) and **
 {: .text-center }
 
 ---
-Current position: Postdoc in the environmental econ group at [SLU](https://www.slu.se/en/departments/economics/research/research-groups/environmental-economics/){:target="_blank"} (Sweden). 
+Postdoc in the environmental econ group at [SLU](https://www.slu.se/en/departments/economics/research/research-groups/environmental-economics/){:target="_blank"} (Sweden). 
 {: .text-center }
