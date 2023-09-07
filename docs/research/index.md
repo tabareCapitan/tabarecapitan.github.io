@@ -20,7 +20,7 @@ Here you can find all my research:
 {: .text-center }
 
 ---
-I use a few symbols to represent links to
+In these sections,  use a few symbols to represent links to...
 
 - 📄 PDF 
 - 🔗 journal article
