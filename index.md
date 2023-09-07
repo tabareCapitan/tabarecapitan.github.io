@@ -4,8 +4,8 @@ layout: home
 nav_order: 1
 ---
 
-<!-- {: .highlightA }
-NEWS: A -->
+{: .highlightA }
+NEWS: A 
 
 
 I am an economist with broad interests in <br> 
