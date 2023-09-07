@@ -108,13 +108,14 @@ nav_order: 3
   </details>
 </div>
 
-
+<!-- 
 ## resting papers
 <div class="custom-padding"> &nbsp;  </div>
-
+-->
 
 <!-- NEW PAPER -->
 
+<!-- 
 <div class="callout-wrapper">
   <details>
     <summary class="summary-restingPaper"> 
@@ -129,3 +130,4 @@ nav_order: 3
     </p>
   </details>
 </div>
+-->
