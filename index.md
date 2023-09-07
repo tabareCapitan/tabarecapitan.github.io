@@ -14,8 +14,8 @@ I am an economist with broad interests in <br>
 with a non-exclusive focus in **Latin America** (🌎).
 {: .text-center }
 
-[selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-red .mr-4}
-[working papers](https://www.tabarecapitan.com/workingPapers/){: .btn .btn-yellow .mr-4}
+[selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple .mr-4}
+[working papers](https://www.tabarecapitan.com/workingPapers/){: .btn .btn-purple .mr-4}
 {: .text-center }
 
 ---
