@@ -1,6 +1,7 @@
 ---
 layout: default
 title: research
+permalink: /research/
 nav_order: 2
 has_children: true
 ---
