@@ -7,12 +7,25 @@ has_children: true
 has_toc: false
 ---
 
-- explain symbols
-📄 🔍 🔗 🌱 🌍  🧠 
+{: .highlightYellow }
+🚧 This section is not finished 👷‍♂️
+{: .text-center }
 
-- link to each section
+---
+Here you can find all my research: 
 
-- open science
+[working papers](https://www.tabarecapitan.com/workingPapers/){: .btn .btn-purple .mr-4}
+[selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple .mr-4}
+[more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-purple .mr-4}
+{: .text-center }
 
+---
+I use a few symbols to represent links to
 
-- tools
+- 📄 PDF 
+- 🔗 journal article
+- 🔍 online appendix
+- 💾 replication package
+
+--- 
+In the ["tools" section](https://www.tabarecapitan.com/tools/) I describe all the tools I use to do research. Furthermore, I aim to make all my research following good practices in "open science"; you can find more about what that means [in the "open science" section](https://www.tabarecapitan.com/openScience/).
