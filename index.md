@@ -3,11 +3,11 @@ title: about me
 layout: home
 nav_order: 1
 ---
-<--!
+<!--
 {: .highlightYellow }
 🚧 Website under (slow) construction 👷‍♂️
 {: .text-center }
---->
+-->
 
 ---
 I am an economist with broad interests in <br> 
