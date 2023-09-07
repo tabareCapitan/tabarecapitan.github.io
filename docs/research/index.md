@@ -7,7 +7,7 @@ has_children: true
 has_toc: false
 ---
 
-Here you can find all my research: 
+See my research in 
 
 [working papers](https://www.tabarecapitan.com/workingPapers/){: .btn .btn-purple .mr-4}
 [selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple .mr-4}
@@ -15,7 +15,7 @@ Here you can find all my research:
 {: .text-left }
 
 
-In these sections, I use a few symbols to represent links to...
+where the following symbols are links to...
 
 - 📄 PDF 
 - 🔗 journal article
@@ -23,7 +23,7 @@ In these sections, I use a few symbols to represent links to...
 - 💾 replication package
 
 
-Finally, you can find out more about how I do research in these sections:
+Finally, how do I do research?
 
 [research tools](https://www.tabarecapitan.com/tools/){: .btn .btn-purple .mr-4}
 [open science](https://www.tabarecapitan.com/openScience/){: .btn .btn-purple .mr-4}
