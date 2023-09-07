@@ -21,7 +21,7 @@ where you the following symbols are links to...
 - 🔍 online appendix
 - 💾 replication package.
 
-Also, click on each reference for the abstract. 
+You can click on each reference for the abstract. 
 
 Finally, how do I do research?
 
