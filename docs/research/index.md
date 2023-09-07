@@ -27,6 +27,7 @@ These symbols are links to...
 
 Finally, how do I do research?
 
-[research tools](https://www.tabarecapitan.com/tools/){: .btn .btn-purple .mr-4} 
-[open science](https://www.tabarecapitan.com/openScience/){: .btn .btn-purple .mr-4}
+[research tools 🛠](https://www.tabarecapitan.com/tools/){: .btn .btn-purple .mr-4} 
+[open science 👍](https://www.tabarecapitan.com/openScience/){: .btn .btn-purple .mr-4}
+[workflow 🤹‍♀️](https://www.tabarecapitan.com/){: .btn .btn-purple .mr-4}
 {: .text-left }
