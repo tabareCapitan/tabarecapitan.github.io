@@ -7,30 +7,10 @@ has_toc: false
 nav_order: 2
 ---
 
----
-layout: page
-title: research1
-permalink: /research1/
-nav_order: 2
----
-
 <style>
   .abstract {
     font-size: 13px; /* Adjust this value to change the text size */
   }  
-  .summary-workingPaper {
-    padding: 8px 12px;
-    background-color: rgba(255, 230, 102, 0.6); /* Use an RGBA color value for the background */
-    color: #404040;  
-    border-left: 4px solid #751aff;
-    border-radius: 4px; /* Add this line for rounded corners */
-    cursor: pointer;
-    display: block; /* Change display to block */
-    width: 100%; /* Set the width to 100% */
-  }
-  .summary-workingPaper a {
-    text-decoration: none; /* Remove the underline from links */
-  }
   .summary-selectedPaper {
     padding: 8px 12px;
     background-color: rgba(255, 199, 179, 0.6); /* Use an RGBA color value for the background */
@@ -44,33 +24,6 @@ nav_order: 2
   .summary-selectedPaper a {
     text-decoration: none; /* Remove the underline from links */
   }
-  .summary-morePaper {
-    padding: 8px 12px;
-    background-color: rgba(204, 230, 255, 0.6);
-    color: #404040;
-    border-left: 4px solid #751aff;
-    border-radius: 4px; /* Add this line for rounded corners */
-    cursor: pointer;
-    display: block; /* Change display to block */
-    width: 100%; /* Set the width to 100% */
-  }  
-  .summary-morePaper a {
-    text-decoration: none; /* Remove the underline from links */
-  }  
-  .summary-restingPaper {
-    padding: 8px 12px;
-    background-color: rgba(222, 222, 237, 0.6);
-    color: #404040;
-    border-left: 4px solid #751aff;
-    border-radius: 4px; /* Add this line for rounded corners */
-    cursor: pointer;
-    display: block; /* Change display to block */
-    width: 100%; /* Set the width to 100% */
-    opacity: 1; /* Add this line to control the opacity */
-  }    
-  .summary-restingPaper a {
-    text-decoration: none; /* Remove the underline from links */
-  }   
   .custom-padding {
     padding-top: 0px;    /* Adjust this value to control the space above the content */
     padding-bottom: 0px; /* Adjust this value to control the space below the content */
