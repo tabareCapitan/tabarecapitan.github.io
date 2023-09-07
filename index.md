@@ -4,7 +4,7 @@ layout: home
 nav_order: 1
 ---
 
-{: .highlightYellow }
+{: .highlightYellow-title }
 > News
 >
 > 🚧 Website under (slow) construction 👷‍♂️
