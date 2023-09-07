@@ -14,14 +14,14 @@ See my research in
 [more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-purple .mr-4}
 {: .text-left }
 
-
-where the following symbols are links to...
+where you the following symbols are links to...
 
 - 📄 PDF 
 - 🔗 journal article
 - 🔍 online appendix
 - 💾 replication package
 
+Also, click on each reference for the abstract. 
 
 Finally, how do I do research?
 
