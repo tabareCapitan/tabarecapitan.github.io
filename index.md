@@ -5,7 +5,9 @@ nav_order: 1
 ---
 
 {: .highlightYellow }
-🚧 Website under (slow) construction 👷‍♂️
+> News
+>
+> 🚧 Website under (slow) construction 👷‍♂️
 {: .text-center }
 
 ---
@@ -23,5 +25,5 @@ Postdoc in the environmental econ group at [SLU](https://www.slu.se/en/departmen
 {: .text-center }
 
 --- 
-[📫 Tabare.Capitan at GMAIL](mailto:tabare.capitan@gmail.com){: .btn .btn-outline }
+📫 Tabare.Capitan at GMAIL{: .btn .btn-outline }
 {: .text-center }
