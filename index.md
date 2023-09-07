@@ -4,10 +4,8 @@ layout: home
 nav_order: 1
 ---
 
-{: .highlightYellow-title }
-> News
->
-> 🚧 Website under (slow) construction 👷‍♂️
+{: .highlightYellow }
+🚧 Website under (slow) construction 👷‍♂️
 {: .text-center }
 
 ---
