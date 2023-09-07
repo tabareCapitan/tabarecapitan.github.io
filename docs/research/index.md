@@ -7,11 +7,6 @@ has_children: true
 has_toc: false
 ---
 
-{: .highlightYellow }
-🚧 This section is not finished 👷‍♂️
-{: .text-center }
-
----
 Here you can find all my research: 
 
 [working papers](https://www.tabarecapitan.com/workingPapers/){: .btn .btn-purple .mr-4}
@@ -28,4 +23,8 @@ In these sections,  use a few symbols to represent links to...
 - 💾 replication package
 
 --- 
-In the ["tools" section](https://www.tabarecapitan.com/tools/) I describe all the tools I use to do research. Furthermore, I aim to make all my research following good practices in "open science"; you can find more about what that means [in the "open science" section](https://www.tabarecapitan.com/openScience/).
+Finally, you can find out more about how I do research in these sections:
+
+[research tools](https://www.tabarecapitan.com/tools/){: .btn .btn-purple .mr-4}
+[open science](https://www.tabarecapitan.com/openScience/){: .btn .btn-purple .mr-4}
+{: .text-center }
