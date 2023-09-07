@@ -5,8 +5,8 @@ nav_order: 1
 ---
 
 {: .highlightYellow }
-I am slowly making some changes to this website, please let me know if you see anything that is not working properly.
-
+I am (slowly) making a few changes to my website 🚧.
+{: .text-center }
 
 I am an economist with broad interests in <br> 
 **behavioral economics** (🧠) and **environmental economics** (🌱), <br>
