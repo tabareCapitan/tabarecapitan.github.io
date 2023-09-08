@@ -24,5 +24,5 @@ Postdoc in the environmental econ group at [SLU](https://www.slu.se/en/departmen
 
 --- 
 
-✉ Tabare (dot) Capitan at GMAIL ✉
+✉ Tabare (dot) Capitan at gmail ✉
 {: .text-center }
