@@ -6,15 +6,14 @@ nav_order: 2
 has_children: true
 has_toc: false
 ---
-
-See my
+Choose between my...
 
 [working papers](https://www.tabarecapitan.com/workingPapers/){: .btn .btn-purple .mr-4}
 [selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple .mr-4}
 [more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-purple .mr-4}
 {: .text-left }
 
-(click on each reference for the abstract)
+---
 
 These symbols are links to...
 
@@ -25,7 +24,7 @@ These symbols are links to...
 
 ---
 
-Finally, how do I do research?
+How do I do research?
 
 [research tools 🛠](https://www.tabarecapitan.com/tools/){: .btn .btn-purple .mr-4} 
 [open science 👍](https://www.tabarecapitan.com/openScience/){: .btn .btn-purple .mr-4}
