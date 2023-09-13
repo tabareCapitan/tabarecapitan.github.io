@@ -38,7 +38,9 @@ nav_order: 1
 
 <!--  {: .highlightYellow }
  xxxx -->
- 
+
+Links to: | 📄 PDF | 🔍 online appendix | 💾 replication package
+
 
 <div class="custom-padding"> &nbsp;  </div>
 
@@ -87,9 +89,6 @@ nav_order: 1
     </p>
   </details>
 </div>
-
-
-Links to: | 📄 PDF | 🔗 journal article | 🔍 online appendix | 💾 replication package
 
 
 <!-- NEW PAPER -->
