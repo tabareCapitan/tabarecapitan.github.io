@@ -89,6 +89,9 @@ nav_order: 1
 </div>
 
 
+Links to: | 📄 PDF | 🔗 journal article | 🔍 online appendix | 💾 replication package
+
+
 <!-- NEW PAPER -->
 
 <div class="callout-wrapper">
