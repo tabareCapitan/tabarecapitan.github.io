@@ -40,11 +40,11 @@ nav_order: 1
  xxxx -->
  
 
+<div class="custom-padding"> &nbsp;  </div>
+
+
 Links to: | 📄 PDF | 🔍 online appendix | 💾 replication package
 
-<!--
-<div class="custom-padding"> &nbsp;  </div>
--->
 
 <!-- NEW PAPER -->
 
