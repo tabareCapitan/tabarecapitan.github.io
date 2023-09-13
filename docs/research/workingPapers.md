@@ -106,5 +106,5 @@ nav_order: 1
 
 
 Links to: | 📄 PDF | 🔍 online appendix | 💾 replication package
-{: .text-left }
+{: .text-center }
 
