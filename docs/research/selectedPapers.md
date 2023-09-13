@@ -2,7 +2,7 @@
 layout: default
 title: selected papers ⭐ 
 permalink: /selectedPapers/
-parent: research
+parent: 📑 research 
 has_toc: false
 nav_order: 2
 ---
