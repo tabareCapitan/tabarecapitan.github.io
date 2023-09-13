@@ -1,6 +1,6 @@
 ---
 layout: default
-title: resources
+title: 📚 resources
 permalink: /resources/
 has_toc: false
 nav_order: 6
