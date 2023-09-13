@@ -137,3 +137,6 @@ nav_order: 3
 **Links to:** | 📄 PDF | 🔗 journal article | 🔍 online appendix | 💾 replication package
 {: .text-center }
 
+(click on the boxes to see the abstract) 
+{: .text-center }
+
