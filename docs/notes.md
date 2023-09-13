@@ -1,6 +1,6 @@
 ---
 layout: default
-title: notes 🚧
+title: 📝 notes
 permalink: /notes/
 has_toc: false
 nav_order: 3
