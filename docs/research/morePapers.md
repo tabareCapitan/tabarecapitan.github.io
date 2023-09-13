@@ -131,5 +131,5 @@ nav_order: 3
 -->
 
 Links to: | 📄 PDF | 🔗 journal article | 🔍 online appendix | 💾 replication package
-{: .text-left }
+{: .text-center }
 
