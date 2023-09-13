@@ -3,7 +3,7 @@ layout: default
 title: 📝 notes
 permalink: /notes/
 has_toc: false
-nav_order: 3
+nav_order: 2
 ---
 
 
