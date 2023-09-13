@@ -10,7 +10,18 @@ nav_exclude: true
 {: .text-center }
 -->
 
----
+
+<style>
+  .custom-padding {
+    padding-top: 0px;    /* Adjust this value to control the space above the content */
+    padding-bottom: 0px; /* Adjust this value to control the space below the content */
+  }
+</style>
+
+
+<div class="custom-padding"> &nbsp;  </div>
+
+
 I am an economist with broad interests in <br> 
 **behavioral economics** (🧠) & **environmental economics** (🌱)
 {: .text-center }
