@@ -6,7 +6,8 @@ nav_order: 2
 has_children: true
 has_toc: false
 ---
-Choose between my...
+
+---
 
 [working papers](https://www.tabarecapitan.com/workingPapers/){: .btn .btn-purple .mr-4}
 [selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple .mr-4}
