@@ -14,7 +14,7 @@ has_toc: false
 
 ---
 
-Each paper may have links to...
+Each paper may have links to:
 
 - 📄 PDF 
 - 🔗 journal article
