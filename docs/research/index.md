@@ -7,6 +7,8 @@ has_children: true
 has_toc: false
 ---
 
+Where is my research?
+
 [working papers](https://www.tabarecapitan.com/workingPapers/){: .btn .btn-purple .mr-4}
 [selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple .mr-4}
 [more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-purple .mr-4}
@@ -14,14 +16,6 @@ has_toc: false
 
 ---
 
-Each paper may have links to:
-
-- 📄 PDF 
-- 🔗 journal article
-- 🔍 online appendix
-- 💾 replication package.
-
----
 
 How do I do research?
 
