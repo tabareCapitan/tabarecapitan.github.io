@@ -130,6 +130,10 @@ nav_order: 3
 </div>
 -->
 
-Links to: | 📄 PDF | 🔗 journal article | 🔍 online appendix | 💾 replication package
+
+<div class="custom-padding"> &nbsp;  </div>
+
+
+**Links to:** | 📄 PDF | 🔗 journal article | 🔍 online appendix | 💾 replication package
 {: .text-center }
 
