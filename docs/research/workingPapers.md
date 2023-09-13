@@ -43,9 +43,6 @@ nav_order: 1
 <div class="custom-padding"> &nbsp;  </div>
 
 
-Links to: | 📄 PDF | 🔍 online appendix | 💾 replication package
-
-
 <!-- NEW PAPER -->
 
 <div class="callout-wrapper">
@@ -106,4 +103,8 @@ Links to: | 📄 PDF | 🔍 online appendix | 💾 replication package
     </p>
   </details>
 </div>
+
+
+Links to: | 📄 PDF | 🔍 online appendix | 💾 replication package
+
 
