@@ -14,7 +14,7 @@ has_toc: false
 
 ---
 
-These symbols are links to...
+Each paper may have links to...
 
 - 📄 PDF 
 - 🔗 journal article
