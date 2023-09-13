@@ -1,6 +1,6 @@
 ---
 layout: default
-title: my research 
+title: research 
 permalink: /research/
 nav_order: 1
 has_children: true
