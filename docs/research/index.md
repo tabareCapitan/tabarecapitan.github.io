@@ -25,7 +25,7 @@ Each paper may have links to:
 
 How do I do research?
 
+[workflow 🤹‍♀️](https://www.tabarecapitan.com/workflow/){: .btn .btn-purple .mr-4}
 [research tools 🛠](https://www.tabarecapitan.com/tools/){: .btn .btn-purple .mr-4} 
 [open science 👍](https://www.tabarecapitan.com/openScience/){: .btn .btn-purple .mr-4}
-[workflow 🤹‍♀️](https://www.tabarecapitan.com/workflow/){: .btn .btn-purple .mr-4}
 {: .text-left }
