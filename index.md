@@ -1,6 +1,8 @@
 ---
 title: about me
 layout: home
+nav_order: 1
+nav_exclude: true
 ---
 <!--
 {: .highlightYellow }
