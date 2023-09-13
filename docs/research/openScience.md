@@ -2,7 +2,7 @@
 layout: default
 title: open science manifesto
 permalink: /openScience/
-parent: research
+parent: 📑 research 
 has_toc: false
 nav_order: 4
 ---
