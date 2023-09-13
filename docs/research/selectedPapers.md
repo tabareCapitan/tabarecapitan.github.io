@@ -98,5 +98,5 @@ nav_order: 2
 
 
 Links to: | 📄 PDF | 🔗 journal article | 🔍 online appendix | 💾 replication package
-{: .text-left }
+{: .text-center }
  
