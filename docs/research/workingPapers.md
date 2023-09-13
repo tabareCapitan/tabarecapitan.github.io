@@ -38,12 +38,13 @@ nav_order: 1
 
 <!--  {: .highlightYellow }
  xxxx -->
+ 
 
 Links to: | 📄 PDF | 🔍 online appendix | 💾 replication package
 
-
+<!--
 <div class="custom-padding"> &nbsp;  </div>
-
+-->
 
 <!-- NEW PAPER -->
 
