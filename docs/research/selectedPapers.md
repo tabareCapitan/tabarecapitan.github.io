@@ -1,6 +1,6 @@
 ---
 layout: default
-title: selected papers
+title: selected papers ⭐ 
 permalink: /selectedPapers/
 parent: research
 has_toc: false
