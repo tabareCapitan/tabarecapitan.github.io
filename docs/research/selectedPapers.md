@@ -39,7 +39,8 @@ nav_order: 2
  xxxx -->
 
 
-Links to: | 📄 PDF | 🔗 journal article | 🔍 online appendix | 💾 replication package
+<div class="custom-padding"> &nbsp;  </div>
+
 
 <!-- NEW PAPER -->
 
@@ -95,5 +96,7 @@ Links to: | 📄 PDF | 🔗 journal article | 🔍 online appendix | 💾 replic
   </details>
 </div>
 
- 
+
+Links to: | 📄 PDF | 🔗 journal article | 🔍 online appendix | 💾 replication package
+{: .text-left }
  
