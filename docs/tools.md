@@ -1,6 +1,6 @@
 ---
 layout: default
-title: tools
+title: 🛠 tools
 permalink: /tools/
 has_toc: false
 nav_order: 5
