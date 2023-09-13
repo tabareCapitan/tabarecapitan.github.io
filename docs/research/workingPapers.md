@@ -104,6 +104,7 @@ nav_order: 1
   </details>
 </div>
 
+<div class="custom-padding"> &nbsp;  </div>
 
 Links to: | 📄 PDF | 🔍 online appendix | 💾 replication package
 {: .text-center }
