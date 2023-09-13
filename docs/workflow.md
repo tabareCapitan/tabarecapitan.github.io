@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 📅 workflow
+title: 🤹🏻‍♂️ workflow
 permalink: /workflow/
 has_toc: false
 nav_order: 3
