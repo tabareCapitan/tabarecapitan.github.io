@@ -32,8 +32,8 @@ I am an economist with broad interests in <br>
 
 ---
 
-Main focus <br> 
-Behavioral economics in **Information preferences**
+Main focus: <br> 
+Behavioral economics + **Information preferences**
 {: .text-center }
 
 ---
