@@ -31,6 +31,13 @@ I am an economist with broad interests in <br>
 {: .text-center }
 
 ---
+
+Main focus <br> 
+Behavioral economics in **Information preferences**
+{: .text-center }
+
+---
+
 Postdoc in the environmental econ group at [SLU](https://www.slu.se/en/departments/economics/research/research-groups/environmental-economics/){:target="_blank"} (Sweden)
 {: .text-center }
 
