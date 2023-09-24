@@ -51,7 +51,8 @@ nav_order: 1
       🧠 <b>Capitán, T.</b>; Thunström, L.; Van ‘t Veld, K. Shogren, J.; and Nordström, J. "Increasing calorie information uptake with a prenudge." </summary>
     <p>
       <div class="abstract">
-        <b>Abstract. </b>Coming soon.
+<!--         <b>Abstract. </b>Coming soon. -->
+       This paper is undergoing a complete revision. I expect to share again late this Fall (2023)
       </div>
     </p>
   </details>
@@ -66,7 +67,8 @@ nav_order: 1
    </summary>
     <p>
       <div class="abstract">
-        <b>Abstract. </b>Coming soon.
+<!--         <b>Abstract. </b>Coming soon. -->
+       This paper is undergoing a complete revision. I expect to share again early this Fall (2023)
       </div>
     </p>
   </details>
@@ -82,7 +84,8 @@ nav_order: 1
    </summary>
     <p>
       <div class="abstract">
-        <b>Abstract. </b>Coming soon.
+<!--         <b>Abstract. </b>Coming soon. -->
+       This paper undergoing a final revision. I expect to share again this Fall (2023)
       </div>
     </p>
   </details>
