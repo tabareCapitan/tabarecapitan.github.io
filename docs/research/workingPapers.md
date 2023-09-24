@@ -85,7 +85,7 @@ nav_order: 1
     <p>
       <div class="abstract">
 <!--         <b>Abstract. </b>Coming soon. -->
-       This paper undergoing a final revision. I expect to share again this Fall (2023)
+       This paper is undergoing a final revision. I expect to share again this Fall (2023)
       </div>
     </p>
   </details>
