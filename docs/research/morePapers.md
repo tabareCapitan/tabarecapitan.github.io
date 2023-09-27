@@ -82,7 +82,7 @@ nav_order: 3
       <a href="https://www.researchgate.net/publication/338340783_Household_and_community_responses_to_seasonal_droughts_in_rural_areas_of_Costa_Rica" target="_blank">📄</a>
       <a href="https://doi.org/10.3362/1756-3488.18-00020" target="_blank">🔗</a>
       <br>
-      <font size="-2">Madrigal-Ballestero, Salas, & Córdoba (<em>Waterlines</em>, 2019)</font>
+      <font size="-2">with Madrigal-Ballestero, Salas, and Córdoba (<em>Waterlines</em>, 2019)</font>
       </summary>
     <p>
      <div class="abstract">
@@ -102,7 +102,7 @@ nav_order: 3
       <a href="https://www.researchgate.net/profile/Roger_Madrigal-Ballestero/publication/316896515_Marine_protected_areas_in_Costa_Rica_How_do_artisanal_fishers_respond/links/5a2c89ae45851552ae7c9bdb/Marine-protected-areas-in-Costa-Rica-How-do-artisanal-fishers-respond.pdf" target="_blank">📄</a>
       <a href="https://doi.org/10.1007/s13280-017-0921-y" target="_blank">🔗</a>
       <br>
-      <font size="-2">Madrigal-Ballestero, Albers, & Salas (<em>Ambio</em>, 2017)</font>
+      <font size="-2">Madrigal-Ballestero, Albers, and Salas (<em>Ambio</em>, 2017)</font>
       </summary>
     <p>
       <div class="abstract">
