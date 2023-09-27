@@ -48,7 +48,7 @@ nav_order: 1
 <div class="callout-wrapper">
   <details>
     <summary class="summary-workingPaper"> 
-     🧠 Increasing calorie information uptake with a prenudge,
+      Increasing calorie information uptake with a prenudge,
       <font size="-2">with Thunström, Van ‘t Veld, Shogren, & Nordström</font>
      </summary>
     <p>
@@ -65,7 +65,7 @@ nav_order: 1
 <div class="callout-wrapper">
   <details>
     <summary class="summary-workingPaper">
-       🧠 Expecting to Get It: An Endowment Effect for Information,
+       Expecting to Get It: An Endowment Effect for Information,
        <font size="-2">with Thunström, Van ‘t Veld, & Nordström</font>
    </summary>
     <p>
@@ -83,7 +83,7 @@ nav_order: 1
 <div class="callout-wrapper">
   <details>
     <summary class="summary-workingPaper"> 
-      🧠 Decision error decreases with risk aversion: A replication,
+      Decision error decreases with risk aversion: A replication,
       <font size="-2">with Méndez</font>
    </summary>
     <p>
