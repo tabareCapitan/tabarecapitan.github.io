@@ -73,7 +73,7 @@ nav_order: 2
       <a href="https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b3910782701d6f77534940/1639158044424/Albers_etal_MRE_appendix.pdf" target="_blank">🔍</a>
       <a href="https://www.journals.uchicago.edu/doi/10.1086/715818" target="_blank">🔗</a>
       <br>
-      <font size="-2">with Albers, Ashworth, Madrigal-Ballestero & Preonas (<em>Marine Resource Economics</em>, 2021)</font>
+      <font size="-2">with Albers, Ashworth, Madrigal-Ballestero, & Preonas (<em>Marine Resource Economics</em>, 2021)</font>
       </summary>
     <p>
      <div class="abstract">
@@ -92,7 +92,7 @@ nav_order: 2
       Optimal siting, sizing, and enforcement of marine protected areas
       <a href="https://doi.org/10.1007/s10640-020-00472-7" target="_blank">🔗</a>
       <br>
-      <font size="-2">Albers, Preonas, Robinson, & Madrigal-Ballestero (<em>Environmental and Resource Economics</em>, 2020).</font>
+      <font size="-2">with Albers, Preonas, Robinson, & Madrigal-Ballestero (<em>Environmental and Resource Economics</em>, 2020)</font>
       </summary>
     <p>
       <div class="abstract">
