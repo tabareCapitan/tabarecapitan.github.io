@@ -15,19 +15,10 @@ nav_exclude: true
 
 <div class="custom-padding"> &nbsp;  </div>
 
-
-Main fields <br> 
-**behavioral** + **environmental** + **development** 
-{: .text-center }
-
----
-
-Main focus <br> 
-**information preferences**
+I do research in **microeconomics**. Mostly in **behavioral**, **environmental**, and **development** economics. My main focus is on **information preferences**. 
 {: .text-center }
 
 --- 
-
 
 [selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple .mr-4}
 [working papers](https://www.tabarecapitan.com/workingPapers/){: .btn .btn-purple .mr-4}
