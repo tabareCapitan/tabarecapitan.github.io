@@ -17,7 +17,9 @@ nav_exclude: true
 
 I do research in **microeconomics**. 
 <br>
+<br>
 Mostly in **behavioral**, **environmental**, and **development** economics.
+<br>
 <br>
 My main focus is on **information preferences**. 
 {: .text-center }
