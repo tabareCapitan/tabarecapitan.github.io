@@ -15,7 +15,11 @@ nav_exclude: true
 
 <div class="custom-padding"> &nbsp;  </div>
 
-I do research in **microeconomics**. Mostly in **behavioral**, **environmental**, and **development** economics. My main focus is on **information preferences**. 
+I do research in **microeconomics**. 
+<br>
+Mostly in **behavioral**, **environmental**, and **development** economics.
+<br>
+My main focus is on **information preferences**. 
 {: .text-center }
 
 --- 
