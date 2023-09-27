@@ -48,13 +48,13 @@ nav_order: 1
 <div class="callout-wrapper">
   <details>
     <summary class="summary-workingPaper"> 
-     🧠 Increasing calorie information uptake with a prenudge, <br>
+     🧠 Increasing calorie information uptake with a prenudge,
       <font size="-2">with Thunström, Van ‘t Veld, Shogren, and Nordström</font>
      </summary>
     <p>
       <div class="abstract">
 <!--         <b>Abstract. </b>Coming soon. -->
-       This paper is undergoing a complete revision. I expect to share again late this Fall (2023)
+       This paper is undergoing a complete revision. I expect to share it again  late this Fall (2023)
       </div>
     </p>
   </details>
