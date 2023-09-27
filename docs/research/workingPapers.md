@@ -117,7 +117,7 @@ nav_order: 1
 
 <div class="custom-padding"> &nbsp;  </div>
 
-**Links to:** | 📄 PDF | 🔍 online appendix | 💾 replication package
+ 📄 PDF | 🔍 online appendix | 💾 replication package
 {: .text-center }
 
 (click on the boxes to see the abstract)
