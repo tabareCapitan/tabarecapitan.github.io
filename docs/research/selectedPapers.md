@@ -109,5 +109,5 @@ nav_order: 2
  📄 PDF | 🔗 journal article | 🔍 online appendix | 💾 replication package
 {: .text-center }
 
-<font size="-1">(click on the boxes to see the abstract)</font>
+(click on the boxes to see the abstract)
 {: .text-center }
