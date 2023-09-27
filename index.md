@@ -45,6 +45,3 @@ Postdoc in the environmental econ group at [SLU](https://www.slu.se/en/departmen
 {: .text-center }
 
 
-{: .highlightYellow }
-🚧 Some sections of this website are under construction 👷‍♂️
-{: .text-center }
