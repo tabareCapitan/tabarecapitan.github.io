@@ -47,13 +47,13 @@ nav_order: 2
 <div class="callout-wrapper">
   <details>
     <summary class="summary-selectedPaper"> 
-      Time-varying pricing may increase total electricity consumption: Evidence from Costa Rica,
-      <font size="-2">with Alpízar, Madrigal-Ballestero, & Pattanayak.</font>
-      <br>
-      <em>Resource and Energy Economics</em>, 2021. 
+      Time-varying pricing may increase total electricity consumption: Evidence from Costa Rica
       <a href="https://osf.io/preprints/socarxiv/wcz8s/" target="_blank">📄</a>
       <a href="https://github.com/tabareCapitan/CNFL" target="_blank">💾</a>
-      <a href="https://doi.org/10.1016/j.reseneeco.2021.101264" target="_blank">🔗</a>  
+      <a href="https://doi.org/10.1016/j.reseneeco.2021.101264" target="_blank">🔗</a>      
+      ,
+      <br>
+      <font size="-2">with Alpízar, Madrigal-Ballestero, & Pattanayak (<em>Resource and Energy Economics</em>, 2021.)</font>
       </summary>
     <p>
       <div class="abstract">
