@@ -49,7 +49,7 @@ nav_order: 1
   <details>
     <summary class="summary-workingPaper"> 
       Increasing calorie information uptake with a prenudge,
-      <font size="-2">with Thunström, Van ‘t Veld, Shogren, & Nordström</font>
+      <font size="-2">with Thunström, Van ‘t Veld, Shogren, and Nordström</font>
      </summary>
     <p>
       <div class="abstract">
@@ -66,7 +66,7 @@ nav_order: 1
   <details>
     <summary class="summary-workingPaper">
        Expecting to Get It: An Endowment Effect for Information,
-       <font size="-2">with Thunström, Van ‘t Veld, & Nordström</font>
+       <font size="-2">with Thunström, Van ‘t Veld, and Nordström</font>
    </summary>
     <p>
       <div class="abstract">
