@@ -68,10 +68,11 @@ nav_order: 2
 <div class="callout-wrapper">
   <details>
     <summary class="summary-selectedPaper"> 
-      🌱 🌍 Albers, H. J.; Ashworth, M.; <b>Capitán, T.</b>; Madrigal-Ballestero, R.; and Preonas, L. (2021). MPAs and Aspatial Policies in Artisanal Fisheries. <em>Marine Resource Economics</em>. 
+      MPAs and Aspatial Policies in Artisanal Fisheries
       <a href="https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf" target="_blank">📄</a>
       <a href="https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b3910782701d6f77534940/1639158044424/Albers_etal_MRE_appendix.pdf" target="_blank">🔍</a>
       <a href="https://www.journals.uchicago.edu/doi/10.1086/715818" target="_blank">🔗</a>
+      <font size="-2">with Albers, Ashworth, Madrigal-Ballestero & Preonas (<em>Marine Resource Economics</em>, 2021)<\font>
       </summary>
     <p>
      <div class="abstract">
@@ -87,8 +88,9 @@ nav_order: 2
 <div class="callout-wrapper">
   <details>
     <summary class="summary-selectedPaper"> 
-      🌱 🌍 Albers, H. J.; Preonas, L.; <b>Capitán, T.</b>; Robinson, E.; and Madrigal-Ballestero, R. (2020). Optimal siting, sizing, and enforcement of marine protected areas. <em>Environmental and Resource Economics</em>. 
+      Optimal siting, sizing, and enforcement of marine protected areas
       <a href="https://doi.org/10.1007/s10640-020-00472-7" target="_blank">🔗</a>
+      <font size="-2">Albers, Preonas, Robinson, & Madrigal-Ballestero (<em>Environmental and Resource Economics</em>, 2020).<\font>
       </summary>
     <p>
       <div class="abstract">
@@ -102,8 +104,8 @@ nav_order: 2
 <div class="custom-padding"> &nbsp;  </div>
 
 
-**Links to:** | 📄 PDF | 🔗 journal article | 🔍 online appendix | 💾 replication package
+ 📄 PDF | 🔗 journal article | 🔍 online appendix | 💾 replication package
 {: .text-center }
 
-(click on the boxes to see the abstract) 
+<font size="-1">(click on the boxes to see the abstract)<\font>
 {: .text-center }
