@@ -5,12 +5,6 @@ nav_order: 1
 nav_exclude: true
 ---
 
-{: .highlightYellow }
-🚧 Some sections of this website are under construction 👷‍♂️
-{: .text-center }
-
-
-
 <style>
   .custom-padding {
     padding-top: 0px;    /* Adjust this value to control the space above the content */
@@ -48,4 +42,9 @@ Postdoc in the environmental econ group at [SLU](https://www.slu.se/en/departmen
 --- 
 
 ✉ Tabare (dot) Capitan (at) gmail ✉
+{: .text-center }
+
+
+{: .highlightYellow }
+🚧 Some sections of this website are under construction 👷‍♂️
 {: .text-center }
