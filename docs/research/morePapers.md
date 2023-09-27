@@ -59,8 +59,10 @@ nav_order: 3
 <div class="callout-wrapper">
   <details>
     <summary class="summary-morePaper"> 
-      🌱 🌍 Alpízar, F.; Saborío-Rodríguez, M.; Martínez-Rodríguez, R.; Viguera, B.; <b>et al.</b> (2020). Determinants of food insecurity among smallholder farmer households in Central America: Recurrent versus extreme weather-driven events. <em>Regional Environmental Change</em>.
+      Determinants of food insecurity among smallholder farmer households in Central America
       <a href="https://doi.org/10.1007/s10113-020-01592-y" target="_blank">🔗</a>
+      <br>
+      <font size="-2">with many people (<em>Regional Environmental Change</em>, 2020)</font>
       </summary>
     <p>
      <div class="abstract">
@@ -76,9 +78,11 @@ nav_order: 3
 <div class="callout-wrapper">
   <details>
     <summary class="summary-morePaper"> 
-      🌱 🌍 Madrigal-Ballestero, R.; <b>Capitán, T.</b>; Salas, A.; and Córdoba, D. (2019). Household and community responses to seasonal droughts in rural areas of Costa Rica. <em>Waterlines</em>.
+      Household and community responses to seasonal droughts in rural areas of Costa Rica
       <a href="https://www.researchgate.net/publication/338340783_Household_and_community_responses_to_seasonal_droughts_in_rural_areas_of_Costa_Rica" target="_blank">📄</a>
       <a href="https://doi.org/10.3362/1756-3488.18-00020" target="_blank">🔗</a>
+      <br>
+      <font size="-2">Madrigal-Ballestero, Salas, & Córdoba (<em>Waterlines</em>, 2019)</font>
       </summary>
     <p>
      <div class="abstract">
@@ -94,9 +98,11 @@ nav_order: 3
 <div class="callout-wrapper">
   <details>
     <summary class="summary-morePaper"> 
-      🌱 🌍 Madrigal-Ballestero, R.; Albers, H. J.; <b>Capitán, T.</b>; and Salas, A. (2017). Marine protected areas in Costa Rica: How do artisanal fishers respond? <em>Ambio</em>.
+      Marine protected areas in Costa Rica: How do artisanal fishers respond? 
       <a href="https://www.researchgate.net/profile/Roger_Madrigal-Ballestero/publication/316896515_Marine_protected_areas_in_Costa_Rica_How_do_artisanal_fishers_respond/links/5a2c89ae45851552ae7c9bdb/Marine-protected-areas-in-Costa-Rica-How-do-artisanal-fishers-respond.pdf" target="_blank">📄</a>
       <a href="https://doi.org/10.1007/s13280-017-0921-y" target="_blank">🔗</a>
+      <br>
+      <font size="-2">Madrigal-Ballestero, Albers, & Salas (<em>Ambio</em>, 2017)</font>
       </summary>
     <p>
       <div class="abstract">
