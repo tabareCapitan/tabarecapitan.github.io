@@ -49,12 +49,12 @@ nav_order: 1
   <details>
     <summary class="summary-workingPaper"> 
      🧠 Increasing calorie information uptake with a prenudge,
-      <font size="-2">with Thunström, Van ‘t Veld, Shogren, and Nordström</font>
+      <font size="-2">with Thunström, Van ‘t Veld, Shogren, & Nordström</font>
      </summary>
     <p>
       <div class="abstract">
 <!--         <b>Abstract. </b>Coming soon. -->
-       This paper is undergoing a complete revision. I expect to share it again  late this Fall (2023)
+       This paper is undergoing a complete revision. I expect to share it again  early this Fall (2023)
       </div>
     </p>
   </details>
@@ -65,12 +65,13 @@ nav_order: 1
 <div class="callout-wrapper">
   <details>
     <summary class="summary-workingPaper">
-       🧠 <b>Capitán, T.</b>; Nordström, J.; Thunström, L.; and Van ‘t Veld, K. "Expecting to Get It: An Endowment Effect for Information." 
+       🧠 Expecting to Get It: An Endowment Effect for Information,
+       <font size="-2">with Thunström, Van ‘t Veld, & Nordström</font>
    </summary>
     <p>
       <div class="abstract">
 <!--         <b>Abstract. </b>Coming soon. -->
-       This paper is undergoing a complete revision. I expect to share again early this Fall (2023)
+       This paper is undergoing a complete revision. I expect to share it again late this Fall (2023)
       </div>
     </p>
   </details>
@@ -82,7 +83,8 @@ nav_order: 1
 <div class="callout-wrapper">
   <details>
     <summary class="summary-workingPaper"> 
-      🧠 <b>Capitán, T.</b> & Méndez, E. "Decision error decreases with risk aversion: A replication."
+      🧠 Decision error decreases with risk aversion: A replication.
+      <font size="-2">with Méndez</font>
    </summary>
     <p>
       <div class="abstract">
