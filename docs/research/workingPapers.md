@@ -105,7 +105,7 @@ nav_order: 1
      <a href="https://osf.io/preprints/metaarxiv/xdsjf/" target="_blank">📄</a>,
      <font size="-2">with many people.</font>
      <br>
-     <em>Submitted</em> 
+     <font size="-1"><em>(Submitted)</em> </font>
    </summary>
     <p>
       <div class="abstract">
