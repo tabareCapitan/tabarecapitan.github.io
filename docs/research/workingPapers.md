@@ -103,7 +103,7 @@ nav_order: 1
     <summary class="summary-workingPaper"> 
       Predicting the replicability of social and behavioural science claims from the COVID19 Preprint Replication Project with structured expert and novice groups
      <a href="https://osf.io/preprints/metaarxiv/xdsjf/" target="_blank">📄</a>,
-     <font size="-2">with many people.</font>
+     <font size="-2">with many people</font>
      <br>
      <font size="-1"><em>(Submitted)</em> </font>
    </summary>
