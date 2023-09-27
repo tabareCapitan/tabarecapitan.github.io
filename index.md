@@ -23,7 +23,7 @@ Main fields <br>
 ---
 
 Main focus <br> 
-**Information preferences**
+**information preferences**
 {: .text-center }
 
 --- 
