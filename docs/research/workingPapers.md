@@ -65,7 +65,7 @@ nav_order: 1
 <div class="callout-wrapper">
   <details>
     <summary class="summary-workingPaper">
-       Expecting to Get It: An Endowment Effect for Information,
+       Expecting to get it: An endowment effect for information,
        <font size="-2">with Thunström, Van ‘t Veld, and Nordström</font>
    </summary>
     <p>
