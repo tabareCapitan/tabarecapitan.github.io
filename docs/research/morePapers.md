@@ -63,7 +63,7 @@ nav_order: 3
       On the trajectory of discrimination: A meta-analysis and forecasting survey capturing 44 years of field experiments on gender and hiring decisions
       <a href="https://www.sciencedirect.com/science/article/pii/S0749597823000560?via%3Dihub#s0170" target="_blank">🔗</a>
       <br>
-      <font size="-2">as part of an <em>author-consortium</em> with <b>many</b> people (<em>Organizational Behavior and Human Decision Processes</em>, 2023)</font>
+      <font size="-2">as part of an <em>author-consortium</em> with many people (<em>Organizational Behavior and Human Decision Processes</em>, 2023)</font>
       </summary>
     <p>
      <div class="abstract">
