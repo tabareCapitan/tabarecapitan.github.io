@@ -54,6 +54,26 @@ nav_order: 3
  
 <div class="custom-padding"> &nbsp;  </div>
 
+
+<!-- NEW PAPER -->
+
+<div class="callout-wrapper">
+  <details>
+    <summary class="summary-morePaper"> 
+      On the trajectory of discrimination: A meta-analysis and forecasting survey capturing 44 years of field experiments on gender and hiring decisions
+      <a href="[https://doi.org/10.1007/s10113-020-01592-y](https://www.sciencedirect.com/science/article/pii/S0749597823000560?via%3Dihub#s0170)" target="_blank">🔗</a>
+      <br>
+      <font size="-2">as part of a <em>author-consorcium</em> with <b>many</b> people (<em>Organizational Behavior and Human Decision Processes</em>, 2023)</font>
+      </summary>
+    <p>
+     <div class="abstract">
+      <b>Abstract.</b> A preregistered meta-analysis, including 244 effect sizes from 85 field audits and 361,645 individual job applications, tested for gender bias in hiring practices in female-stereotypical and gender-balanced as well as male-stereotypical jobs from 1976 to 2020. A “red team” of independent experts was recruited to increase the rigor and robustness of our meta-analytic approach. A forecasting survey further examined whether laypeople (n = 499 nationally representative adults) and scientists (n = 312) could predict the results. Forecasters correctly anticipated reductions in discrimination against female candidates over time. However, both scientists and laypeople overestimated the continuation of bias against female candidates. Instead, selection bias in favor of male over female candidates was eliminated and, if anything, slightly reversed in sign starting in 2009 for mixed-gender and male-stereotypical jobs in our sample. Forecasters further failed to anticipate that discrimination against male candidates for stereotypically female jobs would remain stable across the decades.
+     </div>
+    </p>
+  </details>
+</div>
+
+
 <!-- NEW PAPER -->
 
 <div class="callout-wrapper">
@@ -62,7 +82,7 @@ nav_order: 3
       Determinants of food insecurity among smallholder farmer households in Central America
       <a href="https://doi.org/10.1007/s10113-020-01592-y" target="_blank">🔗</a>
       <br>
-      <font size="-2">with many people (<em>Regional Environmental Change</em>, 2020)</font>
+      <font size="-2">with six people (<em>Regional Environmental Change</em>, 2020)</font>
       </summary>
     <p>
      <div class="abstract">
