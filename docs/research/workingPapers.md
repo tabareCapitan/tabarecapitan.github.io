@@ -54,7 +54,7 @@ nav_order: 1
     <p>
       <div class="abstract">
 <!--         <b>Abstract. </b>Coming soon. -->
-       This paper is undergoing a complete revision. I expect to share it again  early this Fall (2023)
+       This paper is undergoing a complete revision. 
       </div>
     </p>
   </details>
@@ -71,7 +71,7 @@ nav_order: 1
     <p>
       <div class="abstract">
 <!--         <b>Abstract. </b>Coming soon. -->
-       This paper is undergoing a complete revision. I expect to share it again late this Fall (2023)
+       This paper is undergoing a complete revision. 
       </div>
     </p>
   </details>
@@ -89,7 +89,7 @@ nav_order: 1
     <p>
       <div class="abstract">
 <!--         <b>Abstract. </b>Coming soon. -->
-       This paper is undergoing a final revision. I expect to share again this Fall (2023)
+       This paper is undergoing a final revision. 
       </div>
     </p>
   </details>
