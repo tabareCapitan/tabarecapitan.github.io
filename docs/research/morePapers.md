@@ -63,7 +63,7 @@ nav_order: 3
       On the trajectory of discrimination: A meta-analysis and forecasting survey capturing 44 years of field experiments on gender and hiring decisions
       <a href="https://www.sciencedirect.com/science/article/pii/S0749597823000560?via%3Dihub#s0170" target="_blank">🔗</a>
       <br>
-      <font size="-2">as part of a <em>author-consorcium</em> with <b>many</b> people (<em>Organizational Behavior and Human Decision Processes</em>, 2023)</font>
+      <font size="-2">as part of an <em>author-consortium</em> with <b>many</b> people (<em>Organizational Behavior and Human Decision Processes</em>, 2023)</font>
       </summary>
     <p>
      <div class="abstract">
@@ -122,7 +122,7 @@ nav_order: 3
       <a href="https://www.researchgate.net/profile/Roger_Madrigal-Ballestero/publication/316896515_Marine_protected_areas_in_Costa_Rica_How_do_artisanal_fishers_respond/links/5a2c89ae45851552ae7c9bdb/Marine-protected-areas-in-Costa-Rica-How-do-artisanal-fishers-respond.pdf" target="_blank">📄</a>
       <a href="https://doi.org/10.1007/s13280-017-0921-y" target="_blank">🔗</a>
       <br>
-      <font size="-2">Madrigal-Ballestero, Albers, and Salas (<em>Ambio</em>, 2017)</font>
+      <font size="-2">with Madrigal-Ballestero, Albers, and Salas (<em>Ambio</em>, 2017)</font>
       </summary>
     <p>
       <div class="abstract">
