@@ -48,13 +48,15 @@ nav_order: 2
 <div class="callout-wrapper">
   <details>
     <summary class="summary-workingPaper"> 
-      Increasing calorie information uptake with a prenudge,
+      Using Pre-nudges as Nudge Amplifiers,
       <font size="-2">with Thunström, Van ‘t Veld, Shogren, and Nordström</font>
      </summary>
     <p>
       <div class="abstract">
-<!--         <b>Abstract. </b>Coming soon. -->
-       This paper is undergoing a complete revision. 
+<b>Abstract.</b> Nudges—ways of influencing consumer behavior by altering the context of choices rather than using direct incentives or limiting options outright—have become increasingly popular policy instruments in the pursuit of goals such as promoting public health, raising savings rates, and addressing climate change. However,nudges often have disappointingly small effects. We propose that “pre”-nudges can be used as nudge amplifiers. Pre-nudges, too, alter choice contexts, but with the aim of enhancing consumer responsiveness to a conventional nudge. We test the concept on a menu-labeling nudge aimed at reducing caloric intake from consumption of restaurant meals. Menu labeling, though widely applied, has been found to have little or no effect on behavior, likely because consumers willfully avoid calorie information. Our theoretical analysis of information avoidance suggests that messages that increase consumers’ sense of self-efficacy and/or their focus on long-term health risks may increase information uptake. Such messages can therefore serve as pre-nudges. We empirically test this prediction using a large-scale laboratory experiment, and find that the messages indeed significantly increase calorie-information uptake, thus amplifying the menu-labeling nudge. This suggests a possible role for pre-nudges in addressing the obesity epidemic—one of the largest public health issues in the U.S. and beyond—while also illustrating the potential usefulness of pre-nudges more generally.
+       
+<b>Keywords:</b> pre-nudge, nudge, information avoidance, calorie information
+<b>JEL classification:</b> D04, D90, D80, C91
       </div>
     </p>
   </details>
@@ -70,8 +72,12 @@ nav_order: 2
    </summary>
     <p>
       <div class="abstract">
-<!--         <b>Abstract. </b>Coming soon. -->
-       This paper is undergoing a complete revision. 
+<b>Abstract.</b> We introduce the endowment effect for information: A tendency to value information more when expecting it, independently of its content. This result follows from a standard beliefbased model of reference-dependent preferences and it is driven by gain-loss utility, though the information’s instrumentality can modulate the effect. Results from a laboratory experiment align with the theoretical results. Thus, we contribute to further understanding information avoidance beyond content or timing effects. Additionally, we discuss three experimental observations from a sequential manipulation of beliefs in our experimental design, laying groundwork for a theory
+of referent formation.
+       
+<b>Keywords:</b> Preferences for information, reference-dependent preferences, information avoidance,
+credence attributes
+<b>JEL codes:</b> D01, D80, D83, D84, D91, C91
       </div>
     </p>
   </details>
@@ -88,8 +94,7 @@ nav_order: 2
    </summary>
     <p>
       <div class="abstract">
-<!--         <b>Abstract. </b>Coming soon. -->
-       This paper is undergoing a final revision. 
+        <b>Abstract.</b> Coming soon.
       </div>
     </p>
   </details>
