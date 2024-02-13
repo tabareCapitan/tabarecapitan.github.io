@@ -1,6 +1,6 @@
 ---
 layout: default
-title: open science
+title: 🔑 open science
 permalink: /openScience/
 has_toc: false
 nav_order: 5
