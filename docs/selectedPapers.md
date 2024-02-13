@@ -1,6 +1,6 @@
 ---
 layout: default
-title: selected papers ⭐ 
+title: ⭐ selected papers 
 permalink: /selectedPapers/
 has_toc: false
 nav_order: 2
