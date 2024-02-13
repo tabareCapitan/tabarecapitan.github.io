@@ -4,7 +4,7 @@ title: working papers
 permalink: /workingPapers/
 parent: 📑 research 
 has_toc: false
-nav_order: 1
+nav_order: 2
 ---
  
 
