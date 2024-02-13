@@ -2,9 +2,8 @@
 layout: default
 title: working papers
 permalink: /workingPapers/
-parent: 📑 research 
 has_toc: false
-nav_order: 2
+nav_order: 3
 ---
  
 
@@ -73,13 +72,13 @@ nav_order: 2
    </summary>
     <p>
       <div class="abstract">
-<b>Abstract.</b> We introduce the endowment effect for information: A tendency to value information more when expecting it, independently of its content. This result follows from a standard beliefbased model of reference-dependent preferences and it is driven by gain-loss utility, though the information’s instrumentality can modulate the effect. Results from a laboratory experiment align with the theoretical results. Thus, we contribute to further understanding information avoidance beyond content or timing effects. Additionally, we discuss three experimental observations from a sequential manipulation of beliefs in our experimental design, laying groundwork for a theory
+<b>Abstract.</b> We introduce the endowment effect for information: A tendency to value information more when expecting it, independently of its content. This result follows from a standard belief-based model of reference-dependent preferences and it is driven by gain-loss utility, though the information’s instrumentality can modulate the effect. Results from a laboratory experiment align with the theoretical results. Thus, we contribute to further understanding information avoidance beyond content or timing effects. Additionally, we discuss three experimental observations from a sequential manipulation of beliefs in our experimental design, laying groundwork for a theory
 of referent formation.
 <p></p>       
 <b>Keywords:</b> Preferences for information, reference-dependent preferences, information avoidance,
 credence attributes
 <p></p>       
-<b>JEL codes:</b> D01, D80, D83, D84, D91, C91
+<b>JEL codes:</b> D01, D80, D83, D84, D91, C91.
       </div>
     </p>
   </details>
