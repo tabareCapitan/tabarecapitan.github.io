@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ⚙ working papers
+title: ⚙  📝 working papers
 permalink: /workingPapers/
 has_toc: false
 nav_order: 3
