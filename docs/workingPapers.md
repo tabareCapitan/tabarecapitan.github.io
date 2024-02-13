@@ -1,6 +1,6 @@
 ---
 layout: default
-title: working papers
+title: ⚙ working papers
 permalink: /workingPapers/
 has_toc: false
 nav_order: 3
@@ -49,6 +49,8 @@ nav_order: 3
     <summary class="summary-workingPaper"> 
       Using Pre-nudges as Nudge Amplifiers,
       <font size="-2">with Thunström, Van ‘t Veld, Shogren, and Nordström</font>
+      <br>
+      <font size="-1"><em>(Submitted)</em> </font>
      </summary>
     <p>
       <div class="abstract">
