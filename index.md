@@ -26,8 +26,9 @@ My main focus is on **information preferences**.
 
 --- 
 
-[selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple .mr-4}
 [working papers](https://www.tabarecapitan.com/workingPapers/){: .btn .btn-purple .mr-4}
+[selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple .mr-4}
+[more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-purple .mr-4}
 {: .text-center }
 
 
