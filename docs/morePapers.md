@@ -77,7 +77,7 @@ nav_order: 4
 
 <div class="callout-wrapper">
   <details>
-    <summary class="summary-selectedPaper"> 
+    <summary class="summary-morePaper"> 
       MPAs and Aspatial Policies in Artisanal Fisheries
       <a href="https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf" target="_blank">📄</a>
       <a href="https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b3910782701d6f77534940/1639158044424/Albers_etal_MRE_appendix.pdf" target="_blank">🔍</a>
