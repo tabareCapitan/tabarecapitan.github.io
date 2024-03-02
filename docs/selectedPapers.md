@@ -67,27 +67,6 @@ nav_order: 2
 <div class="callout-wrapper">
   <details>
     <summary class="summary-selectedPaper"> 
-      MPAs and Aspatial Policies in Artisanal Fisheries
-      <a href="https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf" target="_blank">📄</a>
-      <a href="https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b3910782701d6f77534940/1639158044424/Albers_etal_MRE_appendix.pdf" target="_blank">🔍</a>
-      <a href="https://www.journals.uchicago.edu/doi/10.1086/715818" target="_blank">🔗</a>
-      <br>
-      <font size="-2">with Albers, Ashworth, Madrigal-Ballestero, and Preonas (<em>Marine Resource Economics</em>, 2021)</font>
-      </summary>
-    <p>
-     <div class="abstract">
-      <b>Abstract.</b> Using a spatially explicit framework with low/middle-income country coastal characteristics, we explore whether aspatial policies augment the impact of marine protected areas (MPAs) and identify when MPAs create income burdens on communities. When MPAs are small and budget-constrained, they cannot resolve all of the marinescape’s open-access issues, but they can create win-win opportunities for ecological and economic goals at lower levels of enforcement. Aspatial policies—taxes, gear restrictions, license restrictions, and livelihood programs—improve the MPA’s ability to generate ecological gains, and licenses and livelihood policies can mitigate MPA-induced income burdens. Managers can use MPA location and enforcement level, in conjunction with the MPA’s impact on fish dispersal, to induce exit from fishing and to direct the spatial leakage of effort. Our framework provides further insights for conservation-development policy in coastal settings, and we explore stylized examples in Costa Rica and Tanzania.
-      </div>
-    </p>
-  </details>
-</div>
-
-
-<!-- NEW PAPER -->
-
-<div class="callout-wrapper">
-  <details>
-    <summary class="summary-selectedPaper"> 
       Optimal siting, sizing, and enforcement of marine protected areas
       <a href="https://doi.org/10.1007/s10640-020-00472-7" target="_blank">🔗</a>
       <br>
