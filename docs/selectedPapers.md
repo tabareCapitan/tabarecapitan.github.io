@@ -51,7 +51,7 @@ nav_order: 2
       <a href="https://github.com/tabareCapitan/CNFL" target="_blank">💾</a>
       <a href="https://doi.org/10.1016/j.reseneeco.2021.101264" target="_blank">🔗</a>
       <br>
-      <font size="-2">with Alpízar, Madrigal-Ballestero, and Pattanayak (<em>Resource and Energy Economics</em>, 2021)</font>
+      <font size="-2">with Alpízar, Madrigal-Ballestero, and Pattanayak <b>(<em>Resource and Energy Economics</em>, 2021)</b></font>
       </summary>
     <p>
       <div class="abstract">
@@ -74,7 +74,7 @@ nav_order: 2
       Optimal siting, sizing, and enforcement of marine protected areas
       <a href="https://doi.org/10.1007/s10640-020-00472-7" target="_blank">🔗</a>
       <br>
-      <font size="-2">with Albers, Preonas, Robinson, and Madrigal-Ballestero (<em>Environmental and Resource Economics</em>, 2020)</font>
+      <font size="-2">with Albers, Preonas, Robinson, and Madrigal-Ballestero <b>(<em>Environmental and Resource Economics</em></b>, 2020)</font>
       </summary>
     <p>
       <div class="abstract">
