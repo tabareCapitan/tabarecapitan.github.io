@@ -98,6 +98,8 @@ credence attributes
       <font size="-2">with Capitán</font>
       <br>
       <font size="-1"><em>(Submitted)</em> </font>
+     submitted
+     {: .label .label-red }
      </summary>
     <p>
       <div class="abstract">
