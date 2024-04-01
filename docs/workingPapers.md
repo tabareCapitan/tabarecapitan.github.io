@@ -96,7 +96,7 @@ credence attributes
     <summary class="summary-workingPaper"> 
       Bugs with benefits: The promise of edible insects in Latin America,
       <br>
-      <font size="-2">with Capitán</font><b>(submitted)</b> </font>
+      <font size="-2">with Capitán <b>(submitted)</b></font>
      </summary>
     <p>
       <div class="abstract">
@@ -136,7 +136,7 @@ credence attributes
       Predicting the replicability of social and behavioural science claims from the COVID19 Preprint Replication Project with structured expert and novice groups
      <a href="https://osf.io/preprints/metaarxiv/xdsjf/" target="_blank">📄</a>,
      <br>
-     <font size="-2">with many people</font><font size="-1"><b>(Submitted)</b> </font>
+     <font size="-2">with many people <b>(Submitted)</b></font>
    </summary>
     <p>
       <div class="abstract">
