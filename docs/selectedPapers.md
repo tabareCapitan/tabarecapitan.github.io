@@ -56,6 +56,10 @@ nav_order: 2
     <p>
       <div class="abstract">
       <b>Abstract.</b> We study the implementation of a time-varying pricing (TVP) program by a major electricity utility in Costa Rica. Because of particular features of the data, we use recently developed understanding of the two-way fixed effects differences-in-differences estimator along with event-study specifications to interpret our results. Similar to previous research, we find that the program reduces consumption during peak-hours. However, in contrast with previous research, we find that the program increases total consumption. With a stylized economic model, we show how these seemingly conflicted results may not be at odds. The key element of the model is that previous research used data from rich countries, in which the use of heating and cooling devices drives electricity consumption, but we use data from a tropical middle-income country, where very few households have heating or cooling devices. Since there is not much room for technological changes (which might reduce consumption at all times), behavioral changes to reduce consumption during peak hours are not enough to offset the increased consumption during off-peak hours (when electricity is cheaper). Our results serve as a cautionary piece of evidence for policy makers interested in reducing consumption during peak hours—the goal can potentially be achieved with TVP, but the cost is increased total consumption.
+      <p></p>       
+      <b>Keywords:</b> dynamic pricing, energy, behavioral adjustments, LMICs
+      <p></p>
+      <b>JEL classification:</b> Q41, Q47, Q50           
       </div>
     </p>
   </details>
@@ -75,6 +79,8 @@ nav_order: 2
     <p>
       <div class="abstract">
        <b>Abstract.</b> The design of protected areas, whether marine or terrestrial, rarely considers how people respond to the imposition of no-take sites with complete or incomplete enforcement. Consequently, these protected areas may fail to achieve their intended goal. We present and solve a spatial bio-economic model in which a manager chooses the optimal location, size, and enforcement level of a marine protected area (MPA). This manager acts as a Stackelberg leader, and her choices consider villagers’ best response to the MPA in a spatial Nash equilibrium of fishing site and effort decisions. Relevant to lower income country settings but general to other settings, we incorporate limited enforcement budgets, distance costs of traveling to fishing sites, and labor allocation to onshore wage opportunities. The optimal MPA varies markedly across alternative manager goals and budget sizes, but always induce changes in villagers’ decisions as a function of distance, dispersal, and wage. We consider MPA managers with ecological conservation goals and with economic goals, and identify the shortcomings of several common manager decision rules, including those focused on: (1) fishery outcomes rather than broader economic goals, (2) fish stocks at MPA sites rather than across the full marinescape, (3) absolute levels rather than additional values, and (4) costless enforcement. Our results demonstrate that such naïve or overly narrow decision rules can lead to inefficient MPA designs that miss economic and conservation opportunities.
+        <p></p>       
+        <b>Keywords:</b> additionality, bio-economic model, enforcement, leakage, nash equilibrium, no-take reserves, park efectiveness, reserve site selection, spatial prioritization, systematic conservation planning, marine spatial planning
       </div>
     </p>
   </details>
