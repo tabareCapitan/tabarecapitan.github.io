@@ -86,11 +86,9 @@ nav_order: 2
   </details>
 </div>
 
-
 <div class="custom-padding"> &nbsp;  </div>
 
-
- 📄 PDF | 🔗 journal article | 🔍 online appendix | 💾 replication package
+ 📄 PDF | 🔗 link to journal | 🔍 online appendix | 💾 replication package
 {: .text-center }
 
 (click on the boxes to see the abstract)
