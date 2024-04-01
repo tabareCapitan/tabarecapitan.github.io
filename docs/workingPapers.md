@@ -64,6 +64,7 @@ nav_order: 3
   </details>
 </div>
 
+
 <!-- NEW PAPER -->
 
 <div class="callout-wrapper">
@@ -81,6 +82,29 @@ of referent formation.
 credence attributes
 <p></p>       
 <b>JEL codes:</b> D01, D80, D83, D84, D91, C91.
+      </div>
+    </p>
+  </details>
+</div>
+
+
+<!-- NEW PAPER -->
+
+<div class="callout-wrapper">
+  <details>
+    <summary class="summary-workingPaper"> 
+      Bugs with benefits: The promise of edible insects in Latin America,
+      <font size="-2">with Capitán</font>
+      <br>
+      <font size="-1"><em>(Submitted)</em> </font>
+     </summary>
+    <p>
+      <div class="abstract">
+<b>Abstract.</b> We explore the economics of edible insects. We describe in detail how the biology of insects makes them a remarkable source of nutrition that can be produced with less resources and a lesser environmental impact than alternatives (e.g., meat). Thus, edible insects have the potential to play a key role in a more sustainable food system, thereby mitigating climate change and biodiversity loss. Furthermore, we highlight that tropical climate and an abundance of endemic insect species in much of Latin America gives the region a competitive advantage in developing the industry to integrate edible insects into the food system.
+<p></p>       
+<b>Keywords:</b> food system, agriculture, biodiversity loss, climate change, sustainability
+<p></p>
+<b>JEL classification:</b> Q01, Q16, Q56
       </div>
     </p>
   </details>
