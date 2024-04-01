@@ -108,7 +108,7 @@ nav_order: 4
       Determinants of food insecurity among smallholder farmer households in Central America
       <a href="https://doi.org/10.1007/s10113-020-01592-y" target="_blank">🔗</a>
       <br>
-      <font size="-2">with six people (<em>Regional Environmental Change</em>, 2020)</font>
+      <font size="-2">with six people <b>(<em>Regional Environmental Change</em>, 2020)</b></font>
       </summary>
     <p>
      <div class="abstract">
@@ -130,7 +130,7 @@ nav_order: 4
       <a href="https://www.researchgate.net/publication/338340783_Household_and_community_responses_to_seasonal_droughts_in_rural_areas_of_Costa_Rica" target="_blank">📄</a>
       <a href="https://doi.org/10.3362/1756-3488.18-00020" target="_blank">🔗</a>
       <br>
-      <font size="-2">with Madrigal-Ballestero, Salas, and Córdoba (<em>Waterlines</em>, 2019)</font>
+      <font size="-2">with Madrigal-Ballestero, Salas, and Córdoba <b>(<em>Waterlines</em>, 2019)</b></font>
       </summary>
     <p>
      <div class="abstract">
@@ -152,7 +152,7 @@ nav_order: 4
       <a href="https://www.researchgate.net/profile/Roger_Madrigal-Ballestero/publication/316896515_Marine_protected_areas_in_Costa_Rica_How_do_artisanal_fishers_respond/links/5a2c89ae45851552ae7c9bdb/Marine-protected-areas-in-Costa-Rica-How-do-artisanal-fishers-respond.pdf" target="_blank">📄</a>
       <a href="https://doi.org/10.1007/s13280-017-0921-y" target="_blank">🔗</a>
       <br>
-      <font size="-2">with Madrigal-Ballestero, Albers, and Salas (<em>Ambio</em>, 2017)</font>
+      <font size="-2">with Madrigal-Ballestero, Albers, and Salas <b>(<em>Ambio</em>, 2017)</b></font>
       </summary>
     <p>
       <div class="abstract">
