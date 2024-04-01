@@ -137,7 +137,7 @@ credence attributes
       Predicting the replicability of social and behavioural science claims from the COVID19 Preprint Replication Project with structured expert and novice groups
      <a href="https://osf.io/preprints/metaarxiv/xdsjf/" target="_blank">📄</a>
      <br>
-     <font size="-2">with many people <b>(submitted)</b></font>
+     <font size="-2">with many people <b>(resubmitted to <em>Nature Human Behavior</em>)</b></font>
    </summary>
     <p>
       <div class="abstract">
