@@ -49,9 +49,8 @@ nav_order: 3
   <details>
     <summary class="summary-workingPaper"> 
       Using Pre-nudges as Nudge Amplifiers
-      <font size="-1"><em>(Submitted)</em> </font>    
       <br>
-      <font size="-2">with Thunström, Van ‘t Veld, Shogren, and Nordström</font>
+      <font size="-2">with Thunström, Van ‘t Veld, Shogren, and Nordström <em>(submitted)</em></font>
      </summary>
     <p>
       <div class="abstract">
