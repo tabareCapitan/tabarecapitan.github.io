@@ -50,7 +50,7 @@ nav_order: 3
     <summary class="summary-workingPaper"> 
       Using Pre-nudges as Nudge Amplifiers
       <br>
-      <font size="-2">with Thunström, Van ‘t Veld, Shogren, and Nordström <b><em>(submitted)</em></b></font>
+      <font size="-2">with Thunström, Van ‘t Veld, Shogren, and Nordström <b>(submitted)</b></font>
      </summary>
     <p>
       <div class="abstract">
@@ -70,7 +70,8 @@ nav_order: 3
 <div class="callout-wrapper">
   <details>
     <summary class="summary-workingPaper">
-       Expecting to get it: An endowment effect for information,
+       Expecting to get it: An endowment effect for information
+       <br>
        <font size="-2">with Thunström, Van ‘t Veld, and Nordström</font>
    </summary>
     <p>
@@ -94,9 +95,8 @@ credence attributes
   <details>
     <summary class="summary-workingPaper"> 
       Bugs with benefits: The promise of edible insects in Latin America,
-      <font size="-2">with Capitán</font>
       <br>
-      <font size="-1"><em>(Submitted)</em> </font>
+      <font size="-2">with Capitán</font><b>(submitted)</b> </font>
      </summary>
     <p>
       <div class="abstract">
@@ -135,9 +135,8 @@ credence attributes
     <summary class="summary-workingPaper"> 
       Predicting the replicability of social and behavioural science claims from the COVID19 Preprint Replication Project with structured expert and novice groups
      <a href="https://osf.io/preprints/metaarxiv/xdsjf/" target="_blank">📄</a>,
-     <font size="-2">with many people</font>
      <br>
-     <font size="-1"><em>(Submitted)</em> </font>
+     <font size="-2">with many people</font><font size="-1"><b>(Submitted)</b> </font>
    </summary>
     <p>
       <div class="abstract">
