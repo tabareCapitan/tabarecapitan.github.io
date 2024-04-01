@@ -62,11 +62,13 @@ nav_order: 4
       On the trajectory of discrimination: A meta-analysis and forecasting survey capturing 44 years of field experiments on gender and hiring decisions
       <a href="https://www.sciencedirect.com/science/article/pii/S0749597823000560?via%3Dihub#s0170" target="_blank">🔗</a>
       <br>
-      <font size="-2">as part of an <em>author-consortium</em> with many people (<em>Organizational Behavior and Human Decision Processes</em>, 2023)</font>
+      <font size="-2">as part of an <em>author-consortium</em> with many people <b>(<em>Organizational Behavior and Human Decision Processes</em>, 2023)</b></font>
       </summary>
     <p>
      <div class="abstract">
       <b>Abstract.</b> A preregistered meta-analysis, including 244 effect sizes from 85 field audits and 361,645 individual job applications, tested for gender bias in hiring practices in female-stereotypical and gender-balanced as well as male-stereotypical jobs from 1976 to 2020. A “red team” of independent experts was recruited to increase the rigor and robustness of our meta-analytic approach. A forecasting survey further examined whether laypeople (n = 499 nationally representative adults) and scientists (n = 312) could predict the results. Forecasters correctly anticipated reductions in discrimination against female candidates over time. However, both scientists and laypeople overestimated the continuation of bias against female candidates. Instead, selection bias in favor of male over female candidates was eliminated and, if anything, slightly reversed in sign starting in 2009 for mixed-gender and male-stereotypical jobs in our sample. Forecasters further failed to anticipate that discrimination against male candidates for stereotypically female jobs would remain stable across the decades.
+       <p></p>       
+      <b>Keywords:</b> gender, discrimination, field experiments, meta-analysis, open science, forecasting
      </div>
     </p>
   </details>
@@ -83,11 +85,15 @@ nav_order: 4
       <a href="https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b3910782701d6f77534940/1639158044424/Albers_etal_MRE_appendix.pdf" target="_blank">🔍</a>
       <a href="https://www.journals.uchicago.edu/doi/10.1086/715818" target="_blank">🔗</a>
       <br>
-      <font size="-2">with Albers, Ashworth, Madrigal-Ballestero, and Preonas (<em>Marine Resource Economics</em>, 2021)</font>
+      <font size="-2">with Albers, Ashworth, Madrigal-Ballestero, and Preonas <b>(<em>Marine Resource Economics</em>, 2021)</b></font>
       </summary>
     <p>
      <div class="abstract">
       <b>Abstract.</b> Using a spatially explicit framework with low/middle-income country coastal characteristics, we explore whether aspatial policies augment the impact of marine protected areas (MPAs) and identify when MPAs create income burdens on communities. When MPAs are small and budget-constrained, they cannot resolve all of the marinescape’s open-access issues, but they can create win-win opportunities for ecological and economic goals at lower levels of enforcement. Aspatial policies—taxes, gear restrictions, license restrictions, and livelihood programs—improve the MPA’s ability to generate ecological gains, and licenses and livelihood policies can mitigate MPA-induced income burdens. Managers can use MPA location and enforcement level, in conjunction with the MPA’s impact on fish dispersal, to induce exit from fishing and to direct the spatial leakage of effort. Our framework provides further insights for conservation-development policy in coastal settings, and we explore stylized examples in Costa Rica and Tanzania.
+<p></p>       
+<b>Keywords:</b> artisanal fishery, fishery management, leakage, marine protected areas, marine reserves, no-take zones, people–park conflict, spatial bioeconomic models, spatial prioritization
+<p></p>
+<b>JEL classification:</b> O13, Q22, Q56, Q57
       </div>
     </p>
   </details>
