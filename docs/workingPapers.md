@@ -94,7 +94,7 @@ credence attributes
 <div class="callout-wrapper">
   <details>
     <summary class="summary-workingPaper"> 
-      Bugs with benefits: The promise of edible insects in Latin America,
+      Bugs with benefits: The promise of edible insects in Latin America
       <br>
       <font size="-2">with Capitán <b>(submitted)</b></font>
      </summary>
@@ -116,7 +116,8 @@ credence attributes
 <div class="callout-wrapper">
   <details>
     <summary class="summary-workingPaper"> 
-      Decision error decreases with risk aversion: A replication,
+      Decision error decreases with risk aversion: A replication
+      <br>
       <font size="-2">with Méndez</font>
    </summary>
     <p>
@@ -134,7 +135,7 @@ credence attributes
   <details>
     <summary class="summary-workingPaper"> 
       Predicting the replicability of social and behavioural science claims from the COVID19 Preprint Replication Project with structured expert and novice groups
-     <a href="https://osf.io/preprints/metaarxiv/xdsjf/" target="_blank">📄</a>,
+     <a href="https://osf.io/preprints/metaarxiv/xdsjf/" target="_blank">📄</a>
      <br>
      <font size="-2">with many people <b>(Submitted)</b></font>
    </summary>
