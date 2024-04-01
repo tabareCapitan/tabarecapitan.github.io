@@ -74,7 +74,7 @@ nav_order: 2
       Optimal siting, sizing, and enforcement of marine protected areas
       <a href="https://doi.org/10.1007/s10640-020-00472-7" target="_blank">🔗</a>
       <br>
-      <font size="-2">with Albers, Preonas, Robinson, and Madrigal-Ballestero <b>(<em>Environmental and Resource Economics</em></b>, 2020)</font>
+      <font size="-2">with Albers, Preonas, Robinson, and Madrigal-Ballestero <b>(<em>Environmental and Resource Economics</em>, 2020)</b></font>
       </summary>
     <p>
       <div class="abstract">
