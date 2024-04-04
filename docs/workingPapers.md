@@ -75,7 +75,7 @@ nav_order: 3
      </summary>
     <p>
       <div class="abstract">
-<b>Abstract.</b> We explore the economics of edible insects. We describe in detail how the biology of insects makes them a remarkable source of nutrition that can be produced with less resources and a lesser environmental impact than alternatives (e.g., meat). Thus, edible insects have the potential to play a key role in a more sustainable food system, thereby mitigating climate change and biodiversity loss. Furthermore, we highlight that tropical climate and an abundance of endemic insect species in much of Latin America gives the region a competitive advantage in developing the industry to integrate edible insects into the food system.
+<b>Abstract.</b> We explore the economics of edible insects. We describe in detail how the biology of insects makes them a remarkable source of nutrition that can be produced with less resources and a lesser environmental impact than alternatives (e.g., meat). Thus, edible insects have the potential to play a key role in a more sustainable food system, thereby mitigating climate change and biodiversity loss. Furthermore, we highlight that a tropical climate and an abundance of endemic insect species in much of Latin America gives the region a competitive advantage in developing the industry to integrate edible insects into the food system.
 <p></p>       
 <b>Keywords:</b> food system, agriculture, biodiversity loss, climate change, sustainability
 <p></p>
