@@ -91,7 +91,7 @@ nav_order: 3
 <div class="callout-wrapper">
   <details>
     <summary class="summary-workingPaper"> 
-      Parched prospects: Drinking-water in rural Central America.
+      Parched prospects: Drinking-water in rural Central America
       <br>
       <font size="-2">with Rushlow and Madrigal-Ballestero <b>(submitted)</b></font>
      </summary>
