@@ -159,10 +159,10 @@ credence attributes
 <div class="callout-wrapper">
   <details>
     <summary class="summary-workingPaper"> 
-      Predicting the replicability of social and behavioural science claims from the COVID19 Preprint Replication Project with structured expert and novice groups
+      Predicting the replicability of social and behavioural science claims in a crisis: The COVID19 Preprint Replication Project
      <a href="https://osf.io/preprints/metaarxiv/xdsjf/" target="_blank">📄</a>
      <br>
-     <font size="-2">with many people <b>(resubmitted, <em>Nature Human Behavior</em>)</b></font>
+     <font size="-2">with many people <b>(revise and resubmit (2nd round), <em>Nature Human Behavior</em>)</b></font>
    </summary>
     <p>
       <div class="abstract">
