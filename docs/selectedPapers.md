@@ -65,8 +65,7 @@ nav_order: 2
 <!--  {: .highlightYellow }
  xxxx -->
 
-
-<div class="custom-padding"> &nbsp;  </div>
+<!-- <div class="custom-padding"> &nbsp;  </div> -->
 
 
 <!-- -----------UNPUBLISHED----------- -->
@@ -194,5 +193,4 @@ credence attributes
  📄 PDF | 🔗 link to journal | 🔍 online appendix | 💾 replication package
 {: .text-center }
 
-(click on the boxes to see the abstract)
-{: .text-center }
+<center><font size="-1">commited to <a href="https://www.tabarecapitan.com/openScience/" target="_blank">Open Science</a></font></center>
