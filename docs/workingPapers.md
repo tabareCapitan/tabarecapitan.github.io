@@ -48,49 +48,6 @@ nav_order: 3
 <div class="callout-wrapper">
   <details>
     <summary class="summary-workingPaper"> 
-      Using pre-nudges as nudge amplifiers
-      <br>
-      <font size="-2">with Thunström, Van ‘t Veld, Shogren, and Nordström <b>(submitted)</b></font>
-     </summary>
-    <p>
-      <div class="abstract">
-<b>Abstract.</b> Nudges—ways of influencing consumer behavior by altering the context of choices rather than using direct incentives or limiting options outright—have become increasingly popular policy instruments in the pursuit of goals such as promoting public health, raising savings rates, and addressing climate change. However,nudges often have disappointingly small effects. We propose that “pre”-nudges can be used as nudge amplifiers. Pre-nudges, too, alter choice contexts, but with the aim of enhancing consumer responsiveness to a conventional nudge. We test the concept on a menu-labeling nudge aimed at reducing caloric intake from consumption of restaurant meals. Menu labeling, though widely applied, has been found to have little or no effect on behavior, likely because consumers willfully avoid calorie information. Our theoretical analysis of information avoidance suggests that messages that increase consumers’ sense of self-efficacy and/or their focus on long-term health risks may increase information uptake. Such messages can therefore serve as pre-nudges. We empirically test this prediction using a large-scale laboratory experiment, and find that the messages indeed significantly increase calorie-information uptake, thus amplifying the menu-labeling nudge. This suggests a possible role for pre-nudges in addressing the obesity epidemic—one of the largest public health issues in the U.S. and beyond—while also illustrating the potential usefulness of pre-nudges more generally.
-<p></p>       
-<b>Keywords:</b> pre-nudge, nudge, information avoidance, calorie information
-<p></p>
-<b>JEL classification:</b> D04, D90, D80, C91
-      </div>
-    </p>
-  </details>
-</div>
-
-<!-- NEW PAPER -->
-
-<div class="callout-wrapper">
-  <details>
-    <summary class="summary-workingPaper"> 
-      Bugs with benefits: The promise of edible insects in Latin America
-      <br>
-      <font size="-2">with Capitán <b>(submitted)</b></font>
-     </summary>
-    <p>
-      <div class="abstract">
-<b>Abstract.</b> We explore the economics of edible insects. We describe in detail how the biology of insects makes them a remarkable source of nutrition that can be produced with less resources and a lesser environmental impact than alternatives (e.g., meat). Thus, edible insects have the potential to play a key role in a more sustainable food system, thereby mitigating climate change and biodiversity loss. Furthermore, we highlight that a tropical climate and an abundance of endemic insect species in much of Latin America gives the region a competitive advantage in developing the industry to integrate edible insects into the food system.
-<p></p>       
-<b>Keywords:</b> food system, agriculture, biodiversity loss, climate change, sustainability
-<p></p>
-<b>JEL classification:</b> Q01, Q16, Q56
-      </div>
-    </p>
-  </details>
-</div>
-
-
-<!-- NEW PAPER -->
-
-<div class="callout-wrapper">
-  <details>
-    <summary class="summary-workingPaper"> 
       Parched prospects: Drinking-water in rural Central America
       <br>
       <font size="-2">with Rushlow and Madrigal-Ballestero <b>(submitted)</b></font>
@@ -107,33 +64,6 @@ lie within a particularly dry region in Central America, serving as a cautionary
     </p>
   </details>
 </div>
-
-
-
-<!-- NEW PAPER -->
-
-<div class="callout-wrapper">
-  <details>
-    <summary class="summary-workingPaper">
-       Expecting to get it: An endowment effect for information
-       <br>
-       <font size="-2">with Thunström, Van ‘t Veld, and Nordström</font>
-   </summary>
-    <p>
-      <div class="abstract">
-<b>Abstract.</b> We introduce the endowment effect for information: A tendency to value information more when expecting it, independently of its content. This result follows from a standard belief-based model of reference-dependent preferences and it is driven by gain-loss utility, though the information’s instrumentality can modulate the effect. Results from a laboratory experiment align with the theoretical results. Thus, we contribute to further understanding information avoidance beyond content or timing effects. Additionally, we discuss three experimental observations from a sequential manipulation of beliefs in our experimental design, laying groundwork for a theory
-of referent formation.
-<p></p>       
-<b>Keywords:</b> Preferences for information, reference-dependent preferences, information avoidance,
-credence attributes
-<p></p>       
-<b>JEL codes:</b> D01, D80, D83, D84, D91, C91.
-      </div>
-    </p>
-  </details>
-</div>
-
-
 
 
 <!-- NEW PAPER -->
