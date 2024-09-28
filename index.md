@@ -15,26 +15,14 @@ nav_exclude: false
 
 <div class="custom-padding"> &nbsp;  </div>
 
-I do research in **microeconomics**. 
+**Researcher. Applied microeconomics. Behavioral economics. Environmental economics**  
 <br>
-<br>
-Mostly in **behavioral**, **environmental**, and **development** economics.
-<br>
-<br>
-My main focus is on **information preferences**. 
 {: .text-center }
 
 --- 
 
-[working papers](https://www.tabarecapitan.com/workingPapers/){: .btn .btn-purple .mr-4}
 [selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple .mr-4}
 [more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-purple .mr-4}
-{: .text-center }
-
-
----
-
-Postdoc in the environmental econ group at [SLU](https://www.slu.se/en/departments/economics/research/research-groups/environmental-economics/){:target="_blank"} (Sweden)
 {: .text-center }
 
 --- 
