@@ -82,7 +82,7 @@ nav_order: 4
  
 <div class="custom-padding"> &nbsp;  </div>
 
-<font size="-2">(click on the boxes to see the abstract)</font> 
+<center><font size="-2">(click on the boxes to see the abstract)</font></center>
 {: .text-center }
 
 <!-- ----------------UNPUBLISHED-------------- -->
