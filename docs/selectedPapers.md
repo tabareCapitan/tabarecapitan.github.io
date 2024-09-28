@@ -32,6 +32,34 @@ nav_order: 2
   }
 </style>
 
+
+<style>
+  .abstract {
+    font-size: 13px; /* Adjust this value to change the text size */
+  }  
+  .summary-workingPaper {
+    padding: 8px 12px;
+    background-color: rgba(255, 230, 102, 0.6); /* Use an RGBA color value for the background */
+    color: #404040;  
+    border-left: 4px solid #751aff;
+    border-radius: 4px; /* Add this line for rounded corners */
+    cursor: pointer;
+    display: block; /* Change display to block */
+    width: 100%; /* Set the width to 100% */
+  }
+  .summary-workingPaper a {
+    text-decoration: none; /* Remove the underline from links */
+  }
+  .custom-padding {
+    padding-top: 0px;    /* Adjust this value to control the space above the content */
+    padding-bottom: 0px; /* Adjust this value to control the space below the content */
+  }
+  .callout-wrapper {
+    margin-bottom: 9px; /* Adjust this value to control the vertical space between callouts */
+  }
+</style>
+
+
 <!-- {::options parse_block_html="true" /} -->
 
 <!--  {: .highlightYellow }
@@ -40,6 +68,34 @@ nav_order: 2
 
 <div class="custom-padding"> &nbsp;  </div>
 
+
+<!-- -----------UNPUBLISHED----------- -->
+
+
+<!-- NEW PAPER -->
+
+<div class="callout-wrapper">
+  <details>
+    <summary class="summary-workingPaper"> 
+      Show me the labels: Using pre-nudges to reduce calorie information avoidance
+      <br>
+      <font size="-2">with Thunström, Van ‘t Veld, Shogren, and Nordström <b>(submitted)</b></font>
+     </summary>
+    <p>
+      <div class="abstract">
+<b>Abstract.</b> Calorie labeling is a popular policy to address the obesity epidemic, but it has had little empirical success. Under the premise that willful avoidance of information plays a role in this result, we propose a novel approach—pre-nudges—to make consumers more receptive to calorie information. Unlike nudges, which are used to directly influence a choice, pre-nudges are used to directly influence how consumers react to the nudge itself (the calorie label). In line with predictions from our theoretical analysis, we test two pre-nudges in the context of menu labeling: one aims to increase self-efficacy, and the other one highlights the long-term health risks of overeating. In a large-scale laboratory experiment, we find that both pre-nudges reduce calorie information avoidance. Overall, our paper suggests a possible role for pre-nudges in addressing the obesity epidemic—one of the largest public health issues globally—and illustrates the potential usefulness of pre-nudges more
+generally.
+<p></p>       
+<b>Keywords:</b> pre-nudge, nudge, information avoidance, calorie information
+<p></p>
+<b>JEL classification:</b> D04, D90, D80, C91
+      </div>
+    </p>
+  </details>
+</div>
+
+
+<!-- -----------PUBLISHED----------- -->
 
 <!-- NEW PAPER -->
 
