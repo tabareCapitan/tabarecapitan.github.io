@@ -26,7 +26,7 @@ nav_exclude: false
 
 --- 
 
-**researcher.** applied microeconomics. behavioral. environmental  
+**researcher.** applied microeconomics. behavior. environment. development.
 {: .text-center }
 
 --- 
