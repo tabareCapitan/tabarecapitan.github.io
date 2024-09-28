@@ -24,7 +24,7 @@ When possible[^4], I include a link to a replication package (💾) that contain
 
 ### Projects
 
-In addition to my efforts to make my own work transparent, I've also joined a few larger projects that aim to study generalizability and replicability of research in social sciences. You can find the outcomes of these projects [here](https://www.tabarecapitan.com/morePapers/).
+In addition to my efforts to make my own work transparent and accesible, I've also joined a few larger projects that aim to study generalizability and replicability of research in social sciences. You can find the outcomes of these projects [here](https://www.tabarecapitan.com/morePapers/).
 
 ---
 
