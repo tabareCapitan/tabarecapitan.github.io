@@ -17,7 +17,7 @@ nav_exclude: false
 <div class="custom-padding"> &nbsp;  </div>
 
 
-<span class="fs-3">
+<span class="fs-4">
 [selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-outline .mr-5}
 [more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-outline .mr-5}
 </span>
