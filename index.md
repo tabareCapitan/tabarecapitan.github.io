@@ -20,8 +20,9 @@ nav_exclude: false
 <span class="fs-3">
 [selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-outline .mr-5}
 [more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-outline .mr-5}
-{: .text-center }
 </span>
+{: .text-center }
+
 
 --- 
 
