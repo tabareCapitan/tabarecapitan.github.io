@@ -53,6 +53,35 @@ nav_order: 4
  
 <div class="custom-padding"> &nbsp;  </div>
 
+<!-- ----------------UNPUBLISHED-------------- -->
+
+
+
+
+
+
+<!-- ----------------PUBLISHED---------------- -->
+
+<!-- NEW PAPER -->
+
+<div class="callout-wrapper">
+  <details>
+    <summary class="summary-morePaper"> 
+      Can large language models help predict results from a complex behavioural science study?
+      <a href="https://royalsocietypublishing.org/doi/10.1098/rsos.240682" target="_blank">🔗</a>
+      <br>
+      <font size="-2">as part of an <em>author-consortium</em> with many people <b>(<em>Royal Society Open Science</em>, 2024)</b></font>
+      </summary>
+    <p>
+     <div class="abstract">
+      <b>Abstract.</b> We tested whether large language models (LLMs) can help predict results from a complex behavioural   science experiment. In study 1, we investigated the performance of the widely used LLMs GPT-3.5 and GPT-4 in forecasting the empirical findings of a large-scale experimental study of emotions, gender, and social perceptions. We found that GPT-4, but not GPT-3.5, matched the performance of a cohort of 119 human experts, with correlations of 0.89 (GPT-4), 0.07 (GPT-3.5) and 0.87 (human experts) between aggregated forecasts and realized effect sizes. In study 2, providing participants from a university subject pool the opportunity to query a GPT-4 powered chatbot significantly increased the accuracy of their forecasts. Results indicate promise for artificial intelligence (AI) to help anticipate—at scale and minimal cost—which claims about human behaviour will find empirical support and which ones will not. Our discussion focuses on avenues for human–AI collaboration in science.
+       <p></p>       
+      <b>Keywords:</b> forecasting, large language models, meta-research
+     </div>
+    </p>
+  </details>
+</div>
+
 
 <!-- NEW PAPER -->
 
