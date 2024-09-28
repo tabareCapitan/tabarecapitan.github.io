@@ -15,8 +15,7 @@ nav_exclude: false
 
 <div class="custom-padding"> &nbsp;  </div>
 
-**Researcher. Applied microeconomics. Behavioral economics. Environmental economics**  
-<br>
+**researcher.** applied microeconomics. behavioral. environmental  
 {: .text-center }
 
 --- 
