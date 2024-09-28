@@ -3,7 +3,7 @@ layout: default
 title: 🔑 open science
 permalink: /openScience/
 has_toc: false
-nav_order: 5
+nav_exclude: true
 ---
 
 <style>
