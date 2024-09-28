@@ -1,5 +1,5 @@
 ---
-title: 🧑🏻 about me
+title: 📢 about me
 layout: home
 nav_order: 1
 nav_exclude: false
@@ -12,13 +12,8 @@ nav_exclude: false
   }
 </style>
 
-
 <div class="custom-padding"> &nbsp;  </div>
 
-**researcher.** applied microeconomics. behavioral. environmental  
-{: .text-center }
-
---- 
 
 [selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple .mr-4}
 [more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-purple .mr-4}
@@ -26,7 +21,13 @@ nav_exclude: false
 
 --- 
 
-✉ Tabare (dot) Capitan (at) gmail ✉
+**researcher.** applied microeconomics. behavioral. environmental  
+{: .text-center }
+
+--- 
+
+<font size="-2">Tabare (dot) Capitan (at) gmail </font>
+✉
 {: .text-center }
 
 
