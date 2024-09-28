@@ -80,10 +80,8 @@ nav_order: 4
 <!--  {: .highlightYellow }
  xxxx -->
  
-<div class="custom-padding"> &nbsp;  </div>
+<!--  <div class="custom-padding"> &nbsp;  </div> -->
 
-<center><font size="-2">(click on the boxes to see the abstract)</font></center>
-{: .text-center }
 
 <!-- ----------------UNPUBLISHED-------------- -->
 
@@ -287,7 +285,5 @@ nav_order: 4
 📄 PDF | 🔗 link to journal | 🔍 online appendix | 💾 replication package
 {: .text-center }
 
+<center><font size="-1">commited to <a href="https://www.tabarecapitan.com/openScience/" target="_blank">Open Science</a></font></center>
 
-
-<font size="-1">commited to [Open Science](https://www.tabarecapitan.com/openScience/)</font>
-{: .text-center }
