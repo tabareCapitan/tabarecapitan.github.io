@@ -82,6 +82,9 @@ nav_order: 4
  
 <div class="custom-padding"> &nbsp;  </div>
 
+<font size="-2">(click on the boxes to see the abstract)</font> 
+{: .text-center }
+
 <!-- ----------------UNPUBLISHED-------------- -->
 
 
@@ -284,6 +287,7 @@ nav_order: 4
 📄 PDF | 🔗 link to journal | 🔍 online appendix | 💾 replication package
 {: .text-center }
 
-(click on the boxes to see the abstract) 
-{: .text-center }
 
+
+<font size="-1">commited to [Open Science](https://www.tabarecapitan.com/openScience/)</font>
+{: .text-center }
