@@ -14,9 +14,8 @@ nav_exclude: false
 
 <div class="custom-padding"> &nbsp;  </div>
 
-
-[selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-purple .mr-4}
-[more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-purple .mr-4}
+[selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-outline .mr-4}
+[more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-outline .mr-3}
 {: .text-center }
 
 --- 
@@ -26,8 +25,7 @@ nav_exclude: false
 
 --- 
 
-<font size="-2">Tabare (dot) Capitan (at) gmail </font>
-✉
+<font size="-1">Tabare (dot) Capitan (at) gmail </font>
 {: .text-center }
 
 
