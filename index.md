@@ -31,4 +31,4 @@ nav_exclude: false
 
 --- 
 
-<center><font size="-1">tabare (dot) capitan (at) gmail </font></center>
+<center><font size="-1">tabare [dot] capitan [at] Gmail </font></center>
