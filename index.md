@@ -12,17 +12,11 @@ nav_exclude: false
   }
 </style>
 
-<style>
-  .label {
-    text-transform: none;
-  }
-</style>
 
 <div class="custom-padding"> &nbsp;  </div>
 
 <div class="custom-padding"> &nbsp;  </div>
 
-{::options parse_block_html="true" /}
 
 
 <span class="fs-4">
@@ -33,34 +27,16 @@ nav_exclude: false
 
 
 --- 
-<!--
+
 **researcher.** applied microeconomics. <em>behavior. environment. development.</em>
 {: .text-center }
--->
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  researcher
-  {: .label .label-red .d-inline-block }
-
-applied microeconomics
-{: .label .label-green .d-inline-block }
-
-<br />
-
-behavior
-{: .label .label-purple .d-inline-block  }
-
-environment
-{: .label .label-purple .d-inline-block  }
-
-development
-{: .label .label-purple .d-inline-block }
-
-</div>
 
 
 --- 
 
 <center><font size="-1">tabare [dot] capitan [at] Gmail </font></center>
 
-A
+<span class="fs-4">
+[tabare [dot] capitan [at] Gmail](mailto:tabare.capitan@gmail.com){: .btn .btn-outline .mr-5}
+</span>
+{: .text-center }
