@@ -15,10 +15,16 @@ nav_exclude: false
 <style>
   .label {
     text-transform: none;
-    
   }
 </style>
 
+<style>
+  .center-label {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}
+</style>
 <div class="custom-padding"> &nbsp;  </div>
 
 <div class="custom-padding"> &nbsp;  </div>
@@ -38,7 +44,7 @@ nav_exclude: false
 
 
 researcher
-{: .label .label-red .d-block .text-center .d-inline-block  }
+{: .label .label-red .center-label  }
 
 <br>
 </br>
