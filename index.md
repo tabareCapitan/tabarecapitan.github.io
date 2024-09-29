@@ -4,6 +4,7 @@ layout: home
 nav_order: 1
 nav_exclude: false
 ---
+{::options parse_block_html="true" /}
 
 <style>
   .custom-padding {
