@@ -38,16 +38,16 @@ nav_exclude: false
 
 
 researcher
-{: .label .label-red .d-block .mx-auto .text-center }
+{: .label .label-red .d-block .text-center .d-inline-block  }
 
 applied microeconomics
-{: .label .label-green .d-block .mx-auto .text-center  }
+{: .label .label-green  .text-center }
 
 behavior
-{: .label .label-purple .d-block .mx-auto .text-center  }
+{: .label .label-purple  }
 
 environment
-{: .label .label-purple .d-block .mx-auto .text-center  }
+{: .label .label-purple  }
 
 development
 {: .label .label-purple }
