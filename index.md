@@ -15,6 +15,7 @@ nav_exclude: false
 <style>
   .label {
     text-transform: none;
+    
   }
 </style>
 
@@ -36,17 +37,17 @@ nav_exclude: false
 {: .text-center }
 
 
-**researcher**
-{: .label .label-red }{: .text-center }
+researcher
+{: .label .label-red .d-block .mx-auto .text-center }
 
 applied microeconomics
-{: .label .label-green }
+{: .label .label-green .d-block .mx-auto .text-center  }
 
 behavior
-{: .label .label-purple }
+{: .label .label-purple .d-block .mx-auto .text-center  }
 
 environment
-{: .label .label-purple }
+{: .label .label-purple .d-block .mx-auto .text-center  }
 
 development
 {: .label .label-purple }
