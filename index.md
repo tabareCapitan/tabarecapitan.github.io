@@ -22,8 +22,9 @@ nav_exclude: false
   .center-label {
     display: inline-block;
     text-align: center;
-    margin: 0 auto;
-}
+    margin-left: auto;
+    margin-right: auto;
+  }
 </style>
 <div class="custom-padding"> &nbsp;  </div>
 
