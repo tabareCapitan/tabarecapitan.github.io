@@ -40,8 +40,11 @@ nav_exclude: false
 researcher
 {: .label .label-red .d-block .text-center .d-inline-block  }
 
+<br>
+</br>
+
 applied microeconomics
-{: .label .label-green  .text-center }
+{: .label .label-green }
 
 behavior
 {: .label .label-purple  }
