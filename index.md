@@ -4,7 +4,6 @@ layout: home
 nav_order: 1
 nav_exclude: false
 ---
-{::options parse_block_html="true" /}
 
 <style>
   .custom-padding {
@@ -23,6 +22,8 @@ nav_exclude: false
 
 <div class="custom-padding"> &nbsp;  </div>
 
+{::options parse_block_html="true" /}
+
 
 <span class="fs-4">
 [selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-outline .mr-5}
@@ -39,8 +40,6 @@ nav_exclude: false
 <div style="display: flex; justify-content: center; align-items: center;">
   researcher
   {: .label .label-red .d-inline-block }
-</div>
-
 
 applied microeconomics
 {: .label .label-green }
@@ -54,8 +53,11 @@ environment
 development
 {: .label .label-purple }
 
+</div>
 
 
 --- 
 
 <center><font size="-1">tabare [dot] capitan [at] Gmail </font></center>
+
+A
