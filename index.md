@@ -12,6 +12,12 @@ nav_exclude: false
   }
 </style>
 
+<style>
+  .label {
+    text-transform: none;
+  }
+</style>
+
 <div class="custom-padding"> &nbsp;  </div>
 
 <div class="custom-padding"> &nbsp;  </div>
