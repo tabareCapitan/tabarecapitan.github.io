@@ -21,7 +21,7 @@ nav_exclude: false
 
 <span class="fs-4">
 [selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-outline .mr-5}
-[more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-outline .mr-5}
+[more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-outline}
 </span>
 {: .text-center }
 
@@ -37,6 +37,6 @@ nav_exclude: false
 <center><font size="-1">tabare [dot] capitan [at] Gmail </font></center>
 
 <span class="fs-3">
-[tabare [dot] capitan [at] Gmail](mailto:tabare.capitan@gmail.com){: .btn .btn-outline .mr-5}
+[tabare [dot] capitan [at] Gmail](mailto:tabare.capitan@gmail.com){: .btn .btn-outline }
 </span>
 {: .text-center }
