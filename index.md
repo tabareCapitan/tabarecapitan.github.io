@@ -36,7 +36,7 @@ nav_exclude: false
 
 <center><font size="-1">tabare [dot] capitan [at] Gmail </font></center>
 
-<span class="fs-4">
+<span class="fs-3">
 [tabare [dot] capitan [at] Gmail](mailto:tabare.capitan@gmail.com){: .btn .btn-outline .mr-5}
 </span>
 {: .text-center }
