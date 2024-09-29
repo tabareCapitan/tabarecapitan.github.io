@@ -43,18 +43,18 @@ nav_exclude: false
   {: .label .label-red .d-inline-block }
 
 applied microeconomics
-{: .label .label-green }
+{: .label .label-green .d-inline-block }
 
-<br>
+<br />
 
 behavior
-{: .label .label-purple  }
+{: .label .label-purple .d-inline-block  }
 
 environment
-{: .label .label-purple  }
+{: .label .label-purple .d-inline-block  }
 
 development
-{: .label .label-purple }
+{: .label .label-purple .d-inline-block }
 
 </div>
 
@@ -63,3 +63,4 @@ development
 
 <center><font size="-1">tabare [dot] capitan [at] Gmail </font></center>
 
+A
