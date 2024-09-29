@@ -18,14 +18,6 @@ nav_exclude: false
   }
 </style>
 
-<style>
-  .center-label {
-    display: inline-block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-</style>
 <div class="custom-padding"> &nbsp;  </div>
 
 <div class="custom-padding"> &nbsp;  </div>
@@ -43,12 +35,11 @@ nav_exclude: false
 **researcher.** applied microeconomics. <em>behavior. environment. development.</em>
 {: .text-center }
 
+<div style="display: flex; justify-content: center; align-items: center;">
+  researcher
+  {: .label .label-red .d-inline-block }
+</div>
 
-researcher
-{: .label .label-red .center-label  }
-
-<br>
-</br>
 
 applied microeconomics
 {: .label .label-green }
