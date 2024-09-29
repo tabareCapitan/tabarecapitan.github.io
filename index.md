@@ -35,21 +35,23 @@ nav_exclude: false
 **researcher.** applied microeconomics. <em>behavior. environment. development.</em>
 {: .text-center }
 
-researcher.
+<center>
+**researcher**
 {: .label .label-red }
 
 applied microeconomics
-{: .label .label-yellow }
+{: .label .label-green }
 
 behavior
-{: .label .label-green }
+{: .label .label-purple }
 
 environment
-{: .label .label-green }
+{: .label .label-purple }
 
 development
-{: .label .label-green }
+{: .label .label-purple }
 
+</center>
 
 --- 
 
