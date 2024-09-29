@@ -33,9 +33,10 @@ nav_exclude: false
 
 
 --- 
-
+<!--
 **researcher.** applied microeconomics. <em>behavior. environment. development.</em>
 {: .text-center }
+-->
 
 <div style="display: flex; justify-content: center; align-items: center;">
   researcher
@@ -43,6 +44,8 @@ nav_exclude: false
 
 applied microeconomics
 {: .label .label-green }
+
+<br>
 
 behavior
 {: .label .label-purple  }
@@ -60,4 +63,3 @@ development
 
 <center><font size="-1">tabare [dot] capitan [at] Gmail </font></center>
 
-A
