@@ -100,6 +100,7 @@ nav_order: 2
   <details>
     <summary class="summary-workingPaper"> 
       Show me the labels: Using pre-nudges to reduce calorie information avoidance
+      <a href="https://doi.org/10.31235/osf.io/vy6af" target="_blank">📄</a>
       <br>
       <font size="-2">with Thunström, Van ‘t Veld, Shogren, and Nordström <b>(submitted)</b></font>
      </summary>
@@ -149,7 +150,7 @@ credence attributes
   <details>
     <summary class="summary-selectedPaper"> 
       Time-varying pricing may increase total electricity consumption: Evidence from Costa Rica
-      <a href="https://osf.io/preprints/socarxiv/wcz8s/" target="_blank">📄</a>
+      <a href="https://doi.org/10.31235/osf.io/wcz8s" target="_blank">📄</a>
       <a href="https://github.com/tabareCapitan/CNFL" target="_blank">💾</a>
       <a href="https://doi.org/10.1016/j.reseneeco.2021.101264" target="_blank">🔗</a>
       <br>
