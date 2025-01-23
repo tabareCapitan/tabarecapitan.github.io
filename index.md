@@ -21,7 +21,7 @@ nav_exclude: false
 
 --- 
 
-**researcher.** data science. causal inference.</em>
+**researcher.** data science. causal inference.
 {: .text-center }
 
 
