@@ -17,7 +17,9 @@ nav_exclude: false
 
 <div class="custom-padding"> &nbsp;  </div>
 
+🟦⬜🟥🟥⬜🟦
 
+<!-- I MAY WANT THESE BUTTONS LATER, WITH DIFFERENT LINKS
 
 <span class="fs-4">
 [selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-outline .mr-5}
@@ -25,13 +27,16 @@ nav_exclude: false
 </span>
 {: .text-center }
 
+ -->
 
 --- 
 
-**researcher.** applied microeconomics. <em>behavior. environment. development.</em>
+**researcher.** data science. causal inference.</em>
 {: .text-center }
 
 
 --- 
 
 <center><font size="-1">tabare [dot] capitan [at] Gmail </font></center>
+
+
