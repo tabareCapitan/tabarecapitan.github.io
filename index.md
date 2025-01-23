@@ -19,16 +19,6 @@ nav_exclude: false
 
 🟦⬜🟥🟥⬜🟦
 
-<!-- I MAY WANT THESE BUTTONS LATER, WITH DIFFERENT LINKS
-
-<span class="fs-4">
-[selected papers](https://www.tabarecapitan.com/selectedPapers/){: .btn .btn-outline .mr-5}
-[more papers](https://www.tabarecapitan.com/morePapers/){: .btn .btn-outline}
-</span>
-{: .text-center }
-
- -->
-
 --- 
 
 **researcher.** data science. causal inference.</em>
