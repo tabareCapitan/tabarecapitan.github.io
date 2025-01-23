@@ -1,7 +1,12 @@
 source 'https://rubygems.org'
 
-gem "jekyll", "~> 4.3" # installed by `gem jekyll`
-# gem "webrick"        # required when using Ruby >= 3 and Jekyll <= 4.2.2
+gem "jekyll", "~> 4.3" # Jekyll 4.3.x is the latest as of now
 
-gem "just-the-docs", "0.4.0.rc3" # currently the latest pre-release
-# gem "just-the-docs"            # the latest release - currently 0.3.3
+# If using Ruby >= 3.0 and Jekyll <= 4.2.2, uncomment this gem (not needed for Jekyll 4.3+):
+# gem "webrick"
+
+# Use the latest version of just-the-docs if possible
+gem "just-the-docs", "0.4.0.rc3" # Pre-release is fine for advanced features
+
+# Optional: If deploying with GitHub Pages
+gem "github-pages", group: :jekyll_plugins
