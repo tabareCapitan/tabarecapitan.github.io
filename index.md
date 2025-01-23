@@ -24,7 +24,7 @@ nav_exclude: false
 **researcher.** data science. causal inference.
 {: .text-center }
 
-
+ 
 --- 
 
 <center><font size="-1">tabare [dot] capitan [at] Gmail </font></center>
