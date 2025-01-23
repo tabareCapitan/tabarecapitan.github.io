@@ -108,6 +108,33 @@ nav_order: 3
 </div>
 
 
+
+
+<!-- NEW PAPER -->
+
+<div class="callout-wrapper">
+  <details>
+    <summary class="summary-workingPaper"> 
+      Show me the labels: Using pre-nudges to reduce calorie information avoidance
+      <a href="https://doi.org/10.31235/osf.io/vy6af" target="_blank">📄</a>
+      <br>
+      <font size="-2">with Thunström, Van ‘t Veld, Nordström, and Shogren<b> (submitted)</b></font>
+     </summary>
+    <p>
+      <div class="abstract">
+<b>Abstract.</b> Calorie labeling is a popular policy to address the obesity epidemic, but it has had little empirical success. Under the premise that willful avoidance of information plays a role in this result, we propose a novel approach—pre-nudges—to make consumers more receptive to calorie information. Unlike nudges, which are used to directly influence a choice, pre-nudges are used to directly influence how consumers react to the nudge itself (the calorie label). In line with predictions from our theoretical analysis, we test two pre-nudges in the context of menu labeling: one aims to increase self-efficacy, and the other one highlights the long-term health risks of overeating. In a large-scale laboratory experiment, we find that both pre-nudges reduce calorie information avoidance. Overall, our paper suggests a possible role for pre-nudges in addressing the obesity epidemic—one of the largest public health issues globally—and illustrates the potential usefulness of pre-nudges more
+generally.
+<p></p>       
+<b>Keywords:</b> pre-nudge, nudge, information avoidance, calorie information
+<p></p>
+<b>JEL classification:</b> D04, D90, D80, C91
+      </div>
+    </p>
+  </details>
+</div>
+
+
+
 <!-- NEW PAPER -->
 
 <div class="callout-wrapper">
