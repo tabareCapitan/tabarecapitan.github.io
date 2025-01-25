@@ -25,14 +25,14 @@ nav_external_links:
 #  - title: google scholar
 #    url: https://scholar.google.com/citations?user=uqivDeoAAAAJ&hl=en
 #    hide_icon: false # set to true to hide the external link icon - defaults to false
-  - title: LinkedIn
+  - title: "👉🏼 LinkedIn"
     url: https://www.linkedin.com/in/tabareCapitan/
     hide_icon: false # set to true to hide the external link icon - defaults to false
     
     
 # Aux links for the upper right navigation
 aux_links:
-  "👉 LinkedIn":
+  "👉🏼 LinkedIn 👈🏼":
      - "//www.linkedin.com/in/tabareCapitan/"
 #  "🧠 Behavioral":
 #     - "//github.com/just-the-docs/just-the-docs"
