@@ -1,9 +1,9 @@
 ---
 layout: default
-title: ➕ more papers
-permalink: /morePapers/
+title: 📄 papers
+permalink: /papers/
 has_toc: false
-nav_order: 3
+nav_order: 2
 ---
 
 <style>
@@ -23,20 +23,7 @@ nav_order: 3
   .summary-morePaper a {
     text-decoration: none; /* Remove the underline from links */
   }  
-  .summary-restingPaper {
-    padding: 8px 12px;
-    background-color: rgba(222, 222, 237, 0.6);
-    color: #404040;
-    border-left: 4px solid #751aff;
-    border-radius: 4px; /* Add this line for rounded corners */
-    cursor: pointer;
-    display: block; /* Change display to block */
-    width: 100%; /* Set the width to 100% */
-    opacity: 1; /* Add this line to control the opacity */
-  }    
-  .summary-restingPaper a {
-    text-decoration: none; /* Remove the underline from links */
-  }   
+
   .custom-padding {
     padding-top: 0px;    /* Adjust this value to control the space above the content */
     padding-bottom: 0px; /* Adjust this value to control the space below the content */
@@ -83,7 +70,9 @@ nav_order: 3
 <!--  <div class="custom-padding"> &nbsp;  </div> -->
 
 
+
 <!-- ----------------UNPUBLISHED-------------- -->
+
 
 
 <!-- NEW PAPER -->
@@ -181,6 +170,7 @@ credence attributes
 </div>
 
 
+
 <!-- NEW PAPER -->
 
 <div class="callout-wrapper">
@@ -200,15 +190,20 @@ credence attributes
 
 
 
+<!-- ----------------PUBLISHED---------------- -->
+
+
+
 <!-- NEW PAPER -->
 
 <div class="callout-wrapper">
   <details>
-    <summary class="summary-workingPaper"> 
+    <summary class="summary-morePaper"> 
       Predicting the replicability of social and behavioural science claims in a crisis: The COVID19 Preprint Replication Project
-     <a href="https://osf.io/preprints/metaarxiv/xdsjf/" target="_blank">📄</a>
+     <a href="https://osf.io/preprints/metaarxiv/xdsjf/" target="_blank">📄</a> 
+     <a href="https://doi.org/10.1038/s41562-024-01961-1" target="_blank">🔗</a>       
      <br>
-     <font size="-2">with many people <b>(forthcoming, <em>Nature Human Behavior</em>)</b></font>
+     <font size="-2">with many people <b>(<em>Nature Human Behavior</em>), 2024</b></font>
    </summary>
     <p>
       <div class="abstract">
@@ -220,7 +215,7 @@ credence attributes
   </details>
 </div>
 
-<!-- ----------------PUBLISHED---------------- -->
+
 
 <!-- NEW PAPER -->
 
@@ -243,6 +238,7 @@ credence attributes
 </div>
 
 
+
 <!-- NEW PAPER -->
 
 <div class="callout-wrapper">
@@ -262,6 +258,33 @@ credence attributes
     </p>
   </details>
 </div>
+
+
+
+<!-- NEW PAPER -->
+
+<div class="callout-wrapper">
+  <details>
+    <summary class="summary-morePaper"> 
+      Time-varying pricing may increase total electricity consumption: Evidence from Costa Rica
+      <a href="https://doi.org/10.31235/osf.io/wcz8s" target="_blank">📄</a>
+      <a href="https://github.com/tabareCapitan/CNFL" target="_blank">💾</a>
+      <a href="https://doi.org/10.1016/j.reseneeco.2021.101264" target="_blank">🔗</a>
+      <br>
+      <font size="-2">with Alpízar, Madrigal-Ballestero, and Pattanayak <b>(<em>Resource and Energy Economics</em>, 2021)</b></font>
+      </summary>
+    <p>
+      <div class="abstract">
+      <b>Abstract.</b> We study the implementation of a time-varying pricing (TVP) program by a major electricity utility in Costa Rica. Because of particular features of the data, we use recently developed understanding of the two-way fixed effects differences-in-differences estimator along with event-study specifications to interpret our results. Similar to previous research, we find that the program reduces consumption during peak-hours. However, in contrast with previous research, we find that the program increases total consumption. With a stylized economic model, we show how these seemingly conflicted results may not be at odds. The key element of the model is that previous research used data from rich countries, in which the use of heating and cooling devices drives electricity consumption, but we use data from a tropical middle-income country, where very few households have heating or cooling devices. Since there is not much room for technological changes (which might reduce consumption at all times), behavioral changes to reduce consumption during peak hours are not enough to offset the increased consumption during off-peak hours (when electricity is cheaper). Our results serve as a cautionary piece of evidence for policy makers interested in reducing consumption during peak hours—the goal can potentially be achieved with TVP, but the cost is increased total consumption.
+      <p></p>       
+      <b>Keywords:</b> dynamic pricing, energy, behavioral adjustments, LMICs
+      <p></p>
+      <b>JEL classification:</b> Q41, Q47, Q50           
+      </div>
+    </p>
+  </details>
+</div>
+
 
 
 <!-- NEW PAPER -->
@@ -289,6 +312,29 @@ credence attributes
 </div>
 
 
+
+<!-- NEW PAPER -->
+
+<div class="callout-wrapper">
+  <details>
+    <summary class="summary-selectedPaper"> 
+      Optimal siting, sizing, and enforcement of marine protected areas
+      <a href="https://doi.org/10.1007/s10640-020-00472-7" target="_blank">🔗</a>
+      <br>
+      <font size="-2">with Albers, Preonas, Robinson, and Madrigal-Ballestero <b>(<em>Environmental and Resource Economics</em>, 2020)</b></font>
+      </summary>
+    <p>
+      <div class="abstract">
+       <b>Abstract.</b> The design of protected areas, whether marine or terrestrial, rarely considers how people respond to the imposition of no-take sites with complete or incomplete enforcement. Consequently, these protected areas may fail to achieve their intended goal. We present and solve a spatial bio-economic model in which a manager chooses the optimal location, size, and enforcement level of a marine protected area (MPA). This manager acts as a Stackelberg leader, and her choices consider villagers’ best response to the MPA in a spatial Nash equilibrium of fishing site and effort decisions. Relevant to lower income country settings but general to other settings, we incorporate limited enforcement budgets, distance costs of traveling to fishing sites, and labor allocation to onshore wage opportunities. The optimal MPA varies markedly across alternative manager goals and budget sizes, but always induce changes in villagers’ decisions as a function of distance, dispersal, and wage. We consider MPA managers with ecological conservation goals and with economic goals, and identify the shortcomings of several common manager decision rules, including those focused on: (1) fishery outcomes rather than broader economic goals, (2) fish stocks at MPA sites rather than across the full marinescape, (3) absolute levels rather than additional values, and (4) costless enforcement. Our results demonstrate that such naïve or overly narrow decision rules can lead to inefficient MPA designs that miss economic and conservation opportunities.
+        <p></p>       
+        <b>Keywords:</b> additionality, bio-economic model, enforcement, leakage, nash equilibrium, no-take reserves, park efectiveness, reserve site selection, spatial prioritization, systematic conservation planning, marine spatial planning
+      </div>
+    </p>
+  </details>
+</div>
+
+
+
 <!-- NEW PAPER -->
 
 <div class="callout-wrapper">
@@ -308,6 +354,7 @@ credence attributes
     </p>
   </details>
 </div>
+
 
 
 <!-- NEW PAPER -->
@@ -330,6 +377,7 @@ credence attributes
     </p>
   </details>
 </div>
+
 
 
 <!-- NEW PAPER -->
