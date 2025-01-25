@@ -18,6 +18,7 @@ nav_exclude: false
 <div class="custom-padding"> &nbsp;  </div>
 
 🟦⬜🟥🟥⬜🟦
+{: .text-center }
 
 --- 
 
@@ -30,3 +31,4 @@ nav_exclude: false
 <center><font size="-1">tabare [dot] capitan [at] Gmail </font></center>
 
 
+test1
