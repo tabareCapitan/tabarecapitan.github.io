@@ -2,16 +2,16 @@ name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches: ["main"]  # Trigger on push to the main branch
-  workflow_dispatch:     # Allow manual workflow runs
+    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
-  contents: write         # Allow committing the updated Gemfile.lock
-  pages: write            # Allow publishing to GitHub Pages
-  id-token: write         # Required for GitHub Pages deployment
+  contents: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: "pages"          # Ensure only one deployment runs at a time
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -28,13 +28,14 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0'
-          bundler-cache: true
+          bundler-cache: false  # Disable Bundler caching since it causes deployment mode issues
 
       # Step 3: Unset deployment mode and install dependencies
       - name: Install dependencies and update Gemfile.lock
         run: |
-          bundle config unset deployment || true
-          bundle install
+          bundle config --local deployment false  # Explicitly disable deployment mode
+          bundle config unset path || true       # Ensure no frozen path settings
+          bundle install                         # Install and regenerate Gemfile.lock if needed
           if [[ -n $(git status --porcelain Gemfile.lock) ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -55,9 +56,9 @@ jobs:
 
   deploy:
     environment:
-      name: github-pages          # Deployment environment
-    runs-on: ubuntu-22.04         # Use the same runner for deployment
-    needs: build                  # Wait for the build job to finish
+      name: github-pages
+    runs-on: ubuntu-22.04
+    needs: build
     steps:
       # Step 6: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
