@@ -82,7 +82,7 @@ nav_order: 2
     <summary class="summary-workingPaper"> 
       Bugs with benefits: The economics of edible insects
       <br>
-      <font size="-2">with Capitán <b>(submitted)</b></font>
+      <font size="-2">with Capitán</font>
      </summary>
     <p>
       <div class="abstract">
@@ -106,7 +106,7 @@ nav_order: 2
       Show me the labels: Using pre-nudges to reduce calorie information avoidance
       <a href="https://doi.org/10.31235/osf.io/vy6af" target="_blank">📄</a>
       <br>
-      <font size="-2">with Thunström, Van ‘t Veld, Nordström, and Shogren<b> (submitted)</b></font>
+      <font size="-2">with Thunström, Van ‘t Veld, Nordström, and Shogren</font>
      </summary>
     <p>
       <div class="abstract">
