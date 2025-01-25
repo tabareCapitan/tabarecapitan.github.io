@@ -1,5 +1,5 @@
 ---
-title: 📢 about me
+title: 📢 home
 layout: home
 nav_order: 1
 nav_exclude: false
@@ -30,7 +30,3 @@ nav_exclude: false
 
 <center><font size="-1">tabare [dot] capitan [at] Gmail </font></center>
 
-
-<a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
-  <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
-</a>
