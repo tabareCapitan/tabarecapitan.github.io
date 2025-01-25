@@ -153,29 +153,6 @@ credence attributes
 <div class="callout-wrapper">
   <details>
     <summary class="summary-workingPaper"> 
-      Parched prospects: Drinking-water in rural Central America
-      <br>
-      <font size="-2">with Rushlow and Madrigal-Ballestero</font>
-     </summary>
-    <p>
-      <div class="abstract">
-<b>Abstract.</b> This is a cross-country exploratory study of the availability of piped drinking-water in rural Central America—where community water organizations (CWOs) are often the sole providers of piped drinking-water. We rely on two related surveys conducted in three countries in Central America—Costa Rica, Nicaragua, and Guatemala—at the household- and CWO-level. Thus, we can describe households’ perceptions and actions within the context provided by the CWOs. At the household level, we document large differences in the reliability of the water service across countries, which lead to differences in the extent and ways in which households cope. Furthermore, these differences are mirrored at the community level, in which CWOs across countries exhibit a rather distinct level of formalization and financial resources. Our study sites lie within a particularly dry region in Central America, serving as a cautionary tale for other regions as climate change intensifies.
-<p></p>       
-<b>Keywords:</b> rural water service, community water organizations, Central America, coping costs, climate change, adaptation
-<p></p>
-<b>JEL classification:</b>  O13, O20, Q25
-      </div>
-    </p>
-  </details>
-</div>
-
-
-
-<!-- NEW PAPER -->
-
-<div class="callout-wrapper">
-  <details>
-    <summary class="summary-workingPaper"> 
       Decision error decreases with risk aversion: A replication
       <br>
       <font size="-2">with Méndez</font>
@@ -203,7 +180,7 @@ credence attributes
      <a href="https://osf.io/preprints/metaarxiv/xdsjf/" target="_blank">📄</a> 
      <a href="https://doi.org/10.1038/s41562-024-01961-1" target="_blank">🔗</a>       
      <br>
-     <font size="-2">with many people <b>(<em>Nature Human Behavior</em>), 2024</b></font>
+     <font size="-2">with many people <b>(<em>Nature Human Behavior</em>, 2024)</b></font>
    </summary>
     <p>
       <div class="abstract">
