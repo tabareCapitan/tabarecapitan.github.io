@@ -383,5 +383,8 @@ credence attributes
 📄 PDF | 🔗 link to journal | 🔍 online appendix | 💾 replication package
 {: .text-center }
 
-<center><font size="-1">commited to <a href="https://www.tabarecapitan.com/openScience/" target="_blank">Open Science</a></font></center>
+<center><font size="-1">commited to <a https://scholar.google.com/citations?user=uqivDeoAAAAJ&hl=en" target="_blank">profile in google scholar</a></font></center>
+
+
+<center><font size="-1">commited to <a href="https://www.tabarecapitan.com/openScience/" target="_blank">open science</a></font></center>
 
