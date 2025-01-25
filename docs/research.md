@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 📄 papers
-permalink: /papers/
+title: 📄 research 
+permalink: /research/
 has_toc: false
 nav_order: 2
 ---
@@ -317,7 +317,7 @@ credence attributes
 
 <div class="callout-wrapper">
   <details>
-    <summary class="summary-selectedPaper"> 
+    <summary class="summary-morePaper"> 
       Optimal siting, sizing, and enforcement of marine protected areas
       <a href="https://doi.org/10.1007/s10640-020-00472-7" target="_blank">🔗</a>
       <br>
