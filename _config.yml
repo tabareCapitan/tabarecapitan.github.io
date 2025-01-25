@@ -1,7 +1,6 @@
 title: Tabaré Capitán
-description: Personal website - Economist
+description: personal website
 theme: just-the-docs
-
 
 
 url: https://tabarecapitan.github.io/tabarecapitan.github.io
@@ -15,33 +14,35 @@ google_analytics: G-5XPBJKXZNK
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
 
 
-
 # External navigation links
 nav_external_links:
-  - title: my CV
-    url: https://www.tabarecapitan.com/assets/cv/tabareCapitan_CV.pdf
-    hide_icon: false # set to true to hide the external link icon - defaults to false
-  - title: google scholar
-    url: https://scholar.google.com/citations?user=uqivDeoAAAAJ&hl=en
-    hide_icon: false # set to true to hide the external link icon - defaults to false
-  - title: linkedIn
+#  - title: my CV
+#    url: https://www.tabarecapitan.com/assets/cv/tabareCapitan_CV.pdf
+#    hide_icon: false # set to true to hide the external link icon - defaults to false
+#  - title: resume
+#    url: https://www.tabarecapitan.com/assets/cv/tabareCapitan_resume.pdf
+#    hide_icon: false # set to true to hide the external link icon - defaults to false
+#  - title: google scholar
+#    url: https://scholar.google.com/citations?user=uqivDeoAAAAJ&hl=en
+#    hide_icon: false # set to true to hide the external link icon - defaults to false
+  - title: Linked in
     url: https://www.linkedin.com/in/tabareCapitan/
     hide_icon: false # set to true to hide the external link icon - defaults to false
     
     
-    
 # Aux links for the upper right navigation
 aux_links:
-  "🧠 Behavioral":
+  "🧠 Linked in":
+     - "//www.linkedin.com/in/tabareCapitan/"
+#  "🧠 Behavioral":
 #     - "//github.com/just-the-docs/just-the-docs"
-  "🌱 Environmental":
+#  "🌱 Environmental":
 #     - "//github.com/just-the-docs/just-the-docs"
-  "🌎 Latin America":
+#  "🌎 Latin America":
 #     - "//github.com/just-the-docs/just-the-docs"
 
 # Makes Aux links open in a new tab. Default is false
-aux_links_new_tab: false
-
+aux_links_new_tab: true
 
 
 callouts_level: quiet # or loud
