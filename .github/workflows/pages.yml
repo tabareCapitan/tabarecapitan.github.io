@@ -30,15 +30,11 @@ jobs:
           ruby-version: '3.0'
           bundler-cache: true
 
-      # Step 3: Install dependencies without deployment mode
-      - name: Install dependencies
+      # Step 3: Unset deployment mode and install dependencies
+      - name: Install dependencies and update Gemfile.lock
         run: |
           bundle config unset deployment || true
           bundle install
-
-      # Step 4: Commit updated Gemfile.lock if necessary
-      - name: Commit Gemfile.lock changes
-        run: |
           if [[ -n $(git status --porcelain Gemfile.lock) ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -47,11 +43,11 @@ jobs:
             git push
           fi
 
-      # Step 5: Build the Jekyll site
+      # Step 4: Build the Jekyll site
       - name: Build Jekyll site
         run: bundle exec jekyll build --destination ./_site
 
-      # Step 6: Upload the built site as an artifact for deployment
+      # Step 5: Upload the built site as an artifact for deployment
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v2
         with:
@@ -63,6 +59,6 @@ jobs:
     runs-on: ubuntu-22.04         # Use the same runner for deployment
     needs: build                  # Wait for the build job to finish
     steps:
-      # Step 7: Deploy to GitHub Pages
+      # Step 6: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
