@@ -1,5 +1,5 @@
 ---
-title: 📢 home
+title: 🌴 home
 layout: home
 nav_order: 1
 nav_exclude: false
@@ -12,9 +12,6 @@ nav_exclude: false
   }
 </style>
 
-#{: .text-center }
-
-
 <div class="custom-padding"> &nbsp;  </div>
 
 
@@ -26,8 +23,6 @@ nav_exclude: false
 phd in economics
 
 --- 
-
-# <center><font size="-1">tabare [dot] capitan [at] Gmail </font></center>
 
 tabare [dot] capitan [at] Gmail
 
