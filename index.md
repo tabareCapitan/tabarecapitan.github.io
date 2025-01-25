@@ -12,21 +12,28 @@ nav_exclude: false
   }
 </style>
 
+#{: .text-center }
+
 
 <div class="custom-padding"> &nbsp;  </div>
 
-<div class="custom-padding"> &nbsp;  </div>
+
+**researcher.** data science. causal inference. data visualization.
+ 
+
+---
+
+phd in economics
+
+--- 
+
+# <center><font size="-1">tabare [dot] capitan [at] Gmail </font></center>
+
+tabare [dot] capitan [at] Gmail
+
+---
 
 🟦⬜🟥🟥⬜🟦
-{: .text-center }
 
---- 
 
-**researcher.** data science. causal inference.
-{: .text-center }
-
- 
---- 
-
-<center><font size="-1">tabare [dot] capitan [at] Gmail </font></center>
 
