@@ -31,4 +31,6 @@ nav_exclude: false
 <center><font size="-1">tabare [dot] capitan [at] Gmail </font></center>
 
 
-test1
+<a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+</a>
