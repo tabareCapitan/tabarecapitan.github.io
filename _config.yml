@@ -29,10 +29,10 @@ nav_external_links:
 aux_links:
   "GitHub":
      - "//github.com/tabareCapitan/"
-  "Substack":
-     - "//tabarecapitan.substack.com/"
- # "LinkedIn":
- #    - "//linkedin.com/in/tabareCapitan/"
+#  "Substack":
+#     - "//tabarecapitan.substack.com/"
+  "LinkedIn":
+     - "//linkedin.com/in/tabareCapitan/"
 
      
 # Makes Aux links open in a new tab. Default is false
