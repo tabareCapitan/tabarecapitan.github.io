@@ -69,6 +69,12 @@ nav_order: 2
  
 <!--  <div class="custom-padding"> &nbsp;  </div> -->
 
+<center><font size="-1"><a href="https://scholar.google.com/citations?user=uqivDeoAAAAJ&hl=en" target="_blank">my profile in google scholar</a> | <a href="https://www.tabarecapitan.com/openScience/" target="_blank">a note about open science</a> </font></center>
+
+
+📄 PDF | 🔗 link to journal | 🔍 online appendix | 💾 replication package
+{: .text-center }
+
 
 
 <!-- ----------------UNPUBLISHED-------------- -->
@@ -380,10 +386,6 @@ credence attributes
 
 <div class="custom-padding"> &nbsp;  </div>
 
-📄 PDF | 🔗 link to journal | 🔍 online appendix | 💾 replication package
-{: .text-center }
-
-<center><font size="-1"><a href="https://scholar.google.com/citations?user=uqivDeoAAAAJ&hl=en" target="_blank">my profile in google scholar</a> | <a href="https://www.tabarecapitan.com/openScience/" target="_blank">a note about open science</a> </font></center>
 
 
 
