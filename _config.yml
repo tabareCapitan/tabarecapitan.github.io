@@ -29,16 +29,12 @@ nav_external_links:
 aux_links:
   "GitHub":
      - "//github.com/tabareCapitan/"
-  "LinkedIn":
-     - "//linkedin.com/in/tabareCapitan/"
-     
-#  "🧠 Behavioral":
-#     - "//github.com/just-the-docs/just-the-docs"
-#  "🌱 Environmental":
-#     - "//github.com/just-the-docs/just-the-docs"
-#  "🌎 Latin America":
-#     - "//github.com/just-the-docs/just-the-docs"
+  "Substack":
+     - "//tabarecapitan.substack.com/"
+ # "LinkedIn":
+ #    - "//linkedin.com/in/tabareCapitan/"
 
+     
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
 
