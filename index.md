@@ -15,7 +15,7 @@ nav_exclude: false
 <div class="custom-padding"> &nbsp;  </div>
 
 
-**researcher.** data science. causal inference. writing. data visualization.
+**research.** data science. causal inference. writing. data visualization.
  
 
 ---
