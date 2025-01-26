@@ -23,17 +23,15 @@ nav_external_links:
 #    url: https://www.tabarecapitan.com/assets/cv/tabareCapitan_resume.pdf
 #    hide_icon: false # set to true to hide the external link icon - defaults to false
 #  - title: google scholar
-#    url: https://scholar.google.com/citations?user=uqivDeoAAAAJ&hl=en
-#    hide_icon: false # set to true to hide the external link icon - defaults to false
-  - title: "👉🏼 LinkedIn"
-    url: https://www.linkedin.com/in/tabareCapitan/
-    hide_icon: false # set to true to hide the external link icon - defaults to false
-    
+
     
 # Aux links for the upper right navigation
 aux_links:
-  "LinkedIn ➕":
+  "GitHub":
+     - "//github.com/tabareCapitan/"
+  "LinkedIn":
      - "//linkedin.com/in/tabareCapitan/"
+     
 #  "🧠 Behavioral":
 #     - "//github.com/just-the-docs/just-the-docs"
 #  "🌱 Environmental":
