@@ -79,6 +79,23 @@ nav_order: 2
 <!-- ----------------UNPUBLISHED-------------- -->
 
 
+<!-- NEW PAPER -->
+
+<div class="callout-wrapper">
+  <details>
+    <summary class="summary-workingPaper"> 
+      Investigating the analytical robustness of the social and behavioural sciences
+      <br>
+      <font size="-2">with many people</font>
+     </summary>
+    <p>
+      <div class="abstract">
+<b>Abstract.</b> 	The same dataset can be analysed in different justifiable ways to answer the same research question, potentially challenging the robustness of empirical science. In this crowd initiative, we investigated the degree to which research findings in the social and behavioural sciences are contingent on analysts’ choices. To explore this question, we took a sample of 100 studies published between 2009 and 2018 in criminology, demography, economics and finance, management, marketing and organisational behaviour, political science, psychology, and sociology. For one claim of each study, at least five re-analysts were invited to independently re-analyze the original data. The statistical appropriateness of the re-analyses was assessed in peer evaluations and the robustness indicators were inspected along a range of research characteristics and study designs. Only 31% of the independent re-analyses yielded the same result (within a tolerance region of +/- 0.05 Cohen’s d) as the original report. Even with a four times broader tolerance region, this indicator did not go above 56%. Regarding the conclusions drawn, only 34% of the studies remained analytically robust, meaning that all re-analysts reported evidence for the originally reported claim. Using a more liberal definition of robustness produced comparable result (39% when >80% re-analysis agreement with the original conclusion defined analytical robustness). This explorative study suggests that the common single-path analyses in social and behavioural research cannot be assumed to be robust to alternative — similarly justifiable — analyses. Therefore, we recommend the development and use of practices to explore and communicate this neglected source of uncertainty.
+      </div>
+    </p>
+  </details>
+</div>
+
 
 <!-- NEW PAPER -->
 
