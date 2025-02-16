@@ -2,34 +2,61 @@ name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.0
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+          bundler-cache: false
 
-    - name: Install dependencies
-      run: bundle install
+      - name: Clear runner cache
+        run: sudo rm -rf /home/runner/.cache
+      
+      - name: Install dependencies and update Gemfile.lock
+        run: |
+          bundle config --local deployment false
+          bundle config unset path || true
+          bundle install
+          if [[ -n $(git status --porcelain Gemfile.lock) ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add Gemfile.lock
+            git commit -m "Update Gemfile.lock to match Gemfile"
+            git push
+          fi
 
-    - name: Build site
-      run: bundle exec jekyll build
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --destination ./_site
 
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v2
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./_site
 
   deploy:
-    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    runs-on: ubuntu-22.04
     needs: build
     steps:
-    - name: Deploy to GitHub Pages
-      uses: actions/deploy-pages@v1
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
