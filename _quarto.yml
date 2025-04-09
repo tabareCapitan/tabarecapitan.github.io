@@ -1,0 +1,45 @@
+project:
+  type: website
+  output-dir: docs
+
+resources:
+  - .nojekyll
+
+website:
+  title: "Tabaré Capitán"
+  open-graph: true
+  google-analytics:
+    tracking-id: "G-XXXXXXX"
+    anonymize-ip: true
+    storage: none
+  navbar:
+    search: true
+    right:     
+        - icon: linkedin
+          href: https://www.linkedin.com/in/tabareCapitan
+          aria-label: LinkedIn
+          target: _blank
+        - icon: substack
+          href: https://www.tabarecapitan.com        
+          aria-label: Substack
+          target: _blank
+        - icon: reception-4
+          href: https://scholar.google.com/citations?user=uqivDeoAAAAJ
+          aria-label: Google Scholar
+          target: _blank
+        - icon: github
+          href: https://github.com/tabareCapitan
+          aria-label: GitHub
+          target: _blank
+    left:
+      - href: index.qmd
+        text: research
+      - href: about.qmd
+        text: about
+
+
+format:
+  html:
+    theme: minty
+    css: styles.css
+    toc: true
