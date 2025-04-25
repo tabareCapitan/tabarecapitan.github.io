@@ -10,7 +10,7 @@ website:
   favicon: favicon.png
   open-graph: true
   google-analytics:
-    tracking-id: "G-XXXXXXX"
+    tracking-id: "G-5XPBJKXZNK"
     anonymize-ip: true
     storage: none
   navbar:
