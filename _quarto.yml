@@ -7,6 +7,7 @@ resources:
 
 website:
   title: "Tabaré Capitán"
+  description: "Researcher and data scientist, personal website"
   favicon: favicon.png
   open-graph: true
   google-analytics:
