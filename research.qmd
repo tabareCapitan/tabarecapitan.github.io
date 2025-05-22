@@ -42,7 +42,7 @@ generally.
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Thunström, Van ‘t Veld, Nordström, and Shogren (submitted) [📄](https://doi.org/10.31235/osf.io/vy6af) </div>
+<div style="font-size: 0.80em;">Coauthored with Thunström, Van ‘t Veld, Nordström, and Shogren (submitted) [pdf](https://doi.org/10.31235/osf.io/vy6af) </div>
 :::
 
 
@@ -123,7 +123,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with many others (<em>Nature Human Behavior</em>, 2024) [📄](https://osf.io/preprints/metaarxiv/xdsjf/) [🔗](https://doi.org/10.1038/s41562-024-01961-1)</div> 
+<div style="font-size: 0.80em;">Coauthored with many others (<em>Nature Human Behavior</em>, 2024) [pdf](https://osf.io/preprints/metaarxiv/xdsjf/) [journal](https://doi.org/10.1038/s41562-024-01961-1)</div> 
 :::
 
 
@@ -135,7 +135,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with many others (<em>Royal Society Open Science</em>, 2024) [🔗](https://royalsocietypublishing.org/doi/10.1098/rsos.240682)</div>
+<div style="font-size: 0.80em;">Coauthored with many others (<em>Royal Society Open Science</em>, 2024) [journal](https://royalsocietypublishing.org/doi/10.1098/rsos.240682)</div>
 :::
 
 
@@ -147,7 +147,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored as part of an <em>author-consortium</em> with many others (<em>Organizational Behavior and Human Decision Processes</em>, 2023) [🔗](https://www.sciencedirect.com/science/article/pii/S0749597823000560?via%3Dihub#s0170)</div>
+<div style="font-size: 0.80em;">Coauthored as part of an <em>author-consortium</em> with many others (<em>Organizational Behavior and Human Decision Processes</em>, 2023) [journal](https://www.sciencedirect.com/science/article/pii/S0749597823000560?via%3Dihub#s0170)</div>
 :::
 
 
@@ -159,7 +159,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Alpízar, Madrigal-Ballestero, and Pattanayak (<em>Resource and Energy Economics</em>, 2021) [📄](https://doi.org/10.31235/osf.io/wcz8s) [💾](https://github.com/tabareCapitan/CNFL) [🔗](https://doi.org/10.1016/j.reseneeco.2021.101264)</div>
+<div style="font-size: 0.80em;">Coauthored with Alpízar, Madrigal-Ballestero, and Pattanayak (<em>Resource and Energy Economics</em>, 2021) [pdf](https://doi.org/10.31235/osf.io/wcz8s) [code](https://github.com/tabareCapitan/CNFL) [journal](https://doi.org/10.1016/j.reseneeco.2021.101264)</div>
 :::
 
 
@@ -171,7 +171,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Albers, Ashworth, Madrigal-Ballestero, and Preonas (<em>Marine Resource Economics</em>, 2021) [📄](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf) [🔗](https://www.journals.uchicago.edu/doi/10.1086/715818)</div>
+<div style="font-size: 0.80em;">Coauthored with Albers, Ashworth, Madrigal-Ballestero, and Preonas (<em>Marine Resource Economics</em>, 2021) [pdf](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf) [journal](https://www.journals.uchicago.edu/doi/10.1086/715818)</div>
 :::
 
 
@@ -183,19 +183,19 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Albers, Preonas, Robinson, and Madrigal-Ballestero (<em>Environmental and Resource Economics</em>, 2020) [🔗](https://doi.org/10.1007/s10640-020-00472-7)</div>
+<div style="font-size: 0.80em;">Coauthored with Albers, Preonas, Robinson, and Madrigal-Ballestero (<em>Environmental and Resource Economics</em>, 2020) [journal](https://doi.org/10.1007/s10640-020-00472-7)</div>
 :::
 
 
 
 ::: {.callout-tip collapse="true" icon="false"}
-## Determinants of food insecurity among smallholder farmer households in Central America 👩🏼‍🌾
+## Determinants of food insecurity among smallholder farmer households in Central America 🌽
 
 **Abstract:** To ensure food security among rural communities under a changing climate, policymakers need information on the prevalence and determinants of food insecurity, the role of extreme weather events in exacerbating food insecurity, and the strategies that farmers use to cope with food insecurity. Using household surveys in Guatemala and Honduras, we explore the prevalence of food insecurity among smallholder farmers on both a recurrent (seasonal) and episodic (resulting from extreme weather events) basis, analyze the factors associated with both types of food insecurity, and document farmer coping strategies. Of the 439 households surveyed, 56% experienced recurrent food insecurity, 36% experienced episodic food insecurity due to extreme weather events, and 24% experienced both types. Food insecurity among smallholder farmers was correlated with sociodemographic factors (e.g., age, education, migration) and asset ownership. The factors affecting food insecurity differed between type and prevalence of food insecurity. Our results highlight the urgent need for policies and programs to help smallholder farmers improve their overall food security and resilience to extreme weather shocks. Such policies should focus on enhancing farmer education levels, securing land tenure, empowering women, promoting generational knowledge exchange, and providing emergency food support in the lean season or following extreme weather events.
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with many others (<em>Regional Environmental Change</em>, 2020) [🔗](https://doi.org/10.1007/s10113-020-01592-y)</div>
+<div style="font-size: 0.80em;">Coauthored with many others (<em>Regional Environmental Change</em>, 2020) [journal](https://doi.org/10.1007/s10113-020-01592-y)</div>
 :::
 
 
@@ -207,7 +207,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Madrigal-Ballestero, Salas, and Córdoba (<em>Waterlines</em>, 2019) [📄](https://www.researchgate.net/publication/338340783_Household_and_community_responses_to_seasonal_droughts_in_rural_areas_of_Costa_Rica) [🔗](https://doi.org/10.3362/1756-3488.18-00020)</div>
+<div style="font-size: 0.80em;">Coauthored with Madrigal-Ballestero, Salas, and Córdoba (<em>Waterlines</em>, 2019) [pdf](https://www.researchgate.net/publication/338340783_Household_and_community_responses_to_seasonal_droughts_in_rural_areas_of_Costa_Rica) [journal](https://doi.org/10.3362/1756-3488.18-00020)</div>
 :::
 
 
@@ -219,5 +219,5 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Madrigal-Ballestero, Albers, and Salas (<em>Ambio</em>, 2017) [📄](https://www.researchgate.net/profile/Roger_Madrigal-Ballestero/publication/316896515_Marine_protected_areas_in_Costa_Rica_How_do_artisanal_fishers_respond/links/5a2c89ae45851552ae7c9bdb/Marine-protected-areas-in-Costa-Rica-How-do-artisanal-fishers-respond.pdf) [🔗](https://doi.org/10.1007/s13280-017-0921-y)</div>
+<div style="font-size: 0.80em;">Coauthored with Madrigal-Ballestero, Albers, and Salas (<em>Ambio</em>, 2017) [pdf](https://www.researchgate.net/profile/Roger_Madrigal-Ballestero/publication/316896515_Marine_protected_areas_in_Costa_Rica_How_do_artisanal_fishers_respond/links/5a2c89ae45851552ae7c9bdb/Marine-protected-areas-in-Costa-Rica-How-do-artisanal-fishers-respond.pdf) [journal](https://doi.org/10.1007/s13280-017-0921-y)</div>
 :::
