@@ -35,9 +35,9 @@ website:
           target: _blank
     left:
       - href: index.qmd
-        text: research
-      - href: about.qmd
         text: about
+      - href: research.qmd
+        text: research
 
 
 format:
