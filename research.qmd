@@ -182,7 +182,7 @@ due to replicating only positive results. For claims where effect sizes could be
 | 
 [<b>pdf</b>](https://doi.org/10.31235/osf.io/wcz8s) 
 • 
-[<b>code</b>](https://github.com/tabareCapitan/CNFL)  
+[<b>code</b>](https://github.com/tabareCapitan/CNFL) 
 • 
 [<b>journal</b>](https://doi.org/10.1016/j.reseneeco.2021.101264)
 </div>
