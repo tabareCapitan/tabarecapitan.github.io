@@ -42,7 +42,10 @@ generally.
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Thunström, Van ‘t Veld, Nordström, and Shogren (submitted) [[pdf](https://doi.org/10.31235/osf.io/vy6af)] </div>
+<div style="font-size: 0.80em;">Coauthored with Thunström, Van ‘t Veld, Nordström, and Shogren (submitted) 
+| 
+[<b>pdf</b>](https://doi.org/10.31235/osf.io/vy6af) 
+</div>
 :::
 
 
@@ -99,6 +102,7 @@ of referent formation.
 
 
 
+
 ::: {.callout-important collapse="true" icon="false"}
 ## Investigating the analytical replicability of the social and behavioural sciences 🔍
 
@@ -109,6 +113,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 <div style="font-size: 0.80em;">Coauthored with many others (submitted)</div>
 :::
+
 
 
 
@@ -123,8 +128,14 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with many others (<em>Nature Human Behavior</em>, 2024) [[pdf](https://osf.io/preprints/metaarxiv/xdsjf/) [[journal]](https://doi.org/10.1038/s41562-024-01961-1)]</div> 
+<div style="font-size: 0.80em;">Coauthored with many others (<em>Nature Human Behavior</em>, 2024) 
+| 
+[<b>pdf</b>](https://osf.io/preprints/metaarxiv/xdsjf/) 
+• 
+[<b>journal</b>](https://doi.org/10.1038/s41562-024-01961-1)
+</div> 
 :::
+
 
 
 
@@ -135,8 +146,12 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with many others (<em>Royal Society Open Science</em>, 2024) [[journal](https://royalsocietypublishing.org/doi/10.1098/rsos.240682)]</div>
+<div style="font-size: 0.80em;">Coauthored with many others (<em>Royal Society Open Science</em>, 2024) 
+| 
+[<b>journal</b>](https://royalsocietypublishing.org/doi/10.1098/rsos.240682)
+</div>
 :::
+
 
 
 
@@ -147,8 +162,12 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored as part of an <em>author-consortium</em> with many others (<em>Organizational Behavior and Human Decision Processes</em>, 2023) [[journal](https://www.sciencedirect.com/science/article/pii/S0749597823000560?via%3Dihub#s0170)]</div>
+<div style="font-size: 0.80em;">Coauthored as part of an <em>author-consortium</em> with many others (<em>Organizational Behavior and Human Decision Processes</em>, 2023) 
+| 
+[<b>journal</b>](https://www.sciencedirect.com/science/article/pii/S0749597823000560?via%3Dihub#s0170)
+</div>
 :::
+
 
 
 
@@ -159,7 +178,14 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Alpízar, Madrigal-Ballestero, and Pattanayak (<em>Resource and Energy Economics</em>, 2021) [[pdf](https://doi.org/10.31235/osf.io/wcz8s)] [[code](https://github.com/tabareCapitan/CNFL)] [[journal](https://doi.org/10.1016/j.reseneeco.2021.101264)]</div>
+<div style="font-size: 0.80em;">Coauthored with Alpízar, Madrigal-Ballestero, and Pattanayak (<em>Resource and Energy Economics</em>, 2021) 
+| 
+[<b>pdf</b>](https://doi.org/10.31235/osf.io/wcz8s) 
+• 
+[<b>code</b>](https://github.com/tabareCapitan/CNFL)  
+• 
+[<b>journal</b>](https://doi.org/10.1016/j.reseneeco.2021.101264)
+</div>
 :::
 
 
@@ -171,8 +197,14 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Albers, Ashworth, Madrigal-Ballestero, and Preonas (<em>Marine Resource Economics</em>, 2021) [[pdf](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf)] [[journal](https://www.journals.uchicago.edu/doi/10.1086/715818)]</div>
+<div style="font-size: 0.80em;">Coauthored with Albers, Ashworth, Madrigal-Ballestero, and Preonas (<em>Marine Resource Economics</em>, 2021) 
+| 
+[<b>pdf</b>](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf) 
+• 
+[<b>journal</b>](https://www.journals.uchicago.edu/doi/10.1086/715818)
+</div>
 :::
+
 
 
 
@@ -183,8 +215,12 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Albers, Preonas, Robinson, and Madrigal-Ballestero (<em>Environmental and Resource Economics</em>, 2020) [[journal](https://doi.org/10.1007/s10640-020-00472-7)]</div>
+<div style="font-size: 0.80em;">Coauthored with Albers, Preonas, Robinson, and Madrigal-Ballestero (<em>Environmental and Resource Economics</em>, 2020) 
+| 
+[<b>journal</b>](https://doi.org/10.1007/s10640-020-00472-7)
+</div>
 :::
+
 
 
 
@@ -195,7 +231,10 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with many others (<em>Regional Environmental Change</em>, 2020) [[journal](https://doi.org/10.1007/s10113-020-01592-y)]</div>
+<div style="font-size: 0.80em;">Coauthored with many others (<em>Regional Environmental Change</em>, 2020) 
+| 
+[<b>journal</b>](https://doi.org/10.1007/s10113-020-01592-y)
+</div>
 :::
 
 
@@ -207,8 +246,14 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Madrigal-Ballestero, Salas, and Córdoba (<em>Waterlines</em>, 2019) [[pdf](https://www.researchgate.net/publication/338340783_Household_and_community_responses_to_seasonal_droughts_in_rural_areas_of_Costa_Rica)] [[journal](https://doi.org/10.3362/1756-3488.18-00020)]</div>
+<div style="font-size: 0.80em;">Coauthored with Madrigal-Ballestero, Salas, and Córdoba (<em>Waterlines</em>, 2019) 
+| 
+[<b>pdf</b>](https://www.researchgate.net/publication/338340783_Household_and_community_responses_to_seasonal_droughts_in_rural_areas_of_Costa_Rica) 
+• 
+[<b>journal</b>](https://doi.org/10.3362/1756-3488.18-00020)
+</div>
 :::
+
 
 
 
@@ -219,5 +264,10 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Madrigal-Ballestero, Albers, and Salas (<em>Ambio</em>, 2017) [[pdf](https://www.researchgate.net/profile/Roger_Madrigal-Ballestero/publication/316896515_Marine_protected_areas_in_Costa_Rica_How_do_artisanal_fishers_respond/links/5a2c89ae45851552ae7c9bdb/Marine-protected-areas-in-Costa-Rica-How-do-artisanal-fishers-respond.pdf)] [[journal]](https://doi.org/10.1007/s13280-017-0921-y)</div>
+<div style="font-size: 0.80em;">Coauthored with Madrigal-Ballestero, Albers, and Salas (<em>Ambio</em>, 2017) 
+| 
+[<b>pdf</b>](https://www.researchgate.net/profile/Roger_Madrigal-Ballestero/publication/316896515_Marine_protected_areas_in_Costa_Rica_How_do_artisanal_fishers_respond/links/5a2c89ae45851552ae7c9bdb/Marine-protected-areas-in-Costa-Rica-How-do-artisanal-fishers-respond.pdf)
+• 
+[<b>journal</b>](https://doi.org/10.1007/s13280-017-0921-y)
+</div>
 :::
