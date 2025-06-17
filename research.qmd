@@ -9,6 +9,60 @@ format:
 ## working papers
 
 
+::: {.callout-important collapse="true" icon="false"}
+## Investigating the analytical robustness of the social and behavioural sciences 🔍
+
+
+**Abstract:** The same dataset can be analysed in different justifiable ways to answer the same research question, potentially challenging the robustness of empirical science. In this crowd initiative, we investigated the degree to which research findings in the social and behavioural sciences are contingent on analysts’ choices. To explore this question, we took a sample of 100 studies published between 2009 and 2018 in criminology, demography, economics and finance, management, marketing and organisational behaviour, political science, psychology, and sociology. For one claim of each study, at least five re-analysts were invited to independently re-analyze the original data. The statistical appropriateness of the re-analyses was assessed in peer evaluations and the robustness indicators were inspected along a range of research characteristics and study designs. Only 31% of the independent re-analyses yielded the same result (within a tolerance region of +/- 0.05 Cohen’s d) as the original report. Even with a four times broader tolerance region, this indicator did not go above 56%. Regarding the conclusions drawn, only 34% of the studies remained analytically robust, meaning that all re-analysts reported evidence for the originally reported claim. Using a more liberal definition of robustness produced comparable result (39% when >80% re-analysis agreement with the original conclusion defined analytical robustness). This explorative study suggests that the common single-path analyses in social and behavioural research cannot be assumed to be robust to alternative — similarly justifiable — analyses. Therefore, we recommend the development and use of practices to explore and communicate this neglected source of uncertainty.
+
+---
+
+<div style="font-size: 0.80em;">Coauthored with many others (revision requested, <em>Nature</em>)</div>
+:::
+
+
+
+::: {.callout-important collapse="true" icon="false"}
+## Investigating the analytical reproducibility of the social and behavioural sciences 🔍
+
+
+**Abstract:** Published claims should be reproducible, yielding the same result when applying the same analysis to the same data. In a stratified random sample of 600 papers published from 2009 to 2018 in 62 journals spanning the social and behavioral sciences, authors of 146 (24.3% [95% CI 21.1 - 27.9%]) papers made data available to assess reproducibility. We assessed whether originally reported claims could be reproduced using the same data and analysis for papers in which authors made data available or we obtained source data to reconstruct the dataset. 76.2 (52.6% [95% CI 45.2 - 59.9%]) papers were rated as precisely reproducible and 104.4 (72.1% [95% CI 65.1 - 78.8%]) papers as at least approximately reproducible (within 15% of the original effects or within .05 of original p-values) after weighting 553 claims from 144.9 papers. We observed higher reproducibility for papers from Political Science and Economics than other disciplines, and for more recent than older papers.
+
+---
+
+<div style="font-size: 0.80em;">Coauthored with many others (revision requested, <em>Nature</em>)</div>
+:::
+
+
+
+::: {.callout-important collapse="true" icon="false"}
+## Investigating the analytical replicability of the social and behavioural sciences 🔍
+
+**Abstract:** We attempted replications of 274 claims of positive results from 164 papers published from 2009 to 2018 in 54 journals in the social and behavioral sciences. Replications were high-powered on average to detect the original effect size (Median = 99.1%), used original materials when relevant and available, and were peer-reviewed in advance through a standardized internal protocol. Replications showed statistically significant results in the same pattern as the original study for 151 of 274 claims (55.1% [95% CI 49.2 - 60.9%]) and for 80.8 of 164 papers (49.3% [95% CI 43.8 - 54.7%]) weighed for replicating multiple claims per paper. Some decline is expected based on power to detect original effects and regression to the mean
+due to replicating only positive results. For claims where effect sizes could be converted to Pearson’s r, the median effect size was 0.23 [95% CI 0.21 - 0.28] for original studies and 0.11 [95% CI 0.08 - 0.13] for replication studies, a 53.4% [95% CI 42.3 - 65.2%] reduction in correlation and a 78.3% [95% CI 66.7 - 87.8%] reduction in shared variance. Thirteen methods for evaluating replication success provided estimates ranging from 31.1% to 77.1% (median = 49.9%), though most methods could only be applied to a subset of the replicated papers (median = 89.3%; range 63.3% to 100.0%). The conditions that promote or inhibit replicability are worthy of additional investigation.
+
+---
+
+<div style="font-size: 0.80em;">Coauthored with many others (submitted)</div>
+:::
+
+
+
+::: {.callout-important collapse="true" icon="false"}
+## Show me the labels: Using pre-nudges to reduce calorie information avoidance 🙈
+
+**Abstract:** Calorie labeling is a popular policy to address the obesity epidemic, but it has had little empirical success. Under the premise that willful avoidance of information plays a role in this result, we propose a novel approach—pre-nudges—to make consumers more receptive to calorie information. Unlike nudges, which are used to directly influence a choice, pre-nudges are used to directly influence how consumers react to the nudge itself (the calorie label). In line with predictions from our theoretical analysis, we test two pre-nudges in the context of menu labeling: one aims to increase self-efficacy, and the other one highlights the long-term health risks of overeating. In a large-scale laboratory experiment, we find that both pre-nudges reduce calorie information avoidance. Overall, our paper suggests a possible role for pre-nudges in addressing the obesity epidemic—one of the largest public health issues globally—and illustrates the potential usefulness of pre-nudges more
+generally.
+
+---
+
+<div style="font-size: 0.80em;">Coauthored with Thunström, Van ‘t Veld, Nordström, and Shogren (revision requested, <em>Journal of Risk and Uncertainty</em>) 
+| 
+[<b>pdf</b>](https://doi.org/10.31235/osf.io/vy6af) 
+</div>
+:::
+
+
 
 ::: {.callout-important collapse="true" icon="false"}
 ## Bugs with benefits: The economics of edible insects 🦗
@@ -34,21 +88,6 @@ format:
 
 
 
-::: {.callout-important collapse="true" icon="false"}
-## Show me the labels: Using pre-nudges to reduce calorie information avoidance 🙈
-
-**Abstract:** Calorie labeling is a popular policy to address the obesity epidemic, but it has had little empirical success. Under the premise that willful avoidance of information plays a role in this result, we propose a novel approach—pre-nudges—to make consumers more receptive to calorie information. Unlike nudges, which are used to directly influence a choice, pre-nudges are used to directly influence how consumers react to the nudge itself (the calorie label). In line with predictions from our theoretical analysis, we test two pre-nudges in the context of menu labeling: one aims to increase self-efficacy, and the other one highlights the long-term health risks of overeating. In a large-scale laboratory experiment, we find that both pre-nudges reduce calorie information avoidance. Overall, our paper suggests a possible role for pre-nudges in addressing the obesity epidemic—one of the largest public health issues globally—and illustrates the potential usefulness of pre-nudges more
-generally.
-
----
-
-<div style="font-size: 0.80em;">Coauthored with Thunström, Van ‘t Veld, Nordström, and Shogren (submitted) 
-| 
-[<b>pdf</b>](https://doi.org/10.31235/osf.io/vy6af) 
-</div>
-:::
-
-
 
 ::: {.callout-important collapse="true" icon="false"}
 ## Expecting to get it: An endowment effect for information 🙈
@@ -71,49 +110,6 @@ of referent formation.
 
 <div style="font-size: 0.80em;">Coauthored with Méndez</div>
 :::
-
-
-
-
-::: {.callout-important collapse="true" icon="false"}
-## Investigating the analytical robustness of the social and behavioural sciences 🔍
-
-
-**Abstract:** The same dataset can be analysed in different justifiable ways to answer the same research question, potentially challenging the robustness of empirical science. In this crowd initiative, we investigated the degree to which research findings in the social and behavioural sciences are contingent on analysts’ choices. To explore this question, we took a sample of 100 studies published between 2009 and 2018 in criminology, demography, economics and finance, management, marketing and organisational behaviour, political science, psychology, and sociology. For one claim of each study, at least five re-analysts were invited to independently re-analyze the original data. The statistical appropriateness of the re-analyses was assessed in peer evaluations and the robustness indicators were inspected along a range of research characteristics and study designs. Only 31% of the independent re-analyses yielded the same result (within a tolerance region of +/- 0.05 Cohen’s d) as the original report. Even with a four times broader tolerance region, this indicator did not go above 56%. Regarding the conclusions drawn, only 34% of the studies remained analytically robust, meaning that all re-analysts reported evidence for the originally reported claim. Using a more liberal definition of robustness produced comparable result (39% when >80% re-analysis agreement with the original conclusion defined analytical robustness). This explorative study suggests that the common single-path analyses in social and behavioural research cannot be assumed to be robust to alternative — similarly justifiable — analyses. Therefore, we recommend the development and use of practices to explore and communicate this neglected source of uncertainty.
-
----
-
-<div style="font-size: 0.80em;">Coauthored with many others (revision requested, <em>Nature</em>)</div>
-:::
-
-
-
-
-::: {.callout-important collapse="true" icon="false"}
-## Investigating the analytical reproducibility of the social and behavioural sciences 🔍
-
-
-**Abstract:** Published claims should be reproducible, yielding the same result when applying the same analysis to the same data. In a stratified random sample of 600 papers published from 2009 to 2018 in 62 journals spanning the social and behavioral sciences, authors of 146 (24.3% [95% CI 21.1 - 27.9%]) papers made data available to assess reproducibility. We assessed whether originally reported claims could be reproduced using the same data and analysis for papers in which authors made data available or we obtained source data to reconstruct the dataset. 76.2 (52.6% [95% CI 45.2 - 59.9%]) papers were rated as precisely reproducible and 104.4 (72.1% [95% CI 65.1 - 78.8%]) papers as at least approximately reproducible (within 15% of the original effects or within .05 of original p-values) after weighting 553 claims from 144.9 papers. We observed higher reproducibility for papers from Political Science and Economics than other disciplines, and for more recent than older papers.
-
----
-
-<div style="font-size: 0.80em;">Coauthored with many others (revision requested, <em>Nature</em>)</div>
-:::
-
-
-
-
-::: {.callout-important collapse="true" icon="false"}
-## Investigating the analytical replicability of the social and behavioural sciences 🔍
-
-**Abstract:** We attempted replications of 274 claims of positive results from 164 papers published from 2009 to 2018 in 54 journals in the social and behavioral sciences. Replications were high-powered on average to detect the original effect size (Median = 99.1%), used original materials when relevant and available, and were peer-reviewed in advance through a standardized internal protocol. Replications showed statistically significant results in the same pattern as the original study for 151 of 274 claims (55.1% [95% CI 49.2 - 60.9%]) and for 80.8 of 164 papers (49.3% [95% CI 43.8 - 54.7%]) weighed for replicating multiple claims per paper. Some decline is expected based on power to detect original effects and regression to the mean
-due to replicating only positive results. For claims where effect sizes could be converted to Pearson’s r, the median effect size was 0.23 [95% CI 0.21 - 0.28] for original studies and 0.11 [95% CI 0.08 - 0.13] for replication studies, a 53.4% [95% CI 42.3 - 65.2%] reduction in correlation and a 78.3% [95% CI 66.7 - 87.8%] reduction in shared variance. Thirteen methods for evaluating replication success provided estimates ranging from 31.1% to 77.1% (median = 49.9%), though most methods could only be applied to a subset of the replicated papers (median = 89.3%; range 63.3% to 100.0%). The conditions that promote or inhibit replicability are worthy of additional investigation.
-
----
-
-<div style="font-size: 0.80em;">Coauthored with many others (submitted)</div>
-:::
-
 
 
 
