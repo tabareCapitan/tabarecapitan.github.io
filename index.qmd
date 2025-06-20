@@ -22,7 +22,7 @@ about:
       target: _blank
     - icon: github
       href: https://github.com/tabareCapitan
-      text: gitHub
+      text: GitHub
       aria-label: GitHub
       target: _blank
 ---
