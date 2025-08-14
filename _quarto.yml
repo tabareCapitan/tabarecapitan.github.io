@@ -36,8 +36,10 @@ website:
     left:
       - href: index.qmd
         text: about
-      - href: research.qmd
-        text: research
+      - href: papers.qmd
+        text: papers
+      - href: tools.qmd
+        text: tools
 
 
 format:

@@ -43,7 +43,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with many others (submitted)</div>
+<div style="font-size: 0.80em;">Coauthored with many others (resubmitted, <em>Nature</em>)</div>
 :::
 
 
