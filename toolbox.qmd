@@ -10,7 +10,7 @@ format:
 
 I find it useful to see what tools and software people use, so here is mine.
 
-In general, I prefer tools that are cross-platform, simple, and not tied to a single ecosystem. I like formats such as plain text and Markdown that keep my data independent of any specific program. When it makes sense, I use open-source software like Linux. Other times I use proprietary tools like Gmail or Workflowy because they fit my needs better.
+In general, I prefer tools that are cross-platform, simple, and not tied to a single ecosystem. When it makes sense, I use open-source software like Linux. Other times I use proprietary tools like Gmail or Workflowy because they fit my needs better.
 
 If a tool needs funding to sustain development or to cover variable costs, I prefer to pay for it directly. That feels more transparent than relying on indirect models, though in practice I use a mix of free and paid tools depending on the case.
 
