@@ -1,8 +1,0 @@
----
-format:
-  html:
-    toc: true
-    toc-location: right
----
-
-toc

@@ -38,8 +38,8 @@ website:
         text: about
       - href: papers.qmd
         text: papers
-      - href: tools.qmd
-        text: tools
+      - href: toolbox.qmd
+        text: toolbox
 
 
 format:
