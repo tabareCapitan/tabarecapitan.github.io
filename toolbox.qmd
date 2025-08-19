@@ -74,4 +74,13 @@ Nextcloud is open-source, so it can run on a self-hosted server or on any third-
 
 # Website
 
-This site is built with [Quarto](https://quarto.org/), rendered locally, and deployed via [GitHub Pages](https://pages.github.com/). Quarto handles the formatting and publishing workflow in Markdown and integrates directly with VS Code, which makes editing and updating simple.
+This site is built with [Quarto](https://quarto.org/), rendered locally, and deployed via [GitHub Pages](https://pages.github.com/). Quarto handles the formatting and publishing workflow in Markdown and integrates directly with VS Code, which makes editing and updating simple. Once the site is built, I push the changes to GitHub, and it automatically updates the live site.
+
+
+---
+
+<div style="text-align:center; margin-top:3rem;">
+  <small style="font-size:0.6rem; opacity:0.6; text-decoration:none;">
+    <a href="/disclaimer.html" style="text-decoration:none; color:inherit;">Disclaimer</a>
+  </small>
+</div>

@@ -1,0 +1,23 @@
+---
+page-layout: article
+robots: "noindex, nofollow"
+toc: false
+---
+
+# Disclaimer
+
+**Informational use only.** The content on this website is for general information. It is not professional advice (legal, medical, financial, or otherwise).
+
+**No guarantees.** I try to keep content accurate and current, but I make no warranties of completeness, reliability, or fitness for any purpose. Use at your own risk.
+
+**Personal views.** Views expressed are my own and do not represent those of employers, institutions, or collaborators.
+
+**External links.** Links to other sites are provided for convenience. I do not control or endorse their content and am not responsible for any losses arising from their use.
+
+**No endorsement.** Mention of products, tools, or services does not constitute endorsement or sponsorship.
+
+**Copyright & fair use.** Unless stated otherwise, content is © the author. You may quote short excerpts with attribution and a link back.
+
+**Contact.** If you spot an error or have concerns, contact me.
+
+**Updates.** This disclaimer may change without notice; continued use of the site implies acceptance of the current version.

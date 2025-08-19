@@ -30,7 +30,3 @@ about:
 Data scientist and researcher, PhD in Economics
 
 Causal inference | Econometrics & ML
-
-
-
-
