@@ -60,6 +60,8 @@ I use [Workflowy](https://workflowy.com/) for text that is meant to disappear: s
 
 My main OS is [Fedora](https://fedoraproject.org/) (Linux), which provides modern kernels and software alongside a clean upstream GNOME experience. Although somewhat sponsored by IBM through its Red Hat ties, development remains [credibly independent](https://en.wikipedia.org/wiki/Fedora_Project). [Ubuntu](https://ubuntu.com/) is convenient and user-friendly, though I prefer Fedora’s approach over Canonical’s Snap ecosystem. [Linux Mint](https://www.linuxmint.com/) attempts to "clean" Ubuntu but still relies on Canonical dependencies. I have no concerns about [Debian](https://www.debian.org/), but it may be too conservative for my needs.
 
+I've made few changes to Fedora's default setup. Perhaps most useful, I made my shell (bash) a bit faster to use by adding [zoxide](https://crates.io/crates/zoxide) for directory navigation. 
+
 I also keep [Windows](https://www.microsoft.com/en-gb/windows/) (dual-boot with GRUB) for a few applications that lack Linux support, such as [Garmin Express](https://www.garmin.com/sv-SE/software/express/windows/) and [BankID](https://www.bankid.com/en/). 
 
 
