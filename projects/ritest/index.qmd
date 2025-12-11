@@ -1,0 +1,18 @@
+---
+title: "ritest"
+date: 2025-09-25
+description: "Randomization-inference toolkit and benchmarks."
+categories: [python, software, stats]
+---
+
+# fasfasf
+
+sfdsufsdf
+
+## fdsfsd
+
+fdsf
+
+#sdfsdf
+
+fdsfsdf

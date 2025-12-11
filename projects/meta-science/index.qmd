@@ -1,0 +1,7 @@
+---
+title: "meta science"
+date: 2025-09-25
+description: "meta science stuff."
+categories: [research]
+---
+Landing content…

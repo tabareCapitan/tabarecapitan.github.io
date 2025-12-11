@@ -14,15 +14,17 @@ website:
     tracking-id: "G-5XPBJKXZNK"
     anonymize-ip: true
     storage: none
+  back-to-top-navigation: true
+  reader-mode: false
   navbar:
     search: true
-    right:     
+    right:
         - icon: linkedin
           href: https://www.linkedin.com/in/tabareCapitan
           aria-label: LinkedIn
           target: _blank
         - icon: substack
-          href: https://www.tabarecapitan.com        
+          href: https://www.tabarecapitan.com
           aria-label: Substack
           target: _blank
         - icon: reception-4
@@ -36,14 +38,29 @@ website:
     left:
       - href: index.qmd
         text: about
+      - href: projects/index.qmd
+        text: projects
       - href: papers.qmd
         text: papers
       - href: toolbox.qmd
         text: toolbox
-
+  sidebar:
+    - id: "proj-ritest"
+      title: "ritest"
+      style: docked
+      collapse-level: 2
+      contents: projects/ritest/
+      tools:
+        - icon: github
+          menu:
+            - text: Source Code
+              href:  https://tabarecapitan.com
+            - text: Report a Bug
+              href:  https://tabarecapitan.com
 
 format:
   html:
     theme: minty
     css: styles.css
     toc: true
+    toc-location: right
