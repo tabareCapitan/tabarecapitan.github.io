@@ -1,18 +1,35 @@
 ---
 title: "ritest"
-date: 2025-09-25
-description: "Randomization-inference toolkit and benchmarks."
-categories: [python, software, stats]
+description: "Randomization inference in Python."
+categories: [python, stats, OSS]
 ---
 
-# fasfasf
+[![PyPI version](https://img.shields.io/pypi/v/ritest-python.svg)](https://pypi.org/project/ritest-python/)
+[![Python versions](https://img.shields.io/pypi/pyversions/ritest-python.svg)](https://pypi.org/project/ritest-python/)
+[![CI](https://github.com/tabareCapitan/ritest/actions/workflows/ci.yml/badge.svg)](https://github.com/tabareCapitan/ritest/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-sfdsufsdf
+---
 
-## fdsfsd
+`ritest` provides fast randomization inference (RI) tools for linear models and arbitrary statistics. It supports weights (WLS) as well as stratified and clustered designs.
 
-fdsf
+## Features
 
-#sdfsdf
+* Linear-model RI with efficient computation.
+* Generic RI for arbitrary scalar statistics via `stat_fn`.
+* Stratified, clustered, and stratified-clustered designs.
+* Weighted least squares (WLS) support.
+* Deterministic seeding, reproducible permutations.
+* Configurable $p$-value and ultra-fast coefficient bounds and bands.
 
-fdsfsdf
+## Citation
+
+```
+Tabaré Capitán (2025). ritest: Randomization inference in Python.
+https://github.com/tabareCapitan/ritest
+```
+
+
+## Disclaimer
+
+Use this software at your own risk. I make no guarantees of correctness or fitness for any purpose. I use it in my own work, but you should review the code to ensure it meets your needs. If you find an issue, please report it.

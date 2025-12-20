@@ -1,0 +1,271 @@
+---
+title: "Linear vs generic"
+---
+
+---
+
+From the [Colombian example](colombia.qmd) we see that `ritest` in Python works and it is reasonably fast. That is a valid benchmark for linear models with multiple fixed effects. In this section I benchmark simple OLS vs Stata and R's implementation of randomation inference.
+
+## Data
+
+The simulated dataset represents a clean, randomized experiment with $N=10{,}000$ observations, designed to resemble realistic applied data. Treatment is randomly assigned with equal probability (50/50), with no clustering and no stratification. The dataset includes 20 covariates covering demographics, behavior, engagement, and region indicators. These covariates are generated from a small number of latent factors, inducing realistic correlations while remaining fully observed and free of missing values.
+
+The outcome is continuous and driven by covariates plus a very small heterogeneous treatment effect. The individual treatment effect is
+
+$$\tau_i = 0.02 + 0.0075 \cdot h_i$$
+	​
+where $h_i$ is a standardized index based on baseline spending and satisfaction, so the true average treatment effect is approximately 0.02. Outcome noise is Gaussian with standard deviation $5$, chosen so that at $N = 10{,}000$ the problem is nontrivial but stable, with an expected standard error for the treatment coefficient of about $0.05$. This implies considerable design-based variability, so point estimates and $p$-values can differ noticeably across realizations and across implementations. In addition, randomization inference relies on a finite number of permutations, which introduces a small amount of Monte Carlo error. On average, however, inference is expected to provide little evidence against the null hypothesis of no treatment effect.
+
+## Stata
+
+::: {.panel-tabset}
+
+### Code
+Set a local macro with all covariates except the permute variable `treat`:
+
+```stata
+local xvars ///
+    age female education_years log_income household_size urban      ///
+    tenure_months baseline_spend purchases_12m returns_12m          ///
+    support_tickets_6m app_sessions_30d days_since_last_purchase    ///
+    email_opt_in promo_exposure_30d prior_churn credit_score        ///
+    satisfaction_score region_1 region_2 region_3 region_4
+```
+
+Run ritest:
+
+```stata
+ritest treat _b[treat], reps(2000) seed(23) nodots: reg y treat `xvars'
+```
+
+### Results
+
+```
+. ritest treat _b[treat], reps(2000) seed(23) nodots: reg y treat `xvars'
+
+      Source |       SS           df       MS      Number of obs   =    10,000
+-------------+----------------------------------   F(23, 9976)     =    701.81
+       Model |  389011.799        23  16913.5565   Prob > F        =    0.0000
+    Residual |  240422.079     9,976   24.100048   R-squared       =    0.6180
+-------------+----------------------------------   Adj R-squared   =    0.6172
+       Total |  629433.877     9,999  62.9496827   Root MSE        =    4.9092
+
+------------------------------------------------------------------------------
+           y | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+       treat |   .0819918   .0983118     0.83   0.404    -.1107191    .2747028
+       ... (clipped for brevity)
+------------------------------------------------------------------------------
+
+      Command: regress y treat age female education_years log_income
+                   household_size urban tenure_months baseline_spend
+                   purchases_12m returns_12m support_tickets_6m
+                   app_sessions_30d days_since_last_purchase email_opt_in
+                   promo_exposure_30d prior_churn credit_score
+                   satisfaction_score region_1 region_2 region_3 region_4
+        _pm_1: _b[treat]
+  res. var(s):  treat
+   Resampling:  Permuting treat
+Clust. var(s):  __000001
+     Clusters:  10000
+Strata var(s):  none
+       Strata:  1
+
+------------------------------------------------------------------------------
+T            |     T(obs)       c       n   p=c/n   SE(p) [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _pm_1 |   .0819918     786    2000  0.3930  0.0109  .3715147   .4147996
+------------------------------------------------------------------------------
+Note: Confidence interval is with respect to p=c/n.
+Note: c = #{|T| >= |T(obs)|}
+```
+
+
+### Runtime
+
+183 s or about 3 minutes.
+
+:::
+
+
+## R
+
+::: {.panel-tabset}
+
+### Code
+
+Estimate a linear model, save in `est`:
+
+```r
+fml <- y ~ treat +
+  age + female + education_years + log_income + household_size + urban + tenure_months +
+  baseline_spend + purchases_12m + returns_12m + support_tickets_6m + app_sessions_30d +
+  days_since_last_purchase + email_opt_in + promo_exposure_30d + prior_churn + credit_score +
+  satisfaction_score + region_1 + region_2 + region_3 + region_4
+
+est <- lm(fml, data = df)
+```
+
+Run `ritest`, save results in `ri`:
+
+```r
+ri <- ritest(est, "treat", reps = 2000, seed = 23L)
+```
+
+Print results.
+
+```r
+print(ri)
+```
+### Results
+
+```
+OLS (lm) fit:
+
+Call:
+lm(formula = fml, data = df)
+
+Residuals:
+     Min       1Q   Median       3Q      Max
+-19.0734  -3.3147   0.0069   3.3346  19.3317
+
+Coefficients:
+                           Estimate Std. Error t value Pr(>|t|)
+(Intercept)              -2.008e+01  1.414e+00 -14.205  < 2e-16 ***
+treat                     8.199e-02  9.831e-02   0.834 0.404302
+... (clipped for brevity)
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 4.909 on 9976 degrees of freedom
+Multiple R-squared:  0.618,	Adjusted R-squared:  0.6172
+F-statistic: 701.8 on 23 and 9976 DF,  p-value: < 2.2e-16
+
+
+RI result:
+
+          Call: lm(formula = fml, data = df)
+   Res. var(s): treat
+            H0: treat=0
+     Num. reps: 2000
+────────────────────────────────────────────────────────────────────────────────
+  T(obs)         c         n     p=c/n     SE(p)   CI 2.5%  CI 97.5%
+ 0.08199       839      2000    0.4195   0.01815    0.3896    0.4494
+────────────────────────────────────────────────────────────────────────────────
+Note: Confidence interval is with respect to p=c/n.
+Note: c = #{|T| >= |T(obs)|}
+```
+
+### Runtime
+
+11.24 seconds.
+
+:::
+
+
+## Python
+
+::: {.panel-tabset}
+
+### Code
+
+Set up the model:
+
+```python
+PERMUTE_VAR = "treat"
+STAT = "treat"
+
+COVARS = [
+    "age",
+    "female",
+    "education_years",
+    "log_income",
+    "household_size",
+    "urban",
+    "tenure_months",
+    "baseline_spend",
+    "purchases_12m",
+    "returns_12m",
+    "support_tickets_6m",
+    "app_sessions_30d",
+    "days_since_last_purchase",
+    "email_opt_in",
+    "promo_exposure_30d",
+    "prior_churn",
+    "credit_score",
+    "satisfaction_score",
+    "region_1",
+    "region_2",
+    "region_3",
+    "region_4",
+]
+
+FORMULA = "y ~ treat + " + " + ".join(COVARS)
+```
+
+Run `ritest`:
+
+```python
+res = ritest(
+       df=df,
+       permute_var=PERMUTE_VAR,
+       formula=FORMULA,
+       stat=STAT,
+       reps=reps,
+       seed=seed,
+    )
+```
+
+Print results:
+
+```python
+print(summary)
+```
+
+### Results
+
+```
+Randomization Inference Result
+===============================
+
+Coefficient
+-----------
+Observed effect (β̂):   0.0820
+Coefficient CI bounds: [-0.1133, 0.2778]
+Coefficient CI band:   not computed
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.3990 (39.9%)
+P-value CI @ α=0.050: [0.3775, 0.4208]
+As-or-more extreme:     798 / 2000
+
+Test configuration
+------------------
+Stratified:             no
+Clustered:              no
+Weights:                no
+
+Settings
+--------
+alpha:                  0.050
+seed:                   23
+ci_method:              cp
+ci_mode:                bounds
+n_jobs:                 4
+```
+
+
+### Runtime
+
+3.274 seconds.
+
+:::
+
+
+##   Discussion
+
+The result of the randomization inference aligns across the three different implementation. In terms of performance, the Python implementation is fastest (3.274 s), followed by the R implementation (11.24 s), and the Stata implementation (183 s). Compared to the [Colombian example](colombia.qmd), in which the R implementation was faster due to its explicit integration of `fixest` to handle estimation with multiple fixed effects, the implementation in Python is now faster due to its fast engine specialized in OLS.
+
+

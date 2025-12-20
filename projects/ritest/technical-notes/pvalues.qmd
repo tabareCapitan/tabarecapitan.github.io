@@ -1,0 +1,153 @@
+---
+title: "$p$-values"
+---
+
+---
+
+A randomization $p$-value answers a concrete question: if the same assignment mechanism were re-run, how often would the chosen statistic look at least as extreme as the observed one? In `ritest`, that question is implemented by repeatedly re-assigning the treatment vector (subject to the same constraints) and recomputing the statistic, producing a **randomization distribution** that is specific to the realized design and the chosen statistic.
+
+## Definition
+
+Let $T(\cdot)$ denote the test statistic (a scalar). Let $T_{\text{obs}}$ be the statistic computed on the observed data, and let ${T_r}_{r=1}^R$ be the statistics computed under $R$ re-randomizations of the assignment.
+
+`ritest` defines the Monte Carlo randomization $p$-value as
+$$
+\hat p \;=\; \frac{1}{R}\sum_{r=1}^{R}
+\mathbf{1}\!\left\{T_r \text{ is at least as extreme as } T_{\mathrm{obs}}\right\},
+$$
+with the extremeness rule determined by `alternative`:
+
+- `two-sided`:
+    $$
+    \mathbf{1}\!\left\{ |T_r| \ge |T_{\mathrm{obs}}| \right\}
+    $$
+
+- `right`:
+    $$
+    \mathbf{1}\!\left\{ T_r \ge T_{\mathrm{obs}} \right\}
+    $$
+
+- `left`:
+    $$
+\mathbf{1}\!\left\{ T_r \le T_{\mathrm{obs}} \right\}
+    $$
+
+
+This becomes a Fisher-exact randomization $p$-value only in the special case where the set ${T_r}$ is computed over the full set of admissible assignments under the design. In typical use, $R$ is a Monte Carlo sample, and $\hat p$ is an estimate of the underlying design-based $p$-value.
+
+## Assignment re-randomization
+
+`ritest` generates each re-randomized assignment by permuting the observed assignment vector (the `permute_var` column), with the permutation scheme determined by optional `strata` and `cluster` arguments:
+
+- **Plain**: a global permutation of the assignment vector.
+
+- **Stratified** (`strata` only): independent permutations within each stratum; treated/control counts are preserved within each stratum.
+
+- **Cluster** (`cluster` only): permutation at the cluster level and broadcast to units; this requires the observed assignment to be constant within each cluster.
+
+- **Cluster within strata** (`cluster` and `strata`): cluster-level permutation performed separately within each stratum, then broadcast within the stratum.
+
+
+`ritest` can either:
+
+- accept a user-supplied permutation matrix `perms` (shape $(R,N)$), in which case `reps` is taken as `perms.shape[0]`, or
+
+- generate permutations internally, either as a full in-memory matrix or as streamed blocks when memory may be an issue (chunking does not change the generated sequence given a fixed seed).
+
+
+## Linear path
+
+When `stat_fn` is not supplied, `ritest` uses the **treatment coefficient** from a linear model as the statistic. Concretely, the statistic is the coefficient on the treatment column in a (optionally weighted) least squares regression of $y$ on the design matrix $X$ (which includes the treatment column and any additional covariates specified by `formula`).
+
+###  The coefficient as a linear functional of the outcome
+
+Let $X\in\mathbb{R}^{N\times k}$ be the design matrix and $y\in\mathbb{R}^N$ the outcome. If analytic weights are supplied, define the diagonal weight matrix $\Omega=\mathrm{diag}(w)$ and the weighted variables
+$$
+X_w = \Omega^{1/2}X,\qquad y_w = \Omega^{1/2}y,
+$$
+and otherwise $X_w=X$ and $y_w=y$.
+
+Let $j$ index the treatment column inside $X$ (this is `treat_idx` in the implementation), and let $e_j\in\mathbb{R}^k$ be the coordinate vector with a 1 in position $j$. The weighted least squares coefficient on the treatment column is
+$$
+\hat\beta
+= e_j^\top (X_w^\top X_w)^{-1}X_w^\top y_w.
+$$
+
+Define the **$c$-vector**
+$$
+c^\top \equiv e_j^\top (X_w^\top X_w)^{-1}X_w^\top,
+$$
+so that
+$$
+\hat\beta = c^\top y_w.
+$$
+
+`FastOLS` computes $(X_w^\top X_w)^{-1}$ via a [Cholesky factorization](https://en.wikipedia.org/wiki/Cholesky_decomposition) of $X_w^\top X_w$ (which requires $N>k$ and a well-conditioned design). It then constructs:
+
+- `c_vector` as the $c$ defined above (in the weighted metric),
+
+- `beta_hat` as $\hat\beta=c^\top y_w$,
+
+- `c_perm_vector`, which equals $c$ in OLS and $c\odot \sqrt{w}$ in WLS, so permutation computations can consistently use unweighted-length-$N$ vectors.
+
+
+###  Observed robust standard error
+
+For the observed statistic only, `FastOLS` optionally computes a robust variance estimate:
+
+- HC1 (“White”) when `cluster` is not supplied.
+
+- CRV1 when `cluster` is supplied (requires at least 2 unique clusters).
+
+
+This yields an observed robust standard error `se`, used later for sizing coefficient-CI grids. During permutation evaluation, `ritest` sets `compute_vcov=False` to avoid the covariance computation.
+
+### How permutations enter the linear path in `ritest`
+
+In the linear path, each permutation replaces the treatment column of the design matrix:
+
+- Let $X_{\text{obs}}$ denote the observed design matrix.
+
+- For permutation $r$, `ritest` constructs $X_r$ by copying $X_{\text{obs}}$ and replacing column $j$ with the permuted assignment vector.
+
+
+`ritest` then fits `FastOLS(y, X_r, treat_idx, ..., compute_vcov=False)` and records:
+
+- $T_r = \hat\beta_r$ as the permutation statistic.
+
+
+In addition, `FastOLS` exposes a scalar
+$$
+K \equiv c^\top T_{\text{metric}},
+$$
+where $T_{\text{metric}}$ is the treatment column in the same metric used to construct $c$. `ritest` records:
+
+- $K_{\text{obs}}$ from the observed fit,
+
+- $K_r$ from each permuted fit, computed as $K_r = c_r^\top T_{\text{obs, metric}}$ (the observed treatment column in the same metric).
+
+
+These $K$ quantities are not needed for the $p$-value itself; they are the foundation for the fast confidence bands.
+
+
+## Generic path
+
+When `stat_fn` is supplied, the statistic is treated as a black box:
+
+$$
+T_{\text{obs}} = \texttt{stat\_fn}(\texttt{df}).
+$$
+
+For each permutation $r$:
+
+1. `ritest` creates a shallow copy of the original dataframe. This makes the generic path slow regardless of the complexity of `stat_fn`.
+
+2. It replaces the `permute_var` column with the permuted assignment vector.
+
+3. It evaluates the statistic:
+    $$
+    T_r = \texttt{stat\_fn}(\texttt{df}_r).
+    $$
+
+
+This path is the reference implementation for arbitrary estimators: any procedure that can be written as a function of the dataframe can be used, including non-linear estimators and multi-step workflows. The randomization $p$-value is then computed from ${T_r}_{r=1}^R$ using the same tail rules described above.

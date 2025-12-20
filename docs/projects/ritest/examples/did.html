@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>installation – Tabaré Capitán</title>
+<title>Difference-in-Differences – Tabaré Capitán</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,31 +20,68 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../favicon.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../projects/ritest/examples/multi-arm.html" rel="next">
+<link href="../../../projects/ritest/examples/custom.html" rel="prev">
+<link href="../../../favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,8 +140,8 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="installation – Tabaré Capitán">
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Difference-in-Differences – Tabaré Capitán">
 <meta property="og:description" content="Data scientist, personal website">
 <meta property="og:site_name" content="Tabaré Capitán">
 </head>
@@ -278,7 +315,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Tabaré Capitán</span>
     </a>
   </div>
@@ -289,19 +326,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects/index.html"> 
+    <a class="nav-link" href="../../../projects/index.html"> 
 <span class="menu-text">projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../toolbox.html"> 
+    <a class="nav-link" href="../../../toolbox.html"> 
 <span class="menu-text">toolbox</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research.html"> 
+    <a class="nav-link" href="../../../research.html"> 
 <span class="menu-text">research</span></a>
   </li>  
 </ul>
@@ -316,7 +353,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">installation</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/examples/settings.html">Examples</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/examples/did.html">Difference-in-Differences</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -347,13 +384,13 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ritest</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/quick-start.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/quick-start.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quick start</span></a>
   </div>
 </li>
@@ -368,31 +405,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/settings.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/settings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Settings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/non-linear.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/non-linear.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Non-linear models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/custom.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/custom.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Custom statistics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/did.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/did.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Difference-in-Differences</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/multi-arm.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/multi-arm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Multi-arm experiments</span></a>
   </div>
 </li>
@@ -409,25 +446,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/colombia.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/colombia.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Colombian example</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/generic-vs-linear.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/generic-vs-linear.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linear vs generic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/ci-bands.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/ci-bands.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Confidence bands</span></a>
   </div>
 </li>
@@ -444,25 +481,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/ri.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/ri.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Randomization inference</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/pvalues.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/pvalues.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="math inline">\(p\)</span>-values</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/ci.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/ci.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Confidence intervals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/big-o.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/big-o.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Complexity</span></a>
   </div>
 </li>
@@ -470,7 +507,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/api.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/api.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">API reference</span></a>
   </div>
 </li>
@@ -484,10 +521,22 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#fasfasf" id="toc-fasfasf" class="nav-link active" data-scroll-target="#fasfasf">fasfasf</a>
+  <li><a href="#the-canonical-2times2-did-regression" id="toc-the-canonical-2times2-did-regression" class="nav-link active" data-scroll-target="#the-canonical-2times2-did-regression">The canonical <span class="math inline">\(2\times2\)</span> DiD regression</a></li>
+  <li><a href="#transformation" id="toc-transformation" class="nav-link" data-scroll-target="#transformation">Transformation</a></li>
+  <li><a href="#covariates" id="toc-covariates" class="nav-link" data-scroll-target="#covariates">Covariates</a>
   <ul class="collapse">
-  <li><a href="#fdsfsd" id="toc-fdsfsd" class="nav-link" data-scroll-target="#fdsfsd">fdsfsd</a></li>
+  <li><a href="#time-invariant-covariates" id="toc-time-invariant-covariates" class="nav-link" data-scroll-target="#time-invariant-covariates">Time-invariant covariates</a></li>
+  <li><a href="#time-varying-covariates" id="toc-time-varying-covariates" class="nav-link" data-scroll-target="#time-varying-covariates">Time-varying covariates</a></li>
+  <li><a href="#covariates-that-only-exist-in-one-period" id="toc-covariates-that-only-exist-in-one-period" class="nav-link" data-scroll-target="#covariates-that-only-exist-in-one-period">Covariates that only exist in one period</a></li>
   </ul></li>
+  <li><a href="#ritsest-implementation" id="toc-ritsest-implementation" class="nav-link" data-scroll-target="#ritsest-implementation"><code>ritsest</code> implementation</a></li>
+  <li><a href="#technical-appendix" id="toc-technical-appendix" class="nav-link" data-scroll-target="#technical-appendix">Technical appendix</a>
+  <ul class="collapse">
+  <li><a href="#set-up" id="toc-set-up" class="nav-link" data-scroll-target="#set-up">Set up</a></li>
+  <li><a href="#ols-standard-error" id="toc-ols-standard-error" class="nav-link" data-scroll-target="#ols-standard-error">OLS standard error</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -495,9 +544,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/examples/settings.html">Examples</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/examples/did.html">Difference-in-Differences</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">installation</h1>
+<h1 class="title">Difference-in-Differences</h1>
 </div>
 
 
@@ -514,21 +563,189 @@ window.Quarto = {
 </header>
 
 
-<p>contents</p>
-<section id="fasfasf" class="level2">
-<h2 class="anchored" data-anchor-id="fasfasf">fasfasf</h2>
-<p>sfdsufsdf</p>
-<section id="fdsfsd" class="level3">
-<h3 class="anchored" data-anchor-id="fdsfsd">fdsfsd</h3>
-<p>fdsf</p>
-<p>#sdfsdf</p>
-<p>fdsfsdf</p>
+<hr>
+<p>It is possible to do <strong>fast</strong> randomization inference using <code>ritest</code> with a <span class="math inline">\(2 \times 2\)</span> <a href="https://en.wikipedia.org/wiki/Difference_in_differences">difference-in-differences</a> (DiD) design, provided a transformation to the canonical form.</p>
+<p>This is not a general solution for:</p>
+<ul>
+<li>multiple time periods (event studies),</li>
+<li>staggered adoption (units treated at different times),</li>
+<li>dynamic effects (leads/lags),</li>
+<li>designs that require many treatment–time interactions.</li>
+</ul>
+<p>Those cases require updating multiple interaction columns or re-building the design matrix each permutation. These variations may be possible using the generic path and the custom permutations; but I do not cover these applications in this section.</p>
+<section id="the-canonical-2times2-did-regression" class="level2">
+<h2 class="anchored" data-anchor-id="the-canonical-2times2-did-regression">The canonical <span class="math inline">\(2\times2\)</span> DiD regression</h2>
+<p>Let:</p>
+<ul>
+<li><span class="math inline">\(i\)</span> index units.</li>
+<li><span class="math inline">\(t \in \{0,1\}\)</span> index time (0 = pre, 1 = post).</li>
+<li><span class="math inline">\(D_i \in \{0,1\}\)</span> indicate the treated group (time-invariant).</li>
+<li><span class="math inline">\(Post_t = \mathbf{1}[t=1]\)</span>.</li>
+<li><span class="math inline">\(X_{it}\)</span> be observed covariates (some may vary over time).</li>
+</ul>
+<p>The standard two-way specification is:</p>
+<p><span class="math display">\[
+Y_{it} = \alpha + \gamma D_i + \lambda Post_t + \delta (D_i\cdot Post_t) + X_{it}'\beta + \varepsilon_{it}.
+\]</span></p>
+<p>In this regression, <strong><span class="math inline">\(\delta\)</span></strong> is the DiD effect (the coefficient on the interaction).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</section>
+<section id="transformation" class="level2">
+<h2 class="anchored" data-anchor-id="transformation">Transformation</h2>
+<p>Define the within-unit change (the “change score”):</p>
+<p><span class="math display">\[
+\Delta Y_i \equiv Y_{i1} - Y_{i0}.
+\]</span></p>
+<p>Now difference the regression equation between <span class="math inline">\(t=1\)</span> and <span class="math inline">\(t=0\)</span>:</p>
+<ul>
+<li>The intercept cancels: <span class="math inline">\((\alpha - \alpha) = 0\)</span>.</li>
+<li>The treated-group dummy cancels because it does not change over time: <span class="math inline">\(\gamma D_i - \gamma D_i = 0\)</span>.</li>
+<li>The post dummy becomes a constant because <span class="math inline">\(Post_1-Post_0 = 1\)</span>: <span class="math inline">\(\lambda\cdot 1\)</span>.</li>
+<li>The interaction becomes the treatment dummy because: <span class="math inline">\(D_i\cdot Post_1 - D_i\cdot Post_0 = D_i\cdot 1 - D_i\cdot 0 = D_i\)</span>.</li>
+<li>Covariates difference as <span class="math inline">\(\Delta X_i \equiv X_{i1}-X_{i0}\)</span>.</li>
+<li>Errors difference as <span class="math inline">\(\Delta\varepsilon_i \equiv \varepsilon_{i1}-\varepsilon_{i0}\)</span>.</li>
+</ul>
+<p>Putting this together yields:</p>
+<p><span class="math display">\[
+\Delta Y_i = \lambda + \delta D_i + (\Delta X_i)'\beta + \Delta\varepsilon_i.
+\]</span></p>
+<p>This is now a plain linear regression with <span class="math inline">\(\delta\)</span> on the main effect <span class="math inline">\(D_i\)</span>, which is precisely what <code>ritest</code> needs in the linear path.</p>
+</section>
+<section id="covariates" class="level2">
+<h2 class="anchored" data-anchor-id="covariates">Covariates</h2>
+<section id="time-invariant-covariates" class="level3">
+<h3 class="anchored" data-anchor-id="time-invariant-covariates">Time-invariant covariates</h3>
+<p>If a covariate does not change over time (call it <span class="math inline">\(W_i\)</span>), then: <span class="math display">\[
+\Delta W_i = W_i - W_i = 0.
+\]</span> So time-invariant covariates drop out automatically in the transformed regression. This is the same logic as fixed effects removing time-invariant differences.</p>
+</section>
+<section id="time-varying-covariates" class="level3">
+<h3 class="anchored" data-anchor-id="time-varying-covariates">Time-varying covariates</h3>
+<p>If a covariate changes over time, you can include it in the transformed regression through:</p>
+<p><span class="math display">\[
+\Delta X_i = X_{i1} - X_{i0}.
+\]</span> Your regression, then, becomes:</p>
+<p><span class="math display">\[
+\Delta Y_i = \lambda + \delta D_i + (\Delta X_i)'\beta + \Delta\varepsilon_i.
+\]</span> Keep in mind that you are now adjusting for changes in covariates, not levels; your interpretation of the covariates must change accordingly. On the flip side, if these covariates are merely accessory to your main goal of identifying the causal effect, as it is often the case, then you do not need to worry about their interpretation.</p>
+</section>
+<section id="covariates-that-only-exist-in-one-period" class="level3">
+<h3 class="anchored" data-anchor-id="covariates-that-only-exist-in-one-period">Covariates that only exist in one period</h3>
+<p>If a variable is only meaningful post (or only measured post), it cannot be differenced in the usual way. In that case, you are no longer in the clean 2-period panel differencing setup, and the equivalence may not hold.</p>
+</section>
+</section>
+<section id="ritsest-implementation" class="level2">
+<h2 class="anchored" data-anchor-id="ritsest-implementation"><code>ritsest</code> implementation</h2>
+<p>This is a concise guide to implement the two-period transformation, you can find the complete script in the <a href="https://github.com/tabareCapitan/ritest/blob/master/documentation/examples/did.py">repository</a>.</p>
+<ol type="1">
+<li><p>Ensure you can build a two-period panel (one pre, one post per unit).</p></li>
+<li><p>Create one row per unit with:</p>
+<ul>
+<li><span class="math inline">\(dy_i = Y_{i,post} - Y_{i,pre}\)</span>,</li>
+<li><span class="math inline">\(D_i\)</span> (treated-group indicator),</li>
+<li>optional: <span class="math inline">\(dX_i = X_{i,post} - X_{i,pre}\)</span> for any time-varying covariates you want to control for.</li>
+</ul>
+<p>In python, these looks something like this:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>    wide_y <span class="op">=</span> df.pivot(index<span class="op">=</span><span class="st">"id"</span>, columns<span class="op">=</span><span class="st">"post"</span>, values<span class="op">=</span><span class="st">"y"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    wide_x <span class="op">=</span> df.pivot(index<span class="op">=</span><span class="st">"id"</span>, columns<span class="op">=</span><span class="st">"post"</span>, values<span class="op">=</span><span class="st">"x"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    df_diff <span class="op">=</span> pd.DataFrame(</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>            <span class="st">"id"</span>: ids,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            <span class="st">"D"</span>: D,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>            <span class="st">"dy"</span>: (wide_y[<span class="dv">1</span>] <span class="op">-</span> wide_y[<span class="dv">0</span>]).to_numpy(),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            <span class="st">"dx"</span>: (wide_x[<span class="dv">1</span>] <span class="op">-</span> wide_x[<span class="dv">0</span>]).to_numpy(),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Now, that you have the regression in the required form:</p>
+<p><span class="math display">\[
+dy_i = c + \delta D_i + dX_i'\beta + u_i,
+\]</span></p>
+<p>you can call <code>ritest</code> as follows:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>    ri <span class="op">=</span> ritest(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>        df<span class="op">=</span>df_diff,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        permute_var<span class="op">=</span><span class="st">"D"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        formula<span class="op">=</span><span class="st">"dy ~ D + dx"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        stat<span class="op">=</span><span class="st">"D"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        reps<span class="op">=</span><span class="dv">2000</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        seed<span class="op">=</span><span class="dv">123</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        alternative<span class="op">=</span><span class="st">"two-sided"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        ci_mode<span class="op">=</span><span class="st">"none"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+</section>
+<section id="technical-appendix" class="level2">
+<h2 class="anchored" data-anchor-id="technical-appendix">Technical appendix</h2>
+<p>Although the “change score” transformation is exactly equivalent to the canonical form in terms of the point estimate, the t-statistic and corresponding <span class="math inline">\(p\)</span>-values may differ. This is the topic of this appendix.</p>
+<p>Note, however, that randomization inference is independent of the OLS standard error. It uses the permutation distribution of the statistic. You can safely skip this appendix if your only goal is to do randomization inference.</p>
+<section id="set-up" class="level3">
+<h3 class="anchored" data-anchor-id="set-up">Set up</h3>
+<p>We have two equivalent DiD specifications, the canonical (interaction) form:</p>
+<p><span class="math display">\[
+Y_{it} = \alpha + \gamma D_i + \lambda Post_t + \delta (D_i\cdot Post_t) + X_{it}'\beta + \varepsilon_{it},
+\]</span></p>
+<p>and the change score regression:</p>
+<p><span class="math display">\[
+\Delta Y_i = \lambda + \delta D_i + (\Delta X_i)'\beta + \Delta\varepsilon_i,
+\quad \text{where } \Delta\varepsilon_i = \varepsilon_{i1}-\varepsilon_{i0}.
+\]</span></p>
+<p>These two regressions are equivalent for the estimand <span class="math inline">\(\delta\)</span>.</p>
+</section>
+<section id="ols-standard-error" class="level3">
+<h3 class="anchored" data-anchor-id="ols-standard-error">OLS standard error</h3>
+<p>Even though both regressions estimate the same <span class="math inline">\(\delta\)</span>, they are not the same statistical model for the disturbances.</p>
+<section id="the-error-term-is-transformed" class="level4">
+<h4 class="anchored" data-anchor-id="the-error-term-is-transformed">The error term is transformed</h4>
+<p>In levels you work with <span class="math inline">\(\varepsilon_{it}\)</span>, while in differences you work with <span class="math inline">\(\Delta\varepsilon_i = \varepsilon_{i1}-\varepsilon_{i0}\)</span>. Even under the simplifying assumption that <span class="math inline">\(\varepsilon_{it}\)</span> is iid with variance <span class="math inline">\(\sigma^2\)</span>, <span class="math display">\[
+\operatorname{Var}(\Delta\varepsilon_i) = \operatorname{Var}(\varepsilon_{i1}-\varepsilon_{i0}) = 2\sigma^2.
+\]</span> So the <em>scale and structure</em> of the regression residuals changes when you difference.</p>
+</section>
+<section id="the-covariance-structure-implied-by-the-data-differs" class="level4">
+<h4 class="anchored" data-anchor-id="the-covariance-structure-implied-by-the-data-differs">The covariance structure implied by the data differs</h4>
+<p>In the canonical form you have two observations per unit. If there is any within-unit dependence across time (very common in practice), then treating all 2,000 observations as independent (the default “nonrobust” OLS SEs) is misspecified.</p>
+<p>In the change score regression, each unit contributes one observation, so there is no within-unit time series left—but the error is now the difference <span class="math inline">\(\Delta\varepsilon_i\)</span>, which typically has a different variance than the level errors.</p>
+</section>
+<section id="degrees-of-freedom-and-the-estimated-residual-variance" class="level4">
+<h4 class="anchored" data-anchor-id="degrees-of-freedom-and-the-estimated-residual-variance">Degrees of freedom and the estimated residual variance</h4>
+<p>Following the example:</p>
+<ul>
+<li>Panel regression: <span class="math inline">\(N_{obs}=2000\)</span> (two rows per unit)</li>
+<li>Change score regression: <span class="math inline">\(N_{obs}=1000\)</span> (one row per unit)</li>
+</ul>
+<p>The OLS estimate of the residual variance uses <span class="math inline">\(\text{SSR}/\text{df}_{resid}\)</span>, and <span class="math inline">\(\text{df}_{resid}\)</span> differs across the two regressions. That alone can move standard errors slightly.</p>
+</section>
+<section id="small-differences-propagate-into-t-stats-and-cis" class="level4">
+<h4 class="anchored" data-anchor-id="small-differences-propagate-into-t-stats-and-cis">Small differences propagate into t-stats and CIs</h4>
+<p>A t-statistic is:</p>
+<p><span class="math display">\[
+t = \frac{\hat\delta}{\widehat{SE}(\hat\delta)}.
+\]</span></p>
+<p>So even if <span class="math inline">\(\hat\delta\)</span> differs only a little (Monte Carlo noise), and <span class="math inline">\(\widehat{SE}(\hat\delta)\)</span> differs only a little, the t-stat and Wald CI endpoints can still move noticeably.</p>
+</section>
+</section>
+<section id="discussion" class="level3">
+<h3 class="anchored" data-anchor-id="discussion">Discussion</h3>
+<p>If you are here because you want to do randomization inference, this is irrelevant; go on. If you checked the equivalence of the two forms, which you can easily do with <a href="https://github.com/tabareCapitan/ritest/blob/master/documentation/examples/did.py">this script</a>, and found out that the results are not exactly the same, then this section is for you.</p>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Not a complete list by any means, just a few resources related to this section.</p>
+<ul>
+<li>Baker, A., Callaway, B., Cunningham, S., Goodman-Bacon, A., &amp; Sant’Anna, P. H. (2025). <a href="https://arxiv.org/abs/2503.13323">Difference-in-differences designs: A practitioner’s guide.</a></li>
+<li>Callaway, B. (2022). <a href="https://bcallaway11.github.io/files/Callaway-Chapter-2022/main.pdf">Difference-in-Differences for Policy Evaluation</a>. In: Zimmermann, K.F. (eds) Handbook of Labor, Human Resources and Population Economics</li>
+<li>Dukes O, Shahn Z, Renson A. Change scores and baseline adjustment: splitting the difference (in differences). International Journal of Epidemiology</li>
+</ul>
 
 
 </section>
-</section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The reason for which <code>ritest</code> does not work directly with the canonical <span class="math inline">\(2\times2\)</span> DiD specification is the interaction term. The specification includes <code>permute_var</code> in both ways: on its own, which is not a problem, and interacted with another variable, which is a big problem. <code>ritest</code> will only permute the column containing the <code>permute_var</code> alone, ignoring the interaction. This issue is not limited to DiD, it applies to any specification in which <code>permute_var</code> plays any role in the specification beyond a simple additive term.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -941,6 +1158,18 @@ window.Quarto = {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../projects/ritest/examples/custom.html" class="pagination-link" aria-label="Custom statistics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Custom statistics</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../projects/ritest/examples/multi-arm.html" class="pagination-link" aria-label="Multi-arm experiments">
+        <span class="nav-page-text">Multi-arm experiments</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

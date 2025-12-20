@@ -1,0 +1,157 @@
+---
+title: "API reference"
+format: html
+---
+
+# Public API
+
+This page documents the stable, user-facing API of the `ritest` package
+as exposed through `ritest.__init__`.
+
+The public interface consists of:
+
+- [`ritest`](#ritest) — high-level entry point for randomization inference.
+- [`RitestResult`](#ritestresult) — result container.
+- Configuration helpers:
+  - [`ritest_set`](#ritest_set)
+  - [`ritest_get`](#ritest_get)
+  - [`ritest_reset`](#ritest_reset)
+  - [`ritest_config`](#ritest_config)
+
+This reflects the `__all__` definition in `ritest/__init__.py`.
+
+---
+
+## `ritest`
+
+```python
+from ritest import ritest
+
+result = ritest(
+    *,
+    df,
+    permute_var: str,
+    # linear path
+    formula: str | None = None,
+    stat: str | None = None,
+    # generic path
+    stat_fn: callable | None = None,
+    # test controls
+    alternative: {"two-sided","left","right"} = "two-sided",
+    reps: int | None = None,
+    alpha: float | None = None,
+    ci_method: {"clopper-pearson","normal"} | None = None,
+    ci_mode: {"none","bounds","grid"} | None = None,
+    coef_ci_generic: bool | None = None,
+    # infra
+    n_jobs: int | None = None,
+    seed: int | None = None,
+    # design
+    weights: str | None = None,
+    strata: str | None = None,
+    cluster: str | None = None,
+    # optional prebuilt permutations
+    permutations: object | None = None,
+    # optional band grid hints
+    ci_range: float | None = None,
+    ci_step: float | None = None,
+)
+````
+
+**Purpose**
+
+Run randomization inference using either:
+
+* a **linear model** defined by `formula` + `stat`, or
+* a **generic statistic** defined via `stat_fn`.
+
+Exactly one of `stat` or `stat_fn` must be supplied.
+
+**Returns:** a `RitestResult` object.
+
+---
+
+## `RitestResult`
+
+`RitestResult` is the return object of `ritest()`.
+
+Typical responsibilities include:
+
+* storing observed statistic and permutation distribution
+* exposing scalars like estimate, p-value, confidence intervals
+* providing helpers such as `summary()`
+
+
+---
+
+## Configuration helpers
+
+All configuration utilities are exposed at the top-level:
+
+```python
+from ritest import (
+    ritest_set,
+    ritest_get,
+    ritest_reset,
+    ritest_config,
+)
+```
+
+### `ritest_set`
+
+Set one or more global defaults for future `ritest()` calls.
+
+Example:
+
+```python
+ritest_set(reps=999, alpha=0.05)
+```
+
+### `ritest_get`
+
+Retrieve the current value of a configuration option.
+
+Example:
+
+```python
+ritest_get("reps")
+```
+
+### `ritest_reset`
+
+Reset global configuration to package defaults.
+
+Example:
+
+```python
+ritest_reset()
+```
+
+### `ritest_config`
+
+Return a dictionary-like structure containing current configuration
+(useful for reproducibility).
+
+Example:
+
+```python
+cfg = ritest_config()
+print(cfg)
+```
+
+---
+
+This page documents **only** the public names defined in:
+
+```python
+__all__ = [
+    "ritest",
+    "RitestResult",
+    "ritest_set",
+    "ritest_get",
+    "ritest_reset",
+    "ritest_config",
+]
+```
+
+Internal modules and helpers are not part of the supported API.

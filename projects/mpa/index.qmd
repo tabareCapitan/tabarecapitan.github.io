@@ -1,7 +1,0 @@
----
-title: "mpa"
-date: 2025-09-25
-description: "optimal map."
-categories: [research, matlab]
----
-Landing content…

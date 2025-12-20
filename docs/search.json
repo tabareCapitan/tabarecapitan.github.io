@@ -1,97 +1,628 @@
 [
   {
-    "objectID": "papers.html",
-    "href": "papers.html",
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
     "title": "Tabaré Capitán",
     "section": "",
-    "text": "Investigating the analytical robustness of the social and behavioural sciences 🔍\n\n\n\n\n\nAbstract: The same dataset can be analysed in different justifiable ways to answer the same research question, potentially challenging the robustness of empirical science. In this crowd initiative, we investigated the degree to which research findings in the social and behavioural sciences are contingent on analysts’ choices. To explore this question, we took a sample of 100 studies published between 2009 and 2018 in criminology, demography, economics and finance, management, marketing and organisational behaviour, political science, psychology, and sociology. For one claim of each study, at least five re-analysts were invited to independently re-analyze the original data. The statistical appropriateness of the re-analyses was assessed in peer evaluations and the robustness indicators were inspected along a range of research characteristics and study designs. Only 31% of the independent re-analyses yielded the same result (within a tolerance region of +/- 0.05 Cohen’s d) as the original report. Even with a four times broader tolerance region, this indicator did not go above 56%. Regarding the conclusions drawn, only 34% of the studies remained analytically robust, meaning that all re-analysts reported evidence for the originally reported claim. Using a more liberal definition of robustness produced comparable result (39% when &gt;80% re-analysis agreement with the original conclusion defined analytical robustness). This explorative study suggests that the common single-path analyses in social and behavioural research cannot be assumed to be robust to alternative — similarly justifiable — analyses. Therefore, we recommend the development and use of practices to explore and communicate this neglected source of uncertainty.\n\n\nCoauthored with many others (revision requested, Nature)\n\n\n\n\n\n\n\n\n\n\nInvestigating the analytical reproducibility of the social and behavioural sciences 🔍\n\n\n\n\n\nAbstract: Published claims should be reproducible, yielding the same result when applying the same analysis to the same data. In a stratified random sample of 600 papers published from 2009 to 2018 in 62 journals spanning the social and behavioral sciences, authors of 146 (24.3% [95% CI 21.1 - 27.9%]) papers made data available to assess reproducibility. We assessed whether originally reported claims could be reproduced using the same data and analysis for papers in which authors made data available or we obtained source data to reconstruct the dataset. 76.2 (52.6% [95% CI 45.2 - 59.9%]) papers were rated as precisely reproducible and 104.4 (72.1% [95% CI 65.1 - 78.8%]) papers as at least approximately reproducible (within 15% of the original effects or within .05 of original p-values) after weighting 553 claims from 144.9 papers. We observed higher reproducibility for papers from Political Science and Economics than other disciplines, and for more recent than older papers.\n\n\nCoauthored with many others (revision requested, Nature)\n\n\n\n\n\n\n\n\n\n\nInvestigating the analytical replicability of the social and behavioural sciences 🔍\n\n\n\n\n\nAbstract: We attempted replications of 274 claims of positive results from 164 papers published from 2009 to 2018 in 54 journals in the social and behavioral sciences. Replications were high-powered on average to detect the original effect size (Median = 99.1%), used original materials when relevant and available, and were peer-reviewed in advance through a standardized internal protocol. Replications showed statistically significant results in the same pattern as the original study for 151 of 274 claims (55.1% [95% CI 49.2 - 60.9%]) and for 80.8 of 164 papers (49.3% [95% CI 43.8 - 54.7%]) weighed for replicating multiple claims per paper. Some decline is expected based on power to detect original effects and regression to the mean due to replicating only positive results. For claims where effect sizes could be converted to Pearson’s r, the median effect size was 0.23 [95% CI 0.21 - 0.28] for original studies and 0.11 [95% CI 0.08 - 0.13] for replication studies, a 53.4% [95% CI 42.3 - 65.2%] reduction in correlation and a 78.3% [95% CI 66.7 - 87.8%] reduction in shared variance. Thirteen methods for evaluating replication success provided estimates ranging from 31.1% to 77.1% (median = 49.9%), though most methods could only be applied to a subset of the replicated papers (median = 89.3%; range 63.3% to 100.0%). The conditions that promote or inhibit replicability are worthy of additional investigation.\n\n\nCoauthored with many others (resubmitted, Nature)\n\n\n\n\n\n\n\n\n\n\nShow me the labels: Using pre-nudges to reduce calorie information avoidance 🙈\n\n\n\n\n\nAbstract: Calorie labeling is a popular policy to address the obesity epidemic, but it has had little empirical success. Under the premise that willful avoidance of information plays a role in this result, we propose a novel approach—pre-nudges—to make consumers more receptive to calorie information. Unlike nudges, which are used to directly influence a choice, pre-nudges are used to directly influence how consumers react to the nudge itself (the calorie label). In line with predictions from our theoretical analysis, we test two pre-nudges in the context of menu labeling: one aims to increase self-efficacy, and the other one highlights the long-term health risks of overeating. In a large-scale laboratory experiment, we find that both pre-nudges reduce calorie information avoidance. Overall, our paper suggests a possible role for pre-nudges in addressing the obesity epidemic—one of the largest public health issues globally—and illustrates the potential usefulness of pre-nudges more generally.\n\n\nCoauthored with Thunström, Van ’t Veld, Nordström, and Shogren (revision requested, Journal of Risk and Uncertainty) | pdf\n\n\n\n\n\n\n\n\n\n\nBugs with benefits: The economics of edible insects 🦗\n\n\n\n\n\nAbstract: We explore the economics of edible insects. We describe in detail how the biology of insects makes them a remarkable source of nutrition that can be produced with less resources and a lesser environmental impact than alternatives (e.g., meat). Thus, edible insects have the potential to play a key role in a more sustainable food system, thereby mitigating climate change and biodiversity loss. Furthermore, we highlight that a tropical climate and an abundance of endemic insect species in much of Latin America gives the region a competitive advantage in developing the industry to integrate edible insects into the food system.\n\n\nCoauthored with Capitán\n\n\n\n\n\n\n\n\n\n\nBite me: Towards consumers’ acceptance of edible insects 🦗\n\n\n\n\n\nAbstract: This paper studies whether simple informational interventions can increase consumerwillingness to try insect-based foods. Using a randomized survey experiment in the Nordic countries, participants received either a control message or one emphasizing the environmental or nutritional benefits of edible insects. Neither intervention had a significant effect on willingness to try, suggesting that attitudes toward entomophagy are largely pre-determined. These results imply that firmsshouldprioritizeaccessibility and product developmentoverpersuasivemessaging. Policymakers seeking to promote insect consumption should consider structural incentives rather than relying on awareness campaigns.\n\n\nSole author\n\n\n\n\n\n\n\n\n\n\nExpecting to get it: An endowment effect for information 🙈\n\n\n\n\n\nAbstract: We introduce the endowment effect for information: A tendency to value information more when expecting it, independently of its content. This result follows from a standard belief-based model of reference-dependent preferences and it is driven by gain-loss utility, though the information’s instrumentality can modulate the effect. Results from a laboratory experiment align with the theoretical results. Thus, we contribute to further understanding information avoidance beyond content or timing effects. Additionally, we discuss three experimental observations from a sequential manipulation of beliefs in our experimental design, laying groundwork for a theory of referent formation.\n\n\nCoauthored with Thunström, Van ’t Veld, and Nordström\n\n\n\n\n\n\n\n\n\n\nDecision error decreases with risk aversion: A replication 🔍\n\n\n\n\n\nAbstract: Coming soon.\n\n\nCoauthored with Méndez"
+    "text": "note for me, set default order, dont use dates?\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nDescription\n\n\n\nCategories\n\n\n\n\n\n\n\n\nritest\n\n\nRandomization inference in Python.\n\n\npython, stats, OSS\n\n\n\n\n\n\ntest project\n\n\ntest project.\n\n\ntest\n\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
-    "objectID": "papers.html#working-papers",
-    "href": "papers.html#working-papers",
-    "title": "Tabaré Capitán",
+    "objectID": "projects/ritest/examples/did.html",
+    "href": "projects/ritest/examples/did.html",
+    "title": "Difference-in-Differences",
     "section": "",
-    "text": "Investigating the analytical robustness of the social and behavioural sciences 🔍\n\n\n\n\n\nAbstract: The same dataset can be analysed in different justifiable ways to answer the same research question, potentially challenging the robustness of empirical science. In this crowd initiative, we investigated the degree to which research findings in the social and behavioural sciences are contingent on analysts’ choices. To explore this question, we took a sample of 100 studies published between 2009 and 2018 in criminology, demography, economics and finance, management, marketing and organisational behaviour, political science, psychology, and sociology. For one claim of each study, at least five re-analysts were invited to independently re-analyze the original data. The statistical appropriateness of the re-analyses was assessed in peer evaluations and the robustness indicators were inspected along a range of research characteristics and study designs. Only 31% of the independent re-analyses yielded the same result (within a tolerance region of +/- 0.05 Cohen’s d) as the original report. Even with a four times broader tolerance region, this indicator did not go above 56%. Regarding the conclusions drawn, only 34% of the studies remained analytically robust, meaning that all re-analysts reported evidence for the originally reported claim. Using a more liberal definition of robustness produced comparable result (39% when &gt;80% re-analysis agreement with the original conclusion defined analytical robustness). This explorative study suggests that the common single-path analyses in social and behavioural research cannot be assumed to be robust to alternative — similarly justifiable — analyses. Therefore, we recommend the development and use of practices to explore and communicate this neglected source of uncertainty.\n\n\nCoauthored with many others (revision requested, Nature)\n\n\n\n\n\n\n\n\n\n\nInvestigating the analytical reproducibility of the social and behavioural sciences 🔍\n\n\n\n\n\nAbstract: Published claims should be reproducible, yielding the same result when applying the same analysis to the same data. In a stratified random sample of 600 papers published from 2009 to 2018 in 62 journals spanning the social and behavioral sciences, authors of 146 (24.3% [95% CI 21.1 - 27.9%]) papers made data available to assess reproducibility. We assessed whether originally reported claims could be reproduced using the same data and analysis for papers in which authors made data available or we obtained source data to reconstruct the dataset. 76.2 (52.6% [95% CI 45.2 - 59.9%]) papers were rated as precisely reproducible and 104.4 (72.1% [95% CI 65.1 - 78.8%]) papers as at least approximately reproducible (within 15% of the original effects or within .05 of original p-values) after weighting 553 claims from 144.9 papers. We observed higher reproducibility for papers from Political Science and Economics than other disciplines, and for more recent than older papers.\n\n\nCoauthored with many others (revision requested, Nature)\n\n\n\n\n\n\n\n\n\n\nInvestigating the analytical replicability of the social and behavioural sciences 🔍\n\n\n\n\n\nAbstract: We attempted replications of 274 claims of positive results from 164 papers published from 2009 to 2018 in 54 journals in the social and behavioral sciences. Replications were high-powered on average to detect the original effect size (Median = 99.1%), used original materials when relevant and available, and were peer-reviewed in advance through a standardized internal protocol. Replications showed statistically significant results in the same pattern as the original study for 151 of 274 claims (55.1% [95% CI 49.2 - 60.9%]) and for 80.8 of 164 papers (49.3% [95% CI 43.8 - 54.7%]) weighed for replicating multiple claims per paper. Some decline is expected based on power to detect original effects and regression to the mean due to replicating only positive results. For claims where effect sizes could be converted to Pearson’s r, the median effect size was 0.23 [95% CI 0.21 - 0.28] for original studies and 0.11 [95% CI 0.08 - 0.13] for replication studies, a 53.4% [95% CI 42.3 - 65.2%] reduction in correlation and a 78.3% [95% CI 66.7 - 87.8%] reduction in shared variance. Thirteen methods for evaluating replication success provided estimates ranging from 31.1% to 77.1% (median = 49.9%), though most methods could only be applied to a subset of the replicated papers (median = 89.3%; range 63.3% to 100.0%). The conditions that promote or inhibit replicability are worthy of additional investigation.\n\n\nCoauthored with many others (resubmitted, Nature)\n\n\n\n\n\n\n\n\n\n\nShow me the labels: Using pre-nudges to reduce calorie information avoidance 🙈\n\n\n\n\n\nAbstract: Calorie labeling is a popular policy to address the obesity epidemic, but it has had little empirical success. Under the premise that willful avoidance of information plays a role in this result, we propose a novel approach—pre-nudges—to make consumers more receptive to calorie information. Unlike nudges, which are used to directly influence a choice, pre-nudges are used to directly influence how consumers react to the nudge itself (the calorie label). In line with predictions from our theoretical analysis, we test two pre-nudges in the context of menu labeling: one aims to increase self-efficacy, and the other one highlights the long-term health risks of overeating. In a large-scale laboratory experiment, we find that both pre-nudges reduce calorie information avoidance. Overall, our paper suggests a possible role for pre-nudges in addressing the obesity epidemic—one of the largest public health issues globally—and illustrates the potential usefulness of pre-nudges more generally.\n\n\nCoauthored with Thunström, Van ’t Veld, Nordström, and Shogren (revision requested, Journal of Risk and Uncertainty) | pdf\n\n\n\n\n\n\n\n\n\n\nBugs with benefits: The economics of edible insects 🦗\n\n\n\n\n\nAbstract: We explore the economics of edible insects. We describe in detail how the biology of insects makes them a remarkable source of nutrition that can be produced with less resources and a lesser environmental impact than alternatives (e.g., meat). Thus, edible insects have the potential to play a key role in a more sustainable food system, thereby mitigating climate change and biodiversity loss. Furthermore, we highlight that a tropical climate and an abundance of endemic insect species in much of Latin America gives the region a competitive advantage in developing the industry to integrate edible insects into the food system.\n\n\nCoauthored with Capitán\n\n\n\n\n\n\n\n\n\n\nBite me: Towards consumers’ acceptance of edible insects 🦗\n\n\n\n\n\nAbstract: This paper studies whether simple informational interventions can increase consumerwillingness to try insect-based foods. Using a randomized survey experiment in the Nordic countries, participants received either a control message or one emphasizing the environmental or nutritional benefits of edible insects. Neither intervention had a significant effect on willingness to try, suggesting that attitudes toward entomophagy are largely pre-determined. These results imply that firmsshouldprioritizeaccessibility and product developmentoverpersuasivemessaging. Policymakers seeking to promote insect consumption should consider structural incentives rather than relying on awareness campaigns.\n\n\nSole author\n\n\n\n\n\n\n\n\n\n\nExpecting to get it: An endowment effect for information 🙈\n\n\n\n\n\nAbstract: We introduce the endowment effect for information: A tendency to value information more when expecting it, independently of its content. This result follows from a standard belief-based model of reference-dependent preferences and it is driven by gain-loss utility, though the information’s instrumentality can modulate the effect. Results from a laboratory experiment align with the theoretical results. Thus, we contribute to further understanding information avoidance beyond content or timing effects. Additionally, we discuss three experimental observations from a sequential manipulation of beliefs in our experimental design, laying groundwork for a theory of referent formation.\n\n\nCoauthored with Thunström, Van ’t Veld, and Nordström\n\n\n\n\n\n\n\n\n\n\nDecision error decreases with risk aversion: A replication 🔍\n\n\n\n\n\nAbstract: Coming soon.\n\n\nCoauthored with Méndez"
-  },
-  {
-    "objectID": "papers.html#published-papers",
-    "href": "papers.html#published-papers",
-    "title": "Tabaré Capitán",
-    "section": "published papers",
-    "text": "published papers\n\n\n\n\n\n\nPredicting the replicability of social and behavioural science claims in a crisis: The COVID19 Preprint Replication Project 🔍\n\n\n\n\n\nAbstract: Replication is an important “credibility control” mechanism for clarifying the reliability of published findings. However, replication is costly, and it is infeasible to replicate everything. Accurate, fast, lower cost alternatives such as eliciting predictions from experts or novices could accelerate credibility assessment and improve allocation of replication resources for important and uncertain findings. We elicited judgments from experts and novices on 100 claims from preprints about an emerging area of research (COVID-19 pandemic) using a new interactive structured elicitation protocol and we conducted 35 new replications. Participants’ average estimates were similar to the observed replication rate of 60%. After interacting with their peers, novices updated both their estimates and confidence in their judgements significantly more than experts and their accuracy improved more between elicitation rounds. Experts’ average accuracy was 0.54 (95% CI: [0.454, 0.628]) after interaction and they correctly classified 55% of claims; novices’ average accuracy was 0.55 (95% CI: [0.455, 0.628]), correctly classifying 61% of claims. The difference in accuracy between experts and novices was not significant and their judgments on the full set of claims were strongly correlated (r=.48). These results are consistent with prior investigations eliciting predictions about the replicability of published findings in established areas of research and suggest that expertise may not be required for credibility assessment of some research findings.\n\n\nCoauthored with many others (Nature Human Behavior, 2024) | pdf • journal\n\n\n\n\n\n\n\n\n\n\nCan large language models help predict results from a complex behavioural science study? 🔍\n\n\n\n\n\nAbstract: We tested whether large language models (LLMs) can help predict results from a complex behavioural science experiment. In study 1, we investigated the performance of the widely used LLMs GPT-3.5 and GPT-4 in forecasting the empirical findings of a large-scale experimental study of emotions, gender, and social perceptions. We found that GPT-4, but not GPT-3.5, matched the performance of a cohort of 119 human experts, with correlations of 0.89 (GPT-4), 0.07 (GPT-3.5) and 0.87 (human experts) between aggregated forecasts and realized effect sizes. In study 2, providing participants from a university subject pool the opportunity to query a GPT-4 powered chatbot significantly increased the accuracy of their forecasts. Results indicate promise for artificial intelligence (AI) to help anticipate—at scale and minimal cost—which claims about human behaviour will find empirical support and which ones will not. Our discussion focuses on avenues for human–AI collaboration in science.\n\n\nCoauthored as part of a large-scale collaboration with many others (Royal Society Open Science, 2024) | journal\n\n\n\n\n\n\n\n\n\n\nOn the trajectory of discrimination: A meta-analysis and forecasting survey capturing 44 years of field experiments on gender and hiring decisions 👷🏼‍♀️👷🏼‍♂️\n\n\n\n\n\nAbstract: A preregistered meta-analysis, including 244 effect sizes from 85 field audits and 361,645 individual job applications, tested for gender bias in hiring practices in female-stereotypical and gender-balanced as well as male-stereotypical jobs from 1976 to 2020. A “red team” of independent experts was recruited to increase the rigor and robustness of our meta-analytic approach. A forecasting survey further examined whether laypeople (n = 499 nationally representative adults) and scientists (n = 312) could predict the results. Forecasters correctly anticipated reductions in discrimination against female candidates over time. However, both scientists and laypeople overestimated the continuation of bias against female candidates. Instead, selection bias in favor of male over female candidates was eliminated and, if anything, slightly reversed in sign starting in 2009 for mixed-gender and male-stereotypical jobs in our sample. Forecasters further failed to anticipate that discrimination against male candidates for stereotypically female jobs would remain stable across the decades.\n\n\nCoauthored as part of an author-consortium with many others (Organizational Behavior and Human Decision Processes, 2023) | journal\n\n\n\n\n\n\n\n\n\n\nTime-varying pricing may increase total electricity consumption: Evidence from Costa Rica ⚡\n\n\n\n\n\nAbstract: We study the implementation of a time-varying pricing (TVP) program by a major electricity utility in Costa Rica. Because of particular features of the data, we use recently developed understanding of the two-way fixed effects differences-in-differences estimator along with event-study specifications to interpret our results. Similar to previous research, we find that the program reduces consumption during peak-hours. However, in contrast with previous research, we find that the program increases total consumption. With a stylized economic model, we show how these seemingly conflicted results may not be at odds. The key element of the model is that previous research used data from rich countries, in which the use of heating and cooling devices drives electricity consumption, but we use data from a tropical middle-income country, where very few households have heating or cooling devices. Since there is not much room for technological changes (which might reduce consumption at all times), behavioral changes to reduce consumption during peak hours are not enough to offset the increased consumption during off-peak hours (when electricity is cheaper). Our results serve as a cautionary piece of evidence for policy makers interested in reducing consumption during peak hours—the goal can potentially be achieved with TVP, but the cost is increased total consumption.\n\n\nCoauthored with Alpízar, Madrigal-Ballestero, and Pattanayak (Resource and Energy Economics, 2021) | pdf • code • journal\n\n\n\n\n\n\n\n\n\n\nMPAs and Aspatial Policies in Artisanal Fisheries 🐠\n\n\n\n\n\nAbstract: Using a spatially explicit framework with low/middle-income country coastal characteristics, we explore whether aspatial policies augment the impact of marine protected areas (MPAs) and identify when MPAs create income burdens on communities. When MPAs are small and budget-constrained, they cannot resolve all of the marinescape’s open-access issues, but they can create win-win opportunities for ecological and economic goals at lower levels of enforcement. Aspatial policies—taxes, gear restrictions, license restrictions, and livelihood programs—improve the MPA’s ability to generate ecological gains, and licenses and livelihood policies can mitigate MPA-induced income burdens. Managers can use MPA location and enforcement level, in conjunction with the MPA’s impact on fish dispersal, to induce exit from fishing and to direct the spatial leakage of effort. Our framework provides further insights for conservation-development policy in coastal settings, and we explore stylized examples in Costa Rica and Tanzania.\n\n\nCoauthored with Albers, Ashworth, Madrigal-Ballestero, and Preonas (Marine Resource Economics, 2021) | pdf • journal\n\n\n\n\n\n\n\n\n\n\nOptimal siting, sizing, and enforcement of marine protected areas 🐠\n\n\n\n\n\nAbstract: The design of protected areas, whether marine or terrestrial, rarely considers how people respond to the imposition of no-take sites with complete or incomplete enforcement. Consequently, these protected areas may fail to achieve their intended goal. We present and solve a spatial bio-economic model in which a manager chooses the optimal location, size, and enforcement level of a marine protected area (MPA). This manager acts as a Stackelberg leader, and her choices consider villagers’ best response to the MPA in a spatial Nash equilibrium of fishing site and effort decisions. Relevant to lower income country settings but general to other settings, we incorporate limited enforcement budgets, distance costs of traveling to fishing sites, and labor allocation to onshore wage opportunities. The optimal MPA varies markedly across alternative manager goals and budget sizes, but always induce changes in villagers’ decisions as a function of distance, dispersal, and wage. We consider MPA managers with ecological conservation goals and with economic goals, and identify the shortcomings of several common manager decision rules, including those focused on: (1) fishery outcomes rather than broader economic goals, (2) fish stocks at MPA sites rather than across the full marinescape, (3) absolute levels rather than additional values, and (4) costless enforcement. Our results demonstrate that such naïve or overly narrow decision rules can lead to inefficient MPA designs that miss economic and conservation opportunities.\n\n\nCoauthored with Albers, Preonas, Robinson, and Madrigal-Ballestero (Environmental and Resource Economics, 2020) | journal\n\n\n\n\n\n\n\n\n\n\nDeterminants of food insecurity among smallholder farmer households in Central America 🌽\n\n\n\n\n\nAbstract: To ensure food security among rural communities under a changing climate, policymakers need information on the prevalence and determinants of food insecurity, the role of extreme weather events in exacerbating food insecurity, and the strategies that farmers use to cope with food insecurity. Using household surveys in Guatemala and Honduras, we explore the prevalence of food insecurity among smallholder farmers on both a recurrent (seasonal) and episodic (resulting from extreme weather events) basis, analyze the factors associated with both types of food insecurity, and document farmer coping strategies. Of the 439 households surveyed, 56% experienced recurrent food insecurity, 36% experienced episodic food insecurity due to extreme weather events, and 24% experienced both types. Food insecurity among smallholder farmers was correlated with sociodemographic factors (e.g., age, education, migration) and asset ownership. The factors affecting food insecurity differed between type and prevalence of food insecurity. Our results highlight the urgent need for policies and programs to help smallholder farmers improve their overall food security and resilience to extreme weather shocks. Such policies should focus on enhancing farmer education levels, securing land tenure, empowering women, promoting generational knowledge exchange, and providing emergency food support in the lean season or following extreme weather events.\n\n\nCoauthored with many others (Regional Environmental Change, 2020) | journal\n\n\n\n\n\n\n\n\n\n\nHousehold and community responses to seasonal droughts in rural areas of Costa Rica 💧\n\n\n\n\n\nAbstract: This paper describes the adaptive responses of rural households and community-based drinking water organizations (CWOs) during seasonal droughts in Costa Rica. It empirically characterizes the adaptive measures used by 3,410 households and 81 CWOs in the driest area of the country. Volumetric pricing is a powerful adaptation option for managing water scarcity during these periods. However, these pricing schemes are not properly set to recover costs for adequate investment in water infrastructure. As a result, many CWOs rely on external financial support to cover these investments. The financial and governance restrictions characterizing most CWOs must be overcome in order to implement most of the adaptation measures identified for preparedness against seasonal drought. On the other hand, some rural households use water sources in addition to the tap water provided by CWOs (e.g. bottled water), as well as water-storing devices (e.g. buckets). The lack of effective adaptation of CWOs to water scarcity, expressed by unreliable piped-water systems, would probably lead to a higher use of these alternatives. This would entail higher costs to households, due to the time and resources invested in these activities. These costs and the potential additional costs on health represent the social costs of community failures to adapt to drier scenarios in existing piped-water systems.\n\n\nCoauthored with Madrigal-Ballestero, Salas, and Córdoba (Waterlines, 2019) | pdf • journal\n\n\n\n\n\n\n\n\n\n\nMarine protected areas in Costa Rica: How do artisanal fishers respond? 🐠\n\n\n\n\n\nAbstract: Costa Rica is considering expanding their marine protected areas (MPAs) to conserve marine resources. Due to the importance of households’ responses to an MPA in defining the MPA’s ecological and economic outcomes, this paper uses an economic decision framework to interpret data from near-MPA household surveys to inform this policy discussion. The model and data suggest that the impact of expanding MPAs relies on levels of enforcement and on-shore wages. If larger near-shore MPAs can produce high wages through increased tourism, MPA expansions could provide ecological benefits with low burdens to communities. Due to distance costs and gear investments, however, MPAs farther off-shore may place high burdens on off-shore fishers.\n\n\nCoauthored with Madrigal-Ballestero, Albers, and Salas (Ambio, 2017) | pdf • journal"
-  },
-  {
-    "objectID": "projects/bvall/index.html",
-    "href": "projects/bvall/index.html",
-    "title": "bvall",
-    "section": "",
-    "text": "Landing content…\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "projects/ritest/math-notes/note-1.html",
-    "href": "projects/ritest/math-notes/note-1.html",
-    "title": "math note 1",
-    "section": "",
-    "text": "math note 1 contents contents",
+    "text": "It is possible to do fast randomization inference using ritest with a \\(2 \\times 2\\) difference-in-differences (DiD) design, provided a transformation to the canonical form.\nThis is not a general solution for:\nThose cases require updating multiple interaction columns or re-building the design matrix each permutation. These variations may be possible using the generic path and the custom permutations; but I do not cover these applications in this section.",
     "crumbs": [
       "about",
-      "ritest",
-      "Math Notes",
-      "math note 1"
-    ]
-  },
-  {
-    "objectID": "projects/ritest/math-notes/note-1.html#fdsfsd",
-    "href": "projects/ritest/math-notes/note-1.html#fdsfsd",
-    "title": "math note 1",
-    "section": "fdsfsd",
-    "text": "fdsfsd\nfdsf\n#sdfsdf\nfdsfsdf",
-    "crumbs": [
-      "about",
-      "ritest",
-      "Math Notes",
-      "math note 1"
-    ]
-  },
-  {
-    "objectID": "projects/ritest/examples/example-1.html",
-    "href": "projects/ritest/examples/example-1.html",
-    "title": "example 1",
-    "section": "",
-    "text": "contents",
-    "crumbs": [
-      "about",
-      "ritest",
       "Examples",
-      "example 1"
+      "Difference-in-Differences"
     ]
   },
   {
-    "objectID": "projects/ritest/examples/example-1.html#fdsfsd",
-    "href": "projects/ritest/examples/example-1.html#fdsfsd",
-    "title": "example 1",
-    "section": "fdsfsd",
-    "text": "fdsfsd\nfdsf\n#sdfsdf\nfdsfsdf",
+    "objectID": "projects/ritest/examples/did.html#the-canonical-2times2-did-regression",
+    "href": "projects/ritest/examples/did.html#the-canonical-2times2-did-regression",
+    "title": "Difference-in-Differences",
+    "section": "The canonical \\(2\\times2\\) DiD regression",
+    "text": "The canonical \\(2\\times2\\) DiD regression\nLet:\n\n\\(i\\) index units.\n\\(t \\in \\{0,1\\}\\) index time (0 = pre, 1 = post).\n\\(D_i \\in \\{0,1\\}\\) indicate the treated group (time-invariant).\n\\(Post_t = \\mathbf{1}[t=1]\\).\n\\(X_{it}\\) be observed covariates (some may vary over time).\n\nThe standard two-way specification is:\n\\[\nY_{it} = \\alpha + \\gamma D_i + \\lambda Post_t + \\delta (D_i\\cdot Post_t) + X_{it}'\\beta + \\varepsilon_{it}.\n\\]\nIn this regression, \\(\\delta\\) is the DiD effect (the coefficient on the interaction).1",
     "crumbs": [
       "about",
-      "ritest",
       "Examples",
-      "example 1"
+      "Difference-in-Differences"
     ]
   },
   {
-    "objectID": "projects/meta-science/index.html",
-    "href": "projects/meta-science/index.html",
-    "title": "meta science",
-    "section": "",
-    "text": "Landing content…\n\n\n\n Back to top"
+    "objectID": "projects/ritest/examples/did.html#transformation",
+    "href": "projects/ritest/examples/did.html#transformation",
+    "title": "Difference-in-Differences",
+    "section": "Transformation",
+    "text": "Transformation\nDefine the within-unit change (the “change score”):\n\\[\n\\Delta Y_i \\equiv Y_{i1} - Y_{i0}.\n\\]\nNow difference the regression equation between \\(t=1\\) and \\(t=0\\):\n\nThe intercept cancels: \\((\\alpha - \\alpha) = 0\\).\nThe treated-group dummy cancels because it does not change over time: \\(\\gamma D_i - \\gamma D_i = 0\\).\nThe post dummy becomes a constant because \\(Post_1-Post_0 = 1\\): \\(\\lambda\\cdot 1\\).\nThe interaction becomes the treatment dummy because: \\(D_i\\cdot Post_1 - D_i\\cdot Post_0 = D_i\\cdot 1 - D_i\\cdot 0 = D_i\\).\nCovariates difference as \\(\\Delta X_i \\equiv X_{i1}-X_{i0}\\).\nErrors difference as \\(\\Delta\\varepsilon_i \\equiv \\varepsilon_{i1}-\\varepsilon_{i0}\\).\n\nPutting this together yields:\n\\[\n\\Delta Y_i = \\lambda + \\delta D_i + (\\Delta X_i)'\\beta + \\Delta\\varepsilon_i.\n\\]\nThis is now a plain linear regression with \\(\\delta\\) on the main effect \\(D_i\\), which is precisely what ritest needs in the linear path.",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Difference-in-Differences"
+    ]
   },
   {
-    "objectID": "toolbox.html",
-    "href": "toolbox.html",
-    "title": "Introduction",
+    "objectID": "projects/ritest/examples/did.html#covariates",
+    "href": "projects/ritest/examples/did.html#covariates",
+    "title": "Difference-in-Differences",
+    "section": "Covariates",
+    "text": "Covariates\n\nTime-invariant covariates\nIf a covariate does not change over time (call it \\(W_i\\)), then: \\[\n\\Delta W_i = W_i - W_i = 0.\n\\] So time-invariant covariates drop out automatically in the transformed regression. This is the same logic as fixed effects removing time-invariant differences.\n\n\nTime-varying covariates\nIf a covariate changes over time, you can include it in the transformed regression through:\n\\[\n\\Delta X_i = X_{i1} - X_{i0}.\n\\] Your regression, then, becomes:\n\\[\n\\Delta Y_i = \\lambda + \\delta D_i + (\\Delta X_i)'\\beta + \\Delta\\varepsilon_i.\n\\] Keep in mind that you are now adjusting for changes in covariates, not levels; your interpretation of the covariates must change accordingly. On the flip side, if these covariates are merely accessory to your main goal of identifying the causal effect, as it is often the case, then you do not need to worry about their interpretation.\n\n\nCovariates that only exist in one period\nIf a variable is only meaningful post (or only measured post), it cannot be differenced in the usual way. In that case, you are no longer in the clean 2-period panel differencing setup, and the equivalence may not hold.",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Difference-in-Differences"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/did.html#ritsest-implementation",
+    "href": "projects/ritest/examples/did.html#ritsest-implementation",
+    "title": "Difference-in-Differences",
+    "section": "ritsest implementation",
+    "text": "ritsest implementation\nThis is a concise guide to implement the two-period transformation, you can find the complete script in the repository.\n\nEnsure you can build a two-period panel (one pre, one post per unit).\nCreate one row per unit with:\n\n\\(dy_i = Y_{i,post} - Y_{i,pre}\\),\n\\(D_i\\) (treated-group indicator),\noptional: \\(dX_i = X_{i,post} - X_{i,pre}\\) for any time-varying covariates you want to control for.\n\nIn python, these looks something like this:\n    wide_y = df.pivot(index=\"id\", columns=\"post\", values=\"y\")\n    wide_x = df.pivot(index=\"id\", columns=\"post\", values=\"x\")\n\n    df_diff = pd.DataFrame(\n        {\n            \"id\": ids,\n            \"D\": D,\n            \"dy\": (wide_y[1] - wide_y[0]).to_numpy(),\n            \"dx\": (wide_x[1] - wide_x[0]).to_numpy(),\n        }\n    )\nNow, that you have the regression in the required form:\n\\[\ndy_i = c + \\delta D_i + dX_i'\\beta + u_i,\n\\]\nyou can call ritest as follows:\n    ri = ritest(\n        df=df_diff,\n        permute_var=\"D\",\n        formula=\"dy ~ D + dx\",\n        stat=\"D\",\n        reps=2000,\n        seed=123,\n        alternative=\"two-sided\",\n        ci_mode=\"none\",\n    )",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Difference-in-Differences"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/did.html#technical-appendix",
+    "href": "projects/ritest/examples/did.html#technical-appendix",
+    "title": "Difference-in-Differences",
+    "section": "Technical appendix",
+    "text": "Technical appendix\nAlthough the “change score” transformation is exactly equivalent to the canonical form in terms of the point estimate, the t-statistic and corresponding \\(p\\)-values may differ. This is the topic of this appendix.\nNote, however, that randomization inference is independent of the OLS standard error. It uses the permutation distribution of the statistic. You can safely skip this appendix if your only goal is to do randomization inference.\n\nSet up\nWe have two equivalent DiD specifications, the canonical (interaction) form:\n\\[\nY_{it} = \\alpha + \\gamma D_i + \\lambda Post_t + \\delta (D_i\\cdot Post_t) + X_{it}'\\beta + \\varepsilon_{it},\n\\]\nand the change score regression:\n\\[\n\\Delta Y_i = \\lambda + \\delta D_i + (\\Delta X_i)'\\beta + \\Delta\\varepsilon_i,\n\\quad \\text{where } \\Delta\\varepsilon_i = \\varepsilon_{i1}-\\varepsilon_{i0}.\n\\]\nThese two regressions are equivalent for the estimand \\(\\delta\\).\n\n\nOLS standard error\nEven though both regressions estimate the same \\(\\delta\\), they are not the same statistical model for the disturbances.\n\nThe error term is transformed\nIn levels you work with \\(\\varepsilon_{it}\\), while in differences you work with \\(\\Delta\\varepsilon_i = \\varepsilon_{i1}-\\varepsilon_{i0}\\). Even under the simplifying assumption that \\(\\varepsilon_{it}\\) is iid with variance \\(\\sigma^2\\), \\[\n\\operatorname{Var}(\\Delta\\varepsilon_i) = \\operatorname{Var}(\\varepsilon_{i1}-\\varepsilon_{i0}) = 2\\sigma^2.\n\\] So the scale and structure of the regression residuals changes when you difference.\n\n\nThe covariance structure implied by the data differs\nIn the canonical form you have two observations per unit. If there is any within-unit dependence across time (very common in practice), then treating all 2,000 observations as independent (the default “nonrobust” OLS SEs) is misspecified.\nIn the change score regression, each unit contributes one observation, so there is no within-unit time series left—but the error is now the difference \\(\\Delta\\varepsilon_i\\), which typically has a different variance than the level errors.\n\n\nDegrees of freedom and the estimated residual variance\nFollowing the example:\n\nPanel regression: \\(N_{obs}=2000\\) (two rows per unit)\nChange score regression: \\(N_{obs}=1000\\) (one row per unit)\n\nThe OLS estimate of the residual variance uses \\(\\text{SSR}/\\text{df}_{resid}\\), and \\(\\text{df}_{resid}\\) differs across the two regressions. That alone can move standard errors slightly.\n\n\nSmall differences propagate into t-stats and CIs\nA t-statistic is:\n\\[\nt = \\frac{\\hat\\delta}{\\widehat{SE}(\\hat\\delta)}.\n\\]\nSo even if \\(\\hat\\delta\\) differs only a little (Monte Carlo noise), and \\(\\widehat{SE}(\\hat\\delta)\\) differs only a little, the t-stat and Wald CI endpoints can still move noticeably.\n\n\n\nDiscussion\nIf you are here because you want to do randomization inference, this is irrelevant; go on. If you checked the equivalence of the two forms, which you can easily do with this script, and found out that the results are not exactly the same, then this section is for you.",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Difference-in-Differences"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/did.html#references",
+    "href": "projects/ritest/examples/did.html#references",
+    "title": "Difference-in-Differences",
+    "section": "References",
+    "text": "References\nNot a complete list by any means, just a few resources related to this section.\n\nBaker, A., Callaway, B., Cunningham, S., Goodman-Bacon, A., & Sant’Anna, P. H. (2025). Difference-in-differences designs: A practitioner’s guide.\nCallaway, B. (2022). Difference-in-Differences for Policy Evaluation. In: Zimmermann, K.F. (eds) Handbook of Labor, Human Resources and Population Economics\nDukes O, Shahn Z, Renson A. Change scores and baseline adjustment: splitting the difference (in differences). International Journal of Epidemiology",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Difference-in-Differences"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/did.html#footnotes",
+    "href": "projects/ritest/examples/did.html#footnotes",
+    "title": "Difference-in-Differences",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThe reason for which ritest does not work directly with the canonical \\(2\\times2\\) DiD specification is the interaction term. The specification includes permute_var in both ways: on its own, which is not a problem, and interacted with another variable, which is a big problem. ritest will only permute the column containing the permute_var alone, ignoring the interaction. This issue is not limited to DiD, it applies to any specification in which permute_var plays any role in the specification beyond a simple additive term.↩︎",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Difference-in-Differences"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/custom.html",
+    "href": "projects/ritest/examples/custom.html",
+    "title": "Custom statistics",
     "section": "",
-    "text": "Introduction\nI find it useful to see what tools and software people use, so here is mine.\nMost of my time is spent writing in two places: VS Code for code, and Obsidian for everything else. I use the Catppuccin theme in both, which gives me a consistent dark interface that is easy on the eyes.\nThis page will likely grow as I add or change tools.\n\n\nBrowser\nI use Brave as my main browser, primarily for its built-in privacy features. It also makes it easy to disable extras like VPN, LeoAI, and crypto wallet integrations, keeping the browser lean.\nHere are some extensions that I find useful: SingleFile for saving complete webpages offline, Obsidian Web Clipper to send content directly into my (Obsidian) vault, Zotero Connector for capturing references and metadata, the Google Scholar Button for quick access to papers and citations, and Unpaywall to find legal open-access versions of academic articles.\n\n\nFocus (music)\nI often work with background music, especially for deep focus. “Regular” music works, but it can also become a distraction on its own, either because it is too engaging or because of track changes. Classical and other lyric-free music works well. I mostly use Brain.fm, which claims to create music that is “purpose-built to steer you into a desired mental state”. I haven’t read the research, but it is supposed to have some real science behind it. All I can say is that it has been good for me. The “purpose-built” part also seems to work beyond deep focus, with modes for learning, creativity, chill, unwind, destress, sleep, and more.\nI still use it every day, but I have three issues with Brain.fm: no real desktop app (they only just released one for Mac), it’s hard to tell when (and if) new material comes out, and the price feels too high. On the last point, services like Spotify and Youtube Music return about 60-70% of revenue to right holders, while Brain.fm produces its own catalogue. Intellectual property rights don’t enter as a variable cost in the same way; it seems closer to a one-time cost to create tracks. I don’t know how expensive it is to make music for Brain.fm, but it’s almost certainly far cheaper than producing commercial songs. Yet the pricing doesn’t reflect those different cost structures. As of August 2025 in Sweden, you pay about USD 13.5/month for Spotify, USD 12.5/month for Youtube Music, and USD 10/month for Brain.fm (USD 5.8 if billed annually).\n\n\nIDE + Text editor\nVS Code, all the way. I use it for all my coding, which includes Python, Stata (with Stata Enhanced and StataRun), and R. I use it to build this website via Quarto. And I also use it for typesetting in LaTeX. Git for version control, with GitHub as the remote. I also use GitHub Copilot when it helps.\nIn the past I used Sublime, which remains a great lightweight text editor, but I prefer to have everything in one place. Before that, I had a good run with Atom (deceased).\n\n\nMail\nI use Gmail with three extensions: Simplify for a cleaner interface and lots of features, Inbox When Ready to hide the inbox when I don’t want to see it, and TeX for Gmail when I need to include equations.\n\n\nNote-taking\nI use Obsidian to write everything (except code) that I want to keep: papers, ideas, recipes, health notes, things I learn, and more.\nI added a few community plugins to Obsidian to make it more useful: Better Word Count, Dataview, Go to Heading, Hider, Homepage, LaTeX Suite, Pandoc, Quick Switcher++, QuickAdd, Remember Cursor Position, Templater, Text Snippets, TTS, Typewriter Scroll, and Zotero Integration.\nObsidian is flexible. You can make it look and act however you want. The developers are active and reasonable. The community builds and maintains a huge set of plugins. The roadmap is transparent. It isn’t open-source, but it has regular audits and a feasible business model, which gives me confidence in using it long term. The business model is simple: you only pay if you want sync or publishing. Because it’s funded directly by users, development can stay focused on product rather than outside pressures. Most importantly, notes stay in plain text Markdown files (see File over app). That means no lock-in.\n\n\nOrganization\nI use Workflowy for text that is meant to disappear: shopping lists, to-do lists, travel itineraries, and more. It’s a simple, fast, and flexible outliner that works well for quick notes and lists. I mostly like it because it is so simple and I can easily use it without touching my mouse. It’s been my main planning tool for a while.\n\n\nOS\nMy main OS is Fedora (Linux), which provides modern kernels and software alongside a clean upstream GNOME experience. Although somewhat sponsored by IBM through its Red Hat ties, development remains credibly independent. Ubuntu is convenient and user-friendly, though I prefer Fedora’s approach over Canonical’s Snap ecosystem. Linux Mint attempts to “clean” Ubuntu but still relies on Canonical dependencies. I have no concerns about Debian, but it may be too conservative for my needs.\nI’ve made few changes to Fedora’s default setup. Perhaps most useful, I made my shell (bash) a bit faster to use by adding zoxide for directory navigation.\nI also keep Windows (dual-boot with GRUB) for a few applications that lack Linux support, such as Garmin Express and BankID.\n\n\nSync and storage\nI use Nextcloud for file sync, hosted on Hetzner Storage Share (Hosted in the EU). It is a bit more complex to set up than alternatives like Dropbox, but it gives you so much control and flexibility for a fraction of the monthly cost (~20% of the current price of Dropbox for two users).\nNextcloud is open-source, so it can run on a self-hosted server or on any third-party provider. It has a large community and many plugins to extend its functionality. I do not use any of the Nextcloud apps, but I do use the Nextcloud Desktop Client to sync files across devices. Once setup is done, it works seamlessly in the background. Virtual File System (VFS) works well in Windows, although it is better to keep a separate sync folder with VFS enabled. As of August 2025, VFS does not work in Linux, but it is easy to mount a remote folder with WebDAV.\n\n\nWebsite\nThis site is built with Quarto, rendered locally, and deployed via GitHub Pages. Quarto handles the formatting and publishing workflow in Markdown and integrates directly with VS Code, which makes editing and updating simple. Once the site is built, I push the changes to GitHub, and it automatically updates the live site.\n\n\n Disclaimer \n\n\n\n\n\n Back to top"
+    "text": "ritest() can run randomization inference (RI) on any statistic, as long as you can write a generic function, python stat_fn(df_perm) -&gt; float, that takes a permuted dataset and returns a single number. In this page I show a few common statistics you may want to use. F\nThe script to run all the examples is in the repository.",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Custom statistics"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/custom.html#data",
+    "href": "projects/ritest/examples/custom.html#data",
+    "title": "Custom statistics",
+    "section": "Data",
+    "text": "Data\nI use a small toy dataset (n = 100) with complete randomization (exactly half treated). The outcome has mild heavy tails so the robust and distributional statistics have something to do.\ndef make_data(n: int = 100, seed: int = 1, tau: float = 0.6) -&gt; pd.DataFrame:\n    rng = np.random.default_rng(seed)\n\n    # Complete randomization: exactly n/2 treated\n    z = np.zeros(n, dtype=int)\n    z[: n // 2] = 1\n    z = rng.permutation(z)\n\n    x = rng.normal(size=n)\n\n    # Mixture noise for heavier tails\n    u = rng.uniform(size=n)\n    eps = np.where(\n        u &lt; 0.85, rng.normal(scale=1.0, size=n), rng.normal(scale=3.0, size=n)\n    )\n\n    # Treatment shifts the location a bit (tau), plus baseline x effect\n    y = 0.2 + tau * z + 0.5 * x + eps\n\n    return pd.DataFrame({\"y\": y, \"z\": z, \"x\": x})",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Custom statistics"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/custom.html#shared-utility",
+    "href": "projects/ritest/examples/custom.html#shared-utility",
+    "title": "Custom statistics",
+    "section": "Shared utility",
+    "text": "Shared utility\nAll statistics below are computed from the treated and control outcome vectors.\ndef _split_groups(df: pd.DataFrame) -&gt; tuple[np.ndarray, np.ndarray]:\n    y = df[\"y\"].to_numpy(dtype=float)\n    z = df[\"z\"].to_numpy(dtype=int)\n    yt = y[z == 1]\n    yc = y[z == 0]\n    return yt, yc",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Custom statistics"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/custom.html#median-difference",
+    "href": "projects/ritest/examples/custom.html#median-difference",
+    "title": "Custom statistics",
+    "section": "Median difference",
+    "text": "Median difference\n\nCodeResults\n\n\nDefine stat_median_diff(...):\ndef stat_median_diff(df: pd.DataFrame) -&gt; float:\n    yt, yc = _split_groups(df)\n    return float(np.median(yt) - np.median(yc))\nritest call:\nres = ritest(\n    df=df,\n    permute_var=\"z\",\n    stat_fn=stat_median_diff,\n    alternative=\"two-sided\",\n    reps=1000,\n    seed=1,\n    ci_mode=\"none\",\n)\n\n\nRandomization inference result (ritest)\n--------------------------------------\n\nCoefficient\n-----------\nObserved effect (β̂):   0.3310\nCoefficient CI bounds: not computed\nCoefficient CI band:   not computed\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.2440 (24.4%)\nP-value CI @ α=0.050: [0.2070, 0.2841]\nAs-or-more extreme:     122 / 500",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Custom statistics"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/custom.html#trimmed-mean-difference",
+    "href": "projects/ritest/examples/custom.html#trimmed-mean-difference",
+    "title": "Custom statistics",
+    "section": "10% trimmed mean difference",
+    "text": "10% trimmed mean difference\n\nCodeResults\n\n\nfrom scipy.stats import trim_mean\n\ndef stat_trimmed_mean_diff(df: pd.DataFrame, prop: float = 0.10) -&gt; float:\n    yt, yc = _split_groups(df)\n    mt = float(trim_mean(yt, proportiontocut=prop))\n    mc = float(trim_mean(yc, proportiontocut=prop))\n    return float(mt - mc)\nritest call:\nres = ritest(\n    df=df,\n    permute_var=\"z\",\n    stat_fn=stat_trimmed_mean_diff,\n    alternative=\"two-sided\",\n    reps=1000,\n    seed=1,\n    ci_mode=\"none\",\n)\n\n\nRandomization inference result (ritest)\n--------------------------------------\n\nCoefficient\n-----------\nObserved effect (β̂):   0.4985\nCoefficient CI bounds: not computed\nCoefficient CI band:   not computed\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.0400 (4.0%)\nP-value CI @ α=0.050: [0.0246, 0.0611]\nAs-or-more extreme:     20 / 500",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Custom statistics"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/custom.html#difference-in-mean-ranks",
+    "href": "projects/ritest/examples/custom.html#difference-in-mean-ranks",
+    "title": "Custom statistics",
+    "section": "Difference in mean ranks",
+    "text": "Difference in mean ranks\nCompute pooled ranks of y, then take the difference in mean ranks between treated and control.\n\nCodeResults\n\n\nDefine stat_mean_rank_diff:\nfrom scipy.stats import rankdata\n\ndef stat_mean_rank_diff(df: pd.DataFrame) -&gt; float:\n    y = df[\"y\"].to_numpy(dtype=float)\n    z = df[\"z\"].to_numpy(dtype=int)\n    r = rankdata(y, method=\"average\")  # ranks 1..n\n    return float(r[z == 1].mean() - r[z == 0].mean())\nritest call:\nres = ritest(\n    df=df,\n    permute_var=\"z\",\n    stat_fn=stat_mean_rank_diff,\n    alternative=\"two-sided\",\n    reps=1000,\n    seed=1,\n    ci_mode=\"none\",\n)\n\n\nRandomization inference result (ritest)\n--------------------------------------\n\nCoefficient\n-----------\nObserved effect (β̂):   10.4000\nCoefficient CI bounds: not computed\nCoefficient CI band:   not computed\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.0760 (7.6%)\nP-value CI @ α=0.050: [0.0543, 0.1028]\nAs-or-more extreme:     38 / 500",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Custom statistics"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/custom.html#rank-biserial-correlation",
+    "href": "projects/ritest/examples/custom.html#rank-biserial-correlation",
+    "title": "Custom statistics",
+    "section": "Rank-biserial correlation",
+    "text": "Rank-biserial correlation\nRank-biserial correlation (RBC) is an effect size in [-1, 1] derived from ranks (via the Mann–Whitney U statistic). Positive values mean treated outcomes tend to be larger.\n\nCodeResults\n\n\nDefine stat_rank_biserial(...):\nfrom scipy.stats import rankdata\n\ndef stat_rank_biserial(df: pd.DataFrame) -&gt; float:\n    y = df[\"y\"].to_numpy(dtype=float)\n    z = df[\"z\"].to_numpy(dtype=int)\n    r = rankdata(y, method=\"average\")\n\n    nt = int((z == 1).sum())\n    nc = int((z == 0).sum())\n\n    sum_ranks_t = float(r[z == 1].sum())\n    u = sum_ranks_t - nt * (nt + 1) / 2.0\n    rbc = 2.0 * u / (nt * nc) - 1.0\n    return float(rbc)\nritest call:\nres = ritest(\n    df=df,\n    permute_var=\"z\",\n    stat_fn=stat_rank_biserial,\n    alternative=\"two-sided\",\n    reps=1000,\n    seed=1,\n    ci_mode=\"none\",\n)\n\n\nRandomization inference result (ritest)\n--------------------------------------\n\nCoefficient\n-----------\nObserved effect (β̂):   0.2080\nCoefficient CI bounds: not computed\nCoefficient CI band:   not computed\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.0780 (7.8%)\nP-value CI @ α=0.050: [0.0561, 0.1051]\nAs-or-more extreme:     39 / 500",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Custom statistics"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/custom.html#kolmogorovsmirnov-statistic",
+    "href": "projects/ritest/examples/custom.html#kolmogorovsmirnov-statistic",
+    "title": "Custom statistics",
+    "section": "Kolmogorov–Smirnov statistic",
+    "text": "Kolmogorov–Smirnov statistic\nTwo-sample Kolmogorov–Smirnov (KS) statistic D &gt;= 0, the maximum gap between the treated and control empirical CDFs.\nBecause D is non-negative and “larger means more different”, a right-tailed RI is a natural default here.\n\nCodeResults\n\n\nDefine stat_ks(...) and auxiliary _ks_stat_and_pvalue(...):\nfrom scipy.stats import ks_2samp\n\ndef _ks_stat_and_pvalue(yt: np.ndarray, yc: np.ndarray) -&gt; tuple[float, float]:\n    r = ks_2samp(yt, yc, alternative=\"two-sided\")\n    try:\n        stat = float(r.statistic)\n        pval = float(r.pvalue)\n    except AttributeError:\n        stat = float(r[0])\n        pval = float(r[1])\n    return stat, pval\n\n\ndef stat_ks(df: pd.DataFrame) -&gt; float:\n    yt, yc = _split_groups(df)\n    stat, _ = _ks_stat_and_pvalue(yt, yc)\n    return float(stat)\nritest call:\nres = ritest(\n    df=df,\n    permute_var=\"z\",\n    stat_fn=stat_ks,\n    alternative=\"right\",\n    reps=1000,\n    seed=1,\n    ci_mode=\"none\",\n)\n\n\nRandomization inference result (ritest)\n--------------------------------------\n\nCoefficient\n-----------\nObserved effect (β̂):   0.2200\nCoefficient CI bounds: not computed\nCoefficient CI band:   not computed\n\nPermutation test\n----------------\nTail (alternative):     right\np-value:                0.1780 (17.8%)\nP-value CI @ α=0.050: [0.1455, 0.2144]\nAs-or-more extreme:     89 / 500",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Custom statistics"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/settings.html",
+    "href": "projects/ritest/examples/settings.html",
+    "title": "Settings",
+    "section": "",
+    "text": "ritest has a small global configuration dictionary (DEFAULTS) plus helper functions to read, update, reset, and temporarily override those settings. The recommended way is to use the helpers, not to mutate DEFAULTS directly.",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Settings"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/settings.html#what-is-global-config",
+    "href": "projects/ritest/examples/settings.html#what-is-global-config",
+    "title": "Settings",
+    "section": "What is “global config”?",
+    "text": "What is “global config”?\n\nIt is process-wide state used by ritest internals.\nChanges made with ritest_set() persist until you reset them (or the Python process ends).\nTemporary changes should use ritest_config(...) (context manager), which automatically restores the previous values.",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Settings"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/settings.html#read-settings-ritest_get",
+    "href": "projects/ritest/examples/settings.html#read-settings-ritest_get",
+    "title": "Settings",
+    "section": "Read settings: ritest_get()",
+    "text": "Read settings: ritest_get()\nGet one value:\nfrom ritest import ritest_get\n\nreps = ritest_get(\"reps\")\nalpha = ritest_get(\"alpha\")\nGet a shallow copy of all settings:\ncfg = ritest_get()",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Settings"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/settings.html#update-settings-persistently-ritest_set",
+    "href": "projects/ritest/examples/settings.html#update-settings-persistently-ritest_set",
+    "title": "Settings",
+    "section": "Update settings (persistently): ritest_set()",
+    "text": "Update settings (persistently): ritest_set()\nSet one or more keys (validated):\nfrom ritest import ritest_set\n\nritest_set({\"reps\": 5000, \"seed\": 123, \"alpha\": 0.1})\nThis mutates global state; use ritest_config(...) if you only want a temporary change.",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Settings"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/settings.html#reset-settings-ritest_reset",
+    "href": "projects/ritest/examples/settings.html#reset-settings-ritest_reset",
+    "title": "Settings",
+    "section": "Reset settings: ritest_reset()",
+    "text": "Reset settings: ritest_reset()\nReset everything to import-time defaults:\nfrom ritest import ritest_reset\n\nritest_reset()\nReset only selected keys:\nritest_reset([\"reps\", \"seed\"])",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Settings"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/settings.html#temporary-overrides-ritest_config...-context-manager",
+    "href": "projects/ritest/examples/settings.html#temporary-overrides-ritest_config...-context-manager",
+    "title": "Settings",
+    "section": "Temporary overrides: ritest_config(...) (context manager)",
+    "text": "Temporary overrides: ritest_config(...) (context manager)\nUse this when you want “just for this block” settings:\nfrom ritest import ritest_config\n\nwith ritest_config({\"reps\": 2000, \"alpha\": 0.1}):\n    # calls here see the temporary values\n    ...\n# outside the block, the previous config is restored\nThis is the recommended way to make temporary changes. It always restores the prior settings on exit, even if an exception happens.",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Settings"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/settings.html#common-keys-you-may-change",
+    "href": "projects/ritest/examples/settings.html#common-keys-you-may-change",
+    "title": "Settings",
+    "section": "Common keys you may change",
+    "text": "Common keys you may change\nThese keys exist in ritest.config.DEFAULTS:\n\nreps (int &gt; 0): number of permutations.\nseed (int): RNG seed.\nalpha (0 &lt; float &lt; 1): significance level used for p-values and CIs.\nn_jobs (int): -1 for all cores, or &gt;= 1.\nci_mode (\"none\" | \"bounds\" | \"grid\"): coefficient CI controls.\nci_range, ci_step, ci_tol (positive numbers): coefficient-CI search/grid controls.\nci_method (\"cp\" | \"normal\"): method for the permutation p-value CI in config.\n\nNote on naming (known issue to be fixed):\n\nThe config key ci_method uses \"cp\" or \"normal\".\nThe public ritest(...) argument annotation lists \"clopper-pearson\" or \"normal\". ",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Settings"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/settings.html#interaction-with-ritest...-arguments",
+    "href": "projects/ritest/examples/settings.html#interaction-with-ritest...-arguments",
+    "title": "Settings",
+    "section": "Interaction with ritest(...) arguments",
+    "text": "Interaction with ritest(...) arguments\nIn ritest(...), most knobs default to the global config only when you pass None. If you pass an explicit value, it overrides the global setting for that call. In general, if you are making simple changes, like reps, in which the scope is one ritest(...) call, it is convenient to do it on the call. If the scope goes beyond, you may want to use ritest_config(...).\nfrom ritest import ritest\n\nres = ritest(\n    df=df,\n    permute_var=\"Z\",\n    formula=\"y ~ Z + x1 + x2\",\n    stat=\"Z\",\n    reps=3000,          # per-call override\n    alpha=None,         # uses global alpha\n)",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Settings"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/pvalues.html",
+    "href": "projects/ritest/technical-notes/pvalues.html",
+    "title": "\\(p\\)-values",
+    "section": "",
+    "text": "A randomization \\(p\\)-value answers a concrete question: if the same assignment mechanism were re-run, how often would the chosen statistic look at least as extreme as the observed one? In ritest, that question is implemented by repeatedly re-assigning the treatment vector (subject to the same constraints) and recomputing the statistic, producing a randomization distribution that is specific to the realized design and the chosen statistic.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "$p$-values"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/pvalues.html#definition",
+    "href": "projects/ritest/technical-notes/pvalues.html#definition",
+    "title": "\\(p\\)-values",
+    "section": "Definition",
+    "text": "Definition\nLet \\(T(\\cdot)\\) denote the test statistic (a scalar). Let \\(T_{\\text{obs}}\\) be the statistic computed on the observed data, and let \\({T_r}_{r=1}^R\\) be the statistics computed under \\(R\\) re-randomizations of the assignment.\nritest defines the Monte Carlo randomization \\(p\\)-value as \\[\n\\hat p \\;=\\; \\frac{1}{R}\\sum_{r=1}^{R}\n\\mathbf{1}\\!\\left\\{T_r \\text{ is at least as extreme as } T_{\\mathrm{obs}}\\right\\},\n\\] with the extremeness rule determined by alternative:\n\ntwo-sided: \\[\n  \\mathbf{1}\\!\\left\\{ |T_r| \\ge |T_{\\mathrm{obs}}| \\right\\}\n  \\]\nright: \\[\n  \\mathbf{1}\\!\\left\\{ T_r \\ge T_{\\mathrm{obs}} \\right\\}\n  \\]\nleft: \\[\n\\mathbf{1}\\!\\left\\{ T_r \\le T_{\\mathrm{obs}} \\right\\}\n  \\]\n\nThis becomes a Fisher-exact randomization \\(p\\)-value only in the special case where the set \\({T_r}\\) is computed over the full set of admissible assignments under the design. In typical use, \\(R\\) is a Monte Carlo sample, and \\(\\hat p\\) is an estimate of the underlying design-based \\(p\\)-value.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "$p$-values"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/pvalues.html#assignment-re-randomization",
+    "href": "projects/ritest/technical-notes/pvalues.html#assignment-re-randomization",
+    "title": "\\(p\\)-values",
+    "section": "Assignment re-randomization",
+    "text": "Assignment re-randomization\nritest generates each re-randomized assignment by permuting the observed assignment vector (the permute_var column), with the permutation scheme determined by optional strata and cluster arguments:\n\nPlain: a global permutation of the assignment vector.\nStratified (strata only): independent permutations within each stratum; treated/control counts are preserved within each stratum.\nCluster (cluster only): permutation at the cluster level and broadcast to units; this requires the observed assignment to be constant within each cluster.\nCluster within strata (cluster and strata): cluster-level permutation performed separately within each stratum, then broadcast within the stratum.\n\nritest can either:\n\naccept a user-supplied permutation matrix perms (shape \\((R,N)\\)), in which case reps is taken as perms.shape[0], or\ngenerate permutations internally, either as a full in-memory matrix or as streamed blocks when memory may be an issue (chunking does not change the generated sequence given a fixed seed).",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "$p$-values"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/pvalues.html#linear-path",
+    "href": "projects/ritest/technical-notes/pvalues.html#linear-path",
+    "title": "\\(p\\)-values",
+    "section": "Linear path",
+    "text": "Linear path\nWhen stat_fn is not supplied, ritest uses the treatment coefficient from a linear model as the statistic. Concretely, the statistic is the coefficient on the treatment column in a (optionally weighted) least squares regression of \\(y\\) on the design matrix \\(X\\) (which includes the treatment column and any additional covariates specified by formula).\n\nThe coefficient as a linear functional of the outcome\nLet \\(X\\in\\mathbb{R}^{N\\times k}\\) be the design matrix and \\(y\\in\\mathbb{R}^N\\) the outcome. If analytic weights are supplied, define the diagonal weight matrix \\(\\Omega=\\mathrm{diag}(w)\\) and the weighted variables \\[\nX_w = \\Omega^{1/2}X,\\qquad y_w = \\Omega^{1/2}y,\n\\] and otherwise \\(X_w=X\\) and \\(y_w=y\\).\nLet \\(j\\) index the treatment column inside \\(X\\) (this is treat_idx in the implementation), and let \\(e_j\\in\\mathbb{R}^k\\) be the coordinate vector with a 1 in position \\(j\\). The weighted least squares coefficient on the treatment column is \\[\n\\hat\\beta\n= e_j^\\top (X_w^\\top X_w)^{-1}X_w^\\top y_w.\n\\]\nDefine the \\(c\\)-vector \\[\nc^\\top \\equiv e_j^\\top (X_w^\\top X_w)^{-1}X_w^\\top,\n\\] so that \\[\n\\hat\\beta = c^\\top y_w.\n\\]\nFastOLS computes \\((X_w^\\top X_w)^{-1}\\) via a Cholesky factorization of \\(X_w^\\top X_w\\) (which requires \\(N&gt;k\\) and a well-conditioned design). It then constructs:\n\nc_vector as the \\(c\\) defined above (in the weighted metric),\nbeta_hat as \\(\\hat\\beta=c^\\top y_w\\),\nc_perm_vector, which equals \\(c\\) in OLS and \\(c\\odot \\sqrt{w}\\) in WLS, so permutation computations can consistently use unweighted-length-\\(N\\) vectors.\n\n\n\nObserved robust standard error\nFor the observed statistic only, FastOLS optionally computes a robust variance estimate:\n\nHC1 (“White”) when cluster is not supplied.\nCRV1 when cluster is supplied (requires at least 2 unique clusters).\n\nThis yields an observed robust standard error se, used later for sizing coefficient-CI grids. During permutation evaluation, ritest sets compute_vcov=False to avoid the covariance computation.\n\n\nHow permutations enter the linear path in ritest\nIn the linear path, each permutation replaces the treatment column of the design matrix:\n\nLet \\(X_{\\text{obs}}\\) denote the observed design matrix.\nFor permutation \\(r\\), ritest constructs \\(X_r\\) by copying \\(X_{\\text{obs}}\\) and replacing column \\(j\\) with the permuted assignment vector.\n\nritest then fits FastOLS(y, X_r, treat_idx, ..., compute_vcov=False) and records:\n\n\\(T_r = \\hat\\beta_r\\) as the permutation statistic.\n\nIn addition, FastOLS exposes a scalar \\[\nK \\equiv c^\\top T_{\\text{metric}},\n\\] where \\(T_{\\text{metric}}\\) is the treatment column in the same metric used to construct \\(c\\). ritest records:\n\n\\(K_{\\text{obs}}\\) from the observed fit,\n\\(K_r\\) from each permuted fit, computed as \\(K_r = c_r^\\top T_{\\text{obs, metric}}\\) (the observed treatment column in the same metric).\n\nThese \\(K\\) quantities are not needed for the \\(p\\)-value itself; they are the foundation for the fast confidence bands.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "$p$-values"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/pvalues.html#generic-path",
+    "href": "projects/ritest/technical-notes/pvalues.html#generic-path",
+    "title": "\\(p\\)-values",
+    "section": "Generic path",
+    "text": "Generic path\nWhen stat_fn is supplied, the statistic is treated as a black box:\n\\[\nT_{\\text{obs}} = \\texttt{stat\\_fn}(\\texttt{df}).\n\\]\nFor each permutation \\(r\\):\n\nritest creates a shallow copy of the original dataframe. This makes the generic path slow regardless of the complexity of stat_fn.\nIt replaces the permute_var column with the permuted assignment vector.\nIt evaluates the statistic: \\[\nT_r = \\texttt{stat\\_fn}(\\texttt{df}_r).\n\\]\n\nThis path is the reference implementation for arbitrary estimators: any procedure that can be written as a function of the dataframe can be used, including non-linear estimators and multi-step workflows. The randomization \\(p\\)-value is then computed from \\({T_r}_{r=1}^R\\) using the same tail rules described above.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "$p$-values"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/big-o.html",
+    "href": "projects/ritest/technical-notes/big-o.html",
+    "title": "Complexity",
+    "section": "",
+    "text": "This section describes how runtime and memory scale with problem size.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Complexity"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/big-o.html#quick-intro-to-big-o",
+    "href": "projects/ritest/technical-notes/big-o.html#quick-intro-to-big-o",
+    "title": "Complexity",
+    "section": "Quick intro to Big-O",
+    "text": "Quick intro to Big-O\nBig-O notation describes how cost grows as inputs grow, ignoring constant factors.\n\n\\(O(N)\\): cost grows linearly with \\(N\\).\n\\(O(N^2)\\): doubling \\(N\\) increases cost by about \\(4\\times\\).\n\\(O(Nk^2 + k^3)\\): a sum of terms; whichever dominates at the relevant sizes drives performance.\n\nThe key dimensions for ritest are:\n\n\\(N\\): number of observations (rows).\n\\(k\\): number of regressors in the design matrix used by the linear path (columns of \\(X\\)).\n\\(R\\): number of permutations (reps).\n\\(G\\): number of grid points for coefficient CI bands/bounds. \\[\nG \\approx 1 + \\left\\lfloor \\frac{2\\cdot \\texttt{ci\\_range}}{\\texttt{ci\\_step}} \\right\\rfloor.\n\\]",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Complexity"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/big-o.html#permutation-generation",
+    "href": "projects/ritest/technical-notes/big-o.html#permutation-generation",
+    "title": "Complexity",
+    "section": "Permutation generation",
+    "text": "Permutation generation\nritest needs a sequence of permuted assignment vectors of length \\(N\\). Two internal modes exist (unless the user supplies a full permutation matrix via permutations).\n\nEager generation (full matrix)\nIf the estimated memory footprint of the full permutation matrix fits under a soft budget, ritest calls generate_permuted_matrix(...) and builds an array of shape \\((R, N)\\).\n\nTime: \\(O(RN)\\) to generate the permutations.\nMemory: \\(O(RN)\\) elements.\n\nImplementation details that matter for constants:\n\nUpstream validation stores the assignment vector as int8 (0/1), so the eager permutation matrix uses 1 byte per element when internally generated from that vector. In bytes, this is approximately \\[\n\\text{bytes}(T_{\\mathrm{perms}}) \\approx R \\cdot N \\cdot 1.\n\\]\n\nThe default soft budget is perm_chunk_bytes = 256 * 1024 * 1024 bytes.\n\n\nLazy generation (streaming)\nIf the estimated full matrix would exceed the soft budget, ritest switches to a lazy or streaming mode:\n\nIt chooses chunk_rows based on perm_chunk_bytes and a conservative estimate of bytes per row.\nIt iterates blocks from iter_permuted_matrix(...), each block with shape \\((m, N)\\) and \\(m \\le \\texttt{chunk\\_rows}\\).\nTime: still \\(O(RN)\\) total permutation generation work.\nMemory: \\(O(mN)\\) for the current block only, plus storage for results.\n\nThis is the main memory-protection mechanism in run.py. The default lower bound is perm_chunk_min_rows = 64, to avoid tiny blocks.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Complexity"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/big-o.html#computing-permutation-p-values",
+    "href": "projects/ritest/technical-notes/big-o.html#computing-permutation-p-values",
+    "title": "Complexity",
+    "section": "Computing permutation \\(p\\)-values",
+    "text": "Computing permutation \\(p\\)-values\nritest always computes the permutation \\(p\\)-value by counting exceedances over \\(R\\) permutation statistics. The cost driver is how each permutation statistic is obtained.\n\nLinear path\nIn the linear path, each permutation replaces one column of the design matrix (the target regressor, typically treatment) and fits FastOLS(..., compute_vcov=False).\nInside FastOLS.__init__, the main cost is computing and inverting the normal equations in weighted metric:\n\nForm \\(X_w^\\top X_w\\): \\(O(Nk^2)\\).\nCholesky + triangular solves (to get \\((X_w^\\top X_w)^{-1}\\)): \\(O(k^3)\\).\nCompute the coefficient from the cached objects: lower order relative to the above.\n\nSo the total cost to compute permutation statistics is approximately: \\[\nO\\!\\left(R\\,(Nk^2 + k^3)\\right),\n\\] plus permutation generation cost (\\(O(RN)\\)) if permutations are generated internally.\nMemory in this path is dominated by:\n\nstoring results: perm_stats is float64 of length \\(R\\) (\\(8R\\) bytes),\nplus K_perm (float64 of length \\(R\\)) when coefficient CI is requested in the linear path (\\(8R\\) bytes),\nplus the eager or streamed permutation storage described earlier.\n\n\n\nGeneric path (stat_fn): cost depends on the statistic\nIn the generic path, for each permutation ritest:\n\nconstructs a shallow copy of the dataframe,\nreplaces the permute_var column with the permuted assignment vector,\nevaluates stat_fn(dfp).\n\nThe total time is: \\[\nO\\!\\left(R\\,(C_{\\texttt{stat\\_fn}} + N)\\right)\n\\] where \\(C_{\\texttt{stat\\_fn}}\\) is the cost of computing the statistic on one permuted dataset. This term is unknown a priori and can dominate everything else.\nPermutation generation is still \\(O(RN)\\) if ritest generates permutations internally.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Complexity"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/big-o.html#p-value-confidence-intervals",
+    "href": "projects/ritest/technical-notes/big-o.html#p-value-confidence-intervals",
+    "title": "Complexity",
+    "section": "\\(p\\)-value confidence intervals",
+    "text": "\\(p\\)-value confidence intervals\n\\(p\\)-value confidence intervals use only the exceedance count \\(c\\) and \\(R\\). The cost is constant:\n\nTime: \\(O(1)\\).\nMemory: \\(O(1)\\). ## Coefficient CI bounds and bands\n\nAvailable for the linear path only. Coefficient CIs in ritest are computed by test inversion on a grid of \\(G\\) candidate values \\(\\beta_0\\), returning either bounds (ci_mode=\"bounds\") or the full band (ci_mode=\"grid\").\nIn the current implementation, both linear bounds and linear bands are computed using the same vectorised machinery in coef_ci.py.\n\nTime complexity\ncoef_ci_band_fast(...) builds:\n\ncrit: a length-\\(G\\) vector.\ndist: an \\((R \\times G)\\) array via broadcasting: \\[\n\\mathrm{dist}_{r,g} = \\hat\\beta_r - \\beta_{0,g}\\,K_r.\n\\]\n\nThen it performs a tail comparison and averages over permutations.\n\nTime: \\(O(RG)\\) comparisons and reductions.\n\ncoef_ci_bounds_fast(...) calls the band routine and then scans for grid points with \\(p(\\beta_0)\\ge \\alpha\\), which is \\(O(G)\\) on top of the band cost, so overall still \\(O(RG)\\).\n\nMemory complexity and practical implications\nThe dominant allocation is the broadcasted dist array:\n\nMemory: \\(O(RG)\\) float64 values, i.e. \\[\n\\text{bytes}(\\mathrm{dist}) \\approx 8\\,R\\,G.\n\\]\n\nThis can exceed the permutation-matrix memory when \\(R\\) is large and the grid is fine. This is the point at which ritest would “break” due to memory issues.\nExample (illustrative scale calculation):\n\n\\(R = 200{,}000\\)\n\\(\\texttt{ci\\_range}=8\\), \\(\\texttt{ci\\_step}=0.05\\) gives \\(G \\approx 321\\)\n\nThen \\[\n8RG \\approx 8 \\cdot 200{,}000 \\cdot 321 \\approx 513{,}600{,}000\\ \\text{bytes} \\approx 0.51\\ \\text{GB}.\n\\]\nThis allocation is independent of whether permutation generation is eager or streamed. It is a separate memory pressure point for coefficient bands.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Complexity"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/big-o.html#parallelism-and-numba-acceleration",
+    "href": "projects/ritest/technical-notes/big-o.html#parallelism-and-numba-acceleration",
+    "title": "Complexity",
+    "section": "Parallelism and Numba acceleration",
+    "text": "Parallelism and Numba acceleration\n\nn_jobs and thread-based parallelism\nritest parallelizes permutation evaluation with ThreadPoolExecutor in run.py when n_jobs &gt; 1. By default, config.py sets n_jobs = -1, which is coerced to “all available CPU cores”.\nWhat parallelizes:\n\nLinear path: each thread runs _fit_one(...), which creates a FastOLS instance for one permuted assignment and returns the coefficient and \\(K_r\\).\nGeneric path: each thread runs _eval_one(...), which calls stat_fn on one permuted dataset.\n\nBecause the executor is thread-based, speedups depend on whether the per-permutation work releases the Python GIL (for example, heavy NumPy linear algebra typically does; pure Python code typically does not). The implementation choice is fixed in run.py: threads, not processes.\n\n\nNumba-accelerated kernels\nTwo modules contain optional Numba acceleration:\n\nshuffle.py uses NUMBA_OK to enable @njit / prange kernels for reshuffling. When Numba is not available, it provides safe pure-Python/NumPy fallbacks that preserve call signatures.\nfast_ols.py includes fast_permuted_stats(...), which is a Numba-accelerated dot-product kernel used by FastOLS.permuted_stats(...).\n\nIn the current run.py pathway for treatment permutations, FastOLS.permuted_stats(...) is not the main driver (permutation evaluation refits FastOLS each time). Numba therefore matters most for fast permutation generation and any pathways that explicitly call permuted_stats(...).",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Complexity"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/big-o.html#more-on-memory",
+    "href": "projects/ritest/technical-notes/big-o.html#more-on-memory",
+    "title": "Complexity",
+    "section": "More on memory",
+    "text": "More on memory\nThe most common way permutation code runs into out-of-memory (OOM) errors is by building the full \\((R,N)\\) permutation matrix. ritest avoids this with streaming blocks whenever the estimated full matrix exceeds perm_chunk_bytes.\nA simple size calculation shows why this matters:\n\nIf the assignment is stored as 1 byte per element (as in ritest’s internal int8 representation), the eager permutation matrix requires approximately \\(RN\\) bytes.\nIf an environment stores the same data using a wider integer type (e.g., 4 bytes per element), the same matrix costs about \\(4RN\\) bytes.\n\nBig data example designed to crash eager storage on most PCs:\n\n\\(N = 200{,}000{,}000\\)\n\\(R = 2{,}000\\)\n\nThen even at 1 byte per element: \\[\nRN = 40{,}000{,}000{,}000\\ \\text{bytes} \\approx 40\\ \\text{GB}.\n\\]\nThis is far beyond the default perm_chunk_bytes budget and triggers the streaming path automatically. In streaming mode, peak memory for permutations is reduced to roughly \\[\nmN\\ \\text{bytes},\n\\] where \\(m\\) is the chosen chunk_rows, while still producing exactly \\(R\\) permutations in a deterministic sequence.\nNote that coefficient bands can still become trigger OOM errors because coef_ci_band_fast allocates an \\((R\\times G)\\) float64 array. Chunking permutations does not prevent that allocation.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Complexity"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/quick-start.html#installation",
+    "href": "projects/ritest/quick-start.html#installation",
+    "title": "Quick start",
+    "section": "Installation",
+    "text": "Installation\nInstall from PyPI:\npip install ritest-python\nThen import:\nfrom ritest import ritest",
+    "crumbs": [
+      "about",
+      "Quick start"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/quick-start.html#basic-use",
+    "href": "projects/ritest/quick-start.html#basic-use",
+    "title": "Quick start",
+    "section": "Basic use",
+    "text": "Basic use\n\nLinear models\nfrom ritest import ritest\n\nres = ritest(\n    df=df,\n    permute_var=\"treat\",\n    formula=\"y ~ treat + x1 + x2\",\n    stat=\"treat\",\n    reps=1000,\n)\n\n\nGeneric statistics\ndef stat_fn(d):\n    return d.y.mean() - d.y[d.treat == 0].mean()\n\nres = ritest(\n    df=df,\n    permute_var=\"treat\",\n    stat_fn=stat_fn,\n    reps=1000,\n)\n\n\nWeights, strata, clusters\nTo specify designs, either for linear models or generic statistics, pass additional arguments:\nres = ritest(\n    df=df,\n    permute_var=\"treat\",\n    formula=\"y ~ treat + x1\",\n    stat=\"treat\",\n    weights=\"w\",\n    strata=\"stratum_id\",\n    cluster=\"cluster_id\",\n)",
+    "crumbs": [
+      "about",
+      "Quick start"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/quick-start.html#results",
+    "href": "projects/ritest/quick-start.html#results",
+    "title": "Quick start",
+    "section": "Results",
+    "text": "Results\nTo see a summary of the results, use:\nres.summary()\nYou can also get individual results, for example the \\(p\\)-value, using:\np_ri = res.pval\nalso works with: obs_stat, pval_ci, coef_ci_bounds, and coef_ci_band.",
+    "crumbs": [
+      "about",
+      "Quick start"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html",
+    "href": "projects/ritest/benchmarks/generic-vs-linear.html",
+    "title": "Linear vs generic",
+    "section": "",
+    "text": "From the Colombian example we see that ritest in Python works and it is reasonably fast. That is a valid benchmark for linear models with multiple fixed effects. In this section I benchmark simple OLS vs Stata and R’s implementation of randomation inference.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Linear vs generic"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html#data",
+    "href": "projects/ritest/benchmarks/generic-vs-linear.html#data",
+    "title": "Linear vs generic",
+    "section": "Data",
+    "text": "Data\nThe simulated dataset represents a clean, randomized experiment with \\(N=10{,}000\\) observations, designed to resemble realistic applied data. Treatment is randomly assigned with equal probability (50/50), with no clustering and no stratification. The dataset includes 20 covariates covering demographics, behavior, engagement, and region indicators. These covariates are generated from a small number of latent factors, inducing realistic correlations while remaining fully observed and free of missing values.\nThe outcome is continuous and driven by covariates plus a very small heterogeneous treatment effect. The individual treatment effect is\n\\[\\tau_i = 0.02 + 0.0075 \\cdot h_i\\] ​ where \\(h_i\\) is a standardized index based on baseline spending and satisfaction, so the true average treatment effect is approximately 0.02. Outcome noise is Gaussian with standard deviation \\(5\\), chosen so that at \\(N = 10{,}000\\) the problem is nontrivial but stable, with an expected standard error for the treatment coefficient of about \\(0.05\\). This implies considerable design-based variability, so point estimates and \\(p\\)-values can differ noticeably across realizations and across implementations. In addition, randomization inference relies on a finite number of permutations, which introduces a small amount of Monte Carlo error. On average, however, inference is expected to provide little evidence against the null hypothesis of no treatment effect.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Linear vs generic"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html#stata",
+    "href": "projects/ritest/benchmarks/generic-vs-linear.html#stata",
+    "title": "Linear vs generic",
+    "section": "Stata",
+    "text": "Stata\n\nCodeResultsRuntime\n\n\nSet a local macro with all covariates except the permute variable treat:\nlocal xvars ///\n    age female education_years log_income household_size urban      ///\n    tenure_months baseline_spend purchases_12m returns_12m          ///\n    support_tickets_6m app_sessions_30d days_since_last_purchase    ///\n    email_opt_in promo_exposure_30d prior_churn credit_score        ///\n    satisfaction_score region_1 region_2 region_3 region_4\nRun ritest:\nritest treat _b[treat], reps(2000) seed(23) nodots: reg y treat `xvars'\n\n\n. ritest treat _b[treat], reps(2000) seed(23) nodots: reg y treat `xvars'\n\n      Source |       SS           df       MS      Number of obs   =    10,000\n-------------+----------------------------------   F(23, 9976)     =    701.81\n       Model |  389011.799        23  16913.5565   Prob &gt; F        =    0.0000\n    Residual |  240422.079     9,976   24.100048   R-squared       =    0.6180\n-------------+----------------------------------   Adj R-squared   =    0.6172\n       Total |  629433.877     9,999  62.9496827   Root MSE        =    4.9092\n\n------------------------------------------------------------------------------\n           y | Coefficient  Std. err.      t    P&gt;|t|     [95% conf. interval]\n-------------+----------------------------------------------------------------\n       treat |   .0819918   .0983118     0.83   0.404    -.1107191    .2747028\n       ... (clipped for brevity)\n------------------------------------------------------------------------------\n\n      Command: regress y treat age female education_years log_income\n                   household_size urban tenure_months baseline_spend\n                   purchases_12m returns_12m support_tickets_6m\n                   app_sessions_30d days_since_last_purchase email_opt_in\n                   promo_exposure_30d prior_churn credit_score\n                   satisfaction_score region_1 region_2 region_3 region_4\n        _pm_1: _b[treat]\n  res. var(s):  treat\n   Resampling:  Permuting treat\nClust. var(s):  __000001\n     Clusters:  10000\nStrata var(s):  none\n       Strata:  1\n\n------------------------------------------------------------------------------\nT            |     T(obs)       c       n   p=c/n   SE(p) [95% Conf. Interval]\n-------------+----------------------------------------------------------------\n       _pm_1 |   .0819918     786    2000  0.3930  0.0109  .3715147   .4147996\n------------------------------------------------------------------------------\nNote: Confidence interval is with respect to p=c/n.\nNote: c = #{|T| &gt;= |T(obs)|}\n\n\n183 s or about 3 minutes.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Linear vs generic"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html#r",
+    "href": "projects/ritest/benchmarks/generic-vs-linear.html#r",
+    "title": "Linear vs generic",
+    "section": "R",
+    "text": "R\n\nCodeResultsRuntime\n\n\nEstimate a linear model, save in est:\nfml &lt;- y ~ treat +\n  age + female + education_years + log_income + household_size + urban + tenure_months +\n  baseline_spend + purchases_12m + returns_12m + support_tickets_6m + app_sessions_30d +\n  days_since_last_purchase + email_opt_in + promo_exposure_30d + prior_churn + credit_score +\n  satisfaction_score + region_1 + region_2 + region_3 + region_4\n\nest &lt;- lm(fml, data = df)\nRun ritest, save results in ri:\nri &lt;- ritest(est, \"treat\", reps = 2000, seed = 23L)\nPrint results.\nprint(ri)\n\n\nOLS (lm) fit:\n\nCall:\nlm(formula = fml, data = df)\n\nResiduals:\n     Min       1Q   Median       3Q      Max\n-19.0734  -3.3147   0.0069   3.3346  19.3317\n\nCoefficients:\n                           Estimate Std. Error t value Pr(&gt;|t|)\n(Intercept)              -2.008e+01  1.414e+00 -14.205  &lt; 2e-16 ***\ntreat                     8.199e-02  9.831e-02   0.834 0.404302\n... (clipped for brevity)\n---\nSignif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1\n\nResidual standard error: 4.909 on 9976 degrees of freedom\nMultiple R-squared:  0.618, Adjusted R-squared:  0.6172\nF-statistic: 701.8 on 23 and 9976 DF,  p-value: &lt; 2.2e-16\n\n\nRI result:\n\n          Call: lm(formula = fml, data = df)\n   Res. var(s): treat\n            H0: treat=0\n     Num. reps: 2000\n────────────────────────────────────────────────────────────────────────────────\n  T(obs)         c         n     p=c/n     SE(p)   CI 2.5%  CI 97.5%\n 0.08199       839      2000    0.4195   0.01815    0.3896    0.4494\n────────────────────────────────────────────────────────────────────────────────\nNote: Confidence interval is with respect to p=c/n.\nNote: c = #{|T| &gt;= |T(obs)|}\n\n\n11.24 seconds.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Linear vs generic"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html#python",
+    "href": "projects/ritest/benchmarks/generic-vs-linear.html#python",
+    "title": "Linear vs generic",
+    "section": "Python",
+    "text": "Python\n\nCodeResultsRuntime\n\n\nSet up the model:\nPERMUTE_VAR = \"treat\"\nSTAT = \"treat\"\n\nCOVARS = [\n    \"age\",\n    \"female\",\n    \"education_years\",\n    \"log_income\",\n    \"household_size\",\n    \"urban\",\n    \"tenure_months\",\n    \"baseline_spend\",\n    \"purchases_12m\",\n    \"returns_12m\",\n    \"support_tickets_6m\",\n    \"app_sessions_30d\",\n    \"days_since_last_purchase\",\n    \"email_opt_in\",\n    \"promo_exposure_30d\",\n    \"prior_churn\",\n    \"credit_score\",\n    \"satisfaction_score\",\n    \"region_1\",\n    \"region_2\",\n    \"region_3\",\n    \"region_4\",\n]\n\nFORMULA = \"y ~ treat + \" + \" + \".join(COVARS)\nRun ritest:\nres = ritest(\n       df=df,\n       permute_var=PERMUTE_VAR,\n       formula=FORMULA,\n       stat=STAT,\n       reps=reps,\n       seed=seed,\n    )\nPrint results:\nprint(summary)\n\n\nRandomization Inference Result\n===============================\n\nCoefficient\n-----------\nObserved effect (β̂):   0.0820\nCoefficient CI bounds: [-0.1133, 0.2778]\nCoefficient CI band:   not computed\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.3990 (39.9%)\nP-value CI @ α=0.050: [0.3775, 0.4208]\nAs-or-more extreme:     798 / 2000\n\nTest configuration\n------------------\nStratified:             no\nClustered:              no\nWeights:                no\n\nSettings\n--------\nalpha:                  0.050\nseed:                   23\nci_method:              cp\nci_mode:                bounds\nn_jobs:                 4\n\n\n3.274 seconds.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Linear vs generic"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html#discussion",
+    "href": "projects/ritest/benchmarks/generic-vs-linear.html#discussion",
+    "title": "Linear vs generic",
+    "section": "Discussion",
+    "text": "Discussion\nThe result of the randomization inference aligns across the three different implementation. In terms of performance, the Python implementation is fastest (3.274 s), followed by the R implementation (11.24 s), and the Stata implementation (183 s). Compared to the Colombian example, in which the R implementation was faster due to its explicit integration of fixest to handle estimation with multiple fixed effects, the implementation in Python is now faster due to its fast engine specialized in OLS.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Linear vs generic"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/colombia.html",
+    "href": "projects/ritest/benchmarks/colombia.html",
+    "title": "Colombian example",
+    "section": "",
+    "text": "I develop an example used on R’s ritest documentation, which in turns follows the example used by David McKenzie in his blog post about Stata’s ritest.\nThe example uses real data from Colombia, using a dataset with “firms in 63 market blocks, which were formed into 31 strata (pairs and one triple), with clustered randomization at the market block level.” The researchers were interested in how many days a week firms shop at the central market. The data comes from the documentation for R’s ritest, which you can find here.\nBelow I show results from ritest using Stata, R, and Python implementations on this dataset, comparing results and performance. For all of them, I’ll run 5,000 permutations on a fixed effects model, accounting for both the stratified and clustered design of the experiment.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Colombian example"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/colombia.html#statas-ritest",
+    "href": "projects/ritest/benchmarks/colombia.html#statas-ritest",
+    "title": "Colombian example",
+    "section": "Stata’s ritest",
+    "text": "Stata’s ritest\n\nCodeResultsRuntime\n\n\nritest b_treat _b[b_treat], ///\n    nodots reps(5000) cluster(b_block) strata(b_pair) seed(546): ///\n    areg dayscorab b_treat b_dayscorab miss_b_day scorab round2 round3, ///\n    cluster(b_block) a(b_pair)\n\n\nLinear regression, absorbing indicators             Number of obs     =  2,346\nAbsorbed variable: b_pair                           No. of categories =     31\n                                                    F(5, 62)          =  99.28\n                                                    Prob &gt; F          = 0.0000\n                                                    R-squared         = 0.2928\n                                                    Adj R-squared     = 0.2820\n                                                    Root MSE          = 1.9265\n\n                                   (Std. err. adjusted for 63 clusters in b_block)\n----------------------------------------------------------------------------------\n                 |               Robust\n       dayscorab | Coefficient  std. err.      t    P&gt;|t|     [95% conf. interval]\n-----------------+----------------------------------------------------------------\n         b_treat |   -.180738   .0781737    -2.31   0.024     -.337005   -.0244711\n        ... (clipped for brevity)\n----------------------------------------------------------------------------------\n\n      Command: areg dayscorab b_treat b_dayscorab miss_b_dayscorab round2 round3, cluster(b_block) a(b_pair)\n        _pm_1: _b[b_treat]\n  res. var(s):  b_treat\n   Resampling:  Permuting b_treat\nClust. var(s):  b_block\n     Clusters:  63\nStrata var(s):  b_pair\n       Strata:  31\n\n------------------------------------------------------------------------------\nT            |     T(obs)       c       n   p=c/n   SE(p) [95% Conf. Interval]\n-------------+----------------------------------------------------------------\n       _pm_1 |   -.180738     495    5000  0.0990  0.0042  .0908575    .107614\n------------------------------------------------------------------------------\nNote: Confidence interval is with respect to p=c/n.\nNote: c = #{|T| &gt;= |T(obs)|}\n\n\n171 seconds, which is about 3 minutes.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Colombian example"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/colombia.html#rs-ritest",
+    "href": "projects/ritest/benchmarks/colombia.html#rs-ritest",
+    "title": "Colombian example",
+    "section": "R’s ritest",
+    "text": "R’s ritest\n\nCodeResultsRuntime\n\n\nEstimate the model, save to co_est:\nco_est &lt;- fixest::feols(\n  dayscorab ~ b_treat + b_dayscorab + miss_b_dayscorab + round2 + round3 | b_pair,\n  vcov = ~b_block,\n  data = colombia\n)\n\nco_est\nUse ritest, save to co_ri:\nco_ri = ritest(co_est, 'b_treat', cluster='b_block', strata='b_pair', reps=5e3, seed=546L)\n\nco_ri\n\n\n\nTable of coefficients from the fixed effects model (co_est):\n\nOLS estimation, Dep. Var.: dayscorab\nObservations: 2,346\nFixed-effects: b_pair: 31\nStandard-errors: Clustered (b_block)\n                  Estimate Std. Error  t value  Pr(&gt;|t|)\nb_treat          -0.180738   0.078174 -2.31201  0.024113 *\n... (clipped for brevity)\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\nRMSE: 1.91167     Adj. R2: 0.282038\n                Within R2: 0.266654\n\nResults from ritest (co_ri):\n\n          Call: fixest::feols(fml = dayscorab ~ b_treat + b_dayscorab + miss_b_dayscorab + round2 + round3 | b_pair, data = colombia, vcov = ~b_block)\n   Res. var(s): b_treat\n            H0: b_treat=0\n Strata var(s): b_pair\n        Strata: 31\nCluster var(s): b_block\n      Clusters: 63\n     Num. reps: 5000\n────────────────────────────────────────────────────────────────────────────────\n  T(obs)         c         n     p=c/n     SE(p)   CI 2.5%  CI 97.5%\n -0.1807       520      5000     0.104  0.007102   0.09232    0.1157\n────────────────────────────────────────────────────────────────────────────────\nNote: Confidence interval is with respect to p=c/n.\nNote: c = #{|T| &gt;= |T(obs)|}\n\n\n\n28.09 seconds.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Colombian example"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/colombia.html#pythons-ritest",
+    "href": "projects/ritest/benchmarks/colombia.html#pythons-ritest",
+    "title": "Colombian example",
+    "section": "Python’s ritest",
+    "text": "Python’s ritest\n\nCodeResultsRuntime\n\n\nUse ritest, save to res:\nres = ritest(\n       df=df,\n       permute_var=\"b_treat\",\n       formula=\"dayscorab ~ b_treat + b_dayscorab \"\n    \"+ C(b_pair) + C(miss_b_dayscorab) + C(round2) + C(round3)\",\n       stat=\"b_treat\",\n       cluster=\"b_block\",\n       strata=\"b_pair\",\n       reps=5000,\n       seed=546,\n)\nPrint a summary of the results:\n\nsummary = res.summary(print_out=False)\n\nprint(summary)\n\n\nCoefficient\n-----------\nObserved effect (β̂):   -0.1807\nCoefficient CI bounds: [-0.4024, 0.0378]\nCoefficient CI band:   not computed\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.1034 (10.3%)\nP-value CI @ α=0.050: [0.0951, 0.1122]\nAs-or-more extreme:     517 / 5000\n\nTest configuration\n------------------\nStratified:             yes\nClustered:              yes\nWeights:                no\n\nSettings\n--------\nalpha:                  0.050\nseed:                   546\nci_method:              cp\nci_mode:                bounds\nn_jobs:                 4\n\n\n56.35 seconds.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Colombian example"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/colombia.html#discussion",
+    "href": "projects/ritest/benchmarks/colombia.html#discussion",
+    "title": "Colombian example",
+    "section": "Discussion",
+    "text": "Discussion\nOk, this is great, you don’t have to take my word: my ritest works. It yields basically the same results as Stata’s and R’s implementation. The minor differences are expected, given differences between languages and implementation.\nIn terms of performance, R’s implementation is clearly the fastest of them all (28 seconds). This makes sense, since it explictly supports estimation with multiple fixed effects powered by fixest::feols(). On the other extreme, Stata’s implementation is the slowest (171 seconds). This is also expected, Stata’s not necessarily known for speed. Both of these implementations take a “clever” aproach to deal with high-dimensional fixed effects, avoiding the need to create dummy variables for all fixed effects categories. My ritest, which lies in the middle in terms of performance (56 seconds), takes a naive approach and creates dummy variables for all fixed effects categories; its speed comes from a very fast OLS engine under the hood. While I could use a wrapper to use pyfixest, which is definitely faster per estimation with high dimensional fixed effects, the transaction cost would make it slower than the current approach.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Colombian example"
+    ]
+  },
+  {
+    "objectID": "projects/test project/index.html",
+    "href": "projects/test project/index.html",
+    "title": "test project",
+    "section": "",
+    "text": "This is a test project"
+  },
+  {
+    "objectID": "projects/test project/index.html#subsection-1",
+    "href": "projects/test project/index.html#subsection-1",
+    "title": "test project",
+    "section": "subsection 1",
+    "text": "subsection 1\nfdfsd"
+  },
+  {
+    "objectID": "projects/test project/index.html#subsection-2",
+    "href": "projects/test project/index.html#subsection-2",
+    "title": "test project",
+    "section": "subsection 2",
+    "text": "subsection 2\ndsfdsf"
   },
   {
     "objectID": "disclaimer.html",
@@ -101,34 +632,480 @@
     "text": "Disclaimer\nInformational use only. The content on this website is for general information. It is not professional advice (legal, medical, financial, or otherwise).\nNo guarantees. I try to keep content accurate and current, but I make no warranties of completeness, reliability, or fitness for any purpose. Use at your own risk.\nPersonal views. Views expressed are my own and do not represent those of employers, institutions, or collaborators.\nExternal links. Links to other sites are provided for convenience. I do not control or endorse their content and am not responsible for any losses arising from their use.\nNo endorsement. Mention of products, tools, or services does not constitute endorsement or sponsorship.\nCopyright & fair use. Unless stated otherwise, content is © the author. You may quote short excerpts with attribution and a link back.\nContact. If you spot an error or have concerns, contact me.\nUpdates. This disclaimer may change without notice; continued use of the site implies acceptance of the current version.\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "projects/mpa/index.html",
-    "href": "projects/mpa/index.html",
-    "title": "mpa",
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Tabaré Capitán",
     "section": "",
-    "text": "Landing content…\n\n\n\n Back to top"
+    "text": "Here you can find my research outputs, including published papers and working papers. You can find citation metrics and other outputs on my Google Scholar profile."
+  },
+  {
+    "objectID": "research.html#overview",
+    "href": "research.html#overview",
+    "title": "Tabaré Capitán",
+    "section": "",
+    "text": "Here you can find my research outputs, including published papers and working papers. You can find citation metrics and other outputs on my Google Scholar profile."
+  },
+  {
+    "objectID": "research.html#working-papers",
+    "href": "research.html#working-papers",
+    "title": "Tabaré Capitán",
+    "section": "Working papers",
+    "text": "Working papers\n\n\n\n\n\n\nInvestigating the analytical reproducibility of the social and behavioural sciences 🔍\n\n\n\n\n\nAbstract: Published claims should be reproducible, yielding the same result when applying the same analysis to the same data. In a stratified random sample of 600 papers published from 2009 to 2018 in 62 journals spanning the social and behavioral sciences, authors of 146 (24.3% [95% CI 21.1 - 27.9%]) papers made data available to assess reproducibility. We assessed whether originally reported claims could be reproduced using the same data and analysis for papers in which authors made data available or we obtained source data to reconstruct the dataset. 76.2 (52.6% [95% CI 45.2 - 59.9%]) papers were rated as precisely reproducible and 104.4 (72.1% [95% CI 65.1 - 78.8%]) papers as at least approximately reproducible (within 15% of the original effects or within .05 of original p-values) after weighting 553 claims from 144.9 papers. We observed higher reproducibility for papers from Political Science and Economics than other disciplines, and for more recent than older papers.\n\n\nCoauthored with many others (resubmitted, Nature)\n\n\n\n\n\n\n\n\n\n\nBugs with benefits: The economics of edible insects 🦗\n\n\n\n\n\nAbstract: We explore the economics of edible insects. We describe in detail how the biology of insects makes them a remarkable source of nutrition that can be produced with less resources and a lesser environmental impact than alternatives (e.g., meat). Thus, edible insects have the potential to play a key role in a more sustainable food system, thereby mitigating climate change and biodiversity loss. Furthermore, we highlight that a tropical climate and an abundance of endemic insect species in much of Latin America gives the region a competitive advantage in developing the industry to integrate edible insects into the food system.\n\n\nCoauthored with Capitán\n\n\n\n\n\n\n\n\n\n\nBite me: Towards consumers’ acceptance of edible insects 🦗\n\n\n\n\n\nAbstract: This paper studies whether simple informational interventions can increase consumerwillingness to try insect-based foods. Using a randomized survey experiment in the Nordic countries, participants received either a control message or one emphasizing the environmental or nutritional benefits of edible insects. Neither intervention had a significant effect on willingness to try, suggesting that attitudes toward entomophagy are largely pre-determined. These results imply that firmsshouldprioritizeaccessibility and product developmentoverpersuasivemessaging. Policymakers seeking to promote insect consumption should consider structural incentives rather than relying on awareness campaigns.\n\n\nSole author\n\n\n\n\n\n\n\n\n\n\nExpecting to get it: An endowment effect for information 🙈\n\n\n\n\n\nAbstract: We introduce the endowment effect for information: A tendency to value information more when expecting it, independently of its content. This result follows from a standard belief-based model of reference-dependent preferences and it is driven by gain-loss utility, though the information’s instrumentality can modulate the effect. Results from a laboratory experiment align with the theoretical results. Thus, we contribute to further understanding information avoidance beyond content or timing effects. Additionally, we discuss three experimental observations from a sequential manipulation of beliefs in our experimental design, laying groundwork for a theory of referent formation.\n\n\nCoauthored with Thunström, Van ’t Veld, and Nordström\n\n\n\n\n\n\n\n\n\n\nDecision error decreases with risk aversion: A replication 🔍\n\n\n\n\n\nAbstract: Coming soon.\n\n\nCoauthored with Méndez"
+  },
+  {
+    "objectID": "research.html#published-papers",
+    "href": "research.html#published-papers",
+    "title": "Tabaré Capitán",
+    "section": "Published papers",
+    "text": "Published papers\n\n\n\n\n\n\nShow me the labels: Using pre-nudges to reduce calorie information avoidance 🙈\n\n\n\n\n\nAbstract: Calorie labeling is a popular policy to address the obesity epidemic, but it has had little empirical success. Under the premise that willful avoidance of information plays a role in this result, we propose a novel approach—pre-nudges—to make consumers more receptive to calorie information. Unlike nudges, which are used to directly influence a choice, pre-nudges are used to directly influence how consumers react to the nudge itself (the calorie label). In line with predictions from our theoretical analysis, we test two pre-nudges in the context of menu labeling: one aims to increase self-efficacy, and the other one highlights the long-term health risks of overeating. In a large-scale laboratory experiment, we find that both pre-nudges reduce calorie information avoidance. Overall, our paper suggests a possible role for pre-nudges in addressing the obesity epidemic—one of the largest public health issues globally—and illustrates the potential usefulness of pre-nudges more generally.\n\n\nCoauthored with Thunström, Van ’t Veld, Nordström, and Shogren (accepted, Journal of Risk and Uncertainty) | pdf\n\n\n\n\n\n\n\n\n\n\nInvestigating the analytical robustness of the social and behavioural sciences 🔍\n\n\n\n\n\nAbstract: The same dataset can be analysed in different justifiable ways to answer the same research question, potentially challenging the robustness of empirical science. In this crowd initiative, we investigated the degree to which research findings in the social and behavioural sciences are contingent on analysts’ choices. To explore this question, we took a sample of 100 studies published between 2009 and 2018 in criminology, demography, economics and finance, management, marketing and organisational behaviour, political science, psychology, and sociology. For one claim of each study, at least five re-analysts were invited to independently re-analyze the original data. The statistical appropriateness of the re-analyses was assessed in peer evaluations and the robustness indicators were inspected along a range of research characteristics and study designs. Only 31% of the independent re-analyses yielded the same result (within a tolerance region of +/- 0.05 Cohen’s d) as the original report. Even with a four times broader tolerance region, this indicator did not go above 56%. Regarding the conclusions drawn, only 34% of the studies remained analytically robust, meaning that all re-analysts reported evidence for the originally reported claim. Using a more liberal definition of robustness produced comparable result (39% when &gt;80% re-analysis agreement with the original conclusion defined analytical robustness). This explorative study suggests that the common single-path analyses in social and behavioural research cannot be assumed to be robust to alternative — similarly justifiable — analyses. Therefore, we recommend the development and use of practices to explore and communicate this neglected source of uncertainty.\n\n\nCoauthored with many others (accepted, Nature)\n\n\n\n\n\n\n\n\n\n\nInvestigating the analytical replicability of the social and behavioural sciences 🔍\n\n\n\n\n\nAbstract: We attempted replications of 274 claims of positive results from 164 papers published from 2009 to 2018 in 54 journals in the social and behavioral sciences. Replications were high-powered on average to detect the original effect size (Median = 99.1%), used original materials when relevant and available, and were peer-reviewed in advance through a standardized internal protocol. Replications showed statistically significant results in the same pattern as the original study for 151 of 274 claims (55.1% [95% CI 49.2 - 60.9%]) and for 80.8 of 164 papers (49.3% [95% CI 43.8 - 54.7%]) weighed for replicating multiple claims per paper. Some decline is expected based on power to detect original effects and regression to the mean due to replicating only positive results. For claims where effect sizes could be converted to Pearson’s r, the median effect size was 0.23 [95% CI 0.21 - 0.28] for original studies and 0.11 [95% CI 0.08 - 0.13] for replication studies, a 53.4% [95% CI 42.3 - 65.2%] reduction in correlation and a 78.3% [95% CI 66.7 - 87.8%] reduction in shared variance. Thirteen methods for evaluating replication success provided estimates ranging from 31.1% to 77.1% (median = 49.9%), though most methods could only be applied to a subset of the replicated papers (median = 89.3%; range 63.3% to 100.0%). The conditions that promote or inhibit replicability are worthy of additional investigation.\n\n\nCoauthored with many others (accepted, Nature)\n\n\n\n\n\n\n\n\n\n\nPredicting the replicability of social and behavioural science claims in a crisis: The COVID19 Preprint Replication Project 🔍\n\n\n\n\n\nAbstract: Replication is an important “credibility control” mechanism for clarifying the reliability of published findings. However, replication is costly, and it is infeasible to replicate everything. Accurate, fast, lower cost alternatives such as eliciting predictions from experts or novices could accelerate credibility assessment and improve allocation of replication resources for important and uncertain findings. We elicited judgments from experts and novices on 100 claims from preprints about an emerging area of research (COVID-19 pandemic) using a new interactive structured elicitation protocol and we conducted 35 new replications. Participants’ average estimates were similar to the observed replication rate of 60%. After interacting with their peers, novices updated both their estimates and confidence in their judgements significantly more than experts and their accuracy improved more between elicitation rounds. Experts’ average accuracy was 0.54 (95% CI: [0.454, 0.628]) after interaction and they correctly classified 55% of claims; novices’ average accuracy was 0.55 (95% CI: [0.455, 0.628]), correctly classifying 61% of claims. The difference in accuracy between experts and novices was not significant and their judgments on the full set of claims were strongly correlated (r=.48). These results are consistent with prior investigations eliciting predictions about the replicability of published findings in established areas of research and suggest that expertise may not be required for credibility assessment of some research findings.\n\n\nCoauthored with many others (Nature Human Behavior, 2024) | pdf • journal\n\n\n\n\n\n\n\n\n\n\nCan large language models help predict results from a complex behavioural science study? 🔍\n\n\n\n\n\nAbstract: We tested whether large language models (LLMs) can help predict results from a complex behavioural science experiment. In study 1, we investigated the performance of the widely used LLMs GPT-3.5 and GPT-4 in forecasting the empirical findings of a large-scale experimental study of emotions, gender, and social perceptions. We found that GPT-4, but not GPT-3.5, matched the performance of a cohort of 119 human experts, with correlations of 0.89 (GPT-4), 0.07 (GPT-3.5) and 0.87 (human experts) between aggregated forecasts and realized effect sizes. In study 2, providing participants from a university subject pool the opportunity to query a GPT-4 powered chatbot significantly increased the accuracy of their forecasts. Results indicate promise for artificial intelligence (AI) to help anticipate—at scale and minimal cost—which claims about human behaviour will find empirical support and which ones will not. Our discussion focuses on avenues for human–AI collaboration in science.\n\n\nCoauthored as part of a large-scale collaboration with many others (Royal Society Open Science, 2024) | journal\n\n\n\n\n\n\n\n\n\n\nOn the trajectory of discrimination: A meta-analysis and forecasting survey capturing 44 years of field experiments on gender and hiring decisions 👷🏼‍♀️👷🏼‍♂️\n\n\n\n\n\nAbstract: A preregistered meta-analysis, including 244 effect sizes from 85 field audits and 361,645 individual job applications, tested for gender bias in hiring practices in female-stereotypical and gender-balanced as well as male-stereotypical jobs from 1976 to 2020. A “red team” of independent experts was recruited to increase the rigor and robustness of our meta-analytic approach. A forecasting survey further examined whether laypeople (n = 499 nationally representative adults) and scientists (n = 312) could predict the results. Forecasters correctly anticipated reductions in discrimination against female candidates over time. However, both scientists and laypeople overestimated the continuation of bias against female candidates. Instead, selection bias in favor of male over female candidates was eliminated and, if anything, slightly reversed in sign starting in 2009 for mixed-gender and male-stereotypical jobs in our sample. Forecasters further failed to anticipate that discrimination against male candidates for stereotypically female jobs would remain stable across the decades.\n\n\nCoauthored as part of an author-consortium with many others (Organizational Behavior and Human Decision Processes, 2023) | journal\n\n\n\n\n\n\n\n\n\n\nTime-varying pricing may increase total electricity consumption: Evidence from Costa Rica ⚡\n\n\n\n\n\nAbstract: We study the implementation of a time-varying pricing (TVP) program by a major electricity utility in Costa Rica. Because of particular features of the data, we use recently developed understanding of the two-way fixed effects differences-in-differences estimator along with event-study specifications to interpret our results. Similar to previous research, we find that the program reduces consumption during peak-hours. However, in contrast with previous research, we find that the program increases total consumption. With a stylized economic model, we show how these seemingly conflicted results may not be at odds. The key element of the model is that previous research used data from rich countries, in which the use of heating and cooling devices drives electricity consumption, but we use data from a tropical middle-income country, where very few households have heating or cooling devices. Since there is not much room for technological changes (which might reduce consumption at all times), behavioral changes to reduce consumption during peak hours are not enough to offset the increased consumption during off-peak hours (when electricity is cheaper). Our results serve as a cautionary piece of evidence for policy makers interested in reducing consumption during peak hours—the goal can potentially be achieved with TVP, but the cost is increased total consumption.\n\n\nCoauthored with Alpízar, Madrigal-Ballestero, and Pattanayak (Resource and Energy Economics, 2021) | pdf • code • journal\n\n\n\n\n\n\n\n\n\n\nMPAs and Aspatial Policies in Artisanal Fisheries 🐠\n\n\n\n\n\nAbstract: Using a spatially explicit framework with low/middle-income country coastal characteristics, we explore whether aspatial policies augment the impact of marine protected areas (MPAs) and identify when MPAs create income burdens on communities. When MPAs are small and budget-constrained, they cannot resolve all of the marinescape’s open-access issues, but they can create win-win opportunities for ecological and economic goals at lower levels of enforcement. Aspatial policies—taxes, gear restrictions, license restrictions, and livelihood programs—improve the MPA’s ability to generate ecological gains, and licenses and livelihood policies can mitigate MPA-induced income burdens. Managers can use MPA location and enforcement level, in conjunction with the MPA’s impact on fish dispersal, to induce exit from fishing and to direct the spatial leakage of effort. Our framework provides further insights for conservation-development policy in coastal settings, and we explore stylized examples in Costa Rica and Tanzania.\n\n\nCoauthored with Albers, Ashworth, Madrigal-Ballestero, and Preonas (Marine Resource Economics, 2021) | pdf • journal\n\n\n\n\n\n\n\n\n\n\nOptimal siting, sizing, and enforcement of marine protected areas 🐠\n\n\n\n\n\nAbstract: The design of protected areas, whether marine or terrestrial, rarely considers how people respond to the imposition of no-take sites with complete or incomplete enforcement. Consequently, these protected areas may fail to achieve their intended goal. We present and solve a spatial bio-economic model in which a manager chooses the optimal location, size, and enforcement level of a marine protected area (MPA). This manager acts as a Stackelberg leader, and her choices consider villagers’ best response to the MPA in a spatial Nash equilibrium of fishing site and effort decisions. Relevant to lower income country settings but general to other settings, we incorporate limited enforcement budgets, distance costs of traveling to fishing sites, and labor allocation to onshore wage opportunities. The optimal MPA varies markedly across alternative manager goals and budget sizes, but always induce changes in villagers’ decisions as a function of distance, dispersal, and wage. We consider MPA managers with ecological conservation goals and with economic goals, and identify the shortcomings of several common manager decision rules, including those focused on: (1) fishery outcomes rather than broader economic goals, (2) fish stocks at MPA sites rather than across the full marinescape, (3) absolute levels rather than additional values, and (4) costless enforcement. Our results demonstrate that such naïve or overly narrow decision rules can lead to inefficient MPA designs that miss economic and conservation opportunities.\n\n\nCoauthored with Albers, Preonas, Robinson, and Madrigal-Ballestero (Environmental and Resource Economics, 2020) | journal\n\n\n\n\n\n\n\n\n\n\nDeterminants of food insecurity among smallholder farmer households in Central America 🌽\n\n\n\n\n\nAbstract: To ensure food security among rural communities under a changing climate, policymakers need information on the prevalence and determinants of food insecurity, the role of extreme weather events in exacerbating food insecurity, and the strategies that farmers use to cope with food insecurity. Using household surveys in Guatemala and Honduras, we explore the prevalence of food insecurity among smallholder farmers on both a recurrent (seasonal) and episodic (resulting from extreme weather events) basis, analyze the factors associated with both types of food insecurity, and document farmer coping strategies. Of the 439 households surveyed, 56% experienced recurrent food insecurity, 36% experienced episodic food insecurity due to extreme weather events, and 24% experienced both types. Food insecurity among smallholder farmers was correlated with sociodemographic factors (e.g., age, education, migration) and asset ownership. The factors affecting food insecurity differed between type and prevalence of food insecurity. Our results highlight the urgent need for policies and programs to help smallholder farmers improve their overall food security and resilience to extreme weather shocks. Such policies should focus on enhancing farmer education levels, securing land tenure, empowering women, promoting generational knowledge exchange, and providing emergency food support in the lean season or following extreme weather events.\n\n\nCoauthored with many others (Regional Environmental Change, 2020) | journal\n\n\n\n\n\n\n\n\n\n\nHousehold and community responses to seasonal droughts in rural areas of Costa Rica 💧\n\n\n\n\n\nAbstract: This paper describes the adaptive responses of rural households and community-based drinking water organizations (CWOs) during seasonal droughts in Costa Rica. It empirically characterizes the adaptive measures used by 3,410 households and 81 CWOs in the driest area of the country. Volumetric pricing is a powerful adaptation option for managing water scarcity during these periods. However, these pricing schemes are not properly set to recover costs for adequate investment in water infrastructure. As a result, many CWOs rely on external financial support to cover these investments. The financial and governance restrictions characterizing most CWOs must be overcome in order to implement most of the adaptation measures identified for preparedness against seasonal drought. On the other hand, some rural households use water sources in addition to the tap water provided by CWOs (e.g. bottled water), as well as water-storing devices (e.g. buckets). The lack of effective adaptation of CWOs to water scarcity, expressed by unreliable piped-water systems, would probably lead to a higher use of these alternatives. This would entail higher costs to households, due to the time and resources invested in these activities. These costs and the potential additional costs on health represent the social costs of community failures to adapt to drier scenarios in existing piped-water systems.\n\n\nCoauthored with Madrigal-Ballestero, Salas, and Córdoba (Waterlines, 2019) | pdf • journal\n\n\n\n\n\n\n\n\n\n\nMarine protected areas in Costa Rica: How do artisanal fishers respond? 🐠\n\n\n\n\n\nAbstract: Costa Rica is considering expanding their marine protected areas (MPAs) to conserve marine resources. Due to the importance of households’ responses to an MPA in defining the MPA’s ecological and economic outcomes, this paper uses an economic decision framework to interpret data from near-MPA household surveys to inform this policy discussion. The model and data suggest that the impact of expanding MPAs relies on levels of enforcement and on-shore wages. If larger near-shore MPAs can produce high wages through increased tourism, MPA expansions could provide ecological benefits with low burdens to communities. Due to distance costs and gear investments, however, MPAs farther off-shore may place high burdens on off-shore fishers.\n\n\nCoauthored with Madrigal-Ballestero, Albers, and Salas (Ambio, 2017) | pdf • journal"
+  },
+  {
+    "objectID": "toolbox.html",
+    "href": "toolbox.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Introduction\nI find it useful to see what tools and software people use, so here is mine.\nMost of my time is spent writing in two places: VS Code for code, and Obsidian for everything else. I use the Catppuccin theme in both, which gives me a consistent dark interface that is easy on the eyes.\nThis page will likely grow as I add or change tools.\n\n\nBrowser\nI use Brave as my main browser, primarily for its built-in privacy features. It also makes it easy to disable extras like VPN, LeoAI, and crypto wallet integrations, keeping the browser lean.\nHere are some extensions that I find useful: SingleFile for saving complete webpages offline, Obsidian Web Clipper to send content directly into my (Obsidian) vault, Zotero Connector for capturing references and metadata, the Google Scholar Button for quick access to papers and citations, and Unpaywall to find legal open-access versions of academic articles.\n\n\nFocus (music)\nI often work with background music, especially for deep focus. “Regular” music works, but it can also become a distraction on its own, either because it is too engaging or because of track changes. Classical and other lyric-free music works well. I mostly use Brain.fm, which claims to create music that is “purpose-built to steer you into a desired mental state”. I haven’t read the research, but it is supposed to have some real science behind it. All I can say is that it has been good for me. The “purpose-built” part also seems to work beyond deep focus, with modes for learning, creativity, chill, unwind, destress, sleep, and more.\nI still use it every day, but I have three issues with Brain.fm: no real desktop app (they only just released one for Mac), it’s hard to tell when (and if) new material comes out, and the price feels too high. On the last point, services like Spotify and Youtube Music return about 60-70% of revenue to right holders, while Brain.fm produces its own catalogue. Intellectual property rights don’t enter as a variable cost in the same way; it seems closer to a one-time cost to create tracks. I don’t know how expensive it is to make music for Brain.fm, but it’s almost certainly far cheaper than producing commercial songs. Yet the pricing doesn’t reflect those different cost structures. As of August 2025 in Sweden, you pay about USD 13.5/month for Spotify, USD 12.5/month for Youtube Music, and USD 10/month for Brain.fm (USD 5.8 if billed annually).\n\n\nIDE + Text editor\nVS Code, all the way. I use it for all my coding, which includes Python, Stata (with Stata Enhanced and StataRun), and R. I use it to build this website via Quarto. And I also use it for typesetting in LaTeX. Git for version control, with GitHub as the remote. I also use GitHub Copilot when it helps.\nIn the past I used Sublime, which remains a great lightweight text editor, but I prefer to have everything in one place. Before that, I had a good run with Atom (deceased).\n\n\nMail\nI use Gmail with three extensions: Simplify for a cleaner interface and lots of features, Inbox When Ready to hide the inbox when I don’t want to see it, and TeX for Gmail when I need to include equations.\n\n\nNote-taking\nI use Obsidian to write everything (except code) that I want to keep: papers, ideas, recipes, health notes, things I learn, and more.\nI added a few community plugins to Obsidian to make it more useful: Better Word Count, Dataview, Go to Heading, Hider, Homepage, LaTeX Suite, Pandoc, Quick Switcher++, QuickAdd, Remember Cursor Position, Templater, Text Snippets, TTS, Typewriter Scroll, and Zotero Integration.\nObsidian is flexible. You can make it look and act however you want. The developers are active and reasonable. The community builds and maintains a huge set of plugins. The roadmap is transparent. It isn’t open-source, but it has regular audits and a feasible business model, which gives me confidence in using it long term. The business model is simple: you only pay if you want sync or publishing. Because it’s funded directly by users, development can stay focused on product rather than outside pressures. Most importantly, notes stay in plain text Markdown files (see File over app). That means no lock-in.\n\n\nOrganization\nI use Workflowy for text that is meant to disappear: shopping lists, to-do lists, travel itineraries, and more. It’s a simple, fast, and flexible outliner that works well for quick notes and lists. I mostly like it because it is so simple and I can easily use it without touching my mouse. It’s been my main planning tool for a while.\n\n\nOS\nMy main OS is Fedora (Linux), which provides modern kernels and software alongside a clean upstream GNOME experience. Although somewhat sponsored by IBM through its Red Hat ties, development remains credibly independent. Ubuntu is convenient and user-friendly, though I prefer Fedora’s approach over Canonical’s Snap ecosystem. Linux Mint attempts to “clean” Ubuntu but still relies on Canonical dependencies. I have no concerns about Debian, but it may be too conservative for my needs.\nI’ve made few changes to Fedora’s default setup. Perhaps most useful, I made my shell (bash) a bit faster to use by adding zoxide for directory navigation.\nI also keep Windows (dual-boot with GRUB) for a few applications that lack Linux support, such as Garmin Express and BankID.\n\n\nSync and storage\nI use Nextcloud for file sync, hosted on Hetzner Storage Share (Hosted in the EU). It is a bit more complex to set up than alternatives like Dropbox, but it gives you so much control and flexibility for a fraction of the monthly cost (~20% of the current price of Dropbox for two users).\nNextcloud is open-source, so it can run on a self-hosted server or on any third-party provider. It has a large community and many plugins to extend its functionality. I do not use any of the Nextcloud apps, but I do use the Nextcloud Desktop Client to sync files across devices. Once setup is done, it works seamlessly in the background. Virtual File System (VFS) works well in Windows, although it is better to keep a separate sync folder with VFS enabled. As of August 2025, VFS does not work in Linux, but it is easy to mount a remote folder with WebDAV.\n\n\nWebsite\nThis site is built with Quarto, rendered locally, and deployed via GitHub Pages. Quarto handles the formatting and publishing workflow in Markdown and integrates directly with VS Code, which makes editing and updating simple. Once the site is built, I push the changes to GitHub, and it automatically updates the live site.\n\n\n Disclaimer \n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "projects/ritest/api.html",
+    "href": "projects/ritest/api.html",
+    "title": "API reference",
+    "section": "",
+    "text": "This page documents the stable, user-facing API of the ritest package as exposed through ritest.__init__.\nThe public interface consists of:\n\nritest — high-level entry point for randomization inference.\nRitestResult — result container.\nConfiguration helpers:\n\nritest_set\nritest_get\nritest_reset\nritest_config\n\n\nThis reflects the __all__ definition in ritest/__init__.py.\n\n\n\nfrom ritest import ritest\n\nresult = ritest(\n    *,\n    df,\n    permute_var: str,\n    # linear path\n    formula: str | None = None,\n    stat: str | None = None,\n    # generic path\n    stat_fn: callable | None = None,\n    # test controls\n    alternative: {\"two-sided\",\"left\",\"right\"} = \"two-sided\",\n    reps: int | None = None,\n    alpha: float | None = None,\n    ci_method: {\"clopper-pearson\",\"normal\"} | None = None,\n    ci_mode: {\"none\",\"bounds\",\"grid\"} | None = None,\n    coef_ci_generic: bool | None = None,\n    # infra\n    n_jobs: int | None = None,\n    seed: int | None = None,\n    # design\n    weights: str | None = None,\n    strata: str | None = None,\n    cluster: str | None = None,\n    # optional prebuilt permutations\n    permutations: object | None = None,\n    # optional band grid hints\n    ci_range: float | None = None,\n    ci_step: float | None = None,\n)\nPurpose\nRun randomization inference using either:\n\na linear model defined by formula + stat, or\na generic statistic defined via stat_fn.\n\nExactly one of stat or stat_fn must be supplied.\nReturns: a RitestResult object.\n\n\n\n\nRitestResult is the return object of ritest().\nTypical responsibilities include:\n\nstoring observed statistic and permutation distribution\nexposing scalars like estimate, p-value, confidence intervals\nproviding helpers such as summary()\n\n\n\n\n\nAll configuration utilities are exposed at the top-level:\nfrom ritest import (\n    ritest_set,\n    ritest_get,\n    ritest_reset,\n    ritest_config,\n)\n\n\nSet one or more global defaults for future ritest() calls.\nExample:\nritest_set(reps=999, alpha=0.05)\n\n\n\nRetrieve the current value of a configuration option.\nExample:\nritest_get(\"reps\")\n\n\n\nReset global configuration to package defaults.\nExample:\nritest_reset()\n\n\n\nReturn a dictionary-like structure containing current configuration (useful for reproducibility).\nExample:\ncfg = ritest_config()\nprint(cfg)\n\nThis page documents only the public names defined in:\n__all__ = [\n    \"ritest\",\n    \"RitestResult\",\n    \"ritest_set\",\n    \"ritest_get\",\n    \"ritest_reset\",\n    \"ritest_config\",\n]\nInternal modules and helpers are not part of the supported API.",
+    "crumbs": [
+      "about",
+      "API reference"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/api.html#ritest",
+    "href": "projects/ritest/api.html#ritest",
+    "title": "API reference",
+    "section": "",
+    "text": "from ritest import ritest\n\nresult = ritest(\n    *,\n    df,\n    permute_var: str,\n    # linear path\n    formula: str | None = None,\n    stat: str | None = None,\n    # generic path\n    stat_fn: callable | None = None,\n    # test controls\n    alternative: {\"two-sided\",\"left\",\"right\"} = \"two-sided\",\n    reps: int | None = None,\n    alpha: float | None = None,\n    ci_method: {\"clopper-pearson\",\"normal\"} | None = None,\n    ci_mode: {\"none\",\"bounds\",\"grid\"} | None = None,\n    coef_ci_generic: bool | None = None,\n    # infra\n    n_jobs: int | None = None,\n    seed: int | None = None,\n    # design\n    weights: str | None = None,\n    strata: str | None = None,\n    cluster: str | None = None,\n    # optional prebuilt permutations\n    permutations: object | None = None,\n    # optional band grid hints\n    ci_range: float | None = None,\n    ci_step: float | None = None,\n)\nPurpose\nRun randomization inference using either:\n\na linear model defined by formula + stat, or\na generic statistic defined via stat_fn.\n\nExactly one of stat or stat_fn must be supplied.\nReturns: a RitestResult object.",
+    "crumbs": [
+      "about",
+      "API reference"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/api.html#ritestresult",
+    "href": "projects/ritest/api.html#ritestresult",
+    "title": "API reference",
+    "section": "",
+    "text": "RitestResult is the return object of ritest().\nTypical responsibilities include:\n\nstoring observed statistic and permutation distribution\nexposing scalars like estimate, p-value, confidence intervals\nproviding helpers such as summary()",
+    "crumbs": [
+      "about",
+      "API reference"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/api.html#configuration-helpers",
+    "href": "projects/ritest/api.html#configuration-helpers",
+    "title": "API reference",
+    "section": "",
+    "text": "All configuration utilities are exposed at the top-level:\nfrom ritest import (\n    ritest_set,\n    ritest_get,\n    ritest_reset,\n    ritest_config,\n)\n\n\nSet one or more global defaults for future ritest() calls.\nExample:\nritest_set(reps=999, alpha=0.05)\n\n\n\nRetrieve the current value of a configuration option.\nExample:\nritest_get(\"reps\")\n\n\n\nReset global configuration to package defaults.\nExample:\nritest_reset()\n\n\n\nReturn a dictionary-like structure containing current configuration (useful for reproducibility).\nExample:\ncfg = ritest_config()\nprint(cfg)\n\nThis page documents only the public names defined in:\n__all__ = [\n    \"ritest\",\n    \"RitestResult\",\n    \"ritest_set\",\n    \"ritest_get\",\n    \"ritest_reset\",\n    \"ritest_config\",\n]\nInternal modules and helpers are not part of the supported API.",
+    "crumbs": [
+      "about",
+      "API reference"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/ci-bands.html",
+    "href": "projects/ritest/benchmarks/ci-bands.html",
+    "title": "Confidence bands",
+    "section": "",
+    "text": "In this section I compare the performance of feature to get confidence bands in my Python implementation, to the example provided in the documentation for the Stata implementation.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Confidence bands"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/ci-bands.html#data",
+    "href": "projects/ritest/benchmarks/ci-bands.html#data",
+    "title": "Confidence bands",
+    "section": "Data",
+    "text": "Data\nI use a toy dataset with 100 observations. Treatment is deterministically assigned so that half the observations are treated, and the outcome is generated as a linear function of treatment with a true treatment effect of 0.3 plus standard normal noise. The data are then used to estimate a simple OLS regression of the outcome on treatment and exported to CSV for use in CI-band examples.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Confidence bands"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/ci-bands.html#stata",
+    "href": "projects/ritest/benchmarks/ci-bands.html#stata",
+    "title": "Confidence bands",
+    "section": "Stata",
+    "text": "Stata\nThe code is directly taken from Stata’s ritest github repository. I made a few edits to make it easier to compare, but it remains computationally equivalent to the example presented in the repository.\n\nCodeResultsRuntime\n\n\nRun ritest to find which hypotheses for the treatment effect in [-1,1] can[not] be rejected.\ntempfile gridsearch\n\npostfile pf TE pval using `gridsearch'\n\nforval i=-1(0.05)1 {\n\n    qui ritest treatment (_b[treatment]), reps(500) null(y `i') seed(123): reg y treatment // tc: run with _b[treatment] only to compare\n\n\n    mat pval = r(p)\n    post pf (`i') (pval[1,1])\n}\npostclose pf\nPlot the bands, with ugly vertical lines at \\(-0.2\\), \\(0.2\\), and \\(0.6\\) to help comparison with the Python results:\nuse `gridsearch', clear\n\ntw line pval TE , yline(0.05) xline(-0.2 0.2 0.6)\n\n\nFor additional context, for a null of equality to zero,\nritest treatment (_b[treatment]), nodots reps(500) seed(123): ///\n           reg y treatment\nthis is the randomization inference result:\n      Command: regress y treatment\n        _pm_1: _b[treatment]\n  res. var(s):  treatment\n   Resampling:  Permuting treatment\nClust. var(s):  __000001\n     Clusters:  100\nStrata var(s):  none\n       Strata:  1\n\n------------------------------------------------------------------------------\nT            |     T(obs)       c       n   p=c/n   SE(p) [95% Conf. Interval]\n-------------+----------------------------------------------------------------\n       _pm_1 |   .2019068     181     500  0.3620  0.0215  .3198005    .405842\n------------------------------------------------------------------------------\nNote: Confidence interval is with respect to p=c/n.\nNote: c = #{|T| &gt;= |T(obs)|}\nThe confidence bands, which are obtained by running ritest with a set of different non-zero nulls, are shown below:\n\n\n\nConfidence bands\n\n\nwhere the y-axis represents randomization inference \\(p\\)-values, and the x-axis represent treatment effects. The blue line maps different treatment effects to \\(p\\)-values. The horizontal line is drawn at 0.05, corresponding to the most common significance level. These plot shows that the point estimate is about \\(0.2\\) and the confidence interval is roughly \\([-0.2,0.6]\\).\n\n\n276 seconds.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Confidence bands"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/ci-bands.html#python",
+    "href": "projects/ritest/benchmarks/ci-bands.html#python",
+    "title": "Confidence bands",
+    "section": "Python",
+    "text": "Python\n\nCodeResultsRuntime\n\n\nRun ritest, set ci_mode=\"grid\" to get confidence bands:\n    res = ritest(\n        df=df,\n        permute_var=\"treatment\",\n        formula=\"y ~ treatment\",\n        stat=\"treatment\",\n        reps=500,\n        ci_mode=\"grid\",\n        seed=123,\n    )\n\n\nFor additional context, this is the result of the randomization inference for a null of equality to zero:\nRandomization Inference Result\n===============================\n\nCoefficient\n-----------\nObserved effect (β̂):   0.2019\nCoefficient CI bounds: not computed\nCoefficient CI band:   available (fast-linear)\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.3100 (31.0%)\nP-value CI @ α=0.050: [0.2697, 0.3526]\nAs-or-more extreme:     155 / 500\n\nTest configuration\n------------------\nStratified:             no\nClustered:              no\nWeights:                no\n\nSettings\n--------\nalpha:                  0.050\nseed:                   123\nci_method:              cp\nci_mode:                grid\nn_jobs:                 4\n\nThe corresponding confidence band is shown below:\n\n\n\nConfidence bands\n\n\n\n\n0.061 seconds.\n\n\n\n\nDiscussion\nWith only 100 observations, the randomization-inference results differ slightly between the Stata implementation and the Python linear path, but remain close enough to be considered correct. Most importantly for this section, the resulting confidence bands are almost identical.\nIn terms of performance, the Python linear implementation is vastly faster (0.061 seconds) than the Stata implementation (276 seconds). This large difference reflects the main advantage of the Python linear path for confidence bands: in the Stata implementation, the permutation test is effectively repeated for each shifted null value, requiring the OLS regression to be re-estimated across all 500 permutations at every grid point. In Python, the permutations are run once, and the p-values across the full grid of shifted nulls are computed using fast analytic updates based on the linear model structure, without rerunning the permutation regressions for each grid point.\n(Of course, confidence bands can also be computed in R; I simply have not done that.)",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Confidence bands"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/intro.html",
+    "href": "projects/ritest/benchmarks/intro.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Stata’s ritest (by Simon Heß) has been out for about a decade now, making it a trusted way to confirm that my own ritest implementation in Python works correctly. To strenghten the confirmation, I also compare results with R’s ritest implementation (by Grant McDermott). A second goal of this subsection is to compare performance across the three implementations under different scenarios. To be clear, this is not a competition, it would not make sense, in most cases, to choose a particular language just because of randomization inference performance. It is just interesting to see how the different implementations compare.\nI’ll not include all code here, just the critical bits. You can find complete code and data for all benchmarks in the repository.\n\nThere are more implementations of randomization inference than the ones I consider in these benchmarks. For example, in Stata, Alwyn Young has shared code to do randomization inference and confidence intervals. In R, Alexander Coppock, authored ri2, documented here. I’ve not used these alternatives, but they seem like credible implementation you may want to consider.\n\n\n\n Back to top",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/ci.html",
+    "href": "projects/ritest/technical-notes/ci.html",
+    "title": "Confidence intervals",
+    "section": "",
+    "text": "Randomization inference (RI) starts from the assignment mechanism. Holding observed outcomes fixed, the assignment is re-run (exactly or by simulation) and a test statistic is recomputed. The primary object is therefore a randomization distribution for a chosen statistic under a sharp null. That naturally produces a \\(p\\)-value. Confidence intervals require an additional step: either quantifying Monte Carlo error in the \\(p\\)-value itself, or inverting a family of sharp-null tests to obtain a set of non-rejected effect values.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Confidence intervals"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/ci.html#coefficient-cis-and-bands-via-test-inversion",
+    "href": "projects/ritest/technical-notes/ci.html#coefficient-cis-and-bands-via-test-inversion",
+    "title": "Confidence intervals",
+    "section": "Coefficient CIs and bands via test inversion",
+    "text": "Coefficient CIs and bands via test inversion\nTo obtain an effect interval, define a family of sharp null hypotheses indexed by a candidate effect value \\(\\beta_0\\). For each \\(\\beta_0\\), compute the randomization \\(p\\)-value \\(p(\\beta_0)\\). The coefficient confidence set is the collection of effect values that are not rejected at level \\(\\alpha\\): \\[\n\\mathrm{CI}_{1-\\alpha} \\;=\\; \\left\\{\\beta_0:\\; p(\\beta_0)\\ge \\alpha \\right\\}.\n\\]\nritest evaluates \\(p(\\beta_0)\\) on a grid of candidate values centered at the observed statistic \\(\\hat\\beta\\):\n\nGrid center: \\(\\hat\\beta\\) (the observed statistic obs_stat).\nHalf-range: ci_range in standard-error units.\nStep size: ci_step in standard-error units.\n\nSo the grid is \\[\n\\beta_0 \\in \\left\\{\\hat\\beta + s\\cdot \\mathrm{SE}:\\; s \\in [-\\texttt{ci\\_range},\\texttt{ci\\_range}] \\text{ in steps of }\\texttt{ci\\_step}\\right\\}.\n\\]\nThe output is controlled by ci_mode:\n\nci_mode=\"none\": do not compute coefficient CI artifacts.\nci_mode=\"bounds\" (default): return only the two CI endpoints derived from the grid.\nci_mode=\"grid\": return the full band \\((\\beta_0, p(\\beta_0))\\) over the grid.\n\nEndpoint conventions:\n\ntwo-sided: return \\((\\beta_{\\min}, \\beta_{\\max})\\) over grid points with \\(p(\\beta_0)\\ge\\alpha\\).\nright: return \\((\\beta_{\\min}, +\\infty)\\) over accepted grid points.\nleft: return \\((-\\infty, \\beta_{\\max})\\) over accepted grid points.\n\nWhen ci_mode=\"grid\", ritest returns the band and intentionally does not store bounds in the result object (bounds can be read off from the band using the same acceptance rule).",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Confidence intervals"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/ci.html#generic-path",
+    "href": "projects/ritest/technical-notes/ci.html#generic-path",
+    "title": "Confidence intervals",
+    "section": "Generic path",
+    "text": "Generic path\nFor a generic statistic defined as a black box stat_fn(df) -&gt; scalar, there is no general way to “shift the null effect” in the Fisher sense. Design-exact test inversion requires, for each candidate \\(\\beta_0\\), constructing outcomes that are consistent with a sharp null (i.e., imputing missing potential outcomes under \\(H_0(\\beta_0)\\)) and then recomputing the statistic under re-randomized assignments. A black-box statistic does not expose which column is the outcome, what the treatment effect model is, or how to impute outcomes under \\(\\beta_0\\).\nAs a result, ritest does not provide a design-exact coefficient CI implementation for an arbitrary stat_fn. For certain generic functions, it may be possible for the user to write a wrapper around ritest to build confidence intervals.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Confidence intervals"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/ci.html#linear-path",
+    "href": "projects/ritest/technical-notes/ci.html#linear-path",
+    "title": "Confidence intervals",
+    "section": "Linear path",
+    "text": "Linear path\nWhen stat_fn is not supplied, ritest uses FastOLS and defines the statistic as the coefficient on a target regressor (commonly the treatment indicator) in a (weighted) least squares regression. In this case, the \\(\\beta_0\\)-indexed \\(p\\)-value can be computed efficiently without re-fitting the model for each \\(\\beta_0\\), because the coefficient is a linear functional of the outcome and the sharp-null outcome adjustment has a simple closed form.\n\nKey identity: the target coefficient is linear in the outcome\nIn FastOLS, the target coefficient can be written as \\[\n\\hat\\beta \\;=\\; c^\\top y_{\\mathrm{metric}},\n\\] where \\(c\\) is a vector determined by the design matrix (and weights), and \\(y_{\\mathrm{metric}}\\) is the outcome in the same weighted metric used internally by FastOLS.\nDefine the target regressor column in that same metric as \\(T_{\\mathrm{metric}}\\). FastOLS computes and exposes \\[\nK \\;=\\; c^\\top T_{\\mathrm{metric}}.\n\\]\nIn ritest, for the observed fit this quantity is denoted \\(K_{\\mathrm{obs}}\\). For permutation \\(r\\), ritest re-fits FastOLS with the permuted target regressor column (so \\(c\\) changes with \\(r\\)) and computes \\[\nK_r \\;=\\; c_r^\\top T_{\\mathrm{obs,metric}},\n\\] where \\(T_{\\mathrm{obs,metric}}\\) is the observed target regressor column in the metric used by FastOLS (exposed as t_metric).\n\n\nInterpreting the \\(\\beta_0\\) shift\nTo test a sharp null indexed by \\(\\beta_0\\), ritest evaluates the statistic after an implicit outcome adjustment of the form \\[\ny_{\\mathrm{metric}}^{(\\beta_0)} \\;=\\; y_{\\mathrm{metric}} - \\beta_0\\,T_{\\mathrm{obs,metric}}.\n\\]\nUsing \\(\\hat\\beta=c^\\top y_{\\mathrm{metric}}\\), the observed and permuted statistics under this adjustment become \\[\n\\hat\\beta_{\\mathrm{obs}}(\\beta_0) \\;=\\; \\hat\\beta_{\\mathrm{obs}} - \\beta_0\\,K_{\\mathrm{obs}},\n\\] \\[\n\\hat\\beta_{r}(\\beta_0) \\;=\\; \\hat\\beta_{r} - \\beta_0\\,K_{r}.\n\\]\nThis is the shift rule implemented in coef_ci.py for the fast band and bounds.\n\n\nComputing the band on a grid\nLet \\(\\{\\hat\\beta_r\\}_{r=1}^R\\) be the permutation coefficients and \\(\\{K_r\\}_{r=1}^R\\) the corresponding shift factors. For a grid of candidate values \\(\\beta_0\\) (constructed as described earlier using the observed robust standard error from FastOLS), ritest computes:\n\nshifted observed critical value (vector over grid) \\[\n\\mathrm{crit}(\\beta_0) = \\hat\\beta_{\\mathrm{obs}} - \\beta_0 K_{\\mathrm{obs}},\n\\]\nshifted permutation values (matrix: permutations \\(\\times\\) grid) \\[\n\\mathrm{dist}_r(\\beta_0) = \\hat\\beta_r - \\beta_0 K_r.\n\\]\n\nThen \\(p(\\beta_0)\\) is the mean exceedance rate under the chosen tail rule:\n\ntwo-sided: \\[\np(\\beta_0) \\;=\\; \\frac{1}{R}\\sum_{r=1}^{R}\\mathbf{1}\\!\\left\\{|\\mathrm{dist}_r(\\beta_0)| \\ge |\\mathrm{crit}(\\beta_0)|\\right\\}\n\\]\nright: \\[\np(\\beta_0) \\;=\\; \\frac{1}{R}\\sum_{r=1}^{R}\\mathbf{1}\\!\\left\\{\\mathrm{dist}_r(\\beta_0) \\ge \\mathrm{crit}(\\beta_0)\\right\\}\n\\]\nleft: \\[\np(\\beta_0) \\;=\\; \\frac{1}{R}\\sum_{r=1}^{R}\\mathbf{1}\\!\\left\\{\\mathrm{dist}_r(\\beta_0) \\le \\mathrm{crit}(\\beta_0)\\right\\}.\n\\]\n\ncoef_ci_band_fast implements this in vectorised form over the grid.\nA degenerate case is handled explicitly: if \\(K_{\\mathrm{obs}}=0\\) and \\(K_r=0\\) for all permutations, then the statistic does not depend on \\(\\beta_0\\) under this shift rule, and the \\(p\\)-value profile is constant across the grid.\n\n\nBounds extraction\nFor ci_mode=\"bounds\", ritest computes the \\(p\\)-value profile on the same grid and returns the outermost grid points with \\(p(\\beta_0)\\ge\\alpha\\) (with \\(+\\infty\\) or \\(-\\infty\\) for the open end in one-sided tests). For ci_mode=\"grid\", ritest returns the full band $(_0, p(_0))`.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Confidence intervals"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/ri.html#basic-description",
+    "href": "projects/ritest/technical-notes/ri.html#basic-description",
+    "title": "Randomization inference",
+    "section": "Basic description",
+    "text": "Basic description\nThink of an experiment as a lottery assigning treatment. Under a sharp null like “no effect for anyone”, outcomes are treated as fixed and the only randomness comes from the assignment rule. RI simulates that assignment rule by reshuffling treatment in every way the design allows, recomputing the same statistic each time, and comparing the observed statistic to this randomization distribution.\nRI is design-based: probability statements come from the randomization mechanism, not from assumptions about a superpopulation or an outcome error model. Regression enters only as a chosen test statistic.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Randomization inference"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/ri.html#setup-and-notation",
+    "href": "projects/ritest/technical-notes/ri.html#setup-and-notation",
+    "title": "Randomization inference",
+    "section": "Setup and notation",
+    "text": "Setup and notation\nWe observe data on \\(N\\) units indexed by \\(i=1,\\dots,N\\):\n\nAssignment indicator \\(W_i \\in \\{0,1\\}\\) (treated if \\(1\\)).\nOutcome \\(Y_i\\).\nOptional covariates \\(X_i\\) (row vector), stacked as an \\(N\\times p\\) matrix \\(X\\).\nOptional nonnegative weights \\(\\omega_i\\) (for WLS), collected in \\(\\Omega = \\mathrm{diag}(\\omega_1,\\dots,\\omega_N)\\).\nOptional labels describing restricted randomization:\n\nstrata \\(S_i\\) (e.g., blocks),\nclusters \\(C_i\\) (e.g., villages, classrooms).\n\n\nA randomization design is a known distribution \\(\\mathbb{P}(W=w)\\) over an allowed set \\(\\mathcal{W}\\) of assignment vectors. Examples:\n\ncomplete randomization: all \\(w\\) with a fixed treated count,\nstratified/block randomization: treated counts fixed within each stratum \\(S\\),\ncluster randomization: treatment assigned at the cluster level (all units in a cluster share \\(W\\)),\ncluster-within-strata: clusters randomized separately within each stratum.\n\nIn ritest, the design determines what “reshuffling” means: it generates draws \\(W^{\\pi}\\) that respect the same constraints (plain / strata / cluster / cluster-within-strata).\nA test statistic is any function \\[\nT(W, Y, X, \\Omega) \\in \\mathbb{R},\n\\] for example the estimated treatment coefficient \\(\\hat\\beta\\) from a (W)OLS regression of \\(Y\\) on \\(W\\) and \\(X\\), or the corresponding \\(t\\)-statistic. In ritest, \\(T\\) is evaluated either by the fast linear-model path (FastOLS) or by a user-supplied stat_fn (generic path). Conceptually, both are just ways to compute the same object: \\(T(\\cdot)\\).",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Randomization inference"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/ri.html#potential-outcomes-framework",
+    "href": "projects/ritest/technical-notes/ri.html#potential-outcomes-framework",
+    "title": "Randomization inference",
+    "section": "Potential outcomes framework",
+    "text": "Potential outcomes framework\nWrite potential outcomes as \\(Y_i(1)\\) and \\(Y_i(0)\\). The observed outcome is \\[\nY_i^{\\mathrm{obs}} = Y_i(W_i).\n\\]\nA sharp null hypothesis fully specifies every unit’s missing potential outcome, so that outcomes under any hypothetical assignment become known (after imputation). The canonical sharp null is “no effect for anyone”: \\[\nH_0^{\\mathrm{sharp}}:\\; Y_i(1)=Y_i(0) \\quad \\text{for all } i.\n\\]\nA common generalization (important for coefficient confidence intervals later) is a constant additive effect: \\[\nH_0(\\tau_0):\\; Y_i(1)=Y_i(0)+\\tau_0 \\quad \\text{for all } i.\n\\]\nUnder \\(H_0(\\tau_0)\\) we can impute the outcome that would be observed under any assignment vector \\(w\\): \\[\nY_i^{(\\tau_0)}(w) = Y_i^{\\mathrm{obs}} + \\tau_0\\,(w_i - W_i).\n\\] When \\(\\tau_0=0\\), this reduces to \\(Y_i^{(0)}(w)=Y_i^{\\mathrm{obs}}\\): under the no-effect sharp null, outcomes do not change when we reshuffle \\(W\\).\nThis is the key technical reason RI can be exact in finite samples: under a sharp null, the only randomness comes from the known randomization design.1",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Randomization inference"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/ri.html#the-randomization-null-distribution",
+    "href": "projects/ritest/technical-notes/ri.html#the-randomization-null-distribution",
+    "title": "Randomization inference",
+    "section": "The randomization (null) distribution",
+    "text": "The randomization (null) distribution\nFix a sharp null (often \\(\\tau_0=0\\)). Consider drawing a new assignment \\(W^*\\) from the same design: \\[\nW^* \\sim \\mathbb{P}(W=w) \\text{ on } \\mathcal{W}.\n\\]\nUnder \\(H_0(\\tau_0)\\), the induced randomization distribution of the statistic is \\[\nT\\bigl(W^*,\\; Y^{(\\tau_0)}(W^*),\\; X,\\; \\Omega\\bigr).\n\\]\nIn practice we approximate this distribution by Monte Carlo:\n\nKeep \\(Y^{\\mathrm{obs}}\\), \\(X\\), \\(\\Omega\\), and the design constraints fixed.\nGenerate draws \\(W^{\\pi_1},\\dots,W^{\\pi_R}\\) consistent with the design.\nCompute \\[\nT_r = T\\bigl(W^{\\pi_r},\\, Y^{(\\tau_0)}(W^{\\pi_r}),\\, X,\\, \\Omega\\bigr),\n\\quad r=1,\\dots,R.\n\\]\n\nThis yields an empirical null distribution \\(\\{T_r\\}_{r=1}^R\\).",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Randomization inference"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/ri.html#fisher-exact-p-values-fep",
+    "href": "projects/ritest/technical-notes/ri.html#fisher-exact-p-values-fep",
+    "title": "Randomization inference",
+    "section": "Fisher exact \\(p\\)-values (FEP)",
+    "text": "Fisher exact \\(p\\)-values (FEP)\nFor a one-sided test where “large values of \\(T\\)” count against the null, the Fisher exact \\(p\\)-value is the randomization probability of seeing a statistic at least as extreme as observed: \\[\np = \\mathbb{P}\\bigl(T(W^*,\\cdot) \\ge T(W,\\cdot)\\;\\big|\\;H_0,\\,\\text{design}\\bigr).\n\\]\nIf we can enumerate all \\(w\\in\\mathcal{W}\\) with their design probabilities, this \\(p\\)-value is exact in finite samples. When enumeration is infeasible, we estimate it by Monte Carlo using \\(R\\) random draws: \\[\n\\hat p = \\frac{1 + \\sum_{r=1}^R \\mathbf{1}\\{T_r \\ge T_{\\mathrm{obs}}\\}}{R+1}.\n\\] The \\(+1\\) correction avoids returning \\(0\\) with finite \\(R\\) and is standard in RI practice.\nTwo-sided tests require defining “extreme” symmetrically (e.g., using \\(|T|\\) or \\(|T-\\mathrm{center}|\\) inside the indicator). The important point is not the convention itself, but that it is stated and applied consistently.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Randomization inference"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/ri.html#design-based-vs-samplingmodel-based-inference",
+    "href": "projects/ritest/technical-notes/ri.html#design-based-vs-samplingmodel-based-inference",
+    "title": "Randomization inference",
+    "section": "Design-based vs sampling/model-based inference",
+    "text": "Design-based vs sampling/model-based inference\nDesign-based inference (RI): conditions on the realized units and their outcomes and treats the randomization mechanism as the sole source of uncertainty. Validity hinges on correctly reproducing the design and testing a sharp null so outcomes under reassignments are known or imputable.\nSampling-based / model-based inference: treats the observed data as a sample from a superpopulation and relies on a stochastic model for outcomes (and typically asymptotics). Standard regression standard errors and confidence intervals are in this family.\nRI does not need an outcome model to justify \\(p\\)-values. When a regression coefficient is used inside RI, it is not “true because the regression is correct”; it is simply a scalar summary of how outcomes co-move with assignment under repeated re-randomization.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Randomization inference"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/ri.html#fisher-vs-neyman",
+    "href": "projects/ritest/technical-notes/ri.html#fisher-vs-neyman",
+    "title": "Randomization inference",
+    "section": "Fisher vs Neyman",
+    "text": "Fisher vs Neyman\n\nFisher: tests a sharp null (often no individual effect) using the randomization distribution. The direct output is a \\(p\\)-value; by inverting sharp-null tests across many \\(\\tau_0\\) values, one can also obtain a set of nonrejected effect sizes.\nNeyman: targets an average effect (ATE) and uncertainty for that estimand, typically via variance formulas and large-sample approximations.\n\nThese are complementary but not identical. A sharp-null test is stronger than an ATE-null test: if effects vary across units, the ATE could be near zero while individual effects are nonzero, so a Fisher test of “no effect for anyone” can reject even when the ATE is small. This distinction matters for interpretation and motivates being explicit about which null is being tested and what a reported interval means.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Randomization inference"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/ri.html#further-reading",
+    "href": "projects/ritest/technical-notes/ri.html#further-reading",
+    "title": "Randomization inference",
+    "section": "Further reading",
+    "text": "Further reading\nThere is a lot to learn, including recent work, about randomization inference. The list below is a useful starting point.\n\nAthey, S., & Imbens, G. W. (2017). The econometrics of randomized experiments. In Handbook of economic field experiments (Vol. 1, pp. 73-140). North-Holland.\nCunningham, S. (2021). Causal inference: The mixtape. Yale university press.\nFisher (1935), The Design of Experiments.\nGerber and Green (2012), Field Experiments: Design, Analysis, and Interpretation.\nImbens and Rubin (2015), Causal Inference in Statistics, Social, and Biomedical Sciences.\nRosenbaum (2002), Observational Studies.",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Randomization inference"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/technical-notes/ri.html#footnotes",
+    "href": "projects/ritest/technical-notes/ri.html#footnotes",
+    "title": "Randomization inference",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIn practice, randomization inference is not exact, it is an approximation given the large number of permutations with even a modest number of observations.↩︎",
+    "crumbs": [
+      "about",
+      "Technical notes",
+      "Randomization inference"
+    ]
   },
   {
     "objectID": "projects/ritest/installation.html",
     "href": "projects/ritest/installation.html",
     "title": "installation",
     "section": "",
-    "text": "contents",
-    "crumbs": [
-      "about",
-      "ritest",
-      "installation"
-    ]
+    "text": "contents"
   },
   {
     "objectID": "projects/ritest/installation.html#fasfasf",
     "href": "projects/ritest/installation.html#fasfasf",
     "title": "installation",
     "section": "fasfasf",
-    "text": "fasfasf\nsfdsufsdf\n\nfdsfsd\nfdsf\n#sdfsdf\nfdsfsdf",
+    "text": "fasfasf\nsfdsufsdf\n\nfdsfsd\nfdsf\n#sdfsdf\nfdsfsdf"
+  },
+  {
+    "objectID": "projects/ritest/examples/non-linear.html",
+    "href": "projects/ritest/examples/non-linear.html",
+    "title": "Non-linear models",
+    "section": "",
+    "text": "ritest() can do randomization inference (RI) for non-linear models by using the generic statistic path:\nAll snippets of code in this section come from this script.",
     "crumbs": [
       "about",
-      "ritest",
-      "installation"
+      "Examples",
+      "Non-linear models"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/non-linear.html#data",
+    "href": "projects/ritest/examples/non-linear.html#data",
+    "title": "Non-linear models",
+    "section": "Data",
+    "text": "Data\nEach example uses its own toy data, designed to be appropriate for the corresponding model.",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Non-linear models"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/non-linear.html#shared-utility",
+    "href": "projects/ritest/examples/non-linear.html#shared-utility",
+    "title": "Non-linear models",
+    "section": "Shared utility",
+    "text": "Shared utility\nAssume a pandas.DataFrame named df with columns:\n\ny: outcome\nz: treatment / assignment variable to permute\nx: baseline covariate (fixed)\n\nA small helper to build the design matrix:\ndef design(df: pd.DataFrame):\n    # include intercept + treatment + covariate\n    return sm.add_constant(df[[\"z\", \"x\"]], has_constant=\"add\")",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Non-linear models"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/non-linear.html#logit",
+    "href": "projects/ritest/examples/non-linear.html#logit",
+    "title": "Non-linear models",
+    "section": "Logit",
+    "text": "Logit\n\nCodeResults\n\n\nDefine the function stat_logit(...):\ndef stat_logit(df_perm: pd.DataFrame) -&gt; float:\n    X = design(df_perm)\n    y = df_perm[\"y\"]\n    fit = sm.GLM(\n        y, X,\n        family=sm.families.Binomial(link=sm.families.links.Logit()),\n    ).fit(disp=False)\n    return float(fit.params[\"z\"])\nCall ritest:\nres = ritest(\n    df=df,\n    permute_var=\"z\",\n    stat_fn=stat_logit,\n    alternative=\"two-sided\",\n    reps=1000,\n    seed=1,\n    ci_mode=\"none\",\n)\n\n\nRandomization inference result (ritest)\n--------------------------------------\n\nCoefficient\n-----------\nObserved effect (β̂):   0.9404\nCoefficient CI bounds: not computed\nCoefficient CI band:   not computed\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.0180 (1.8%)\nP-value CI @ α=0.050: [0.0083, 0.0339]\nAs-or-more extreme:     9 / 500",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Non-linear models"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/non-linear.html#probit",
+    "href": "projects/ritest/examples/non-linear.html#probit",
+    "title": "Non-linear models",
+    "section": "Probit",
+    "text": "Probit\n\nCodeResults\n\n\nDefine the function stat_probit(...):\ndef stat_probit(df_perm: pd.DataFrame) -&gt; float:\n    X = design(df_perm)\n    y = df_perm[\"y\"]\n    fit = sm.GLM(\n        y, X,\n        family=sm.families.Binomial(link=sm.families.links.Probit()),\n    ).fit(disp=False)\n    return float(fit.params[\"z\"])\nritest call:\nres = ritest(\n    df=df,\n    permute_var=\"z\",\n    stat_fn=stat_probit,\n    alternative=\"two-sided\",\n    reps=1000,\n    seed=2,\n    ci_mode=\"none\",\n)\n\n\nRandomization inference result (ritest)\n--------------------------------------\n\nCoefficient\n-----------\nObserved effect (β̂):   0.5865\nCoefficient CI bounds: not computed\nCoefficient CI band:   not computed\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.0320 (3.2%)\nP-value CI @ α=0.050: [0.0184, 0.0514]\nAs-or-more extreme:     16 / 500",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Non-linear models"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/non-linear.html#poisson",
+    "href": "projects/ritest/examples/non-linear.html#poisson",
+    "title": "Non-linear models",
+    "section": "Poisson",
+    "text": "Poisson\n\nCodeResults\n\n\nDefine stat_poisson(...):\ndef stat_poisson(df_perm: pd.DataFrame) -&gt; float:\n    X = design(df_perm)\n    y = df_perm[\"y\"]\n    fit = sm.GLM(y, X, family=sm.families.Poisson()).fit(disp=False)\n    return float(fit.params[\"z\"])\nritest call:\nres = ritest(\n    df=df,\n    permute_var=\"z\",\n    stat_fn=stat_poisson,\n    alternative=\"two-sided\",\n    reps=1000,\n    seed=3,\n    ci_mode=\"none\",\n)\n\n\nRandomization inference result (ritest)\n--------------------------------------\n\nCoefficient\n-----------\nObserved effect (β̂):   0.3636\nCoefficient CI bounds: not computed\nCoefficient CI band:   not computed\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.0200 (2.0%)\nP-value CI @ α=0.050: [0.0096, 0.0365]\nAs-or-more extreme:     10 / 500",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Non-linear models"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/non-linear.html#negative-binomial",
+    "href": "projects/ritest/examples/non-linear.html#negative-binomial",
+    "title": "Non-linear models",
+    "section": "Negative Binomial",
+    "text": "Negative Binomial\n\nCodeResults\n\n\nDefine stat_negbin_fixed_alpha(...):\ndef stat_negbin_fixed_alpha(df_perm: pd.DataFrame, *, alpha: float = 1.0) -&gt; float:\n    X = design(df_perm)\n    y = df_perm[\"y\"]\n    fit = sm.GLM(\n        y, X,\n        family=sm.families.NegativeBinomial(alpha=alpha),\n    ).fit(disp=False)\n    return float(fit.params[\"z\"])\nritest call with a lambda function to handle the extra parameter:\nres = ritest(\n    df=df,\n    permute_var=\"z\",\n    stat_fn=lambda d: stat_negbin_fixed_alpha(d, alpha=1.0),\n    alternative=\"two-sided\",\n    reps=1000,\n    seed=4,\n    ci_mode=\"none\",\n)\n\n\nRandomization inference result (ritest)\n--------------------------------------\n\nCoefficient\n-----------\nObserved effect (β̂):   0.1609\nCoefficient CI bounds: not computed\nCoefficient CI band:   not computed\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.4840 (48.4%)\nP-value CI @ α=0.050: [0.4394, 0.5288]\nAs-or-more extreme:     242 / 500",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Non-linear models"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/non-linear.html#fractional-logit",
+    "href": "projects/ritest/examples/non-linear.html#fractional-logit",
+    "title": "Non-linear models",
+    "section": "Fractional logit",
+    "text": "Fractional logit\n\nCodeResults\n\n\nDefine stat_fractional_logit(...):\ndef stat_fractional_logit(df_perm: pd.DataFrame) -&gt; float:\n    X = design(df_perm)\n    y = df_perm[\"y\"]\n    fit = sm.GLM(\n        y, X,\n        family=sm.families.Binomial(link=sm.families.links.Logit()),\n    ).fit(disp=False)\n    return float(fit.params[\"z\"])\nRI call:\nres = ritest(\n    df=df,\n    permute_var=\"z\",\n    stat_fn=stat_fractional_logit,\n    alternative=\"two-sided\",\n    reps=1000,\n    seed=5,\n    ci_mode=\"none\",\n)\n\n\nRandomization inference result (ritest)\n--------------------------------------\n\nCoefficient\n-----------\nObserved effect (β̂):   0.5334\nCoefficient CI bounds: not computed\nCoefficient CI band:   not computed\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.0000 (0.0%)\nP-value CI @ α=0.050: [0.0000, 0.0074]\nAs-or-more extreme:     0 / 500",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Non-linear models"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/non-linear.html#tobit",
+    "href": "projects/ritest/examples/non-linear.html#tobit",
+    "title": "Non-linear models",
+    "section": "Tobit",
+    "text": "Tobit\n\nCodeResults\n\n\nDefine stat_tobit(...):\nfrom scipy.optimize import minimize\nfrom scipy.stats import norm\n\ndef stat_tobit(df_perm: pd.DataFrame) -&gt; float:\n    y = df_perm[\"y\"].to_numpy(dtype=float)\n    X = design(df_perm).to_numpy(dtype=float)\n\n    is_cens = y &lt;= 0.0\n    is_obs = ~is_cens\n\n    # theta = [beta0, beta_z, beta_x, log_sigma]\n    def nll(theta: np.ndarray) -&gt; float:\n        beta = theta[:-1]\n        log_sigma = theta[-1]\n        sigma = np.exp(log_sigma)\n\n        mu = X @ beta\n        z = (y - mu) / sigma\n\n        ll = 0.0\n        if np.any(is_obs):\n            ll += np.sum(norm.logpdf(z[is_obs]) - log_sigma)\n        if np.any(is_cens):\n            ll += np.sum(norm.logcdf((0.0 - mu[is_cens]) / sigma))\n\n        return -float(ll)\n\n    theta0 = np.zeros(X.shape[1] + 1, dtype=float)  # simple start\n    opt = minimize(nll, theta0, method=\"BFGS\", options={\"maxiter\": 120})\n\n    beta_hat = opt.x[:-1]\n    return float(beta_hat[1])  # [const, z, x] -&gt; pick z\nritest call:\nres = ritest(\n    df=df,\n    permute_var=\"z\",\n    stat_fn=stat_tobit,\n    alternative=\"two-sided\",\n    reps=500,   # MLE wrappers are slower; start smaller\n    seed=6,\n    ci_mode=\"none\",\n)\n\n\nRandomization inference result (ritest)\n--------------------------------------\n\nCoefficient\n-----------\nObserved effect (β̂):   0.9919\nCoefficient CI bounds: not computed\nCoefficient CI band:   not computed\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.0000 (0.0%)\nP-value CI @ α=0.050: [0.0000, 0.0074]\nAs-or-more extreme:     0 / 500",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Non-linear models"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/non-linear.html#practical-notes",
+    "href": "projects/ritest/examples/non-linear.html#practical-notes",
+    "title": "Non-linear models",
+    "section": "Practical notes",
+    "text": "Practical notes\n\nYour wrapper should be deterministic given df_perm.\nKeep the wrapper minimal: compute the statistic and return it.\nritest assumes that gen_fun works, i.e., is always return a scalar. This behavior is validated before any heavy computation begins. You must ensure that your generic function works before passing it to ritest.",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Non-linear models"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/multi-arm.html",
+    "href": "projects/ritest/examples/multi-arm.html",
+    "title": "Multi-arm experiments",
+    "section": "",
+    "text": "Most examples on randomization inference assume that you have an experiment with two arms: a control and a treatment. What if you have more than two? You can still do randomization inference, but you need to make some choices.1",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Multi-arm experiments"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/multi-arm.html#theory",
+    "href": "projects/ritest/examples/multi-arm.html#theory",
+    "title": "Multi-arm experiments",
+    "section": "Theory",
+    "text": "Theory\nSuppose you ran a randomized experiment with three arms:\n\n\\(T \\in \\{0,1,2\\}\\)\n\n\\(T=0\\): Control\n\\(T=1\\): Treatment A\n\\(T=2\\): Treatment B\n\n\nA multi-arm experiment does not have “one” treatment effect. You must decide which contrast you want to test and report. The three most common are:\n\nA vs Control: \\(H_0:\\ \\tau_{A0}=0\\)\nB vs Control: \\(H_0:\\ \\tau_{B0}=0\\)\nA vs B: \\(H_0:\\ \\tau_{AB}=0\\)\n\nIn this example, I focus on the first one: A vs Control.\nRandomization inference tests a sharp null about outcomes under different assignments:\n\\[\nH_0:\\ Y_i(1)=Y_i(0)\\ \\text{for all } i \\text{ in the units eligible to switch between } T=0 \\text{ and } T=1.\n\\]\nThe key phrase is “eligible to switch”.\n\nOption 1\nIf you only care about A vs Control, analyze only units with \\(T \\in \\{0,1\\}\\). This is the simplest option.\n\nEstimation sample: \\(T \\in \\{0,1\\}\\)\nRe-randomization: shuffle A/Control labels within that sample\nInterpretation: RI is conditional on the experiment that could have assigned only A or Control to those units.\n\n\n\nOption 2\nIf you want more precision, you can use the full dataset to estimate a covariate-adjusted statistic, but only allow reassignments among the A/Control units. Treatment-B units stay fixed as \\(T=2\\) in every permutation.\n\nEstimation sample: \\(T \\in \\{0,1,2\\}\\)\nRe-randomization: shuffle A/Control labels only among units with \\(T \\in \\{0,1\\}\\), keeping all \\(T=2\\) units fixed\nInterpretation: RI is conditional on the realized set of B assignments. You test A vs Control “holding B fixed”.\n\nIf you keep B in the regression, you should include a B indicator (or use a full set of arm indicators) so B is not implicitly pooled into Control.\n\n\nDiscussion\nIf you have no covariates and saturated arm indicators: \\[\ny_i = \\alpha + \\beta_A \\mathbf{1}[T_i=1] + \\beta_B \\mathbf{1}[T_i=2] + \\varepsilon_i,\n\\] \\(\\beta_A\\) is the difference in mean outcomes between A and Control. Including B observations does not change the meaning of \\(\\beta_A=\\bar y_{A} - \\bar y_{0}\\). That is, option 1 and option 2 will typically produce the same \\(\\hat\\beta_A\\) (up to edge-case numerical details).\nIf you do have covariates, \\[\ny_i = \\alpha + \\beta_A \\mathbf{1}[T_i=1] + \\beta_B \\mathbf{1}[T_i=2] + X_i'\\gamma + \\varepsilon_i,\n\\] \\(\\hat\\beta_A\\) is computed after “partialling out” \\(X\\). If you estimate \\(\\gamma\\) using all arms (option 2) versus only A/Control (Option 1), then \\(\\hat\\gamma\\) can change, which can change \\(\\hat\\beta_A\\).\nWhich one is “correct”? That is up to you. Are you looking for conditional or an unconditional estimate?",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Multi-arm experiments"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/multi-arm.html#implementation",
+    "href": "projects/ritest/examples/multi-arm.html#implementation",
+    "title": "Multi-arm experiments",
+    "section": "Implementation",
+    "text": "Implementation\nritest (Python) requires the permutation variable to be binary, so for A vs Control you typically construct:\n\\[\nA_i = \\mathbf{1}[T_i=1].\n\\]\n\nOption 1 (drop B)\n\nFilter to \\(T \\in \\{0,1\\}\\)\nCreate \\(A\\)\nCall ritest normally (permuting A)\n\nMinimal sketch:\ndf_sub = df[df[\"treatment\"].isin([0, 1])].copy()\ndf_sub[\"A\"] = (df_sub[\"treatment\"] == 1).astype(int)\n\nres = ritest(\n    df=df_sub,\n    permute_var=\"A\",\n    formula=\"y ~ 1 + A + x1 + x2\",   # include covariates if you want\n    stat=\"A\",\n    reps=5000,\n    seed=123,\n)\n\n\nOption 2 (keep B fixed)\nThis option requires much more work, it emulates Stata’s fixlevels(#) option.\n\nWork on the full dataset.\nCreate A and a separate B indicator.\nBuild a permutation matrix that only permutes A among units with \\(T \\in \\{0,1\\}\\).2\nPass that matrix via permutations= on the ritest call..\n\nSketch:\ndf = df.copy()\ndf[\"A\"] = (df[\"treatment\"] == 1).astype(int)\ndf[\"B\"] = (df[\"treatment\"] == 2).astype(int)\n\nA = df[\"A\"].to_numpy()\nmask = (df[\"B\"].to_numpy() == 0)     # only Control/A units are shuffled\n\nperms = np.empty((reps, len(df)), dtype=A.dtype)\nfor r in range(reps):\n    pr = A.copy()\n    pr[mask] = rng.permutation(pr[mask])\n    perms[r] = pr\n\nres = ritest(\n    df=df,\n    permute_var=\"A\",\n    permutations=perms,              # B stays fixed because A=0 for B always\n    formula=\"y ~ 1 + A + B + x1 + x2\",\n    stat=\"A\",\n    seed=123,\n)",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Multi-arm experiments"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/examples/multi-arm.html#footnotes",
+    "href": "projects/ritest/examples/multi-arm.html#footnotes",
+    "title": "Multi-arm experiments",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis section borrows heavily from Simon Heß’s discussion here.↩︎\nIf your experimental design involves stratification or clustering, you must build permutations that respect that same structure when you supply permutations=.↩︎",
+    "crumbs": [
+      "about",
+      "Examples",
+      "Multi-arm experiments"
     ]
   },
   {
@@ -136,36 +1113,44 @@
     "href": "projects/ritest/index.html",
     "title": "ritest",
     "section": "",
-    "text": "sfdsufsdf\n\n\nfdsf\n#sdfsdf\nfdsfsdf",
+    "text": "ritest provides fast randomization inference (RI) tools for linear models and arbitrary statistics. It supports weights (WLS) as well as stratified and clustered designs.",
     "crumbs": [
       "about",
       "ritest"
     ]
   },
   {
-    "objectID": "projects/ritest/index.html#fdsfsd",
-    "href": "projects/ritest/index.html#fdsfsd",
+    "objectID": "projects/ritest/index.html#features",
+    "href": "projects/ritest/index.html#features",
     "title": "ritest",
-    "section": "",
-    "text": "fdsf\n#sdfsdf\nfdsfsdf",
+    "section": "Features",
+    "text": "Features\n\nLinear-model RI with efficient computation.\nGeneric RI for arbitrary scalar statistics via stat_fn.\nStratified, clustered, and stratified-clustered designs.\nWeighted least squares (WLS) support.\nDeterministic seeding, reproducible permutations.\nConfigurable \\(p\\)-value and ultra-fast coefficient bounds and bands.",
     "crumbs": [
       "about",
       "ritest"
     ]
   },
   {
-    "objectID": "projects/edible-insects/index.html",
-    "href": "projects/edible-insects/index.html",
-    "title": "edible insects",
-    "section": "",
-    "text": "Landing content…\n\n\n\n Back to top"
+    "objectID": "projects/ritest/index.html#citation",
+    "href": "projects/ritest/index.html#citation",
+    "title": "ritest",
+    "section": "Citation",
+    "text": "Citation\nTabaré Capitán (2025). ritest: Randomization inference in Python.\nhttps://github.com/tabareCapitan/ritest",
+    "crumbs": [
+      "about",
+      "ritest"
+    ]
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Tabaré Capitán",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTitle\n\n\n\nDate\n\n\n\nDescription\n\n\n\nCategories\n\n\n\n\n\n\n\n\nbvall\n\n\nSep 25, 2025\n\n\nbvall description.\n\n\npython, stats\n\n\n\n\n\n\nedible insects\n\n\nSep 25, 2025\n\n\nedible insects.\n\n\npython, research\n\n\n\n\n\n\nmeta science\n\n\nSep 25, 2025\n\n\nmeta science stuff.\n\n\nresearch\n\n\n\n\n\n\nmpa\n\n\nSep 25, 2025\n\n\noptimal map.\n\n\nresearch, matlab\n\n\n\n\n\n\nritest\n\n\nSep 25, 2025\n\n\nRandomization-inference toolkit and benchmarks.\n\n\npython, software, stats\n\n\n\n\n\n\nNo matching items\n Back to top"
+    "objectID": "projects/ritest/index.html#disclaimer",
+    "href": "projects/ritest/index.html#disclaimer",
+    "title": "ritest",
+    "section": "Disclaimer",
+    "text": "Disclaimer\nUse this software at your own risk. I make no guarantees of correctness or fitness for any purpose. I use it in my own work, but you should review the code to ensure it meets your needs. If you find an issue, please report it.",
+    "crumbs": [
+      "about",
+      "ritest"
+    ]
   },
   {
     "objectID": "index.html",

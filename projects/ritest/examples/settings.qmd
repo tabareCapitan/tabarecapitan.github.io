@@ -1,0 +1,107 @@
+---
+title: "Settings"
+---
+
+---
+
+`ritest` has a small global configuration dictionary (`DEFAULTS`) plus helper functions to **read**, **update**, **reset**, and **temporarily override** those settings. The recommended way is to use the helpers, not to mutate `DEFAULTS` directly.
+
+## What is “global config”?
+
+- It is **process-wide state** used by `ritest` internals.
+- Changes made with `ritest_set()` persist until you reset them (or the Python process ends).
+- Temporary changes should use `ritest_config(...)` (context manager), which automatically restores the previous values.
+
+## Read settings: `ritest_get()`
+
+Get one value:
+
+```python
+from ritest import ritest_get
+
+reps = ritest_get("reps")
+alpha = ritest_get("alpha")
+```
+
+Get a shallow copy of all settings:
+
+```python
+cfg = ritest_get()
+```
+
+## Update settings (persistently): `ritest_set()`
+
+Set one or more keys (validated):
+
+```python
+from ritest import ritest_set
+
+ritest_set({"reps": 5000, "seed": 123, "alpha": 0.1})
+```
+
+This **mutates global state**; use `ritest_config(...)` if you only want a temporary change.
+
+## Reset settings: `ritest_reset()`
+
+Reset everything to import-time defaults:
+
+```python
+from ritest import ritest_reset
+
+ritest_reset()
+```
+
+Reset only selected keys:
+
+```python
+ritest_reset(["reps", "seed"])
+```
+
+## Temporary overrides: `ritest_config(...)` (context manager)
+
+Use this when you want “just for this block” settings:
+
+```python
+from ritest import ritest_config
+
+with ritest_config({"reps": 2000, "alpha": 0.1}):
+    # calls here see the temporary values
+    ...
+# outside the block, the previous config is restored
+```
+
+This is the recommended way to make temporary changes. It always restores the prior settings on exit, even if an exception happens.
+
+## Common keys you may change
+
+These keys exist in `ritest.config.DEFAULTS`:
+
+- `reps` (int > 0): number of permutations.
+- `seed` (int): RNG seed.
+- `alpha` (0 < float < 1): significance level used for p-values and CIs.
+- `n_jobs` (int): `-1` for all cores, or `>= 1`.
+- `ci_mode` (`"none" | "bounds" | "grid"`): coefficient CI controls.
+- `ci_range`, `ci_step`, `ci_tol` (positive numbers): coefficient-CI search/grid controls.
+- `ci_method` (`"cp" | "normal"`): method for the **permutation p-value CI** in config.
+
+Note on naming (*known issue to be fixed*):
+
+- The *config key* `ci_method` uses `"cp"` or `"normal"`.
+- The *public `ritest(...)` argument* annotation lists `"clopper-pearson"` or `"normal"`. 
+
+## Interaction with `ritest(...)` arguments
+
+In `ritest(...)`, most knobs default to the global config **only when you pass `None`**. If you pass an explicit value, it overrides the global setting for that call. In general, if you are making simple changes, like `reps`, in which the scope is one `ritest(...)` call, it is convenient to do it on the call. If the scope goes beyond, you may want to use `ritest_config(...)`.
+
+```python
+from ritest import ritest
+
+res = ritest(
+    df=df,
+    permute_var="Z",
+    formula="y ~ Z + x1 + x2",
+    stat="Z",
+    reps=3000,          # per-call override
+    alpha=None,         # uses global alpha
+)
+```

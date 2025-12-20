@@ -1,0 +1,131 @@
+---
+title: "Randomization inference"
+---
+
+---
+
+## Basic description
+
+Think of an experiment as a lottery assigning treatment. Under a sharp null like “no effect for anyone”, outcomes are treated as fixed and the only randomness comes from the assignment rule. RI simulates that assignment rule by reshuffling treatment in every way the design allows, recomputing the same statistic each time, and comparing the observed statistic to this randomization distribution.
+
+RI is **design-based**: probability statements come from the randomization mechanism, not from assumptions about a superpopulation or an outcome error model. Regression enters only as a chosen *test statistic*.
+
+## Setup and notation
+
+We observe data on $N$ units indexed by $i=1,\dots,N$:
+
+- Assignment indicator $W_i \in \{0,1\}$ (treated if $1$).
+- Outcome $Y_i$.
+- Optional covariates $X_i$ (row vector), stacked as an $N\times p$ matrix $X$.
+- Optional nonnegative weights $\omega_i$ (for WLS), collected in $\Omega = \mathrm{diag}(\omega_1,\dots,\omega_N)$.
+- Optional labels describing restricted randomization:
+  - strata $S_i$ (e.g., blocks),
+  - clusters $C_i$ (e.g., villages, classrooms).
+
+A **randomization design** is a known distribution $\mathbb{P}(W=w)$ over an allowed set $\mathcal{W}$ of assignment vectors. Examples:
+
+- complete randomization: all $w$ with a fixed treated count,
+- stratified/block randomization: treated counts fixed within each stratum $S$,
+- cluster randomization: treatment assigned at the cluster level (all units in a cluster share $W$),
+- cluster-within-strata: clusters randomized separately within each stratum.
+
+In `ritest`, the design determines what “reshuffling” means: it generates draws $W^{\pi}$ that respect the same constraints (plain / strata / cluster / cluster-within-strata).
+
+A **test statistic** is any function
+$$
+T(W, Y, X, \Omega) \in \mathbb{R},
+$$
+for example the estimated treatment coefficient $\hat\beta$ from a (W)OLS regression of $Y$ on $W$ and $X$, or the corresponding $t$-statistic. In `ritest`, $T$ is evaluated either by the fast linear-model path (FastOLS) or by a user-supplied `stat_fn` (generic path). Conceptually, both are just ways to compute the same object: $T(\cdot)$.
+
+## Potential outcomes framework
+
+Write potential outcomes as $Y_i(1)$ and $Y_i(0)$. The observed outcome is
+$$
+Y_i^{\mathrm{obs}} = Y_i(W_i).
+$$
+
+A **sharp null hypothesis** fully specifies *every unit’s* missing potential outcome, so that outcomes under any hypothetical assignment become known (after imputation). The canonical sharp null is “no effect for anyone”:
+$$
+H_0^{\mathrm{sharp}}:\; Y_i(1)=Y_i(0) \quad \text{for all } i.
+$$
+
+A common generalization (important for coefficient confidence intervals later) is a constant additive effect:
+$$
+H_0(\tau_0):\; Y_i(1)=Y_i(0)+\tau_0 \quad \text{for all } i.
+$$
+
+Under $H_0(\tau_0)$ we can impute the outcome that would be observed under any assignment vector $w$:
+$$
+Y_i^{(\tau_0)}(w) = Y_i^{\mathrm{obs}} + \tau_0\,(w_i - W_i).
+$$
+When $\tau_0=0$, this reduces to $Y_i^{(0)}(w)=Y_i^{\mathrm{obs}}$: under the no-effect sharp null, outcomes do not change when we reshuffle $W$.
+
+This is the key technical reason RI can be exact in finite samples: under a sharp null, the only randomness comes from the known randomization design.[^exact-approx]
+
+## The randomization (null) distribution
+
+Fix a sharp null (often $\tau_0=0$). Consider drawing a new assignment $W^*$ from the same design:
+$$
+W^* \sim \mathbb{P}(W=w) \text{ on } \mathcal{W}.
+$$
+
+Under $H_0(\tau_0)$, the induced randomization distribution of the statistic is
+$$
+T\bigl(W^*,\; Y^{(\tau_0)}(W^*),\; X,\; \Omega\bigr).
+$$
+
+In practice we approximate this distribution by Monte Carlo:
+
+1. Keep $Y^{\mathrm{obs}}$, $X$, $\Omega$, and the design constraints fixed.
+2. Generate draws $W^{\pi_1},\dots,W^{\pi_R}$ consistent with the design.
+3. Compute
+   $$
+   T_r = T\bigl(W^{\pi_r},\, Y^{(\tau_0)}(W^{\pi_r}),\, X,\, \Omega\bigr),
+   \quad r=1,\dots,R.
+   $$
+
+This yields an empirical null distribution $\{T_r\}_{r=1}^R$.
+
+## Fisher exact $p$-values (FEP)
+
+For a one-sided test where “large values of $T$” count against the null, the **Fisher exact $p$-value** is the randomization probability of seeing a statistic at least as extreme as observed:
+$$
+p = \mathbb{P}\bigl(T(W^*,\cdot) \ge T(W,\cdot)\;\big|\;H_0,\,\text{design}\bigr).
+$$
+
+If we can enumerate all $w\in\mathcal{W}$ with their design probabilities, this $p$-value is exact in finite samples. When enumeration is infeasible, we estimate it by Monte Carlo using $R$ random draws:
+$$
+\hat p = \frac{1 + \sum_{r=1}^R \mathbf{1}\{T_r \ge T_{\mathrm{obs}}\}}{R+1}.
+$$
+The $+1$ correction avoids returning $0$ with finite $R$ and is standard in RI practice.
+
+Two-sided tests require defining “extreme” symmetrically (e.g., using $|T|$ or $|T-\mathrm{center}|$ inside the indicator). The important point is not the convention itself, but that it is stated and applied consistently.
+
+## Design-based vs sampling/model-based inference
+
+**Design-based inference (RI):** conditions on the realized units and their outcomes and treats the randomization mechanism as the sole source of uncertainty. Validity hinges on correctly reproducing the design and testing a sharp null so outcomes under reassignments are known or imputable.
+
+**Sampling-based / model-based inference:** treats the observed data as a sample from a superpopulation and relies on a stochastic model for outcomes (and typically asymptotics). Standard regression standard errors and confidence intervals are in this family.
+
+RI does not need an outcome model to justify $p$-values. When a regression coefficient is used inside RI, it is not “true because the regression is correct”; it is simply a scalar summary of how outcomes co-move with assignment under repeated re-randomization.
+
+## Fisher vs Neyman
+
+- **Fisher:** tests a *sharp* null (often no individual effect) using the randomization distribution. The direct output is a $p$-value; by inverting sharp-null tests across many $\tau_0$ values, one can also obtain a set of nonrejected effect sizes.
+- **Neyman:** targets an *average* effect (ATE) and uncertainty for that estimand, typically via variance formulas and large-sample approximations.
+
+These are complementary but not identical. A sharp-null test is stronger than an ATE-null test: if effects vary across units, the ATE could be near zero while individual effects are nonzero, so a Fisher test of “no effect for anyone” can reject even when the ATE is small. This distinction matters for interpretation and motivates being explicit about which null is being tested and what a reported interval means.
+
+## Further reading
+
+There is a lot to learn, including recent work, about randomization inference. The list below is a useful starting point.
+
+- Athey, S., & Imbens, G. W. (2017). The econometrics of randomized experiments. In _Handbook of economic field experiments_ (Vol. 1, pp. 73-140). North-Holland.
+- Cunningham, S. (2021). _Causal inference: The mixtape_. Yale university press.
+- Fisher (1935), *The Design of Experiments*.
+- Gerber and Green (2012), *Field Experiments: Design, Analysis, and Interpretation*.
+- Imbens and Rubin (2015), *Causal Inference in Statistics, Social, and Biomedical Sciences*.
+- Rosenbaum (2002), *Observational Studies*.
+
+
+[^exact-approx]: In practice, randomization inference is not exact, it is an approximation given the large number of permutations with even a modest number of observations.

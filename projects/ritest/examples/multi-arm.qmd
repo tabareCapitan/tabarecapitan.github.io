@@ -1,0 +1,140 @@
+---
+title: "Multi-arm experiments"
+---
+
+---
+
+Most examples on randomization inference assume that you have an experiment with two arms: a control and a treatment. What if you have more than two? You can still do randomization inference, but you need to make some choices.[^stata-reference]
+
+
+## Theory
+
+Suppose you ran a randomized experiment with three arms:
+
+- $T \in \{0,1,2\}$
+  - $T=0$: Control
+  - $T=1$: Treatment A
+  - $T=2$: Treatment B
+
+A multi-arm experiment does not have “one” treatment effect. You must decide which contrast you want to test and report. The three most common are:
+
+1. A vs Control: $H_0:\ \tau_{A0}=0$
+2. B vs Control: $H_0:\ \tau_{B0}=0$
+3. A vs B: $H_0:\ \tau_{AB}=0$
+
+In this example, **I focus on the first one: A vs Control**.
+
+Randomization inference tests a sharp null about outcomes under different assignments:
+
+$$
+H_0:\ Y_i(1)=Y_i(0)\ \text{for all } i \text{ in the units eligible to switch between } T=0 \text{ and } T=1.
+$$
+
+The key phrase is “eligible to switch”.
+
+
+### Option 1
+
+If you only care about A vs Control, analyze only units with $T \in \{0,1\}$. This is the simplest option.
+
+- **Estimation sample:** $T \in \{0,1\}$
+- **Re-randomization:** shuffle A/Control labels within that sample
+- **Interpretation:** RI is conditional on the experiment that could have assigned only A or Control to those units.
+
+
+### Option 2
+
+If you want more precision, you can use the full dataset to estimate a covariate-adjusted statistic, but only allow reassignments among the A/Control units. Treatment-B units stay fixed as $T=2$ in every permutation.
+
+- **Estimation sample:** $T \in \{0,1,2\}$
+- **Re-randomization:** shuffle A/Control labels only among units with $T \in \{0,1\}$, keeping all $T=2$ units fixed
+- **Interpretation:** RI is **conditional on the realized set of B assignments**. You test A vs Control “holding B fixed”.
+
+If you keep B in the regression, you should include a B indicator (or use a full set of arm indicators) so B is not implicitly pooled into Control.
+
+
+### Discussion
+
+If you have no covariates and saturated arm indicators:
+$$
+y_i = \alpha + \beta_A \mathbf{1}[T_i=1] + \beta_B \mathbf{1}[T_i=2] + \varepsilon_i,
+$$
+$\beta_A$ is the difference in mean outcomes between A and Control. Including B observations does not change the meaning of $\beta_A=\bar y_{A} - \bar y_{0}$. That is, option 1 and option 2 will typically produce the same $\hat\beta_A$ (up to edge-case numerical details).
+
+If you do have covariates,
+$$
+y_i = \alpha + \beta_A \mathbf{1}[T_i=1] + \beta_B \mathbf{1}[T_i=2] + X_i'\gamma + \varepsilon_i,
+$$
+$\hat\beta_A$ is computed after “partialling out” $X$. If you estimate $\gamma$ using all arms (option 2) versus only A/Control (Option 1), then $\hat\gamma$ can change, which can change $\hat\beta_A$.
+
+Which one is "correct"? That is up to you. Are you looking for conditional or an unconditional estimate?
+
+
+## Implementation
+
+`ritest` (Python) requires the permutation variable to be binary, so for A vs Control you typically construct:
+
+$$
+A_i = \mathbf{1}[T_i=1].
+$$
+
+### Option 1 (drop B)
+
+1. Filter to $T \in \{0,1\}$
+2. Create $A$
+3. Call `ritest` normally (permuting `A`)
+
+Minimal sketch:
+
+```python
+df_sub = df[df["treatment"].isin([0, 1])].copy()
+df_sub["A"] = (df_sub["treatment"] == 1).astype(int)
+
+res = ritest(
+    df=df_sub,
+    permute_var="A",
+    formula="y ~ 1 + A + x1 + x2",   # include covariates if you want
+    stat="A",
+    reps=5000,
+    seed=123,
+)
+```
+
+### Option 2 (keep B fixed)
+
+This option requires much more work, it emulates Stata's `fixlevels(#)` option.
+
+1. Work on the full dataset.
+2. Create `A` and a separate `B` indicator.
+3. Build a permutation matrix that only permutes `A` among units with $T \in \{0,1\}$.[^fixlevels]
+4. Pass that matrix via `permutations=` on the `ritest` call..
+
+Sketch:
+
+```python
+df = df.copy()
+df["A"] = (df["treatment"] == 1).astype(int)
+df["B"] = (df["treatment"] == 2).astype(int)
+
+A = df["A"].to_numpy()
+mask = (df["B"].to_numpy() == 0)     # only Control/A units are shuffled
+
+perms = np.empty((reps, len(df)), dtype=A.dtype)
+for r in range(reps):
+    pr = A.copy()
+    pr[mask] = rng.permutation(pr[mask])
+    perms[r] = pr
+
+res = ritest(
+    df=df,
+    permute_var="A",
+    permutations=perms,              # B stays fixed because A=0 for B always
+    formula="y ~ 1 + A + B + x1 + x2",
+    stat="A",
+    seed=123,
+)
+```
+
+
+[^stata-reference]: This section borrows heavily from [Simon Heß](https://hesss.org/)'s discussion [here](https://github.com/simonheb/ritest?tab=readme-ov-file#i-have-3-treatment-arms-how-do-i-use-ritest).
+[^fixlevels]: If your experimental design involves stratification or clustering, you must build permutations that respect that same structure when you supply `permutations=`.

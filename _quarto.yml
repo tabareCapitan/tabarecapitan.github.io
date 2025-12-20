@@ -7,60 +7,68 @@ resources:
 
 website:
   title: "Tabaré Capitán"
-  description: "Researcher and data scientist, personal website"
+  description: "Data scientist, personal website"
   favicon: favicon.png
   open-graph: true
-  google-analytics:
-    tracking-id: "G-5XPBJKXZNK"
-    anonymize-ip: true
-    storage: none
   back-to-top-navigation: true
   reader-mode: false
   navbar:
     search: true
-    right:
-        - icon: linkedin
-          href: https://www.linkedin.com/in/tabareCapitan
-          aria-label: LinkedIn
-          target: _blank
-        - icon: substack
-          href: https://www.tabarecapitan.com
-          aria-label: Substack
-          target: _blank
-        - icon: reception-4
-          href: https://scholar.google.com/citations?user=uqivDeoAAAAJ
-          aria-label: Google Scholar
-          target: _blank
-        - icon: github
-          href: https://github.com/tabareCapitan
-          aria-label: GitHub
-          target: _blank
+
     left:
       - href: index.qmd
         text: about
       - href: projects/index.qmd
         text: projects
-      - href: papers.qmd
-        text: papers
       - href: toolbox.qmd
         text: toolbox
+      - href: research.qmd
+        text: research
   sidebar:
     - id: "proj-ritest"
       title: "ritest"
       style: docked
       collapse-level: 2
-      contents: projects/ritest/
+      contents:
+        - projects/ritest/index.qmd
+        - projects/ritest/quick-start.qmd
+
+        - section: "Examples"
+          contents:
+            - projects/ritest/examples/settings.qmd
+            - projects/ritest/examples/non-linear.qmd
+            - projects/ritest/examples/custom.qmd
+            - projects/ritest/examples/did.qmd
+            - projects/ritest/examples/multi-arm.qmd
+
+        - section: "Benchmarks"
+          contents:
+            - projects/ritest/benchmarks/intro.qmd
+            - projects/ritest/benchmarks/colombia.qmd
+            - projects/ritest/benchmarks/generic-vs-linear.qmd
+            - projects/ritest/benchmarks/ci-bands.qmd
+
+        - section: "Technical notes"
+          contents:
+            - projects/ritest/technical-notes/ri.qmd
+            - projects/ritest/technical-notes/pvalues.qmd
+            - projects/ritest/technical-notes/ci.qmd
+            - projects/ritest/technical-notes/big-o.qmd
+
+        - projects/ritest/api.qmd
       tools:
         - icon: github
           menu:
             - text: Source Code
-              href:  https://tabarecapitan.com
+              href:  https://github.com/tabareCapitan/ritest
             - text: Report a Bug
-              href:  https://tabarecapitan.com
+              href:  https://github.com/tabareCapitan/ritest/issues
 
 format:
   html:
-    theme: minty
+    theme:
+      light: flatly
+      dark: darkly
     css: styles.css
     toc: true
     toc-location: right

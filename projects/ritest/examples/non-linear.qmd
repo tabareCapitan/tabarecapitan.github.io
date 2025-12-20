@@ -1,0 +1,415 @@
+---
+title: "Non-linear models"
+---
+
+---
+
+`ritest()` can do randomization inference (RI) for non-linear models by using the **generic statistic path**:
+
+- You provide `stat_fn(df_perm) -> float`, returning **one scalar** (the test statistic).
+- `ritest()` repeatedly permutes `permute_var` (e.g., treatment `z`) and re-computes the statistic.
+- The RI $p$-value comes from the permutation distribution of that statistic.
+
+All snippets of code in this section come from [this script](https://github.com/tabareCapitan/ritest/blob/master/documentation/examples/results_object.py).
+
+
+## Data
+
+Each example uses its own toy data, designed to be appropriate for the corresponding model.
+
+
+## Shared utility
+
+Assume a `pandas.DataFrame` named `df` with columns:
+
+- `y`: outcome
+- `z`: treatment / assignment variable to permute
+- `x`: baseline covariate (fixed)
+
+A small helper to build the design matrix:
+
+```python
+def design(df: pd.DataFrame):
+    # include intercept + treatment + covariate
+    return sm.add_constant(df[["z", "x"]], has_constant="add")
+```
+
+## Logit
+
+::: {.panel-tabset}
+
+### Code
+
+Define the function `stat_logit(...)`:
+
+```python
+def stat_logit(df_perm: pd.DataFrame) -> float:
+    X = design(df_perm)
+    y = df_perm["y"]
+    fit = sm.GLM(
+        y, X,
+        family=sm.families.Binomial(link=sm.families.links.Logit()),
+    ).fit(disp=False)
+    return float(fit.params["z"])
+```
+Call `ritest`:
+
+```python
+res = ritest(
+    df=df,
+    permute_var="z",
+    stat_fn=stat_logit,
+    alternative="two-sided",
+    reps=1000,
+    seed=1,
+    ci_mode="none",
+)
+```
+
+
+### Results
+
+```
+Randomization inference result (ritest)
+--------------------------------------
+
+Coefficient
+-----------
+Observed effect (β̂):   0.9404
+Coefficient CI bounds: not computed
+Coefficient CI band:   not computed
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.0180 (1.8%)
+P-value CI @ α=0.050: [0.0083, 0.0339]
+As-or-more extreme:     9 / 500
+```
+
+:::
+
+
+## Probit
+
+
+::: {.panel-tabset}
+
+
+### Code
+
+Define the function `stat_probit(...)`:
+
+```python
+def stat_probit(df_perm: pd.DataFrame) -> float:
+    X = design(df_perm)
+    y = df_perm["y"]
+    fit = sm.GLM(
+        y, X,
+        family=sm.families.Binomial(link=sm.families.links.Probit()),
+    ).fit(disp=False)
+    return float(fit.params["z"])
+```
+
+`ritest` call:
+
+```python
+res = ritest(
+    df=df,
+    permute_var="z",
+    stat_fn=stat_probit,
+    alternative="two-sided",
+    reps=1000,
+    seed=2,
+    ci_mode="none",
+)
+```
+
+
+### Results
+
+```
+Randomization inference result (ritest)
+--------------------------------------
+
+Coefficient
+-----------
+Observed effect (β̂):   0.5865
+Coefficient CI bounds: not computed
+Coefficient CI band:   not computed
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.0320 (3.2%)
+P-value CI @ α=0.050: [0.0184, 0.0514]
+As-or-more extreme:     16 / 500
+
+```
+
+:::
+
+
+## Poisson
+
+::: {.panel-tabset}
+
+### Code
+
+Define `stat_poisson(...)`:
+
+```python
+def stat_poisson(df_perm: pd.DataFrame) -> float:
+    X = design(df_perm)
+    y = df_perm["y"]
+    fit = sm.GLM(y, X, family=sm.families.Poisson()).fit(disp=False)
+    return float(fit.params["z"])
+```
+
+`ritest` call:
+
+```python
+res = ritest(
+    df=df,
+    permute_var="z",
+    stat_fn=stat_poisson,
+    alternative="two-sided",
+    reps=1000,
+    seed=3,
+    ci_mode="none",
+)
+```
+
+
+### Results
+
+```
+Randomization inference result (ritest)
+--------------------------------------
+
+Coefficient
+-----------
+Observed effect (β̂):   0.3636
+Coefficient CI bounds: not computed
+Coefficient CI band:   not computed
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.0200 (2.0%)
+P-value CI @ α=0.050: [0.0096, 0.0365]
+As-or-more extreme:     10 / 500
+
+```
+
+:::
+
+
+
+## Negative Binomial
+
+
+::: {.panel-tabset}
+
+
+### Code
+
+Define `stat_negbin_fixed_alpha(...)`:
+
+```python
+def stat_negbin_fixed_alpha(df_perm: pd.DataFrame, *, alpha: float = 1.0) -> float:
+    X = design(df_perm)
+    y = df_perm["y"]
+    fit = sm.GLM(
+        y, X,
+        family=sm.families.NegativeBinomial(alpha=alpha),
+    ).fit(disp=False)
+    return float(fit.params["z"])
+```
+
+`ritest` call with a [lambda function](https://realpython.com/python-lambda/) to handle the extra parameter:
+
+```python
+res = ritest(
+    df=df,
+    permute_var="z",
+    stat_fn=lambda d: stat_negbin_fixed_alpha(d, alpha=1.0),
+    alternative="two-sided",
+    reps=1000,
+    seed=4,
+    ci_mode="none",
+)
+```
+
+### Results
+
+```
+Randomization inference result (ritest)
+--------------------------------------
+
+Coefficient
+-----------
+Observed effect (β̂):   0.1609
+Coefficient CI bounds: not computed
+Coefficient CI band:   not computed
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.4840 (48.4%)
+P-value CI @ α=0.050: [0.4394, 0.5288]
+As-or-more extreme:     242 / 500
+
+```
+
+
+:::
+
+## Fractional logit
+
+::: {.panel-tabset}
+
+
+### Code
+
+Define `stat_fractional_logit(...)`:
+
+```python
+def stat_fractional_logit(df_perm: pd.DataFrame) -> float:
+    X = design(df_perm)
+    y = df_perm["y"]
+    fit = sm.GLM(
+        y, X,
+        family=sm.families.Binomial(link=sm.families.links.Logit()),
+    ).fit(disp=False)
+    return float(fit.params["z"])
+```
+
+RI call:
+
+```python
+res = ritest(
+    df=df,
+    permute_var="z",
+    stat_fn=stat_fractional_logit,
+    alternative="two-sided",
+    reps=1000,
+    seed=5,
+    ci_mode="none",
+)
+```
+
+
+### Results
+
+```
+Randomization inference result (ritest)
+--------------------------------------
+
+Coefficient
+-----------
+Observed effect (β̂):   0.5334
+Coefficient CI bounds: not computed
+Coefficient CI band:   not computed
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.0000 (0.0%)
+P-value CI @ α=0.050: [0.0000, 0.0074]
+As-or-more extreme:     0 / 500
+
+```
+
+
+:::
+
+
+
+## Tobit
+
+
+::: {.panel-tabset}
+
+
+### Code
+
+Define `stat_tobit(...)`:
+
+```python
+from scipy.optimize import minimize
+from scipy.stats import norm
+
+def stat_tobit(df_perm: pd.DataFrame) -> float:
+    y = df_perm["y"].to_numpy(dtype=float)
+    X = design(df_perm).to_numpy(dtype=float)
+
+    is_cens = y <= 0.0
+    is_obs = ~is_cens
+
+    # theta = [beta0, beta_z, beta_x, log_sigma]
+    def nll(theta: np.ndarray) -> float:
+        beta = theta[:-1]
+        log_sigma = theta[-1]
+        sigma = np.exp(log_sigma)
+
+        mu = X @ beta
+        z = (y - mu) / sigma
+
+        ll = 0.0
+        if np.any(is_obs):
+            ll += np.sum(norm.logpdf(z[is_obs]) - log_sigma)
+        if np.any(is_cens):
+            ll += np.sum(norm.logcdf((0.0 - mu[is_cens]) / sigma))
+
+        return -float(ll)
+
+    theta0 = np.zeros(X.shape[1] + 1, dtype=float)  # simple start
+    opt = minimize(nll, theta0, method="BFGS", options={"maxiter": 120})
+
+    beta_hat = opt.x[:-1]
+    return float(beta_hat[1])  # [const, z, x] -> pick z
+```
+
+`ritest` call:
+
+```python
+res = ritest(
+    df=df,
+    permute_var="z",
+    stat_fn=stat_tobit,
+    alternative="two-sided",
+    reps=500,   # MLE wrappers are slower; start smaller
+    seed=6,
+    ci_mode="none",
+)
+```
+
+### Results
+
+```
+Randomization inference result (ritest)
+--------------------------------------
+
+Coefficient
+-----------
+Observed effect (β̂):   0.9919
+Coefficient CI bounds: not computed
+Coefficient CI band:   not computed
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.0000 (0.0%)
+P-value CI @ α=0.050: [0.0000, 0.0074]
+As-or-more extreme:     0 / 500
+```
+
+:::
+
+
+## Practical notes
+
+- Your wrapper should be **deterministic** given `df_perm`.
+- Keep the wrapper **minimal**: compute the statistic and return it.
+- `ritest` assumes that `gen_fun` works, i.e., is always return a scalar. This behavior is validated before any heavy computation begins. You must ensure that your generic function works before passing it to `ritest`.

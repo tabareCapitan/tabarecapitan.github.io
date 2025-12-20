@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>installation – Tabaré Capitán</title>
+<title>API reference – Tabaré Capitán</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,6 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../projects/ritest/technical-notes/big-o.html" rel="prev">
 <link href="../../favicon.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -104,7 +140,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="installation – Tabaré Capitán">
+<meta property="og:title" content="API reference – Tabaré Capitán">
 <meta property="og:description" content="Data scientist, personal website">
 <meta property="og:site_name" content="Tabaré Capitán">
 </head>
@@ -316,7 +352,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">installation</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../projects/ritest/api.html">API reference</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -470,7 +506,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/api.html" class="sidebar-item-text sidebar-link">
+  <a href="../../projects/ritest/api.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">API reference</span></a>
   </div>
 </li>
@@ -484,9 +520,17 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#fasfasf" id="toc-fasfasf" class="nav-link active" data-scroll-target="#fasfasf">fasfasf</a>
+  <li><a href="#public-api" id="toc-public-api" class="nav-link active" data-scroll-target="#public-api">Public API</a>
   <ul class="collapse">
-  <li><a href="#fdsfsd" id="toc-fdsfsd" class="nav-link" data-scroll-target="#fdsfsd">fdsfsd</a></li>
+  <li><a href="#ritest" id="toc-ritest" class="nav-link" data-scroll-target="#ritest"><code>ritest</code></a></li>
+  <li><a href="#ritestresult" id="toc-ritestresult" class="nav-link" data-scroll-target="#ritestresult"><code>RitestResult</code></a></li>
+  <li><a href="#configuration-helpers" id="toc-configuration-helpers" class="nav-link" data-scroll-target="#configuration-helpers">Configuration helpers</a>
+  <ul class="collapse">
+  <li><a href="#ritest_set" id="toc-ritest_set" class="nav-link" data-scroll-target="#ritest_set"><code>ritest_set</code></a></li>
+  <li><a href="#ritest_get" id="toc-ritest_get" class="nav-link" data-scroll-target="#ritest_get"><code>ritest_get</code></a></li>
+  <li><a href="#ritest_reset" id="toc-ritest_reset" class="nav-link" data-scroll-target="#ritest_reset"><code>ritest_reset</code></a></li>
+  <li><a href="#ritest_config" id="toc-ritest_config" class="nav-link" data-scroll-target="#ritest_config"><code>ritest_config</code></a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -497,7 +541,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">installation</h1>
+<h1 class="title">API reference</h1>
 </div>
 
 
@@ -514,17 +558,124 @@ window.Quarto = {
 </header>
 
 
-<p>contents</p>
-<section id="fasfasf" class="level2">
-<h2 class="anchored" data-anchor-id="fasfasf">fasfasf</h2>
-<p>sfdsufsdf</p>
-<section id="fdsfsd" class="level3">
-<h3 class="anchored" data-anchor-id="fdsfsd">fdsfsd</h3>
-<p>fdsf</p>
-<p>#sdfsdf</p>
-<p>fdsfsdf</p>
+<section id="public-api" class="level1">
+<h1>Public API</h1>
+<p>This page documents the stable, user-facing API of the <code>ritest</code> package as exposed through <code>ritest.__init__</code>.</p>
+<p>The public interface consists of:</p>
+<ul>
+<li><a href="#ritest"><code>ritest</code></a> — high-level entry point for randomization inference.</li>
+<li><a href="#ritestresult"><code>RitestResult</code></a> — result container.</li>
+<li>Configuration helpers:
+<ul>
+<li><a href="#ritest_set"><code>ritest_set</code></a></li>
+<li><a href="#ritest_get"><code>ritest_get</code></a></li>
+<li><a href="#ritest_reset"><code>ritest_reset</code></a></li>
+<li><a href="#ritest_config"><code>ritest_config</code></a></li>
+</ul></li>
+</ul>
+<p>This reflects the <code>__all__</code> definition in <code>ritest/__init__.py</code>.</p>
+<hr>
+<section id="ritest" class="level2">
+<h2 class="anchored" data-anchor-id="ritest"><code>ritest</code></h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ritest <span class="im">import</span> ritest</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> ritest(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    df,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    permute_var: <span class="bu">str</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># linear path</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    formula: <span class="bu">str</span> <span class="op">|</span> <span class="va">None</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    stat: <span class="bu">str</span> <span class="op">|</span> <span class="va">None</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># generic path</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    stat_fn: <span class="bu">callable</span> <span class="op">|</span> <span class="va">None</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># test controls</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    alternative: {<span class="st">"two-sided"</span>,<span class="st">"left"</span>,<span class="st">"right"</span>} <span class="op">=</span> <span class="st">"two-sided"</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    reps: <span class="bu">int</span> <span class="op">|</span> <span class="va">None</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    alpha: <span class="bu">float</span> <span class="op">|</span> <span class="va">None</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    ci_method: {<span class="st">"clopper-pearson"</span>,<span class="st">"normal"</span>} <span class="op">|</span> <span class="va">None</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    ci_mode: {<span class="st">"none"</span>,<span class="st">"bounds"</span>,<span class="st">"grid"</span>} <span class="op">|</span> <span class="va">None</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    coef_ci_generic: <span class="bu">bool</span> <span class="op">|</span> <span class="va">None</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># infra</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    n_jobs: <span class="bu">int</span> <span class="op">|</span> <span class="va">None</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    seed: <span class="bu">int</span> <span class="op">|</span> <span class="va">None</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># design</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    weights: <span class="bu">str</span> <span class="op">|</span> <span class="va">None</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    strata: <span class="bu">str</span> <span class="op">|</span> <span class="va">None</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    cluster: <span class="bu">str</span> <span class="op">|</span> <span class="va">None</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># optional prebuilt permutations</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    permutations: <span class="bu">object</span> <span class="op">|</span> <span class="va">None</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># optional band grid hints</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    ci_range: <span class="bu">float</span> <span class="op">|</span> <span class="va">None</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    ci_step: <span class="bu">float</span> <span class="op">|</span> <span class="va">None</span> <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Purpose</strong></p>
+<p>Run randomization inference using either:</p>
+<ul>
+<li>a <strong>linear model</strong> defined by <code>formula</code> + <code>stat</code>, or</li>
+<li>a <strong>generic statistic</strong> defined via <code>stat_fn</code>.</li>
+</ul>
+<p>Exactly one of <code>stat</code> or <code>stat_fn</code> must be supplied.</p>
+<p><strong>Returns:</strong> a <code>RitestResult</code> object.</p>
+<hr>
+</section>
+<section id="ritestresult" class="level2">
+<h2 class="anchored" data-anchor-id="ritestresult"><code>RitestResult</code></h2>
+<p><code>RitestResult</code> is the return object of <code>ritest()</code>.</p>
+<p>Typical responsibilities include:</p>
+<ul>
+<li>storing observed statistic and permutation distribution</li>
+<li>exposing scalars like estimate, p-value, confidence intervals</li>
+<li>providing helpers such as <code>summary()</code></li>
+</ul>
+<hr>
+</section>
+<section id="configuration-helpers" class="level2">
+<h2 class="anchored" data-anchor-id="configuration-helpers">Configuration helpers</h2>
+<p>All configuration utilities are exposed at the top-level:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ritest <span class="im">import</span> (</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    ritest_set,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    ritest_get,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    ritest_reset,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    ritest_config,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="ritest_set" class="level3">
+<h3 class="anchored" data-anchor-id="ritest_set"><code>ritest_set</code></h3>
+<p>Set one or more global defaults for future <code>ritest()</code> calls.</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ritest_set(reps<span class="op">=</span><span class="dv">999</span>, alpha<span class="op">=</span><span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="ritest_get" class="level3">
+<h3 class="anchored" data-anchor-id="ritest_get"><code>ritest_get</code></h3>
+<p>Retrieve the current value of a configuration option.</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ritest_get(<span class="st">"reps"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="ritest_reset" class="level3">
+<h3 class="anchored" data-anchor-id="ritest_reset"><code>ritest_reset</code></h3>
+<p>Reset global configuration to package defaults.</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ritest_reset()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="ritest_config" class="level3">
+<h3 class="anchored" data-anchor-id="ritest_config"><code>ritest_config</code></h3>
+<p>Return a dictionary-like structure containing current configuration (useful for reproducibility).</p>
+<p>Example:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>cfg <span class="op">=</span> ritest_config()</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cfg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+<p>This page documents <strong>only</strong> the public names defined in:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="va">__all__</span> <span class="op">=</span> [</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ritest"</span>,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"RitestResult"</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ritest_set"</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ritest_get"</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ritest_reset"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ritest_config"</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Internal modules and helpers are not part of the supported API.</p>
 
 
+</section>
 </section>
 </section>
 
@@ -941,6 +1092,15 @@ window.Quarto = {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../projects/ritest/technical-notes/big-o.html" class="pagination-link" aria-label="Complexity">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Complexity</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

@@ -1,0 +1,170 @@
+---
+title: "Confidence bands"
+---
+
+---
+
+In this section I compare the performance of feature to get confidence bands in my Python implementation, to the example provided in the [documentation](https://github.com/simonheb/ritest#how-to-get-confidence-bands) for the Stata implementation.
+
+
+## Data
+
+I use a toy dataset with 100 observations. Treatment is deterministically assigned so that half the observations are treated, and the outcome is generated as a linear function of treatment with a true treatment effect of 0.3 plus standard normal noise. The data are then used to estimate a simple OLS regression of the outcome on treatment and exported to CSV for use in CI-band examples.
+
+
+## Stata
+
+The code is directly taken from Stata's `ritest` [github repository]((https://github.com/simonheb/ritest#how-to-get-confidence-bands)). I made a few edits to make it easier to compare, but it remains computationally equivalent to the example presented in the repository.
+
+
+::: {.panel-tabset}
+
+### Code
+
+Run `ritest` to find which hypotheses for the treatment effect in [-1,1] can[not] be rejected.
+
+```stata
+tempfile gridsearch
+
+postfile pf TE pval using `gridsearch'
+
+forval i=-1(0.05)1 {
+
+	qui ritest treatment (_b[treatment]), reps(500) null(y `i') seed(123): reg y treatment // tc: run with _b[treatment] only to compare
+
+
+	mat pval = r(p)
+	post pf (`i') (pval[1,1])
+}
+postclose pf
+```
+
+Plot the bands, with ugly vertical lines at $-0.2$, $0.2$, and $0.6$ to help comparison with the Python results:
+
+```stata
+use `gridsearch', clear
+
+tw line pval TE , yline(0.05) xline(-0.2 0.2 0.6)
+```
+
+### Results
+
+For additional context, for a null of equality to zero,
+
+```python
+ritest treatment (_b[treatment]), nodots reps(500) seed(123): ///
+           reg y treatment
+```
+
+this is the randomization inference result:
+
+
+```
+      Command: regress y treatment
+        _pm_1: _b[treatment]
+  res. var(s):  treatment
+   Resampling:  Permuting treatment
+Clust. var(s):  __000001
+     Clusters:  100
+Strata var(s):  none
+       Strata:  1
+
+------------------------------------------------------------------------------
+T            |     T(obs)       c       n   p=c/n   SE(p) [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _pm_1 |   .2019068     181     500  0.3620  0.0215  .3198005    .405842
+------------------------------------------------------------------------------
+Note: Confidence interval is with respect to p=c/n.
+Note: c = #{|T| >= |T(obs)|}
+```
+
+The confidence bands, which are obtained by running `ritest` with a set of different non-zero nulls, are shown below:
+
+![Confidence bands](./figures/stata_ci_bands.png)
+
+where the y-axis represents randomization inference $p$-values, and the x-axis represent treatment effects. The blue line maps different treatment effects to $p$-values. The horizontal line is drawn at 0.05, corresponding to the most common significance level. These plot shows that the point estimate is about $0.2$ and the confidence interval is roughly $[-0.2,0.6]$.
+
+
+### Runtime
+
+276 seconds.
+
+:::
+
+
+## Python
+
+::: {.panel-tabset}
+
+### Code
+
+Run `ritest`, set `ci_mode="grid"` to get confidence bands:
+
+```python
+    res = ritest(
+        df=df,
+        permute_var="treatment",
+        formula="y ~ treatment",
+        stat="treatment",
+        reps=500,
+        ci_mode="grid",
+        seed=123,
+    )
+
+```
+
+### Results
+
+For additional context, this is the result of the randomization inference for a null of equality to zero:
+
+```
+Randomization Inference Result
+===============================
+
+Coefficient
+-----------
+Observed effect (β̂):   0.2019
+Coefficient CI bounds: not computed
+Coefficient CI band:   available (fast-linear)
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.3100 (31.0%)
+P-value CI @ α=0.050: [0.2697, 0.3526]
+As-or-more extreme:     155 / 500
+
+Test configuration
+------------------
+Stratified:             no
+Clustered:              no
+Weights:                no
+
+Settings
+--------
+alpha:                  0.050
+seed:                   123
+ci_method:              cp
+ci_mode:                grid
+n_jobs:                 4
+
+```
+
+The corresponding confidence band is shown below:
+
+![Confidence bands](./figures/python_ci_band.png)
+
+### Runtime
+
+0.061 seconds.
+
+:::
+
+
+### Discussion
+
+With only 100 observations, the randomization-inference results differ slightly between the Stata implementation and the Python linear path, but remain close enough to be considered correct. Most importantly for this section, the resulting confidence bands are almost identical.
+
+In terms of performance, the Python linear implementation is vastly faster (0.061 seconds) than the Stata implementation (276 seconds). This large difference reflects the main advantage of the Python linear path for confidence bands: in the Stata implementation, the permutation test is effectively repeated for each shifted null value, requiring the OLS regression to be re-estimated across all 500 permutations at every grid point. In Python, the permutations are run once, and the p-values across the full grid of shifted nulls are computed using fast analytic updates based on the linear model structure, without rerunning the permutation regressions for each grid point.
+
+(Of course, confidence bands can also be computed in R; I simply have not done that.)

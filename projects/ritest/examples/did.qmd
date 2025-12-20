@@ -1,0 +1,218 @@
+---
+title: "Difference-in-Differences"
+---
+
+---
+
+It is possible to do **fast** randomization inference using `ritest` with a $2 \times 2$ [difference-in-differences](https://en.wikipedia.org/wiki/Difference_in_differences) (DiD) design, provided a transformation to the canonical form.
+
+This is not a general solution for:
+
+- multiple time periods (event studies),
+- staggered adoption (units treated at different times),
+- dynamic effects (leads/lags),
+- designs that require many treatment–time interactions.
+
+Those cases require updating multiple interaction columns or re-building the design matrix each permutation. These variations may be possible using the generic path and the custom permutations; but I do not cover these applications in this section.
+
+## The canonical $2\times2$ DiD regression
+
+Let:
+
+- $i$ index units.
+- $t \in \{0,1\}$ index time (0 = pre, 1 = post).
+- $D_i \in \{0,1\}$ indicate the treated group (time-invariant).
+- $Post_t = \mathbf{1}[t=1]$.
+- $X_{it}$ be observed covariates (some may vary over time).
+
+The standard two-way specification is:
+
+$$
+Y_{it} = \alpha + \gamma D_i + \lambda Post_t + \delta (D_i\cdot Post_t) + X_{it}'\beta + \varepsilon_{it}.
+$$
+
+In this regression, **$\delta$** is the DiD effect (the coefficient on the interaction).[^interaction]
+
+## Transformation
+
+Define the within-unit change (the “change score”):
+
+$$
+\Delta Y_i \equiv Y_{i1} - Y_{i0}.
+$$
+
+Now difference the regression equation between $t=1$ and $t=0$:
+
+- The intercept cancels: $(\alpha - \alpha) = 0$.
+- The treated-group dummy cancels because it does not change over time:
+  $\gamma D_i - \gamma D_i = 0$.
+- The post dummy becomes a constant because $Post_1-Post_0 = 1$:
+  $\lambda\cdot 1$.
+- The interaction becomes the treatment dummy because:
+  $D_i\cdot Post_1 - D_i\cdot Post_0 = D_i\cdot 1 - D_i\cdot 0 = D_i$.
+- Covariates difference as $\Delta X_i \equiv X_{i1}-X_{i0}$.
+- Errors difference as $\Delta\varepsilon_i \equiv \varepsilon_{i1}-\varepsilon_{i0}$.
+
+Putting this together yields:
+
+$$
+\Delta Y_i = \lambda + \delta D_i + (\Delta X_i)'\beta + \Delta\varepsilon_i.
+$$
+
+This is now a plain linear regression with $\delta$ on the main effect $D_i$, which is precisely what `ritest` needs in the linear path.
+
+## Covariates
+
+### Time-invariant covariates
+If a covariate does not change over time (call it $W_i$), then:
+$$
+\Delta W_i = W_i - W_i = 0.
+$$
+So time-invariant covariates drop out automatically in the transformed regression. This is the same logic as fixed effects removing time-invariant differences.
+
+### Time-varying covariates
+If a covariate changes over time, you can include it in the transformed regression through:
+
+$$
+\Delta X_i = X_{i1} - X_{i0}.
+$$
+Your regression, then, becomes:
+
+$$
+\Delta Y_i = \lambda + \delta D_i + (\Delta X_i)'\beta + \Delta\varepsilon_i.
+$$
+Keep in mind that you are now adjusting for changes in covariates, not levels; your interpretation of the covariates must change accordingly. On the flip side, if these covariates are merely accessory to your main goal of identifying the causal effect, as it is often the case, then you do not need to worry about their interpretation.
+
+### Covariates that only exist in one period
+If a variable is only meaningful post (or only measured post), it cannot be differenced in the usual way. In that case, you are no longer in the clean 2-period panel differencing setup, and the equivalence may not hold.
+
+## `ritsest` implementation
+
+This is a concise guide to implement the two-period transformation, you can find the complete script in the [repository](https://github.com/tabareCapitan/ritest/blob/master/documentation/examples/did.py).
+
+1. Ensure you can build a two-period panel (one pre, one post per unit).
+
+2. Create one row per unit with:
+   - $dy_i = Y_{i,post} - Y_{i,pre}$,
+   - $D_i$ (treated-group indicator),
+   - optional: $dX_i = X_{i,post} - X_{i,pre}$ for any time-varying covariates you want to control for.
+
+    In python, these looks something like this:
+
+    ```python
+        wide_y = df.pivot(index="id", columns="post", values="y")
+        wide_x = df.pivot(index="id", columns="post", values="x")
+
+        df_diff = pd.DataFrame(
+            {
+                "id": ids,
+                "D": D,
+                "dy": (wide_y[1] - wide_y[0]).to_numpy(),
+                "dx": (wide_x[1] - wide_x[0]).to_numpy(),
+            }
+        )
+    ```
+3. Now, that you have the regression in the required form:
+
+    $$
+    dy_i = c + \delta D_i + dX_i'\beta + u_i,
+    $$
+
+    you can call `ritest` as follows:
+
+    ```python
+        ri = ritest(
+            df=df_diff,
+            permute_var="D",
+            formula="dy ~ D + dx",
+            stat="D",
+            reps=2000,
+            seed=123,
+            alternative="two-sided",
+            ci_mode="none",
+        )
+    ```
+
+## Technical appendix
+
+Although the "change score" transformation is exactly equivalent to the canonical form in terms of the point estimate, the t-statistic and corresponding $p$-values may differ. This is the topic of this appendix.
+
+Note, however, that randomization inference is independent of the OLS standard error. It uses the permutation distribution of the statistic. You can safely skip this appendix if your only goal is to do randomization inference.
+
+
+### Set up
+
+We have two equivalent DiD specifications, the canonical (interaction) form:
+
+$$
+Y_{it} = \alpha + \gamma D_i + \lambda Post_t + \delta (D_i\cdot Post_t) + X_{it}'\beta + \varepsilon_{it},
+$$
+
+and the change score regression:
+
+$$
+\Delta Y_i = \lambda + \delta D_i + (\Delta X_i)'\beta + \Delta\varepsilon_i,
+\quad \text{where } \Delta\varepsilon_i = \varepsilon_{i1}-\varepsilon_{i0}.
+$$
+
+These two regressions are equivalent for the estimand $\delta$.
+
+
+### OLS standard error
+
+Even though both regressions estimate the same $\delta$, they are not the same statistical model for the disturbances.
+
+
+####  The error term is transformed
+
+In levels you work with $\varepsilon_{it}$, while in differences you work with $\Delta\varepsilon_i = \varepsilon_{i1}-\varepsilon_{i0}$. Even under the simplifying assumption that $\varepsilon_{it}$ is iid with variance $\sigma^2$,
+$$
+\operatorname{Var}(\Delta\varepsilon_i) = \operatorname{Var}(\varepsilon_{i1}-\varepsilon_{i0}) = 2\sigma^2.
+$$
+So the *scale and structure* of the regression residuals changes when you difference.
+
+
+#### The covariance structure implied by the data differs
+
+In the canonical form you have two observations per unit. If there is any within-unit dependence across time (very common in practice), then treating all 2,000 observations as independent (the default “nonrobust” OLS SEs) is misspecified.
+
+In the change score regression, each unit contributes one observation, so there is no within-unit time series left—but the error is now the difference $\Delta\varepsilon_i$, which typically has a different variance than the level errors.
+
+
+#### Degrees of freedom and the estimated residual variance
+
+Following the example:
+
+- Panel regression: $N_{obs}=2000$ (two rows per unit)
+- Change score regression: $N_{obs}=1000$ (one row per unit)
+
+The OLS estimate of the residual variance uses $\text{SSR}/\text{df}_{resid}$, and $\text{df}_{resid}$ differs across the two regressions. That alone can move standard errors slightly.
+
+
+#### Small differences propagate into t-stats and CIs
+
+A t-statistic is:
+
+$$
+t = \frac{\hat\delta}{\widehat{SE}(\hat\delta)}.
+$$
+
+So even if $\hat\delta$ differs only a little (Monte Carlo noise), and $\widehat{SE}(\hat\delta)$ differs only a little, the t-stat and Wald CI endpoints can still move noticeably.
+
+
+### Discussion
+
+If you are here because you want to do randomization inference, this is irrelevant; go on. If you checked the equivalence of the two forms, which you can easily do with [this script](https://github.com/tabareCapitan/ritest/blob/master/documentation/examples/did.py), and found out that the results are not exactly the same, then this section is for you.
+
+
+## References
+
+Not a complete list by any means, just a few resources related to this section.
+
+- Baker, A., Callaway, B., Cunningham, S., Goodman-Bacon, A., & Sant'Anna, P. H. (2025). [Difference-in-differences designs: A practitioner's guide.](https://arxiv.org/abs/2503.13323)
+- Callaway, B. (2022). [Difference-in-Differences for Policy Evaluation](https://bcallaway11.github.io/files/Callaway-Chapter-2022/main.pdf). In: Zimmermann, K.F. (eds) Handbook of Labor, Human Resources and Population Economics
+- Dukes O, Shahn Z, Renson A. Change scores and baseline adjustment: splitting the difference (in differences). International Journal of Epidemiology
+
+
+
+[^interaction]: The reason for which `ritest` does not work directly with the canonical $2\times2$ DiD specification is the interaction term. The specification includes `permute_var` in both ways: on its own, which is not a problem, and interacted with another variable, which is a big problem. `ritest` will only permute the column containing the `permute_var` alone, ignoring the interaction. This issue is not limited to DiD, it applies to any specification in which `permute_var` plays any role in the specification beyond a simple additive term.

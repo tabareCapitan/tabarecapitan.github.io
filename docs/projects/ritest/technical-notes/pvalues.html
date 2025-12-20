@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>toolbox – Tabaré Capitán</title>
+<title>p-values – Tabaré Capitán</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,28 +23,30 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../projects/ritest/technical-notes/ci.html" rel="next">
+<link href="../../../projects/ritest/technical-notes/ri.html" rel="prev">
+<link href="../../../favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,14 +75,43 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Tabaré Capitán">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="\(p\)-values – Tabaré Capitán">
 <meta property="og:description" content="Data scientist, personal website">
 <meta property="og:site_name" content="Tabaré Capitán">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -249,7 +280,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Tabaré Capitán</span>
     </a>
   </div>
@@ -260,19 +291,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects/index.html"> 
+    <a class="nav-link" href="../../../projects/index.html"> 
 <span class="menu-text">projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./toolbox.html" aria-current="page"> 
+    <a class="nav-link" href="../../../toolbox.html"> 
 <span class="menu-text">toolbox</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
+    <a class="nav-link" href="../../../research.html"> 
 <span class="menu-text">research</span></a>
   </li>  
 </ul>
@@ -282,89 +313,320 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/technical-notes/ri.html">Technical notes</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/technical-notes/pvalues.html"><span class="math inline">\(p\)</span>-values</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="sidebar-tools-main">
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/tabareCapitan/ritest">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/tabareCapitan/ritest/issues">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../projects/ritest/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ritest</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../projects/ritest/quick-start.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quick start</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Examples</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../projects/ritest/examples/settings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Settings</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../projects/ritest/examples/non-linear.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Non-linear models</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../projects/ritest/examples/custom.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Custom statistics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../projects/ritest/examples/did.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Difference-in-Differences</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../projects/ritest/examples/multi-arm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Multi-arm experiments</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Benchmarks</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../projects/ritest/benchmarks/colombia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Colombian example</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../projects/ritest/benchmarks/generic-vs-linear.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Linear vs generic</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../projects/ritest/benchmarks/ci-bands.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Confidence bands</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Technical notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../projects/ritest/technical-notes/ri.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Randomization inference</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../projects/ritest/technical-notes/pvalues.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="math inline">\(p\)</span>-values</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../projects/ritest/technical-notes/ci.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Confidence intervals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../projects/ritest/technical-notes/big-o.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Complexity</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../projects/ritest/api.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">API reference</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#browser" id="toc-browser" class="nav-link" data-scroll-target="#browser">Browser</a></li>
-  <li><a href="#focus-music" id="toc-focus-music" class="nav-link" data-scroll-target="#focus-music">Focus (music)</a></li>
-  <li><a href="#ide-text-editor" id="toc-ide-text-editor" class="nav-link" data-scroll-target="#ide-text-editor">IDE + Text editor</a></li>
-  <li><a href="#mail" id="toc-mail" class="nav-link" data-scroll-target="#mail">Mail</a></li>
-  <li><a href="#note-taking" id="toc-note-taking" class="nav-link" data-scroll-target="#note-taking">Note-taking</a></li>
-  <li><a href="#organization" id="toc-organization" class="nav-link" data-scroll-target="#organization">Organization</a></li>
-  <li><a href="#os" id="toc-os" class="nav-link" data-scroll-target="#os">OS</a></li>
-  <li><a href="#sync-and-storage" id="toc-sync-and-storage" class="nav-link" data-scroll-target="#sync-and-storage">Sync and storage</a></li>
-  <li><a href="#website" id="toc-website" class="nav-link" data-scroll-target="#website">Website</a></li>
+  <li><a href="#definition" id="toc-definition" class="nav-link active" data-scroll-target="#definition">Definition</a></li>
+  <li><a href="#assignment-re-randomization" id="toc-assignment-re-randomization" class="nav-link" data-scroll-target="#assignment-re-randomization">Assignment re-randomization</a></li>
+  <li><a href="#linear-path" id="toc-linear-path" class="nav-link" data-scroll-target="#linear-path">Linear path</a>
+  <ul class="collapse">
+  <li><a href="#the-coefficient-as-a-linear-functional-of-the-outcome" id="toc-the-coefficient-as-a-linear-functional-of-the-outcome" class="nav-link" data-scroll-target="#the-coefficient-as-a-linear-functional-of-the-outcome">The coefficient as a linear functional of the outcome</a></li>
+  <li><a href="#observed-robust-standard-error" id="toc-observed-robust-standard-error" class="nav-link" data-scroll-target="#observed-robust-standard-error">Observed robust standard error</a></li>
+  <li><a href="#how-permutations-enter-the-linear-path-in-ritest" id="toc-how-permutations-enter-the-linear-path-in-ritest" class="nav-link" data-scroll-target="#how-permutations-enter-the-linear-path-in-ritest">How permutations enter the linear path in <code>ritest</code></a></li>
+  </ul></li>
+  <li><a href="#generic-path" id="toc-generic-path" class="nav-link" data-scroll-target="#generic-path">Generic path</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
 
-
-
-
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>I find it useful to see what tools and software people use, so here is mine.</p>
-<p>Most of my time is spent writing in two places: <a href="https://code.visualstudio.com/">VS Code</a> for code, and <a href="https://obsidian.md/">Obsidian</a> for everything else. I use the <a href="https://catppuccin.com/">Catppuccin</a> theme in both, which gives me a consistent dark interface that is easy on the eyes.</p>
-<p>This page will likely grow as I add or change tools.</p>
-</section>
-<section id="browser" class="level1">
-<h1>Browser</h1>
-<p>I use <a href="https://brave.com">Brave</a> as my main browser, primarily for its built-in privacy features. It also makes it easy to disable extras like VPN, LeoAI, and crypto wallet integrations, keeping the browser lean.</p>
-<p>Here are some extensions that I find useful: <a href="https://github.com/gildas-lormeau/SingleFile">SingleFile</a> for saving complete webpages offline, <a href="https://github.com/obsidianmd/obsidian-clipper">Obsidian Web Clipper</a> to send content directly into my (Obsidian) vault, <a href="https://www.zotero.org/download/connectors">Zotero Connector</a> for capturing references and metadata, the <a href="https://scholar.google.com/intl/en/scholar/help.html#button">Google Scholar Button</a> for quick access to papers and citations, and <a href="https://unpaywall.org/products/extension">Unpaywall</a> to find legal open-access versions of academic articles.</p>
-</section>
-<section id="focus-music" class="level1">
-<h1>Focus (music)</h1>
-<p>I often work with background music, especially for deep focus. “Regular” music works, but it can also become a distraction on its own, either because it is too engaging or because of track changes. Classical and other lyric-free music works well. I mostly use <a href="https://www.brain.fm/">Brain.fm</a>, which claims to create music that is “purpose-built to steer you into a desired mental state”. I haven’t read the research, but it is supposed to have some <a href="https://www.brain.fm/science">real science</a> behind it. All I can say is that it has been good for me. The “purpose-built” part also seems to work beyond deep focus, with modes for learning, creativity, chill, unwind, destress, sleep, and more.</p>
-<p>I still use it every day, but I have three issues with Brain.fm: no real desktop app (they only just released one for Mac), it’s hard to tell when (and if) new material comes out, and the price feels too high. On the last point, services like Spotify and Youtube Music return about 60-70% of revenue to right holders, while Brain.fm produces its own catalogue. Intellectual property rights don’t enter as a variable cost in the same way; it seems closer to a one-time cost to create tracks. I don’t know how expensive it is to make music for Brain.fm, but it’s almost certainly far cheaper than producing commercial songs. Yet the pricing doesn’t reflect those different cost structures. As of August 2025 in Sweden, you pay about USD 13.5/month for Spotify, USD 12.5/month for Youtube Music, and USD 10/month for Brain.fm (USD 5.8 if billed annually).</p>
-</section>
-<section id="ide-text-editor" class="level1">
-<h1>IDE + Text editor</h1>
-<p><a href="https://code.visualstudio.com/">VS Code</a>, all the way. I use it for all my coding, which includes <a href="https://www.python.org/">Python</a>, <a href="https://www.stata.com/">Stata</a> (with <a href="https://marketplace.visualstudio.com/items?itemName=kylebarron.stata-enhanced">Stata Enhanced</a> and <a href="https://marketplace.visualstudio.com/items?itemName=Yeaoh.stataRun">StataRun</a>), and <a href="https://www.r-project.org/">R</a>. I use it to build this website via <a href="https://quarto.org/">Quarto</a>. And I also use it for typesetting in <a href="https://www.latex-project.org/">LaTeX</a>. <a href="https://git-scm.com/">Git</a> for version control, with <a href="https://github.com/">GitHub</a> as the remote. I also use <a href="https://github.com/features/copilot">GitHub Copilot</a> when it helps.</p>
-<p>In the past I used <a href="https://www.sublimetext.com/">Sublime</a>, which remains a great lightweight text editor, but I prefer to have everything in one place. Before that, I had a good run with <a href="https://atom-editor.cc/">Atom</a> (deceased).</p>
-</section>
-<section id="mail" class="level1">
-<h1>Mail</h1>
-<p>I use <a href="http://gmail.com">Gmail</a> with three extensions: <a href="https://simplify.email/">Simplify</a> for a cleaner interface and lots of features, <a href="https://inboxwhenready.org/">Inbox When Ready</a> to hide the inbox when I don’t want to see it, and <a href="https://chrome.google.com/webstore/detail/tex-for-gmail/egkbleipdnmlndoaapdppmeajkkigddo">TeX for Gmail</a> when I need to include equations.</p>
-</section>
-<section id="note-taking" class="level1">
-<h1>Note-taking</h1>
-<p>I use <a href="https://obsidian.md/">Obsidian</a> to write everything (except <a href="#ide-text-editor">code</a>) that I want to keep: papers, ideas, recipes, health notes, things I learn, and more.</p>
-<p>I added a few community plugins to Obsidian to make it more useful: <a href="https://obsidian.md/plugins?id=better-word-count">Better Word Count</a>, <a href="https://blacksmithgu.github.io/obsidian-dataview/">Dataview</a>, <a href="https://obsidian.md/plugins?id=gotoheading">Go to Heading</a>, <a href="https://obsidian.md/plugins?id=obsidian-hider">Hider</a>, <a href="https://obsidian.md/plugins?id=homepage">Homepage</a>, <a href="https://obsidian.md/plugins?id=latex-suite">LaTeX Suite</a>, <a href="https://obsidian.md/plugins?id=obsidian-pandoc">Pandoc</a>, <a href="https://obsidian.md/plugins?id=quick-switcher-plus-plus">Quick Switcher++</a>, <a href="https://obsidian.md/plugins?id=quickadd">QuickAdd</a>, <a href="https://obsidian.md/plugins?id=remember-cursor-position">Remember Cursor Position</a>, <a href="https://obsidian.md/plugins?id=templater-obsidian">Templater</a>, <a href="https://obsidian.md/plugins?id=text-snippets">Text Snippets</a>, <a href="https://obsidian.md/plugins?id=text-to-speech">TTS</a>, <a href="https://obsidian.md/plugins?id=typewriter-scroll">Typewriter Scroll</a>, and <a href="https://github.com/mgmeyers/obsidian-zotero-integration">Zotero Integration</a>.</p>
-<p>Obsidian is flexible. You can make it look and act however you want. The <a href="https://obsidian.md/about">developers</a> are active and reasonable. The <a href="https://docs.obsidian.md/Home">community</a> builds and maintains a huge set of plugins. The <a href="https://obsidian.md/roadmap">roadmap</a> is transparent. It isn’t open-source, but it has regular audits and a feasible business model, which gives me confidence in using it long term. The business model is simple: you only pay if you want sync or publishing. Because it’s funded directly by users, development can stay focused on product rather than outside pressures. Most importantly, notes stay in plain text Markdown files (see <a href="https://stephango.com/file-over-app">File over app</a>). That means no lock-in.</p>
-</section>
-<section id="organization" class="level1">
-<h1>Organization</h1>
-<p>I use <a href="https://workflowy.com/">Workflowy</a> for text that is meant to disappear: shopping lists, to-do lists, travel itineraries, and more. It’s a simple, fast, and flexible outliner that works well for quick notes and lists. I mostly like it because it is so simple and I can easily use it without touching my mouse. It’s been my main planning tool for a while.</p>
-</section>
-<section id="os" class="level1">
-<h1>OS</h1>
-<p>My main OS is <a href="https://fedoraproject.org/">Fedora</a> (Linux), which provides modern kernels and software alongside a clean upstream GNOME experience. Although somewhat sponsored by IBM through its Red Hat ties, development remains <a href="https://en.wikipedia.org/wiki/Fedora_Project">credibly independent</a>. <a href="https://ubuntu.com/">Ubuntu</a> is convenient and user-friendly, though I prefer Fedora’s approach over Canonical’s Snap ecosystem. <a href="https://www.linuxmint.com/">Linux Mint</a> attempts to “clean” Ubuntu but still relies on Canonical dependencies. I have no concerns about <a href="https://www.debian.org/">Debian</a>, but it may be too conservative for my needs.</p>
-<p>I’ve made few changes to Fedora’s default setup. Perhaps most useful, I made my shell (bash) a bit faster to use by adding <a href="https://crates.io/crates/zoxide">zoxide</a> for directory navigation.</p>
-<p>I also keep <a href="https://www.microsoft.com/en-gb/windows/">Windows</a> (dual-boot with GRUB) for a few applications that lack Linux support, such as <a href="https://www.garmin.com/sv-SE/software/express/windows/">Garmin Express</a> and <a href="https://www.bankid.com/en/">BankID</a>.</p>
-</section>
-<section id="sync-and-storage" class="level1">
-<h1>Sync and storage</h1>
-<p>I use <a href="https://nextcloud.com/">Nextcloud</a> for file sync, hosted on <a href="https://www.hetzner.com/storage/storage-share/">Hetzner Storage Share</a> (Hosted in the EU). It is a bit more complex to set up than alternatives like Dropbox, but it gives you so much control and flexibility for a fraction of the monthly cost (~20% of the current price of Dropbox for two users).</p>
-<p>Nextcloud is open-source, so it can run on a self-hosted server or on any third-party provider. It has a large community and many plugins to extend its functionality. I do not use any of the Nextcloud apps, but I do use the <a href="https://docs.nextcloud.com/desktop/latest/">Nextcloud Desktop Client</a> to sync files across devices. Once setup is done, it works seamlessly in the background. <a href="https://help.nextcloud.com/t/how-do-virtual-files-work-in-the-client/154234">Virtual File System</a> (VFS) works well in Windows, although it is better to keep a separate sync folder with VFS enabled. As of August 2025, VFS does not work in Linux, but it is easy to mount a remote folder with <a href="https://en.wikipedia.org/wiki/WebDAV">WebDAV</a>.</p>
-</section>
-<section id="website" class="level1">
-<h1>Website</h1>
-<p>This site is built with <a href="https://quarto.org/">Quarto</a>, rendered locally, and deployed via <a href="https://pages.github.com/">GitHub Pages</a>. Quarto handles the formatting and publishing workflow in Markdown and integrates directly with VS Code, which makes editing and updating simple. Once the site is built, I push the changes to GitHub, and it automatically updates the live site.</p>
-<hr>
-<div style="text-align:center; margin-top:3rem;">
-<p><small style="font-size:0.6rem; opacity:0.7; text-decoration:none;"> <a href="./disclaimer.html" style="text-decoration:none; color:inherit;">Disclaimer</a> </small></p>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/technical-notes/ri.html">Technical notes</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/technical-notes/pvalues.html"><span class="math inline">\(p\)</span>-values</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="math inline">\(p\)</span>-values</h1>
 </div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<hr>
+<p>A randomization <span class="math inline">\(p\)</span>-value answers a concrete question: if the same assignment mechanism were re-run, how often would the chosen statistic look at least as extreme as the observed one? In <code>ritest</code>, that question is implemented by repeatedly re-assigning the treatment vector (subject to the same constraints) and recomputing the statistic, producing a <strong>randomization distribution</strong> that is specific to the realized design and the chosen statistic.</p>
+<section id="definition" class="level2">
+<h2 class="anchored" data-anchor-id="definition">Definition</h2>
+<p>Let <span class="math inline">\(T(\cdot)\)</span> denote the test statistic (a scalar). Let <span class="math inline">\(T_{\text{obs}}\)</span> be the statistic computed on the observed data, and let <span class="math inline">\({T_r}_{r=1}^R\)</span> be the statistics computed under <span class="math inline">\(R\)</span> re-randomizations of the assignment.</p>
+<p><code>ritest</code> defines the Monte Carlo randomization <span class="math inline">\(p\)</span>-value as <span class="math display">\[
+\hat p \;=\; \frac{1}{R}\sum_{r=1}^{R}
+\mathbf{1}\!\left\{T_r \text{ is at least as extreme as } T_{\mathrm{obs}}\right\},
+\]</span> with the extremeness rule determined by <code>alternative</code>:</p>
+<ul>
+<li><p><code>two-sided</code>: <span class="math display">\[
+  \mathbf{1}\!\left\{ |T_r| \ge |T_{\mathrm{obs}}| \right\}
+  \]</span></p></li>
+<li><p><code>right</code>: <span class="math display">\[
+  \mathbf{1}\!\left\{ T_r \ge T_{\mathrm{obs}} \right\}
+  \]</span></p></li>
+<li><p><code>left</code>: <span class="math display">\[
+\mathbf{1}\!\left\{ T_r \le T_{\mathrm{obs}} \right\}
+  \]</span></p></li>
+</ul>
+<p>This becomes a Fisher-exact randomization <span class="math inline">\(p\)</span>-value only in the special case where the set <span class="math inline">\({T_r}\)</span> is computed over the full set of admissible assignments under the design. In typical use, <span class="math inline">\(R\)</span> is a Monte Carlo sample, and <span class="math inline">\(\hat p\)</span> is an estimate of the underlying design-based <span class="math inline">\(p\)</span>-value.</p>
+</section>
+<section id="assignment-re-randomization" class="level2">
+<h2 class="anchored" data-anchor-id="assignment-re-randomization">Assignment re-randomization</h2>
+<p><code>ritest</code> generates each re-randomized assignment by permuting the observed assignment vector (the <code>permute_var</code> column), with the permutation scheme determined by optional <code>strata</code> and <code>cluster</code> arguments:</p>
+<ul>
+<li><p><strong>Plain</strong>: a global permutation of the assignment vector.</p></li>
+<li><p><strong>Stratified</strong> (<code>strata</code> only): independent permutations within each stratum; treated/control counts are preserved within each stratum.</p></li>
+<li><p><strong>Cluster</strong> (<code>cluster</code> only): permutation at the cluster level and broadcast to units; this requires the observed assignment to be constant within each cluster.</p></li>
+<li><p><strong>Cluster within strata</strong> (<code>cluster</code> and <code>strata</code>): cluster-level permutation performed separately within each stratum, then broadcast within the stratum.</p></li>
+</ul>
+<p><code>ritest</code> can either:</p>
+<ul>
+<li><p>accept a user-supplied permutation matrix <code>perms</code> (shape <span class="math inline">\((R,N)\)</span>), in which case <code>reps</code> is taken as <code>perms.shape[0]</code>, or</p></li>
+<li><p>generate permutations internally, either as a full in-memory matrix or as streamed blocks when memory may be an issue (chunking does not change the generated sequence given a fixed seed).</p></li>
+</ul>
+</section>
+<section id="linear-path" class="level2">
+<h2 class="anchored" data-anchor-id="linear-path">Linear path</h2>
+<p>When <code>stat_fn</code> is not supplied, <code>ritest</code> uses the <strong>treatment coefficient</strong> from a linear model as the statistic. Concretely, the statistic is the coefficient on the treatment column in a (optionally weighted) least squares regression of <span class="math inline">\(y\)</span> on the design matrix <span class="math inline">\(X\)</span> (which includes the treatment column and any additional covariates specified by <code>formula</code>).</p>
+<section id="the-coefficient-as-a-linear-functional-of-the-outcome" class="level3">
+<h3 class="anchored" data-anchor-id="the-coefficient-as-a-linear-functional-of-the-outcome">The coefficient as a linear functional of the outcome</h3>
+<p>Let <span class="math inline">\(X\in\mathbb{R}^{N\times k}\)</span> be the design matrix and <span class="math inline">\(y\in\mathbb{R}^N\)</span> the outcome. If analytic weights are supplied, define the diagonal weight matrix <span class="math inline">\(\Omega=\mathrm{diag}(w)\)</span> and the weighted variables <span class="math display">\[
+X_w = \Omega^{1/2}X,\qquad y_w = \Omega^{1/2}y,
+\]</span> and otherwise <span class="math inline">\(X_w=X\)</span> and <span class="math inline">\(y_w=y\)</span>.</p>
+<p>Let <span class="math inline">\(j\)</span> index the treatment column inside <span class="math inline">\(X\)</span> (this is <code>treat_idx</code> in the implementation), and let <span class="math inline">\(e_j\in\mathbb{R}^k\)</span> be the coordinate vector with a 1 in position <span class="math inline">\(j\)</span>. The weighted least squares coefficient on the treatment column is <span class="math display">\[
+\hat\beta
+= e_j^\top (X_w^\top X_w)^{-1}X_w^\top y_w.
+\]</span></p>
+<p>Define the <strong><span class="math inline">\(c\)</span>-vector</strong> <span class="math display">\[
+c^\top \equiv e_j^\top (X_w^\top X_w)^{-1}X_w^\top,
+\]</span> so that <span class="math display">\[
+\hat\beta = c^\top y_w.
+\]</span></p>
+<p><code>FastOLS</code> computes <span class="math inline">\((X_w^\top X_w)^{-1}\)</span> via a <a href="https://en.wikipedia.org/wiki/Cholesky_decomposition">Cholesky factorization</a> of <span class="math inline">\(X_w^\top X_w\)</span> (which requires <span class="math inline">\(N&gt;k\)</span> and a well-conditioned design). It then constructs:</p>
+<ul>
+<li><p><code>c_vector</code> as the <span class="math inline">\(c\)</span> defined above (in the weighted metric),</p></li>
+<li><p><code>beta_hat</code> as <span class="math inline">\(\hat\beta=c^\top y_w\)</span>,</p></li>
+<li><p><code>c_perm_vector</code>, which equals <span class="math inline">\(c\)</span> in OLS and <span class="math inline">\(c\odot \sqrt{w}\)</span> in WLS, so permutation computations can consistently use unweighted-length-<span class="math inline">\(N\)</span> vectors.</p></li>
+</ul>
+</section>
+<section id="observed-robust-standard-error" class="level3">
+<h3 class="anchored" data-anchor-id="observed-robust-standard-error">Observed robust standard error</h3>
+<p>For the observed statistic only, <code>FastOLS</code> optionally computes a robust variance estimate:</p>
+<ul>
+<li><p>HC1 (“White”) when <code>cluster</code> is not supplied.</p></li>
+<li><p>CRV1 when <code>cluster</code> is supplied (requires at least 2 unique clusters).</p></li>
+</ul>
+<p>This yields an observed robust standard error <code>se</code>, used later for sizing coefficient-CI grids. During permutation evaluation, <code>ritest</code> sets <code>compute_vcov=False</code> to avoid the covariance computation.</p>
+</section>
+<section id="how-permutations-enter-the-linear-path-in-ritest" class="level3">
+<h3 class="anchored" data-anchor-id="how-permutations-enter-the-linear-path-in-ritest">How permutations enter the linear path in <code>ritest</code></h3>
+<p>In the linear path, each permutation replaces the treatment column of the design matrix:</p>
+<ul>
+<li><p>Let <span class="math inline">\(X_{\text{obs}}\)</span> denote the observed design matrix.</p></li>
+<li><p>For permutation <span class="math inline">\(r\)</span>, <code>ritest</code> constructs <span class="math inline">\(X_r\)</span> by copying <span class="math inline">\(X_{\text{obs}}\)</span> and replacing column <span class="math inline">\(j\)</span> with the permuted assignment vector.</p></li>
+</ul>
+<p><code>ritest</code> then fits <code>FastOLS(y, X_r, treat_idx, ..., compute_vcov=False)</code> and records:</p>
+<ul>
+<li><span class="math inline">\(T_r = \hat\beta_r\)</span> as the permutation statistic.</li>
+</ul>
+<p>In addition, <code>FastOLS</code> exposes a scalar <span class="math display">\[
+K \equiv c^\top T_{\text{metric}},
+\]</span> where <span class="math inline">\(T_{\text{metric}}\)</span> is the treatment column in the same metric used to construct <span class="math inline">\(c\)</span>. <code>ritest</code> records:</p>
+<ul>
+<li><p><span class="math inline">\(K_{\text{obs}}\)</span> from the observed fit,</p></li>
+<li><p><span class="math inline">\(K_r\)</span> from each permuted fit, computed as <span class="math inline">\(K_r = c_r^\top T_{\text{obs, metric}}\)</span> (the observed treatment column in the same metric).</p></li>
+</ul>
+<p>These <span class="math inline">\(K\)</span> quantities are not needed for the <span class="math inline">\(p\)</span>-value itself; they are the foundation for the fast confidence bands.</p>
+</section>
+</section>
+<section id="generic-path" class="level2">
+<h2 class="anchored" data-anchor-id="generic-path">Generic path</h2>
+<p>When <code>stat_fn</code> is supplied, the statistic is treated as a black box:</p>
+<p><span class="math display">\[
+T_{\text{obs}} = \texttt{stat\_fn}(\texttt{df}).
+\]</span></p>
+<p>For each permutation <span class="math inline">\(r\)</span>:</p>
+<ol type="1">
+<li><p><code>ritest</code> creates a shallow copy of the original dataframe. This makes the generic path slow regardless of the complexity of <code>stat_fn</code>.</p></li>
+<li><p>It replaces the <code>permute_var</code> column with the permuted assignment vector.</p></li>
+<li><p>It evaluates the statistic: <span class="math display">\[
+T_r = \texttt{stat\_fn}(\texttt{df}_r).
+\]</span></p></li>
+</ol>
+<p>This path is the reference implementation for arbitrary estimators: any procedure that can be written as a function of the dataframe can be used, including non-linear estimators and multi-step workflows. The randomization <span class="math inline">\(p\)</span>-value is then computed from <span class="math inline">\({T_r}_{r=1}^R\)</span> using the same tail rules described above.</p>
 
 
 </section>
@@ -782,6 +1044,18 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../projects/ritest/technical-notes/ri.html" class="pagination-link" aria-label="Randomization inference">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Randomization inference</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../projects/ritest/technical-notes/ci.html" class="pagination-link" aria-label="Confidence intervals">
+        <span class="nav-page-text">Confidence intervals</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

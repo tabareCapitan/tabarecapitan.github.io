@@ -1,0 +1,14 @@
+---
+title: "Introduction"
+---
+
+---
+
+[Stata's `ritest`](https://github.com/simonheb/ritest) (by [Simon Heß](https://hesss.org/)) has been out for about a decade now, making it a trusted way to confirm that my own `ritest` implementation in Python works correctly. To strenghten the confirmation, I also compare results with [R's `ritest`](https://grantmcdermott.com/ritest/index.html) implementation (by [Grant McDermott](https://grantmcdermott.com/)). A second goal of this subsection is to compare performance across the three implementations under different scenarios. To be clear, this is not a competition, it would not make sense, in most cases, to choose a particular language just because of randomization inference performance. It is just interesting to see how the different implementations compare.
+
+I'll not include all code here, just the critical bits. You can find complete code and data for all benchmarks in the [repository](https://github.com/tabareCapitan/ritest/tree/master/documentation/benchmarks).
+
+
+---
+
+There are more implementations of randomization inference than the ones I consider in these benchmarks. For example, in Stata, Alwyn Young has shared [code](https://personal.lse.ac.uk/YoungA/) to do randomization inference and confidence intervals. In R, Alexander Coppock, authored `ri2`, documented [here](https://cran.r-project.org/web/packages/ri2/vignettes/ri2_vignette.html). I’ve not used these alternatives, but they seem like credible implementation you may want to consider.

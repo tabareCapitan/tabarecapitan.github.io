@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>installation – Tabaré Capitán</title>
+<title>Multi-arm experiments – Tabaré Capitán</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,31 +20,68 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../favicon.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../projects/ritest/benchmarks/intro.html" rel="next">
+<link href="../../../projects/ritest/examples/did.html" rel="prev">
+<link href="../../../favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,8 +140,8 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="installation – Tabaré Capitán">
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Multi-arm experiments – Tabaré Capitán">
 <meta property="og:description" content="Data scientist, personal website">
 <meta property="og:site_name" content="Tabaré Capitán">
 </head>
@@ -278,7 +315,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Tabaré Capitán</span>
     </a>
   </div>
@@ -289,19 +326,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects/index.html"> 
+    <a class="nav-link" href="../../../projects/index.html"> 
 <span class="menu-text">projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../toolbox.html"> 
+    <a class="nav-link" href="../../../toolbox.html"> 
 <span class="menu-text">toolbox</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research.html"> 
+    <a class="nav-link" href="../../../research.html"> 
 <span class="menu-text">research</span></a>
   </li>  
 </ul>
@@ -316,7 +353,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">installation</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/examples/settings.html">Examples</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/examples/multi-arm.html">Multi-arm experiments</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -347,13 +384,13 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ritest</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/quick-start.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/quick-start.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quick start</span></a>
   </div>
 </li>
@@ -368,31 +405,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/settings.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/settings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Settings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/non-linear.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/non-linear.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Non-linear models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/custom.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/custom.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Custom statistics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/did.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/did.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Difference-in-Differences</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/multi-arm.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/multi-arm.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Multi-arm experiments</span></a>
   </div>
 </li>
@@ -409,25 +446,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/colombia.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/colombia.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Colombian example</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/generic-vs-linear.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/generic-vs-linear.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linear vs generic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/ci-bands.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/ci-bands.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Confidence bands</span></a>
   </div>
 </li>
@@ -444,25 +481,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/ri.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/ri.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Randomization inference</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/pvalues.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/pvalues.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="math inline">\(p\)</span>-values</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/ci.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/ci.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Confidence intervals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/big-o.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/big-o.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Complexity</span></a>
   </div>
 </li>
@@ -470,7 +507,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/api.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/api.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">API reference</span></a>
   </div>
 </li>
@@ -484,9 +521,16 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#fasfasf" id="toc-fasfasf" class="nav-link active" data-scroll-target="#fasfasf">fasfasf</a>
+  <li><a href="#theory" id="toc-theory" class="nav-link active" data-scroll-target="#theory">Theory</a>
   <ul class="collapse">
-  <li><a href="#fdsfsd" id="toc-fdsfsd" class="nav-link" data-scroll-target="#fdsfsd">fdsfsd</a></li>
+  <li><a href="#option-1" id="toc-option-1" class="nav-link" data-scroll-target="#option-1">Option 1</a></li>
+  <li><a href="#option-2" id="toc-option-2" class="nav-link" data-scroll-target="#option-2">Option 2</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  </ul></li>
+  <li><a href="#implementation" id="toc-implementation" class="nav-link" data-scroll-target="#implementation">Implementation</a>
+  <ul class="collapse">
+  <li><a href="#option-1-drop-b" id="toc-option-1-drop-b" class="nav-link" data-scroll-target="#option-1-drop-b">Option 1 (drop B)</a></li>
+  <li><a href="#option-2-keep-b-fixed" id="toc-option-2-keep-b-fixed" class="nav-link" data-scroll-target="#option-2-keep-b-fixed">Option 2 (keep B fixed)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -495,9 +539,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/examples/settings.html">Examples</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/examples/multi-arm.html">Multi-arm experiments</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">installation</h1>
+<h1 class="title">Multi-arm experiments</h1>
 </div>
 
 
@@ -514,21 +558,131 @@ window.Quarto = {
 </header>
 
 
-<p>contents</p>
-<section id="fasfasf" class="level2">
-<h2 class="anchored" data-anchor-id="fasfasf">fasfasf</h2>
-<p>sfdsufsdf</p>
-<section id="fdsfsd" class="level3">
-<h3 class="anchored" data-anchor-id="fdsfsd">fdsfsd</h3>
-<p>fdsf</p>
-<p>#sdfsdf</p>
-<p>fdsfsdf</p>
+<hr>
+<p>Most examples on randomization inference assume that you have an experiment with two arms: a control and a treatment. What if you have more than two? You can still do randomization inference, but you need to make some choices.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<section id="theory" class="level2">
+<h2 class="anchored" data-anchor-id="theory">Theory</h2>
+<p>Suppose you ran a randomized experiment with three arms:</p>
+<ul>
+<li><span class="math inline">\(T \in \{0,1,2\}\)</span>
+<ul>
+<li><span class="math inline">\(T=0\)</span>: Control</li>
+<li><span class="math inline">\(T=1\)</span>: Treatment A</li>
+<li><span class="math inline">\(T=2\)</span>: Treatment B</li>
+</ul></li>
+</ul>
+<p>A multi-arm experiment does not have “one” treatment effect. You must decide which contrast you want to test and report. The three most common are:</p>
+<ol type="1">
+<li>A vs Control: <span class="math inline">\(H_0:\ \tau_{A0}=0\)</span></li>
+<li>B vs Control: <span class="math inline">\(H_0:\ \tau_{B0}=0\)</span></li>
+<li>A vs B: <span class="math inline">\(H_0:\ \tau_{AB}=0\)</span></li>
+</ol>
+<p>In this example, <strong>I focus on the first one: A vs Control</strong>.</p>
+<p>Randomization inference tests a sharp null about outcomes under different assignments:</p>
+<p><span class="math display">\[
+H_0:\ Y_i(1)=Y_i(0)\ \text{for all } i \text{ in the units eligible to switch between } T=0 \text{ and } T=1.
+\]</span></p>
+<p>The key phrase is “eligible to switch”.</p>
+<section id="option-1" class="level3">
+<h3 class="anchored" data-anchor-id="option-1">Option 1</h3>
+<p>If you only care about A vs Control, analyze only units with <span class="math inline">\(T \in \{0,1\}\)</span>. This is the simplest option.</p>
+<ul>
+<li><strong>Estimation sample:</strong> <span class="math inline">\(T \in \{0,1\}\)</span></li>
+<li><strong>Re-randomization:</strong> shuffle A/Control labels within that sample</li>
+<li><strong>Interpretation:</strong> RI is conditional on the experiment that could have assigned only A or Control to those units.</li>
+</ul>
+</section>
+<section id="option-2" class="level3">
+<h3 class="anchored" data-anchor-id="option-2">Option 2</h3>
+<p>If you want more precision, you can use the full dataset to estimate a covariate-adjusted statistic, but only allow reassignments among the A/Control units. Treatment-B units stay fixed as <span class="math inline">\(T=2\)</span> in every permutation.</p>
+<ul>
+<li><strong>Estimation sample:</strong> <span class="math inline">\(T \in \{0,1,2\}\)</span></li>
+<li><strong>Re-randomization:</strong> shuffle A/Control labels only among units with <span class="math inline">\(T \in \{0,1\}\)</span>, keeping all <span class="math inline">\(T=2\)</span> units fixed</li>
+<li><strong>Interpretation:</strong> RI is <strong>conditional on the realized set of B assignments</strong>. You test A vs Control “holding B fixed”.</li>
+</ul>
+<p>If you keep B in the regression, you should include a B indicator (or use a full set of arm indicators) so B is not implicitly pooled into Control.</p>
+</section>
+<section id="discussion" class="level3">
+<h3 class="anchored" data-anchor-id="discussion">Discussion</h3>
+<p>If you have no covariates and saturated arm indicators: <span class="math display">\[
+y_i = \alpha + \beta_A \mathbf{1}[T_i=1] + \beta_B \mathbf{1}[T_i=2] + \varepsilon_i,
+\]</span> <span class="math inline">\(\beta_A\)</span> is the difference in mean outcomes between A and Control. Including B observations does not change the meaning of <span class="math inline">\(\beta_A=\bar y_{A} - \bar y_{0}\)</span>. That is, option 1 and option 2 will typically produce the same <span class="math inline">\(\hat\beta_A\)</span> (up to edge-case numerical details).</p>
+<p>If you do have covariates, <span class="math display">\[
+y_i = \alpha + \beta_A \mathbf{1}[T_i=1] + \beta_B \mathbf{1}[T_i=2] + X_i'\gamma + \varepsilon_i,
+\]</span> <span class="math inline">\(\hat\beta_A\)</span> is computed after “partialling out” <span class="math inline">\(X\)</span>. If you estimate <span class="math inline">\(\gamma\)</span> using all arms (option 2) versus only A/Control (Option 1), then <span class="math inline">\(\hat\gamma\)</span> can change, which can change <span class="math inline">\(\hat\beta_A\)</span>.</p>
+<p>Which one is “correct”? That is up to you. Are you looking for conditional or an unconditional estimate?</p>
+</section>
+</section>
+<section id="implementation" class="level2">
+<h2 class="anchored" data-anchor-id="implementation">Implementation</h2>
+<p><code>ritest</code> (Python) requires the permutation variable to be binary, so for A vs Control you typically construct:</p>
+<p><span class="math display">\[
+A_i = \mathbf{1}[T_i=1].
+\]</span></p>
+<section id="option-1-drop-b" class="level3">
+<h3 class="anchored" data-anchor-id="option-1-drop-b">Option 1 (drop B)</h3>
+<ol type="1">
+<li>Filter to <span class="math inline">\(T \in \{0,1\}\)</span></li>
+<li>Create <span class="math inline">\(A\)</span></li>
+<li>Call <code>ritest</code> normally (permuting <code>A</code>)</li>
+</ol>
+<p>Minimal sketch:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>df_sub <span class="op">=</span> df[df[<span class="st">"treatment"</span>].isin([<span class="dv">0</span>, <span class="dv">1</span>])].copy()</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df_sub[<span class="st">"A"</span>] <span class="op">=</span> (df_sub[<span class="st">"treatment"</span>] <span class="op">==</span> <span class="dv">1</span>).astype(<span class="bu">int</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> ritest(</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    df<span class="op">=</span>df_sub,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    permute_var<span class="op">=</span><span class="st">"A"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    formula<span class="op">=</span><span class="st">"y ~ 1 + A + x1 + x2"</span>,   <span class="co"># include covariates if you want</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    stat<span class="op">=</span><span class="st">"A"</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    reps<span class="op">=</span><span class="dv">5000</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    seed<span class="op">=</span><span class="dv">123</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="option-2-keep-b-fixed" class="level3">
+<h3 class="anchored" data-anchor-id="option-2-keep-b-fixed">Option 2 (keep B fixed)</h3>
+<p>This option requires much more work, it emulates Stata’s <code>fixlevels(#)</code> option.</p>
+<ol type="1">
+<li>Work on the full dataset.</li>
+<li>Create <code>A</code> and a separate <code>B</code> indicator.</li>
+<li>Build a permutation matrix that only permutes <code>A</code> among units with <span class="math inline">\(T \in \{0,1\}\)</span>.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
+<li>Pass that matrix via <code>permutations=</code> on the <code>ritest</code> call..</li>
+</ol>
+<p>Sketch:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.copy()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"A"</span>] <span class="op">=</span> (df[<span class="st">"treatment"</span>] <span class="op">==</span> <span class="dv">1</span>).astype(<span class="bu">int</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"B"</span>] <span class="op">=</span> (df[<span class="st">"treatment"</span>] <span class="op">==</span> <span class="dv">2</span>).astype(<span class="bu">int</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> df[<span class="st">"A"</span>].to_numpy()</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> (df[<span class="st">"B"</span>].to_numpy() <span class="op">==</span> <span class="dv">0</span>)     <span class="co"># only Control/A units are shuffled</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>perms <span class="op">=</span> np.empty((reps, <span class="bu">len</span>(df)), dtype<span class="op">=</span>A.dtype)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> r <span class="kw">in</span> <span class="bu">range</span>(reps):</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    pr <span class="op">=</span> A.copy()</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    pr[mask] <span class="op">=</span> rng.permutation(pr[mask])</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    perms[r] <span class="op">=</span> pr</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> ritest(</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    df<span class="op">=</span>df,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    permute_var<span class="op">=</span><span class="st">"A"</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    permutations<span class="op">=</span>perms,              <span class="co"># B stays fixed because A=0 for B always</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    formula<span class="op">=</span><span class="st">"y ~ 1 + A + B + x1 + x2"</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    stat<span class="op">=</span><span class="st">"A"</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    seed<span class="op">=</span><span class="dv">123</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>This section borrows heavily from <a href="https://hesss.org/">Simon Heß</a>’s discussion <a href="https://github.com/simonheb/ritest?tab=readme-ov-file#i-have-3-treatment-arms-how-do-i-use-ritest">here</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>If your experimental design involves stratification or clustering, you must build permutations that respect that same structure when you supply <code>permutations=</code>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -941,6 +1095,18 @@ window.Quarto = {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../projects/ritest/examples/did.html" class="pagination-link" aria-label="Difference-in-Differences">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Difference-in-Differences</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../projects/ritest/benchmarks/intro.html" class="pagination-link" aria-label="Introduction">
+        <span class="nav-page-text">Introduction</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

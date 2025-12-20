@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>installation – Tabaré Capitán</title>
+<title>Confidence intervals – Tabaré Capitán</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,28 +23,30 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../favicon.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../projects/ritest/technical-notes/big-o.html" rel="next">
+<link href="../../../projects/ritest/technical-notes/pvalues.html" rel="prev">
+<link href="../../../favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,8 +105,8 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="installation – Tabaré Capitán">
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Confidence intervals – Tabaré Capitán">
 <meta property="og:description" content="Data scientist, personal website">
 <meta property="og:site_name" content="Tabaré Capitán">
 </head>
@@ -278,7 +280,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Tabaré Capitán</span>
     </a>
   </div>
@@ -289,19 +291,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects/index.html"> 
+    <a class="nav-link" href="../../../projects/index.html"> 
 <span class="menu-text">projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../toolbox.html"> 
+    <a class="nav-link" href="../../../toolbox.html"> 
 <span class="menu-text">toolbox</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research.html"> 
+    <a class="nav-link" href="../../../research.html"> 
 <span class="menu-text">research</span></a>
   </li>  
 </ul>
@@ -316,7 +318,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">installation</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/technical-notes/ri.html">Technical notes</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/technical-notes/ci.html">Confidence intervals</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -347,13 +349,13 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ritest</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/quick-start.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/quick-start.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quick start</span></a>
   </div>
 </li>
@@ -368,31 +370,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/settings.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/settings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Settings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/non-linear.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/non-linear.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Non-linear models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/custom.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/custom.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Custom statistics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/did.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/did.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Difference-in-Differences</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/multi-arm.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/multi-arm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Multi-arm experiments</span></a>
   </div>
 </li>
@@ -409,25 +411,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/colombia.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/colombia.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Colombian example</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/generic-vs-linear.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/generic-vs-linear.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linear vs generic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/ci-bands.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/ci-bands.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Confidence bands</span></a>
   </div>
 </li>
@@ -444,25 +446,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/ri.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/ri.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Randomization inference</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/pvalues.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/pvalues.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="math inline">\(p\)</span>-values</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/ci.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/ci.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Confidence intervals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/big-o.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/big-o.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Complexity</span></a>
   </div>
 </li>
@@ -470,7 +472,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/api.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/api.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">API reference</span></a>
   </div>
 </li>
@@ -484,9 +486,15 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#fasfasf" id="toc-fasfasf" class="nav-link active" data-scroll-target="#fasfasf">fasfasf</a>
+  <li><a href="#why-ri-reports-p-value-cis" id="toc-why-ri-reports-p-value-cis" class="nav-link active" data-scroll-target="#why-ri-reports-p-value-cis">Why RI reports <span class="math inline">\(p\)</span>-value CIs</a></li>
+  <li><a href="#coefficient-cis-and-bands-via-test-inversion" id="toc-coefficient-cis-and-bands-via-test-inversion" class="nav-link" data-scroll-target="#coefficient-cis-and-bands-via-test-inversion">Coefficient CIs and bands via test inversion</a></li>
+  <li><a href="#generic-path" id="toc-generic-path" class="nav-link" data-scroll-target="#generic-path">Generic path</a></li>
+  <li><a href="#linear-path" id="toc-linear-path" class="nav-link" data-scroll-target="#linear-path">Linear path</a>
   <ul class="collapse">
-  <li><a href="#fdsfsd" id="toc-fdsfsd" class="nav-link" data-scroll-target="#fdsfsd">fdsfsd</a></li>
+  <li><a href="#key-identity-the-target-coefficient-is-linear-in-the-outcome" id="toc-key-identity-the-target-coefficient-is-linear-in-the-outcome" class="nav-link" data-scroll-target="#key-identity-the-target-coefficient-is-linear-in-the-outcome">Key identity: the target coefficient is linear in the outcome</a></li>
+  <li><a href="#interpreting-the-beta_0-shift" id="toc-interpreting-the-beta_0-shift" class="nav-link" data-scroll-target="#interpreting-the-beta_0-shift">Interpreting the <span class="math inline">\(\beta_0\)</span> shift</a></li>
+  <li><a href="#computing-the-band-on-a-grid" id="toc-computing-the-band-on-a-grid" class="nav-link" data-scroll-target="#computing-the-band-on-a-grid">Computing the band on a grid</a></li>
+  <li><a href="#bounds-extraction" id="toc-bounds-extraction" class="nav-link" data-scroll-target="#bounds-extraction">Bounds extraction</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -495,9 +503,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/technical-notes/ri.html">Technical notes</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/technical-notes/ci.html">Confidence intervals</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">installation</h1>
+<h1 class="title">Confidence intervals</h1>
 </div>
 
 
@@ -514,15 +522,118 @@ window.Quarto = {
 </header>
 
 
-<p>contents</p>
-<section id="fasfasf" class="level2">
-<h2 class="anchored" data-anchor-id="fasfasf">fasfasf</h2>
-<p>sfdsufsdf</p>
-<section id="fdsfsd" class="level3">
-<h3 class="anchored" data-anchor-id="fdsfsd">fdsfsd</h3>
-<p>fdsf</p>
-<p>#sdfsdf</p>
-<p>fdsfsdf</p>
+<hr>
+<p>Randomization inference (RI) starts from the assignment mechanism. Holding observed outcomes fixed, the assignment is re-run (exactly or by simulation) and a test statistic is recomputed. The primary object is therefore a <strong>randomization distribution</strong> for a chosen statistic under a sharp null. That naturally produces a <span class="math inline">\(p\)</span>-value. Confidence intervals require an additional step: either quantifying Monte Carlo error in the <span class="math inline">\(p\)</span>-value itself, or inverting a family of sharp-null tests to obtain a set of non-rejected effect values.</p>
+<section id="why-ri-reports-p-value-cis" class="level3">
+<h3 class="anchored" data-anchor-id="why-ri-reports-p-value-cis">Why RI reports <span class="math inline">\(p\)</span>-value CIs</h3>
+<p>A standard regression confidence interval for a coefficient is typically derived from an approximate sampling distribution (often a <span class="math inline">\(t\)</span>-statistic), which is model-based and asymptotic in most practical settings. RI does not rely on that approximation to define its <span class="math inline">\(p\)</span>-value. Instead, it compares the observed statistic to the distribution induced by the <strong>randomization design</strong>.</p>
+<p>When the randomization distribution is enumerated exactly, the resulting <span class="math inline">\(p\)</span>-value is exact for that design. In most applications, the distribution is approximated using <span class="math inline">\(R\)</span> simulated re-randomizations. Then the <span class="math inline">\(p\)</span>-value itself has Monte Carlo uncertainty: the exceedance count is random even when the underlying (design-based) <span class="math inline">\(p\)</span>-value is fixed.</p>
+<p><code>ritest</code> always returns a confidence interval for the <strong>true randomization <span class="math inline">\(p\)</span>-value</strong> <span class="math inline">\(p\)</span> associated with the chosen statistic and design, treating the exceedance count as a binomial draw.</p>
+<p>Let <span class="math inline">\(c\)</span> be the number of permutation statistics that are at least as extreme as the observed statistic under the chosen <code>alternative</code>, and let <span class="math inline">\(R\)</span> be the number of permutations (<code>reps</code>). Then <span class="math display">\[
+c \sim \mathrm{Binomial}(R, p),
+\]</span> and <code>ritest</code> returns a <span class="math inline">\((1-\alpha)\)</span> confidence interval for <span class="math inline">\(p\)</span> using <code>pvalue_ci.py</code>.</p>
+<p><strong>Clopper–Pearson</strong> (<code>ci_method="cp"</code>, default) inverts the binomial model via Beta quantiles: <span class="math display">\[
+p_{\mathrm{lo}} = \mathrm{Beta}^{-1}\!\left(\frac{\alpha}{2};\, c,\; R-c+1\right),\qquad
+p_{\mathrm{hi}} = \mathrm{Beta}^{-1}\!\left(1-\frac{\alpha}{2};\, c+1,\; R-c\right).
+\]</span> Boundary handling sets <span class="math inline">\(p_{\mathrm{lo}}=0\)</span> when <span class="math inline">\(c=0\)</span> and <span class="math inline">\(p_{\mathrm{hi}}=1\)</span> when <span class="math inline">\(c=R\)</span>.</p>
+<p><strong>Normal / Wald</strong> (<code>ci_method="normal"</code>) uses a normal approximation around <span class="math inline">\(\hat p=c/R\)</span> with a continuity correction of <span class="math inline">\(\pm 0.5/R\)</span>: <span class="math display">\[
+\hat p = \frac{c}{R},\qquad
+\mathrm{SE}(\hat p)=\sqrt{\frac{\hat p(1-\hat p)}{R}},
+\]</span> <span class="math display">\[
+p_{\mathrm{lo}}=\mathrm{clamp}_{[0,1]}\!\left(\hat p-\frac{0.5}{R}-z_{1-\alpha/2}\,\mathrm{SE}(\hat p)\right),\quad
+p_{\mathrm{hi}}=\mathrm{clamp}_{[0,1]}\!\left(\hat p+\frac{0.5}{R}+z_{1-\alpha/2}\,\mathrm{SE}(\hat p)\right).
+\]</span></p>
+<p>This <span class="math inline">\(p\)</span>-value CI quantifies Monte Carlo uncertainty from using finitely many permutations. It is not a confidence interval for an effect parameter.</p>
+</section>
+<section id="coefficient-cis-and-bands-via-test-inversion" class="level2">
+<h2 class="anchored" data-anchor-id="coefficient-cis-and-bands-via-test-inversion">Coefficient CIs and bands via test inversion</h2>
+<p>To obtain an effect interval, define a family of sharp null hypotheses indexed by a candidate effect value <span class="math inline">\(\beta_0\)</span>. For each <span class="math inline">\(\beta_0\)</span>, compute the randomization <span class="math inline">\(p\)</span>-value <span class="math inline">\(p(\beta_0)\)</span>. The coefficient confidence set is the collection of effect values that are <strong>not rejected</strong> at level <span class="math inline">\(\alpha\)</span>: <span class="math display">\[
+\mathrm{CI}_{1-\alpha} \;=\; \left\{\beta_0:\; p(\beta_0)\ge \alpha \right\}.
+\]</span></p>
+<p><code>ritest</code> evaluates <span class="math inline">\(p(\beta_0)\)</span> on a grid of candidate values centered at the observed statistic <span class="math inline">\(\hat\beta\)</span>:</p>
+<ul>
+<li>Grid center: <span class="math inline">\(\hat\beta\)</span> (the observed statistic <code>obs_stat</code>).</li>
+<li>Half-range: <code>ci_range</code> in standard-error units.</li>
+<li>Step size: <code>ci_step</code> in standard-error units.</li>
+</ul>
+<p>So the grid is <span class="math display">\[
+\beta_0 \in \left\{\hat\beta + s\cdot \mathrm{SE}:\; s \in [-\texttt{ci\_range},\texttt{ci\_range}] \text{ in steps of }\texttt{ci\_step}\right\}.
+\]</span></p>
+<p>The output is controlled by <code>ci_mode</code>:</p>
+<ul>
+<li><code>ci_mode="none"</code>: do not compute coefficient CI artifacts.</li>
+<li><code>ci_mode="bounds"</code> (default): return only the two CI endpoints derived from the grid.</li>
+<li><code>ci_mode="grid"</code>: return the full band <span class="math inline">\((\beta_0, p(\beta_0))\)</span> over the grid.</li>
+</ul>
+<p>Endpoint conventions:</p>
+<ul>
+<li><code>two-sided</code>: return <span class="math inline">\((\beta_{\min}, \beta_{\max})\)</span> over grid points with <span class="math inline">\(p(\beta_0)\ge\alpha\)</span>.</li>
+<li><code>right</code>: return <span class="math inline">\((\beta_{\min}, +\infty)\)</span> over accepted grid points.</li>
+<li><code>left</code>: return <span class="math inline">\((-\infty, \beta_{\max})\)</span> over accepted grid points.</li>
+</ul>
+<p>When <code>ci_mode="grid"</code>, <code>ritest</code> returns the band and intentionally does not store bounds in the result object (bounds can be read off from the band using the same acceptance rule).</p>
+</section>
+<section id="generic-path" class="level2">
+<h2 class="anchored" data-anchor-id="generic-path">Generic path</h2>
+<p>For a generic statistic defined as a black box <code>stat_fn(df) -&gt; scalar</code>, there is no general way to “shift the null effect” in the Fisher sense. Design-exact test inversion requires, for each candidate <span class="math inline">\(\beta_0\)</span>, constructing outcomes that are consistent with a sharp null (i.e., imputing missing potential outcomes under <span class="math inline">\(H_0(\beta_0)\)</span>) and then recomputing the statistic under re-randomized assignments. A black-box statistic does not expose which column is the outcome, what the treatment effect model is, or how to impute outcomes under <span class="math inline">\(\beta_0\)</span>.</p>
+<p>As a result, <code>ritest</code> does not provide a design-exact coefficient CI implementation for an arbitrary <code>stat_fn</code>. For certain generic functions, it may be possible for the user to write a wrapper around <code>ritest</code> to build confidence intervals.</p>
+</section>
+<section id="linear-path" class="level2">
+<h2 class="anchored" data-anchor-id="linear-path">Linear path</h2>
+<p>When <code>stat_fn</code> is not supplied, <code>ritest</code> uses <code>FastOLS</code> and defines the statistic as the coefficient on a target regressor (commonly the treatment indicator) in a (weighted) least squares regression. In this case, the <span class="math inline">\(\beta_0\)</span>-indexed <span class="math inline">\(p\)</span>-value can be computed efficiently without re-fitting the model for each <span class="math inline">\(\beta_0\)</span>, because the coefficient is a linear functional of the outcome and the sharp-null outcome adjustment has a simple closed form.</p>
+<section id="key-identity-the-target-coefficient-is-linear-in-the-outcome" class="level3">
+<h3 class="anchored" data-anchor-id="key-identity-the-target-coefficient-is-linear-in-the-outcome">Key identity: the target coefficient is linear in the outcome</h3>
+<p>In <code>FastOLS</code>, the target coefficient can be written as <span class="math display">\[
+\hat\beta \;=\; c^\top y_{\mathrm{metric}},
+\]</span> where <span class="math inline">\(c\)</span> is a vector determined by the design matrix (and weights), and <span class="math inline">\(y_{\mathrm{metric}}\)</span> is the outcome in the same weighted metric used internally by <code>FastOLS</code>.</p>
+<p>Define the target regressor column in that same metric as <span class="math inline">\(T_{\mathrm{metric}}\)</span>. <code>FastOLS</code> computes and exposes <span class="math display">\[
+K \;=\; c^\top T_{\mathrm{metric}}.
+\]</span></p>
+<p>In <code>ritest</code>, for the observed fit this quantity is denoted <span class="math inline">\(K_{\mathrm{obs}}\)</span>. For permutation <span class="math inline">\(r\)</span>, <code>ritest</code> re-fits <code>FastOLS</code> with the permuted target regressor column (so <span class="math inline">\(c\)</span> changes with <span class="math inline">\(r\)</span>) and computes <span class="math display">\[
+K_r \;=\; c_r^\top T_{\mathrm{obs,metric}},
+\]</span> where <span class="math inline">\(T_{\mathrm{obs,metric}}\)</span> is the observed target regressor column in the metric used by <code>FastOLS</code> (exposed as <code>t_metric</code>).</p>
+</section>
+<section id="interpreting-the-beta_0-shift" class="level3">
+<h3 class="anchored" data-anchor-id="interpreting-the-beta_0-shift">Interpreting the <span class="math inline">\(\beta_0\)</span> shift</h3>
+<p>To test a sharp null indexed by <span class="math inline">\(\beta_0\)</span>, <code>ritest</code> evaluates the statistic after an implicit outcome adjustment of the form <span class="math display">\[
+y_{\mathrm{metric}}^{(\beta_0)} \;=\; y_{\mathrm{metric}} - \beta_0\,T_{\mathrm{obs,metric}}.
+\]</span></p>
+<p>Using <span class="math inline">\(\hat\beta=c^\top y_{\mathrm{metric}}\)</span>, the observed and permuted statistics under this adjustment become <span class="math display">\[
+\hat\beta_{\mathrm{obs}}(\beta_0) \;=\; \hat\beta_{\mathrm{obs}} - \beta_0\,K_{\mathrm{obs}},
+\]</span> <span class="math display">\[
+\hat\beta_{r}(\beta_0) \;=\; \hat\beta_{r} - \beta_0\,K_{r}.
+\]</span></p>
+<p>This is the shift rule implemented in <code>coef_ci.py</code> for the fast band and bounds.</p>
+</section>
+<section id="computing-the-band-on-a-grid" class="level3">
+<h3 class="anchored" data-anchor-id="computing-the-band-on-a-grid">Computing the band on a grid</h3>
+<p>Let <span class="math inline">\(\{\hat\beta_r\}_{r=1}^R\)</span> be the permutation coefficients and <span class="math inline">\(\{K_r\}_{r=1}^R\)</span> the corresponding shift factors. For a grid of candidate values <span class="math inline">\(\beta_0\)</span> (constructed as described earlier using the observed robust standard error from <code>FastOLS</code>), <code>ritest</code> computes:</p>
+<ul>
+<li><p>shifted observed critical value (vector over grid) <span class="math display">\[
+\mathrm{crit}(\beta_0) = \hat\beta_{\mathrm{obs}} - \beta_0 K_{\mathrm{obs}},
+\]</span></p></li>
+<li><p>shifted permutation values (matrix: permutations <span class="math inline">\(\times\)</span> grid) <span class="math display">\[
+\mathrm{dist}_r(\beta_0) = \hat\beta_r - \beta_0 K_r.
+\]</span></p></li>
+</ul>
+<p>Then <span class="math inline">\(p(\beta_0)\)</span> is the mean exceedance rate under the chosen tail rule:</p>
+<ul>
+<li><p><code>two-sided</code>: <span class="math display">\[
+p(\beta_0) \;=\; \frac{1}{R}\sum_{r=1}^{R}\mathbf{1}\!\left\{|\mathrm{dist}_r(\beta_0)| \ge |\mathrm{crit}(\beta_0)|\right\}
+\]</span></p></li>
+<li><p><code>right</code>: <span class="math display">\[
+p(\beta_0) \;=\; \frac{1}{R}\sum_{r=1}^{R}\mathbf{1}\!\left\{\mathrm{dist}_r(\beta_0) \ge \mathrm{crit}(\beta_0)\right\}
+\]</span></p></li>
+<li><p><code>left</code>: <span class="math display">\[
+p(\beta_0) \;=\; \frac{1}{R}\sum_{r=1}^{R}\mathbf{1}\!\left\{\mathrm{dist}_r(\beta_0) \le \mathrm{crit}(\beta_0)\right\}.
+\]</span></p></li>
+</ul>
+<p><code>coef_ci_band_fast</code> implements this in vectorised form over the grid.</p>
+<p>A degenerate case is handled explicitly: if <span class="math inline">\(K_{\mathrm{obs}}=0\)</span> and <span class="math inline">\(K_r=0\)</span> for all permutations, then the statistic does not depend on <span class="math inline">\(\beta_0\)</span> under this shift rule, and the <span class="math inline">\(p\)</span>-value profile is constant across the grid.</p>
+</section>
+<section id="bounds-extraction" class="level3">
+<h3 class="anchored" data-anchor-id="bounds-extraction">Bounds extraction</h3>
+<p>For <code>ci_mode="bounds"</code>, <code>ritest</code> computes the <span class="math inline">\(p\)</span>-value profile on the same grid and returns the outermost grid points with <span class="math inline">\(p(\beta_0)\ge\alpha\)</span> (with <span class="math inline">\(+\infty\)</span> or <span class="math inline">\(-\infty\)</span> for the open end in one-sided tests). For <code>ci_mode="grid"</code>, <code>ritest</code> returns the full band $(_0, p(_0))`.</p>
 
 
 </section>
@@ -941,6 +1052,18 @@ window.Quarto = {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../projects/ritest/technical-notes/pvalues.html" class="pagination-link" aria-label="$p$-values">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="math inline">\(p\)</span>-values</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../projects/ritest/technical-notes/big-o.html" class="pagination-link" aria-label="Complexity">
+        <span class="nav-page-text">Complexity</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

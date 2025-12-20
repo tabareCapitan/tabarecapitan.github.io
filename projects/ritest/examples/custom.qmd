@@ -1,0 +1,354 @@
+---
+title: "Custom statistics"
+---
+
+---
+
+`ritest()` can run randomization inference (RI) on *any* statistic, as long as you can write a generic function, `python
+stat_fn(df_perm) -> float`, that takes a permuted dataset and returns a single number. In this page I show a few common statistics you may want to use. F
+
+The script to run all the examples is in the [repository](https://github.com/tabareCapitan/ritest/blob/master/documentation/examples/custom_stats.py).
+
+
+## Data
+
+I use a small toy dataset (n = 100) with complete randomization (exactly half treated). The outcome has mild heavy tails so the robust and distributional statistics have something to do.
+
+```python
+def make_data(n: int = 100, seed: int = 1, tau: float = 0.6) -> pd.DataFrame:
+    rng = np.random.default_rng(seed)
+
+    # Complete randomization: exactly n/2 treated
+    z = np.zeros(n, dtype=int)
+    z[: n // 2] = 1
+    z = rng.permutation(z)
+
+    x = rng.normal(size=n)
+
+    # Mixture noise for heavier tails
+    u = rng.uniform(size=n)
+    eps = np.where(
+        u < 0.85, rng.normal(scale=1.0, size=n), rng.normal(scale=3.0, size=n)
+    )
+
+    # Treatment shifts the location a bit (tau), plus baseline x effect
+    y = 0.2 + tau * z + 0.5 * x + eps
+
+    return pd.DataFrame({"y": y, "z": z, "x": x})
+```
+
+## Shared utility
+
+All statistics below are computed from the treated and control outcome vectors.
+
+```python
+def _split_groups(df: pd.DataFrame) -> tuple[np.ndarray, np.ndarray]:
+    y = df["y"].to_numpy(dtype=float)
+    z = df["z"].to_numpy(dtype=int)
+    yt = y[z == 1]
+    yc = y[z == 0]
+    return yt, yc
+```
+
+## Median difference
+
+::: {.panel-tabset}
+
+### Code
+
+Define `stat_median_diff(...)`:
+
+```python
+def stat_median_diff(df: pd.DataFrame) -> float:
+    yt, yc = _split_groups(df)
+    return float(np.median(yt) - np.median(yc))
+```
+
+`ritest` call:
+
+```python
+res = ritest(
+    df=df,
+    permute_var="z",
+    stat_fn=stat_median_diff,
+    alternative="two-sided",
+    reps=1000,
+    seed=1,
+    ci_mode="none",
+)
+```
+
+### Results
+
+```
+Randomization inference result (ritest)
+--------------------------------------
+
+Coefficient
+-----------
+Observed effect (β̂):   0.3310
+Coefficient CI bounds: not computed
+Coefficient CI band:   not computed
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.2440 (24.4%)
+P-value CI @ α=0.050: [0.2070, 0.2841]
+As-or-more extreme:     122 / 500
+```
+:::
+
+
+## 10% trimmed mean difference
+
+::: {.panel-tabset}
+
+### Code
+
+```python
+from scipy.stats import trim_mean
+
+def stat_trimmed_mean_diff(df: pd.DataFrame, prop: float = 0.10) -> float:
+    yt, yc = _split_groups(df)
+    mt = float(trim_mean(yt, proportiontocut=prop))
+    mc = float(trim_mean(yc, proportiontocut=prop))
+    return float(mt - mc)
+```
+
+`ritest` call:
+
+```python
+res = ritest(
+    df=df,
+    permute_var="z",
+    stat_fn=stat_trimmed_mean_diff,
+    alternative="two-sided",
+    reps=1000,
+    seed=1,
+    ci_mode="none",
+)
+```
+
+
+### Results
+
+```
+Randomization inference result (ritest)
+--------------------------------------
+
+Coefficient
+-----------
+Observed effect (β̂):   0.4985
+Coefficient CI bounds: not computed
+Coefficient CI band:   not computed
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.0400 (4.0%)
+P-value CI @ α=0.050: [0.0246, 0.0611]
+As-or-more extreme:     20 / 500
+
+```
+
+:::
+
+
+
+## Difference in mean ranks
+
+Compute pooled ranks of `y`, then take the difference in mean ranks between treated and control.
+
+
+::: {.panel-tabset}
+
+### Code
+
+Define `stat_mean_rank_diff`:
+
+```python
+from scipy.stats import rankdata
+
+def stat_mean_rank_diff(df: pd.DataFrame) -> float:
+    y = df["y"].to_numpy(dtype=float)
+    z = df["z"].to_numpy(dtype=int)
+    r = rankdata(y, method="average")  # ranks 1..n
+    return float(r[z == 1].mean() - r[z == 0].mean())
+```
+
+`ritest` call:
+
+```python
+res = ritest(
+    df=df,
+    permute_var="z",
+    stat_fn=stat_mean_rank_diff,
+    alternative="two-sided",
+    reps=1000,
+    seed=1,
+    ci_mode="none",
+)
+```
+
+### Results
+
+```
+Randomization inference result (ritest)
+--------------------------------------
+
+Coefficient
+-----------
+Observed effect (β̂):   10.4000
+Coefficient CI bounds: not computed
+Coefficient CI band:   not computed
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.0760 (7.6%)
+P-value CI @ α=0.050: [0.0543, 0.1028]
+As-or-more extreme:     38 / 500
+```
+
+
+:::
+
+
+
+## Rank-biserial correlation
+
+Rank-biserial correlation (RBC) is an effect size in [-1, 1] derived from ranks (via the Mann–Whitney U statistic). Positive values mean treated outcomes tend to be larger.
+
+::: {.panel-tabset}
+
+### Code
+
+Define `stat_rank_biserial(...)`:
+
+```python
+from scipy.stats import rankdata
+
+def stat_rank_biserial(df: pd.DataFrame) -> float:
+    y = df["y"].to_numpy(dtype=float)
+    z = df["z"].to_numpy(dtype=int)
+    r = rankdata(y, method="average")
+
+    nt = int((z == 1).sum())
+    nc = int((z == 0).sum())
+
+    sum_ranks_t = float(r[z == 1].sum())
+    u = sum_ranks_t - nt * (nt + 1) / 2.0
+    rbc = 2.0 * u / (nt * nc) - 1.0
+    return float(rbc)
+```
+
+
+`ritest` call:
+
+```python
+res = ritest(
+    df=df,
+    permute_var="z",
+    stat_fn=stat_rank_biserial,
+    alternative="two-sided",
+    reps=1000,
+    seed=1,
+    ci_mode="none",
+)
+```
+
+
+### Results
+
+```
+Randomization inference result (ritest)
+--------------------------------------
+
+Coefficient
+-----------
+Observed effect (β̂):   0.2080
+Coefficient CI bounds: not computed
+Coefficient CI band:   not computed
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.0780 (7.8%)
+P-value CI @ α=0.050: [0.0561, 0.1051]
+As-or-more extreme:     39 / 500
+
+```
+
+:::
+
+
+## Kolmogorov–Smirnov statistic
+
+Two-sample Kolmogorov–Smirnov (KS) statistic `D >= 0`, the maximum gap between the treated and control empirical CDFs.
+
+Because `D` is non-negative and “larger means more different”, a right-tailed RI is a natural default here.
+
+
+::: {.panel-tabset}
+
+### Code
+
+Define `stat_ks(...)` and auxiliary `_ks_stat_and_pvalue(...)`:
+
+```python
+from scipy.stats import ks_2samp
+
+def _ks_stat_and_pvalue(yt: np.ndarray, yc: np.ndarray) -> tuple[float, float]:
+    r = ks_2samp(yt, yc, alternative="two-sided")
+    try:
+        stat = float(r.statistic)
+        pval = float(r.pvalue)
+    except AttributeError:
+        stat = float(r[0])
+        pval = float(r[1])
+    return stat, pval
+
+
+def stat_ks(df: pd.DataFrame) -> float:
+    yt, yc = _split_groups(df)
+    stat, _ = _ks_stat_and_pvalue(yt, yc)
+    return float(stat)
+```
+
+`ritest` call:
+
+```python
+res = ritest(
+    df=df,
+    permute_var="z",
+    stat_fn=stat_ks,
+    alternative="right",
+    reps=1000,
+    seed=1,
+    ci_mode="none",
+)
+```
+
+### Results
+
+```
+Randomization inference result (ritest)
+--------------------------------------
+
+Coefficient
+-----------
+Observed effect (β̂):   0.2200
+Coefficient CI bounds: not computed
+Coefficient CI band:   not computed
+
+Permutation test
+----------------
+Tail (alternative):     right
+p-value:                0.1780 (17.8%)
+P-value CI @ α=0.050: [0.1455, 0.2144]
+As-or-more extreme:     89 / 500
+```
+
+:::
+

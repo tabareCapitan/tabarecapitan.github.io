@@ -1,0 +1,84 @@
+---
+title: "Quick start"
+---
+
+---
+
+## Installation
+
+Install from PyPI:
+
+```python
+pip install ritest-python
+```
+
+Then import:
+
+```python
+from ritest import ritest
+```
+
+## Basic use
+
+### Linear models
+
+```python
+from ritest import ritest
+
+res = ritest(
+    df=df,
+    permute_var="treat",
+    formula="y ~ treat + x1 + x2",
+    stat="treat",
+    reps=1000,
+)
+```
+
+### Generic statistics
+
+
+```python
+def stat_fn(d):
+    return d.y.mean() - d.y[d.treat == 0].mean()
+
+res = ritest(
+    df=df,
+    permute_var="treat",
+    stat_fn=stat_fn,
+    reps=1000,
+)
+```
+
+### Weights, strata, clusters
+
+To specify designs, either for linear models or generic statistics, pass additional arguments:
+
+```python
+res = ritest(
+    df=df,
+    permute_var="treat",
+    formula="y ~ treat + x1",
+    stat="treat",
+    weights="w",
+    strata="stratum_id",
+    cluster="cluster_id",
+)
+```
+
+## Results
+
+To see a summary of the results, use:
+
+```python
+res.summary()
+```
+
+You can also get individual results, for example the $p$-value, using:
+
+```python
+p_ri = res.pval
+```
+
+also works with: `obs_stat`, `pval_ci`, `coef_ci_bounds`, and `coef_ci_band`.
+
+

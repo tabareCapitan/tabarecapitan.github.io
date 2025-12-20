@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>installation – Tabaré Capitán</title>
+<title>Confidence bands – Tabaré Capitán</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,31 +20,68 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../favicon.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../projects/ritest/technical-notes/ri.html" rel="next">
+<link href="../../../projects/ritest/benchmarks/generic-vs-linear.html" rel="prev">
+<link href="../../../favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,9 +140,10 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="installation – Tabaré Capitán">
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Confidence bands – Tabaré Capitán">
 <meta property="og:description" content="Data scientist, personal website">
+<meta property="og:image" content="./figures/stata_ci_bands.png">
 <meta property="og:site_name" content="Tabaré Capitán">
 </head>
 
@@ -278,7 +316,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Tabaré Capitán</span>
     </a>
   </div>
@@ -289,19 +327,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects/index.html"> 
+    <a class="nav-link" href="../../../projects/index.html"> 
 <span class="menu-text">projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../toolbox.html"> 
+    <a class="nav-link" href="../../../toolbox.html"> 
 <span class="menu-text">toolbox</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research.html"> 
+    <a class="nav-link" href="../../../research.html"> 
 <span class="menu-text">research</span></a>
   </li>  
 </ul>
@@ -316,7 +354,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">installation</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Benchmarks</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/ci-bands.html">Confidence bands</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -347,13 +385,13 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ritest</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/quick-start.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/quick-start.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quick start</span></a>
   </div>
 </li>
@@ -368,31 +406,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/settings.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/settings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Settings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/non-linear.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/non-linear.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Non-linear models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/custom.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/custom.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Custom statistics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/did.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/did.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Difference-in-Differences</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/multi-arm.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/multi-arm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Multi-arm experiments</span></a>
   </div>
 </li>
@@ -409,25 +447,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/colombia.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/colombia.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Colombian example</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/generic-vs-linear.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/generic-vs-linear.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linear vs generic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/ci-bands.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/ci-bands.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Confidence bands</span></a>
   </div>
 </li>
@@ -444,25 +482,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/ri.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/ri.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Randomization inference</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/pvalues.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/pvalues.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="math inline">\(p\)</span>-values</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/ci.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/ci.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Confidence intervals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/big-o.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/big-o.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Complexity</span></a>
   </div>
 </li>
@@ -470,7 +508,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/api.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/api.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">API reference</span></a>
   </div>
 </li>
@@ -484,9 +522,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#fasfasf" id="toc-fasfasf" class="nav-link active" data-scroll-target="#fasfasf">fasfasf</a>
+  <li><a href="#data" id="toc-data" class="nav-link active" data-scroll-target="#data">Data</a></li>
+  <li><a href="#stata" id="toc-stata" class="nav-link" data-scroll-target="#stata">Stata</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a>
   <ul class="collapse">
-  <li><a href="#fdsfsd" id="toc-fdsfsd" class="nav-link" data-scroll-target="#fdsfsd">fdsfsd</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -495,9 +535,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Benchmarks</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/ci-bands.html">Confidence bands</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">installation</h1>
+<h1 class="title">Confidence bands</h1>
 </div>
 
 
@@ -514,15 +554,141 @@ window.Quarto = {
 </header>
 
 
-<p>contents</p>
-<section id="fasfasf" class="level2">
-<h2 class="anchored" data-anchor-id="fasfasf">fasfasf</h2>
-<p>sfdsufsdf</p>
-<section id="fdsfsd" class="level3">
-<h3 class="anchored" data-anchor-id="fdsfsd">fdsfsd</h3>
-<p>fdsf</p>
-<p>#sdfsdf</p>
-<p>fdsfsdf</p>
+<hr>
+<p>In this section I compare the performance of feature to get confidence bands in my Python implementation, to the example provided in the <a href="https://github.com/simonheb/ritest#how-to-get-confidence-bands">documentation</a> for the Stata implementation.</p>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>I use a toy dataset with 100 observations. Treatment is deterministically assigned so that half the observations are treated, and the outcome is generated as a linear function of treatment with a true treatment effect of 0.3 plus standard normal noise. The data are then used to estimate a simple OLS regression of the outcome on treatment and exported to CSV for use in CI-band examples.</p>
+</section>
+<section id="stata" class="level2">
+<h2 class="anchored" data-anchor-id="stata">Stata</h2>
+<p>The code is directly taken from Stata’s <code>ritest</code> <a href="(https://github.com/simonheb/ritest#how-to-get-confidence-bands)">github repository</a>. I made a few edits to make it easier to compare, but it remains computationally equivalent to the example presented in the repository.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Results</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Runtime</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Run <code>ritest</code> to find which hypotheses for the treatment effect in [-1,1] can[not] be rejected.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">tempfile</span> gridsearch</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">postfile</span> pf TE pval <span class="kw">using</span> <span class="ot">`gridsearch'</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>forval i=-1(0.05)1 {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">qui</span> ritest treatment (_b[treatment]), reps(500) null(<span class="fu">y</span> <span class="ot">`i'</span>) <span class="dv">seed</span>(123): <span class="kw">reg</span> <span class="fu">y</span> treatment <span class="co">// tc: run with _b[treatment] only to compare</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    mat pval = <span class="fu">r</span>(<span class="kw">p</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">post</span> pf (<span class="ot">`i'</span>) (pval[1,1])</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="kw">postclose</span> pf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Plot the bands, with ugly vertical lines at <span class="math inline">\(-0.2\)</span>, <span class="math inline">\(0.2\)</span>, and <span class="math inline">\(0.6\)</span> to help comparison with the Python results:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="ot">`gridsearch'</span>, <span class="kw">clear</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">tw</span> <span class="kw">line</span> pval TE , <span class="kw">yline</span>(0.05) <span class="bn">xline</span>(-0.2 0.2 0.6)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>For additional context, for a null of equality to zero,</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ritest treatment (_b[treatment]), nodots reps(<span class="dv">500</span>) seed(<span class="dv">123</span>): <span class="op">///</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>           reg y treatment</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>this is the randomization inference result:</p>
+<pre><code>      Command: regress y treatment
+        _pm_1: _b[treatment]
+  res. var(s):  treatment
+   Resampling:  Permuting treatment
+Clust. var(s):  __000001
+     Clusters:  100
+Strata var(s):  none
+       Strata:  1
+
+------------------------------------------------------------------------------
+T            |     T(obs)       c       n   p=c/n   SE(p) [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _pm_1 |   .2019068     181     500  0.3620  0.0215  .3198005    .405842
+------------------------------------------------------------------------------
+Note: Confidence interval is with respect to p=c/n.
+Note: c = #{|T| &gt;= |T(obs)|}</code></pre>
+<p>The confidence bands, which are obtained by running <code>ritest</code> with a set of different non-zero nulls, are shown below:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./figures/stata_ci_bands.png" class="img-fluid figure-img"></p>
+<figcaption>Confidence bands</figcaption>
+</figure>
+</div>
+<p>where the y-axis represents randomization inference <span class="math inline">\(p\)</span>-values, and the x-axis represent treatment effects. The blue line maps different treatment effects to <span class="math inline">\(p\)</span>-values. The horizontal line is drawn at 0.05, corresponding to the most common significance level. These plot shows that the point estimate is about <span class="math inline">\(0.2\)</span> and the confidence interval is roughly <span class="math inline">\([-0.2,0.6]\)</span>.</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>276 seconds.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="python" class="level2">
+<h2 class="anchored" data-anchor-id="python">Python</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Results</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Runtime</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Run <code>ritest</code>, set <code>ci_mode="grid"</code> to get confidence bands:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>    res <span class="op">=</span> ritest(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>        df<span class="op">=</span>df,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        permute_var<span class="op">=</span><span class="st">"treatment"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        formula<span class="op">=</span><span class="st">"y ~ treatment"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        stat<span class="op">=</span><span class="st">"treatment"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        reps<span class="op">=</span><span class="dv">500</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        ci_mode<span class="op">=</span><span class="st">"grid"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        seed<span class="op">=</span><span class="dv">123</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>For additional context, this is the result of the randomization inference for a null of equality to zero:</p>
+<pre><code>Randomization Inference Result
+===============================
+
+Coefficient
+-----------
+Observed effect (β̂):   0.2019
+Coefficient CI bounds: not computed
+Coefficient CI band:   available (fast-linear)
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.3100 (31.0%)
+P-value CI @ α=0.050: [0.2697, 0.3526]
+As-or-more extreme:     155 / 500
+
+Test configuration
+------------------
+Stratified:             no
+Clustered:              no
+Weights:                no
+
+Settings
+--------
+alpha:                  0.050
+seed:                   123
+ci_method:              cp
+ci_mode:                grid
+n_jobs:                 4
+</code></pre>
+<p>The corresponding confidence band is shown below:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./figures/python_ci_band.png" class="img-fluid figure-img"></p>
+<figcaption>Confidence bands</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>0.061 seconds.</p>
+</div>
+</div>
+</div>
+<section id="discussion" class="level3">
+<h3 class="anchored" data-anchor-id="discussion">Discussion</h3>
+<p>With only 100 observations, the randomization-inference results differ slightly between the Stata implementation and the Python linear path, but remain close enough to be considered correct. Most importantly for this section, the resulting confidence bands are almost identical.</p>
+<p>In terms of performance, the Python linear implementation is vastly faster (0.061 seconds) than the Stata implementation (276 seconds). This large difference reflects the main advantage of the Python linear path for confidence bands: in the Stata implementation, the permutation test is effectively repeated for each shifted null value, requiring the OLS regression to be re-estimated across all 500 permutations at every grid point. In Python, the permutations are run once, and the p-values across the full grid of shifted nulls are computed using fast analytic updates based on the linear model structure, without rerunning the permutation regressions for each grid point.</p>
+<p>(Of course, confidence bands can also be computed in R; I simply have not done that.)</p>
 
 
 </section>
@@ -941,6 +1107,18 @@ window.Quarto = {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../projects/ritest/benchmarks/generic-vs-linear.html" class="pagination-link" aria-label="Linear vs generic">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Linear vs generic</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../projects/ritest/technical-notes/ri.html" class="pagination-link" aria-label="Randomization inference">
+        <span class="nav-page-text">Randomization inference</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

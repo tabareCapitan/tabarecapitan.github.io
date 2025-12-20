@@ -1,0 +1,158 @@
+---
+title: "Confidence intervals"
+---
+
+---
+
+Randomization inference (RI) starts from the assignment mechanism. Holding observed outcomes fixed, the assignment is re-run (exactly or by simulation) and a test statistic is recomputed. The primary object is therefore a **randomization distribution** for a chosen statistic under a sharp null. That naturally produces a $p$-value. Confidence intervals require an additional step: either quantifying Monte Carlo error in the $p$-value itself, or inverting a family of sharp-null tests to obtain a set of non-rejected effect values.
+
+### Why RI reports $p$-value CIs
+
+A standard regression confidence interval for a coefficient is typically derived from an approximate sampling distribution (often a $t$-statistic), which is model-based and asymptotic in most practical settings. RI does not rely on that approximation to define its $p$-value. Instead, it compares the observed statistic to the distribution induced by the **randomization design**.
+
+When the randomization distribution is enumerated exactly, the resulting $p$-value is exact for that design. In most applications, the distribution is approximated using $R$ simulated re-randomizations. Then the $p$-value itself has Monte Carlo uncertainty: the exceedance count is random even when the underlying (design-based) $p$-value is fixed.
+
+`ritest` always returns a confidence interval for the **true randomization $p$-value** $p$ associated with the chosen statistic and design, treating the exceedance count as a binomial draw.
+
+Let $c$ be the number of permutation statistics that are at least as extreme as the observed statistic under the chosen `alternative`, and let $R$ be the number of permutations (`reps`). Then
+$$
+c \sim \mathrm{Binomial}(R, p),
+$$
+and `ritest` returns a $(1-\alpha)$ confidence interval for $p$ using `pvalue_ci.py`.
+
+**Clopper–Pearson** (`ci_method="cp"`, default) inverts the binomial model via Beta quantiles:
+$$
+p_{\mathrm{lo}} = \mathrm{Beta}^{-1}\!\left(\frac{\alpha}{2};\, c,\; R-c+1\right),\qquad
+p_{\mathrm{hi}} = \mathrm{Beta}^{-1}\!\left(1-\frac{\alpha}{2};\, c+1,\; R-c\right).
+$$
+Boundary handling sets $p_{\mathrm{lo}}=0$ when $c=0$ and $p_{\mathrm{hi}}=1$ when $c=R$.
+
+**Normal / Wald** (`ci_method="normal"`) uses a normal approximation around $\hat p=c/R$ with a continuity correction of $\pm 0.5/R$:
+$$
+\hat p = \frac{c}{R},\qquad
+\mathrm{SE}(\hat p)=\sqrt{\frac{\hat p(1-\hat p)}{R}},
+$$
+$$
+p_{\mathrm{lo}}=\mathrm{clamp}_{[0,1]}\!\left(\hat p-\frac{0.5}{R}-z_{1-\alpha/2}\,\mathrm{SE}(\hat p)\right),\quad
+p_{\mathrm{hi}}=\mathrm{clamp}_{[0,1]}\!\left(\hat p+\frac{0.5}{R}+z_{1-\alpha/2}\,\mathrm{SE}(\hat p)\right).
+$$
+
+This $p$-value CI quantifies Monte Carlo uncertainty from using finitely many permutations. It is not a confidence interval for an effect parameter.
+
+## Coefficient CIs and bands via test inversion
+
+To obtain an effect interval, define a family of sharp null hypotheses indexed by a candidate effect value $\beta_0$. For each $\beta_0$, compute the randomization $p$-value $p(\beta_0)$. The coefficient confidence set is the collection of effect values that are **not rejected** at level $\alpha$:
+$$
+\mathrm{CI}_{1-\alpha} \;=\; \left\{\beta_0:\; p(\beta_0)\ge \alpha \right\}.
+$$
+
+`ritest` evaluates $p(\beta_0)$ on a grid of candidate values centered at the observed statistic $\hat\beta$:
+
+- Grid center: $\hat\beta$ (the observed statistic `obs_stat`).
+- Half-range: `ci_range` in standard-error units.
+- Step size: `ci_step` in standard-error units.
+
+So the grid is
+$$
+\beta_0 \in \left\{\hat\beta + s\cdot \mathrm{SE}:\; s \in [-\texttt{ci\_range},\texttt{ci\_range}] \text{ in steps of }\texttt{ci\_step}\right\}.
+$$
+
+The output is controlled by `ci_mode`:
+
+- `ci_mode="none"`: do not compute coefficient CI artifacts.
+- `ci_mode="bounds"` (default): return only the two CI endpoints derived from the grid.
+- `ci_mode="grid"`: return the full band $(\beta_0, p(\beta_0))$ over the grid.
+
+Endpoint conventions:
+
+- `two-sided`: return $(\beta_{\min}, \beta_{\max})$ over grid points with $p(\beta_0)\ge\alpha$.
+- `right`: return $(\beta_{\min}, +\infty)$ over accepted grid points.
+- `left`: return $(-\infty, \beta_{\max})$ over accepted grid points.
+
+When `ci_mode="grid"`, `ritest` returns the band and intentionally does not store bounds in the result object (bounds can be read off from the band using the same acceptance rule).
+
+## Generic path
+
+For a generic statistic defined as a black box `stat_fn(df) -> scalar`, there is no general way to “shift the null effect” in the Fisher sense. Design-exact test inversion requires, for each candidate $\beta_0$, constructing outcomes that are consistent with a sharp null (i.e., imputing missing potential outcomes under $H_0(\beta_0)$) and then recomputing the statistic under re-randomized assignments. A black-box statistic does not expose which column is the outcome, what the treatment effect model is, or how to impute outcomes under $\beta_0$.
+
+As a result, `ritest` does not provide a design-exact coefficient CI implementation for an arbitrary `stat_fn`.  For certain generic functions, it may be possible for the user to write a wrapper around `ritest` to build confidence intervals.
+
+## Linear path
+
+When `stat_fn` is not supplied, `ritest` uses `FastOLS` and defines the statistic as the coefficient on a target regressor (commonly the treatment indicator) in a (weighted) least squares regression. In this case, the $\beta_0$-indexed $p$-value can be computed efficiently without re-fitting the model for each $\beta_0$, because the coefficient is a linear functional of the outcome and the sharp-null outcome adjustment has a simple closed form.
+
+### Key identity: the target coefficient is linear in the outcome
+
+In `FastOLS`, the target coefficient can be written as
+$$
+\hat\beta \;=\; c^\top y_{\mathrm{metric}},
+$$
+where $c$ is a vector determined by the design matrix (and weights), and $y_{\mathrm{metric}}$ is the outcome in the same weighted metric used internally by `FastOLS`.
+
+Define the target regressor column in that same metric as $T_{\mathrm{metric}}$. `FastOLS` computes and exposes
+$$
+K \;=\; c^\top T_{\mathrm{metric}}.
+$$
+
+In `ritest`, for the observed fit this quantity is denoted $K_{\mathrm{obs}}$. For permutation $r$, `ritest` re-fits `FastOLS` with the permuted target regressor column (so $c$ changes with $r$) and computes
+$$
+K_r \;=\; c_r^\top T_{\mathrm{obs,metric}},
+$$
+where $T_{\mathrm{obs,metric}}$ is the observed target regressor column in the metric used by `FastOLS` (exposed as `t_metric`).
+
+### Interpreting the $\beta_0$ shift
+
+To test a sharp null indexed by $\beta_0$, `ritest` evaluates the statistic after an implicit outcome adjustment of the form
+$$
+y_{\mathrm{metric}}^{(\beta_0)} \;=\; y_{\mathrm{metric}} - \beta_0\,T_{\mathrm{obs,metric}}.
+$$
+
+Using $\hat\beta=c^\top y_{\mathrm{metric}}$, the observed and permuted statistics under this adjustment become
+$$
+\hat\beta_{\mathrm{obs}}(\beta_0) \;=\; \hat\beta_{\mathrm{obs}} - \beta_0\,K_{\mathrm{obs}},
+$$
+$$
+\hat\beta_{r}(\beta_0) \;=\; \hat\beta_{r} - \beta_0\,K_{r}.
+$$
+
+This is the shift rule implemented in `coef_ci.py` for the fast band and bounds.
+
+### Computing the band on a grid
+
+Let $\{\hat\beta_r\}_{r=1}^R$ be the permutation coefficients and $\{K_r\}_{r=1}^R$ the corresponding shift factors. For a grid of candidate values $\beta_0$ (constructed as described earlier using the observed robust standard error from `FastOLS`), `ritest` computes:
+
+- shifted observed critical value (vector over grid)
+$$
+\mathrm{crit}(\beta_0) = \hat\beta_{\mathrm{obs}} - \beta_0 K_{\mathrm{obs}},
+$$
+
+- shifted permutation values (matrix: permutations $\times$ grid)
+$$
+\mathrm{dist}_r(\beta_0) = \hat\beta_r - \beta_0 K_r.
+$$
+
+Then $p(\beta_0)$ is the mean exceedance rate under the chosen tail rule:
+
+- `two-sided`:
+$$
+p(\beta_0) \;=\; \frac{1}{R}\sum_{r=1}^{R}\mathbf{1}\!\left\{|\mathrm{dist}_r(\beta_0)| \ge |\mathrm{crit}(\beta_0)|\right\}
+$$
+
+- `right`:
+$$
+p(\beta_0) \;=\; \frac{1}{R}\sum_{r=1}^{R}\mathbf{1}\!\left\{\mathrm{dist}_r(\beta_0) \ge \mathrm{crit}(\beta_0)\right\}
+$$
+
+- `left`:
+$$
+p(\beta_0) \;=\; \frac{1}{R}\sum_{r=1}^{R}\mathbf{1}\!\left\{\mathrm{dist}_r(\beta_0) \le \mathrm{crit}(\beta_0)\right\}.
+$$
+
+`coef_ci_band_fast` implements this in vectorised form over the grid.
+
+A degenerate case is handled explicitly: if $K_{\mathrm{obs}}=0$ and $K_r=0$ for all permutations, then the statistic does not depend on $\beta_0$ under this shift rule, and the $p$-value profile is constant across the grid.
+
+### Bounds extraction
+
+For `ci_mode="bounds"`, `ritest` computes the $p$-value profile on the same grid and returns the outermost grid points with $p(\beta_0)\ge\alpha$ (with $+\infty$ or $-\infty$ for the open end in one-sided tests). For `ci_mode="grid"`, `ritest` returns the full band $(\beta_0, p(\beta_0))`.
+

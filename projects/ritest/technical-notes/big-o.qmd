@@ -1,0 +1,200 @@
+---
+title: "Complexity"
+---
+
+
+---
+
+This section describes how runtime and memory scale with problem size.
+
+## Quick intro to Big-O
+
+[Big-O notation](https://en.wikipedia.org/wiki/Big_O_notation) describes how cost grows as inputs grow, ignoring constant factors.
+
+- $O(N)$: cost grows linearly with $N$.
+- $O(N^2)$: doubling $N$ increases cost by about $4\times$.
+- $O(Nk^2 + k^3)$: a sum of terms; whichever dominates at the relevant sizes drives performance.
+
+The key dimensions for `ritest` are:
+
+- $N$: number of observations (rows).
+- $k$: number of regressors in the design matrix used by the linear path (columns of $X$).
+- $R$: number of permutations (`reps`).
+- $G$: number of grid points for coefficient CI bands/bounds.
+  $$
+  G \approx 1 + \left\lfloor \frac{2\cdot \texttt{ci\_range}}{\texttt{ci\_step}} \right\rfloor.
+  $$
+
+## Permutation generation
+
+`ritest` needs a sequence of permuted assignment vectors of length $N$. Two internal modes exist (unless the user supplies a full permutation matrix via `permutations`).
+
+### Eager generation (full matrix)
+
+If the estimated memory footprint of the full permutation matrix fits under a soft budget, `ritest` calls `generate_permuted_matrix(...)` and builds an array of shape $(R, N)$.
+
+- Time: $O(RN)$ to generate the permutations.
+- Memory: $O(RN)$ elements.
+
+Implementation details that matter for constants:
+
+- Upstream validation stores the assignment vector as `int8` (0/1), so the eager permutation matrix uses 1 byte per element when internally generated from that vector. In bytes, this is approximately
+  $$
+  \text{bytes}(T_{\mathrm{perms}}) \approx R \cdot N \cdot 1.
+  $$
+
+The default soft budget is `perm_chunk_bytes = 256 * 1024 * 1024` bytes.
+
+###  Lazy generation (streaming)
+
+If the estimated full matrix would exceed the soft budget, `ritest` switches to a lazy or streaming mode:
+
+- It chooses `chunk_rows` based on `perm_chunk_bytes` and a conservative estimate of bytes per row.
+- It iterates blocks from `iter_permuted_matrix(...)`, each block with shape $(m, N)$ and $m \le \texttt{chunk\_rows}$.
+
+- Time: still $O(RN)$ total permutation generation work.
+- Memory: $O(mN)$ for the current block only, plus storage for results.
+
+This is the main memory-protection mechanism in `run.py`. The default lower bound is `perm_chunk_min_rows = 64`, to avoid tiny blocks.
+
+## Computing permutation $p$-values
+
+`ritest` always computes the permutation $p$-value by counting exceedances over $R$ permutation statistics. The cost driver is how each permutation statistic is obtained.
+
+### Linear path
+
+In the linear path, each permutation replaces one column of the design matrix (the target regressor, typically treatment) and fits `FastOLS(..., compute_vcov=False)`.
+
+Inside `FastOLS.__init__`, the main cost is computing and inverting the normal equations in weighted metric:
+
+- Form $X_w^\top X_w$: $O(Nk^2)$.
+- Cholesky + triangular solves (to get $(X_w^\top X_w)^{-1}$): $O(k^3)$.
+- Compute the coefficient from the cached objects: lower order relative to the above.
+
+So the total cost to compute permutation statistics is approximately:
+$$
+O\!\left(R\,(Nk^2 + k^3)\right),
+$$
+plus permutation generation cost ($O(RN)$) if permutations are generated internally.
+
+Memory in this path is dominated by:
+
+- storing results: `perm_stats` is float64 of length $R$ ($8R$ bytes),
+- plus `K_perm` (float64 of length $R$) when coefficient CI is requested in the linear path ($8R$ bytes),
+- plus the eager or streamed permutation storage described earlier.
+
+### Generic path (`stat_fn`): cost depends on the statistic
+
+In the generic path, for each permutation `ritest`:
+
+- constructs a shallow copy of the dataframe,
+- replaces the `permute_var` column with the permuted assignment vector,
+- evaluates `stat_fn(dfp)`.
+
+The total time is:
+$$
+O\!\left(R\,(C_{\texttt{stat\_fn}} + N)\right)
+$$
+where $C_{\texttt{stat\_fn}}$ is the cost of computing the statistic on one permuted dataset. This term is unknown a priori and can dominate everything else.
+
+Permutation generation is still $O(RN)$ if `ritest` generates permutations internally.
+
+## $p$-value confidence intervals
+
+$p$-value confidence intervals use only the exceedance count $c$ and $R$. The cost is constant:
+
+- Time: $O(1)$.
+- Memory: $O(1)$.
+## Coefficient CI bounds and bands
+
+Available for the linear path only. Coefficient CIs in `ritest` are computed by test inversion on a grid of $G$ candidate values $\beta_0$, returning either bounds (`ci_mode="bounds"`) or the full band (`ci_mode="grid"`).
+
+In the current implementation, **both** linear bounds and linear bands are computed using the same vectorised machinery in `coef_ci.py`.
+
+### Time complexity
+
+`coef_ci_band_fast(...)` builds:
+
+- `crit`: a length-$G$ vector.
+- `dist`: an $(R \times G)$ array via broadcasting:
+  $$
+  \mathrm{dist}_{r,g} = \hat\beta_r - \beta_{0,g}\,K_r.
+  $$
+
+Then it performs a tail comparison and averages over permutations.
+
+- Time: $O(RG)$ comparisons and reductions.
+
+`coef_ci_bounds_fast(...)` calls the band routine and then scans for grid points with $p(\beta_0)\ge \alpha$, which is $O(G)$ on top of the band cost, so overall still $O(RG)$.
+
+#### Memory complexity and practical implications
+
+The dominant allocation is the broadcasted `dist` array:
+
+- Memory: $O(RG)$ float64 values, i.e.
+  $$
+  \text{bytes}(\mathrm{dist}) \approx 8\,R\,G.
+  $$
+
+This can exceed the permutation-matrix memory when $R$ is large and the grid is fine. This is the point at which `ritest` would "break" due to memory issues.
+
+Example (illustrative scale calculation):
+
+- $R = 200{,}000$
+- $\texttt{ci\_range}=8$, $\texttt{ci\_step}=0.05$ gives $G \approx 321$
+
+Then
+$$
+8RG \approx 8 \cdot 200{,}000 \cdot 321 \approx 513{,}600{,}000\ \text{bytes} \approx 0.51\ \text{GB}.
+$$
+
+This allocation is independent of whether permutation generation is eager or streamed. It is a separate memory pressure point for coefficient bands.
+
+## Parallelism and Numba acceleration
+
+### `n_jobs` and thread-based parallelism
+
+`ritest` parallelizes permutation evaluation with `ThreadPoolExecutor` in `run.py` when `n_jobs > 1`. By default, `config.py` sets `n_jobs = -1`, which is coerced to “all available CPU cores”.
+
+What parallelizes:
+
+- Linear path: each thread runs `_fit_one(...)`, which creates a `FastOLS` instance for one permuted assignment and returns the coefficient and $K_r$.
+- Generic path: each thread runs `_eval_one(...)`, which calls `stat_fn` on one permuted dataset.
+
+Because the executor is thread-based, speedups depend on whether the per-permutation work releases the Python GIL (for example, heavy NumPy linear algebra typically does; pure Python code typically does not). The implementation choice is fixed in `run.py`: threads, not processes.
+
+### Numba-accelerated kernels
+
+Two modules contain optional Numba acceleration:
+
+- `shuffle.py` uses `NUMBA_OK` to enable `@njit` / `prange` kernels for reshuffling. When Numba is not available, it provides safe pure-Python/NumPy fallbacks that preserve call signatures.
+- `fast_ols.py` includes `fast_permuted_stats(...)`, which is a Numba-accelerated dot-product kernel used by `FastOLS.permuted_stats(...)`.
+
+In the current `run.py` pathway for treatment permutations, `FastOLS.permuted_stats(...)` is not the main driver (permutation evaluation refits `FastOLS` each time). Numba therefore matters most for fast permutation generation and any pathways that explicitly call `permuted_stats(...)`.
+
+## More on memory
+
+The most common way permutation code runs into out-of-memory (OOM) errors is by building the full $(R,N)$ permutation matrix. `ritest` avoids this with streaming blocks whenever the estimated full matrix exceeds `perm_chunk_bytes`.
+
+A simple size calculation shows why this matters:
+
+- If the assignment is stored as 1 byte per element (as in `ritest`’s internal `int8` representation), the eager permutation matrix requires approximately $RN$ bytes.
+- If an environment stores the same data using a wider integer type (e.g., 4 bytes per element), the same matrix costs about $4RN$ bytes.
+
+Big data example designed to crash eager storage on most PCs:
+
+- $N = 200{,}000{,}000$
+- $R = 2{,}000$
+
+Then even at 1 byte per element:
+$$
+RN = 40{,}000{,}000{,}000\ \text{bytes} \approx 40\ \text{GB}.
+$$
+
+This is far beyond the default `perm_chunk_bytes` budget and triggers the streaming path automatically. In streaming mode, peak memory for permutations is reduced to roughly
+$$
+mN\ \text{bytes},
+$$
+where $m$ is the chosen `chunk_rows`, while still producing exactly $R$ permutations in a deterministic sequence.
+
+Note that coefficient **bands** can still become trigger OOM errors because `coef_ci_band_fast` allocates an $(R\times G)$ float64 array. Chunking permutations does not prevent that allocation.

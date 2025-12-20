@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>installation – Tabaré Capitán</title>
+<title>Colombian example – Tabaré Capitán</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,31 +20,68 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../favicon.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../projects/ritest/benchmarks/generic-vs-linear.html" rel="next">
+<link href="../../../projects/ritest/benchmarks/intro.html" rel="prev">
+<link href="../../../favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,8 +140,8 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="installation – Tabaré Capitán">
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Colombian example – Tabaré Capitán">
 <meta property="og:description" content="Data scientist, personal website">
 <meta property="og:site_name" content="Tabaré Capitán">
 </head>
@@ -278,7 +315,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Tabaré Capitán</span>
     </a>
   </div>
@@ -289,19 +326,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects/index.html"> 
+    <a class="nav-link" href="../../../projects/index.html"> 
 <span class="menu-text">projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../toolbox.html"> 
+    <a class="nav-link" href="../../../toolbox.html"> 
 <span class="menu-text">toolbox</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research.html"> 
+    <a class="nav-link" href="../../../research.html"> 
 <span class="menu-text">research</span></a>
   </li>  
 </ul>
@@ -316,7 +353,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">installation</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Benchmarks</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/colombia.html">Colombian example</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -347,13 +384,13 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">ritest</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/quick-start.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/quick-start.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quick start</span></a>
   </div>
 </li>
@@ -368,31 +405,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/settings.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/settings.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Settings</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/non-linear.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/non-linear.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Non-linear models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/custom.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/custom.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Custom statistics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/did.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/did.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Difference-in-Differences</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/examples/multi-arm.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/examples/multi-arm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Multi-arm experiments</span></a>
   </div>
 </li>
@@ -409,25 +446,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/colombia.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/colombia.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Colombian example</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/generic-vs-linear.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/generic-vs-linear.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linear vs generic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/benchmarks/ci-bands.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/benchmarks/ci-bands.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Confidence bands</span></a>
   </div>
 </li>
@@ -444,25 +481,25 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/ri.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/ri.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Randomization inference</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/pvalues.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/pvalues.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="math inline">\(p\)</span>-values</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/ci.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/ci.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Confidence intervals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/technical-notes/big-o.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/big-o.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Complexity</span></a>
   </div>
 </li>
@@ -470,7 +507,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../projects/ritest/api.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/api.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">API reference</span></a>
   </div>
 </li>
@@ -484,10 +521,10 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#fasfasf" id="toc-fasfasf" class="nav-link active" data-scroll-target="#fasfasf">fasfasf</a>
-  <ul class="collapse">
-  <li><a href="#fdsfsd" id="toc-fdsfsd" class="nav-link" data-scroll-target="#fdsfsd">fdsfsd</a></li>
-  </ul></li>
+  <li><a href="#statas-ritest" id="toc-statas-ritest" class="nav-link active" data-scroll-target="#statas-ritest">Stata’s ritest</a></li>
+  <li><a href="#rs-ritest" id="toc-rs-ritest" class="nav-link" data-scroll-target="#rs-ritest">R’s ritest</a></li>
+  <li><a href="#pythons-ritest" id="toc-pythons-ritest" class="nav-link" data-scroll-target="#pythons-ritest">Python’s ritest</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
   </ul>
 </nav>
     </div>
@@ -495,9 +532,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Benchmarks</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/colombia.html">Colombian example</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">installation</h1>
+<h1 class="title">Colombian example</h1>
 </div>
 
 
@@ -514,18 +551,185 @@ window.Quarto = {
 </header>
 
 
-<p>contents</p>
-<section id="fasfasf" class="level2">
-<h2 class="anchored" data-anchor-id="fasfasf">fasfasf</h2>
-<p>sfdsufsdf</p>
-<section id="fdsfsd" class="level3">
-<h3 class="anchored" data-anchor-id="fdsfsd">fdsfsd</h3>
-<p>fdsf</p>
-<p>#sdfsdf</p>
-<p>fdsfsdf</p>
+<hr>
+<p>I develop an example used on R’s <code>ritest</code> documentation, which in turns follows the example used by <a href="https://sites.google.com/site/decrgdmckenzie/home">David McKenzie</a> in his <a href="https://blogs.worldbank.org/en/impactevaluations/finally-way-do-easy-randomization-inference-stata">blog post</a> about Stata’s <code>ritest</code>.</p>
+<p>The example uses real data from Colombia, using a dataset with “firms in 63 market blocks, which were formed into 31 strata (pairs and one triple), with clustered randomization at the market block level.” The researchers were interested in how many days a week firms shop at the central market. The data comes from the documentation for R’s <code>ritest</code>, which you can find <a href="https://grantmcdermott.com/ritest/reference/colombia.html">here</a>.</p>
+<p>Below I show results from <code>ritest</code> using Stata, R, and Python implementations on this dataset, comparing results and performance. For all of them, I’ll run 5,000 permutations on a fixed effects model, accounting for both the stratified and clustered design of the experiment.</p>
+<section id="statas-ritest" class="level2">
+<h2 class="anchored" data-anchor-id="statas-ritest">Stata’s ritest</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Results</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Runtime</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ritest b_treat _b[b_treat], <span class="co">///</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">nodots</span> reps(5000) <span class="kw">cluster</span>(b_block) <span class="kw">strata</span>(b_pair) <span class="dv">seed</span>(546): <span class="co">///</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">areg</span> dayscorab b_treat b_dayscorab miss_b_day scorab round2 round3, <span class="co">///</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">cluster</span>(b_block) a(b_pair)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<pre><code>Linear regression, absorbing indicators             Number of obs     =  2,346
+Absorbed variable: b_pair                           No. of categories =     31
+                                                    F(5, 62)          =  99.28
+                                                    Prob &gt; F          = 0.0000
+                                                    R-squared         = 0.2928
+                                                    Adj R-squared     = 0.2820
+                                                    Root MSE          = 1.9265
 
+                                   (Std. err. adjusted for 63 clusters in b_block)
+----------------------------------------------------------------------------------
+                 |               Robust
+       dayscorab | Coefficient  std. err.      t    P&gt;|t|     [95% conf. interval]
+-----------------+----------------------------------------------------------------
+         b_treat |   -.180738   .0781737    -2.31   0.024     -.337005   -.0244711
+        ... (clipped for brevity)
+----------------------------------------------------------------------------------
 
+      Command: areg dayscorab b_treat b_dayscorab miss_b_dayscorab round2 round3, cluster(b_block) a(b_pair)
+        _pm_1: _b[b_treat]
+  res. var(s):  b_treat
+   Resampling:  Permuting b_treat
+Clust. var(s):  b_block
+     Clusters:  63
+Strata var(s):  b_pair
+       Strata:  31
+
+------------------------------------------------------------------------------
+T            |     T(obs)       c       n   p=c/n   SE(p) [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _pm_1 |   -.180738     495    5000  0.0990  0.0042  .0908575    .107614
+------------------------------------------------------------------------------
+Note: Confidence interval is with respect to p=c/n.
+Note: c = #{|T| &gt;= |T(obs)|}</code></pre>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>171 seconds, which is about 3 minutes.</p>
+</div>
+</div>
+</div>
 </section>
+<section id="rs-ritest" class="level2">
+<h2 class="anchored" data-anchor-id="rs-ritest">R’s ritest</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Results</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Runtime</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Estimate the model, save to <code>co_est</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>co_est <span class="ot">&lt;-</span> fixest<span class="sc">::</span><span class="fu">feols</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  dayscorab <span class="sc">~</span> b_treat <span class="sc">+</span> b_dayscorab <span class="sc">+</span> miss_b_dayscorab <span class="sc">+</span> round2 <span class="sc">+</span> round3 <span class="sc">|</span> b_pair,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">vcov =</span> <span class="sc">~</span>b_block,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> colombia</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>co_est</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Use <code>ritest</code>, save to <code>co_ri</code>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>co_ri <span class="ot">=</span> <span class="fu">ritest</span>(co_est, <span class="st">'b_treat'</span>, <span class="at">cluster=</span><span class="st">'b_block'</span>, <span class="at">strata=</span><span class="st">'b_pair'</span>, <span class="at">reps=</span><span class="fl">5e3</span>, <span class="at">seed=</span><span class="dv">546</span>L)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>co_ri</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<ul>
+<li>Table of coefficients from the fixed effects model (<code>co_est</code>):</li>
+</ul>
+<pre><code>OLS estimation, Dep. Var.: dayscorab
+Observations: 2,346
+Fixed-effects: b_pair: 31
+Standard-errors: Clustered (b_block)
+                  Estimate Std. Error  t value  Pr(&gt;|t|)
+b_treat          -0.180738   0.078174 -2.31201  0.024113 *
+... (clipped for brevity)
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 1.91167     Adj. R2: 0.282038
+                Within R2: 0.266654</code></pre>
+<ul>
+<li>Results from <code>ritest</code> (<code>co_ri</code>):</li>
+</ul>
+<pre><code>          Call: fixest::feols(fml = dayscorab ~ b_treat + b_dayscorab + miss_b_dayscorab + round2 + round3 | b_pair, data = colombia, vcov = ~b_block)
+   Res. var(s): b_treat
+            H0: b_treat=0
+ Strata var(s): b_pair
+        Strata: 31
+Cluster var(s): b_block
+      Clusters: 63
+     Num. reps: 5000
+────────────────────────────────────────────────────────────────────────────────
+  T(obs)         c         n     p=c/n     SE(p)   CI 2.5%  CI 97.5%
+ -0.1807       520      5000     0.104  0.007102   0.09232    0.1157
+────────────────────────────────────────────────────────────────────────────────
+Note: Confidence interval is with respect to p=c/n.
+Note: c = #{|T| &gt;= |T(obs)|}
+</code></pre>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>28.09 seconds.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="pythons-ritest" class="level2">
+<h2 class="anchored" data-anchor-id="pythons-ritest">Python’s ritest</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Results</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Runtime</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p>Use <code>ritest</code>, save to <code>res</code>:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> ritest(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>       df<span class="op">=</span>df,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>       permute_var<span class="op">=</span><span class="st">"b_treat"</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>       formula<span class="op">=</span><span class="st">"dayscorab ~ b_treat + b_dayscorab "</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"+ C(b_pair) + C(miss_b_dayscorab) + C(round2) + C(round3)"</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>       stat<span class="op">=</span><span class="st">"b_treat"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>       cluster<span class="op">=</span><span class="st">"b_block"</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>       strata<span class="op">=</span><span class="st">"b_pair"</span>,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>       reps<span class="op">=</span><span class="dv">5000</span>,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>       seed<span class="op">=</span><span class="dv">546</span>,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Print a summary of the results:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>summary <span class="op">=</span> res.summary(print_out<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<pre><code>Coefficient
+-----------
+Observed effect (β̂):   -0.1807
+Coefficient CI bounds: [-0.4024, 0.0378]
+Coefficient CI band:   not computed
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.1034 (10.3%)
+P-value CI @ α=0.050: [0.0951, 0.1122]
+As-or-more extreme:     517 / 5000
+
+Test configuration
+------------------
+Stratified:             yes
+Clustered:              yes
+Weights:                no
+
+Settings
+--------
+alpha:                  0.050
+seed:                   546
+ci_method:              cp
+ci_mode:                bounds
+n_jobs:                 4</code></pre>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p>56.35 seconds.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<p>Ok, this is great, you don’t have to take my word: my <code>ritest</code> works. It yields basically the same results as Stata’s and R’s implementation. The minor differences are expected, given differences between languages and implementation.</p>
+<p>In terms of performance, R’s implementation is clearly the fastest of them all (28 seconds). This makes sense, since it explictly supports estimation with multiple fixed effects powered by <code>fixest::feols()</code>. On the other extreme, Stata’s implementation is the slowest (171 seconds). This is also expected, Stata’s not necessarily known for speed. Both of these implementations take a “clever” aproach to deal with high-dimensional fixed effects, avoiding the need to create dummy variables for all fixed effects categories. My <code>ritest</code>, which lies in the middle in terms of performance (56 seconds), takes a naive approach and creates dummy variables for all fixed effects categories; its speed comes from a very fast OLS engine under the hood. While I could use a wrapper to use <code>pyfixest</code>, which is definitely faster per estimation with high dimensional fixed effects, the transaction cost would make it slower than the current approach.</p>
+
+
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -941,6 +1145,18 @@ window.Quarto = {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../projects/ritest/benchmarks/intro.html" class="pagination-link" aria-label="Introduction">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../projects/ritest/benchmarks/generic-vs-linear.html" class="pagination-link" aria-label="Linear vs generic">
+        <span class="nav-page-text">Linear vs generic</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

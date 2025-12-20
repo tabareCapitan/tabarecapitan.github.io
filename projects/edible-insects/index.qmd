@@ -1,7 +1,0 @@
----
-title: "edible insects"
-date: 2025-09-25
-description: "edible insects."
-categories: [python, research]
----
-Landing content…

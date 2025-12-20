@@ -3,6 +3,7 @@ listing:
   # Show each project by its own landing page (index.qmd in subfolders)
   contents: /*/index.qmd
   type: table            # or "default", "table"
-  sort: "date desc"     # optional
-  fields: [title, date, description, categories]
+  fields: [title, description, categories]
 ---
+
+note for me, set default order, dont use dates?

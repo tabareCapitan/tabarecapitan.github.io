@@ -1,0 +1,213 @@
+---
+title: "Colombian example"
+---
+
+---
+
+I develop an example used on R's `ritest` documentation, which in turns follows the example used by [David McKenzie](https://sites.google.com/site/decrgdmckenzie/home) in his [blog post](https://blogs.worldbank.org/en/impactevaluations/finally-way-do-easy-randomization-inference-stata) about Stata's `ritest`.
+
+The example uses real data from Colombia, using a dataset with "firms in 63 market blocks, which were formed into 31 strata (pairs and one triple), with clustered randomization at the market block level." The researchers were interested in how many days a week firms shop at the central market. The data comes from the documentation for R's `ritest`, which you can find [here](https://grantmcdermott.com/ritest/reference/colombia.html).
+
+Below I show results from `ritest` using Stata, R, and Python implementations on this dataset, comparing results and performance. For all of them, I'll run 5,000 permutations on a fixed effects model, accounting for both the stratified and clustered design of the experiment.
+
+
+## Stata's ritest
+
+::: {.panel-tabset}
+
+### Code
+
+```stata
+ritest b_treat _b[b_treat], ///
+    nodots reps(5000) cluster(b_block) strata(b_pair) seed(546): ///
+    areg dayscorab b_treat b_dayscorab miss_b_day scorab round2 round3, ///
+    cluster(b_block) a(b_pair)
+```
+
+### Results
+
+```
+Linear regression, absorbing indicators             Number of obs     =  2,346
+Absorbed variable: b_pair                           No. of categories =     31
+                                                    F(5, 62)          =  99.28
+                                                    Prob > F          = 0.0000
+                                                    R-squared         = 0.2928
+                                                    Adj R-squared     = 0.2820
+                                                    Root MSE          = 1.9265
+
+                                   (Std. err. adjusted for 63 clusters in b_block)
+----------------------------------------------------------------------------------
+                 |               Robust
+       dayscorab | Coefficient  std. err.      t    P>|t|     [95% conf. interval]
+-----------------+----------------------------------------------------------------
+         b_treat |   -.180738   .0781737    -2.31   0.024     -.337005   -.0244711
+        ... (clipped for brevity)
+----------------------------------------------------------------------------------
+
+      Command: areg dayscorab b_treat b_dayscorab miss_b_dayscorab round2 round3, cluster(b_block) a(b_pair)
+        _pm_1: _b[b_treat]
+  res. var(s):  b_treat
+   Resampling:  Permuting b_treat
+Clust. var(s):  b_block
+     Clusters:  63
+Strata var(s):  b_pair
+       Strata:  31
+
+------------------------------------------------------------------------------
+T            |     T(obs)       c       n   p=c/n   SE(p) [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       _pm_1 |   -.180738     495    5000  0.0990  0.0042  .0908575    .107614
+------------------------------------------------------------------------------
+Note: Confidence interval is with respect to p=c/n.
+Note: c = #{|T| >= |T(obs)|}
+```
+### Runtime
+
+171 seconds, which is about 3 minutes.
+
+:::
+
+
+## R's ritest
+
+::: {.panel-tabset}
+
+### Code
+
+Estimate the model, save to `co_est`:
+
+```r
+co_est <- fixest::feols(
+  dayscorab ~ b_treat + b_dayscorab + miss_b_dayscorab + round2 + round3 | b_pair,
+  vcov = ~b_block,
+  data = colombia
+)
+
+co_est
+```
+Use `ritest`, save to `co_ri`:
+
+```r
+co_ri = ritest(co_est, 'b_treat', cluster='b_block', strata='b_pair', reps=5e3, seed=546L)
+
+co_ri
+```
+
+### Results
+
+- Table of coefficients from the fixed effects model (`co_est`):
+
+```
+OLS estimation, Dep. Var.: dayscorab
+Observations: 2,346
+Fixed-effects: b_pair: 31
+Standard-errors: Clustered (b_block)
+                  Estimate Std. Error  t value  Pr(>|t|)
+b_treat          -0.180738   0.078174 -2.31201  0.024113 *
+... (clipped for brevity)
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 1.91167     Adj. R2: 0.282038
+                Within R2: 0.266654
+```
+
+- Results from `ritest` (`co_ri`):
+
+```
+          Call: fixest::feols(fml = dayscorab ~ b_treat + b_dayscorab + miss_b_dayscorab + round2 + round3 | b_pair, data = colombia, vcov = ~b_block)
+   Res. var(s): b_treat
+            H0: b_treat=0
+ Strata var(s): b_pair
+        Strata: 31
+Cluster var(s): b_block
+      Clusters: 63
+     Num. reps: 5000
+────────────────────────────────────────────────────────────────────────────────
+  T(obs)         c         n     p=c/n     SE(p)   CI 2.5%  CI 97.5%
+ -0.1807       520      5000     0.104  0.007102   0.09232    0.1157
+────────────────────────────────────────────────────────────────────────────────
+Note: Confidence interval is with respect to p=c/n.
+Note: c = #{|T| >= |T(obs)|}
+
+```
+### Runtime
+
+28.09 seconds.
+
+:::
+
+
+## Python's ritest
+
+::: {.panel-tabset}
+
+### Code
+
+Use `ritest`, save to `res`:
+
+```python
+res = ritest(
+       df=df,
+       permute_var="b_treat",
+       formula="dayscorab ~ b_treat + b_dayscorab "
+    "+ C(b_pair) + C(miss_b_dayscorab) + C(round2) + C(round3)",
+       stat="b_treat",
+       cluster="b_block",
+       strata="b_pair",
+       reps=5000,
+       seed=546,
+)
+```
+Print a summary of the results:
+
+```python
+
+summary = res.summary(print_out=False)
+
+print(summary)
+```
+
+
+### Results
+
+```
+Coefficient
+-----------
+Observed effect (β̂):   -0.1807
+Coefficient CI bounds: [-0.4024, 0.0378]
+Coefficient CI band:   not computed
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.1034 (10.3%)
+P-value CI @ α=0.050: [0.0951, 0.1122]
+As-or-more extreme:     517 / 5000
+
+Test configuration
+------------------
+Stratified:             yes
+Clustered:              yes
+Weights:                no
+
+Settings
+--------
+alpha:                  0.050
+seed:                   546
+ci_method:              cp
+ci_mode:                bounds
+n_jobs:                 4
+```
+
+### Runtime
+
+56.35 seconds.
+
+:::
+
+
+## Discussion
+
+Ok, this is great, you don't have to take my word: my `ritest` works. It yields basically the same results as Stata's and R's implementation. The minor differences are expected, given differences between languages and implementation.
+
+In terms of performance, R's implementation is clearly the fastest of them all (28 seconds). This makes sense, since it explictly supports estimation with multiple fixed effects powered by `fixest::feols()`. On the other extreme, Stata's implementation is the slowest (171 seconds). This is also expected, Stata's not necessarily known for speed. Both of these implementations take a "clever" aproach to deal with high-dimensional fixed effects, avoiding the need to create dummy variables for all fixed effects categories. My `ritest`, which lies in the middle in terms of performance (56 seconds), takes a naive approach and creates dummy variables for all fixed effects categories; its speed comes from a very fast OLS engine under the hood. While I could use a wrapper to use `pyfixest`, which is definitely faster per estimation with high dimensional fixed effects, the transaction cost would make it slower than the current approach.
