@@ -42,7 +42,6 @@ result = ritest(
     alpha: float | None = None,
     ci_method: {"clopper-pearson","normal"} | None = None,
     ci_mode: {"none","bounds","grid"} | None = None,
-    coef_ci_generic: bool | None = None,
     # infra
     n_jobs: int | None = None,
     seed: int | None = None,
