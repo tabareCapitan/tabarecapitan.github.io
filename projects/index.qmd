@@ -6,4 +6,4 @@ listing:
   fields: [title, description, categories]
 ---
 
-note for me, set default order, dont use dates?
+The list of projects remains a work in progress.
