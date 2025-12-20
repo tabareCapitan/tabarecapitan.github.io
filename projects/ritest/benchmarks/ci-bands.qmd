@@ -4,7 +4,7 @@ title: "Confidence bands"
 
 ---
 
-In this section I compare the performance of feature to get confidence bands in my Python implementation, to the example provided in the [documentation](https://github.com/simonheb/ritest#how-to-get-confidence-bands) for the Stata implementation.
+In this section I compare the performance of the feature to get confidence bands in my Python implementation, to the example provided in the [documentation](https://github.com/simonheb/ritest#how-to-get-confidence-bands) for the Stata implementation.
 
 
 ## Data

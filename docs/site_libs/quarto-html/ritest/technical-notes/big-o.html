@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Linear vs generic – Tabaré Capitán</title>
+<title>Complexity – Tabaré Capitán</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -65,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../projects/ritest/benchmarks/ci-bands.html" rel="next">
-<link href="../../../projects/ritest/benchmarks/colombia.html" rel="prev">
+<link href="../../../projects/ritest/api.html" rel="next">
+<link href="../../../projects/ritest/technical-notes/ci.html" rel="prev">
 <link href="../../../favicon.png" rel="icon" type="image/png">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -141,7 +106,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../../styles.css">
-<meta property="og:title" content="Linear vs generic – Tabaré Capitán">
+<meta property="og:title" content="Complexity – Tabaré Capitán">
 <meta property="og:description" content="Data scientist, personal website">
 <meta property="og:site_name" content="Tabaré Capitán">
 </head>
@@ -353,7 +318,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Benchmarks</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/generic-vs-linear.html">Linear vs generic</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/technical-notes/ri.html">Technical notes</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/technical-notes/big-o.html">Complexity</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -458,7 +423,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../projects/ritest/benchmarks/generic-vs-linear.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../projects/ritest/benchmarks/generic-vs-linear.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linear vs generic</span></a>
   </div>
 </li>
@@ -499,7 +464,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../projects/ritest/technical-notes/big-o.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../projects/ritest/technical-notes/big-o.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Complexity</span></a>
   </div>
 </li>
@@ -521,11 +486,27 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data" id="toc-data" class="nav-link active" data-scroll-target="#data">Data</a></li>
-  <li><a href="#stata" id="toc-stata" class="nav-link" data-scroll-target="#stata">Stata</a></li>
-  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
-  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  <li><a href="#quick-intro-to-big-o" id="toc-quick-intro-to-big-o" class="nav-link active" data-scroll-target="#quick-intro-to-big-o">Quick intro to Big-O</a></li>
+  <li><a href="#permutation-generation" id="toc-permutation-generation" class="nav-link" data-scroll-target="#permutation-generation">Permutation generation</a>
+  <ul class="collapse">
+  <li><a href="#eager-generation-full-matrix" id="toc-eager-generation-full-matrix" class="nav-link" data-scroll-target="#eager-generation-full-matrix">Eager generation (full matrix)</a></li>
+  <li><a href="#lazy-generation-streaming" id="toc-lazy-generation-streaming" class="nav-link" data-scroll-target="#lazy-generation-streaming">Lazy generation (streaming)</a></li>
+  </ul></li>
+  <li><a href="#computing-permutation-p-values" id="toc-computing-permutation-p-values" class="nav-link" data-scroll-target="#computing-permutation-p-values">Computing permutation <span class="math inline">\(p\)</span>-values</a>
+  <ul class="collapse">
+  <li><a href="#linear-path" id="toc-linear-path" class="nav-link" data-scroll-target="#linear-path">Linear path</a></li>
+  <li><a href="#generic-path-stat_fn-cost-depends-on-the-statistic" id="toc-generic-path-stat_fn-cost-depends-on-the-statistic" class="nav-link" data-scroll-target="#generic-path-stat_fn-cost-depends-on-the-statistic">Generic path (<code>stat_fn</code>): cost depends on the statistic</a></li>
+  </ul></li>
+  <li><a href="#p-value-confidence-intervals" id="toc-p-value-confidence-intervals" class="nav-link" data-scroll-target="#p-value-confidence-intervals"><span class="math inline">\(p\)</span>-value confidence intervals</a>
+  <ul class="collapse">
+  <li><a href="#time-complexity" id="toc-time-complexity" class="nav-link" data-scroll-target="#time-complexity">Time complexity</a></li>
+  </ul></li>
+  <li><a href="#parallelism-and-numba-acceleration" id="toc-parallelism-and-numba-acceleration" class="nav-link" data-scroll-target="#parallelism-and-numba-acceleration">Parallelism and Numba acceleration</a>
+  <ul class="collapse">
+  <li><a href="#n_jobs-and-thread-based-parallelism" id="toc-n_jobs-and-thread-based-parallelism" class="nav-link" data-scroll-target="#n_jobs-and-thread-based-parallelism"><code>n_jobs</code> and thread-based parallelism</a></li>
+  <li><a href="#numba-accelerated-kernels" id="toc-numba-accelerated-kernels" class="nav-link" data-scroll-target="#numba-accelerated-kernels">Numba-accelerated kernels</a></li>
+  </ul></li>
+  <li><a href="#more-on-memory" id="toc-more-on-memory" class="nav-link" data-scroll-target="#more-on-memory">More on memory</a></li>
   </ul>
 </nav>
     </div>
@@ -533,9 +514,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Benchmarks</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/generic-vs-linear.html">Linear vs generic</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/technical-notes/ri.html">Technical notes</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/technical-notes/big-o.html">Complexity</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Linear vs generic</h1>
+<h1 class="title">Complexity</h1>
 </div>
 
 
@@ -553,223 +534,177 @@ window.Quarto = {
 
 
 <hr>
-<p>From the <a href="../../../projects/ritest/benchmarks/colombia.html">Colombian example</a> we see that <code>ritest</code> in Python works and it is reasonably fast. That is a valid benchmark for linear models with multiple fixed effects. In this section I benchmark using simple OLS against Stata and R’s implementations of randomization inference.</p>
-<section id="data" class="level2">
-<h2 class="anchored" data-anchor-id="data">Data</h2>
-<p>The simulated dataset represents a clean, randomized experiment with <span class="math inline">\(N=10{,}000\)</span> observations, designed to resemble realistic applied data. Treatment is randomly assigned with equal probability (50/50), with no clustering and no stratification. The dataset includes 20 covariates covering demographics, behavior, engagement, and region indicators. These covariates are generated from a small number of latent factors, inducing realistic correlations while remaining fully observed and free of missing values.</p>
-<p>The outcome is continuous and driven by covariates plus a very small heterogeneous treatment effect. The individual treatment effect is</p>
-<p><span class="math display">\[\tau_i = 0.02 + 0.0075 \cdot h_i\]</span> ​ where <span class="math inline">\(h_i\)</span> is a standardized index based on baseline spending and satisfaction, so the true average treatment effect is approximately 0.02. Outcome noise is Gaussian with standard deviation <span class="math inline">\(5\)</span>, chosen so that at <span class="math inline">\(N = 10{,}000\)</span> the problem is nontrivial but stable, with an expected standard error for the treatment coefficient of about <span class="math inline">\(0.05\)</span>. This implies considerable design-based variability, so point estimates and <span class="math inline">\(p\)</span>-values can differ noticeably across realizations and across implementations. In addition, randomization inference relies on a finite number of permutations, which introduces a small amount of Monte Carlo error. On average, however, inference is expected to provide little evidence against the null hypothesis of no treatment effect.</p>
+<p>This section describes how runtime and memory scale with problem size.</p>
+<section id="quick-intro-to-big-o" class="level2">
+<h2 class="anchored" data-anchor-id="quick-intro-to-big-o">Quick intro to Big-O</h2>
+<p><a href="https://en.wikipedia.org/wiki/Big_O_notation">Big-O notation</a> describes how cost grows as inputs grow, ignoring constant factors.</p>
+<ul>
+<li><span class="math inline">\(O(N)\)</span>: cost grows linearly with <span class="math inline">\(N\)</span>.</li>
+<li><span class="math inline">\(O(N^2)\)</span>: doubling <span class="math inline">\(N\)</span> increases cost by about <span class="math inline">\(4\times\)</span>.</li>
+<li><span class="math inline">\(O(Nk^2 + k^3)\)</span>: a sum of terms; whichever dominates at the relevant sizes drives performance.</li>
+</ul>
+<p>The key dimensions for <code>ritest</code> are:</p>
+<ul>
+<li><span class="math inline">\(N\)</span>: number of observations (rows).</li>
+<li><span class="math inline">\(k\)</span>: number of regressors in the design matrix used by the linear path (columns of <span class="math inline">\(X\)</span>).</li>
+<li><span class="math inline">\(R\)</span>: number of permutations (<code>reps</code>).</li>
+<li><span class="math inline">\(G\)</span>: number of grid points for coefficient CI bands/bounds. <span class="math display">\[
+G \approx 1 + \left\lfloor \frac{2\cdot \texttt{ci\_range}}{\texttt{ci\_step}} \right\rfloor.
+\]</span></li>
+</ul>
 </section>
-<section id="stata" class="level2">
-<h2 class="anchored" data-anchor-id="stata">Stata</h2>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Results</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Runtime</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Set a local macro with all covariates except the permute variable <code>treat</code>:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">local</span> xvars <span class="co">///</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    age female education_years log_income household_size urban      <span class="co">///</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    tenure_months baseline_spend purchases_12m returns_12m          <span class="co">///</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    support_tickets_6m app_sessions_30d days_since_last_purchase    <span class="co">///</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    email_opt_in promo_exposure_30d prior_churn credit_score        <span class="co">///</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    satisfaction_score region_1 region_2 region_3 region_4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Run ritest:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ritest treat _b[treat], reps(2000) <span class="dv">seed</span>(23) <span class="kw">nodots</span>: <span class="kw">reg</span> <span class="fu">y</span> treat <span class="ot">`xvars'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<pre><code>. ritest treat _b[treat], reps(2000) seed(23) nodots: reg y treat `xvars'
-
-      Source |       SS           df       MS      Number of obs   =    10,000
--------------+----------------------------------   F(23, 9976)     =    701.81
-       Model |  389011.799        23  16913.5565   Prob &gt; F        =    0.0000
-    Residual |  240422.079     9,976   24.100048   R-squared       =    0.6180
--------------+----------------------------------   Adj R-squared   =    0.6172
-       Total |  629433.877     9,999  62.9496827   Root MSE        =    4.9092
-
-------------------------------------------------------------------------------
-           y | Coefficient  Std. err.      t    P&gt;|t|     [95% conf. interval]
--------------+----------------------------------------------------------------
-       treat |   .0819918   .0983118     0.83   0.404    -.1107191    .2747028
-       ... (clipped for brevity)
-------------------------------------------------------------------------------
-
-      Command: regress y treat age female education_years log_income
-                   household_size urban tenure_months baseline_spend
-                   purchases_12m returns_12m support_tickets_6m
-                   app_sessions_30d days_since_last_purchase email_opt_in
-                   promo_exposure_30d prior_churn credit_score
-                   satisfaction_score region_1 region_2 region_3 region_4
-        _pm_1: _b[treat]
-  res. var(s):  treat
-   Resampling:  Permuting treat
-Clust. var(s):  __000001
-     Clusters:  10000
-Strata var(s):  none
-       Strata:  1
-
-------------------------------------------------------------------------------
-T            |     T(obs)       c       n   p=c/n   SE(p) [95% Conf. Interval]
--------------+----------------------------------------------------------------
-       _pm_1 |   .0819918     786    2000  0.3930  0.0109  .3715147   .4147996
-------------------------------------------------------------------------------
-Note: Confidence interval is with respect to p=c/n.
-Note: c = #{|T| &gt;= |T(obs)|}</code></pre>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>183 s or about 3 minutes.</p>
-</div>
-</div>
-</div>
+<section id="permutation-generation" class="level2">
+<h2 class="anchored" data-anchor-id="permutation-generation">Permutation generation</h2>
+<p><code>ritest</code> needs a sequence of permuted assignment vectors of length <span class="math inline">\(N\)</span>. Two internal modes exist (unless the user supplies a full permutation matrix via <code>permutations</code>).</p>
+<section id="eager-generation-full-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="eager-generation-full-matrix">Eager generation (full matrix)</h3>
+<p>If the estimated memory footprint of the full permutation matrix fits under a soft budget, <code>ritest</code> calls <code>generate_permuted_matrix(...)</code> and builds an array of shape <span class="math inline">\((R, N)\)</span>.</p>
+<ul>
+<li>Time: <span class="math inline">\(O(RN)\)</span> to generate the permutations.</li>
+<li>Memory: <span class="math inline">\(O(RN)\)</span> elements.</li>
+</ul>
+<p>Implementation details that matter for constants:</p>
+<ul>
+<li>Upstream validation stores the assignment vector as <code>int8</code> (0/1), so the eager permutation matrix uses 1 byte per element when internally generated from that vector. In bytes, this is approximately <span class="math display">\[
+\text{bytes}(T_{\mathrm{perms}}) \approx R \cdot N \cdot 1.
+\]</span></li>
+</ul>
+<p>The default soft budget is <code>perm_chunk_bytes = 256 * 1024 * 1024</code> bytes.</p>
 </section>
-<section id="r" class="level2">
-<h2 class="anchored" data-anchor-id="r">R</h2>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Results</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Runtime</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>Estimate a linear model, save in <code>est</code>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fml <span class="ot">&lt;-</span> y <span class="sc">~</span> treat <span class="sc">+</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  age <span class="sc">+</span> female <span class="sc">+</span> education_years <span class="sc">+</span> log_income <span class="sc">+</span> household_size <span class="sc">+</span> urban <span class="sc">+</span> tenure_months <span class="sc">+</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  baseline_spend <span class="sc">+</span> purchases_12m <span class="sc">+</span> returns_12m <span class="sc">+</span> support_tickets_6m <span class="sc">+</span> app_sessions_30d <span class="sc">+</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  days_since_last_purchase <span class="sc">+</span> email_opt_in <span class="sc">+</span> promo_exposure_30d <span class="sc">+</span> prior_churn <span class="sc">+</span> credit_score <span class="sc">+</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  satisfaction_score <span class="sc">+</span> region_1 <span class="sc">+</span> region_2 <span class="sc">+</span> region_3 <span class="sc">+</span> region_4</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>est <span class="ot">&lt;-</span> <span class="fu">lm</span>(fml, <span class="at">data =</span> df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Run <code>ritest</code>, save results in <code>ri</code>:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ri <span class="ot">&lt;-</span> <span class="fu">ritest</span>(est, <span class="st">"treat"</span>, <span class="at">reps =</span> <span class="dv">2000</span>, <span class="at">seed =</span> <span class="dv">23</span>L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Print results.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(ri)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<pre><code>OLS (lm) fit:
-
-Call:
-lm(formula = fml, data = df)
-
-Residuals:
-     Min       1Q   Median       3Q      Max
--19.0734  -3.3147   0.0069   3.3346  19.3317
-
-Coefficients:
-                           Estimate Std. Error t value Pr(&gt;|t|)
-(Intercept)              -2.008e+01  1.414e+00 -14.205  &lt; 2e-16 ***
-treat                     8.199e-02  9.831e-02   0.834 0.404302
-... (clipped for brevity)
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-
-Residual standard error: 4.909 on 9976 degrees of freedom
-Multiple R-squared:  0.618, Adjusted R-squared:  0.6172
-F-statistic: 701.8 on 23 and 9976 DF,  p-value: &lt; 2.2e-16
-
-
-RI result:
-
-          Call: lm(formula = fml, data = df)
-   Res. var(s): treat
-            H0: treat=0
-     Num. reps: 2000
-────────────────────────────────────────────────────────────────────────────────
-  T(obs)         c         n     p=c/n     SE(p)   CI 2.5%  CI 97.5%
- 0.08199       839      2000    0.4195   0.01815    0.3896    0.4494
-────────────────────────────────────────────────────────────────────────────────
-Note: Confidence interval is with respect to p=c/n.
-Note: c = #{|T| &gt;= |T(obs)|}</code></pre>
-</div>
-<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-<p>11.24 seconds.</p>
-</div>
-</div>
-</div>
+<section id="lazy-generation-streaming" class="level3">
+<h3 class="anchored" data-anchor-id="lazy-generation-streaming">Lazy generation (streaming)</h3>
+<p>If the estimated full matrix would exceed the soft budget, <code>ritest</code> switches to a lazy or streaming mode:</p>
+<ul>
+<li><p>It chooses <code>chunk_rows</code> based on <code>perm_chunk_bytes</code> and a conservative estimate of bytes per row.</p></li>
+<li><p>It iterates blocks from <code>iter_permuted_matrix(...)</code>, each block with shape <span class="math inline">\((m, N)\)</span> and <span class="math inline">\(m \le \texttt{chunk\_rows}\)</span>.</p></li>
+<li><p>Time: still <span class="math inline">\(O(RN)\)</span> total permutation generation work.</p></li>
+<li><p>Memory: <span class="math inline">\(O(mN)\)</span> for the current block only, plus storage for results.</p></li>
+</ul>
+<p>This is the main memory-protection mechanism in <code>run.py</code>. The default lower bound is <code>perm_chunk_min_rows = 64</code>, to avoid tiny blocks.</p>
 </section>
-<section id="python" class="level2">
-<h2 class="anchored" data-anchor-id="python">Python</h2>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Results</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Runtime</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<p>Set up the model:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>PERMUTE_VAR <span class="op">=</span> <span class="st">"treat"</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>STAT <span class="op">=</span> <span class="st">"treat"</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>COVARS <span class="op">=</span> [</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"age"</span>,</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"female"</span>,</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"education_years"</span>,</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"log_income"</span>,</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"household_size"</span>,</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"urban"</span>,</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tenure_months"</span>,</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"baseline_spend"</span>,</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"purchases_12m"</span>,</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"returns_12m"</span>,</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"support_tickets_6m"</span>,</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"app_sessions_30d"</span>,</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"days_since_last_purchase"</span>,</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"email_opt_in"</span>,</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"promo_exposure_30d"</span>,</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"prior_churn"</span>,</span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"credit_score"</span>,</span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">"satisfaction_score"</span>,</span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"region_1"</span>,</span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">"region_2"</span>,</span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">"region_3"</span>,</span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">"region_4"</span>,</span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>FORMULA <span class="op">=</span> <span class="st">"y ~ treat + "</span> <span class="op">+</span> <span class="st">" + "</span>.join(COVARS)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Run <code>ritest</code>:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> ritest(</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>       df<span class="op">=</span>df,</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>       permute_var<span class="op">=</span>PERMUTE_VAR,</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>       formula<span class="op">=</span>FORMULA,</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>       stat<span class="op">=</span>STAT,</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>       reps<span class="op">=</span>reps,</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>       seed<span class="op">=</span>seed,</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Print results:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<pre><code>Randomization Inference Result
-===============================
-
-Coefficient
------------
-Observed effect (β̂):   0.0820
-Coefficient CI bounds: [-0.1133, 0.2778]
-Coefficient CI band:   not computed
-
-Permutation test
-----------------
-Tail (alternative):     two-sided
-p-value:                0.3990 (39.9%)
-P-value CI @ α=0.050: [0.3775, 0.4208]
-As-or-more extreme:     798 / 2000
-
-Test configuration
-------------------
-Stratified:             no
-Clustered:              no
-Weights:                no
-
-Settings
---------
-alpha:                  0.050
-seed:                   23
-ci_method:              cp
-ci_mode:                bounds
-n_jobs:                 4</code></pre>
-</div>
-<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
-<p>3.274 seconds.</p>
-</div>
-</div>
-</div>
 </section>
-<section id="discussion" class="level2">
-<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
-<p>The result of the randomization inference aligns across the three different implementations. In terms of performance, the Python implementation is fastest (3.274 s), followed by the R implementation (11.24 s), and the Stata implementation (183 s). Compared to the <a href="../../../projects/ritest/benchmarks/colombia.html">Colombian example</a>, in which the R implementation was faster due to its explicit integration of <code>fixest</code> to handle estimation with multiple fixed effects, the implementation in Python is now faster due to its fast engine specialized in OLS.</p>
+<section id="computing-permutation-p-values" class="level2">
+<h2 class="anchored" data-anchor-id="computing-permutation-p-values">Computing permutation <span class="math inline">\(p\)</span>-values</h2>
+<p><code>ritest</code> always computes the permutation <span class="math inline">\(p\)</span>-value by counting exceedances over <span class="math inline">\(R\)</span> permutation statistics. The cost driver is how each permutation statistic is obtained.</p>
+<section id="linear-path" class="level3">
+<h3 class="anchored" data-anchor-id="linear-path">Linear path</h3>
+<p>In the linear path, each permutation replaces one column of the design matrix (the target regressor, typically treatment) and fits <code>FastOLS(..., compute_vcov=False)</code>.</p>
+<p>Inside <code>FastOLS.__init__</code>, the main cost is computing and inverting the normal equations in weighted metric:</p>
+<ul>
+<li>Form <span class="math inline">\(X_w^\top X_w\)</span>: <span class="math inline">\(O(Nk^2)\)</span>.</li>
+<li>Cholesky + triangular solves (to get <span class="math inline">\((X_w^\top X_w)^{-1}\)</span>): <span class="math inline">\(O(k^3)\)</span>.</li>
+<li>Compute the coefficient from the cached objects: lower order relative to the above.</li>
+</ul>
+<p>So the total cost to compute permutation statistics is approximately: <span class="math display">\[
+O\!\left(R\,(Nk^2 + k^3)\right),
+\]</span> plus permutation generation cost (<span class="math inline">\(O(RN)\)</span>) if permutations are generated internally.</p>
+<p>Memory in this path is dominated by:</p>
+<ul>
+<li>storing results: <code>perm_stats</code> is float64 of length <span class="math inline">\(R\)</span> (<span class="math inline">\(8R\)</span> bytes),</li>
+<li>plus <code>K_perm</code> (float64 of length <span class="math inline">\(R\)</span>) when coefficient CI is requested in the linear path (<span class="math inline">\(8R\)</span> bytes),</li>
+<li>plus the eager or streamed permutation storage described earlier.</li>
+</ul>
+</section>
+<section id="generic-path-stat_fn-cost-depends-on-the-statistic" class="level3">
+<h3 class="anchored" data-anchor-id="generic-path-stat_fn-cost-depends-on-the-statistic">Generic path (<code>stat_fn</code>): cost depends on the statistic</h3>
+<p>In the generic path, for each permutation <code>ritest</code>:</p>
+<ul>
+<li>constructs a shallow copy of the dataframe,</li>
+<li>replaces the <code>permute_var</code> column with the permuted assignment vector,</li>
+<li>evaluates <code>stat_fn(dfp)</code>.</li>
+</ul>
+<p>The total time is: <span class="math display">\[
+O\!\left(R\,(C_{\texttt{stat\_fn}} + N)\right)
+\]</span> where <span class="math inline">\(C_{\texttt{stat\_fn}}\)</span> is the cost of computing the statistic on one permuted dataset. This term is unknown a priori and can dominate everything else.</p>
+<p>Permutation generation is still <span class="math inline">\(O(RN)\)</span> if <code>ritest</code> generates permutations internally.</p>
+</section>
+</section>
+<section id="p-value-confidence-intervals" class="level2">
+<h2 class="anchored" data-anchor-id="p-value-confidence-intervals"><span class="math inline">\(p\)</span>-value confidence intervals</h2>
+<p><span class="math inline">\(p\)</span>-value confidence intervals use only the exceedance count <span class="math inline">\(c\)</span> and <span class="math inline">\(R\)</span>. The cost is constant:</p>
+<ul>
+<li>Time: <span class="math inline">\(O(1)\)</span>.</li>
+<li>Memory: <span class="math inline">\(O(1)\)</span>. ## Coefficient CI bounds and bands</li>
+</ul>
+<p>Available for the linear path only. Coefficient CIs in <code>ritest</code> are computed by test inversion on a grid of <span class="math inline">\(G\)</span> candidate values <span class="math inline">\(\beta_0\)</span>, returning either bounds (<code>ci_mode="bounds"</code>) or the full band (<code>ci_mode="grid"</code>).</p>
+<p>In the current implementation, <strong>both</strong> linear bounds and linear bands are computed using the same vectorised machinery in <code>coef_ci.py</code>.</p>
+<section id="time-complexity" class="level3">
+<h3 class="anchored" data-anchor-id="time-complexity">Time complexity</h3>
+<p><code>coef_ci_band_fast(...)</code> builds:</p>
+<ul>
+<li><code>crit</code>: a length-<span class="math inline">\(G\)</span> vector.</li>
+<li><code>dist</code>: an <span class="math inline">\((R \times G)\)</span> array via broadcasting: <span class="math display">\[
+\mathrm{dist}_{r,g} = \hat\beta_r - \beta_{0,g}\,K_r.
+\]</span></li>
+</ul>
+<p>Then it performs a tail comparison and averages over permutations.</p>
+<ul>
+<li>Time: <span class="math inline">\(O(RG)\)</span> comparisons and reductions.</li>
+</ul>
+<p><code>coef_ci_bounds_fast(...)</code> calls the band routine and then scans for grid points with <span class="math inline">\(p(\beta_0)\ge \alpha\)</span>, which is <span class="math inline">\(O(G)\)</span> on top of the band cost, so overall still <span class="math inline">\(O(RG)\)</span>.</p>
+<section id="memory-complexity-and-practical-implications" class="level4">
+<h4 class="anchored" data-anchor-id="memory-complexity-and-practical-implications">Memory complexity and practical implications</h4>
+<p>The dominant allocation is the broadcasted <code>dist</code> array:</p>
+<ul>
+<li>Memory: <span class="math inline">\(O(RG)\)</span> float64 values, i.e. <span class="math display">\[
+\text{bytes}(\mathrm{dist}) \approx 8\,R\,G.
+\]</span></li>
+</ul>
+<p>This can exceed the permutation-matrix memory when <span class="math inline">\(R\)</span> is large and the grid is fine. This is the point at which <code>ritest</code> would “break” due to memory issues.</p>
+<p>Example (illustrative scale calculation):</p>
+<ul>
+<li><span class="math inline">\(R = 200{,}000\)</span></li>
+<li><span class="math inline">\(\texttt{ci\_range}=8\)</span>, <span class="math inline">\(\texttt{ci\_step}=0.05\)</span> gives <span class="math inline">\(G \approx 321\)</span></li>
+</ul>
+<p>Then <span class="math display">\[
+8RG \approx 8 \cdot 200{,}000 \cdot 321 \approx 513{,}600{,}000\ \text{bytes} \approx 0.51\ \text{GB}.
+\]</span></p>
+<p>This allocation is independent of whether permutation generation is eager or streamed. It is a separate memory pressure point for coefficient bands.</p>
+</section>
+</section>
+</section>
+<section id="parallelism-and-numba-acceleration" class="level2">
+<h2 class="anchored" data-anchor-id="parallelism-and-numba-acceleration">Parallelism and Numba acceleration</h2>
+<section id="n_jobs-and-thread-based-parallelism" class="level3">
+<h3 class="anchored" data-anchor-id="n_jobs-and-thread-based-parallelism"><code>n_jobs</code> and thread-based parallelism</h3>
+<p><code>ritest</code> parallelizes permutation evaluation with <code>ThreadPoolExecutor</code> in <code>run.py</code> when <code>n_jobs &gt; 1</code>. By default, <code>config.py</code> sets <code>n_jobs = -1</code>, which is coerced to “all available CPU cores”.</p>
+<p>What parallelizes:</p>
+<ul>
+<li>Linear path: each thread runs <code>_fit_one(...)</code>, which creates a <code>FastOLS</code> instance for one permuted assignment and returns the coefficient and <span class="math inline">\(K_r\)</span>.</li>
+<li>Generic path: each thread runs <code>_eval_one(...)</code>, which calls <code>stat_fn</code> on one permuted dataset.</li>
+</ul>
+<p>Because the executor is thread-based, speedups depend on whether the per-permutation work releases the Python GIL (for example, heavy NumPy linear algebra typically does; pure Python code typically does not). The implementation choice is fixed in <code>run.py</code>: threads, not processes.</p>
+</section>
+<section id="numba-accelerated-kernels" class="level3">
+<h3 class="anchored" data-anchor-id="numba-accelerated-kernels">Numba-accelerated kernels</h3>
+<p>Two modules contain optional Numba acceleration:</p>
+<ul>
+<li><code>shuffle.py</code> uses <code>NUMBA_OK</code> to enable <code>@njit</code> / <code>prange</code> kernels for reshuffling. When Numba is not available, it provides safe pure-Python/NumPy fallbacks that preserve call signatures.</li>
+<li><code>fast_ols.py</code> includes <code>fast_permuted_stats(...)</code>, which is a Numba-accelerated dot-product kernel used by <code>FastOLS.permuted_stats(...)</code>.</li>
+</ul>
+<p>In the current <code>run.py</code> pathway for treatment permutations, <code>FastOLS.permuted_stats(...)</code> is not the main driver (permutation evaluation refits <code>FastOLS</code> each time). Numba therefore matters most for fast permutation generation and any pathways that explicitly call <code>permuted_stats(...)</code>.</p>
+</section>
+</section>
+<section id="more-on-memory" class="level2">
+<h2 class="anchored" data-anchor-id="more-on-memory">More on memory</h2>
+<p>The most common way permutation code runs into out-of-memory (OOM) errors is by building the full <span class="math inline">\((R,N)\)</span> permutation matrix. <code>ritest</code> avoids this with streaming blocks whenever the estimated full matrix exceeds <code>perm_chunk_bytes</code>.</p>
+<p>A simple size calculation shows why this matters:</p>
+<ul>
+<li>If the assignment is stored as 1 byte per element (as in <code>ritest</code>’s internal <code>int8</code> representation), the eager permutation matrix requires approximately <span class="math inline">\(RN\)</span> bytes.</li>
+<li>If an environment stores the same data using a wider integer type (e.g., 4 bytes per element), the same matrix costs about <span class="math inline">\(4RN\)</span> bytes.</li>
+</ul>
+<p>Big data example designed to crash eager storage on most PCs:</p>
+<ul>
+<li><span class="math inline">\(N = 200{,}000{,}000\)</span></li>
+<li><span class="math inline">\(R = 2{,}000\)</span></li>
+</ul>
+<p>Then even at 1 byte per element: <span class="math display">\[
+RN = 40{,}000{,}000{,}000\ \text{bytes} \approx 40\ \text{GB}.
+\]</span></p>
+<p>This is far beyond the default <code>perm_chunk_bytes</code> budget and triggers the streaming path automatically. In streaming mode, peak memory for permutations is reduced to roughly <span class="math display">\[
+mN\ \text{bytes},
+\]</span> where <span class="math inline">\(m\)</span> is the chosen <code>chunk_rows</code>, while still producing exactly <span class="math inline">\(R\)</span> permutations in a deterministic sequence.</p>
+<p>Note that coefficient <strong>bands</strong> can still become trigger OOM errors because <code>coef_ci_band_fast</code> allocates an <span class="math inline">\((R\times G)\)</span> float64 array. Chunking permutations does not prevent that allocation.</p>
 
 
 </section>
@@ -1189,13 +1124,13 @@ n_jobs:                 4</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../projects/ritest/benchmarks/colombia.html" class="pagination-link" aria-label="Colombian example">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Colombian example</span>
+      <a href="../../../projects/ritest/technical-notes/ci.html" class="pagination-link" aria-label="Confidence intervals">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Confidence intervals</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../projects/ritest/benchmarks/ci-bands.html" class="pagination-link" aria-label="Confidence bands">
-        <span class="nav-page-text">Confidence bands</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../projects/ritest/api.html" class="pagination-link" aria-label="API reference">
+        <span class="nav-page-text">API reference</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

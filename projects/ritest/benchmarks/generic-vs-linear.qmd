@@ -4,7 +4,7 @@ title: "Linear vs generic"
 
 ---
 
-From the [Colombian example](colombia.qmd) we see that `ritest` in Python works and it is reasonably fast. That is a valid benchmark for linear models with multiple fixed effects. In this section I benchmark simple OLS vs Stata and R's implementation of randomation inference.
+From the [Colombian example](colombia.qmd) we see that `ritest` in Python works and it is reasonably fast. That is a valid benchmark for linear models with multiple fixed effects. In this section I benchmark using simple OLS against Stata and R's implementations of randomization inference.
 
 ## Data
 
@@ -266,6 +266,6 @@ n_jobs:                 4
 
 ##   Discussion
 
-The result of the randomization inference aligns across the three different implementation. In terms of performance, the Python implementation is fastest (3.274 s), followed by the R implementation (11.24 s), and the Stata implementation (183 s). Compared to the [Colombian example](colombia.qmd), in which the R implementation was faster due to its explicit integration of `fixest` to handle estimation with multiple fixed effects, the implementation in Python is now faster due to its fast engine specialized in OLS.
+The result of the randomization inference aligns across the three different implementations. In terms of performance, the Python implementation is fastest (3.274 s), followed by the R implementation (11.24 s), and the Stata implementation (183 s). Compared to the [Colombian example](colombia.qmd), in which the R implementation was faster due to its explicit integration of `fixest` to handle estimation with multiple fixed effects, the implementation in Python is now faster due to its fast engine specialized in OLS.
 
 

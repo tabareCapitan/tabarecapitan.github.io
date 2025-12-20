@@ -5,7 +5,7 @@ title: "Custom statistics"
 ---
 
 `ritest()` can run randomization inference (RI) on *any* statistic, as long as you can write a generic function, `python
-stat_fn(df_perm) -> float`, that takes a permuted dataset and returns a single number. In this page I show a few common statistics you may want to use. F
+stat_fn(df_perm) -> float`, that takes a permuted dataset and returns a single number. In this page I show a few common statistics you may want to use.
 
 The script to run all the examples is in the [repository](https://github.com/tabareCapitan/ritest/blob/master/documentation/examples/custom_stats.py).
 

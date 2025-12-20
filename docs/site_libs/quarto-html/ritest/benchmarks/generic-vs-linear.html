@@ -553,7 +553,7 @@ window.Quarto = {
 
 
 <hr>
-<p>From the <a href="../../../projects/ritest/benchmarks/colombia.html">Colombian example</a> we see that <code>ritest</code> in Python works and it is reasonably fast. That is a valid benchmark for linear models with multiple fixed effects. In this section I benchmark using simple OLS against Stata and R’s implementations of randomization inference.</p>
+<p>From the <a href="../../../projects/ritest/benchmarks/colombia.html">Colombian example</a> we see that <code>ritest</code> in Python works and it is reasonably fast. That is a valid benchmark for linear models with multiple fixed effects. In this section I benchmark simple OLS vs Stata and R’s implementation of randomation inference.</p>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
 <p>The simulated dataset represents a clean, randomized experiment with <span class="math inline">\(N=10{,}000\)</span> observations, designed to resemble realistic applied data. Treatment is randomly assigned with equal probability (50/50), with no clustering and no stratification. The dataset includes 20 covariates covering demographics, behavior, engagement, and region indicators. These covariates are generated from a small number of latent factors, inducing realistic correlations while remaining fully observed and free of missing values.</p>
@@ -769,7 +769,7 @@ n_jobs:                 4</code></pre>
 </section>
 <section id="discussion" class="level2">
 <h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
-<p>The result of the randomization inference aligns across the three different implementations. In terms of performance, the Python implementation is fastest (3.274 s), followed by the R implementation (11.24 s), and the Stata implementation (183 s). Compared to the <a href="../../../projects/ritest/benchmarks/colombia.html">Colombian example</a>, in which the R implementation was faster due to its explicit integration of <code>fixest</code> to handle estimation with multiple fixed effects, the implementation in Python is now faster due to its fast engine specialized in OLS.</p>
+<p>The result of the randomization inference aligns across the three different implementation. In terms of performance, the Python implementation is fastest (3.274 s), followed by the R implementation (11.24 s), and the Stata implementation (183 s). Compared to the <a href="../../../projects/ritest/benchmarks/colombia.html">Colombian example</a>, in which the R implementation was faster due to its explicit integration of <code>fixest</code> to handle estimation with multiple fixed effects, the implementation in Python is now faster due to its fast engine specialized in OLS.</p>
 
 
 </section>

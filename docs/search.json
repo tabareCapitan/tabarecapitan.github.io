@@ -107,7 +107,7 @@
     "href": "projects/ritest/examples/custom.html",
     "title": "Custom statistics",
     "section": "",
-    "text": "ritest() can run randomization inference (RI) on any statistic, as long as you can write a generic function, python stat_fn(df_perm) -&gt; float, that takes a permuted dataset and returns a single number. In this page I show a few common statistics you may want to use. F\nThe script to run all the examples is in the repository.",
+    "text": "ritest() can run randomization inference (RI) on any statistic, as long as you can write a generic function, python stat_fn(df_perm) -&gt; float, that takes a permuted dataset and returns a single number. In this page I show a few common statistics you may want to use.\nThe script to run all the examples is in the repository.",
     "crumbs": [
       "about",
       "Examples",
@@ -476,7 +476,7 @@
     "href": "projects/ritest/benchmarks/generic-vs-linear.html",
     "title": "Linear vs generic",
     "section": "",
-    "text": "From the Colombian example we see that ritest in Python works and it is reasonably fast. That is a valid benchmark for linear models with multiple fixed effects. In this section I benchmark simple OLS vs Stata and R’s implementation of randomation inference.",
+    "text": "From the Colombian example we see that ritest in Python works and it is reasonably fast. That is a valid benchmark for linear models with multiple fixed effects. In this section I benchmark using simple OLS against Stata and R’s implementations of randomization inference.",
     "crumbs": [
       "about",
       "Benchmarks",
@@ -536,7 +536,7 @@
     "href": "projects/ritest/benchmarks/generic-vs-linear.html#discussion",
     "title": "Linear vs generic",
     "section": "Discussion",
-    "text": "Discussion\nThe result of the randomization inference aligns across the three different implementation. In terms of performance, the Python implementation is fastest (3.274 s), followed by the R implementation (11.24 s), and the Stata implementation (183 s). Compared to the Colombian example, in which the R implementation was faster due to its explicit integration of fixest to handle estimation with multiple fixed effects, the implementation in Python is now faster due to its fast engine specialized in OLS.",
+    "text": "Discussion\nThe result of the randomization inference aligns across the three different implementations. In terms of performance, the Python implementation is fastest (3.274 s), followed by the R implementation (11.24 s), and the Stata implementation (183 s). Compared to the Colombian example, in which the R implementation was faster due to its explicit integration of fixest to handle estimation with multiple fixed effects, the implementation in Python is now faster due to its fast engine specialized in OLS.",
     "crumbs": [
       "about",
       "Benchmarks",
@@ -715,7 +715,7 @@
     "href": "projects/ritest/benchmarks/ci-bands.html",
     "title": "Confidence bands",
     "section": "",
-    "text": "In this section I compare the performance of feature to get confidence bands in my Python implementation, to the example provided in the documentation for the Stata implementation.",
+    "text": "In this section I compare the performance of the feature to get confidence bands in my Python implementation, to the example provided in the documentation for the Stata implementation.",
     "crumbs": [
       "about",
       "Benchmarks",
