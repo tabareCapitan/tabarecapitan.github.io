@@ -472,75 +472,15 @@
     ]
   },
   {
-    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html",
-    "href": "projects/ritest/benchmarks/generic-vs-linear.html",
-    "title": "Linear vs generic",
+    "objectID": "projects/ritest/benchmarks/intro.html",
+    "href": "projects/ritest/benchmarks/intro.html",
+    "title": "Introduction",
     "section": "",
-    "text": "From the Colombian example we see that ritest in Python works and it is reasonably fast. That is a valid benchmark for linear models with multiple fixed effects. In this section I benchmark using simple OLS against Stata and R’s implementations of randomization inference.",
+    "text": "Stata’s ritest (by Simon Heß) has been out for about a decade now, making it a trusted way to confirm that my own ritest implementation in Python works correctly. To strenghten the confirmation, I also compare results with R’s ritest implementation (by Grant McDermott). A second goal of this subsection is to compare performance across the three implementations under different scenarios. To be clear, this is not a competition, it would not make sense, in most cases, to choose a particular language just because of randomization inference performance. It is just interesting to see how the different implementations compare.\nI’ll not include all code here, just the critical bits. You can find complete code and data for all benchmarks in the repository.\n\nThere are more implementations of randomization inference than the ones I consider in these benchmarks. For example, in Stata, Alwyn Young has shared code to do randomization inference and confidence intervals. In R, Alexander Coppock, authored ri2, documented here. I’ve not used these alternatives, but they seem like credible implementation you may want to consider.\n\n\n\n Back to top",
     "crumbs": [
       "about",
       "Benchmarks",
-      "Linear vs generic"
-    ]
-  },
-  {
-    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html#data",
-    "href": "projects/ritest/benchmarks/generic-vs-linear.html#data",
-    "title": "Linear vs generic",
-    "section": "Data",
-    "text": "Data\nThe simulated dataset represents a clean, randomized experiment with \\(N=10{,}000\\) observations, designed to resemble realistic applied data. Treatment is randomly assigned with equal probability (50/50), with no clustering and no stratification. The dataset includes 20 covariates covering demographics, behavior, engagement, and region indicators. These covariates are generated from a small number of latent factors, inducing realistic correlations while remaining fully observed and free of missing values.\nThe outcome is continuous and driven by covariates plus a very small heterogeneous treatment effect. The individual treatment effect is\n\\[\\tau_i = 0.02 + 0.0075 \\cdot h_i\\] ​ where \\(h_i\\) is a standardized index based on baseline spending and satisfaction, so the true average treatment effect is approximately 0.02. Outcome noise is Gaussian with standard deviation \\(5\\), chosen so that at \\(N = 10{,}000\\) the problem is nontrivial but stable, with an expected standard error for the treatment coefficient of about \\(0.05\\). This implies considerable design-based variability, so point estimates and \\(p\\)-values can differ noticeably across realizations and across implementations. In addition, randomization inference relies on a finite number of permutations, which introduces a small amount of Monte Carlo error. On average, however, inference is expected to provide little evidence against the null hypothesis of no treatment effect.",
-    "crumbs": [
-      "about",
-      "Benchmarks",
-      "Linear vs generic"
-    ]
-  },
-  {
-    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html#stata",
-    "href": "projects/ritest/benchmarks/generic-vs-linear.html#stata",
-    "title": "Linear vs generic",
-    "section": "Stata",
-    "text": "Stata\n\nCodeResultsRuntime\n\n\nSet a local macro with all covariates except the permute variable treat:\nlocal xvars ///\n    age female education_years log_income household_size urban      ///\n    tenure_months baseline_spend purchases_12m returns_12m          ///\n    support_tickets_6m app_sessions_30d days_since_last_purchase    ///\n    email_opt_in promo_exposure_30d prior_churn credit_score        ///\n    satisfaction_score region_1 region_2 region_3 region_4\nRun ritest:\nritest treat _b[treat], reps(2000) seed(23) nodots: reg y treat `xvars'\n\n\n. ritest treat _b[treat], reps(2000) seed(23) nodots: reg y treat `xvars'\n\n      Source |       SS           df       MS      Number of obs   =    10,000\n-------------+----------------------------------   F(23, 9976)     =    701.81\n       Model |  389011.799        23  16913.5565   Prob &gt; F        =    0.0000\n    Residual |  240422.079     9,976   24.100048   R-squared       =    0.6180\n-------------+----------------------------------   Adj R-squared   =    0.6172\n       Total |  629433.877     9,999  62.9496827   Root MSE        =    4.9092\n\n------------------------------------------------------------------------------\n           y | Coefficient  Std. err.      t    P&gt;|t|     [95% conf. interval]\n-------------+----------------------------------------------------------------\n       treat |   .0819918   .0983118     0.83   0.404    -.1107191    .2747028\n       ... (clipped for brevity)\n------------------------------------------------------------------------------\n\n      Command: regress y treat age female education_years log_income\n                   household_size urban tenure_months baseline_spend\n                   purchases_12m returns_12m support_tickets_6m\n                   app_sessions_30d days_since_last_purchase email_opt_in\n                   promo_exposure_30d prior_churn credit_score\n                   satisfaction_score region_1 region_2 region_3 region_4\n        _pm_1: _b[treat]\n  res. var(s):  treat\n   Resampling:  Permuting treat\nClust. var(s):  __000001\n     Clusters:  10000\nStrata var(s):  none\n       Strata:  1\n\n------------------------------------------------------------------------------\nT            |     T(obs)       c       n   p=c/n   SE(p) [95% Conf. Interval]\n-------------+----------------------------------------------------------------\n       _pm_1 |   .0819918     786    2000  0.3930  0.0109  .3715147   .4147996\n------------------------------------------------------------------------------\nNote: Confidence interval is with respect to p=c/n.\nNote: c = #{|T| &gt;= |T(obs)|}\n\n\n183 s or about 3 minutes.",
-    "crumbs": [
-      "about",
-      "Benchmarks",
-      "Linear vs generic"
-    ]
-  },
-  {
-    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html#r",
-    "href": "projects/ritest/benchmarks/generic-vs-linear.html#r",
-    "title": "Linear vs generic",
-    "section": "R",
-    "text": "R\n\nCodeResultsRuntime\n\n\nEstimate a linear model, save in est:\nfml &lt;- y ~ treat +\n  age + female + education_years + log_income + household_size + urban + tenure_months +\n  baseline_spend + purchases_12m + returns_12m + support_tickets_6m + app_sessions_30d +\n  days_since_last_purchase + email_opt_in + promo_exposure_30d + prior_churn + credit_score +\n  satisfaction_score + region_1 + region_2 + region_3 + region_4\n\nest &lt;- lm(fml, data = df)\nRun ritest, save results in ri:\nri &lt;- ritest(est, \"treat\", reps = 2000, seed = 23L)\nPrint results.\nprint(ri)\n\n\nOLS (lm) fit:\n\nCall:\nlm(formula = fml, data = df)\n\nResiduals:\n     Min       1Q   Median       3Q      Max\n-19.0734  -3.3147   0.0069   3.3346  19.3317\n\nCoefficients:\n                           Estimate Std. Error t value Pr(&gt;|t|)\n(Intercept)              -2.008e+01  1.414e+00 -14.205  &lt; 2e-16 ***\ntreat                     8.199e-02  9.831e-02   0.834 0.404302\n... (clipped for brevity)\n---\nSignif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1\n\nResidual standard error: 4.909 on 9976 degrees of freedom\nMultiple R-squared:  0.618, Adjusted R-squared:  0.6172\nF-statistic: 701.8 on 23 and 9976 DF,  p-value: &lt; 2.2e-16\n\n\nRI result:\n\n          Call: lm(formula = fml, data = df)\n   Res. var(s): treat\n            H0: treat=0\n     Num. reps: 2000\n────────────────────────────────────────────────────────────────────────────────\n  T(obs)         c         n     p=c/n     SE(p)   CI 2.5%  CI 97.5%\n 0.08199       839      2000    0.4195   0.01815    0.3896    0.4494\n────────────────────────────────────────────────────────────────────────────────\nNote: Confidence interval is with respect to p=c/n.\nNote: c = #{|T| &gt;= |T(obs)|}\n\n\n11.24 seconds.",
-    "crumbs": [
-      "about",
-      "Benchmarks",
-      "Linear vs generic"
-    ]
-  },
-  {
-    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html#python",
-    "href": "projects/ritest/benchmarks/generic-vs-linear.html#python",
-    "title": "Linear vs generic",
-    "section": "Python",
-    "text": "Python\n\nCodeResultsRuntime\n\n\nSet up the model:\nPERMUTE_VAR = \"treat\"\nSTAT = \"treat\"\n\nCOVARS = [\n    \"age\",\n    \"female\",\n    \"education_years\",\n    \"log_income\",\n    \"household_size\",\n    \"urban\",\n    \"tenure_months\",\n    \"baseline_spend\",\n    \"purchases_12m\",\n    \"returns_12m\",\n    \"support_tickets_6m\",\n    \"app_sessions_30d\",\n    \"days_since_last_purchase\",\n    \"email_opt_in\",\n    \"promo_exposure_30d\",\n    \"prior_churn\",\n    \"credit_score\",\n    \"satisfaction_score\",\n    \"region_1\",\n    \"region_2\",\n    \"region_3\",\n    \"region_4\",\n]\n\nFORMULA = \"y ~ treat + \" + \" + \".join(COVARS)\nRun ritest:\nres = ritest(\n       df=df,\n       permute_var=PERMUTE_VAR,\n       formula=FORMULA,\n       stat=STAT,\n       reps=reps,\n       seed=seed,\n    )\nPrint results:\nprint(summary)\n\n\nRandomization Inference Result\n===============================\n\nCoefficient\n-----------\nObserved effect (β̂):   0.0820\nCoefficient CI bounds: [-0.1133, 0.2778]\nCoefficient CI band:   not computed\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.3990 (39.9%)\nP-value CI @ α=0.050: [0.3775, 0.4208]\nAs-or-more extreme:     798 / 2000\n\nTest configuration\n------------------\nStratified:             no\nClustered:              no\nWeights:                no\n\nSettings\n--------\nalpha:                  0.050\nseed:                   23\nci_method:              cp\nci_mode:                bounds\nn_jobs:                 4\n\n\n3.274 seconds.",
-    "crumbs": [
-      "about",
-      "Benchmarks",
-      "Linear vs generic"
-    ]
-  },
-  {
-    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html#discussion",
-    "href": "projects/ritest/benchmarks/generic-vs-linear.html#discussion",
-    "title": "Linear vs generic",
-    "section": "Discussion",
-    "text": "Discussion\nThe result of the randomization inference aligns across the three different implementations. In terms of performance, the Python implementation is fastest (3.274 s), followed by the R implementation (11.24 s), and the Stata implementation (183 s). Compared to the Colombian example, in which the R implementation was faster due to its explicit integration of fixest to handle estimation with multiple fixed effects, the implementation in Python is now faster due to its fast engine specialized in OLS.",
-    "crumbs": [
-      "about",
-      "Benchmarks",
-      "Linear vs generic"
+      "Introduction"
     ]
   },
   {
@@ -671,7 +611,7 @@
     "href": "projects/ritest/api.html",
     "title": "API reference",
     "section": "",
-    "text": "This page documents the stable, user-facing API of the ritest package as exposed through ritest.__init__.\nThe public interface consists of:\n\nritest — high-level entry point for randomization inference.\nRitestResult — result container.\nConfiguration helpers:\n\nritest_set\nritest_get\nritest_reset\nritest_config\n\n\nThis reflects the __all__ definition in ritest/__init__.py.\n\n\n\nfrom ritest import ritest\n\nresult = ritest(\n    *,\n    df,\n    permute_var: str,\n    # linear path\n    formula: str | None = None,\n    stat: str | None = None,\n    # generic path\n    stat_fn: callable | None = None,\n    # test controls\n    alternative: {\"two-sided\",\"left\",\"right\"} = \"two-sided\",\n    reps: int | None = None,\n    alpha: float | None = None,\n    ci_method: {\"clopper-pearson\",\"normal\"} | None = None,\n    ci_mode: {\"none\",\"bounds\",\"grid\"} | None = None,\n    # infra\n    n_jobs: int | None = None,\n    seed: int | None = None,\n    # design\n    weights: str | None = None,\n    strata: str | None = None,\n    cluster: str | None = None,\n    # optional prebuilt permutations\n    permutations: object | None = None,\n    # optional band grid hints\n    ci_range: float | None = None,\n    ci_step: float | None = None,\n)\nPurpose\nRun randomization inference using either:\n\na linear model defined by formula + stat, or\na generic statistic defined via stat_fn.\n\nExactly one of stat or stat_fn must be supplied.\nReturns: a RitestResult object.\n\n\n\n\nRitestResult is the return object of ritest().\nTypical responsibilities include:\n\nstoring observed statistic and permutation distribution\nexposing scalars like estimate, p-value, confidence intervals\nproviding helpers such as summary()\n\n\n\n\n\nAll configuration utilities are exposed at the top-level:\nfrom ritest import (\n    ritest_set,\n    ritest_get,\n    ritest_reset,\n    ritest_config,\n)\n\n\nSet one or more global defaults for future ritest() calls.\nExample:\nritest_set(reps=999, alpha=0.05)\n\n\n\nRetrieve the current value of a configuration option.\nExample:\nritest_get(\"reps\")\n\n\n\nReset global configuration to package defaults.\nExample:\nritest_reset()\n\n\n\nReturn a dictionary-like structure containing current configuration (useful for reproducibility).\nExample:\ncfg = ritest_config()\nprint(cfg)\n\nThis page documents only the public names defined in:\n__all__ = [\n    \"ritest\",\n    \"RitestResult\",\n    \"ritest_set\",\n    \"ritest_get\",\n    \"ritest_reset\",\n    \"ritest_config\",\n]\nInternal modules and helpers are not part of the supported API.",
+    "text": "This page documents the stable, user-facing API of the ritest package as exposed through ritest.__init__.\nThe public interface consists of:\n\nritest — high-level entry point for randomization inference.\nRitestResult — result container.\nConfiguration helpers:\n\nritest_set\nritest_get\nritest_reset\nritest_config\n\n\nThis reflects the __all__ definition in ritest/__init__.py.\n\n\n\nfrom ritest import ritest\n\nresult = ritest(\n    *,\n    df,\n    permute_var: str,\n    # linear path\n    formula: str | None = None,\n    stat: str | None = None,\n    # generic path\n    stat_fn: callable | None = None,\n    # test controls\n    alternative: {\"two-sided\",\"left\",\"right\"} = \"two-sided\",\n    reps: int | None = None,\n    alpha: float | None = None,\n    ci_method: {\"clopper-pearson\",\"normal\"} | None = None,\n    ci_mode: {\"none\",\"bounds\",\"band\"} | None = None,\n    # infra\n    n_jobs: int | None = None,\n    seed: int | None = None,\n    # design\n    weights: str | None = None,\n    strata: str | None = None,\n    cluster: str | None = None,\n    # optional prebuilt permutations\n    permutations: object | None = None,\n    # optional band grid hints\n    ci_range: float | None = None,\n    ci_step: float | None = None,\n)\nPurpose\nRun randomization inference using either:\n\na linear model defined by formula + stat, or\na generic statistic defined via stat_fn.\n\nExactly one of stat or stat_fn must be supplied.\nReturns: a RitestResult object.\n\n\n\n\nRitestResult is the return object of ritest().\nTypical responsibilities include:\n\nstoring observed statistic and permutation distribution\nexposing scalars like estimate, p-value, confidence intervals\nproviding helpers such as summary()\n\n\n\n\n\nAll configuration utilities are exposed at the top-level:\nfrom ritest import (\n    ritest_set,\n    ritest_get,\n    ritest_reset,\n    ritest_config,\n)\n\n\nSet one or more global defaults for future ritest() calls.\nExample:\nritest_set(reps=999, alpha=0.05)\n\n\n\nRetrieve the current value of a configuration option.\nExample:\nritest_get(\"reps\")\n\n\n\nReset global configuration to package defaults.\nExample:\nritest_reset()\n\n\n\nReturn a dictionary-like structure containing current configuration (useful for reproducibility).\nExample:\ncfg = ritest_config()\nprint(cfg)\n\nThis page documents only the public names defined in:\n__all__ = [\n    \"ritest\",\n    \"RitestResult\",\n    \"ritest_set\",\n    \"ritest_get\",\n    \"ritest_reset\",\n    \"ritest_config\",\n]\nInternal modules and helpers are not part of the supported API.",
     "crumbs": [
       "about",
       "API reference"
@@ -682,7 +622,7 @@
     "href": "projects/ritest/api.html#ritest",
     "title": "API reference",
     "section": "",
-    "text": "from ritest import ritest\n\nresult = ritest(\n    *,\n    df,\n    permute_var: str,\n    # linear path\n    formula: str | None = None,\n    stat: str | None = None,\n    # generic path\n    stat_fn: callable | None = None,\n    # test controls\n    alternative: {\"two-sided\",\"left\",\"right\"} = \"two-sided\",\n    reps: int | None = None,\n    alpha: float | None = None,\n    ci_method: {\"clopper-pearson\",\"normal\"} | None = None,\n    ci_mode: {\"none\",\"bounds\",\"grid\"} | None = None,\n    # infra\n    n_jobs: int | None = None,\n    seed: int | None = None,\n    # design\n    weights: str | None = None,\n    strata: str | None = None,\n    cluster: str | None = None,\n    # optional prebuilt permutations\n    permutations: object | None = None,\n    # optional band grid hints\n    ci_range: float | None = None,\n    ci_step: float | None = None,\n)\nPurpose\nRun randomization inference using either:\n\na linear model defined by formula + stat, or\na generic statistic defined via stat_fn.\n\nExactly one of stat or stat_fn must be supplied.\nReturns: a RitestResult object.",
+    "text": "from ritest import ritest\n\nresult = ritest(\n    *,\n    df,\n    permute_var: str,\n    # linear path\n    formula: str | None = None,\n    stat: str | None = None,\n    # generic path\n    stat_fn: callable | None = None,\n    # test controls\n    alternative: {\"two-sided\",\"left\",\"right\"} = \"two-sided\",\n    reps: int | None = None,\n    alpha: float | None = None,\n    ci_method: {\"clopper-pearson\",\"normal\"} | None = None,\n    ci_mode: {\"none\",\"bounds\",\"band\"} | None = None,\n    # infra\n    n_jobs: int | None = None,\n    seed: int | None = None,\n    # design\n    weights: str | None = None,\n    strata: str | None = None,\n    cluster: str | None = None,\n    # optional prebuilt permutations\n    permutations: object | None = None,\n    # optional band grid hints\n    ci_range: float | None = None,\n    ci_step: float | None = None,\n)\nPurpose\nRun randomization inference using either:\n\na linear model defined by formula + stat, or\na generic statistic defined via stat_fn.\n\nExactly one of stat or stat_fn must be supplied.\nReturns: a RitestResult object.",
     "crumbs": [
       "about",
       "API reference"
@@ -711,8 +651,80 @@
     ]
   },
   {
-    "objectID": "projects/ritest/benchmarks/ci-bands.html",
-    "href": "projects/ritest/benchmarks/ci-bands.html",
+    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html",
+    "href": "projects/ritest/benchmarks/generic-vs-linear.html",
+    "title": "Linear vs generic",
+    "section": "",
+    "text": "From the Colombian example we see that ritest in Python works and it is reasonably fast. That is a valid benchmark for linear models with multiple fixed effects. In this section I benchmark using simple OLS against Stata and R’s implementations of randomization inference.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Linear vs generic"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html#data",
+    "href": "projects/ritest/benchmarks/generic-vs-linear.html#data",
+    "title": "Linear vs generic",
+    "section": "Data",
+    "text": "Data\nThe simulated dataset represents a clean, randomized experiment with \\(N=10{,}000\\) observations, designed to resemble realistic applied data. Treatment is randomly assigned with equal probability (50/50), with no clustering and no stratification. The dataset includes 20 covariates covering demographics, behavior, engagement, and region indicators. These covariates are generated from a small number of latent factors, inducing realistic correlations while remaining fully observed and free of missing values.\nThe outcome is continuous and driven by covariates plus a very small heterogeneous treatment effect. The individual treatment effect is\n\\[\\tau_i = 0.02 + 0.0075 \\cdot h_i\\] ​ where \\(h_i\\) is a standardized index based on baseline spending and satisfaction, so the true average treatment effect is approximately 0.02. Outcome noise is Gaussian with standard deviation \\(5\\), chosen so that at \\(N = 10{,}000\\) the problem is nontrivial but stable, with an expected standard error for the treatment coefficient of about \\(0.05\\). This implies considerable design-based variability, so point estimates and \\(p\\)-values can differ noticeably across realizations and across implementations. In addition, randomization inference relies on a finite number of permutations, which introduces a small amount of Monte Carlo error. On average, however, inference is expected to provide little evidence against the null hypothesis of no treatment effect.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Linear vs generic"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html#stata",
+    "href": "projects/ritest/benchmarks/generic-vs-linear.html#stata",
+    "title": "Linear vs generic",
+    "section": "Stata",
+    "text": "Stata\n\nCodeResultsRuntime\n\n\nSet a local macro with all covariates except the permute variable treat:\nlocal xvars ///\n    age female education_years log_income household_size urban      ///\n    tenure_months baseline_spend purchases_12m returns_12m          ///\n    support_tickets_6m app_sessions_30d days_since_last_purchase    ///\n    email_opt_in promo_exposure_30d prior_churn credit_score        ///\n    satisfaction_score region_1 region_2 region_3 region_4\nRun ritest:\nritest treat _b[treat], reps(2000) seed(23) nodots: reg y treat `xvars'\n\n\n. ritest treat _b[treat], reps(2000) seed(23) nodots: reg y treat `xvars'\n\n      Source |       SS           df       MS      Number of obs   =    10,000\n-------------+----------------------------------   F(23, 9976)     =    701.81\n       Model |  389011.799        23  16913.5565   Prob &gt; F        =    0.0000\n    Residual |  240422.079     9,976   24.100048   R-squared       =    0.6180\n-------------+----------------------------------   Adj R-squared   =    0.6172\n       Total |  629433.877     9,999  62.9496827   Root MSE        =    4.9092\n\n------------------------------------------------------------------------------\n           y | Coefficient  Std. err.      t    P&gt;|t|     [95% conf. interval]\n-------------+----------------------------------------------------------------\n       treat |   .0819918   .0983118     0.83   0.404    -.1107191    .2747028\n       ... (clipped for brevity)\n------------------------------------------------------------------------------\n\n      Command: regress y treat age female education_years log_income\n                   household_size urban tenure_months baseline_spend\n                   purchases_12m returns_12m support_tickets_6m\n                   app_sessions_30d days_since_last_purchase email_opt_in\n                   promo_exposure_30d prior_churn credit_score\n                   satisfaction_score region_1 region_2 region_3 region_4\n        _pm_1: _b[treat]\n  res. var(s):  treat\n   Resampling:  Permuting treat\nClust. var(s):  __000001\n     Clusters:  10000\nStrata var(s):  none\n       Strata:  1\n\n------------------------------------------------------------------------------\nT            |     T(obs)       c       n   p=c/n   SE(p) [95% Conf. Interval]\n-------------+----------------------------------------------------------------\n       _pm_1 |   .0819918     786    2000  0.3930  0.0109  .3715147   .4147996\n------------------------------------------------------------------------------\nNote: Confidence interval is with respect to p=c/n.\nNote: c = #{|T| &gt;= |T(obs)|}\n\n\n183 s or about 3 minutes.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Linear vs generic"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html#r",
+    "href": "projects/ritest/benchmarks/generic-vs-linear.html#r",
+    "title": "Linear vs generic",
+    "section": "R",
+    "text": "R\n\nCodeResultsRuntime\n\n\nEstimate a linear model, save in est:\nfml &lt;- y ~ treat +\n  age + female + education_years + log_income + household_size + urban + tenure_months +\n  baseline_spend + purchases_12m + returns_12m + support_tickets_6m + app_sessions_30d +\n  days_since_last_purchase + email_opt_in + promo_exposure_30d + prior_churn + credit_score +\n  satisfaction_score + region_1 + region_2 + region_3 + region_4\n\nest &lt;- lm(fml, data = df)\nRun ritest, save results in ri:\nri &lt;- ritest(est, \"treat\", reps = 2000, seed = 23L)\nPrint results.\nprint(ri)\n\n\nOLS (lm) fit:\n\nCall:\nlm(formula = fml, data = df)\n\nResiduals:\n     Min       1Q   Median       3Q      Max\n-19.0734  -3.3147   0.0069   3.3346  19.3317\n\nCoefficients:\n                           Estimate Std. Error t value Pr(&gt;|t|)\n(Intercept)              -2.008e+01  1.414e+00 -14.205  &lt; 2e-16 ***\ntreat                     8.199e-02  9.831e-02   0.834 0.404302\n... (clipped for brevity)\n---\nSignif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1\n\nResidual standard error: 4.909 on 9976 degrees of freedom\nMultiple R-squared:  0.618, Adjusted R-squared:  0.6172\nF-statistic: 701.8 on 23 and 9976 DF,  p-value: &lt; 2.2e-16\n\n\nRI result:\n\n          Call: lm(formula = fml, data = df)\n   Res. var(s): treat\n            H0: treat=0\n     Num. reps: 2000\n────────────────────────────────────────────────────────────────────────────────\n  T(obs)         c         n     p=c/n     SE(p)   CI 2.5%  CI 97.5%\n 0.08199       839      2000    0.4195   0.01815    0.3896    0.4494\n────────────────────────────────────────────────────────────────────────────────\nNote: Confidence interval is with respect to p=c/n.\nNote: c = #{|T| &gt;= |T(obs)|}\n\n\n11.24 seconds.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Linear vs generic"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html#python",
+    "href": "projects/ritest/benchmarks/generic-vs-linear.html#python",
+    "title": "Linear vs generic",
+    "section": "Python",
+    "text": "Python\n\nCodeResultsRuntime\n\n\nSet up the model:\nPERMUTE_VAR = \"treat\"\nSTAT = \"treat\"\n\nCOVARS = [\n    \"age\",\n    \"female\",\n    \"education_years\",\n    \"log_income\",\n    \"household_size\",\n    \"urban\",\n    \"tenure_months\",\n    \"baseline_spend\",\n    \"purchases_12m\",\n    \"returns_12m\",\n    \"support_tickets_6m\",\n    \"app_sessions_30d\",\n    \"days_since_last_purchase\",\n    \"email_opt_in\",\n    \"promo_exposure_30d\",\n    \"prior_churn\",\n    \"credit_score\",\n    \"satisfaction_score\",\n    \"region_1\",\n    \"region_2\",\n    \"region_3\",\n    \"region_4\",\n]\n\nFORMULA = \"y ~ treat + \" + \" + \".join(COVARS)\nRun ritest:\nres = ritest(\n       df=df,\n       permute_var=PERMUTE_VAR,\n       formula=FORMULA,\n       stat=STAT,\n       reps=reps,\n       seed=seed,\n    )\nPrint results:\nprint(summary)\n\n\nRandomization Inference Result\n===============================\n\nCoefficient\n-----------\nObserved effect (β̂):   0.0820\nCoefficient CI bounds: [-0.1133, 0.2778]\nCoefficient CI band:   not computed\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.3990 (39.9%)\nP-value CI @ α=0.050: [0.3775, 0.4208]\nAs-or-more extreme:     798 / 2000\n\nTest configuration\n------------------\nStratified:             no\nClustered:              no\nWeights:                no\n\nSettings\n--------\nalpha:                  0.050\nseed:                   23\nci_method:              cp\nci_mode:                bounds\nn_jobs:                 4\n\n\n3.274 seconds.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Linear vs generic"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/generic-vs-linear.html#discussion",
+    "href": "projects/ritest/benchmarks/generic-vs-linear.html#discussion",
+    "title": "Linear vs generic",
+    "section": "Discussion",
+    "text": "Discussion\nThe result of the randomization inference aligns across the three different implementations. In terms of performance, the Python implementation is fastest (3.274 s), followed by the R implementation (11.24 s), and the Stata implementation (183 s). Compared to the Colombian example, in which the R implementation was faster due to its explicit integration of fixest to handle estimation with multiple fixed effects, the implementation in Python is now faster due to its fast engine specialized in OLS.",
+    "crumbs": [
+      "about",
+      "Benchmarks",
+      "Linear vs generic"
+    ]
+  },
+  {
+    "objectID": "projects/ritest/benchmarks/ci-band.html",
+    "href": "projects/ritest/benchmarks/ci-band.html",
     "title": "Confidence bands",
     "section": "",
     "text": "In this section I compare the performance of the feature to get confidence bands in my Python implementation, to the example provided in the documentation for the Stata implementation.",
@@ -723,8 +735,8 @@
     ]
   },
   {
-    "objectID": "projects/ritest/benchmarks/ci-bands.html#data",
-    "href": "projects/ritest/benchmarks/ci-bands.html#data",
+    "objectID": "projects/ritest/benchmarks/ci-band.html#data",
+    "href": "projects/ritest/benchmarks/ci-band.html#data",
     "title": "Confidence bands",
     "section": "Data",
     "text": "Data\nI use a toy dataset with 100 observations. Treatment is deterministically assigned so that half the observations are treated, and the outcome is generated as a linear function of treatment with a true treatment effect of 0.3 plus standard normal noise. The data are then used to estimate a simple OLS regression of the outcome on treatment and exported to CSV for use in CI-band examples.",
@@ -735,8 +747,8 @@
     ]
   },
   {
-    "objectID": "projects/ritest/benchmarks/ci-bands.html#stata",
-    "href": "projects/ritest/benchmarks/ci-bands.html#stata",
+    "objectID": "projects/ritest/benchmarks/ci-band.html#stata",
+    "href": "projects/ritest/benchmarks/ci-band.html#stata",
     "title": "Confidence bands",
     "section": "Stata",
     "text": "Stata\nThe code is directly taken from Stata’s ritest github repository. I made a few edits to make it easier to compare, but it remains computationally equivalent to the example presented in the repository.\n\nCodeResultsRuntime\n\n\nRun ritest to find which hypotheses for the treatment effect in [-1,1] can[not] be rejected.\ntempfile gridsearch\n\npostfile pf TE pval using `gridsearch'\n\nforval i=-1(0.05)1 {\n\n    qui ritest treatment (_b[treatment]), reps(500) null(y `i') seed(123): reg y treatment // tc: run with _b[treatment] only to compare\n\n\n    mat pval = r(p)\n    post pf (`i') (pval[1,1])\n}\npostclose pf\nPlot the bands, with ugly vertical lines at \\(-0.2\\), \\(0.2\\), and \\(0.6\\) to help comparison with the Python results:\nuse `gridsearch', clear\n\ntw line pval TE , yline(0.05) xline(-0.2 0.2 0.6)\n\n\nFor additional context, for a null of equality to zero,\nritest treatment (_b[treatment]), nodots reps(500) seed(123): ///\n           reg y treatment\nthis is the randomization inference result:\n      Command: regress y treatment\n        _pm_1: _b[treatment]\n  res. var(s):  treatment\n   Resampling:  Permuting treatment\nClust. var(s):  __000001\n     Clusters:  100\nStrata var(s):  none\n       Strata:  1\n\n------------------------------------------------------------------------------\nT            |     T(obs)       c       n   p=c/n   SE(p) [95% Conf. Interval]\n-------------+----------------------------------------------------------------\n       _pm_1 |   .2019068     181     500  0.3620  0.0215  .3198005    .405842\n------------------------------------------------------------------------------\nNote: Confidence interval is with respect to p=c/n.\nNote: c = #{|T| &gt;= |T(obs)|}\nThe confidence bands, which are obtained by running ritest with a set of different non-zero nulls, are shown below:\n\n\n\nConfidence bands\n\n\nwhere the y-axis represents randomization inference \\(p\\)-values, and the x-axis represent treatment effects. The blue line maps different treatment effects to \\(p\\)-values. The horizontal line is drawn at 0.05, corresponding to the most common significance level. These plot shows that the point estimate is about \\(0.2\\) and the confidence interval is roughly \\([-0.2,0.6]\\).\n\n\n276 seconds.",
@@ -747,27 +759,15 @@
     ]
   },
   {
-    "objectID": "projects/ritest/benchmarks/ci-bands.html#python",
-    "href": "projects/ritest/benchmarks/ci-bands.html#python",
+    "objectID": "projects/ritest/benchmarks/ci-band.html#python",
+    "href": "projects/ritest/benchmarks/ci-band.html#python",
     "title": "Confidence bands",
     "section": "Python",
-    "text": "Python\n\nCodeResultsRuntime\n\n\nRun ritest, set ci_mode=\"grid\" to get confidence bands:\n    res = ritest(\n        df=df,\n        permute_var=\"treatment\",\n        formula=\"y ~ treatment\",\n        stat=\"treatment\",\n        reps=500,\n        ci_mode=\"grid\",\n        seed=123,\n    )\n\n\nFor additional context, this is the result of the randomization inference for a null of equality to zero:\nRandomization Inference Result\n===============================\n\nCoefficient\n-----------\nObserved effect (β̂):   0.2019\nCoefficient CI bounds: not computed\nCoefficient CI band:   available (fast-linear)\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.3100 (31.0%)\nP-value CI @ α=0.050: [0.2697, 0.3526]\nAs-or-more extreme:     155 / 500\n\nTest configuration\n------------------\nStratified:             no\nClustered:              no\nWeights:                no\n\nSettings\n--------\nalpha:                  0.050\nseed:                   123\nci_method:              cp\nci_mode:                grid\nn_jobs:                 4\n\nThe corresponding confidence band is shown below:\n\n\n\nConfidence bands\n\n\n\n\n0.061 seconds.\n\n\n\n\nDiscussion\nWith only 100 observations, the randomization-inference results differ slightly between the Stata implementation and the Python linear path, but remain close enough to be considered correct. Most importantly for this section, the resulting confidence bands are almost identical.\nIn terms of performance, the Python linear implementation is vastly faster (0.061 seconds) than the Stata implementation (276 seconds). This large difference reflects the main advantage of the Python linear path for confidence bands: in the Stata implementation, the permutation test is effectively repeated for each shifted null value, requiring the OLS regression to be re-estimated across all 500 permutations at every grid point. In Python, the permutations are run once, and the p-values across the full grid of shifted nulls are computed using fast analytic updates based on the linear model structure, without rerunning the permutation regressions for each grid point.\n(Of course, confidence bands can also be computed in R; I simply have not done that.)",
+    "text": "Python\n\nCodeResultsRuntime\n\n\nRun ritest, set ci_mode=\"grid\" to get confidence bands:\n    res = ritest(\n        df=df,\n        permute_var=\"treatment\",\n        formula=\"y ~ treatment\",\n        stat=\"treatment\",\n        reps=500,\n        ci_mode=\"band\",\n        seed=123,\n    )\n\n\nFor additional context, this is the result of the randomization inference for a null of equality to zero:\nRandomization Inference Result\n===============================\n\nCoefficient\n-----------\nObserved effect (β̂):   0.2019\nCoefficient CI bounds: not computed\nCoefficient CI band:   available (fast-linear)\n\nPermutation test\n----------------\nTail (alternative):     two-sided\np-value:                0.3100 (31.0%)\nP-value CI @ α=0.050: [0.2697, 0.3526]\nAs-or-more extreme:     155 / 500\n\nTest configuration\n------------------\nStratified:             no\nClustered:              no\nWeights:                no\n\nSettings\n--------\nalpha:                  0.050\nseed:                   123\nci_method:              cp\nci_mode:                grid\nn_jobs:                 4\n\nThe corresponding confidence band is shown below:\n\n\n\nConfidence bands\n\n\n\n\n0.061 seconds.\n\n\n\n\nDiscussion\nWith only 100 observations, the randomization-inference results differ slightly between the Stata implementation and the Python linear path, but remain close enough to be considered correct. Most importantly for this section, the resulting confidence bands are almost identical.\nIn terms of performance, the Python linear implementation is vastly faster (0.061 seconds) than the Stata implementation (276 seconds). This large difference reflects the main advantage of the Python linear path for confidence bands: in the Stata implementation, the permutation test is effectively repeated for each shifted null value, requiring the OLS regression to be re-estimated across all 500 permutations at every grid point. In Python, the permutations are run once, and the p-values across the full grid of shifted nulls are computed using fast analytic updates based on the linear model structure, without rerunning the permutation regressions for each grid point.\n(Of course, confidence bands can also be computed in R; I simply have not done that.)",
     "crumbs": [
       "about",
       "Benchmarks",
       "Confidence bands"
-    ]
-  },
-  {
-    "objectID": "projects/ritest/benchmarks/intro.html",
-    "href": "projects/ritest/benchmarks/intro.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "Stata’s ritest (by Simon Heß) has been out for about a decade now, making it a trusted way to confirm that my own ritest implementation in Python works correctly. To strenghten the confirmation, I also compare results with R’s ritest implementation (by Grant McDermott). A second goal of this subsection is to compare performance across the three implementations under different scenarios. To be clear, this is not a competition, it would not make sense, in most cases, to choose a particular language just because of randomization inference performance. It is just interesting to see how the different implementations compare.\nI’ll not include all code here, just the critical bits. You can find complete code and data for all benchmarks in the repository.\n\nThere are more implementations of randomization inference than the ones I consider in these benchmarks. For example, in Stata, Alwyn Young has shared code to do randomization inference and confidence intervals. In R, Alexander Coppock, authored ri2, documented here. I’ve not used these alternatives, but they seem like credible implementation you may want to consider.\n\n\n\n Back to top",
-    "crumbs": [
-      "about",
-      "Benchmarks",
-      "Introduction"
     ]
   },
   {

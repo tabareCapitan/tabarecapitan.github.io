@@ -46,7 +46,7 @@ website:
             - projects/ritest/benchmarks/intro.qmd
             - projects/ritest/benchmarks/colombia.qmd
             - projects/ritest/benchmarks/generic-vs-linear.qmd
-            - projects/ritest/benchmarks/ci-bands.qmd
+            - projects/ritest/benchmarks/ci-band.qmd
 
         - section: "Technical notes"
           contents:
