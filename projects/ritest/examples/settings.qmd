@@ -82,12 +82,7 @@ These keys exist in `ritest.config.DEFAULTS`:
 - `n_jobs` (int): `-1` for all cores, or `>= 1`.
 - `ci_mode` (`"none" | "bounds" | "grid"`): coefficient CI controls.
 - `ci_range`, `ci_step`, `ci_tol` (positive numbers): coefficient-CI search/grid controls.
-- `ci_method` (`"cp" | "normal"`): method for the **permutation p-value CI** in config.
-
-Note on naming (*known issue to be fixed*):
-
-- The *config key* `ci_method` uses `"cp"` or `"normal"`.
-- The *public `ritest(...)` argument* annotation lists `"clopper-pearson"` or `"normal"`. 
+- `ci_method` (`"clopper-pearson" | "normal"`): method for the **permutation p-value CI** in config.
 
 ## Interaction with `ritest(...)` arguments
 
