@@ -275,7 +275,7 @@
     "href": "projects/ritest/examples/settings.html#common-keys-you-may-change",
     "title": "Settings",
     "section": "Common keys you may change",
-    "text": "Common keys you may change\nThese keys exist in ritest.config.DEFAULTS:\n\nreps (int &gt; 0): number of permutations.\nseed (int): RNG seed.\nalpha (0 &lt; float &lt; 1): significance level used for p-values and CIs.\nn_jobs (int): -1 for all cores, or &gt;= 1.\nci_mode (\"none\" | \"bounds\" | \"grid\"): coefficient CI controls.\nci_range, ci_step, ci_tol (positive numbers): coefficient-CI search/grid controls.\nci_method (\"cp\" | \"normal\"): method for the permutation p-value CI in config.\n\nNote on naming (known issue to be fixed):\n\nThe config key ci_method uses \"cp\" or \"normal\".\nThe public ritest(...) argument annotation lists \"clopper-pearson\" or \"normal\". ",
+    "text": "Common keys you may change\nThese keys exist in ritest.config.DEFAULTS:\n\nreps (int &gt; 0): number of permutations.\nseed (int): RNG seed.\nalpha (0 &lt; float &lt; 1): significance level used for p-values and CIs.\nn_jobs (int): -1 for all cores, or &gt;= 1.\nci_mode (\"none\" | \"bounds\" | \"grid\"): coefficient CI controls.\nci_range, ci_step, ci_tol (positive numbers): coefficient-CI search/grid controls.\nci_method (\"clopper-pearson\" | \"normal\"): method for the permutation p-value CI in config.",
     "crumbs": [
       "about",
       "Examples",

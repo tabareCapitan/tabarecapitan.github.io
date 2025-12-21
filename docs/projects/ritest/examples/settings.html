@@ -612,12 +612,7 @@ window.Quarto = {
 <li><code>n_jobs</code> (int): <code>-1</code> for all cores, or <code>&gt;= 1</code>.</li>
 <li><code>ci_mode</code> (<code>"none" | "bounds" | "grid"</code>): coefficient CI controls.</li>
 <li><code>ci_range</code>, <code>ci_step</code>, <code>ci_tol</code> (positive numbers): coefficient-CI search/grid controls.</li>
-<li><code>ci_method</code> (<code>"cp" | "normal"</code>): method for the <strong>permutation p-value CI</strong> in config.</li>
-</ul>
-<p>Note on naming (<em>known issue to be fixed</em>):</p>
-<ul>
-<li>The <em>config key</em> <code>ci_method</code> uses <code>"cp"</code> or <code>"normal"</code>.</li>
-<li>The <em>public <code>ritest(...)</code> argument</em> annotation lists <code>"clopper-pearson"</code> or <code>"normal"</code>. </li>
+<li><code>ci_method</code> (<code>"clopper-pearson" | "normal"</code>): method for the <strong>permutation p-value CI</strong> in config.</li>
 </ul>
 </section>
 <section id="interaction-with-ritest...-arguments" class="level2">
