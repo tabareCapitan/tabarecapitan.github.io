@@ -412,7 +412,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -430,7 +430,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../projects/ritest/benchmarks/ci-band.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Confidence bands</span></a>
+ <span class="menu-text">Confidence band</span></a>
   </div>
 </li>
       </ul>
@@ -527,16 +527,16 @@ window.Quarto = {
 
 <p><a href="https://pypi.org/project/ritest-python/"><img src="https://img.shields.io/pypi/v/ritest-python.svg" class="img-fluid" alt="PyPI version"></a> <a href="https://pypi.org/project/ritest-python/"><img src="https://img.shields.io/pypi/pyversions/ritest-python.svg" class="img-fluid" alt="Python versions"></a> <a href="https://github.com/tabareCapitan/ritest/actions/workflows/ci.yml"><img src="https://github.com/tabareCapitan/ritest/actions/workflows/ci.yml/badge.svg" class="img-fluid" alt="CI"></a> <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" class="img-fluid" alt="License: MIT"></a></p>
 <hr>
-<p><code>ritest</code> provides fast randomization inference (RI) tools for linear models and arbitrary statistics. It supports weights (WLS) as well as stratified and clustered designs.</p>
+<p><code>ritest</code> provides fast randomization inference (RI) tools for linear models and arbitrary statistics. It supports weights as well as stratified and clustered designs. Reports coefficient confidence interval by default.</p>
 <section id="features" class="level2">
 <h2 class="anchored" data-anchor-id="features">Features</h2>
 <ul>
 <li>Linear-model RI with efficient computation.</li>
 <li>Generic RI for arbitrary scalar statistics via <code>stat_fn</code>.</li>
+<li>Ultra-fast coefficient bounds and bands.</li>
 <li>Stratified, clustered, and stratified-clustered designs.</li>
 <li>Weighted least squares (WLS) support.</li>
 <li>Deterministic seeding, reproducible permutations.</li>
-<li>Configurable <span class="math inline">\(p\)</span>-value and ultra-fast coefficient bounds and bands.</li>
 </ul>
 </section>
 <section id="citation" class="level2">

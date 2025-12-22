@@ -1,14 +1,50 @@
 ---
-title: "Introduction"
+title: "Overview"
 ---
 
 ---
 
-[Stata's `ritest`](https://github.com/simonheb/ritest) (by [Simon Heß](https://hesss.org/)) has been out for about a decade now, making it a trusted way to confirm that my own `ritest` implementation in Python works correctly. To strenghten the confirmation, I also compare results with [R's `ritest`](https://grantmcdermott.com/ritest/index.html) implementation (by [Grant McDermott](https://grantmcdermott.com/)). A second goal of this subsection is to compare performance across the three implementations under different scenarios. To be clear, this is not a competition, it would not make sense, in most cases, to choose a particular language just because of randomization inference performance. It is just interesting to see how the different implementations compare.
+## Introduction
 
-I'll not include all code here, just the critical bits. You can find complete code and data for all benchmarks in the [repository](https://github.com/tabareCapitan/ritest/tree/master/documentation/benchmarks).
+The first goal of this section is to show that this implementation of randomization inference works as intended. Since [Stata's `ritest`](https://github.com/simonheb/ritest) (by [Simon Heß](https://hesss.org/)) has been out for about a decade now, it is a trusted way to confirm that my own `ritest` implementation in Python works correctly. I also compare results with [R's `ritest`](https://grantmcdermott.com/ritest/index.html) implementation (by [Grant McDermott](https://grantmcdermott.com/)).[^more-ritest] Completing this goal is straightforward: I simply present the results, which are functionally equivalent across implementations.
+
+The second goal of this subsection is to compare performance across the three implementations.[^competition] Completing this goal is not straightforward: performance depends on the specific computations and the environment.
+
+You can safely ignore the text below if performance is not an issue for your application, which is almost always the case.
 
 
----
+## What is “runtime”
 
-There are more implementations of randomization inference than the ones I consider in these benchmarks. For example, in Stata, Alwyn Young has shared [code](https://personal.lse.ac.uk/YoungA/) to do randomization inference and confidence intervals. In R, Alexander Coppock, authored `ri2`, documented [here](https://cran.r-project.org/web/packages/ri2/vignettes/ri2_vignette.html). I’ve not used these alternatives, but they seem like credible implementation you may want to consider.
+The runtimes shown in the benchmark pages comes from "the wild": I simply closed all programs to release resources and ran the scripts from terminal. The reported runtimes only include the `ritest(...)` call. These runtimes provide a broad view of what can be expected from each implementation, but they should not be treated as "truth".
+
+
+## Drivers of performance
+
+I ran the scripts a few times while working on the documentation, noticing that the runtime of some scripts changed considerably. In what follows, I try to convey my still limited understanding of the drivers of these differences.
+
+Most of the compute in `ritest` is linear algebra: dot products, cross-products, and solves. In Python, that work is typically executed by NumPy, which relies on [BLAS](https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms)/[LAPACK](https://en.wikipedia.org/wiki/LAPACK) libraries such as [OpenBLAS](http://www.openmathlib.org/OpenBLAS/) or [MKL](https://en.wikipedia.org/wiki/Math_Kernel_Library). Those libraries are often [multi-threaded](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)) by default.
+
+This matters because randomization inference entails many repeats of small- to medium-sized linear algebra operations. In that context, it is common for multi-threaded BLAS to become slower due to thread overhead and oversubscription: you spend a lot of time coordinating threads rather than doing arithmetic. This is not specific to Python. R and Stata also rely on BLAS/LAPACK for dense linear algebra, and the same general issue can show up there.
+
+To explore runtime in a more controlled environment, I ran an informed controlled experiment using a script that:
+
+- runs each benchmark in a fresh Python process,
+- repeats each benchmark multiple times,
+- drops the first run (warm-up),
+- forces single-thread BLAS/OpenMP via environment variables (for example `OMP_NUM_THREADS=1`),
+- and summarizes min/median/max across the kept runs.
+
+The table below summarizes the informatl experiment (6 runs per script, first run dropped). The timings are total script runtime, not only the `ritest(...)` call.
+
+| Benchmark script | Kept runs | Median (s) | Min–max (s) | Notes |
+|---|---:|---:|---:|---|
+| [CI band](ci-band.qmd) | 5 | 1.921 | 1.913–1.941 | linear |
+| [Colombian example](colombia.qmd) | 5 | 8.087 | 8.058–8.123 | linear |
+| [Linear vs generic](generic-vs-linear.qmd) | 5 | 16.691 | 16.480–16.811 | linear and generic|
+
+To give you an idea of the potential gains of setting up the right environment for your computations, in the [Colombian example](colombia.qmd), I have seen runtimes anywhere between 15 and 200 seconds "in the wild". In the controlled experiment, the same call runs consistently in 7 seconds. This example is particularly well suited to gain speed because the fixed effects model (translating to OLS with many dummy variables) leads to a giant matrix to do linear algebra with. The other two examples are less extreme.
+
+
+[^competition]: This goal does not imply, at all, that this is a competition. It would not make sense, in most cases, to choose a particular language just because of randomization inference performance.
+
+[^more-ritest]: There are more implementations of randomization inference than the ones I consider in these benchmarks. For example, in Stata, Alwyn Young has shared [code](https://personal.lse.ac.uk/YoungA/) to do randomization inference and confidence intervals. In R, Alexander Coppock, authored `ri2`, documented [here](https://cran.r-project.org/web/packages/ri2/vignettes/ri2_vignette.html). I’ve not used these alternatives, but they seem like credible implementation you may want to consider.

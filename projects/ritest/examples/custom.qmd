@@ -7,35 +7,11 @@ title: "Custom statistics"
 `ritest()` can run randomization inference (RI) on *any* statistic, as long as you can write a generic function, `python
 stat_fn(df_perm) -> float`, that takes a permuted dataset and returns a single number. In this page I show a few common statistics you may want to use.
 
-The script to run all the examples is in the [repository](https://github.com/tabareCapitan/ritest/blob/master/documentation/examples/custom_stats.py).
+::: {.callout-tip collapse="false" icon="false"}
 
+Code available in the [repository](https://github.com/tabareCapitan/ritest/tree/master/documentation/examples).
 
-## Data
-
-I use a small toy dataset (n = 100) with complete randomization (exactly half treated). The outcome has mild heavy tails so the robust and distributional statistics have something to do.
-
-```python
-def make_data(n: int = 100, seed: int = 1, tau: float = 0.6) -> pd.DataFrame:
-    rng = np.random.default_rng(seed)
-
-    # Complete randomization: exactly n/2 treated
-    z = np.zeros(n, dtype=int)
-    z[: n // 2] = 1
-    z = rng.permutation(z)
-
-    x = rng.normal(size=n)
-
-    # Mixture noise for heavier tails
-    u = rng.uniform(size=n)
-    eps = np.where(
-        u < 0.85, rng.normal(scale=1.0, size=n), rng.normal(scale=3.0, size=n)
-    )
-
-    # Treatment shifts the location a bit (tau), plus baseline x effect
-    y = 0.2 + tau * z + 0.5 * x + eps
-
-    return pd.DataFrame({"y": y, "z": z, "x": x})
-```
+:::
 
 ## Shared utility
 

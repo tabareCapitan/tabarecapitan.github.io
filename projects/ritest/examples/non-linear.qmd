@@ -10,12 +10,11 @@ title: "Non-linear models"
 - `ritest()` repeatedly permutes `permute_var` (e.g., treatment `z`) and re-computes the statistic.
 - The RI $p$-value comes from the permutation distribution of that statistic.
 
-All snippets of code in this section come from [this script](https://github.com/tabareCapitan/ritest/blob/master/documentation/examples/results_object.py).
+::: {.callout-tip collapse="false" icon="false"}
 
+Code available in the [repository](https://github.com/tabareCapitan/ritest/tree/master/documentation/examples).
 
-## Data
-
-Each example uses its own toy data, designed to be appropriate for the corresponding model.
+:::
 
 
 ## Shared utility

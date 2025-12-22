@@ -10,6 +10,12 @@ The example uses real data from Colombia, using a dataset with "firms in 63 mark
 
 Below I show results from `ritest` using Stata, R, and Python implementations on this dataset, comparing results and performance. For all of them, I'll run 5,000 permutations on a fixed effects model, accounting for both the stratified and clustered design of the experiment.
 
+::: {.callout-tip collapse="false" icon="false"}
+
+Code and data available in the [repository](https://github.com/tabareCapitan/ritest/tree/master/documentation/benchmarks/colombia).
+
+:::
+
 
 ## Stata's ritest
 
@@ -63,7 +69,7 @@ Note: c = #{|T| >= |T(obs)|}
 ```
 ### Runtime
 
-171 seconds, which is about 3 minutes.
+220 seconds, which is about 3.6 minutes.
 
 :::
 
@@ -132,7 +138,7 @@ Note: c = #{|T| >= |T(obs)|}
 ```
 ### Runtime
 
-28.09 seconds.
+16.45 seconds.
 
 :::
 
@@ -156,6 +162,7 @@ res = ritest(
        strata="b_pair",
        reps=5000,
        seed=546,
+       ciMode="none",
 )
 ```
 Print a summary of the results:
@@ -171,10 +178,13 @@ print(summary)
 ### Results
 
 ```
+Randomization Inference Result
+===============================
+
 Coefficient
 -----------
 Observed effect (β̂):   -0.1807
-Coefficient CI bounds: [-0.4024, 0.0378]
+Coefficient CI bounds: not computed
 Coefficient CI band:   not computed
 
 Permutation test
@@ -186,28 +196,21 @@ As-or-more extreme:     517 / 5000
 
 Test configuration
 ------------------
-Stratified:             yes
-Clustered:              yes
+Strata:                 31
+Clusters:               63
 Weights:                no
 
 Settings
 --------
 alpha:                  0.050
 seed:                   546
-ci_method:              cp
-ci_mode:                bounds
+ci_method:              clopper-pearson
+ci_mode:                none
 n_jobs:                 4
 ```
 
 ### Runtime
 
-56.35 seconds.
+7.28 seconds.
 
 :::
-
-
-## Discussion
-
-Ok, this is great, you don't have to take my word: my `ritest` works. It yields basically the same results as Stata's and R's implementation. The minor differences are expected, given differences between languages and implementation.
-
-In terms of performance, R's implementation is clearly the fastest of them all (28 seconds). This makes sense, since it explictly supports estimation with multiple fixed effects powered by `fixest::feols()`. On the other extreme, Stata's implementation is the slowest (171 seconds). This is also expected, Stata's not necessarily known for speed. Both of these implementations take a "clever" aproach to deal with high-dimensional fixed effects, avoiding the need to create dummy variables for all fixed effects categories. My `ritest`, which lies in the middle in terms of performance (56 seconds), takes a naive approach and creates dummy variables for all fixed effects categories; its speed comes from a very fast OLS engine under the hood. While I could use a wrapper to use `pyfixest`, which is definitely faster per estimation with high dimensional fixed effects, the transaction cost would make it slower than the current approach.

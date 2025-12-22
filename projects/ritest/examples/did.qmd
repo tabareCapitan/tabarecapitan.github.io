@@ -88,7 +88,12 @@ If a variable is only meaningful post (or only measured post), it cannot be diff
 
 ## `ritsest` implementation
 
-This is a concise guide to implement the two-period transformation, you can find the complete script in the [repository](https://github.com/tabareCapitan/ritest/blob/master/documentation/examples/did.py).
+::: {.callout-tip collapse="false" icon="false"}
+
+Code available in the [repository](https://github.com/tabareCapitan/ritest/tree/master/documentation/examples).
+
+:::
+
 
 1. Ensure you can build a two-period panel (one pre, one post per unit).
 
@@ -135,9 +140,15 @@ This is a concise guide to implement the two-period transformation, you can find
 
 ## Technical appendix
 
+::: {.callout-tip collapse="false" icon="false"}
+
+You can safely skip this appendix if your only goal is to do randomization inference.
+
+:::
+
 Although the "change score" transformation is exactly equivalent to the canonical form in terms of the point estimate, the t-statistic and corresponding $p$-values may differ. This is the topic of this appendix.
 
-Note, however, that randomization inference is independent of the OLS standard error. It uses the permutation distribution of the statistic. You can safely skip this appendix if your only goal is to do randomization inference.
+Note, however, that randomization inference is independent of the OLS standard error. It uses the permutation distribution of the statistic.
 
 
 ### Set up

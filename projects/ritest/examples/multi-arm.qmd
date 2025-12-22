@@ -72,6 +72,12 @@ Which one is "correct"? That is up to you. Are you looking for conditional or an
 
 ## Implementation
 
+::: {.callout-tip collapse="false" icon="false"}
+
+Code available in the [repository](https://github.com/tabareCapitan/ritest/tree/master/documentation/examples).
+
+:::
+
 `ritest` (Python) requires the permutation variable to be binary, so for A vs Control you typically construct:
 
 $$

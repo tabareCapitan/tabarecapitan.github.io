@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – Tabaré Capitán</title>
+<title>Overview – Tabaré Capitán</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,7 +106,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../../styles.css">
-<meta property="og:title" content="Introduction – Tabaré Capitán">
+<meta property="og:title" content="Overview – Tabaré Capitán">
 <meta property="og:description" content="Data scientist, personal website">
 <meta property="og:site_name" content="Tabaré Capitán">
 </head>
@@ -318,7 +318,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Benchmarks</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Benchmarks</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Overview</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -412,7 +412,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -430,7 +430,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../projects/ritest/benchmarks/ci-band.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Confidence bands</span></a>
+ <span class="menu-text">Confidence band</span></a>
   </div>
 </li>
       </ul>
@@ -481,16 +481,24 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#what-is-runtime" id="toc-what-is-runtime" class="nav-link" data-scroll-target="#what-is-runtime">What is “runtime”</a></li>
+  <li><a href="#drivers-of-performance" id="toc-drivers-of-performance" class="nav-link" data-scroll-target="#drivers-of-performance">Drivers of performance</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Benchmarks</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Introduction</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Benchmarks</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Overview</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">Overview</h1>
 </div>
 
 
@@ -508,14 +516,77 @@ window.Quarto = {
 
 
 <hr>
-<p><a href="https://github.com/simonheb/ritest">Stata’s <code>ritest</code></a> (by <a href="https://hesss.org/">Simon Heß</a>) has been out for about a decade now, making it a trusted way to confirm that my own <code>ritest</code> implementation in Python works correctly. To strenghten the confirmation, I also compare results with <a href="https://grantmcdermott.com/ritest/index.html">R’s <code>ritest</code></a> implementation (by <a href="https://grantmcdermott.com/">Grant McDermott</a>). A second goal of this subsection is to compare performance across the three implementations under different scenarios. To be clear, this is not a competition, it would not make sense, in most cases, to choose a particular language just because of randomization inference performance. It is just interesting to see how the different implementations compare.</p>
-<p>I’ll not include all code here, just the critical bits. You can find complete code and data for all benchmarks in the <a href="https://github.com/tabareCapitan/ritest/tree/master/documentation/benchmarks">repository</a>.</p>
-<hr>
-<p>There are more implementations of randomization inference than the ones I consider in these benchmarks. For example, in Stata, Alwyn Young has shared <a href="https://personal.lse.ac.uk/YoungA/">code</a> to do randomization inference and confidence intervals. In R, Alexander Coppock, authored <code>ri2</code>, documented <a href="https://cran.r-project.org/web/packages/ri2/vignettes/ri2_vignette.html">here</a>. I’ve not used these alternatives, but they seem like credible implementation you may want to consider.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The first goal of this section is to show that this implementation of randomization inference works as intended. Since <a href="https://github.com/simonheb/ritest">Stata’s <code>ritest</code></a> (by <a href="https://hesss.org/">Simon Heß</a>) has been out for about a decade now, it is a trusted way to confirm that my own <code>ritest</code> implementation in Python works correctly. I also compare results with <a href="https://grantmcdermott.com/ritest/index.html">R’s <code>ritest</code></a> implementation (by <a href="https://grantmcdermott.com/">Grant McDermott</a>).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Completing this goal is straightforward: I simply present the results, which are functionally equivalent across implementations.</p>
+<p>The second goal of this subsection is to compare performance across the three implementations.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Completing this goal is not straightforward: performance depends on the specific computations and the environment.</p>
+<p>You can safely ignore the text below if performance is not an issue for your application, which is almost always the case.</p>
+</section>
+<section id="what-is-runtime" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-runtime">What is “runtime”</h2>
+<p>The runtimes shown in the benchmark pages comes from “the wild”: I simply closed all programs to release resources and ran the scripts from terminal. The reported runtimes only include the <code>ritest(...)</code> call. These runtimes provide a broad view of what can be expected from each implementation, but they should not be treated as “truth”.</p>
+</section>
+<section id="drivers-of-performance" class="level2">
+<h2 class="anchored" data-anchor-id="drivers-of-performance">Drivers of performance</h2>
+<p>I ran the scripts a few times while working on the documentation, noticing that the runtime of some scripts changed considerably. In what follows, I try to convey my still limited understanding of the drivers of these differences.</p>
+<p>Most of the compute in <code>ritest</code> is linear algebra: dot products, cross-products, and solves. In Python, that work is typically executed by NumPy, which relies on <a href="https://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms">BLAS</a>/<a href="https://en.wikipedia.org/wiki/LAPACK">LAPACK</a> libraries such as <a href="http://www.openmathlib.org/OpenBLAS/">OpenBLAS</a> or <a href="https://en.wikipedia.org/wiki/Math_Kernel_Library">MKL</a>. Those libraries are often <a href="https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)">multi-threaded</a> by default.</p>
+<p>This matters because randomization inference entails many repeats of small- to medium-sized linear algebra operations. In that context, it is common for multi-threaded BLAS to become slower due to thread overhead and oversubscription: you spend a lot of time coordinating threads rather than doing arithmetic. This is not specific to Python. R and Stata also rely on BLAS/LAPACK for dense linear algebra, and the same general issue can show up there.</p>
+<p>To explore runtime in a more controlled environment, I ran an informed controlled experiment using a script that:</p>
+<ul>
+<li>runs each benchmark in a fresh Python process,</li>
+<li>repeats each benchmark multiple times,</li>
+<li>drops the first run (warm-up),</li>
+<li>forces single-thread BLAS/OpenMP via environment variables (for example <code>OMP_NUM_THREADS=1</code>),</li>
+<li>and summarizes min/median/max across the kept runs.</li>
+</ul>
+<p>The table below summarizes the informatl experiment (6 runs per script, first run dropped). The timings are total script runtime, not only the <code>ritest(...)</code> call.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Benchmark script</th>
+<th style="text-align: right;">Kept runs</th>
+<th style="text-align: right;">Median (s)</th>
+<th style="text-align: right;">Min–max (s)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="../../../projects/ritest/benchmarks/ci-band.html">CI band</a></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1.921</td>
+<td style="text-align: right;">1.913–1.941</td>
+<td>linear</td>
+</tr>
+<tr class="even">
+<td><a href="../../../projects/ritest/benchmarks/colombia.html">Colombian example</a></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8.087</td>
+<td style="text-align: right;">8.058–8.123</td>
+<td>linear</td>
+</tr>
+<tr class="odd">
+<td><a href="../../../projects/ritest/benchmarks/generic-vs-linear.html">Linear vs generic</a></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">16.691</td>
+<td style="text-align: right;">16.480–16.811</td>
+<td>linear and generic</td>
+</tr>
+</tbody>
+</table>
+<p>To give you an idea of the potential gains of setting up the right environment for your computations, in the <a href="../../../projects/ritest/benchmarks/colombia.html">Colombian example</a>, I have seen runtimes anywhere between 15 and 200 seconds “in the wild”. In the controlled experiment, the same call runs consistently in 7 seconds. This example is particularly well suited to gain speed because the fixed effects model (translating to OLS with many dummy variables) leads to a giant matrix to do linear algebra with. The other two examples are less extreme.</p>
 
 
+</section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>There are more implementations of randomization inference than the ones I consider in these benchmarks. For example, in Stata, Alwyn Young has shared <a href="https://personal.lse.ac.uk/YoungA/">code</a> to do randomization inference and confidence intervals. In R, Alexander Coppock, authored <code>ri2</code>, documented <a href="https://cran.r-project.org/web/packages/ri2/vignettes/ri2_vignette.html">here</a>. I’ve not used these alternatives, but they seem like credible implementation you may want to consider.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>This goal does not imply, at all, that this is a competition. It would not make sense, in most cases, to choose a particular language just because of randomization inference performance.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

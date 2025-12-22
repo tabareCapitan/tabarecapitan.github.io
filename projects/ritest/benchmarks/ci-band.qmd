@@ -1,11 +1,16 @@
 ---
-title: "Confidence bands"
+title: "Confidence band"
 ---
 
 ---
 
-In this section I compare the performance of the feature to get confidence bands in my Python implementation, to the example provided in the [documentation](https://github.com/simonheb/ritest#how-to-get-confidence-bands) for the Stata implementation.
+The present implementation of randomization inference is designed for fast computation of both confidence bounds and bands for the coefficient. In fact, computing bounds is the default setting.[^pvalue-reminder] To illustrate this feature, I follow the example provided in the [documentation](https://github.com/simonheb/ritest#how-to-get-confidence-bands) for the Stata implementation.
 
+::: {.callout-tip collapse="false" icon="false"}
+
+Code available in the [repository](https://github.com/tabareCapitan/ritest/tree/master/documentation/benchmarks/ci-bands).
+
+:::
 
 ## Data
 
@@ -87,7 +92,7 @@ where the y-axis represents randomization inference $p$-values, and the x-axis r
 
 ### Runtime
 
-276 seconds.
+138 seconds, which is about 2.3 minutes.
 
 :::
 
@@ -124,7 +129,7 @@ Randomization Inference Result
 Coefficient
 -----------
 Observed effect (β̂):   0.2019
-Coefficient CI bounds: not computed
+Coefficient CI bounds: [-0.1886, 0.5873]
 Coefficient CI band:   available (fast-linear)
 
 Permutation test
@@ -136,18 +141,17 @@ As-or-more extreme:     155 / 500
 
 Test configuration
 ------------------
-Stratified:             no
-Clustered:              no
+Strata:                 —
+Clusters:               —
 Weights:                no
 
 Settings
 --------
 alpha:                  0.050
 seed:                   123
-ci_method:              cp
-ci_mode:                grid
+ci_method:              clopper-pearson
+ci_mode:                band
 n_jobs:                 4
-
 ```
 
 The corresponding confidence band is shown below:
@@ -156,15 +160,9 @@ The corresponding confidence band is shown below:
 
 ### Runtime
 
-0.061 seconds.
+0.06 seconds.
 
 :::
 
 
-### Discussion
-
-With only 100 observations, the randomization-inference results differ slightly between the Stata implementation and the Python linear path, but remain close enough to be considered correct. Most importantly for this section, the resulting confidence bands are almost identical.
-
-In terms of performance, the Python linear implementation is vastly faster (0.061 seconds) than the Stata implementation (276 seconds). This large difference reflects the main advantage of the Python linear path for confidence bands: in the Stata implementation, the permutation test is effectively repeated for each shifted null value, requiring the OLS regression to be re-estimated across all 500 permutations at every grid point. In Python, the permutations are run once, and the p-values across the full grid of shifted nulls are computed using fast analytic updates based on the linear model structure, without rerunning the permutation regressions for each grid point.
-
-(Of course, confidence bands can also be computed in R; I simply have not done that.)
+[^pvalue-reminder]: Implementations of randomization inference typically report a $p$-value and a confidence interval (or bounds) **for that $p$-value**. This is at odds with the confidence interval you would normally get from a regression, which is a confidence interval **for the coefficient**.

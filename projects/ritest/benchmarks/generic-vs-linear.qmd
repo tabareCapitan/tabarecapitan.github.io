@@ -4,11 +4,18 @@ title: "Linear vs generic"
 
 ---
 
-From the [Colombian example](colombia.qmd) we see that `ritest` in Python works and it is reasonably fast. That is a valid benchmark for linear models with multiple fixed effects. In this section I benchmark using simple OLS against Stata and R's implementations of randomization inference.
+This sections presents randomization inference in which the statistic is a a coefficient of a simple OLS with simple randomization.
+
+::: {.callout-tip collapse="false" icon="false"}
+
+Code available in the [repository](https://github.com/tabareCapitan/ritest/tree/master/documentation/benchmarks/linear-vs-generic).
+
+:::
+
 
 ## Data
 
-The simulated dataset represents a clean, randomized experiment with $N=10{,}000$ observations, designed to resemble realistic applied data. Treatment is randomly assigned with equal probability (50/50), with no clustering and no stratification. The dataset includes 20 covariates covering demographics, behavior, engagement, and region indicators. These covariates are generated from a small number of latent factors, inducing realistic correlations while remaining fully observed and free of missing values.
+The simulated dataset represents a randomized experiment with $N=10{,}000$ observations, designed to resemble realistic applied data. Treatment is randomly assigned with equal probability (50/50), with no clustering and no stratification. The dataset includes 20 covariates covering demographics, behavior, engagement, and region indicators. These covariates are generated from a small number of latent factors, inducing realistic correlations while remaining fully observed and free of missing values.
 
 The outcome is continuous and driven by covariates plus a very small heterogeneous treatment effect. The individual treatment effect is
 
@@ -83,7 +90,7 @@ Note: c = #{|T| >= |T(obs)|}
 
 ### Runtime
 
-183 s or about 3 minutes.
+44 seconds.
 
 :::
 
@@ -158,16 +165,18 @@ Note: c = #{|T| >= |T(obs)|}
 
 ### Runtime
 
-11.24 seconds.
+7.18 seconds.
 
 :::
 
 
 ## Python
 
+### Linear path
+
 ::: {.panel-tabset}
 
-### Code
+#### Code
 
 Set up the model:
 
@@ -222,7 +231,7 @@ Print results:
 print(summary)
 ```
 
-### Results
+#### Results
 
 ```
 Randomization Inference Result
@@ -231,7 +240,7 @@ Randomization Inference Result
 Coefficient
 -----------
 Observed effect (β̂):   0.0820
-Coefficient CI bounds: [-0.1133, 0.2778]
+Coefficient CI bounds: not computed
 Coefficient CI band:   not computed
 
 Permutation test
@@ -243,29 +252,126 @@ As-or-more extreme:     798 / 2000
 
 Test configuration
 ------------------
-Stratified:             no
-Clustered:              no
+Strata:                 —
+Clusters:               —
 Weights:                no
 
 Settings
 --------
 alpha:                  0.050
 seed:                   23
-ci_method:              cp
-ci_mode:                bounds
+ci_method:              clopper-pearson
+ci_mode:                none
 n_jobs:                 4
 ```
 
 
-### Runtime
+#### Runtime
 
-3.274 seconds.
+1.8 seconds.
 
 :::
 
 
-##   Discussion
+### Generic path
 
-The result of the randomization inference aligns across the three different implementations. In terms of performance, the Python implementation is fastest (3.274 s), followed by the R implementation (11.24 s), and the Stata implementation (183 s). Compared to the [Colombian example](colombia.qmd), in which the R implementation was faster due to its explicit integration of `fixest` to handle estimation with multiple fixed effects, the implementation in Python is now faster due to its fast engine specialized in OLS.
+::: {.panel-tabset}
 
+#### Code
 
+Specify the model:
+
+```python
+PERMUTE_VAR = "treat"
+STAT = "treat"
+
+COVARS = [
+    "age",
+    "female",
+    "education_years",
+    "log_income",
+    "household_size",
+    "urban",
+    "tenure_months",
+    "baseline_spend",
+    "purchases_12m",
+    "returns_12m",
+    "support_tickets_6m",
+    "app_sessions_30d",
+    "days_since_last_purchase",
+    "email_opt_in",
+    "promo_exposure_30d",
+    "prior_churn",
+    "credit_score",
+    "satisfaction_score",
+    "region_1",
+    "region_2",
+    "region_3",
+    "region_4",
+]
+```
+Define generic function `stat_fn(...)`:
+
+```python
+    def stat_fn(dfp: pd.DataFrame) -> float:
+        X[:, 1] = dfp["treat"].to_numpy(dtype=float, copy=False)
+        fit = sm.OLS(y, X).fit()
+        return float(fit.params[1])  # treat coefficient (const is params[0])
+```
+
+Call `ritest`
+
+```python
+    res = ritest(
+        df=df,
+        permute_var=PERMUTE_VAR,
+        stat_fn=stat_fn,
+        reps=reps,
+        seed=seed,
+        ci_mode="none",
+    )
+```
+
+```python
+print(summary)
+```
+
+#### Results
+
+```
+Randomization Inference Result
+===============================
+
+Coefficient
+-----------
+Observed effect (β̂):   0.0820
+Coefficient CI bounds: not computed
+Coefficient CI band:   not computed
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.3970 (39.7%)
+P-value CI @ α=0.050: [0.3755, 0.4188]
+As-or-more extreme:     794 / 2000
+
+Test configuration
+------------------
+Strata:                 —
+Clusters:               —
+Weights:                no
+
+Settings
+--------
+alpha:                  0.050
+seed:                   23
+ci_method:              clopper-pearson
+ci_mode:                none
+n_jobs:                 4
+```
+
+#### Runtime
+
+14.29 seconds.
+
+:::

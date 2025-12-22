@@ -447,7 +447,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -465,7 +465,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../projects/ritest/benchmarks/ci-band.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Confidence bands</span></a>
+ <span class="menu-text">Confidence band</span></a>
   </div>
 </li>
       </ul>
@@ -524,8 +524,11 @@ window.Quarto = {
   <li><a href="#data" id="toc-data" class="nav-link active" data-scroll-target="#data">Data</a></li>
   <li><a href="#stata" id="toc-stata" class="nav-link" data-scroll-target="#stata">Stata</a></li>
   <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
-  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a>
+  <ul class="collapse">
+  <li><a href="#linear-path" id="toc-linear-path" class="nav-link" data-scroll-target="#linear-path">Linear path</a></li>
+  <li><a href="#generic-path" id="toc-generic-path" class="nav-link" data-scroll-target="#generic-path">Generic path</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -553,10 +556,26 @@ window.Quarto = {
 
 
 <hr>
-<p>From the <a href="../../../projects/ritest/benchmarks/colombia.html">Colombian example</a> we see that <code>ritest</code> in Python works and it is reasonably fast. That is a valid benchmark for linear models with multiple fixed effects. In this section I benchmark using simple OLS against Stata and R’s implementations of randomization inference.</p>
+<p>This sections presents randomization inference in which the statistic is a a coefficient of a simple OLS with simple randomization.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Code available in the <a href="https://github.com/tabareCapitan/ritest/tree/master/documentation/benchmarks/linear-vs-generic">repository</a>.</p>
+</div>
+</div>
+</div>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
-<p>The simulated dataset represents a clean, randomized experiment with <span class="math inline">\(N=10{,}000\)</span> observations, designed to resemble realistic applied data. Treatment is randomly assigned with equal probability (50/50), with no clustering and no stratification. The dataset includes 20 covariates covering demographics, behavior, engagement, and region indicators. These covariates are generated from a small number of latent factors, inducing realistic correlations while remaining fully observed and free of missing values.</p>
+<p>The simulated dataset represents a randomized experiment with <span class="math inline">\(N=10{,}000\)</span> observations, designed to resemble realistic applied data. Treatment is randomly assigned with equal probability (50/50), with no clustering and no stratification. The dataset includes 20 covariates covering demographics, behavior, engagement, and region indicators. These covariates are generated from a small number of latent factors, inducing realistic correlations while remaining fully observed and free of missing values.</p>
 <p>The outcome is continuous and driven by covariates plus a very small heterogeneous treatment effect. The individual treatment effect is</p>
 <p><span class="math display">\[\tau_i = 0.02 + 0.0075 \cdot h_i\]</span> ​ where <span class="math inline">\(h_i\)</span> is a standardized index based on baseline spending and satisfaction, so the true average treatment effect is approximately 0.02. Outcome noise is Gaussian with standard deviation <span class="math inline">\(5\)</span>, chosen so that at <span class="math inline">\(N = 10{,}000\)</span> the problem is nontrivial but stable, with an expected standard error for the treatment coefficient of about <span class="math inline">\(0.05\)</span>. This implies considerable design-based variability, so point estimates and <span class="math inline">\(p\)</span>-values can differ noticeably across realizations and across implementations. In addition, randomization inference relies on a finite number of permutations, which introduces a small amount of Monte Carlo error. On average, however, inference is expected to provide little evidence against the null hypothesis of no treatment effect.</p>
 </section>
@@ -616,7 +635,7 @@ Note: Confidence interval is with respect to p=c/n.
 Note: c = #{|T| &gt;= |T(obs)|}</code></pre>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>183 s or about 3 minutes.</p>
+<p>44 seconds.</p>
 </div>
 </div>
 </div>
@@ -677,13 +696,15 @@ Note: Confidence interval is with respect to p=c/n.
 Note: c = #{|T| &gt;= |T(obs)|}</code></pre>
 </div>
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-<p>11.24 seconds.</p>
+<p>7.18 seconds.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="python" class="level2">
 <h2 class="anchored" data-anchor-id="python">Python</h2>
+<section id="linear-path" class="level3">
+<h3 class="anchored" data-anchor-id="linear-path">Linear path</h3>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Results</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Runtime</a></li></ul>
 <div class="tab-content">
@@ -737,7 +758,7 @@ Note: c = #{|T| &gt;= |T(obs)|}</code></pre>
 Coefficient
 -----------
 Observed effect (β̂):   0.0820
-Coefficient CI bounds: [-0.1133, 0.2778]
+Coefficient CI bounds: not computed
 Coefficient CI band:   not computed
 
 Permutation test
@@ -749,29 +770,113 @@ As-or-more extreme:     798 / 2000
 
 Test configuration
 ------------------
-Stratified:             no
-Clustered:              no
+Strata:                 —
+Clusters:               —
 Weights:                no
 
 Settings
 --------
 alpha:                  0.050
 seed:                   23
-ci_method:              cp
-ci_mode:                bounds
+ci_method:              clopper-pearson
+ci_mode:                none
 n_jobs:                 4</code></pre>
 </div>
 <div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
-<p>3.274 seconds.</p>
+<p>1.8 seconds.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="discussion" class="level2">
-<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
-<p>The result of the randomization inference aligns across the three different implementations. In terms of performance, the Python implementation is fastest (3.274 s), followed by the R implementation (11.24 s), and the Stata implementation (183 s). Compared to the <a href="../../../projects/ritest/benchmarks/colombia.html">Colombian example</a>, in which the R implementation was faster due to its explicit integration of <code>fixest</code> to handle estimation with multiple fixed effects, the implementation in Python is now faster due to its fast engine specialized in OLS.</p>
+<section id="generic-path" class="level3">
+<h3 class="anchored" data-anchor-id="generic-path">Generic path</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Results</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false">Runtime</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p>Specify the model:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>PERMUTE_VAR <span class="op">=</span> <span class="st">"treat"</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>STAT <span class="op">=</span> <span class="st">"treat"</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>COVARS <span class="op">=</span> [</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"age"</span>,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"female"</span>,</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"education_years"</span>,</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"log_income"</span>,</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"household_size"</span>,</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"urban"</span>,</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tenure_months"</span>,</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"baseline_spend"</span>,</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"purchases_12m"</span>,</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"returns_12m"</span>,</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"support_tickets_6m"</span>,</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"app_sessions_30d"</span>,</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"days_since_last_purchase"</span>,</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"email_opt_in"</span>,</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"promo_exposure_30d"</span>,</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"prior_churn"</span>,</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"credit_score"</span>,</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">"satisfaction_score"</span>,</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"region_1"</span>,</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">"region_2"</span>,</span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">"region_3"</span>,</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">"region_4"</span>,</span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Define generic function <code>stat_fn(...)</code>:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> stat_fn(dfp: pd.DataFrame) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>        X[:, <span class="dv">1</span>] <span class="op">=</span> dfp[<span class="st">"treat"</span>].to_numpy(dtype<span class="op">=</span><span class="bu">float</span>, copy<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        fit <span class="op">=</span> sm.OLS(y, X).fit()</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">float</span>(fit.params[<span class="dv">1</span>])  <span class="co"># treat coefficient (const is params[0])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Call <code>ritest</code></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>    res <span class="op">=</span> ritest(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>        df<span class="op">=</span>df,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>        permute_var<span class="op">=</span>PERMUTE_VAR,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>        stat_fn<span class="op">=</span>stat_fn,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        reps<span class="op">=</span>reps,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>        seed<span class="op">=</span>seed,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>        ci_mode<span class="op">=</span><span class="st">"none"</span>,</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<pre><code>Randomization Inference Result
+===============================
+
+Coefficient
+-----------
+Observed effect (β̂):   0.0820
+Coefficient CI bounds: not computed
+Coefficient CI band:   not computed
+
+Permutation test
+----------------
+Tail (alternative):     two-sided
+p-value:                0.3970 (39.7%)
+P-value CI @ α=0.050: [0.3755, 0.4188]
+As-or-more extreme:     794 / 2000
+
+Test configuration
+------------------
+Strata:                 —
+Clusters:               —
+Weights:                no
+
+Settings
+--------
+alpha:                  0.050
+seed:                   23
+ci_method:              clopper-pearson
+ci_mode:                none
+n_jobs:                 4</code></pre>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<p>14.29 seconds.</p>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -1194,8 +1299,8 @@ n_jobs:                 4</code></pre>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../projects/ritest/benchmarks/ci-band.html" class="pagination-link" aria-label="Confidence bands">
-        <span class="nav-page-text">Confidence bands</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../projects/ritest/benchmarks/ci-band.html" class="pagination-link" aria-label="Confidence band">
+        <span class="nav-page-text">Confidence band</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

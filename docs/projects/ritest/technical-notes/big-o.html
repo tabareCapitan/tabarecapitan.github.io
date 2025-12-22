@@ -412,7 +412,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -430,7 +430,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../projects/ritest/benchmarks/ci-band.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Confidence bands</span></a>
+ <span class="menu-text">Confidence band</span></a>
   </div>
 </li>
       </ul>
@@ -565,9 +565,20 @@ G \approx 1 + \left\lfloor \frac{2\cdot \texttt{ci\_range}}{\texttt{ci\_step}} \
 </ul>
 <p>Implementation details that matter for constants:</p>
 <ul>
-<li>Upstream validation stores the assignment vector as <code>int8</code> (0/1), so the eager permutation matrix uses 1 byte per element when internally generated from that vector. In bytes, this is approximately <span class="math display">\[
-\text{bytes}(T_{\mathrm{perms}}) \approx R \cdot N \cdot 1.
-\]</span></li>
+<li><p>Upstream validation stores the assignment vector as <code>int8</code> (0/1), and the permutation providers yield <code>int8</code> rows. If you actually <strong>materialise</strong> the full permutation matrix <code>T_perms</code> with shape <span class="math inline">\((R, N)\)</span>, the payload size is roughly <span class="math display">\[
+\text{bytes}(T_{\mathrm{perms}}) \approx R \cdot N \cdot 1
+\]</span> (plus NumPy array overhead).</p></li>
+<li><p>However, the eager-vs-streaming decision in <code>run.py</code> does <strong>not</strong> budget memory as “1 byte per entry” in general. It uses <code>_bytes_per_row()</code> and sets <span class="math display">\[
+\text{per\_entry} =
+\begin{cases}
+1, &amp; \text{if } \texttt{FAST\_OLS\_NUMBA\_OK} \\
+8, &amp; \text{otherwise}
+\end{cases}
+\]</span> then enforces <code>per_entry = max(per_entry, label_itemsize)</code>. Therefore <span class="math display">\[
+\text{bpr} = N \cdot \max\{\texttt{label\_itemsize},\ (1 \text{ if } \texttt{FAST\_OLS\_NUMBA\_OK} \text{ else } 8)\},
+\qquad
+\text{full\_bytes} = R \cdot \text{bpr}.
+\]</span> On systems without Numba-JITed FastOLS, this conservative <code>8 bytes/entry</code> budget can trigger streaming much earlier, even though the stored permutations are still <code>int8</code>.</p></li>
 </ul>
 <p>The default soft budget is <code>perm_chunk_bytes = 256 * 1024 * 1024</code> bytes.</p>
 </section>

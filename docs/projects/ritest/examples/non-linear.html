@@ -447,7 +447,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -465,7 +465,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../projects/ritest/benchmarks/ci-band.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Confidence bands</span></a>
+ <span class="menu-text">Confidence band</span></a>
   </div>
 </li>
       </ul>
@@ -521,8 +521,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data" id="toc-data" class="nav-link active" data-scroll-target="#data">Data</a></li>
-  <li><a href="#shared-utility" id="toc-shared-utility" class="nav-link" data-scroll-target="#shared-utility">Shared utility</a></li>
+  <li><a href="#shared-utility" id="toc-shared-utility" class="nav-link active" data-scroll-target="#shared-utility">Shared utility</a></li>
   <li><a href="#logit" id="toc-logit" class="nav-link" data-scroll-target="#logit">Logit</a></li>
   <li><a href="#probit" id="toc-probit" class="nav-link" data-scroll-target="#probit">Probit</a></li>
   <li><a href="#poisson" id="toc-poisson" class="nav-link" data-scroll-target="#poisson">Poisson</a></li>
@@ -563,11 +562,22 @@ window.Quarto = {
 <li><code>ritest()</code> repeatedly permutes <code>permute_var</code> (e.g., treatment <code>z</code>) and re-computes the statistic.</li>
 <li>The RI <span class="math inline">\(p\)</span>-value comes from the permutation distribution of that statistic.</li>
 </ul>
-<p>All snippets of code in this section come from <a href="https://github.com/tabareCapitan/ritest/blob/master/documentation/examples/results_object.py">this script</a>.</p>
-<section id="data" class="level2">
-<h2 class="anchored" data-anchor-id="data">Data</h2>
-<p>Each example uses its own toy data, designed to be appropriate for the corresponding model.</p>
-</section>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Code available in the <a href="https://github.com/tabareCapitan/ritest/tree/master/documentation/examples">repository</a>.</p>
+</div>
+</div>
+</div>
 <section id="shared-utility" class="level2">
 <h2 class="anchored" data-anchor-id="shared-utility">Shared utility</h2>
 <p>Assume a <code>pandas.DataFrame</code> named <code>df</code> with columns:</p>

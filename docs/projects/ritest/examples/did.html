@@ -447,7 +447,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -465,7 +465,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../projects/ritest/benchmarks/ci-band.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Confidence bands</span></a>
+ <span class="menu-text">Confidence band</span></a>
   </div>
 </li>
       </ul>
@@ -635,7 +635,22 @@ Y_{it} = \alpha + \gamma D_i + \lambda Post_t + \delta (D_i\cdot Post_t) + X_{it
 </section>
 <section id="ritsest-implementation" class="level2">
 <h2 class="anchored" data-anchor-id="ritsest-implementation"><code>ritsest</code> implementation</h2>
-<p>This is a concise guide to implement the two-period transformation, you can find the complete script in the <a href="https://github.com/tabareCapitan/ritest/blob/master/documentation/examples/did.py">repository</a>.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Code available in the <a href="https://github.com/tabareCapitan/ritest/tree/master/documentation/examples">repository</a>.</p>
+</div>
+</div>
+</div>
 <ol type="1">
 <li><p>Ensure you can build a two-period panel (one pre, one post per unit).</p></li>
 <li><p>Create one row per unit with:</p>
@@ -675,8 +690,24 @@ dy_i = c + \delta D_i + dX_i'\beta + u_i,
 </section>
 <section id="technical-appendix" class="level2">
 <h2 class="anchored" data-anchor-id="technical-appendix">Technical appendix</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>You can safely skip this appendix if your only goal is to do randomization inference.</p>
+</div>
+</div>
+</div>
 <p>Although the “change score” transformation is exactly equivalent to the canonical form in terms of the point estimate, the t-statistic and corresponding <span class="math inline">\(p\)</span>-values may differ. This is the topic of this appendix.</p>
-<p>Note, however, that randomization inference is independent of the OLS standard error. It uses the permutation distribution of the statistic. You can safely skip this appendix if your only goal is to do randomization inference.</p>
+<p>Note, however, that randomization inference is independent of the OLS standard error. It uses the permutation distribution of the statistic.</p>
 <section id="set-up" class="level3">
 <h3 class="anchored" data-anchor-id="set-up">Set up</h3>
 <p>We have two equivalent DiD specifications, the canonical (interaction) form:</p>

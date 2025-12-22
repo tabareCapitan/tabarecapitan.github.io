@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Confidence bands – Tabaré Capitán</title>
+<title>Confidence band – Tabaré Capitán</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -141,7 +141,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../../styles.css">
-<meta property="og:title" content="Confidence bands – Tabaré Capitán">
+<meta property="og:title" content="Confidence band – Tabaré Capitán">
 <meta property="og:description" content="Data scientist, personal website">
 <meta property="og:image" content="./figures/stata_ci_bands.png">
 <meta property="og:site_name" content="Tabaré Capitán">
@@ -354,7 +354,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Benchmarks</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/ci-band.html">Confidence bands</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Benchmarks</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/ci-band.html">Confidence band</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -448,7 +448,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -466,7 +466,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../projects/ritest/benchmarks/ci-band.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Confidence bands</span></a>
+ <span class="menu-text">Confidence band</span></a>
   </div>
 </li>
       </ul>
@@ -524,10 +524,7 @@ window.Quarto = {
   <ul>
   <li><a href="#data" id="toc-data" class="nav-link active" data-scroll-target="#data">Data</a></li>
   <li><a href="#stata" id="toc-stata" class="nav-link" data-scroll-target="#stata">Stata</a></li>
-  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a>
-  <ul class="collapse">
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
-  </ul></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
   </ul>
 </nav>
     </div>
@@ -535,9 +532,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Benchmarks</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/ci-band.html">Confidence bands</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/intro.html">Benchmarks</a></li><li class="breadcrumb-item"><a href="../../../projects/ritest/benchmarks/ci-band.html">Confidence band</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Confidence bands</h1>
+<h1 class="title">Confidence band</h1>
 </div>
 
 
@@ -555,7 +552,23 @@ window.Quarto = {
 
 
 <hr>
-<p>In this section I compare the performance of the feature to get confidence bands in my Python implementation, to the example provided in the <a href="https://github.com/simonheb/ritest#how-to-get-confidence-bands">documentation</a> for the Stata implementation.</p>
+<p>The present implementation of randomization inference is designed for fast computation of both confidence bounds and bands for the coefficient. In fact, computing bounds is the default setting.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> To illustrate this feature, I follow the example provided in the <a href="https://github.com/simonheb/ritest#how-to-get-confidence-bands">documentation</a> for the Stata implementation.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Code available in the <a href="https://github.com/tabareCapitan/ritest/tree/master/documentation/benchmarks/ci-bands">repository</a>.</p>
+</div>
+</div>
+</div>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
 <p>I use a toy dataset with 100 observations. Treatment is deterministically assigned so that half the observations are treated, and the outcome is generated as a linear function of treatment with a true treatment effect of 0.3 plus standard normal noise. The data are then used to estimate a simple OLS regression of the outcome on treatment and exported to CSV for use in CI-band examples.</p>
@@ -617,7 +630,7 @@ Note: c = #{|T| &gt;= |T(obs)|}</code></pre>
 <p>where the y-axis represents randomization inference <span class="math inline">\(p\)</span>-values, and the x-axis represent treatment effects. The blue line maps different treatment effects to <span class="math inline">\(p\)</span>-values. The horizontal line is drawn at 0.05, corresponding to the most common significance level. These plot shows that the point estimate is about <span class="math inline">\(0.2\)</span> and the confidence interval is roughly <span class="math inline">\([-0.2,0.6]\)</span>.</p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>276 seconds.</p>
+<p>138 seconds, which is about 2.3 minutes.</p>
 </div>
 </div>
 </div>
@@ -647,7 +660,7 @@ Note: c = #{|T| &gt;= |T(obs)|}</code></pre>
 Coefficient
 -----------
 Observed effect (β̂):   0.2019
-Coefficient CI bounds: not computed
+Coefficient CI bounds: [-0.1886, 0.5873]
 Coefficient CI band:   available (fast-linear)
 
 Permutation test
@@ -659,18 +672,17 @@ As-or-more extreme:     155 / 500
 
 Test configuration
 ------------------
-Stratified:             no
-Clustered:              no
+Strata:                 —
+Clusters:               —
 Weights:                no
 
 Settings
 --------
 alpha:                  0.050
 seed:                   123
-ci_method:              cp
-ci_mode:                grid
-n_jobs:                 4
-</code></pre>
+ci_method:              clopper-pearson
+ci_mode:                band
+n_jobs:                 4</code></pre>
 <p>The corresponding confidence band is shown below:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -680,21 +692,21 @@ n_jobs:                 4
 </div>
 </div>
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-<p>0.061 seconds.</p>
+<p>0.06 seconds.</p>
 </div>
 </div>
 </div>
-<section id="discussion" class="level3">
-<h3 class="anchored" data-anchor-id="discussion">Discussion</h3>
-<p>With only 100 observations, the randomization-inference results differ slightly between the Stata implementation and the Python linear path, but remain close enough to be considered correct. Most importantly for this section, the resulting confidence bands are almost identical.</p>
-<p>In terms of performance, the Python linear implementation is vastly faster (0.061 seconds) than the Stata implementation (276 seconds). This large difference reflects the main advantage of the Python linear path for confidence bands: in the Stata implementation, the permutation test is effectively repeated for each shifted null value, requiring the OLS regression to be re-estimated across all 500 permutations at every grid point. In Python, the permutations are run once, and the p-values across the full grid of shifted nulls are computed using fast analytic updates based on the linear model structure, without rerunning the permutation regressions for each grid point.</p>
-<p>(Of course, confidence bands can also be computed in R; I simply have not done that.)</p>
 
 
 </section>
-</section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Implementations of randomization inference typically report a <span class="math inline">\(p\)</span>-value and a confidence interval (or bounds) <strong>for that <span class="math inline">\(p\)</span>-value</strong>. This is at odds with the confidence interval you would normally get from a regression, which is a confidence interval <strong>for the coefficient</strong>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

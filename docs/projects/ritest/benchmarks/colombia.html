@@ -447,7 +447,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../projects/ritest/benchmarks/intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -465,7 +465,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../projects/ritest/benchmarks/ci-band.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Confidence bands</span></a>
+ <span class="menu-text">Confidence band</span></a>
   </div>
 </li>
       </ul>
@@ -524,7 +524,6 @@ window.Quarto = {
   <li><a href="#statas-ritest" id="toc-statas-ritest" class="nav-link active" data-scroll-target="#statas-ritest">Stata’s ritest</a></li>
   <li><a href="#rs-ritest" id="toc-rs-ritest" class="nav-link" data-scroll-target="#rs-ritest">R’s ritest</a></li>
   <li><a href="#pythons-ritest" id="toc-pythons-ritest" class="nav-link" data-scroll-target="#pythons-ritest">Python’s ritest</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
   </ul>
 </nav>
     </div>
@@ -555,6 +554,22 @@ window.Quarto = {
 <p>I develop an example used on R’s <code>ritest</code> documentation, which in turns follows the example used by <a href="https://sites.google.com/site/decrgdmckenzie/home">David McKenzie</a> in his <a href="https://blogs.worldbank.org/en/impactevaluations/finally-way-do-easy-randomization-inference-stata">blog post</a> about Stata’s <code>ritest</code>.</p>
 <p>The example uses real data from Colombia, using a dataset with “firms in 63 market blocks, which were formed into 31 strata (pairs and one triple), with clustered randomization at the market block level.” The researchers were interested in how many days a week firms shop at the central market. The data comes from the documentation for R’s <code>ritest</code>, which you can find <a href="https://grantmcdermott.com/ritest/reference/colombia.html">here</a>.</p>
 <p>Below I show results from <code>ritest</code> using Stata, R, and Python implementations on this dataset, comparing results and performance. For all of them, I’ll run 5,000 permutations on a fixed effects model, accounting for both the stratified and clustered design of the experiment.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Code and data available in the <a href="https://github.com/tabareCapitan/ritest/tree/master/documentation/benchmarks/colombia">repository</a>.</p>
+</div>
+</div>
+</div>
 <section id="statas-ritest" class="level2">
 <h2 class="anchored" data-anchor-id="statas-ritest">Stata’s ritest</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
@@ -602,7 +617,7 @@ Note: Confidence interval is with respect to p=c/n.
 Note: c = #{|T| &gt;= |T(obs)|}</code></pre>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>171 seconds, which is about 3 minutes.</p>
+<p>220 seconds, which is about 3.6 minutes.</p>
 </div>
 </div>
 </div>
@@ -661,7 +676,7 @@ Note: c = #{|T| &gt;= |T(obs)|}
 </code></pre>
 </div>
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-<p>28.09 seconds.</p>
+<p>16.45 seconds.</p>
 </div>
 </div>
 </div>
@@ -683,7 +698,8 @@ Note: c = #{|T| &gt;= |T(obs)|}
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>       strata<span class="op">=</span><span class="st">"b_pair"</span>,</span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>       reps<span class="op">=</span><span class="dv">5000</span>,</span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>       seed<span class="op">=</span><span class="dv">546</span>,</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>       ciMode<span class="op">=</span><span class="st">"none"</span>,</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Print a summary of the results:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>summary <span class="op">=</span> res.summary(print_out<span class="op">=</span><span class="va">False</span>)</span>
@@ -691,10 +707,13 @@ Note: c = #{|T| &gt;= |T(obs)|}
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<pre><code>Coefficient
+<pre><code>Randomization Inference Result
+===============================
+
+Coefficient
 -----------
 Observed effect (β̂):   -0.1807
-Coefficient CI bounds: [-0.4024, 0.0378]
+Coefficient CI bounds: not computed
 Coefficient CI band:   not computed
 
 Permutation test
@@ -706,28 +725,23 @@ As-or-more extreme:     517 / 5000
 
 Test configuration
 ------------------
-Stratified:             yes
-Clustered:              yes
+Strata:                 31
+Clusters:               63
 Weights:                no
 
 Settings
 --------
 alpha:                  0.050
 seed:                   546
-ci_method:              cp
-ci_mode:                bounds
+ci_method:              clopper-pearson
+ci_mode:                none
 n_jobs:                 4</code></pre>
 </div>
 <div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
-<p>56.35 seconds.</p>
+<p>7.28 seconds.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="discussion" class="level2">
-<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
-<p>Ok, this is great, you don’t have to take my word: my <code>ritest</code> works. It yields basically the same results as Stata’s and R’s implementation. The minor differences are expected, given differences between languages and implementation.</p>
-<p>In terms of performance, R’s implementation is clearly the fastest of them all (28 seconds). This makes sense, since it explictly supports estimation with multiple fixed effects powered by <code>fixest::feols()</code>. On the other extreme, Stata’s implementation is the slowest (171 seconds). This is also expected, Stata’s not necessarily known for speed. Both of these implementations take a “clever” aproach to deal with high-dimensional fixed effects, avoiding the need to create dummy variables for all fixed effects categories. My <code>ritest</code>, which lies in the middle in terms of performance (56 seconds), takes a naive approach and creates dummy variables for all fixed effects categories; its speed comes from a very fast OLS engine under the hood. While I could use a wrapper to use <code>pyfixest</code>, which is definitely faster per estimation with high dimensional fixed effects, the transaction cost would make it slower than the current approach.</p>
 
 
 </section>
@@ -1147,8 +1161,8 @@ n_jobs:                 4</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../projects/ritest/benchmarks/intro.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
+      <a href="../../../projects/ritest/benchmarks/intro.html" class="pagination-link" aria-label="Overview">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Overview</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
