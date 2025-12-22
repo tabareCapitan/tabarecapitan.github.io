@@ -38,10 +38,29 @@ If the estimated memory footprint of the full permutation matrix fits under a so
 
 Implementation details that matter for constants:
 
-- Upstream validation stores the assignment vector as `int8` (0/1), so the eager permutation matrix uses 1 byte per element when internally generated from that vector. In bytes, this is approximately
+- Upstream validation stores the assignment vector as `int8` (0/1), and the permutation providers yield `int8` rows.
+  If you actually **materialise** the full permutation matrix `T_perms` with shape $(R, N)$, the payload size is roughly
   $$
-  \text{bytes}(T_{\mathrm{perms}}) \approx R \cdot N \cdot 1.
+  \text{bytes}(T_{\mathrm{perms}}) \approx R \cdot N \cdot 1
   $$
+  (plus NumPy array overhead).
+
+- However, the eager-vs-streaming decision in `run.py` does **not** budget memory as “1 byte per entry” in general.
+  It uses `_bytes_per_row()` and sets
+  $$
+  \text{per\_entry} =
+  \begin{cases}
+  1, & \text{if } \texttt{FAST\_OLS\_NUMBA\_OK} \\
+  8, & \text{otherwise}
+  \end{cases}
+  $$
+  then enforces `per_entry = max(per_entry, label_itemsize)`. Therefore
+  $$
+  \text{bpr} = N \cdot \max\{\texttt{label\_itemsize},\ (1 \text{ if } \texttt{FAST\_OLS\_NUMBA\_OK} \text{ else } 8)\},
+  \qquad
+  \text{full\_bytes} = R \cdot \text{bpr}.
+  $$
+  On systems without Numba-JITed FastOLS, this conservative `8 bytes/entry` budget can trigger streaming much earlier, even though the stored permutations are still `int8`.
 
 The default soft budget is `perm_chunk_bytes = 256 * 1024 * 1024` bytes.
 
