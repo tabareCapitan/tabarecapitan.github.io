@@ -1,9 +1,16 @@
 ---
+title: "Projects"
+description: ""
 listing:
   # Show each project by its own landing page (index.qmd in subfolders)
   contents: /*/index.qmd
-  type: table            # or "default", "table"
+  type: grid            # "default", "table", "grid"
   fields: [title, description, categories]
+  categories: false
+  filter-ui: false
+  sort: false
+
+title-block-banner: true
 ---
 
-The list of projects remains a work in progress.
+This section is a work in progress. Come back later for more.

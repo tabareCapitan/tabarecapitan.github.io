@@ -1,0 +1,25 @@
+---
+title: "Blog"
+subtitle: "Mostly related to causal inference"
+listing:
+  id: blog-listing
+  contents: "."
+  sort: "date desc"
+  type: table  # "default", "table", "grid"
+  fields: [date, title, reading-time, categories]
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  feed: true
+
+# page-layout: full
+title-block-banner: true
+---
+
+::: {#blog-listing}
+:::
+
+
+:::{.text-center .small}
+Subscribe via [RSS](index.xml)
+:::

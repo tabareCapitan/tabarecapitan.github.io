@@ -8,6 +8,7 @@ resources:
 website:
   title: "Tabaré Capitán"
   description: "Data scientist, personal website"
+  site-url: https://www.tabarecapitan.com/
   favicon: favicon.png
   open-graph: true
   back-to-top-navigation: true
@@ -20,10 +21,12 @@ website:
         text: about
       - href: projects/index.qmd
         text: projects
-      - href: toolbox.qmd
-        text: toolbox
       - href: research.qmd
         text: research
+      - href: toolbox.qmd
+        text: toolbox
+      - href: posts/index.qmd
+        text: blog
   sidebar:
     - id: "proj-ritest"
       title: "ritest"
@@ -72,3 +75,6 @@ format:
     css: styles.css
     toc: true
     toc-location: right
+
+execute:
+  freeze: auto

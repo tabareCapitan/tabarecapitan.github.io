@@ -1,0 +1,9 @@
+format:
+  html:
+    toc: true
+
+page-layout: article
+
+freeze: true
+
+title-block-banner: true

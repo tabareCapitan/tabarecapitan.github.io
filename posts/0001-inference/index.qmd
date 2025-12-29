@@ -1,0 +1,134 @@
+---
+title: "On inference"
+date: 2025-12-29
+categories: [statistics]
+---
+
+
+
+Consider the following hypothetical example. Spotify is investing in audiobooks, and wants to learn how much more discovery it can drive without harming core music listening. An obvious first step is an A/B test: add an ‘Audiobooks’ shelf to the Home feed for *some* eligible users. After a couple of weeks, estimate the treated minus control difference in time spent listening to books, with a guardrail like time spent listening to music.
+
+If the assignment was random, that difference has a clean causal interpretation *for this experiment, for these users, over this window*. Identification is straightforward. Inference is more nuanced: how uncertain is the estimate of the difference, and uncertain *about what*? In other words, what can we infer about the world *beyond* this particular experiment? 
+
+This post is me trying to get the concept of inference straight. I’m going to treat ‘inference’ as a question about the *story of what could have happened*, not as a set of techniques I can apply.
+
+## Inference is a thought experiment
+
+Inference is always a thought experiment. In our example, we get a point estimate for *that experiment, for those users, over that window*. What if we had another experiment? What if we had other users? What if we had another window? Unfortunately, that we cannot see. And so we rely on thought experiments. 
+
+Confidence intervals and $p$-values answer those 'what if' questions within a given thought experiment: What would we see if the world replayed repeatedly, in some relevant sense? That replay is not a minor detail. It is the *definition* of what your uncertainty statement means. And in most settings there are two replay modes that make immediate sense.
+
+**Mode 1: replay the users**. Imagine Spotify could re-run the same experiment many times, but each time the platform happens to see a different slice of users: different people are active, eligible, reachable, or simply online during your windows. You run the same A/B each time, and your estimate moves around *because the people changed*. This is sampling-based uncertainty.
+
+That story corresponds to the *classical statistical inference* we typically encounter in textbooks and beyond: $p$-values  motivated via repeated sampling. The key idea is that your effect (point estimate) could have been different had your sample of users been different. That is the uncertainty you are trying to estimate.
+
+**Mode 2: replay the assignment**. Now hold the users fixed. Imagine Spotify could take the same users, same window, and same (potential) outcomes. The only thing you replay is the randomisation: who got the ‘Audiobooks’ shelf and who didn't, respecting whatever rules you originally used (such as equal split, stratification, blocked randomisation, and so on).
+
+That story is the realm of *randomisation inference*. It is also the clean way to interpret permutation tests in an experiment: you are not permuting "because it is non-parametric"; you are generating the distribution of your statistic under the assignment mechanism you actually used. 
+
+## Quantifying uncertainty
+
+I find it useful to think about inference in three layers. The first layer is the estimator (or statistic): it produces an estimate $\hat{\tau}$ of a target effect $\tau$. You need *something* to make an inference about. Furthermore, random assignment lends causal credibility to the interpretation of the estimate.  The second layer relates to the scope of the inference. Are we trying to make inferences about the broader population we want to generalise to? (replay mode 1) Or are we trying to make inferences about who happened to see the ‘Audiobook’ shelf due to the particular realisation of the randomisation process? (replay mode 2) Or maybe both? The third layer refers to the quantification of the uncertainty *within the scope of the inference*. It is here that we can find the many methods that take the first two layers and turn them into $p$-values and confidence intervals. 
+
+For example, in our hypothetical experiment, the first layer is the estimator. We compute the treatment effect estimate $\hat{\tau}$, for instance as the OLS coefficient on the treatment indicator, which (with an intercept) is algebraically equal to the treated–control difference in means,
+$$
+\hat{\tau} \;=\; \bar{Y}_{T} - \bar{Y}_{C}.
+$$
+
+Suppose that, in the second layer, we adopt a sampling-based replay story: the estimate $\hat{\tau}$ would have been different had the experiment observed a different random sample of users.
+
+In the third layer, we can quantify that uncertainty in several ways; with its interpretation being contingent on the sampling-based story.
+
+A *standard error* is an absolute measure of dispersion. It estimates the variability of the estimator across repeated samples,
+$$
+\widehat{SE}(\hat{\tau}) \;\approx\; \sqrt{\operatorname{Var}(\hat{\tau})}.
+$$
+
+A *confidence interval* converts the same idea into an absolute uncertainty range for the estimand (the target effect). Under a Normal approximation, a $(1-\alpha)$ confidence interval for $\tau$ is
+$$
+\left[
+\hat{\tau} - z_{1-\alpha/2}\,\widehat{SE}(\hat{\tau}),
+\;\;
+\hat{\tau} + z_{1-\alpha/2}\,\widehat{SE}(\hat{\tau})
+\right],
+$$
+where $z_{1-\alpha/2}$ denotes the corresponding quantile of the standard Normal distribution (or the appropriate $t$ quantile in finite samples).
+
+A *$p$-value* is different in nature: it is defined only relative to a hypothesis. If we wish to assess compatibility with a specific reference value $\tau_0$ (often $\tau_0 = 0$), we form the standardised statistic
+$$
+t \;=\; \frac{\hat{\tau} - \tau_0}{\widehat{SE}(\hat{\tau})}.
+$$
+
+Under the sampling-based assumptions and the chosen reference distribution, the $p$-value is
+$$
+p \;=\; \Pr\!\left( |T| \ge |t_{\text{obs}}| \;\middle|\; H_0:\tau=\tau_0 \right),
+$$
+that is, the probability—computed under the null hypothesis—that a re-sampled experiment would produce a standardised statistic at least as extreme as the one observed.[^inference-hypothesis]
+
+So far, this may look like ‘methods’: $t$-tests, confidence intervals, p-values. But the three layers are the point. None of these outputs make sense in isolation. The meaning comes from (i) the estimator, (ii) the replay story, and only then (iii) the calculator used to turn the story into numbers.
+
+## Uncertainty calculators
+
+Now that the estimator and the replay story are fixed, the remaining question is how to *compute* uncertainty within that scope. This is where most methods people recognise live. They are mostly different ways of approximating the same object: the distribution of $\hat{\tau}$ under the chosen replay mode.
+
+There are two broad ways to get that distribution.
+
+**Route A: estimate variability, then approximate a reference distribution.**  
+This is the standard error route. You compute $\widehat{SE}(\hat{\tau})$, form a standardised statistic, and then map it to a $p$-value (or CI) using a reference distribution (Normal or $t$ in simple cases). This family includes the classic $t$-test and its close relatives (Wald tests, $F$ tests, $\chi^2$ tests), all of which share the same structure:
+$$
+\text{statistic} \quad \rightarrow \quad \text{estimated variability} \quad \rightarrow \quad \text{reference distribution}.
+$$
+
+Within this route, you still have choices about the variability estimate. In regression output, for instance, a *model-based* OLS standard error is tied to a particular noise model, while a *robust (sandwich)* standard error is designed to be less dependent on that model. The estimator $\hat{\tau}$ can be identical, while the attached uncertainty calculation changes because the calculator changed. That is why Freedman’s (2008) warning matters even in experiments: randomisation can justify the causal meaning of $\hat{\tau}$, while leaving room for disagreement (or mistakes) about the standard error attached to it.
+
+**Route B: build a reference distribution directly by replaying the world.**  
+This is the resampling or re-randomisation route. Instead of estimating an $SE$ and leaning on a Normal or $t$ approximation, you generate many ‘replays’ and recompute the statistic each time. The output is an empirical distribution of $\hat{\tau}$, from which you can read off uncertainty summaries.
+
+Two big families sit here:
+
+- **Bootstrap and jackknife (sampling replay):** you replay *which users you observed* by resampling units (bootstrap) or systematically leaving them out (jackknife). You can then compute $\widehat{SE}(\hat{\tau})$ as the standard deviation of the replicated estimates, or compute confidence intervals from quantiles of the empirical distribution. A $p$-value is also possible, but it requires an explicit hypothesis construction, just like before.
+
+- **Randomisation inference (assignment replay):** you replay *who was treated* by re-running the randomisation procedure many times, respecting the original design. Under a sharp null, this directly gives a reference distribution for your statistic under the assignment mechanism.[^sharp-null] A $p$-value can be computed with the most literal tail probability:
+  $$
+  \hat{p} =\; \frac{\#\{|T_r| \ge |T_{\text{obs}}|\}}{R},
+  $$
+  where $R$ is the number of simulated reassignments and $T_r$ is the statistic under reassignment $r$. Notice what is missing: there is no required step of ‘estimate an $SE$ and assume Normality’. The design supplies the reference distribution.[^pval-ci]
+
+## Practical implications
+
+You may have felt something off up to this point. In our Spotify example, the effect estimate is justified by random assignment (design logic), while a lot of standard inference is presented through a sampling lens. Furthermore, in plain A/B tests, you often find that robust $t$-tests, bootstrap uncertainty, and randomisation-based checks all tell the same story.
+
+This is not because the layers collapse into one. It is because the situation is unusually ‘friendly’:
+
+- **The estimator is simple.** A difference in means is a stable object.
+- **Sample sizes are large.** Many distributions become well-behaved once you have enough users, and many reasonable standardisations start to look similar.
+- **Different variance calculators converge.** In the binary-treatment case, several common standard-error formulas are built from the same ingredients (treated and control variability and group sizes), so their numerical differences can get washed out.
+
+If all you need is a quick answer to ‘did the shelf move audiobook listening?’, this is why your preferred software’s default often feels like it ‘just works’.
+
+But the friendly zone is not guaranteed. The moment the design stops ‘being randomise users 50/50’, the replay world changes, and the calculator has to match it.
+
+For example, if you randomised within strata (country, device, prior engagement), then ‘replay the assignment’ means reshuffling *within strata*. A calculator that ignores this is quantifying uncertainty for a world that never could have happened. Alternatively, if assignment happens at a higher level (households, classrooms, markets), the effective sample size is the number of clusters, not the number of users. Many default approximations become fragile when there are few clusters.
+
+This is the practical take of the three layers: inference is not a button you press after you get $\hat{\tau}$. It is the combination of (i) what you estimated, (ii) what you think could have happened, and (iii) how you chose to quantify that. 
+
+## Reading list
+
+The references below have been helpful to me; they are not in any way meant as a comprehensive survey. 
+
+⭐ Abadie, A., Athey, S., Imbens, G., and Wooldridge, J. 2020. “Sampling-Based versus Design-Based Uncertainty in Regression Analysis.” *Econometrica*. [link](https://economics.mit.edu/sites/default/files/publications/ECTA12675.pdf)
+
+Athey, S., & Imbens, G. W. (2017). The econometrics of randomized experiments. In _Handbook of economic field experiments_. North-Holland. [link](https://arxiv.org/abs/1607.00698)
+
+Freedman, David A. 2008. “On Regression Adjustments to Experimental Data.” *Advances in Applied Mathematics*. [link](https://www.stat.berkeley.edu/~census/neyregr.pdf)
+
+Imbens, G. W., & Rubin, D. B. (2015). _Causal inference in statistics, social, and biomedical sciences_. Cambridge university press. [link](https://books.google.se/books?id=Bf1tBwAAQBAJ)
+
+Spotify. 2025-03-13. “How Spotify Is Driving Growth, Discovery, and Innovation in the Audiobook Market.” *Spotify Newsroom.* [link](https://newsroom.spotify.com/2025-03-13/how-spotify-is-driving-growth-discovery-and-innovation-in-the-audiobook-market/)
+
+
+[^inference-hypothesis]: Note that inference can exist without hypothesis testing; testing is a decision layered on top of an uncertainty statement, not its foundation.
+
+[^pval-ci]: If you approximate a randomisation $p$-value by simulation, then $\hat{p}$ has Monte Carlo error because $R$ is finite. If $c$ is the number of simulated statistics at least as extreme as $T_{\text{obs}}$, then $\hat{p}=c/R$. Treating $c \sim \operatorname{Binomial}(R,p)$ gives a simple way to compute a confidence interval for $p$ (for example via a Clopper–Pearson or Wilson interval). This is uncertainty about the Monte Carlo approximation, not uncertainty about the treatment effect.
+
+[^sharp-null]: Without additional structure, this exactness is tied to sharp nulls; a null about an average effect does not by itself pin down the missing potential outcomes. You can read more about randomisation inference with weak nulls (such as related to ATE) in [this paper](https://arxiv.org/abs/1809.07419) published [in JASA](https://www.tandfonline.com/doi/abs/10.1080/01621459.2020.1750415?casa_token=hMXx_Nl6vIMAAAAA:DMVLAKErKTsFGYb898Sr5wHC2Uxtt2_JIJ-ATIsahRreYayFZ_VaYPF6Q6dJpXsNc8newgsWgp-Bgg). 

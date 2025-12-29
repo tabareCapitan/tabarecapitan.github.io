@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/0001-inference/index.html"
+    ]
+  },
+  {
     "listing": "/projects/index.html",
     "items": [
       "/projects/ritest/index.html",
