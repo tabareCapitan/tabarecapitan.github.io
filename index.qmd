@@ -24,12 +24,17 @@ about:
       target: _blank
 ---
 
-data scientist · causal inference · experimentation
+**data scientist · causal inference · experimentation**
 
-creator of `ritest`: randomization inference in Python
-[`docs`](projects/ritest/) · [`github`](https://github.com/tabareCapitan/ritest)
+latest project: [`ritest`](projects/ritest/)
 
 
-**contact**: hi at my-domain
-
+<div class="contact-reveal">
+  <details>
+    <summary aria-label="Show email">
+      <i class="bi bi-envelope"></i>
+    </summary>
+    <span class="email">hi [at] my-domain</span>
+  </details>
+</div>
 

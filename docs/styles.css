@@ -358,3 +358,56 @@ body:not(.quarto-dark) .callout.callout-style-simple {
 .quarto-about-jolla img.about-image-alt {
     opacity: 0;
 }
+
+
+
+
+
+.contact-reveal {
+    margin-top: 0.9rem;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-reveal details {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.contact-reveal summary {
+    list-style: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+    border-radius: 999px;
+    opacity: 0.9;
+}
+
+.contact-reveal summary::-webkit-details-marker {
+    display: none;
+}
+
+.contact-reveal summary:hover {
+    opacity: 1;
+}
+
+.contact-reveal .email {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    white-space: nowrap;
+}
+
+/* If it gets tight on mobile, drop email below the icon */
+@media (max-width: 520px) {
+    .contact-reveal details {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .contact-reveal .email {
+        white-space: normal;
+    }
+}
