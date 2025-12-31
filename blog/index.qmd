@@ -16,6 +16,9 @@ listing:
 title-block-banner: true
 ---
 
+
+<!-- Neither causality nor inference is something we observe directly; both are conceptual constructions, made rigorous by design, assumptions, and mathematics. -->
+
 ::: {#blog-listing}
 :::
 

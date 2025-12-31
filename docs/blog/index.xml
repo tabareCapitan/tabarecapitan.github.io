@@ -6,14 +6,14 @@
       version="2.0">
 <channel>
 <title>Tabaré Capitán</title>
-<link>https://www.tabarecapitan.com/posts/</link>
-<atom:link href="https://www.tabarecapitan.com/posts/index.xml" rel="self" type="application/rss+xml"/>
-<description>Data scientist, personal website</description>
+<link>https://www.tabarecapitan.com/blog/</link>
+<atom:link href="https://www.tabarecapitan.com/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>Projects and blog on causal inference.</description>
 <generator>quarto-1.7.33</generator>
 <lastBuildDate>Sun, 28 Dec 2025 23:00:00 GMT</lastBuildDate>
 <item>
   <title>On inference</title>
-  <link>https://www.tabarecapitan.com/posts/0001-inference/</link>
+  <link>https://www.tabarecapitan.com/blog/0001-inference/</link>
   <description><![CDATA[ 
 
 
@@ -49,11 +49,9 @@
 <h2 class="anchored" data-anchor-id="uncertainty-calculators">Uncertainty calculators</h2>
 <p>Now that the estimator and the replay story are fixed, the remaining question is how to <em>compute</em> uncertainty within that scope. This is where most methods people recognise live. They are mostly different ways of approximating the same object: the distribution of <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Ctau%7D"> under the chosen replay mode.</p>
 <p>There are two broad ways to get that distribution.</p>
-<p><strong>Route A: estimate variability, then approximate a reference distribution.</strong><br>
-This is the standard error route. You compute <img src="https://latex.codecogs.com/png.latex?%5Cwidehat%7BSE%7D(%5Chat%7B%5Ctau%7D)">, form a standardised statistic, and then map it to a <img src="https://latex.codecogs.com/png.latex?p">-value (or CI) using a reference distribution (Normal or <img src="https://latex.codecogs.com/png.latex?t"> in simple cases). This family includes the classic <img src="https://latex.codecogs.com/png.latex?t">-test and its close relatives (Wald tests, <img src="https://latex.codecogs.com/png.latex?F"> tests, <img src="https://latex.codecogs.com/png.latex?%5Cchi%5E2"> tests), all of which share the same structure: <img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7Bstatistic%7D%20%5Cquad%20%5Crightarrow%20%5Cquad%20%5Ctext%7Bestimated%20variability%7D%20%5Cquad%20%5Crightarrow%20%5Cquad%20%5Ctext%7Breference%20distribution%7D.%0A"></p>
+<p><strong>Route A: estimate variability, then approximate a reference distribution.</strong> This is the standard error route. You compute <img src="https://latex.codecogs.com/png.latex?%5Cwidehat%7BSE%7D(%5Chat%7B%5Ctau%7D)">, form a standardised statistic, and then map it to a <img src="https://latex.codecogs.com/png.latex?p">-value (or CI) using a reference distribution (Normal or <img src="https://latex.codecogs.com/png.latex?t"> in simple cases). This family includes the classic <img src="https://latex.codecogs.com/png.latex?t">-test and its close relatives (Wald tests, <img src="https://latex.codecogs.com/png.latex?F"> tests, <img src="https://latex.codecogs.com/png.latex?%5Cchi%5E2"> tests), all of which share the same structure: <img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7Bstatistic%7D%20%5Cquad%20%5Crightarrow%20%5Cquad%20%5Ctext%7Bestimated%20variability%7D%20%5Cquad%20%5Crightarrow%20%5Cquad%20%5Ctext%7Breference%20distribution%7D.%0A"></p>
 <p>Within this route, you still have choices about the variability estimate. In regression output, for instance, a <em>model-based</em> OLS standard error is tied to a particular noise model, while a <em>robust (sandwich)</em> standard error is designed to be less dependent on that model. The estimator <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Ctau%7D"> can be identical, while the attached uncertainty calculation changes because the calculator changed. That is why Freedman’s (2008) warning matters even in experiments: randomisation can justify the causal meaning of <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Ctau%7D">, while leaving room for disagreement (or mistakes) about the standard error attached to it.</p>
-<p><strong>Route B: build a reference distribution directly by replaying the world.</strong><br>
-This is the resampling or re-randomisation route. Instead of estimating an <img src="https://latex.codecogs.com/png.latex?SE"> and leaning on a Normal or <img src="https://latex.codecogs.com/png.latex?t"> approximation, you generate many ‘replays’ and recompute the statistic each time. The output is an empirical distribution of <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Ctau%7D">, from which you can read off uncertainty summaries.</p>
+<p><strong>Route B: build a reference distribution directly by replaying the world.</strong> This is the resampling or re-randomisation route. Instead of estimating an <img src="https://latex.codecogs.com/png.latex?SE"> and leaning on a Normal or <img src="https://latex.codecogs.com/png.latex?t"> approximation, you generate many ‘replays’ and recompute the statistic each time. The output is an empirical distribution of <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Ctau%7D">, from which you can read off uncertainty summaries.</p>
 <p>Two big families sit here:</p>
 <ul>
 <li><p><strong>Bootstrap and jackknife (sampling replay):</strong> you replay <em>which users you observed</em> by resampling units (bootstrap) or systematically leaving them out (jackknife). You can then compute <img src="https://latex.codecogs.com/png.latex?%5Cwidehat%7BSE%7D(%5Chat%7B%5Ctau%7D)"> as the standard deviation of the replicated estimates, or compute confidence intervals from quantiles of the empirical distribution. A <img src="https://latex.codecogs.com/png.latex?p">-value is also possible, but it requires an explicit hypothesis construction, just like before.</p></li>
@@ -96,7 +94,7 @@ This is the resampling or re-randomisation route. Instead of estimating an <img 
 </ol>
 </section></div> ]]></description>
   <category>statistics</category>
-  <guid>https://www.tabarecapitan.com/posts/0001-inference/</guid>
+  <guid>https://www.tabarecapitan.com/blog/0001-inference/</guid>
   <pubDate>Sun, 28 Dec 2025 23:00:00 GMT</pubDate>
 </item>
 </channel>

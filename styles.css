@@ -1,2 +1,302 @@
 /* css styles */
 
+/* ===== Page background (canvas) ===== */
+
+/* light mode */
+body {
+    background-color: #F3F7F4;
+}
+
+/* dark mode */
+body.quarto-dark {
+    background-color: #141B18;
+}
+
+/* ===== Theme tokens (set once, reuse everywhere) ===== */
+
+:root {
+    /* Link tones (light) */
+    --link-color: #2C6D61;
+    --link-hover: #245A50;
+
+    /* Link tones (dark) */
+    --link-color-dark: #77B8AA;
+    --link-hover-dark: #9BD2C6;
+}
+
+/* Light theme: calm green, readable text */
+body:not(.quarto-dark) {
+    --nav-bg: #2A6F63;
+    /* navbar/banner background */
+    --nav-fg: #F3F7F4;
+    /* navbar/banner text */
+    --nav-fg-hover: #FFFFFF;
+    /* hover/active text */
+    --nav-border: rgba(0, 0, 0, 0.10);
+}
+
+/* Dark theme: darker, closer to canvas */
+body.quarto-dark {
+    --nav-bg: #1B2F2A;
+    /* matches #141B18 better */
+    --nav-fg: #D6E2DD;
+    --nav-fg-hover: #FFFFFF;
+    --nav-border: rgba(255, 255, 255, 0.08);
+}
+
+/* ===== Inline code (incl. headings) ===== */
+/* Do NOT affect code blocks */
+:not(pre)>code {
+    padding: 0.12em 0.38em;
+    border-radius: 0.35em;
+    border: 1px solid transparent;
+    font-size: 0.95em;
+}
+
+/* Light: slightly green-tinted, readable */
+body:not(.quarto-dark) :not(pre)>code {
+    color: #1B2F2A;
+    background: rgba(42, 111, 99, 0.12);
+    border-color: rgba(42, 111, 99, 0.18);
+}
+
+/* Dark: subtle (not white), readable */
+body.quarto-dark :not(pre)>code {
+    color: #D6E2DD;
+    background: rgba(214, 226, 221, 0.10);
+    border-color: rgba(214, 226, 221, 0.16);
+}
+
+/* Inline code inside links should keep link color logic */
+a :not(pre)>code {
+    color: inherit;
+}
+
+
+/* ===== Navbar ===== */
+
+.navbar {
+    background-color: var(--nav-bg) !important;
+    border-bottom: 1px solid var(--nav-border) !important;
+}
+
+/* Brand + links */
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .navbar-nav .nav-link {
+    color: var(--nav-fg) !important;
+    opacity: 0.95;
+}
+
+/* Hover + active */
+.navbar a:hover,
+.navbar .nav-link.active,
+.navbar .navbar-brand:hover {
+    color: var(--nav-fg-hover) !important;
+    opacity: 1;
+}
+
+/* Icons (search, theme toggle) */
+.navbar a,
+.navbar button,
+.navbar svg,
+.navbar .bi {
+    color: var(--nav-fg) !important;
+    fill: currentColor !important;
+}
+
+/* ===== Title banner (always match navbar) ===== */
+
+.quarto-title-banner {
+    background-color: var(--nav-bg) !important;
+    border-bottom: 1px solid var(--nav-border) !important;
+}
+
+/* Title text in banner */
+.quarto-title-banner .title,
+.quarto-title-banner h1,
+.quarto-title-banner h2,
+.quarto-title-banner p {
+    color: var(--nav-fg) !important;
+}
+
+/* ===== Title banner sizing + centering ===== */
+
+/* Reduce banner height (~2/3 of default) */
+.quarto-title-banner {
+    padding-top: 0.6rem !important;
+    padding-bottom: 0.6rem !important;
+}
+
+/* Center all banner text */
+.quarto-title-banner .quarto-title,
+.quarto-title-banner .title,
+.quarto-title-banner h1,
+.quarto-title-banner h2,
+.quarto-title-banner p {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ensure subtitle spacing stays tight */
+.quarto-title-banner p {
+    margin-top: 0.2rem;
+}
+
+/* ===== Sidebar active state (keep your current styling) ===== */
+
+.sidebar nav a.active {
+    color: #2F6F8E;
+    border-left-color: #2F6F8E;
+}
+
+/* ===== Links: subtle, no underline ===== */
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--link-hover);
+    text-decoration: none;
+}
+
+body.quarto-dark a {
+    color: var(--link-color-dark);
+    text-decoration: none;
+}
+
+body.quarto-dark a:hover,
+body.quarto-dark a:focus {
+    color: var(--link-hover-dark);
+    text-decoration: none;
+}
+
+/* Keyboard-focus hint without underlines */
+a:focus-visible {
+    outline: 2px solid rgba(42, 111, 99, 0.35);
+    outline-offset: 2px;
+}
+
+/* ===== Inline code (backticks) ===== */
+
+/* Base inline code */
+p code,
+li code,
+td code,
+span code,
+a code {
+    padding: 0.12em 0.35em;
+    border-radius: 0.35em;
+    border: 1px solid transparent;
+    color: inherit;
+}
+
+/* Light: greener tint (connects to navbar) */
+body:not(.quarto-dark) p code,
+body:not(.quarto-dark) li code,
+body:not(.quarto-dark) td code,
+body:not(.quarto-dark) span code,
+body:not(.quarto-dark) a code {
+    background-color: rgba(42, 111, 99, 0.10);
+    border-color: rgba(42, 111, 99, 0.16);
+}
+
+/* Dark: subtle tint aligned with dark navbar */
+body.quarto-dark p code,
+body.quarto-dark li code,
+body.quarto-dark td code,
+body.quarto-dark span code,
+body.quarto-dark a code {
+    background-color: rgba(214, 226, 221, 0.08);
+    border-color: rgba(214, 226, 221, 0.12);
+}
+
+/* Inline code that is also a link: no underline */
+a code,
+code a {
+    text-decoration: none !important;
+}
+
+/* Hover states for linked inline code */
+body:not(.quarto-dark) a:hover code,
+body:not(.quarto-dark) code a:hover {
+    background-color: rgba(42, 111, 99, 0.16);
+    border-color: rgba(42, 111, 99, 0.22);
+}
+
+body.quarto-dark a:hover code,
+body.quarto-dark code a:hover {
+    background-color: rgba(214, 226, 221, 0.12);
+    border-color: rgba(214, 226, 221, 0.16);
+}
+
+/* Fix the purple `ritest` showing up in headings (code/link styling inside headings) */
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: inherit !important;
+}
+
+/* ===== Callouts ===== */
+
+/* Pure clear callout (no fill, no card) */
+.callout.callout-clear,
+.callout.callout-clear .callout-header,
+.callout.callout-clear .callout-body-container,
+.callout.callout-clear .callout-body {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.callout.callout-clear {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-left-width: 4px;
+}
+
+body.quarto-dark .callout.callout-clear {
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Remove left accent strip from simple callouts (all types) */
+.callout.callout-style-simple {
+    border-left: none !important;
+}
+
+/* Keep a subtle full border instead */
+.callout.callout-style-simple {
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    /* dark default */
+}
+
+body:not(.quarto-dark) .callout.callout-style-simple {
+    border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+/* ===== Footnotes wrapper (Quarto appendix) ===== */
+/* Theme sets #quarto-appendix.default { background-color: #fff; ... } */
+
+#quarto-appendix.default,
+#quarto-appendix.default .footnotes {
+    background: transparent !important;
+    border: 1 !important;
+    box-shadow: none !important;
+}
+
+/* Keep spacing but remove the "card" look */
+#quarto-appendix.default {
+    padding-top: 0 !important;
+    margin-top: 1.25rem !important;
+}

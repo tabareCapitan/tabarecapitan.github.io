@@ -1,27 +1,36 @@
 ---
-title: "Tabaré Capitán"
-image: temp.jpg
+image: picture.png
 about:
+  id: tabare-about
   template: jolla
   image-shape: round
+  image-width: 14em
+  image-alt: Picture of Tabaré Capitán
+  image-title: Tabaré Capitán
   links:
-    - icon: linkedin
-      href: https://www.linkedin.com/in/tabareCapitan
-      text: LinkedIn
-      aria-label: linkedIn
-      target: _blank
-    - icon: substack
-      href: https://www.tabarecapitan.com
-      text: substack
-      aria-label: Substack
+    - icon: bi-pen
+      href: blog/index.qmd
+      text: blog
+      aria-label: blog
       target: _blank
     - icon: github
       href: https://github.com/tabareCapitan
       text: GitHub
       aria-label: GitHub
       target: _blank
+    - icon: linkedin
+      href: https://www.linkedin.com/in/tabareCapitan
+      text: LinkedIn
+      aria-label: linkedIn
+      target: _blank
 ---
 
-Data scientist and researcher, PhD in Economics
+data scientist · causal inference · experimentation
 
-Causal inference | Econometrics & ML
+creator of `ritest`: randomization inference in Python
+[`docs`](projects/ritest/) · [`github`](https://github.com/tabareCapitan/ritest)
+
+
+**contact**: hi at my-domain
+
+
