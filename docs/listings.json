@@ -8,6 +8,7 @@
   {
     "listing": "/projects/index.html",
     "items": [
+      "/projects/insects/index.html",
       "/projects/mpa/index.html",
       "/projects/ritest/index.html",
       "/projects/test project/index.html"

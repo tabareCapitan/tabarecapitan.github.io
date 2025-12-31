@@ -1,6 +1,6 @@
 ---
-title: "MPA"
-description: "Optimal design for Marine Protected Areas."
+title: "Optimal MPAs"
+description: "Optimal design of Marine Protected Areas"
 categories: [research, matlab, inactive]
 ---
 

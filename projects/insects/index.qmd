@@ -1,0 +1,7 @@
+---
+title: "The economics of edible insects"
+description: "in progress"
+categories: [research, active]
+---
+
+This project is in progress. I'm (slowly) working on a summary for this section.
