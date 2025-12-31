@@ -300,3 +300,61 @@ body:not(.quarto-dark) .callout.callout-style-simple {
     padding-top: 0 !important;
     margin-top: 1.25rem !important;
 }
+
+/* Smooth swap for Jolla about image */
+#tabare-about img {
+    transition: opacity 180ms ease-in-out;
+}
+
+.quarto-about-jolla {
+    position: relative;
+}
+
+.quarto-about-jolla img.about-image,
+.quarto-about-jolla img.about-image-alt {
+    position: absolute;
+    inset: 0;
+    transition: opacity 300ms ease;
+}
+
+.quarto-about-jolla img.about-image-alt {
+    opacity: 0;
+}
+
+/* --- Fix for crossfade profile images (Jolla) --- */
+
+/* Keep the about block layout intact */
+.quarto-about-jolla {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* The wrapper that Quarto uses for the image */
+.quarto-about-jolla .about-image {
+    position: relative;
+    /* creates a box; keeps flow */
+    display: block;
+    width: 14em;
+    /* match your YAML image-width */
+    height: 14em;
+    /* enforce square */
+}
+
+/* Stack both images inside the wrapper */
+.quarto-about-jolla img.about-image,
+.quarto-about-jolla img.about-image-alt {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    /* keep round */
+    transition: opacity 300ms ease;
+}
+
+/* Default state (light) */
+.quarto-about-jolla img.about-image-alt {
+    opacity: 0;
+}

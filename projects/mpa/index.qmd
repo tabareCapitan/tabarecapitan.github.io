@@ -1,0 +1,7 @@
+---
+title: "MPA"
+description: "Optimal design for Marine Protected Areas."
+categories: [research, matlab, inactive]
+---
+
+This project is complete. I'm (slowly) working on a summary for this section.

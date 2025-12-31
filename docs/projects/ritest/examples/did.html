@@ -109,6 +109,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<link rel="preload" as="image" href="../../../picture-light.png">
+<link rel="preload" as="image" href="../../../picture-dark.png">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -781,6 +783,7 @@ t = \frac{\hat\delta}{\widehat{SE}(\hat\delta)}.
 <li id="fn1"><p>The reason for which <code>ritest</code> does not work directly with the canonical <span class="math inline">\(2\times2\)</span> DiD specification is the interaction term. The specification includes <code>permute_var</code> in both ways: on its own, which is not a problem, and interacted with another variable, which is a big problem. <code>ritest</code> will only permute the column containing the <code>permute_var</code> alone, ignoring the interaction. This issue is not limited to DiD, it applies to any specification in which <code>permute_var</code> plays any role in the specification beyond a simple additive term.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
+<script defer="" src="../../../assets/picture-swap.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

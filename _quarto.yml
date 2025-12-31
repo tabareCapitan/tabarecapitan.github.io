@@ -71,6 +71,12 @@ website:
 
 format:
   html:
+    include-in-header:
+      - text: |
+          <link rel="preload" as="image" href="/picture-light.png">
+          <link rel="preload" as="image" href="/picture-dark.png">
+    include-after-body:
+      - assets/picture-swap.html
     theme:
       light: flatly
       dark: darkly

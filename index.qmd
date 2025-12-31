@@ -1,9 +1,8 @@
 ---
-image: picture.png
+image: picture-light.png
 about:
-  id: tabare-about
   template: jolla
-  image-shape: round
+  image-shape: round # round, roundeded, rectangle
   image-width: 14em
   image-alt: Picture of Tabaré Capitán
   image-title: Tabaré Capitán
