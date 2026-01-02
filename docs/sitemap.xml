@@ -1,83 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.tabarecapitan.com/blog/index.html</loc>
-    <lastmod>2025-12-31T07:08:04.140Z</lastmod>
+    <loc>https://www.tabarecapitan.com/papers/papers.html</loc>
+    <lastmod>2026-01-02T13:47:22.646Z</lastmod>
   </url>
   <url>
-    <loc>https://www.tabarecapitan.com/projects/index.html</loc>
-    <lastmod>2026-01-02T14:23:30.254Z</lastmod>
+    <loc>https://www.tabarecapitan.com/index.html</loc>
+    <lastmod>2026-01-02T08:28:40.496Z</lastmod>
   </url>
   <url>
-    <loc>https://www.tabarecapitan.com/projects/ritest/examples/did.html</loc>
-    <lastmod>2025-12-22T15:24:31.116Z</lastmod>
+    <loc>https://www.tabarecapitan.com/blog/0001-inference/index.html</loc>
+    <lastmod>2025-12-30T11:37:10.172Z</lastmod>
   </url>
   <url>
-    <loc>https://www.tabarecapitan.com/projects/ritest/examples/custom.html</loc>
-    <lastmod>2025-12-22T15:20:40.535Z</lastmod>
+    <loc>https://www.tabarecapitan.com/projects/ritest/index.html</loc>
+    <lastmod>2026-01-02T18:26:05.569Z</lastmod>
   </url>
   <url>
-    <loc>https://www.tabarecapitan.com/projects/ritest/examples/settings.html</loc>
-    <lastmod>2025-12-21T05:55:17.877Z</lastmod>
+    <loc>https://www.tabarecapitan.com/projects/ritest/examples/multi-arm.html</loc>
+    <lastmod>2025-12-22T15:22:30.655Z</lastmod>
   </url>
   <url>
-    <loc>https://www.tabarecapitan.com/projects/ritest/technical-notes/pvalues.html</loc>
-    <lastmod>2025-12-20T16:43:06.995Z</lastmod>
+    <loc>https://www.tabarecapitan.com/projects/ritest/examples/non-linear.html</loc>
+    <lastmod>2025-12-22T15:19:25.740Z</lastmod>
   </url>
   <url>
-    <loc>https://www.tabarecapitan.com/projects/ritest/technical-notes/big-o.html</loc>
-    <lastmod>2025-12-22T16:16:09.706Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.tabarecapitan.com/projects/ritest/quick-start.html</loc>
-    <lastmod>2025-12-20T16:43:06.995Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.tabarecapitan.com/projects/ritest/benchmarks/intro.html</loc>
-    <lastmod>2025-12-22T13:46:16.983Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.tabarecapitan.com/projects/ritest/benchmarks/colombia.html</loc>
-    <lastmod>2025-12-22T14:38:05.532Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.tabarecapitan.com/projects/insects/index.html</loc>
-    <lastmod>2026-01-02T18:25:30.112Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.tabarecapitan.com/projects/mpa/index.html</loc>
-    <lastmod>2026-01-02T17:29:04.556Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.tabarecapitan.com/disclaimer.html</loc>
-    <lastmod>2025-08-19T16:06:51.203Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.tabarecapitan.com/research.html</loc>
-    <lastmod>2025-12-30T19:22:31.401Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.tabarecapitan.com/toolbox.html</loc>
-    <lastmod>2025-08-20T16:47:40.141Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.tabarecapitan.com/projects/test project/index.html</loc>
-    <lastmod>2025-12-20T16:43:06.995Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.tabarecapitan.com/projects/ritest/api.html</loc>
-    <lastmod>2025-12-21T07:42:23.269Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.tabarecapitan.com/projects/ritest/benchmarks/generic-vs-linear.html</loc>
-    <lastmod>2025-12-22T15:01:29.894Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.tabarecapitan.com/projects/ritest/benchmarks/ci-band.html</loc>
-    <lastmod>2025-12-22T15:10:51.771Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.tabarecapitan.com/projects/ritest/technical-notes/ci.html</loc>
+    <loc>https://www.tabarecapitan.com/projects/ritest/installation.html</loc>
     <lastmod>2025-12-20T16:43:06.995Z</lastmod>
   </url>
   <url>
@@ -85,43 +33,79 @@
     <lastmod>2025-12-20T16:43:06.995Z</lastmod>
   </url>
   <url>
-    <loc>https://www.tabarecapitan.com/projects/ritest/installation.html</loc>
+    <loc>https://www.tabarecapitan.com/projects/ritest/technical-notes/ci.html</loc>
     <lastmod>2025-12-20T16:43:06.995Z</lastmod>
   </url>
   <url>
-    <loc>https://www.tabarecapitan.com/projects/ritest/examples/non-linear.html</loc>
-    <lastmod>2025-12-22T15:19:25.740Z</lastmod>
+    <loc>https://www.tabarecapitan.com/projects/ritest/benchmarks/ci-band.html</loc>
+    <lastmod>2025-12-22T15:10:51.771Z</lastmod>
   </url>
   <url>
-    <loc>https://www.tabarecapitan.com/projects/ritest/examples/multi-arm.html</loc>
-    <lastmod>2025-12-22T15:22:30.655Z</lastmod>
+    <loc>https://www.tabarecapitan.com/projects/ritest/benchmarks/generic-vs-linear.html</loc>
+    <lastmod>2025-12-22T15:01:29.894Z</lastmod>
   </url>
   <url>
-    <loc>https://www.tabarecapitan.com/projects/ritest/index.html</loc>
-    <lastmod>2026-01-02T18:26:05.569Z</lastmod>
+    <loc>https://www.tabarecapitan.com/projects/ritest/api.html</loc>
+    <lastmod>2025-12-21T07:42:23.269Z</lastmod>
   </url>
   <url>
-    <loc>https://www.tabarecapitan.com/blog/0001-inference/index.html</loc>
-    <lastmod>2025-12-30T11:37:10.172Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.tabarecapitan.com/index.html</loc>
-    <lastmod>2026-01-02T08:28:40.496Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.tabarecapitan.com/tools/tools.html</loc>
-    <lastmod>2026-01-02T15:12:50.350Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.tabarecapitan.com/research/research.html</loc>
-    <lastmod>2025-12-30T19:22:31.401Z</lastmod>
+    <loc>https://www.tabarecapitan.com/projects/mpa/index.html</loc>
+    <lastmod>2026-01-02T17:29:04.556Z</lastmod>
   </url>
   <url>
     <loc>https://www.tabarecapitan.com/tools/tools-BACKUP.html</loc>
     <lastmod>2025-08-20T16:47:40.141Z</lastmod>
   </url>
   <url>
-    <loc>https://www.tabarecapitan.com/papers/papers.html</loc>
-    <lastmod>2026-01-02T13:47:22.646Z</lastmod>
+    <loc>https://www.tabarecapitan.com/tools/tools.html</loc>
+    <lastmod>2026-01-02T15:12:50.350Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tabarecapitan.com/disclaimer.html</loc>
+    <lastmod>2025-08-19T16:06:51.203Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tabarecapitan.com/projects/insects/index.html</loc>
+    <lastmod>2026-01-02T18:25:30.112Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tabarecapitan.com/projects/ritest/benchmarks/colombia.html</loc>
+    <lastmod>2025-12-22T14:38:05.532Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tabarecapitan.com/projects/ritest/benchmarks/intro.html</loc>
+    <lastmod>2025-12-22T13:46:16.983Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tabarecapitan.com/projects/ritest/quick-start.html</loc>
+    <lastmod>2025-12-20T16:43:06.995Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tabarecapitan.com/projects/ritest/technical-notes/big-o.html</loc>
+    <lastmod>2025-12-22T16:16:09.706Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tabarecapitan.com/projects/ritest/technical-notes/pvalues.html</loc>
+    <lastmod>2025-12-20T16:43:06.995Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tabarecapitan.com/projects/ritest/examples/settings.html</loc>
+    <lastmod>2025-12-21T05:55:17.877Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tabarecapitan.com/projects/ritest/examples/custom.html</loc>
+    <lastmod>2025-12-22T15:20:40.535Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tabarecapitan.com/projects/ritest/examples/did.html</loc>
+    <lastmod>2025-12-22T15:24:31.116Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tabarecapitan.com/projects/index.html</loc>
+    <lastmod>2026-01-02T14:23:30.254Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tabarecapitan.com/blog/index.html</loc>
+    <lastmod>2025-12-31T07:08:04.140Z</lastmod>
   </url>
 </urlset>

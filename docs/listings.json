@@ -1,16 +1,16 @@
 [
   {
-    "listing": "/blog/index.html",
-    "items": [
-      "/blog/0001-inference/index.html"
-    ]
-  },
-  {
     "listing": "/projects/index.html",
     "items": [
       "/projects/ritest/index.html",
       "/projects/mpa/index.html",
       "/projects/insects/index.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/0001-inference/index.html"
     ]
   }
 ]
