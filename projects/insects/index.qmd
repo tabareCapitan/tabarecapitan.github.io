@@ -4,7 +4,7 @@ description: "🦗 🐛 🐜"
 categories: [research, environment, python]
 ---
 
-# The economics of edible insects
+# Motivation
 
 
 If the total world population were to adopt the average diet of most rich countries, there would be not enough habitable land on the planet to produce that much food (Alexander et al., 2016; Ritchie, 2017). **The planet, quite literally, cannot provide that much.** This is not only unfair but unsustainable, particularly when population and global income growth are expected. Something must be done.
