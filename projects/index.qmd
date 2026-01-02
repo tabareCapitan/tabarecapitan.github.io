@@ -1,16 +1,18 @@
 ---
 title: "Projects"
 description: ""
+title-block-banner: true
 listing:
   # Show each project by its own landing page (index.qmd in subfolders)
-  contents: /*/index.qmd
   type: grid            # "default", "table", "grid"
   fields: [title, description, categories]
   categories: false
   filter-ui: false
   sort: false
+  # contents: /*/index.qmd
+  contents:
+    - ritest/index.qmd
+    - mpa/index.qmd
+    - insects/index.qmd
 
-title-block-banner: true
 ---
-
-This section is a work in progress. Come back later for more.

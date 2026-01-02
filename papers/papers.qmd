@@ -7,8 +7,12 @@ format:
 
 ## Overview
 
-This is a list of all my research papers with abstracts, including published papers and [preprints](https://en.wikipedia.org/wiki/Preprint). You can find citation metrics and other outputs on [Google Scholar](https://scholar.google.com/citations?view_op=list_works&hl=en&user=uqivDeoAAAAJ&gmla=AElLoL1GAS7kTYCwjqpMxOFxXIl1jgbU9wINCmzMKv-QjUvP7N0cQRFg54zuHkuQfgr8qs8oSiPl1E_CcsOIPKvfWeIanJ17_Z4f-lmDM1RsSRJ8UKE).
+This is a list of my research papers, including [preprints](https://en.wikipedia.org/wiki/Preprint).
 
+
+::: {.callout-tip}
+You can find citation metrics and other outputs on [Google Scholar](https://scholar.google.com/citations?view_op=list_works&hl=en&user=uqivDeoAAAAJ&gmla=AElLoL1GAS7kTYCwjqpMxOFxXIl1jgbU9wINCmzMKv-QjUvP7N0cQRFg54zuHkuQfgr8qs8oSiPl1E_CcsOIPKvfWeIanJ17_Z4f-lmDM1RsSRJ8UKE).
+:::
 
 
 ## Preprints

@@ -1,8 +1,13 @@
 (function () {
-    const LIGHT = "/picture-light.png";
-    const DARK = "/picture-dark.png";
+    // about image
+    const LIGHT = "/assets/images/profile/picture-light.png";
+    const DARK = "/assets/images/profile/picture-dark.png";
 
-    function setup() {
+    // navbar logo (sun/moon)
+    const SUN = "/assets/images/sun.png";
+    const MOON = "/assets/images/moon.png";
+
+    function setupAboutImage() {
         const img = document.querySelector(".quarto-about-jolla img.about-image");
         if (!img || img.dataset.swapReady) return;
 
@@ -18,10 +23,9 @@
         wrap.appendChild(alt);
 
         img.dataset.swapReady = "1";
-        update();
     }
 
-    function update() {
+    function updateAboutImage() {
         const wrap = document.querySelector(".quarto-about-jolla .about-image");
         if (!wrap) return;
 
@@ -37,9 +41,37 @@
         alt.style.opacity = isDark ? "1" : "0";
     }
 
+    function updateNavbarLogo() {
+        const img = document.querySelector(".navbar-brand img");
+        if (!img) return;
+
+        const isDark = document.body.classList.contains("quarto-dark");
+        const desired = isDark ? MOON : SUN;
+
+        // Avoid needless work
+        const current = img.getAttribute("src") || "";
+        if (current === desired) return;
+
+        // Fast fade similar to about-image swap
+        img.style.transition = img.style.transition || "opacity 120ms ease-out";
+        img.style.opacity = "0";
+
+        setTimeout(() => {
+            img.setAttribute("src", desired);
+            img.style.opacity = "1";
+        }, 120);
+    }
+
+    function updateAll() {
+        updateAboutImage();
+        updateNavbarLogo();
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
-        setup();
-        const obs = new MutationObserver(update);
+        setupAboutImage();
+        updateAll();
+
+        const obs = new MutationObserver(updateAll);
         obs.observe(document.body, { attributes: true, attributeFilter: ["class"] });
     });
 })();

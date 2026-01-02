@@ -1,5 +1,5 @@
 ---
-image: picture-light.png
+image: assets/images/profile/picture-light.png
 about:
   template: jolla
   image-shape: round # round, roundeded, rectangle
@@ -26,7 +26,7 @@ about:
 
 **data scientist · causal inference · experimentation**
 
-latest project: [`ritest`](projects/ritest/)
+latest: [`project`](projects/ritest/) [`post`](blog/0001-inference/index.qmd)
 
 
 <div class="contact-reveal">

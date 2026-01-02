@@ -1,0 +1,113 @@
+---
+format:
+  html:
+    toc: true
+    toc-location: right
+lightbox:
+    match: auto
+    effect: fade
+    loop: true
+
+---
+
+
+## Introduction
+
+I like when people share the tools they use, so here is my contribution.
+
+In the end, my work is to write, in one form or another. So, tools for writing are my 'writing layer'; time spent here is time well spent. But then you have to create new files, move them around, rename them, save them, store them, and keep track of their changes. Tools in this category are the 'operations layer'; I want to spend as little time as possible here. Finally, all of this has to run on something. This is the 'infrastructure layer'; I don't even want to notice that this layer exists.
+
+I try to keep a consistent look across tools, which is provided by [Catppuccin](https://catppuccin.com/) themes.
+
+
+::: {.callout-warning}
+This is not a tutorial or a guide. It is also not a list of recommendations. It is just a list of some of the tools I use.
+:::
+
+
+## Writing
+
+### Code
+
+I use both [VS Code](https://code.visualstudio.com/) and [Neovim](https://neovim.io/). I have a basic setup in VS Code, nothing worth mentioning here. Neovim is more interesting. My starting point is the [modular version](https://github.com/dam9000/kickstart-modular.nvim) of [`kickstart.nvim`](https://github.com/nvim-lua/kickstart.nvim), with a few additional plugins and customisations.
+
+I also use [Stata](https://www.stata.com/) when the project is right and I can choose the software. It remains my favourite software for exploratory data analysis (EDA), especially for applied work in economics.
+
+### Non-code
+
+I use [Obsidian](https://obsidian.md/) to write everything that I want to keep, which is a lot to ask from a tool. Still, I'm pretty comfortable with this choice. The [developers](https://obsidian.md/about) are active and seem reasonable. And there is also an active [community](https://docs.obsidian.md/Home) building and maintaining many useful plugins.
+
+Obsidian is not open-source, but it has some audits and a feasible business model, which makes me believe that it will be around for the long term. The business model is simple: you only pay if you want sync or publishing. Because it’s funded directly by users, development can stay focused on product rather than outside pressures. Most importantly, there is no file-level lock-in because the actual notes are plain text Markdown files (see [File over app](https://stephango.com/file-over-app)).
+
+::: {.callout-tip collapse="true"}
+
+# Plugins
+
+- [Better Word Count](https://obsidian.md/plugins?id=better-word-count)
+- [Dataview](https://blacksmithgu.github.io/obsidian-dataview/)
+- [Go to Heading](https://obsidian.md/plugins?id=gotoheading)
+- [Hider](https://obsidian.md/plugins?id=obsidian-hider)
+- [Homepage](https://obsidian.md/plugins?id=homepage)
+- [LaTeX Suite](https://obsidian.md/plugins?id=latex-suite)
+- [Pandoc](https://obsidian.md/plugins?id=obsidian-pandoc)
+- [Quick Switcher++](https://obsidian.md/plugins?id=quick-switcher-plus-plus)
+- [QuickAdd](https://obsidian.md/plugins?id=quickadd)
+- [Remember Cursor Position](https://obsidian.md/plugins?id=remember-cursor-position)
+- [Templater](https://obsidian.md/plugins?id=templater-obsidian)
+- [Text Snippets](https://obsidian.md/plugins?id=text-snippets)
+- [TTS](https://obsidian.md/plugins?id=text-to-speech)
+- [Typewriter Scroll](https://obsidian.md/plugins?id=typewriter-scroll)
+- [Zotero Integration](https://github.com/mgmeyers/obsidian-zotero-integration).
+
+:::
+
+
+I use [Workflowy](https://workflowy.com/) for text that is meant to disappear: shopping lists, to-do lists, travel itineraries, and more. It’s a simple, fast, and flexible outliner that works well for quick notes and lists. And they recently added the Catppuccin theme!
+
+
+## Operations
+
+For version control I use [git](https://git-scm.com/), with [GitHub](https://github.com/) as the remote server.
+
+My terminal setup is built around [kitty](https://sw.kovidgoyal.net/kitty/) and [fish](https://fishshell.com/), with [starship](https://starship.rs/) for the prompt. I use [tmux](https://github.com/tmux/tmux) for sessions, [fzf](https://github.com/junegunn/fzf) for fuzzy search, [zoxide](https://github.com/ajeetdsouza/zoxide) for fast directory jumps, and [yazi](https://yazi-rs.github.io/) as a terminal file manager.
+
+
+## Infrastructure
+
+
+### OS
+
+I use Linux ([Fedora](https://fedoraproject.org/)). I'm certainly not going to tell you that this is 'the best' Linux distro out there. In fact, I think most (popular) distros are good enough for most. What I can tell you is that Fedora's level of conservatism fits my own risk aversion. It's not trying to be cutting edge, but it is also not afraid to move on. I know that Fedora is (sort of) sponsored by IBM through its Red Hat ties, but development remains [credibly independent](https://en.wikipedia.org/wiki/Fedora_Project).
+
+
+### Sync and storage
+
+I use [Nextcloud](https://nextcloud.com/) for file sync, hosted on [Hetzner Storage Share](https://www.hetzner.com/storage/storage-share/).
+
+
+### Website
+
+This site is built with [Quarto](https://quarto.org/), rendered locally, and deployed via [GitHub Pages](https://pages.github.com/).
+
+
+## Screenshots
+
+
+{{< include _carousel.qmd >}}
+
+
+
+
+
+
+
+
+
+
+---
+
+<div style="text-align:center; margin-top:3rem;">
+  <small style="font-size:0.6rem; opacity:0.7; text-decoration:none;">
+    <a href="/disclaimer.html" style="text-decoration:none; color:inherit;">Disclaimer</a>
+  </small>
+</div>

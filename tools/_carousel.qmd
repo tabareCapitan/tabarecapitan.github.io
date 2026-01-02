@@ -1,0 +1,77 @@
+```{=html}
+<div id="toolsCarousel"
+     class="carousel slide tools-carousel"
+     tabindex="0"
+     data-bs-ride="false"
+     data-bs-keyboard="true">
+
+  <!-- indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#toolsCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+    <button type="button" data-bs-target="#toolsCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#toolsCarousel" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#toolsCarousel" data-bs-slide-to="3"></button>
+    <button type="button" data-bs-target="#toolsCarousel" data-bs-slide-to="4"></button>
+    <button type="button" data-bs-target="#toolsCarousel" data-bs-slide-to="5"></button>
+    <button type="button" data-bs-target="#toolsCarousel" data-bs-slide-to="6"></button>
+  </div>
+
+  <!-- slides -->
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="images/kitty.png" class="d-block w-100 tools-img" alt="kitty terminal">
+      <div class="tools-caption">kitty + fish + starship + zoxide + tmux</div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/fzf.png" class="d-block w-100 tools-img" alt="fzf">
+      <div class="tools-caption">fzf</div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/yazi.png" class="d-block w-100 tools-img" alt="yazi">
+      <div class="tools-caption">yazi</div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/nvim.png" class="d-block w-100 tools-img" alt="neovim">
+      <div class="tools-caption">neovim</div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/vscode.png" class="d-block w-100 tools-img" alt="VS Code">
+      <div class="tools-caption">VS Code</div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/stata.png" class="d-block w-100 tools-img" alt="Stata">
+      <div class="tools-caption">Stata</div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="images/obsidian.png" class="d-block w-100 tools-img" alt="Obsidian">
+      <div class="tools-caption">Obsidian</div>
+    </div>
+
+  </div>
+
+  <!-- arrows -->
+  <button class="carousel-control-prev"
+          type="button"
+          data-bs-target="#toolsCarousel"
+          data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <button class="carousel-control-next"
+          type="button"
+          data-bs-target="#toolsCarousel"
+          data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+</div>
+```

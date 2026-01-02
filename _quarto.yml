@@ -4,6 +4,8 @@ project:
 
 resources:
   - .nojekyll
+  - assets/images/profile/picture-dark.png
+  - assets/images/moon.png
 
 website:
   title: "Tabaré Capitán"
@@ -14,21 +16,20 @@ website:
   back-to-top-navigation: true
   reader-mode: false
   navbar:
-    # background: "#5b9bd3"
-    # foreground: "#f5dcbf"
     search: true
+    logo: assets/images/sun.png
 
     left:
       - href: index.qmd
         text: about
-      - href: projects/index.qmd
-        text: projects
-      - href: research.qmd
-        text: research
-      - href: toolbox.qmd
-        text: toolbox
       - href: blog/index.qmd
         text: blog
+      - href: projects/index.qmd
+        text: projects
+      - href: papers/papers.qmd
+        text: papers
+      - href: tools/tools.qmd
+        text: tools
   sidebar:
     - id: "proj-ritest"
       title: "ritest"

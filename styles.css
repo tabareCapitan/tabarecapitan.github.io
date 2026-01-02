@@ -360,7 +360,7 @@ body:not(.quarto-dark) .callout.callout-style-simple {
 }
 
 
-
+/* contact information */
 
 
 .contact-reveal {
@@ -410,4 +410,77 @@ body:not(.quarto-dark) .callout.callout-style-simple {
     .contact-reveal .email {
         white-space: normal;
     }
+}
+
+/* ===== in tools, control width of carousel ===== */
+
+/* size + centering (your 70%) */
+.tools-carousel {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* keep it sane on small screens */
+@media (max-width: 768px) {
+    .tools-carousel {
+        max-width: 95%;
+    }
+}
+
+/* subtle polish */
+.tools-carousel .carousel-inner {
+    border-radius: 4px;
+    overflow: hidden;
+    /* makes the rounding apply to the image */
+}
+
+/* optional: a tiny soft edge without heavy effects */
+.tools-carousel .tools-img {
+    display: block;
+}
+
+/* caption */
+.tools-carousel .tools-caption {
+    font-size: 0.9rem;
+    opacity: 0.75;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* make arrows a bit less loud */
+.tools-carousel .carousel-control-prev,
+.tools-carousel .carousel-control-next {
+    width: 10%;
+    opacity: 0.85;
+}
+
+.tools-carousel .carousel-control-prev:hover,
+.tools-carousel .carousel-control-next:hover {
+    opacity: 1;
+}
+
+.tools-carousel .carousel-inner {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* =============== logo ==================== */
+/* navbar logo sizing */
+.navbar-brand img {
+    height: 28px;
+    width: auto;
+    filter: drop-shadow(0 0 0.6px rgba(0, 0, 0, 0.25));
+    transform: scale(0.98);
+    transition:
+        opacity 120ms ease-out,
+        transform 120ms ease-out;
+}
+
+body:not(.quarto-dark) .navbar-brand img {
+    transform: scale(1);
+}
+
+/* tiny optical alignment tweak */
+.navbar-brand {
+    gap: 0.4rem;
 }

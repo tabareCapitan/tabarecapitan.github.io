@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Optimal design of Marine Protected Areas">
+<meta name="description" content="🐟 🐠 🐡">
 
-<title>Optimal MPAs – Tabaré Capitán</title>
+<title>How to design marine protected areas? – Tabaré Capitán</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -76,11 +76,43 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preload" as="image" href="../../picture-light.png">
 <link rel="preload" as="image" href="../../picture-dark.png">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Optimal MPAs – Tabaré Capitán">
-<meta property="og:description" content="Optimal design of Marine Protected Areas">
+<meta property="og:title" content="How to design marine protected areas? – Tabaré Capitán">
+<meta property="og:description" content="🐟 🐠 🐡">
+<meta property="og:image" content="https://www.tabarecapitan.com/projects/mpa/images/mpa-grid.png">
 <meta property="og:site_name" content="Tabaré Capitán">
+<meta property="og:image:height" content="509">
+<meta property="og:image:width" content="647">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -252,6 +284,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/sun.png" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Tabaré Capitán</span>
     </a>
@@ -267,20 +302,20 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">blog</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../projects/index.html"> 
 <span class="menu-text">projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research.html"> 
-<span class="menu-text">research</span></a>
+    <a class="nav-link" href="../../papers/papers.html"> 
+<span class="menu-text">papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../toolbox.html"> 
-<span class="menu-text">toolbox</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../blog/index.html"> 
-<span class="menu-text">blog</span></a>
+    <a class="nav-link" href="../../tools/tools.html"> 
+<span class="menu-text">tools</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -294,8 +329,19 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation">Motivation</a></li>
+  <li><a href="#why-theory" id="toc-why-theory" class="nav-link" data-scroll-target="#why-theory">Why theory?</a></li>
+  <li><a href="#notes-from-the-field" id="toc-notes-from-the-field" class="nav-link" data-scroll-target="#notes-from-the-field">Notes from the field</a></li>
+  <li><a href="#the-model" id="toc-the-model" class="nav-link" data-scroll-target="#the-model">The model</a></li>
+  <li><a href="#policy-mix" id="toc-policy-mix" class="nav-link" data-scroll-target="#policy-mix">Policy mix</a></li>
+  <li><a href="#final-thoughts" id="toc-final-thoughts" class="nav-link" data-scroll-target="#final-thoughts">Final thoughts</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -303,17 +349,17 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Optimal MPAs</h1>
+<h1 class="title">How to design marine protected areas?</h1>
   <div class="quarto-categories">
     <div class="quarto-category">research</div>
+    <div class="quarto-category">environment</div>
     <div class="quarto-category">matlab</div>
-    <div class="quarto-category">inactive</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Optimal design of Marine Protected Areas
+    🐟 🐠 🐡
   </div>
 </div>
 
@@ -330,9 +376,123 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This project is complete. I’m (slowly) working on a summary for this section.</p>
+<section id="motivation" class="level2">
+<h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
+<p>When people ask whether marine protected areas (MPAs) ‘work’, they often mean <em>does an MPA increase fish stocks, or biodiversity, or incomes?</em> That sounds like a clean policy evaluation question. But it hides the real policy problem.</p>
+<p>Evaluating <strong>a given</strong> MPA tells us whether <strong>that MPA</strong> produced the intended outcomes. Even evaluating many MPAs mostly answers: <em>do current MPAs work on average?</em> That can still miss the point. If MPAs fail <strong>because</strong> they are poorly designed, then a blunt ‘MPAs don’t work’ conclusion is not just pessimistic—it is misleading for public policy.</p>
+<p>The more interesting questions are about design:</p>
+<ul>
+<li>What should an MPA look like—where, how big, and how enforced—given how people respond?</li>
+<li>When does an MPA create win-win outcomes?</li>
+<li>How do spatial policies (such as MPAs) interact with non-spatial policies (such as taxes and licenses)?</li>
+</ul>
+<p>This project is now complete, after collaborative work over at least 7 years. As a result of this project, we produced three papers. For the first paper we went to the field to meet the fishers. We observed them, talked to them, and surveyed them to understand their behaviour. In the second paper we take our understanding of this behaviour to model their strategic reaction to MPAs and explore implications of this reactive behaviour for policy-making. Finally, in the third paper, we extend the model to consider the interaction between spatial and non-spatial policies.</p>
+</section>
+<section id="why-theory" class="level2">
+<h2 class="anchored" data-anchor-id="why-theory">Why theory?</h2>
+<p>A lot of conservation economics is set up like causal inference: define a ‘treatment’ (an MPA), compare treated and untreated areas, estimate an effect, and then debate identification. That work is valuable when the policy question is literally ‘did this MPA work?’</p>
+<p>But the optimal-design question is different. It is not a single treatment; it is a menu of treatments. If you only estimate the effect of what was implemented, you never learn what would have happened under other plausible designs—especially designs that were never tried because of politics, budgets, or administrative constraints.</p>
+<p>Theory gives you a disciplined way to run counterfactuals. You specify the mechanisms that make MPAs succeed or fail—fish dispersal, travel costs, wage opportunities, incomplete enforcement, strategic effort relocation—and then you simulate the world under many designs. The goal is not to replace data; the goal is to answer the design question that data alone cannot identify.</p>
+<p>In this project, the modelling strategy is deliberately ‘brute force’ in spirit: define a realistic-enough environment, solve the equilibrium response of fishers, and then evaluate all candidate MPAs to find what is best under different objectives and constraints.</p>
+</section>
+<section id="notes-from-the-field" class="level2">
+<h2 class="anchored" data-anchor-id="notes-from-the-field">Notes from the field</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Paper 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Madrigal-Ballestero; Róger, Albers, Heidi J.; Capitán, Tabaré; and Salas, Ariana. (2017). <em>Marine protected areas in Costa Rica: How do artisanal fishers respond?</em> Ambio.</p>
+</div>
+</div>
+<p>A subset of the people on the team, myself included, are from Costa Rica. Which is convenient because we wanted to understand the behaviour of small-scale fishers in response to real plans to expand MPAs in Costa Rica.</p>
+<p>The key insight, surprisingly underappreciated in this context, is that whether that MPA expansion helps fish stocks and communities depends on how households respond—how effort shifts, whether people exit fishing, how distance affects site choice, and what alternative labour options exist.</p>
+<p>This is a simple descriptive paper, used as an input for the most ambitious paper, in which we develop ‘the model’.</p>
+</section>
+<section id="the-model" class="level2">
+<h2 class="anchored" data-anchor-id="the-model">The model</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Paper 2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Albers, Heidi J.; Preonas, Louis; Capitán, Tabaré; Robinson, Elizabeth J. Z.; and Madrigal-Ballestero; Róger. (2020). <em>Optimal siting, sizing, and enforcement of marine protected areas</em>. Environmental and Resource Economics.</p>
+</div>
+</div>
+<p>This paper is the central contribution of this project: a spatial bio-economic model of optimal MPA design that explicitly treats people as strategic responders, not passive recipients of a policy.</p>
+<p>Roughly, the model considers a manager choosing an MPA design anticipating a decentralised equilibrium response by fishers:</p>
+<p><span class="math display">\[
+\max_{d \in \mathcal{D}} \; W\!\left(d, x^*(d)\right),
+\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(d\)</span> is the design choice (location, size, and enforcement level),</li>
+<li><span class="math inline">\(x^*(d)\)</span> is the fishers’ best-response equilibrium under that design,</li>
+<li><span class="math inline">\(W(\cdot)\)</span> is the manager’s objective (ecological or economic).</li>
+</ul>
+<p>That is the key shift away from ‘does this MPA work?’ towards ‘which MPA would we choose, given how people react?’</p>
+<p>The pieces that make the model—a simplification by definition—realistic are:</p>
+<ul>
+<li><p><strong>Space:</strong> The environment is a stylised marinescape represented as a grid of fishing sites, with distance from the village affecting costs and therefore site choice.</p></li>
+<li><p><strong>Biology:</strong> Fish stocks evolve with local growth and dispersal across sites (a metapopulation structure).</p></li>
+<li><p><strong>People:</strong> Villagers allocate labour between onshore wage work and fishing, and choose fishing sites. Their joint outcome is a <strong>spatial Nash equilibrium</strong> (each fisher’s best response to others, given stocks, distances, and the MPA).</p></li>
+<li><p><strong>Enforcement is limited:</strong> Enforcement is not assumed to be perfect or costless. Managers face enforcement budgets, and enforcement affects the incentives to violate no-take sites.</p></li>
+<li><p><strong>Manager as a Stackelberg leader:</strong> The manager moves first (designs the MPA), anticipating the equilibrium response.</p></li>
+</ul>
+<p>Let’s make things more specific with <a href="#fig-mpa-grid" class="quarto-xref">Figure&nbsp;1</a>. The sea in which the MPA would be placed is a ‘continuous’ environment. We greatly simplified this by defining the relevant ‘sea’ as a <span class="math inline">\(2\times3\)</span> grid. The fish dispersal is represented by the gray arrows, it shows how fish move (through rook contiguity) from one location to another one (away from dense locations). Then, we set the village, from which all fishers depart, next to the first cell. And with that, we can define the (costly) distance from the village to each location (cell) in the sea (grid). The fishers’ choice is where to fish and how much effort to expend. Finally, the manager’s choice is which locations (cells) to protect and how much (level of enforcement or probability of catching rebels).</p>
+<div id="fig-mpa-grid" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mpa-grid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mpa-grid.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Copyright © 2020, The Authors</figcaption>
+</figure>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-mpa-grid-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
+</figure>
+</div>
+<p>If you are following, you may have noticed that we have a couple of issues in terms of complexity. There are many choices and there is discreteness in the model (the grid). This rules out tractable analytical solutions. Furthermore, this is a nested equilibrium problem. For every candidate MPA design, you need the fishers’ spatial equilibrium response, and you need the implied ecological steady-state outcomes. Only then can you score the design under the manager’s objective. That is what makes ‘brute force’ a reasonable description: the manager’s optimisation is built on repeatedly solving the lower-level equilibrium and evaluating outcomes across designs. If you are interested, you can read more about the implementation (written in <a href="https://www.mathworks.com/products/matlab.html">MATLAB</a>) in Appendix 2.</p>
+<p>There are many interesting results, much of which make sense. For example, in setting an MPA, it helps to think in terms of the carrot and the stick. If you want to protect a coral reef in location 4 (cell 4 in the figure), which is relatively close to the village, you can spend lots of money in enforcement so you increase the probability of catching anyone fishing there. That’s the stick. Or you can strategically protect ‘cells 3 and 5’, so that the increased stock of fish disperse towards ‘cell 2’ (spillovers), making it more attractive for fishers to go to that location instead of 4. That’s the carrot. Some results, however, are counter intuitive. For example, the optimal MPA can change <strong>non-monotonically</strong> with the enforcement budget. More budget does not simply mean ‘same MPA, more enforcement.’</p>
+</section>
+<section id="policy-mix" class="level2">
+<h2 class="anchored" data-anchor-id="policy-mix">Policy mix</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Paper 3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Albers, Heidi J.; Ashworth, Madison; Capitán, Tabaré; Madrigal-Ballestero; Róger, and Preonas, Louis. (2021). <em>MPAs and aspatial policies in artisanal fisheries</em>. Marine Resource Economics.</p>
+</div>
+</div>
+<p>The original model assumed away any other policy for simplicity, but there are often non-spatial policies in place. In the third paper we extend the model to show how different non-spatial policies interact with MPAs. The paper shows that when MPAs are small and enforcement budgets are tight, they cannot fix all open-access problems in the marinescape on their own. But they can still generate win-win outcomes under lower enforcement by leveraging behavioural responses—especially when paired with non-spatial policies that shift incentives and participation.</p>
+</section>
+<section id="final-thoughts" class="level2">
+<h2 class="anchored" data-anchor-id="final-thoughts">Final thoughts</h2>
+<p>There is a clear trend in economics towards less theory and more data-driven work. Whether that comes from a profound realisation of the limits of theory, or the greatly reduced cost of data and computation, I do not know. I myself have mostly done ‘data work’ in my career.</p>
+<p>To me, this project shows that there is not only room for theory, but a real need. In practice, MPAs are established for many reasons, few of them guided by scientific knowledge. In fact, many of MPAs are ‘paper parks’, meaning that there is no budget for enforcement. In this context, we cannot learn whether ‘MPAs work’ by evaluating current MPAs—even with the strongest identification strategy.</p>
+<p>Finally, I do not mean that <strong>all</strong> work to evaluate the impact of MPAs (or Protected Areas in general) is useless. A good study may plausibly claim a causal interpretation for the effect of <strong>a given</strong> MPA. This is internally valid and that may be useful on its own. The problem is the external validity. Considering the uniqueness of each MPA and its environment, how much can we infer about the world beyond that <strong>one</strong> MPA?</p>
 
 
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script defer="" src="../../assets/picture-swap.js"></script>

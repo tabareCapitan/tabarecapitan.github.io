@@ -1,7 +1,61 @@
 ---
 title: "The economics of edible insects"
-description: "in progress"
-categories: [research, active]
+description: "🦗 🐛 🐜"
+categories: [research, environment, python]
 ---
 
-This project is in progress. I'm (slowly) working on a summary for this section.
+# The economics of edible insects
+
+
+If the total world population were to adopt the average diet of most rich countries, there would be not enough habitable land on the planet to produce that much food (Alexander et al., 2016; Ritchie, 2017). **The planet, quite literally, cannot provide that much.** This is not only unfair but unsustainable, particularly when population and global income growth are expected. Something must be done.
+
+In this this project, I explore the potential for edible insects to transform the global food system. Providing not just protein, but **a feasible way to mitigate both climate change and biodiversity loss**.
+
+## Why insects?
+
+First, the fundamental economics of production can be unusually favourable. Insects convert feed to edible biomass efficiently, they can be reared in high density, and many species thrive in warm and humid conditions that are expensive to replicate in conventional indoor farming.
+
+
+::: {.callout-note icon="false"}
+
+You can deliver the same protein per 100 g of edible biomass while using fewer inputs and generating fewer externalities than traditional livestock.
+
+:::
+
+
+Second, insects are nutritionally dense. Depending on species and processing, they can deliver high-quality protein alongside fats and micro-nutrients. They are also flexible as an ingredient. If the consumer is not ready for a whole insect on a plate, that is not a deal-breaker: insects can be milled and blended into familiar formats (bars, pasta, snacks). I’ve personally tasted granola bars made with crickets, and there is no way to tell there is cricket flour in the mix.
+
+
+## Challenges
+
+So why are insect-based foods still a niche?
+
+Because the binding constraint is not only production, which is challenging enough. It is adoption.
+
+On the supply side, scaling requires research and development to standardise rearing, automate processes, manage disease risk, and guarantee consistent quality. On the policy side, regulation tends to lag behind the market: firms hesitate to invest at scale under uncertainty, while regulators hesitate to write specific rules for an industry that is still forming. And on the demand side, insects face a psychological barrier that is real, predictable, and not solved by insisting that consumers ‘should’ care.
+
+That last piece is where behavioural economics becomes practical. In product terms, adoption is a funnel: awareness is necessary, but trial and repeat are what make the category real. The open question is what moves people along that funnel—information, experience, price, convenience, social proof, or some mix—and how persistent those effects are.
+
+
+## My work
+
+My work in this area has three parts.
+
+One strand develops the economic case. In ‘Bugs with benefits: The economics of edible insects’ (draft), we make the case for edible insects. The paper is deliberately cross-disciplinary—because the economics here sits on biology—and it aims to make the topic legible to environmental economists. We make a controversial claim: there is no realistic way to quickly and meaningfully mitigate both climate change and biodiversity loss beyond making edible insects a significant part of the global system.
+
+A second strand tests a simple adoption lever: messaging. In *‘Bite me: Towards consumers’ acceptance of edible insects’* (draft), I ran a randomised online survey experiment in Nordic countries. Participants received a baseline safety message, and some additionally received a short paragraph highlighting either environmental or nutritional benefits. The result is sobering in a useful way: small informational nudges did not meaningfully shift willingness to try. Many participants were already decided—most are willing to try. If that pattern holds more broadly, then **for firms the bottleneck is less ‘better persuasion’ and more ‘better product’: availability, format, taste, price, and opportunities for low-friction trial.**
+
+The third strand is a research plan that pushes the messaging idea one step further by targeting identity. *‘Motivated reasoning in sustainable consumption: A partisan environmental framing experiment’* is a research plan. The design tests whether the same environmental content lands differently when framed in language that is politically congruent: a climate-focused frame versus a stewardship-and-resources frame. The goal is not to win an argument. It is to learn whether identity filters environmental information strongly enough to matter for real adoption decisions, and whether targeted framing is worth pursuing relative to more structural levers.
+
+Across these pieces, the theme is straightforward: edible insects look promising on the production side, but the market outcome depends on whether adoption barriers can be reduced in a way that scales. The useful research agenda is therefore not ‘insects are sustainable’ (we already know the direction of that claim), but ‘what is the cheapest and most reliable way to move trial, repeat, and long-run acceptance?’
+
+
+## References
+
+- Alexander P, Brown C, Arneth A, Finnigan J and Rounsevell MD (2016) Human appropriation of land for food: The role of diet. _Global Environmental Change_ **41**, 88-98.
+
+- Ritchie H (2017) Our World in Data: How much of the world’s land would we need in order to feed the global population with the average diet of a given country? Available at https://ourworldindata.org/agricultural-land-by-global-diets
+
+
+
+
