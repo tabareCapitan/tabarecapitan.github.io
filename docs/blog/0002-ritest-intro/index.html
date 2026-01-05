@@ -409,7 +409,7 @@ window.Quarto = {
 <p>The obvious next step is a <span class="math inline">\(t\)</span>-test. That is what most analyses of this kind start with, and often where they stop.</p>
 <p>But in this setting, the only thing that was actually random was the assignment itself: who saw the feature and who did not. The outcomes were not sampled at random from a population; they were observed after a deliberate assignment.</p>
 <p>Instead of asking what would happen if I repeatedly sampled new users, I wanted to know what would have happened under different random assignments of the same users. This is the logic of randomisation inference.</p>
-<p>I’ve done this before in Stata, where a well-established command, <code>ritest</code>, covers most practical uses of randomisation inference. But I was working in Python. I found tools that cover some uses, but I did not find a functional equivalent to Stata’s <code>ritest</code>.</p>
+<p>I’ve done this before in Stata, where a well-established command,<a href="https://github.com/simonheb/ritest"><code>ritest</code></a>, covers most practical uses of randomisation inference. But I was working in Python. I found tools that cover some uses, but I did not find a functional equivalent to Stata’s <code>ritest</code>.</p>
 <p>So I wrote Python’s <code>ritest</code>.</p>
 <p>This post is a short announcement. My new package, <a href="https://tabarecapitan.com/projects/ritest/"><code>ritest</code></a>, brings a familiar randomisation inference tool to Python. It is designed to be easy to use, flexible, and fast.</p>
 <section id="randomisation-inference" class="level2">
@@ -454,13 +454,13 @@ window.Quarto = {
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    formula<span class="op">=</span><span class="st">"activated_7d ~ treat + pre_usage + device_ios + region_eu"</span>,</span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    stat<span class="op">=</span><span class="st">"treat"</span>,</span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    strata<span class="op">=</span><span class="st">"strata_id"</span>,</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    reps<span class="op">=</span><span class="dv">9999</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    reps<span class="op">=</span><span class="dv">5000</span>,</span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.05</span>,</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    seed<span class="op">=</span><span class="dv">123</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    seed<span class="op">=</span><span class="dv">23</span>,</span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(res.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This is the workflow I personally wanted: I can express the estimand as a familiar regression coefficient, and I can get assignment-based uncertainty without pretending the only randomness in the problem is sampling noise.</p>
+<p>This is the workflow I wanted: I can express the estimand as a familiar regression coefficient, and I can get assignment-based uncertainty without pretending the only randomness in the problem is sampling noise.</p>
 <p>Now imagine that the adoption question is not your bottleneck. Your bottleneck is latency: you care about the median time-to-value, which is skewed and full of long tails. You still have a randomised assignment, but you do not want to force the problem into a linear model.</p>
 <p>That is what the generic path is for.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ritest <span class="im">import</span> ritest</span>
@@ -474,13 +474,13 @@ window.Quarto = {
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    df<span class="op">=</span>df,</span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    permute_var<span class="op">=</span><span class="st">"treat"</span>,</span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    stat_fn<span class="op">=</span>median_diff,</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    reps<span class="op">=</span><span class="dv">9999</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    reps<span class="op">=</span><span class="dv">5000</span>,</span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.05</span>,</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    seed<span class="op">=</span><span class="dv">123</span>,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    seed<span class="op">=</span><span class="dv">23</span>,</span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(res.pvalue)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The point is not that medians are “better” than conditional means (coefficients). The point is that a real workflow often has both kinds of questions, and the underlying source of uncertainty (the assignment) is the same.</p>
+<p>The point is not that medians are “better” than conditional means. The point is that a real workflow often has both kinds of questions, and the underlying source of uncertainty (the assignment) is the same.</p>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>

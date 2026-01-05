@@ -19,6 +19,27 @@ You can find citation metrics and other outputs on [Google Scholar](https://scho
 
 
 ::: {.callout-note .callout-clear collapse="true" icon="false" appearance="minimal"}
+## `ritest`: randomization inference in Python 🎲
+
+---
+
+**Abstract:** `ritest` is a Python package implementing RI in a workflow similar to Stata’s `ritest` command (Heß, 2017). It supports (i) a fast linear-model path for regression coefficients, and (ii) a generic path that accepts arbitrary user-defined statistics. For linear models, `ritest` additionally implements test inversion to obtain coefficient confidence interval (CI) bounds and a full $p(\beta_0)$ profile (“CI band”) over candidate null values, designed to be practical even with large permutation counts.
+
+---
+
+<div style="font-size: 0.80em;">
+[![status](https://joss.theoj.org/papers/8a9c5ad901eaeb93462ff9179a8e9d03/status.svg)](https://joss.theoj.org/papers/8a9c5ad901eaeb93462ff9179a8e9d03)
+[project page](/projects/ritest/index.qmd)
+,
+[code](https://github.com/tabareCapitan/ritest)
+,
+[paper](https://github.com/tabareCapitan/ritest/tree/master/paper)
+</div>
+:::
+
+
+
+::: {.callout-note .callout-clear collapse="true" icon="false" appearance="minimal"}
 ## Investigating the analytical reproducibility of the social and behavioural sciences 🔍
 
 ---
@@ -27,7 +48,7 @@ You can find citation metrics and other outputs on [Google Scholar](https://scho
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with many others (resubmitted, <em>Nature</em>)
+<div style="font-size: 0.80em;">coauthored with many others (resubmitted, <em>Nature</em>)
 <br>
 [<b>project page</b>](https://www.cos.io/score)
 </div>
@@ -44,7 +65,7 @@ You can find citation metrics and other outputs on [Google Scholar](https://scho
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Capitán
+<div style="font-size: 0.80em;">coauthored with Capitán
 <br>
 [<b>project page</b>](/projects/insects/index.qmd)
 </div>
@@ -61,8 +82,7 @@ You can find citation metrics and other outputs on [Google Scholar](https://scho
 
 ---
 
-<div style="font-size: 0.80em;">Sole author
-<br>
+<div style="font-size: 0.80em;">
 [<b>project page</b>](/projects/insects/index.qmd)
 </div>
 :::
@@ -78,7 +98,7 @@ of referent formation.
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Thunström, Van ‘t Veld, and Nordström</div>
+<div style="font-size: 0.80em;">coauthored with Thunström, Van ‘t Veld, and Nordström</div>
 :::
 
 
@@ -87,11 +107,11 @@ of referent formation.
 
 ---
 
-**Abstract:** Coming soon.
+**Abstract:** To be added later.
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Méndez</div>
+<div style="font-size: 0.80em;">coauthored with Méndez</div>
 :::
 
 
@@ -110,7 +130,7 @@ generally.
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Thunström, Van ‘t Veld, Nordström, and Shogren (accepted, <em>Journal of Risk and Uncertainty</em>)
+<div style="font-size: 0.80em;">coauthored with Thunström, Van ‘t Veld, Nordström, and Shogren (accepted, <em>Journal of Risk and Uncertainty</em>)
 <br>
 [<b>pdf</b>](https://doi.org/10.31235/osf.io/vy6af)
 </div>
@@ -127,7 +147,7 @@ generally.
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with many others (accepted, <em>Nature</em>)
+<div style="font-size: 0.80em;">coauthored with many others (accepted, <em>Nature</em>)
 <br>
 [<b>project page</b>](https://www.cos.io/score)
 </div>
@@ -145,7 +165,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with many others (accepted, <em>Nature</em>)
+<div style="font-size: 0.80em;">coauthored with many others (accepted, <em>Nature</em>)
 <br>
 [<b>project page</b>](https://www.cos.io/score)
 </div>
@@ -161,7 +181,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with many others (<em>Nature Human Behavior</em>, 2024)
+<div style="font-size: 0.80em;">coauthored with many others (<em>Nature Human Behavior</em>, 2024)
 <br>
 [<b>pdf</b>](https://osf.io/preprints/metaarxiv/xdsjf/)
 ,
@@ -182,7 +202,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored as part of a large-scale collaboration with many others (<em>Royal Society Open Science</em>, 2024)
+<div style="font-size: 0.80em;">coauthored as part of a large-scale collaboration with many others (<em>Royal Society Open Science</em>, 2024)
 <br>
 [<b>journal</b>](https://royalsocietypublishing.org/doi/10.1098/rsos.240682)
 </div>
@@ -199,7 +219,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored as part of an <em>author-consortium</em> with many others (<em>Organizational Behavior and Human Decision Processes</em>, 2023)
+<div style="font-size: 0.80em;">coauthored as part of an <em>author-consortium</em> with many others (<em>Organizational Behavior and Human Decision Processes</em>, 2023)
 <br>
 [<b>journal</b>](https://www.sciencedirect.com/science/article/pii/S0749597823000560?via%3Dihub#s0170)
 </div>
@@ -216,7 +236,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Alpízar, Madrigal-Ballestero, and Pattanayak (<em>Resource and Energy Economics</em>, 2021)
+<div style="font-size: 0.80em;">coauthored with Alpízar, Madrigal-Ballestero, and Pattanayak (<em>Resource and Energy Economics</em>, 2021)
 <br>
 [<b>pdf</b>](https://doi.org/10.31235/osf.io/wcz8s)
 ,
@@ -237,7 +257,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Albers, Ashworth, Madrigal-Ballestero, and Preonas (<em>Marine Resource Economics</em>, 2021)
+<div style="font-size: 0.80em;">coauthored with Albers, Ashworth, Madrigal-Ballestero, and Preonas (<em>Marine Resource Economics</em>, 2021)
 <br>
 [<b>pdf</b>](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf)
 ,
@@ -258,7 +278,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Albers, Preonas, Robinson, and Madrigal-Ballestero (<em>Environmental and Resource Economics</em>, 2020)
+<div style="font-size: 0.80em;">coauthored with Albers, Preonas, Robinson, and Madrigal-Ballestero (<em>Environmental and Resource Economics</em>, 2020)
 <br>
 [<b>journal</b>](https://doi.org/10.1007/s10640-020-00472-7)
 ,
@@ -277,7 +297,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with many others (<em>Regional Environmental Change</em>, 2020)
+<div style="font-size: 0.80em;">coauthored with many others (<em>Regional Environmental Change</em>, 2020)
 <br>
 [<b>journal</b>](https://doi.org/10.1007/s10113-020-01592-y)
 </div>
@@ -294,7 +314,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Madrigal-Ballestero, Salas, and Córdoba (<em>Waterlines</em>, 2019)
+<div style="font-size: 0.80em;">coauthored with Madrigal-Ballestero, Salas, and Córdoba (<em>Waterlines</em>, 2019)
 <br>
 [<b>pdf</b>](https://www.researchgate.net/publication/338340783_Household_and_community_responses_to_seasonal_droughts_in_rural_areas_of_Costa_Rica)
 ,
@@ -313,7 +333,7 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Madrigal-Ballestero, Albers, and Salas (<em>Ambio</em>, 2017)
+<div style="font-size: 0.80em;">coauthored with Madrigal-Ballestero, Albers, and Salas (<em>Ambio</em>, 2017)
 <br>
 [<b>pdf</b>](https://www.researchgate.net/profile/Roger_Madrigal-Ballestero/publication/316896515_Marine_protected_areas_in_Costa_Rica_How_do_artisanal_fishers_respond/links/5a2c89ae45851552ae7c9bdb/Marine-protected-areas-in-Costa-Rica-How-do-artisanal-fishers-respond.pdf)
 ,
