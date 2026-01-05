@@ -2,10 +2,8 @@
 title: "On inference"
 date: 2025-12-29
 categories: [statistics]
-featured: "⭐"
 draft: false
 ---
-
 
 
 Consider the following hypothetical example. Spotify is investing in audiobooks, and wants to learn how much more discovery it can drive without harming core music listening. An obvious first step is an A/B test: add an ‘Audiobooks’ shelf to the Home feed for *some* eligible users. After a couple of weeks, estimate the treated minus control difference in time spent listening to books, with a guardrail like time spent listening to music.
@@ -30,7 +28,7 @@ That story is the realm of *randomisation inference*. It is also the clean way t
 
 ## Quantifying uncertainty
 
-I find it useful to think about inference in three layers. The first layer is the estimator (or statistic): it produces an estimate $\hat{\tau}$ of a target effect $\tau$. You need *something* to make an inference about. Furthermore, random assignment lends causal credibility to the interpretation of the estimate.  The second layer relates to the scope of the inference. Are we trying to make inferences about the broader population we want to generalise to? (replay mode 1) Or are we trying to make inferences about who happened to see the ‘Audiobook’ shelf due to the particular realisation of the randomisation process? (replay mode 2) Or maybe both? The third layer refers to the quantification of the uncertainty *within the scope of the inference*. It is here that we can find the many methods that take the first two layers and turn them into $p$-values and confidence intervals.
+I find it useful to think about inference in three layers. The first layer is the estimator (or statistic): it produces an estimate $\hat{\tau}$ of a target effect $\tau$. You need *something* to make an inference about. Furthermore, random assignment lends causal credibility to the interpretation of the estimate.  The second layer relates to the scope of the inference. Are we trying to make inferences about the broader population we want to generalise to? (replay mode 1) Or are we trying to make inferences about who happened to see the ‘Audiobooks’ shelf due to the particular realisation of the randomisation process? (replay mode 2) Or maybe both? The third layer refers to the quantification of the uncertainty *within the scope of the inference*. It is here that we can find the many methods that take the first two layers and turn them into $p$-values and confidence intervals.
 
 For example, in our hypothetical experiment, the first layer is the estimator. We compute the treatment effect estimate $\hat{\tau}$, for instance as the OLS coefficient on the treatment indicator, which (with an intercept) is algebraically equal to the treated–control difference in means,
 $$
@@ -108,7 +106,7 @@ This is not because the layers collapse into one. It is because the situation is
 
 If all you need is a quick answer to ‘did the shelf move audiobook listening?’, this is why your preferred software’s default often feels like it ‘just works’.
 
-But the friendly zone is not guaranteed. The moment the design stops ‘being randomise users 50/50’, the replay world changes, and the calculator has to match it.
+But the friendly zone is not guaranteed. The moment the design stops being “randomise users 50/50”, the replay world changes, and the calculator has to match it.
 
 For example, if you randomised within strata (country, device, prior engagement), then ‘replay the assignment’ means reshuffling *within strata*. A calculator that ignores this is quantifying uncertainty for a world that never could have happened. Alternatively, if assignment happens at a higher level (households, classrooms, markets), the effective sample size is the number of clusters, not the number of users. Many default approximations become fragile when there are few clusters.
 

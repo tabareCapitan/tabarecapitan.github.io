@@ -4,8 +4,10 @@ project:
 
 resources:
   - .nojekyll
-  - assets/images/profile/picture-dark.png
-  - assets/images/moon.png
+  - /assets/images/profile/picture-dark.png
+  - /assets/images/profile/picture-light.png
+  - /assets/images/moon.png
+  - /assets/images/sun.png
 
 website:
   title: "Tabaré Capitán"
@@ -26,9 +28,9 @@ website:
         text: blog
       - href: projects/index.qmd
         text: projects
-      - href: papers/papers.qmd
+      - href: papers/index.qmd
         text: papers
-      - href: tools/tools.qmd
+      - href: tools/index.qmd
         text: tools
   sidebar:
     - id: "proj-ritest"
@@ -72,10 +74,10 @@ website:
 
 format:
   html:
-    include-in-header:
-      - text: |
-          <link rel="preload" as="image" href="/picture-light.png">
-          <link rel="preload" as="image" href="/picture-dark.png">
+    # include-in-header:
+    #   - text: |
+    #       <link rel="preload" as="image" href="/picture-light.png">
+    #       <link rel="preload" as="image" href="/picture-dark.png">
     include-after-body:
       - assets/picture-swap.html
     theme:

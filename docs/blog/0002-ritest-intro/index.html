@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-01-06">
 
-<title>tools – Tabaré Capitán</title>
+<title>Introducing ritest: randomisation inference in Python – Tabaré Capitán</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,31 +21,66 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,18 +108,41 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<link rel="preload" as="image" href="../picture-light.png">
-<link rel="preload" as="image" href="../picture-dark.png">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Tabaré Capitán">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Introducing ritest: randomisation inference in Python – Tabaré Capitán">
 <meta property="og:description" content="Projects and blog on causal inference.">
-<meta property="og:image" content="https://www.tabarecapitan.com/tools/images/kitty.png">
 <meta property="og:site_name" content="Tabaré Capitán">
-<meta property="og:image:alt" content="kitty terminal">
-<meta property="og:image:height" content="1097">
-<meta property="og:image:width" content="1658">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -251,14 +310,14 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/images/sun.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/sun.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Tabaré Capitán</span>
     </a>
   </div>
@@ -269,23 +328,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html"> 
+    <a class="nav-link" href="../../blog/index.html"> 
 <span class="menu-text">blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/index.html"> 
+    <a class="nav-link" href="../../projects/index.html"> 
 <span class="menu-text">projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../papers/papers.html"> 
+    <a class="nav-link" href="../../papers/index.html"> 
 <span class="menu-text">papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../tools/tools.html" aria-current="page"> 
+    <a class="nav-link" href="../../tools/index.html"> 
 <span class="menu-text">tools</span></a>
   </li>  
 </ul>
@@ -297,7 +356,33 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Introducing <code>ritest</code>: randomisation inference in Python</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">statistics</div>
+                <div class="quarto-category">software</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 6, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -305,192 +390,108 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#writing" id="toc-writing" class="nav-link" data-scroll-target="#writing">Writing</a>
-  <ul class="collapse">
-  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
-  <li><a href="#non-code" id="toc-non-code" class="nav-link" data-scroll-target="#non-code">Non-code</a></li>
-  </ul></li>
-  <li><a href="#operations" id="toc-operations" class="nav-link" data-scroll-target="#operations">Operations</a></li>
-  <li><a href="#infrastructure" id="toc-infrastructure" class="nav-link" data-scroll-target="#infrastructure">Infrastructure</a>
-  <ul class="collapse">
-  <li><a href="#os" id="toc-os" class="nav-link" data-scroll-target="#os">OS</a></li>
-  <li><a href="#sync-and-storage" id="toc-sync-and-storage" class="nav-link" data-scroll-target="#sync-and-storage">Sync and storage</a></li>
-  <li><a href="#website" id="toc-website" class="nav-link" data-scroll-target="#website">Website</a></li>
-  </ul></li>
-  <li><a href="#screenshots" id="toc-screenshots" class="nav-link" data-scroll-target="#screenshots">Screenshots</a></li>
+  <li><a href="#randomisation-inference" id="toc-randomisation-inference" class="nav-link active" data-scroll-target="#randomisation-inference">Randomisation inference</a></li>
+  <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>I like when people share the tools they use, so here is my contribution.</p>
-<p>In the end, my work is to write, in one form or another. So, tools for writing are my ‘writing layer’; time spent here is time well spent. But then you have to create new files, move them around, rename them, save them, store them, and keep track of their changes. Tools in this category are the ‘operations layer’; I want to spend as little time as possible here. Finally, all of this has to run on something. This is the ‘infrastructure layer’; I don’t even want to notice that this layer exists.</p>
-<p>I try to keep a consistent look across tools, which is provided by <a href="https://catppuccin.com/">Catppuccin</a> themes.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This is not a tutorial or a guide. It is also not a list of recommendations. It is just a list of some of the tools I use.</p>
-</div>
-</div>
+
+<p>A few months ago I was analysing data from a randomised experiment aimed at increasing product adoption. It was the kind of project that shows up everywhere: a new feature ships, some users see it, some do not, and the goal is to figure out whether the feature had the intended effect.</p>
+<p>The obvious next step is a <span class="math inline">\(t\)</span>-test. That is what most analyses of this kind start with, and often where they stop.</p>
+<p>But in this setting, the only thing that was actually random was the assignment itself: who saw the feature and who did not. The outcomes were not sampled at random from a population; they were observed after a deliberate assignment.</p>
+<p>Instead of asking what would happen if I repeatedly sampled new users, I wanted to know what would have happened under different random assignments of the same users. This is the logic of randomisation inference.</p>
+<p>I’ve done this before in Stata, where a well-established command, <code>ritest</code>, covers most practical uses of randomisation inference. But I was working in Python. I found tools that cover some uses, but I did not find a functional equivalent to Stata’s <code>ritest</code>.</p>
+<p>So I wrote Python’s <code>ritest</code>.</p>
+<p>This post is a short announcement. My new package, <a href="https://tabarecapitan.com/projects/ritest/"><code>ritest</code></a>, brings a familiar randomisation inference tool to Python. It is designed to be easy to use, flexible, and fast.</p>
+<section id="randomisation-inference" class="level2">
+<h2 class="anchored" data-anchor-id="randomisation-inference">Randomisation inference</h2>
+<p>When an experiment is randomised, there are two different stories you can tell about uncertainty.</p>
+<p>One story is the ‘sampling’ story. You imagine your dataset as one draw from a larger population, and you ask what would happen if you could repeat the data-collection process. That is the story behind most textbook standard errors and t-tests.</p>
+<p>The other story is the ‘assignment’ story. You hold the outcomes fixed and ask what would have happened under different random assignments of the same treatment. That is the story behind randomisation inference.</p>
+<p>Operationally, randomisation inference is simple:</p>
+<ol type="1">
+<li>pick a statistic that measures the effect you care about</li>
+<li>compute it on the observed assignment</li>
+<li>recompute it under many alternative assignments that respect the experimental design</li>
+<li>compare the observed statistic to its randomisation distribution</li>
+</ol>
+<p>That’s it. The hard part, in practice, is doing it in a way that is fast enough to use, and strict enough about the design to be trustworthy.</p>
 </section>
-<section id="writing" class="level2">
-<h2 class="anchored" data-anchor-id="writing">Writing</h2>
-<section id="code" class="level3">
-<h3 class="anchored" data-anchor-id="code">Code</h3>
-<p>I use both <a href="https://code.visualstudio.com/">VS Code</a> and <a href="https://neovim.io/">Neovim</a>. I have a basic setup in VS Code, nothing worth mentioning here. Neovim is more interesting. My starting point is the <a href="https://github.com/dam9000/kickstart-modular.nvim">modular version</a> of <a href="https://github.com/nvim-lua/kickstart.nvim"><code>kickstart.nvim</code></a>, with a few additional plugins and customisations.</p>
-<p>I also use <a href="https://www.stata.com/">Stata</a> when the project is right and I can choose the software. It remains my favourite software for exploratory data analysis (EDA), especially for applied work in economics.</p>
+<section id="features" class="level2">
+<h2 class="anchored" data-anchor-id="features">Features</h2>
+<p><code>ritest</code> supports two ways of defining the test statistic. In the most common case, the statistic is a coefficient from a linear model, specified through a regression formula. When that is not appropriate, you can instead provide a custom Python function that maps the data to a single scalar statistic.</p>
+<p>In both cases, permutations can be constrained to respect the experimental design, including stratified randomisation, clustered assignment, and optional weighting on the linear path.</p>
+<p>By default, <code>ritest</code> makes the Monte Carlo uncertainty in the p-value explicit when permutations are sampled rather than enumerated (which is almost always true). In that case, the p-value itself is an estimate, and the output includes a confidence interval for that estimate. On the linear path, the package also reports coefficient bounds (or a confidence interval) by default.</p>
+<p>The package can be installed from PyPI:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install ritest<span class="op">-</span>python</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="non-code" class="level3">
-<h3 class="anchored" data-anchor-id="non-code">Non-code</h3>
-<p>I use <a href="https://obsidian.md/">Obsidian</a> to write everything that I want to keep, which is a lot to ask from a tool. Still, I’m pretty comfortable with this choice. The <a href="https://obsidian.md/about">developers</a> are active and seem reasonable. And there is also an active <a href="https://docs.obsidian.md/Home">community</a> building and maintaining many useful plugins.</p>
-<p>Obsidian is not open-source, but it has some audits and a feasible business model, which makes me believe that it will be around for the long term. The business model is simple: you only pay if you want sync or publishing. Because it’s funded directly by users, development can stay focused on product rather than outside pressures. Most importantly, there is no file-level lock-in because the actual notes are plain text Markdown files (see <a href="https://stephango.com/file-over-app">File over app</a>).</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Plugins
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ul>
-<li><a href="https://obsidian.md/plugins?id=better-word-count">Better Word Count</a></li>
-<li><a href="https://blacksmithgu.github.io/obsidian-dataview/">Dataview</a></li>
-<li><a href="https://obsidian.md/plugins?id=gotoheading">Go to Heading</a></li>
-<li><a href="https://obsidian.md/plugins?id=obsidian-hider">Hider</a></li>
-<li><a href="https://obsidian.md/plugins?id=homepage">Homepage</a></li>
-<li><a href="https://obsidian.md/plugins?id=latex-suite">LaTeX Suite</a></li>
-<li><a href="https://obsidian.md/plugins?id=obsidian-pandoc">Pandoc</a></li>
-<li><a href="https://obsidian.md/plugins?id=quick-switcher-plus-plus">Quick Switcher++</a></li>
-<li><a href="https://obsidian.md/plugins?id=quickadd">QuickAdd</a></li>
-<li><a href="https://obsidian.md/plugins?id=remember-cursor-position">Remember Cursor Position</a></li>
-<li><a href="https://obsidian.md/plugins?id=templater-obsidian">Templater</a></li>
-<li><a href="https://obsidian.md/plugins?id=text-snippets">Text Snippets</a></li>
-<li><a href="https://obsidian.md/plugins?id=text-to-speech">TTS</a></li>
-<li><a href="https://obsidian.md/plugins?id=typewriter-scroll">Typewriter Scroll</a></li>
-<li><a href="https://github.com/mgmeyers/obsidian-zotero-integration">Zotero Integration</a>.</li>
-</ul>
-</div>
-</div>
-</div>
-<p>I use <a href="https://workflowy.com/">Workflowy</a> for text that is meant to disappear: shopping lists, to-do lists, travel itineraries, and more. It’s a simple, fast, and flexible outliner that works well for quick notes and lists. And they recently added the Catppuccin theme!</p>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<p>Here is a realistic pattern from product work. Imagine a rollout where users are randomised to see a new onboarding flow. The outcome is whether the user activates within 7 days. You also have pre-treatment covariates that help with precision (previous activity, device type, country). The effect you want is the coefficient on <code>treat</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ritest <span class="im">import</span> ritest</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Example column meanings:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># - activated_7d: 0/1 (activated within 7 days)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># - treat: 0/1 (assigned to new onboarding)</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># - pre_usage: numeric (pre-treatment engagement)</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># - device_ios: 0/1 (pre-built dummy; you can build dummies upstream)</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># - region_eu: 0/1 (pre-built dummy)</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># - strata_id: str/int (block or bucket used in the randomisation)</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> ritest(</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    df<span class="op">=</span>df,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    permute_var<span class="op">=</span><span class="st">"treat"</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    formula<span class="op">=</span><span class="st">"activated_7d ~ treat + pre_usage + device_ios + region_eu"</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    stat<span class="op">=</span><span class="st">"treat"</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    strata<span class="op">=</span><span class="st">"strata_id"</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    reps<span class="op">=</span><span class="dv">9999</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.05</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    seed<span class="op">=</span><span class="dv">123</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(res.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This is the workflow I personally wanted: I can express the estimand as a familiar regression coefficient, and I can get assignment-based uncertainty without pretending the only randomness in the problem is sampling noise.</p>
+<p>Now imagine that the adoption question is not your bottleneck. Your bottleneck is latency: you care about the median time-to-value, which is skewed and full of long tails. You still have a randomised assignment, but you do not want to force the problem into a linear model.</p>
+<p>That is what the generic path is for.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ritest <span class="im">import</span> ritest</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> median_diff(d):</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    treated <span class="op">=</span> d.loc[d[<span class="st">"treat"</span>] <span class="op">==</span> <span class="dv">1</span>, <span class="st">"time_to_value_hours"</span>].median()</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    control <span class="op">=</span> d.loc[d[<span class="st">"treat"</span>] <span class="op">==</span> <span class="dv">0</span>, <span class="st">"time_to_value_hours"</span>].median()</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> treated <span class="op">-</span> control</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> ritest(</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    df<span class="op">=</span>df,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    permute_var<span class="op">=</span><span class="st">"treat"</span>,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    stat_fn<span class="op">=</span>median_diff,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    reps<span class="op">=</span><span class="dv">9999</span>,</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.05</span>,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    seed<span class="op">=</span><span class="dv">123</span>,</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(res.pvalue)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The point is not that medians are “better” than conditional means (coefficients). The point is that a real workflow often has both kinds of questions, and the underlying source of uncertainty (the assignment) is the same.</p>
 </section>
-</section>
-<section id="operations" class="level2">
-<h2 class="anchored" data-anchor-id="operations">Operations</h2>
-<p>For version control I use <a href="https://git-scm.com/">git</a>, with <a href="https://github.com/">GitHub</a> as the remote server.</p>
-<p>My terminal setup is built around <a href="https://sw.kovidgoyal.net/kitty/">kitty</a> and <a href="https://fishshell.com/">fish</a>, with <a href="https://starship.rs/">starship</a> for the prompt. I use <a href="https://github.com/tmux/tmux">tmux</a> for sessions, <a href="https://github.com/junegunn/fzf">fzf</a> for fuzzy search, <a href="https://github.com/ajeetdsouza/zoxide">zoxide</a> for fast directory jumps, and <a href="https://yazi-rs.github.io/">yazi</a> as a terminal file manager.</p>
-</section>
-<section id="infrastructure" class="level2">
-<h2 class="anchored" data-anchor-id="infrastructure">Infrastructure</h2>
-<section id="os" class="level3">
-<h3 class="anchored" data-anchor-id="os">OS</h3>
-<p>I use Linux (<a href="https://fedoraproject.org/">Fedora</a>). I’m certainly not going to tell you that this is ‘the best’ Linux distro out there. In fact, I think most (popular) distros are good enough for most. What I can tell you is that Fedora’s level of conservatism fits my own risk aversion. It’s not trying to be cutting edge, but it is also not afraid to move on. I know that Fedora is (sort of) sponsored by IBM through its Red Hat ties, but development remains <a href="https://en.wikipedia.org/wiki/Fedora_Project">credibly independent</a>.</p>
-</section>
-<section id="sync-and-storage" class="level3">
-<h3 class="anchored" data-anchor-id="sync-and-storage">Sync and storage</h3>
-<p>I use <a href="https://nextcloud.com/">Nextcloud</a> for file sync, hosted on <a href="https://www.hetzner.com/storage/storage-share/">Hetzner Storage Share</a>.</p>
-</section>
-<section id="website" class="level3">
-<h3 class="anchored" data-anchor-id="website">Website</h3>
-<p>This site is built with <a href="https://quarto.org/">Quarto</a>, rendered locally, and deployed via <a href="https://pages.github.com/">GitHub Pages</a>.</p>
-</section>
-</section>
-<section id="screenshots" class="level2">
-<h2 class="anchored" data-anchor-id="screenshots">Screenshots</h2>
-<div id="toolsCarousel" class="carousel slide tools-carousel" tabindex="0" data-bs-ride="false" data-bs-keyboard="true">
-
-  <!-- indicators -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#toolsCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
-    <button type="button" data-bs-target="#toolsCarousel" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#toolsCarousel" data-bs-slide-to="2"></button>
-    <button type="button" data-bs-target="#toolsCarousel" data-bs-slide-to="3"></button>
-    <button type="button" data-bs-target="#toolsCarousel" data-bs-slide-to="4"></button>
-    <button type="button" data-bs-target="#toolsCarousel" data-bs-slide-to="5"></button>
-    <button type="button" data-bs-target="#toolsCarousel" data-bs-slide-to="6"></button>
-  </div>
-
-  <!-- slides -->
-  <div class="carousel-inner">
-
-    <div class="carousel-item active">
-      <img src="images/kitty.png" class="d-block w-100 tools-img" alt="kitty terminal">
-      <div class="tools-caption">kitty + fish + starship + zoxide + tmux</div>
-    </div>
-
-    <div class="carousel-item">
-      <img src="images/fzf.png" class="d-block w-100 tools-img" alt="fzf">
-      <div class="tools-caption">fzf</div>
-    </div>
-
-    <div class="carousel-item">
-      <img src="images/yazi.png" class="d-block w-100 tools-img" alt="yazi">
-      <div class="tools-caption">yazi</div>
-    </div>
-
-    <div class="carousel-item">
-      <img src="images/nvim.png" class="d-block w-100 tools-img" alt="neovim">
-      <div class="tools-caption">neovim</div>
-    </div>
-
-    <div class="carousel-item">
-      <img src="images/vscode.png" class="d-block w-100 tools-img" alt="VS Code">
-      <div class="tools-caption">VS Code</div>
-    </div>
-
-    <div class="carousel-item">
-      <img src="images/stata.png" class="d-block w-100 tools-img" alt="Stata">
-      <div class="tools-caption">Stata</div>
-    </div>
-
-    <div class="carousel-item">
-      <img src="images/obsidian.png" class="d-block w-100 tools-img" alt="Obsidian">
-      <div class="tools-caption">Obsidian</div>
-    </div>
-
-  </div>
-
-  <!-- arrows -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#toolsCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-
-  <button class="carousel-control-next" type="button" data-bs-target="#toolsCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-
-</div>
-<hr>
-<div style="text-align:center; margin-top:3rem;">
-<p><small style="font-size:0.6rem; opacity:0.7; text-decoration:none;"> <a href="../disclaimer.html" style="text-decoration:none; color:inherit;">Disclaimer</a> </small></p>
-</div>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>I built this package because I needed it. The project grew well beyond my original plan as I tried to emulate, in Python, the same sense of convenience I had relied on when doing randomisation inference in Stata. I’m happy with the result, and I hope others find it useful. Since this is my first time releasing a package on PyPI, I genuinely want to hear what people think.</p>
+<p>Finally, I want to encourage data scientists, data analysts, and researchers who are not familiar with randomisation inference to take a closer look. Randomisation inference can be appropriate whenever assignment is controlled and known. This is a common setting in many contexts: A/B testing in product and platform experiments, randomised controlled trials in economics and political science, greenhouse and field experiments in agricultural science, and laboratory or clinical studies in life sciences. If the main source of uncertainty in your problem comes from the design itself, randomisation inference may be right for you.</p>
 
 
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
-<script defer="" src="../assets/picture-swap.js"></script>
+<script defer="" src="../../assets/picture-swap.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

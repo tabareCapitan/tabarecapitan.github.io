@@ -1,0 +1,116 @@
+---
+title: "Introducing `ritest`: randomisation inference in Python"
+date: 2026-01-06
+categories: [statistics, software]
+draft: false
+---
+
+
+A few months ago I was analysing data from a randomised experiment aimed at increasing product adoption. It was the kind of project that shows up everywhere: a new feature ships, some users see it, some do not, and the goal is to figure out whether the feature had the intended effect.
+
+The obvious next step is a $t$-test. That is what most analyses of this kind start with, and often where they stop.
+
+But in this setting, the only thing that was actually random was the assignment itself: who saw the feature and who did not. The outcomes were not sampled at random from a population; they were observed after a deliberate assignment.
+
+Instead of asking what would happen if I repeatedly sampled new users, I wanted to know what would have happened under different random assignments of the same users. This is the logic of randomisation inference.
+
+I've done this before in Stata, where a well-established command, `ritest`, covers most practical uses of randomisation inference. But I was working in Python. I found tools that cover some uses, but I did not find a functional equivalent to Stata's `ritest`.
+
+So I wrote Python's `ritest`.
+
+This post is a short announcement. My new package, [`ritest`](https://tabarecapitan.com/projects/ritest/), brings a familiar randomisation inference tool to Python. It is designed to be easy to use, flexible, and fast.
+
+## Randomisation inference
+
+When an experiment is randomised, there are two different stories you can tell about uncertainty.
+
+One story is the ‘sampling’ story. You imagine your dataset as one draw from a larger population, and you ask what would happen if you could repeat the data-collection process. That is the story behind most textbook standard errors and t-tests.
+
+The other story is the ‘assignment’ story. You hold the outcomes fixed and ask what would have happened under different random assignments of the same treatment. That is the story behind randomisation inference.
+
+Operationally, randomisation inference is simple:
+
+1. pick a statistic that measures the effect you care about
+2. compute it on the observed assignment
+3. recompute it under many alternative assignments that respect the experimental design
+4. compare the observed statistic to its randomisation distribution
+
+That’s it. The hard part, in practice, is doing it in a way that is fast enough to use, and strict enough about the design to be trustworthy.
+
+## Features
+
+`ritest` supports two ways of defining the test statistic. In the most common case, the statistic is a coefficient from a linear model, specified through a regression formula. When that is not appropriate, you can instead provide a custom Python function that maps the data to a single scalar statistic.
+
+In both cases, permutations can be constrained to respect the experimental design, including stratified randomisation, clustered assignment, and optional weighting on the linear path.
+
+By default, `ritest` makes the Monte Carlo uncertainty in the p-value explicit when permutations are sampled rather than enumerated (which is almost always true). In that case, the p-value itself is an estimate, and the output includes a confidence interval for that estimate. On the linear path, the package also reports coefficient bounds (or a confidence interval) by default.
+
+The package can be installed from PyPI:
+
+```python
+pip install ritest-python
+```
+
+## Example
+
+Here is a realistic pattern from product work. Imagine a rollout where users are randomised to see a new onboarding flow. The outcome is whether the user activates within 7 days. You also have pre-treatment covariates that help with precision (previous activity, device type, country). The effect you want is the coefficient on `treat`.
+
+```python
+import pandas as pd
+from ritest import ritest
+
+# Example column meanings:
+# - activated_7d: 0/1 (activated within 7 days)
+# - treat: 0/1 (assigned to new onboarding)
+# - pre_usage: numeric (pre-treatment engagement)
+# - device_ios: 0/1 (pre-built dummy; you can build dummies upstream)
+# - region_eu: 0/1 (pre-built dummy)
+# - strata_id: str/int (block or bucket used in the randomisation)
+
+res = ritest(
+    df=df,
+    permute_var="treat",
+    formula="activated_7d ~ treat + pre_usage + device_ios + region_eu",
+    stat="treat",
+    strata="strata_id",
+    reps=9999,
+    alpha=0.05,
+    seed=123,
+)
+
+print(res.summary())
+```
+
+This is the workflow I personally wanted: I can express the estimand as a familiar regression coefficient, and I can get assignment-based uncertainty without pretending the only randomness in the problem is sampling noise.
+
+Now imagine that the adoption question is not your bottleneck. Your bottleneck is latency: you care about the median time-to-value, which is skewed and full of long tails. You still have a randomised assignment, but you do not want to force the problem into a linear model.
+
+That is what the generic path is for.
+
+```python
+from ritest import ritest
+
+def median_diff(d):
+    treated = d.loc[d["treat"] == 1, "time_to_value_hours"].median()
+    control = d.loc[d["treat"] == 0, "time_to_value_hours"].median()
+    return treated - control
+
+res = ritest(
+    df=df,
+    permute_var="treat",
+    stat_fn=median_diff,
+    reps=9999,
+    alpha=0.05,
+    seed=123,
+)
+
+print(res.pvalue)
+```
+
+The point is not that medians are “better” than conditional means (coefficients). The point is that a real workflow often has both kinds of questions, and the underlying source of uncertainty (the assignment) is the same.
+
+## Conclusion
+
+I built this package because I needed it. The project grew well beyond my original plan as I tried to emulate, in Python, the same sense of convenience I had relied on when doing randomisation inference in Stata. I'm happy with the result, and I hope others find it useful. Since this is my first time releasing a package on PyPI, I genuinely want to hear what people think.
+
+Finally, I want to encourage data scientists, data analysts, and researchers who are not familiar with randomisation inference to take a closer look. Randomisation inference can be appropriate whenever assignment is controlled and known. This is a common setting in many contexts: A/B testing in product and platform experiments, randomised controlled trials in economics and political science, greenhouse and field experiments in agricultural science, and laboratory or clinical studies in life sciences. If the main source of uncertainty in your problem comes from the design itself, randomisation inference may be right for you.

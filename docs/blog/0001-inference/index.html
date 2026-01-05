@@ -73,8 +73,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<link rel="preload" as="image" href="../../picture-light.png">
-<link rel="preload" as="image" href="../../picture-dark.png">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -307,11 +305,11 @@ window.Quarto = {
 <span class="menu-text">projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../papers/papers.html"> 
+    <a class="nav-link" href="../../papers/index.html"> 
 <span class="menu-text">papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../tools/tools.html"> 
+    <a class="nav-link" href="../../tools/index.html"> 
 <span class="menu-text">tools</span></a>
   </li>  
 </ul>
@@ -386,7 +384,7 @@ window.Quarto = {
 </section>
 <section id="quantifying-uncertainty" class="level2">
 <h2 class="anchored" data-anchor-id="quantifying-uncertainty">Quantifying uncertainty</h2>
-<p>I find it useful to think about inference in three layers. The first layer is the estimator (or statistic): it produces an estimate <span class="math inline">\(\hat{\tau}\)</span> of a target effect <span class="math inline">\(\tau\)</span>. You need <em>something</em> to make an inference about. Furthermore, random assignment lends causal credibility to the interpretation of the estimate. The second layer relates to the scope of the inference. Are we trying to make inferences about the broader population we want to generalise to? (replay mode 1) Or are we trying to make inferences about who happened to see the ‘Audiobook’ shelf due to the particular realisation of the randomisation process? (replay mode 2) Or maybe both? The third layer refers to the quantification of the uncertainty <em>within the scope of the inference</em>. It is here that we can find the many methods that take the first two layers and turn them into <span class="math inline">\(p\)</span>-values and confidence intervals.</p>
+<p>I find it useful to think about inference in three layers. The first layer is the estimator (or statistic): it produces an estimate <span class="math inline">\(\hat{\tau}\)</span> of a target effect <span class="math inline">\(\tau\)</span>. You need <em>something</em> to make an inference about. Furthermore, random assignment lends causal credibility to the interpretation of the estimate. The second layer relates to the scope of the inference. Are we trying to make inferences about the broader population we want to generalise to? (replay mode 1) Or are we trying to make inferences about who happened to see the ‘Audiobooks’ shelf due to the particular realisation of the randomisation process? (replay mode 2) Or maybe both? The third layer refers to the quantification of the uncertainty <em>within the scope of the inference</em>. It is here that we can find the many methods that take the first two layers and turn them into <span class="math inline">\(p\)</span>-values and confidence intervals.</p>
 <p>For example, in our hypothetical experiment, the first layer is the estimator. We compute the treatment effect estimate <span class="math inline">\(\hat{\tau}\)</span>, for instance as the OLS coefficient on the treatment indicator, which (with an intercept) is algebraically equal to the treated–control difference in means, <span class="math display">\[
 \hat{\tau} \;=\; \bar{Y}_{T} - \bar{Y}_{C}.
 \]</span></p>
@@ -437,7 +435,7 @@ p \;=\; \Pr\!\left( |T| \ge |t_{\text{obs}}| \;\middle|\; H_0:\tau=\tau_0 \right
 <li><strong>Different variance calculators converge.</strong> In the binary-treatment case, several common standard-error formulas are built from the same ingredients (treated and control variability and group sizes), so their numerical differences can get washed out.</li>
 </ul>
 <p>If all you need is a quick answer to ‘did the shelf move audiobook listening?’, this is why your preferred software’s default often feels like it ‘just works’.</p>
-<p>But the friendly zone is not guaranteed. The moment the design stops ‘being randomise users 50/50’, the replay world changes, and the calculator has to match it.</p>
+<p>But the friendly zone is not guaranteed. The moment the design stops being “randomise users 50/50”, the replay world changes, and the calculator has to match it.</p>
 <p>For example, if you randomised within strata (country, device, prior engagement), then ‘replay the assignment’ means reshuffling <em>within strata</em>. A calculator that ignores this is quantifying uncertainty for a world that never could have happened. Alternatively, if assignment happens at a higher level (households, classrooms, markets), the effective sample size is the number of clusters, not the number of users. Many default approximations become fragile when there are few clusters.</p>
 <p>This is the practical take of the three layers: inference is not a button you press after you get <span class="math inline">\(\hat{\tau}\)</span>. It is the combination of (i) what you estimated, (ii) what you think could have happened, and (iii) how you chose to quantify that.</p>
 </section>

@@ -6,7 +6,7 @@ listing:
   contents: "."
   sort: "date desc"
   type: table  # "default", "table", "grid"
-  fields: [featured, title, reading-time, categories]
+  fields: [title, reading-time, categories]
   categories: false
   sort-ui: false
   filter-ui: false

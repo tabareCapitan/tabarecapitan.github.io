@@ -10,7 +10,222 @@
 <atom:link href="https://www.tabarecapitan.com/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Projects and blog on causal inference.</description>
 <generator>quarto-1.7.33</generator>
-<lastBuildDate>Sun, 28 Dec 2025 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 05 Jan 2026 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Introducing ritest: randomisation inference in Python</title>
+  <link>https://www.tabarecapitan.com/blog/0002-ritest-intro/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>A few months ago I was analysing data from a randomised experiment aimed at increasing product adoption. It was the kind of project that shows up everywhere: a new feature ships, some users see it, some do not, and the goal is to figure out whether the feature had the intended effect.</p>
+<p>The obvious next step is a <img src="https://latex.codecogs.com/png.latex?t">-test. That is what most analyses of this kind start with, and often where they stop.</p>
+<p>But in this setting, the only thing that was actually random was the assignment itself: who saw the feature and who did not. The outcomes were not sampled at random from a population; they were observed after a deliberate assignment.</p>
+<p>Instead of asking what would happen if I repeatedly sampled new users, I wanted to know what would have happened under different random assignments of the same users. This is the logic of randomisation inference.</p>
+<p>I’ve done this before in Stata, where a well-established command, <code>ritest</code>, covers most practical uses of randomisation inference. But I was working in Python. I found tools that cover some uses, but I did not find a functional equivalent to Stata’s <code>ritest</code>.</p>
+<p>So I wrote Python’s <code>ritest</code>.</p>
+<p>This post is a short announcement. My new package, <a href="https://tabarecapitan.com/projects/ritest/"><code>ritest</code></a>, brings a familiar randomisation inference tool to Python. It is designed to be easy to use, flexible, and fast.</p>
+<section id="randomisation-inference" class="level2">
+<h2 class="anchored" data-anchor-id="randomisation-inference">Randomisation inference</h2>
+<p>When an experiment is randomised, there are two different stories you can tell about uncertainty.</p>
+<p>One story is the ‘sampling’ story. You imagine your dataset as one draw from a larger population, and you ask what would happen if you could repeat the data-collection process. That is the story behind most textbook standard errors and t-tests.</p>
+<p>The other story is the ‘assignment’ story. You hold the outcomes fixed and ask what would have happened under different random assignments of the same treatment. That is the story behind randomisation inference.</p>
+<p>Operationally, randomisation inference is simple:</p>
+<ol type="1">
+<li>pick a statistic that measures the effect you care about</li>
+<li>compute it on the observed assignment</li>
+<li>recompute it under many alternative assignments that respect the experimental design</li>
+<li>compare the observed statistic to its randomisation distribution</li>
+</ol>
+<p>That’s it. The hard part, in practice, is doing it in a way that is fast enough to use, and strict enough about the design to be trustworthy.</p>
+</section>
+<section id="features" class="level2">
+<h2 class="anchored" data-anchor-id="features">Features</h2>
+<p><code>ritest</code> supports two ways of defining the test statistic. In the most common case, the statistic is a coefficient from a linear model, specified through a regression formula. When that is not appropriate, you can instead provide a custom Python function that maps the data to a single scalar statistic.</p>
+<p>In both cases, permutations can be constrained to respect the experimental design, including stratified randomisation, clustered assignment, and optional weighting on the linear path.</p>
+<p>By default, <code>ritest</code> makes the Monte Carlo uncertainty in the p-value explicit when permutations are sampled rather than enumerated (which is almost always true). In that case, the p-value itself is an estimate, and the output includes a confidence interval for that estimate. On the linear path, the package also reports coefficient bounds (or a confidence interval) by default.</p>
+<p>The package can be installed from PyPI:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1">pip install ritest<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>python</span></code></pre></div>
+</section>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<p>Here is a realistic pattern from product work. Imagine a rollout where users are randomised to see a new onboarding flow. The outcome is whether the user activates within 7 days. You also have pre-treatment covariates that help with precision (previous activity, device type, country). The effect you want is the coefficient on <code>treat</code>.</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> pd</span>
+<span id="cb2-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> ritest <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> ritest</span>
+<span id="cb2-3"></span>
+<span id="cb2-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Example column meanings:</span></span>
+<span id="cb2-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># - activated_7d: 0/1 (activated within 7 days)</span></span>
+<span id="cb2-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># - treat: 0/1 (assigned to new onboarding)</span></span>
+<span id="cb2-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># - pre_usage: numeric (pre-treatment engagement)</span></span>
+<span id="cb2-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># - device_ios: 0/1 (pre-built dummy; you can build dummies upstream)</span></span>
+<span id="cb2-9"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># - region_eu: 0/1 (pre-built dummy)</span></span>
+<span id="cb2-10"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># - strata_id: str/int (block or bucket used in the randomisation)</span></span>
+<span id="cb2-11"></span>
+<span id="cb2-12">res <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> ritest(</span>
+<span id="cb2-13">    df<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>df,</span>
+<span id="cb2-14">    permute_var<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"treat"</span>,</span>
+<span id="cb2-15">    formula<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"activated_7d ~ treat + pre_usage + device_ios + region_eu"</span>,</span>
+<span id="cb2-16">    stat<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"treat"</span>,</span>
+<span id="cb2-17">    strata<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"strata_id"</span>,</span>
+<span id="cb2-18">    reps<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">9999</span>,</span>
+<span id="cb2-19">    alpha<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.05</span>,</span>
+<span id="cb2-20">    seed<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">123</span>,</span>
+<span id="cb2-21">)</span>
+<span id="cb2-22"></span>
+<span id="cb2-23"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(res.summary())</span></code></pre></div>
+<p>This is the workflow I personally wanted: I can express the estimand as a familiar regression coefficient, and I can get assignment-based uncertainty without pretending the only randomness in the problem is sampling noise.</p>
+<p>Now imagine that the adoption question is not your bottleneck. Your bottleneck is latency: you care about the median time-to-value, which is skewed and full of long tails. You still have a randomised assignment, but you do not want to force the problem into a linear model.</p>
+<p>That is what the generic path is for.</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> ritest <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> ritest</span>
+<span id="cb3-2"></span>
+<span id="cb3-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> median_diff(d):</span>
+<span id="cb3-4">    treated <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> d.loc[d[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"treat"</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"time_to_value_hours"</span>].median()</span>
+<span id="cb3-5">    control <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> d.loc[d[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"treat"</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"time_to_value_hours"</span>].median()</span>
+<span id="cb3-6">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> treated <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> control</span>
+<span id="cb3-7"></span>
+<span id="cb3-8">res <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> ritest(</span>
+<span id="cb3-9">    df<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>df,</span>
+<span id="cb3-10">    permute_var<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"treat"</span>,</span>
+<span id="cb3-11">    stat_fn<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>median_diff,</span>
+<span id="cb3-12">    reps<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">9999</span>,</span>
+<span id="cb3-13">    alpha<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.05</span>,</span>
+<span id="cb3-14">    seed<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">123</span>,</span>
+<span id="cb3-15">)</span>
+<span id="cb3-16"></span>
+<span id="cb3-17"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(res.pvalue)</span></code></pre></div>
+<p>The point is not that medians are “better” than conditional means (coefficients). The point is that a real workflow often has both kinds of questions, and the underlying source of uncertainty (the assignment) is the same.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>I built this package because I needed it. The project grew well beyond my original plan as I tried to emulate, in Python, the same sense of convenience I had relied on when doing randomisation inference in Stata. I’m happy with the result, and I hope others find it useful. Since this is my first time releasing a package on PyPI, I genuinely want to hear what people think.</p>
+<p>Finally, I want to encourage data scientists, data analysts, and researchers who are not familiar with randomisation inference to take a closer look. Randomisation inference can be appropriate whenever assignment is controlled and known. This is a common setting in many contexts: A/B testing in product and platform experiments, randomised controlled trials in economics and political science, greenhouse and field experiments in agricultural science, and laboratory or clinical studies in life sciences. If the main source of uncertainty in your problem comes from the design itself, randomisation inference may be right for you.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>statistics</category>
+  <category>software</category>
+  <guid>https://www.tabarecapitan.com/blog/0002-ritest-intro/</guid>
+  <pubDate>Mon, 05 Jan 2026 23:00:00 GMT</pubDate>
+</item>
 <item>
   <title>On inference</title>
   <link>https://www.tabarecapitan.com/blog/0001-inference/</link>
@@ -35,7 +250,7 @@
 </section>
 <section id="quantifying-uncertainty" class="level2">
 <h2 class="anchored" data-anchor-id="quantifying-uncertainty">Quantifying uncertainty</h2>
-<p>I find it useful to think about inference in three layers. The first layer is the estimator (or statistic): it produces an estimate <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Ctau%7D"> of a target effect <img src="https://latex.codecogs.com/png.latex?%5Ctau">. You need <em>something</em> to make an inference about. Furthermore, random assignment lends causal credibility to the interpretation of the estimate. The second layer relates to the scope of the inference. Are we trying to make inferences about the broader population we want to generalise to? (replay mode 1) Or are we trying to make inferences about who happened to see the ‘Audiobook’ shelf due to the particular realisation of the randomisation process? (replay mode 2) Or maybe both? The third layer refers to the quantification of the uncertainty <em>within the scope of the inference</em>. It is here that we can find the many methods that take the first two layers and turn them into <img src="https://latex.codecogs.com/png.latex?p">-values and confidence intervals.</p>
+<p>I find it useful to think about inference in three layers. The first layer is the estimator (or statistic): it produces an estimate <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Ctau%7D"> of a target effect <img src="https://latex.codecogs.com/png.latex?%5Ctau">. You need <em>something</em> to make an inference about. Furthermore, random assignment lends causal credibility to the interpretation of the estimate. The second layer relates to the scope of the inference. Are we trying to make inferences about the broader population we want to generalise to? (replay mode 1) Or are we trying to make inferences about who happened to see the ‘Audiobooks’ shelf due to the particular realisation of the randomisation process? (replay mode 2) Or maybe both? The third layer refers to the quantification of the uncertainty <em>within the scope of the inference</em>. It is here that we can find the many methods that take the first two layers and turn them into <img src="https://latex.codecogs.com/png.latex?p">-values and confidence intervals.</p>
 <p>For example, in our hypothetical experiment, the first layer is the estimator. We compute the treatment effect estimate <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Ctau%7D">, for instance as the OLS coefficient on the treatment indicator, which (with an intercept) is algebraically equal to the treated–control difference in means, <img src="https://latex.codecogs.com/png.latex?%0A%5Chat%7B%5Ctau%7D%20%5C;=%5C;%20%5Cbar%7BY%7D_%7BT%7D%20-%20%5Cbar%7BY%7D_%7BC%7D.%0A"></p>
 <p>Suppose that, in the second layer, we adopt a sampling-based replay story: the estimate <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Ctau%7D"> would have been different had the experiment observed a different random sample of users.</p>
 <p>In the third layer, we can quantify that uncertainty in several ways; with its interpretation being contingent on the sampling-based story.</p>
@@ -68,7 +283,7 @@
 <li><strong>Different variance calculators converge.</strong> In the binary-treatment case, several common standard-error formulas are built from the same ingredients (treated and control variability and group sizes), so their numerical differences can get washed out.</li>
 </ul>
 <p>If all you need is a quick answer to ‘did the shelf move audiobook listening?’, this is why your preferred software’s default often feels like it ‘just works’.</p>
-<p>But the friendly zone is not guaranteed. The moment the design stops ‘being randomise users 50/50’, the replay world changes, and the calculator has to match it.</p>
+<p>But the friendly zone is not guaranteed. The moment the design stops being “randomise users 50/50”, the replay world changes, and the calculator has to match it.</p>
 <p>For example, if you randomised within strata (country, device, prior engagement), then ‘replay the assignment’ means reshuffling <em>within strata</em>. A calculator that ignores this is quantifying uncertainty for a world that never could have happened. Alternatively, if assignment happens at a higher level (households, classrooms, markets), the effective sample size is the number of clusters, not the number of users. Many default approximations become fragile when there are few clusters.</p>
 <p>This is the practical take of the three layers: inference is not a button you press after you get <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Ctau%7D">. It is the combination of (i) what you estimated, (ii) what you think could have happened, and (iii) how you chose to quantify that.</p>
 </section>

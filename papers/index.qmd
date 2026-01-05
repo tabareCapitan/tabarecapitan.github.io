@@ -27,7 +27,10 @@ You can find citation metrics and other outputs on [Google Scholar](https://scho
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with many others (resubmitted, <em>Nature</em>)</div>
+<div style="font-size: 0.80em;">Coauthored with many others (resubmitted, <em>Nature</em>)
+<br>
+[<b>project page</b>](https://www.cos.io/score)
+</div>
 :::
 
 
@@ -41,7 +44,10 @@ You can find citation metrics and other outputs on [Google Scholar](https://scho
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with Capitán</div>
+<div style="font-size: 0.80em;">Coauthored with Capitán
+<br>
+[<b>project page</b>](/projects/insects/index.qmd)
+</div>
 :::
 
 
@@ -55,7 +61,10 @@ You can find citation metrics and other outputs on [Google Scholar](https://scho
 
 ---
 
-<div style="font-size: 0.80em;">Sole author</div>
+<div style="font-size: 0.80em;">Sole author
+<br>
+[<b>project page</b>](/projects/insects/index.qmd)
+</div>
 :::
 
 
@@ -118,7 +127,10 @@ generally.
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with many others (accepted, <em>Nature</em>)</div>
+<div style="font-size: 0.80em;">Coauthored with many others (accepted, <em>Nature</em>)
+<br>
+[<b>project page</b>](https://www.cos.io/score)
+</div>
 :::
 
 
@@ -133,7 +145,10 @@ due to replicating only positive results. For claims where effect sizes could be
 
 ---
 
-<div style="font-size: 0.80em;">Coauthored with many others (accepted, <em>Nature</em>)</div>
+<div style="font-size: 0.80em;">Coauthored with many others (accepted, <em>Nature</em>)
+<br>
+[<b>project page</b>](https://www.cos.io/score)
+</div>
 :::
 
 
@@ -151,6 +166,8 @@ due to replicating only positive results. For claims where effect sizes could be
 [<b>pdf</b>](https://osf.io/preprints/metaarxiv/xdsjf/)
 ,
 [<b>journal</b>](https://doi.org/10.1038/s41562-024-01961-1)
+,
+[<b>project page</b>](https://www.cos.io/score)
 </div>
 :::
 
@@ -210,6 +227,7 @@ due to replicating only positive results. For claims where effect sizes could be
 :::
 
 
+
 ::: {.callout-note .callout-clear collapse="true" icon="false" appearance="minimal"}
 ## MPAs and Aspatial Policies in Artisanal Fisheries 🐠
 
@@ -224,6 +242,8 @@ due to replicating only positive results. For claims where effect sizes could be
 [<b>pdf</b>](https://static1.squarespace.com/static/5727ad5320c647e75d038f64/t/61b38f8281066a3c2f183e3b/1639157654899/Albers_etal_MRE.pdf)
 ,
 [<b>journal</b>](https://www.journals.uchicago.edu/doi/10.1086/715818)
+,
+[<b>project page</b>](/projects/mpa/index.qmd)
 </div>
 :::
 
@@ -241,6 +261,8 @@ due to replicating only positive results. For claims where effect sizes could be
 <div style="font-size: 0.80em;">Coauthored with Albers, Preonas, Robinson, and Madrigal-Ballestero (<em>Environmental and Resource Economics</em>, 2020)
 <br>
 [<b>journal</b>](https://doi.org/10.1007/s10640-020-00472-7)
+,
+[<b>project page</b>](/projects/mpa/index.qmd)
 </div>
 :::
 
@@ -296,5 +318,7 @@ due to replicating only positive results. For claims where effect sizes could be
 [<b>pdf</b>](https://www.researchgate.net/profile/Roger_Madrigal-Ballestero/publication/316896515_Marine_protected_areas_in_Costa_Rica_How_do_artisanal_fishers_respond/links/5a2c89ae45851552ae7c9bdb/Marine-protected-areas-in-Costa-Rica-How-do-artisanal-fishers-respond.pdf)
 ,
 [<b>journal</b>](https://doi.org/10.1007/s13280-017-0921-y)
+,
+[<b>project page</b>](/projects/mpa/index.qmd)
 </div>
 :::
