@@ -14,7 +14,7 @@ But in this setting, the only thing that was actually random was the assignment 
 
 Instead of asking what would happen if I repeatedly sampled new users, I wanted to know what would have happened under different random assignments of the same users. This is the logic of randomisation inference.
 
-I've done this before in Stata, where a well-established command, `ritest`, covers most practical uses of randomisation inference. But I was working in Python. I found tools that cover some uses, but I did not find a functional equivalent to Stata's `ritest`.
+I've done this before in Stata, where a well-established command,[`ritest`](https://github.com/simonheb/ritest), covers most practical uses of randomisation inference. But I was working in Python. I found tools that cover some uses, but I did not find a functional equivalent to Stata's `ritest`.
 
 So I wrote Python's `ritest`.
 
@@ -73,15 +73,15 @@ res = ritest(
     formula="activated_7d ~ treat + pre_usage + device_ios + region_eu",
     stat="treat",
     strata="strata_id",
-    reps=9999,
+    reps=5000,
     alpha=0.05,
-    seed=123,
+    seed=23,
 )
 
 print(res.summary())
 ```
 
-This is the workflow I personally wanted: I can express the estimand as a familiar regression coefficient, and I can get assignment-based uncertainty without pretending the only randomness in the problem is sampling noise.
+This is the workflow I wanted: I can express the estimand as a familiar regression coefficient, and I can get assignment-based uncertainty without pretending the only randomness in the problem is sampling noise.
 
 Now imagine that the adoption question is not your bottleneck. Your bottleneck is latency: you care about the median time-to-value, which is skewed and full of long tails. You still have a randomised assignment, but you do not want to force the problem into a linear model.
 
@@ -99,18 +99,18 @@ res = ritest(
     df=df,
     permute_var="treat",
     stat_fn=median_diff,
-    reps=9999,
+    reps=5000,
     alpha=0.05,
-    seed=123,
+    seed=23,
 )
 
 print(res.pvalue)
 ```
 
-The point is not that medians are “better” than conditional means (coefficients). The point is that a real workflow often has both kinds of questions, and the underlying source of uncertainty (the assignment) is the same.
+The point is not that medians are “better” than conditional means. The point is that a real workflow often has both kinds of questions, and the underlying source of uncertainty (the assignment) is the same.
 
 ## Conclusion
 
-I built this package because I needed it. The project grew well beyond my original plan as I tried to emulate, in Python, the same sense of convenience I had relied on when doing randomisation inference in Stata. I'm happy with the result, and I hope others find it useful. Since this is my first time releasing a package on PyPI, I genuinely want to hear what people think.
+I built this package because I needed it. The project grew well beyond my original plan as I tried to emulate, in Python, the same sense of convenience I had relied on when doing randomisation inference in Stata. I’m happy with the result, and I hope others find it useful. Since this is my first time releasing a package on PyPI, I genuinely want to hear what people think.
 
 Finally, I want to encourage data scientists, data analysts, and researchers who are not familiar with randomisation inference to take a closer look. Randomisation inference can be appropriate whenever assignment is controlled and known. This is a common setting in many contexts: A/B testing in product and platform experiments, randomised controlled trials in economics and political science, greenhouse and field experiments in agricultural science, and laboratory or clinical studies in life sciences. If the main source of uncertainty in your problem comes from the design itself, randomisation inference may be right for you.
