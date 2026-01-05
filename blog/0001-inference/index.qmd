@@ -2,6 +2,7 @@
 title: "On inference"
 date: 2025-12-29
 categories: [statistics]
+featured: "⭐"
 draft: false
 ---
 
