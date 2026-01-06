@@ -26,7 +26,7 @@ about:
 
 **data scientist · causal inference · experimentation**
 
-latest: [`project`](projects/ritest/) [`post`](blog/0001-inference/index.qmd)
+latest: [`project`](projects/ritest/) [`post`](blog/0002-ritest-intro/index.qmd)
 
 
 <div class="contact-reveal">
