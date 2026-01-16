@@ -1,0 +1,104 @@
+---
+title: "The economics of the WNBA"
+date: 2026-01-16
+categories: [economics, basketball]
+draft: false
+---
+
+It is an exciting time for the WNBA, albeit seemingly puzzling. On the one hand, the league boasts record viewership, signed a new media deal worth over $2 billion (~$200 million per year), and negotiated over $1 billion in expected expansion fees. On the other hand, the league positions itself as, effectively, a charity, running at a loss for the last 29 years for the benefit of the players.
+
+These conflicted views are currently facing each other as the league negotiates the new collective bargaining agreement with the players. It is not going well: the third deadline expired on January 9th, there is [now a moratorium](https://sports.yahoo.com/articles/does-wnba-moratorium-agreement-mean-142838476.html?guccounter=1), and players [have voted to authorise calling a strike “when necessary”](https://www.espn.com/wnba/story/_/id/47348578/wnbpa-says-members-voted-strike-necessary).
+
+[The latest proposal by the WNBA](https://www.espn.com/wnba/story/_/id/47348578/wnbpa-says-members-voted-strike-necessary), reportedly, includes an almost four-fold increase in the minimum and average yearly salary (around $250,000 and $500,000); which the players did not accept.
+
+At first glance, rejecting such an offer may seem hard to reconcile with the league’s long-running narrative of financial losses. But that reaction implicitly assumes that player pay in professional sports should be anchored to reported operating profits. In this post, I argue that this is a misleading frame. To understand the current negotiations, it is necessary to look at how professional leagues actually set wages, how operating losses relate to investor returns, and how value is created and distributed over time. Once those pieces are in place, the players’ position appears far less puzzling.
+
+![Photo by [Jason Lam](https://www.flickr.com/photos/mesohungry/3629347913/), CC BY-SA 2.0, [wikimedia](https://commons.wikimedia.org/w/index.php?curid=15821278)](Madison_Square_Garden_Liberty.jpg)
+
+
+
+## Theory
+
+Professional leagues like the WNBA are best understood as a legally constrained joint venture that functions as a monopoly platform in the market for top-tier basketball while also operating as a dominant buyer of elite basketball labour. Because a league season is a joint product—teams are rivals on the court but complements in production—many core choices are centralised: rules of play, scheduling, media-rights packaging, revenue sharing, and restrictions on labour mobility. As a result, wages do not emerge from decentralised market clearing. They are set inside an administered internal labour market shaped by league governance (draft assignment, rookie scale, restricted free agency, salary cap and maximum contracts), which both manages competitive balance (a demand-side feature of the product) and compresses the set of feasible contracts relative to an open auction.
+
+Player pay is therefore the equilibrium outcome of collective bargaining in a bilateral-monopoly environment: the league/teams act as a coordinated buyer through shared rules, and the union coordinates labour supply. The bargaining set is pinned down by basketball-related revenues (especially national media and sponsorship income) and by the league’s commitment to accounting definitions and cap architecture; the division of surplus is governed by threat points and outside options. Owners’ leverage comes from capital depth and the ability to withstand short-run losses, while players’ leverage comes from the star elasticity of demand, reputational and broadcast losses from a stoppage, and whatever outside earnings or alternative playing opportunities raise reservation pay. Negotiations are thus about the rent split and its incidence across player types—how the cap, maximums, minimums, and exceptions allocate revenue growth between superstars, mid-tier players, and marginal roster players—rather than ‘price discovery’ in any competitive sense.
+
+## Practice
+
+This is much easier than the theory. What do we know in practice? I’ll cover three areas: the players’ experience, the league’s reported losses, and the investors’ bullish attitude.
+
+### Players’ experience
+
+After a lifetime of hard work, very few players make it to the WNBA. Most of them get to the league after [a (sort of) mandatory period of four years in college](https://www.espn.com/wnba/story/_/id/43625067/who-eligible-enter-wnba-draft-rules-know)—where they played for no salary. Congratulations, you’ve made it. Here is what you can expect.
+
+Even if you are arguably the greatest prospect ever, Caitlin Clark, you will be paid under [$80,000.](https://www.sportingnews.com/us/wnba/indiana-fever/news/caitlin-clark-salary-breakdown-reveals-how-underpaid-she-wnba/b2faa9f4c5319c4f3df07f21) If you are an average drafted player, you are likely getting under [$70,000](https://www.sportingnews.com/us/wnba/news/wnba-highest-paid-average-salary-rookie-deals-2024/def661966f0f9625d5427326). You can also count on a housing stipend, reportedly [ranging from ~$1,100 in Las Vegas to ~$2,500 in New York](https://highposthoops.com/wnba-cba-negotiations-are-revealing-hidden-truths-about-league). Unless you choose to live in housing provided by your team, typically a one-bedroom apartment. So you have housing covered, one way or another. Except that it is only during the season and, if you make it, postseason. And only if you are not suddenly cut. In practice, it is a bit of a nomad lifestyle.
+
+Alright, you got used to your housing situation. It is what it is. Training camp went great. It is time for the regular season. If you are starting in 2025, you are in luck. You will get charter flights and single rooms at hotels for away games. For those who started before last year, commercial flight was on the menu. And for those who started before 2020, shared rooms for non-veterans were the norm. There is progress, for sure. But it is far from the lifestyle you were hoping to experience at the very top league in the world.
+
+Well, at least you only work half of the year! Your friends may say. If only. You cannot afford to simply take off. It takes a lot of time and resources to stay in shape and ready for the next season. LeBron James, an obvious outlier, reportedly spends about [$1.5 million](https://fortune.com/well/article/lebron-james-biohacking-regimen-routine/) per year to stay sharp, and he has a human body just like you. Nevermind… you are likely not going on vacation, it is time to travel abroad for the second season of the year.
+### The league loses money every year
+
+As far as I know, there is no publicly available, standardised, audited, line-by-line WNBA income statement for outsiders to observe. We only have informal reports, two in particular. In 2018, the NBA commissioner, Adam Silver, mentioned that the WNBA has historically lost money; around [$10 million per year](https://apnews.com/wnba-crossroads-league-looks-to-cut-losses-hire-president-75e117e82df7470c94784438048171d1). Other sources report losses of around [$40-50 million in 2024](https://www.si.com/onsi/womens-fastbreak/news/adam-silver-addresses-report-nba-owners-are-frustrated-with-wnba-financial-losses-01jbdbg0b84y).
+
+What exactly does it mean for the league to “lose money”? It means that what the league accounts for as operating expenses is higher than what the league accounts for as operating revenue. So, what are we talking about? The main operating expenses are travel, team and league operations (such as coaches, training staff, medical staff, facilities), game operations (arena staff and other costs), marketing and league administration, and player compensation. And the main revenue sources are media rights, sponsorships, ticketing, and merch (or licensing).
+
+Because of this operating loss, many people conclude that players cannot expect to be paid well. After all, the league reports losses; there must simply be no money to pay them more.[^irony] Implicit in this view is the idea that owners are subsidising the league so that players can participate at all—and that players should therefore be grateful for the platform itself. But this framing conflates operating losses with investor returns.
+
+ I think this is what a lot of people misunderstand. The league may have operating losses, it does not mean that the owners are losing.[^nba-loses] Many high-growth firms (e.g., Amazon in its early years) generated negative operating income while delivering large capital gains to owners. The return on the investment to the owner in the WNBA is the sum of the operating profit, the capital gains, the cash distributions, and the capital flows:
+
+$$
+\text{ROI} \;\approx\;
+\underbrace{\Pi_{\text{operating}}}_{\text{cash flow (can be <0)}} \;+\;
+\underbrace{\Delta V_{\text{franchise}}}_{\text{capital gain}} \;+\;
+\underbrace{D}_{\text{distributions / payouts}} \;-\;
+\underbrace{K}_{\text{capital calls / injections}}
+$$
+
+This is why accounting gets strategic. If the league wants to raise more capital, they can emphasise the explosive growth in franchise value. If they want the players to take less money, they can emphasise the operating loss.
+
+### The investors’ bullish attitude
+
+Investors do not appear to be worried about the league’s historical operating loss. There is no great public data, so I’m going by reports here. All valuation numbers should be treated as estimates, not facts.
+
+The league may be valued at almost [$3.5 billion in 2025](https://basketball.realgm.com/wiretap/280937/13-WNBA-Franchises-Collectively-Worth-$35-Billion), with an average team value of [~$270 million](https://www.forbes.com/sites/brettknight/2025/06/06/the-wnbas-most-valuable-teams-2025/). This average [value in 2024 was $96 million](https://edition.cnn.com/2025/06/24/sport/wnba-franchise-increase-value-sportico-spt), for a ~2.8x multiple in one year. We also know that the New York Liberty reportedly sold for ~$10-14 million in 2019, and it was valued by Forbes in 2025 at $400 million, with some reports about a minority stake sale reportedly [at $450 million](https://www.espn.com/wnba/story/_/id/45271533/reports-wnba-liberty-sell-stake-record-450m-valuation). That’s ~30-45x in 6 years. No wonders investors are willing to pay [$250 million](https://www.espn.com/wnba/story/_/id/45618874/wnba-expansion-cleveland-detroit-philadelphia-cba-draft) in expansion fees to get a team.
+
+The question is who has benefited from this growth? Consider Michael Jordan—without a doubt the most profitable player in the history of the NBA. In 13 seasons with the Chicago Bulls, [he made less than $100 million in NBA salaries](https://www.forbes.com/sites/justinbirnbaum/2023/10/02/michael-jordan-joins-forbes-400-worth-3-billion/). That’s 13 years of literal sweat, including six championships. In 2010, Jordan bought a majority stake to become the owner of the Charlotte Hornets for $275 million. In 2023, [he sold his majority stake for about $3 billion.](https://www.espn.com/nba/story/_/id/37863644/sources-michael-jordan-finalizing-charlotte-hornets-sale) Roughly, we can correctly say that in 13 years as “the” player, Jordan made 3.3% of the money he made in 13 years as an owner.
+
+Is it fair? That is subjective. I certainly believe that Jordan created more value as a player than as an owner (remember Michael Kidd-Gilchrist? yeah, me neither). In Jordan’s case, it feels appropriate that he was able to capture a share of the wealth he created. The point is that the operating losses are almost irrelevant when owners stand to benefit for a vast majority of the capital gains; the value of the league as an asset is increasing, and the owners own it.
+
+The capital behind the owners operates in a logic very different from a ‘mom and pop’ shop. For example, the [NBA’s roots](https://en.wikipedia.org/wiki/National_Basketball_Association) come from the Basketball Association of America (1946), which was founded by big hockey-arena owners to fill unused arena dates with basketball, and later merged into the NBA (1949). This strategy remains active: in many markets the NBA team is the anchor tenant that keeps an expensive arena (and its surrounding entertainment business) consistently monetised, while concerts and other events fill the remaining dates. More broadly, billionaire ownership is balance-sheet driven: owners can borrow against appreciating assets rather than “use cash” (or sell and realise taxable gains), structure holdings to optimise tax exposure, and treat ownership itself as a form of prestige and deal-flow that pays off beyond the team’s operating profit.
+
+## Current negotiation
+
+The WNBA’s last proposal, [as reported](https://www.espn.com/wnba/story/_/id/47466821/sources-wnba-projecting-big-losses-latest-proposal-union-disagrees), looks generous at first glance because it roughly offers a four-fold increase in salaries across the board, with an average salary around half a million dollars. The players rejected the proposal. Instead, they demand a ‘fair’ share of the 'cake', as well as a clearly defined cake.
+
+For context, in the NBA, there is a clearly defined cake: [basketball-related income](https://www.investopedia.com/articles/investing/070715/nbas-business-model.asp). This cake has been shared in a roughly 50/50 split since 1983, [when the league revenues were around $118 M](https://www.forbes.com/sites/kurtbadenhausen/2014/01/22/as-stern-says-goodbye-knicks-lakers-set-records-as-nbas-most-valuable-teams/). Based on [the sell of the Kansas City Kings to a group from Sacramento in 1983 for $10.5 millions](https://www.nytimes.com/1983/06/09/sports/kings-are-sold.html) as an anchor price, we can multiply that price by the 23 teams in the league at the time, to obtain a total of $241 millions, which correspond to about $781 millions in 2025. Even assuming that the anchor price was below average, this back-of-the envelope calculation suggests that the NBA was valued under a billion dollars when the players negotiated a roughly 50/50 split. Again, the WNBA today is estimated to be about $3.5 billion.
+
+The players’ demands focus on revenue sharing. They want a similar definition of the cake, as well as a share of it. In particular, they [reportedly seek a 30/70 split](https://www.cbc.ca/sports/basketball/wnba-players-union-no-deal-collective-agreement-negotiations-9.7042228). Still below the NBA’s 50/50 split.
+
+The players have also [reported discontent](https://www.espn.com/wnba/story/_/id/47011671/wnba-cba-negotiations-wnbpa-updates-latest-news) with the ‘disrespectful tone’ of the negotiations, in which the league has repeatedly argued that the players do not understand the situation, repeatedly returning to the operating losses in which they seem to want the negotiation to be anchored.
+
+Unfortunately, the league’s narrative of confused players seems to resonate with the public. As I have argued in this piece, the theory behind the price determination in this case is rather complex, but there is credible empirical evidence about the investor’s bullish attitude towards the WNBA. It is then puzzling (or is it?) that people argue that the WNBA players don’t understand a situation that directly and greatly affects them. Never mind that [most players have completed 4-year degrees](https://herhoopstats.substack.com/p/what-did-wnba-players-study-in-college).
+
+## A proposal
+
+There has always been value in the WNBA. This was recognised in the mid-1990s, when the NBA launched the WNBA as a “strategic extension of its basketball platform”. My interpretation is that the motivation was not “to help women’s basketball”, but to control the product, timing, and branding of women’s pro basketball in the US. The value remains today, greater than ever, as shown by the recent growth in market value.
+
+So… I think that the players are asking for too little. I say they should ask for almost the same deal the NBA gets. I don’t see a strong economic reason for large differences in draft eligibility, revenue-sharing split, salary cap strictness, salary structure, and player movement or retention tools.[^differences]
+
+Along with the “bold” demand of equality, the players may benefit from steering away from the league’s focus on the operating loss. Instead, bring the focus to the owners and their capital gains. More specifically, bring the NBA to the spotlight. After all, [the NBA  owns about 42% of the WNBA](https://www.espn.ph/wnba/story/_/id/47602121/wnba-cba-negotiations-collective-bargaining-agreement-wnbpa-update-latest) (outside team owners own ~42% and outside investors the remaining ~16%). When talking about ‘owners’ in abstract, there is no reputation at stake. The NBA’s reputation should be at stake.
+
+Furthermore, there are credible alternatives to the WNBA, including the [Athletes Unlimited Pro Basketball](https://auprosports.com/basketball/) league, [Unrivaled](https://www.unrivaled.basketball/), and [Project B](https://eu.usatoday.com/story/sports/basketball/2025/11/21/project-b-guide-startup-womens-basketball-league/87395675007/), as well as established leagues outside the US. These alternatives provide real outside options and therefore meaningful leverage in negotiations. The same strategic logic that led the NBA to launch the WNBA in the 1990s remains relevant today: controlling the development of a growing adjacent market can be more valuable than maximising short-term operating margins. From the NBA’s perspective, the risk is not that a challenger is imminent, but that suppressing player compensation in a rapidly growing women’s game increases the probability that future growth occurs outside its institutional umbrella. In that sense, conceding meaningful equality to WNBA players is less a concession than a hedge against long-term competitive and reputational risk.
+
+Finally, there is a channel of value creation that is largely absent from the current framing: demand expansion. For most of the league’s history, playing in the WNBA has been closer to a “for the love of the game” proposition than a financial one, at least for the median player. In my view, that matters because former players—especially those who played the sport growing up—are likely to be among the most durable and loyal consumers of basketball over a lifetime, even if this effect is gradual and cohort-driven rather than immediate.
+
+In a league whose domestic fan base has historically skewed male, the WNBA represents a structurally underexploited opportunity to broaden basketball consumption by bringing in new fans rather than reallocating existing ones. This is not simply about gender composition—differences there appear modest—but also about age and entry points into fandom, where WNBA audiences tend to [skew younger,](https://yougov.com/en-us/articles/49344-interest-in-the-wnba-is-the-highest-ever-but-who-are-the-fans) which is particularly valuable for long-run demand. This perspective is especially relevant for the NBA today, as much of its recent growth appears to be driven by [international expansion](https://www.sportbusiness.com/news/international-fanbase-driving-nbas-social-media-success/?utm_source=chatgpt.com) rather than domestic market deepening.
+
+From that standpoint, the WNBA is not only an asset whose value lies in media rights and franchise appreciation, but also a long-horizon investment in [expanding the overall basketball audience in the US and beyond](https://yougov.com/en-us/articles/49344-interest-in-the-wnba-is-the-highest-ever-but-who-are-the-fans?utm_source=chatgpt.com). Underinvesting in player compensation risks slowing that process. Viewed this way, improving the economic terms for WNBA players is not primarily about fairness or bargaining power; it is a strategic investment in [future demand](https://basis.com/blog/3-things-advertisers-need-to-know-about-womens-sports-fans?utm_source=chatgpt.com).
+
+
+[^irony]: It should be noted that the commissioner’s salary is private information. Industry norms suggest, however, that the salary is unlikely to be under $1 million. Possibly around $1.5 million, which is the same as the salary cap for an entire team. Does the commissioner add as much value as one whole team?
+
+[^nba-loses]: In fact, [many NBA teams reportedly have had operating losses](https://www.espn.com/nba/story/_/id/20747413/a-confidential-report-shows-nearly-half-nba-lost-money-last-season-now-what).
+
+[^differences]: Some differences are defensible. For example, given that the NBA has a longer season.
