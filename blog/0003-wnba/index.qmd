@@ -5,6 +5,8 @@ categories: [economics, basketball]
 draft: false
 ---
 
+## Introduction
+
 It is an exciting time for the WNBA, albeit seemingly puzzling. On the one hand, the league boasts record viewership, has signed a new media deal worth over $2 billion (roughly $200 million per year), and has negotiated more than $1 billion in expected expansion fees. On the other hand, the league continues to present itself as operating closer to a charitable venture, running at a loss for nearly three decades for the benefit of the players.
 
 These conflicted views are currently facing each other as the league negotiates the new collective bargaining agreement with the players. It is not going well: the third deadline expired on January 9th, there is [now a moratorium](https://sports.yahoo.com/articles/does-wnba-moratorium-agreement-mean-142838476.html?guccounter=1), and players [have voted to authorise calling a strike “when necessary”](https://www.espn.com/wnba/story/_/id/47348578/wnbpa-says-members-voted-strike-necessary).
