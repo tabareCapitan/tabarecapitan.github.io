@@ -10,6 +10,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/0004-ritest-implementations/index.html",
       "/blog/0003-wnba/index.html",
       "/blog/0002-ritest-intro/index.html",
       "/blog/0001-inference/index.html"

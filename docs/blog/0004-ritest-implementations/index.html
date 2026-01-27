@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-01-27">
 
-<title>Blog – Tabaré Capitán</title>
+<title>Randomisation inference in Stata, R, and Python – Tabaré Capitán</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,33 +21,66 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,35 +108,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-reading-time','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog-listing'] = new List('listing-blog-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -134,9 +139,9 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../styles.css">
-<link rel="alternate" type="application/rss+xml" title="Tabaré Capitán" href="index.xml" data-external="1"><meta property="og:title" content="Blog – Tabaré Capitán">
-<meta property="og:description" content="Mostly related to causal inference">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Randomisation inference in Stata, R, and Python – Tabaré Capitán">
+<meta property="og:description" content="Projects and blog on causal inference.">
 <meta property="og:site_name" content="Tabaré Capitán">
 </head>
 
@@ -309,10 +314,10 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/images/sun.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/sun.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Tabaré Capitán</span>
     </a>
   </div>
@@ -323,23 +328,23 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../blog/index.html"> 
 <span class="menu-text">blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/index.html"> 
+    <a class="nav-link" href="../../projects/index.html"> 
 <span class="menu-text">projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../papers/index.html"> 
+    <a class="nav-link" href="../../papers/index.html"> 
 <span class="menu-text">papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../tools/index.html"> 
+    <a class="nav-link" href="../../tools/index.html"> 
 <span class="menu-text">tools</span></a>
   </li>  
 </ul>
@@ -354,15 +359,24 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Blog</h1>
-            <p class="subtitle lead">Mostly related to causal inference</p>
-                      </div>
+      <h1 class="title">Randomisation inference in Stata, R, and Python</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">statistics</div>
+                <div class="quarto-category">software</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 27, 2026</p>
+      </div>
+    </div>
     
       
     </div>
@@ -371,8 +385,21 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#intro" id="toc-intro" class="nav-link active" data-scroll-target="#intro">Intro</a></li>
+  <li><a href="#hypothetical-example" id="toc-hypothetical-example" class="nav-link" data-scroll-target="#hypothetical-example">Hypothetical example</a></li>
+  <li><a href="#stata" id="toc-stata" class="nav-link" data-scroll-target="#stata">Stata</a></li>
+  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a>
+  <ul class="collapse">
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
+  </ul></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -382,93 +409,121 @@ window.Quarto = {
 
 
 
-<!-- Neither causality nor inference is something we observe directly; both are conceptual constructions, made rigorous by design, assumptions, and mathematics. -->
-<div id="listing-blog-listing" class="quarto-listing quarto-listing-container-table">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
+<section id="intro" class="level2">
+<h2 class="anchored" data-anchor-id="intro">Intro</h2>
+<p>In this brief post I show how to do randomisation inference (RI) using three different implementations.</p>
+<p>I start with the OG, which is <a href="https://hesss.org/">Simon Heß</a>’s <a href="https://github.com/simonheb/ritest">implementation in Stata</a>. This is the one I’ve used for many years. Then I cover <a href="https://grantmcdermott.com/">Grant McDermott</a>’s <a href="https://grantmcdermott.com/ritest/">implementation in R</a>, which is described as a port of the Stata’s implementation. Finally, I present my own very recent <a href="../../projects/ritest/">implementation in Python</a>, which is as not necessarily a port, but it explicitly aims to be functionally equivalent to the preceding implementations. All three implementations share the same name: <code>ritest</code>.</p>
+<p>This is not a comprehensive list of implementations, I chose the ones that I have used. For example, in Stata, Alwyn Young has shared <a href="https://personal.lse.ac.uk/YoungA/">code</a> to do randomization inference and confidence intervals. In R, Alexander Coppock, authored <code>ri2</code>, documented <a href="https://cran.r-project.org/web/packages/ri2/vignettes/ri2_vignette.html">here</a>. And you can find more general permutation frameworks in Python.</p>
+</section>
+<section id="hypothetical-example" class="level2">
+<h2 class="anchored" data-anchor-id="hypothetical-example">Hypothetical example</h2>
+<p>Think of a product A/B test at TikTok. A new onboarding flow is rolled out to a random subset of users, and you want an <a href="../../blog/0001-inference/index.html">assignment-based uncertainty</a> statement for the treatment effect.</p>
+<ul>
+<li>unit: user</li>
+<li>treatment indicator: <code>treat</code> (1 = new onboarding, 0 = old)</li>
+<li>primary outcome: <code>activated_7d</code> (1 = activated within 7 days)</li>
+<li>pre-treatment covariates (optional, for precision): <code>pre_usage</code> (numeric), <code>device_ios</code> (0/1), <code>region_eu</code> (0/1)</li>
+</ul>
+<p>If the experiment used blocked randomisation, you also have a strata variable:</p>
+<ul>
+<li>strata / blocks: <code>strata_id</code> (e.g., country-by-device buckets used in the randomisation)</li>
+</ul>
+<p>If the experiment randomised at a higher level (say, by creator cohort or by market), you may also have:</p>
+<ul>
+<li>cluster: <code>cluster_id</code></li>
+</ul>
+<p>The statistic I will use is the treatment coefficient from</p>
+<p><span class="math inline">\(activated\_7d = \alpha + \tau \, treat + \beta_1 pre\_usage + \beta_2 device\_ios + \beta_3 region\_eu + \varepsilon.\)</span></p>
+</section>
+<section id="stata" class="level2">
+<h2 class="anchored" data-anchor-id="stata">Stata</h2>
+<p>You can install the command <code>ritest</code> from the SSC archive:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">ssc</span> install ritest</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Below, <code>ritest</code> permutes the assignment variable <code>treat</code>, re-runs the estimation command each time, and collects the statistic of interest. The typical pattern is:</p>
+<ul>
+<li>write the model as you usually would</li>
+<li>tell <code>ritest</code> which coefficient/statistic to track</li>
+<li>optionally enforce strata / clusters to mirror the design</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ritest treat _b[treat], reps(5000) <span class="dv">seed</span>(123) <span class="co">///</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">strata</span>(strata_id) <span class="kw">cluster</span>(cluster_id) <span class="kw">nodots</span> : <span class="co">///</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">regress</span> activated_7d treat pre_usage device_ios region_eu, <span class="kw">vce</span>(<span class="kw">cluster</span> cluster_id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Notes:</p>
+<ul>
+<li>The <code>cluster()</code> option in <code>ritest</code> refers to the randomisation unit if assignment is clustered; the <code>vce(cluster ...)</code> inside <code>regress</code> is a modelling choice for conventional standard errors, not the RI itself. The latter does not have implications for randomisation inference.</li>
+<li>If you did not randomise within strata, drop <code>strata(strata_id)</code>. If you did not cluster assignment, drop <code>cluster(cluster_id)</code>.</li>
+</ul>
+</section>
+<section id="r" class="level1">
+<h1>R</h1>
+<p>You can install the package <code>ritest</code> from GitHub</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"grantmcdermott/ritest"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In R, the pattern is usually:</p>
+<ol type="1">
+<li>fit a model object (often <code>lm()</code> or <code>fixest::feols()</code>)</li>
+<li>pass the fitted object to <code>ritest()</code>, specifying the resampling variable and (optionally) strata/cluster structure</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ritest)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  activated_7d <span class="sc">~</span> treat <span class="sc">+</span> pre_usage <span class="sc">+</span> device_ios <span class="sc">+</span> region_eu,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> df</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>ri <span class="ot">&lt;-</span> <span class="fu">ritest</span>(</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  fit,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">resampvar =</span> <span class="st">"treat"</span>,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">reps =</span> <span class="dv">5000</span>,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">strata =</span> <span class="st">"strata_id"</span>,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">cluster =</span> <span class="st">"cluster_id"</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">seed =</span> <span class="dv">123</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>ri</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This mirrors the Stata workflow: the statistic is defined through a fitted model object, and RI is performed by permuting the assignment in a way that respects the experimental design.</p>
+<section id="python" class="level2">
+<h2 class="anchored" data-anchor-id="python">Python</h2>
+<p>You can install the package from PyPI<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install ritest-python</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The Python interface follows the same conceptual pattern:</p>
+<ul>
+<li>specify what to permute (<code>permute_var="treat"</code>)</li>
+<li>specify the statistic through a formula and the coefficient name (<code>stat="treat"</code>)</li>
+<li>optionally pass <code>strata</code> and <code>cluster</code> to respect the design</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ritest <span class="im">import</span> ritest</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> ritest(</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    df<span class="op">=</span>df,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    permute_var<span class="op">=</span><span class="st">"treat"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    formula<span class="op">=</span><span class="st">"activated_7d ~ treat + pre_usage + device_ios + region_eu"</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    stat<span class="op">=</span><span class="st">"treat"</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    strata<span class="op">=</span><span class="st">"strata_id"</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    cluster<span class="op">=</span><span class="st">"cluster_id"</span>,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    reps<span class="op">=</span><span class="dv">5000</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    seed<span class="op">=</span><span class="dv">123</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(res.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="notes" class="level1">
+<h1>Notes</h1>
+<p>I think that the sequential development of these implementations has made it very convenient for a user to move around the three different languages. They all support very similar features and usage patterns, including ways to define generic statistics.</p>
+<p>Despite these functional similarities, there are significant implementation differences. Some are necessary differences imposed by the software environment, and others reflect deliberate design and implementation choices. Because randomisation inference is, at its core, repeated re-estimation of the statistic, these differences can have a significant <a href="../../projects/ritest/benchmarks/intro.html">impact on performance</a>. On a shared <a href="../../projects/ritest/benchmarks/colombia.html">real dataset example</a>, my documentation reports approximate wall-clock times of about 220 seconds (Stata), 16.45 seconds (R), and 7.28 seconds (Python) for 5,000 permutations with a fixed-effects style specification and clustered and stratified design constraints. That said, performance is contingent on the specific computations for a given statistic.</p>
+<p>Which one should you use? Most likely, whatever you were planning to use. For most applications, it would not make sense to choose your software based on the performance of the available <code>ritest</code>. Stata is certainly not well known for its speed, but it remains my favourite language for data analysis.</p>
 
-<th>
-Title
-</th>
 
-<th>
-Reading Time
-</th>
-
-<th>
-Categories
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-categories="c3RhdGlzdGljcyUyQ3NvZnR3YXJl" data-listing-date-sort="1769468400000" data-listing-file-modified-sort="1769499007046" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="865" data-listing-title-sort="Randomisation inference in Stata, R, and Python" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../blog/0004-ritest-implementations/index.html" class="title listing-title">Randomisation inference in Stata, R, and Python</a>
-</td>
-<td>
-<span class="listing-reading-time">5 min</span>
-</td>
-<td>
-<span class="listing-categories">statistics, software</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-categories="ZWNvbm9taWNzJTJDYmFza2V0YmFsbA==" data-listing-date-sort="1768518000000" data-listing-file-modified-sort="1768560200620" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2678" data-listing-title-sort="The economics of the WNBA" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../blog/0003-wnba/index.html" class="title listing-title">The economics of the WNBA</a>
-</td>
-<td>
-<span class="listing-reading-time">14 min</span>
-</td>
-<td>
-<span class="listing-categories">economics, basketball</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-categories="c3RhdGlzdGljcyUyQ3NvZnR3YXJl" data-listing-date-sort="1767654000000" data-listing-file-modified-sort="1767623447739" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="993" data-listing-title-sort="Introducing `ritest`: randomisation inference in Python" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../blog/0002-ritest-intro/index.html" class="title listing-title">Introducing <code>ritest</code>: randomisation inference in Python</a>
-</td>
-<td>
-<span class="listing-reading-time">5 min</span>
-</td>
-<td>
-<span class="listing-categories">statistics, software</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-categories="c3RhdGlzdGljcw==" data-listing-date-sort="1766962800000" data-listing-file-modified-sort="1767600121556" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1900" data-listing-title-sort="On inference" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../blog/0001-inference/index.html" class="title listing-title">On inference</a>
-</td>
-<td>
-<span class="listing-reading-time">10 min</span>
-</td>
-<td>
-<span class="listing-categories">statistics</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-<div class="text-center small">
-<p>Subscribe via <a href="index.xml">RSS</a></p>
-</div>
+</section>
 
 
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
-<script defer="" src="../assets/picture-swap.js"></script>
+<ol>
+<li id="fn1"><p>You may have noticed that my package in PyPI is listed as <code>ritest-python</code> instead of <code>ritest</code>. It is not my fault. PyPI has an automatic check preventing packages to be named in a way that may be too similar to current packages, and there is really not much you can do about it. I think the culprit is <code>rotest</code>. In any case, this is only an issue for installation, you can then use <code>ritest</code> in your script.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script defer="" src="../../assets/picture-swap.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

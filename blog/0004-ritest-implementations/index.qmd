@@ -1,0 +1,137 @@
+---
+title: "Randomisation inference in Stata, R, and Python"
+date: 2026-01-27
+categories: [statistics, software]
+draft: false
+---
+
+
+## Intro
+
+In this brief post I show how to do randomisation inference (RI) using three different implementations.
+
+I start with the OG, which is [Simon Heß](https://hesss.org/)’s [implementation in Stata](https://github.com/simonheb/ritest). This is the one I’ve used for many years. Then I cover [Grant McDermott](https://grantmcdermott.com/)’s [implementation in R](https://grantmcdermott.com/ritest/), which is described as a port of the Stata’s implementation. Finally, I present my own very recent [implementation in Python](/projects/ritest/), which is as not necessarily a port, but it explicitly aims to be functionally equivalent to the preceding implementations. All three implementations share the same name: `ritest`.
+
+This is not a comprehensive list of implementations, I chose the ones that I have used. For example, in Stata, Alwyn Young has shared [code](https://personal.lse.ac.uk/YoungA/) to do randomization inference and confidence intervals. In R, Alexander Coppock, authored `ri2`, documented [here](https://cran.r-project.org/web/packages/ri2/vignettes/ri2_vignette.html). And you can find more general permutation frameworks in Python.
+
+## Hypothetical example
+
+Think of a product A/B test at TikTok. A new onboarding flow is rolled out to a random subset of users, and you want an [assignment-based uncertainty](/blog/0001-inference/index.html) statement for the treatment effect.
+
+- unit: user
+- treatment indicator: `treat` (1 = new onboarding, 0 = old)
+- primary outcome: `activated_7d` (1 = activated within 7 days)
+- pre-treatment covariates (optional, for precision):
+  `pre_usage` (numeric), `device_ios` (0/1), `region_eu` (0/1)
+
+If the experiment used blocked randomisation, you also have a strata variable:
+
+- strata / blocks: `strata_id` (e.g., country-by-device buckets used in the randomisation)
+
+If the experiment randomised at a higher level (say, by creator cohort or by market), you may also have:
+
+- cluster: `cluster_id`
+
+The statistic I will use is the treatment coefficient from
+
+$activated\_7d = \alpha + \tau \, treat + \beta_1 pre\_usage + \beta_2 device\_ios + \beta_3 region\_eu + \varepsilon.$
+
+## Stata
+
+You can install the command `ritest` from the SSC archive:
+
+```stata
+ssc install ritest
+```
+
+Below, `ritest` permutes the assignment variable `treat`, re-runs the estimation command each time, and collects the statistic of interest. The typical pattern is:
+
+- write the model as you usually would
+- tell `ritest` which coefficient/statistic to track
+- optionally enforce strata / clusters to mirror the design
+
+```stata
+ritest treat _b[treat], reps(5000) seed(123) ///
+    strata(strata_id) cluster(cluster_id) nodots : ///
+    regress activated_7d treat pre_usage device_ios region_eu, vce(cluster cluster_id)
+```
+
+Notes:
+
+- The `cluster()` option in `ritest` refers to the randomisation unit if assignment is clustered; the `vce(cluster ...)` inside `regress` is a modelling choice for conventional standard errors, not the RI itself. The latter does not have implications for randomisation inference.
+- If you did not randomise within strata, drop `strata(strata_id)`. If you did not cluster assignment, drop `cluster(cluster_id)`.
+
+# R
+You can install the package `ritest` from GitHub
+
+```r
+remotes::install_github("grantmcdermott/ritest")
+```
+
+In R, the pattern is usually:
+
+1. fit a model object (often `lm()` or `fixest::feols()`)
+2. pass the fitted object to `ritest()`, specifying the resampling variable and (optionally) strata/cluster structure
+
+```r
+library(ritest)
+
+fit <- lm(
+  activated_7d ~ treat + pre_usage + device_ios + region_eu,
+  data = df
+)
+
+ri <- ritest(
+  fit,
+  resampvar = "treat",
+  reps = 5000,
+  strata = "strata_id",
+  cluster = "cluster_id",
+  seed = 123
+)
+
+ri
+```
+
+This mirrors the Stata workflow: the statistic is defined through a fitted model object, and RI is performed by permuting the assignment in a way that respects the experimental design.
+
+## Python
+
+You can install the package from PyPI[^curiosity]
+
+```bash
+pip install ritest-python
+```
+
+The Python interface follows the same conceptual pattern:
+
+- specify what to permute (`permute_var="treat"`)
+- specify the statistic through a formula and the coefficient name (`stat="treat"`)
+- optionally pass `strata` and `cluster` to respect the design
+
+```python
+from ritest import ritest
+
+res = ritest(
+    df=df,
+    permute_var="treat",
+    formula="activated_7d ~ treat + pre_usage + device_ios + region_eu",
+    stat="treat",
+    strata="strata_id",
+    cluster="cluster_id",
+    reps=5000,
+    seed=123,
+)
+
+print(res.summary())
+```
+# Notes
+
+I think that the sequential development of these implementations has made it very convenient for a user to move around the three different languages.  They all support very similar features and usage patterns, including ways to define generic statistics.
+
+Despite these functional similarities, there are significant implementation differences. Some are necessary differences imposed by the software environment, and others reflect deliberate design and implementation choices. Because randomisation inference is, at its core, repeated re-estimation of the statistic, these differences can have a significant [impact on performance](/projects/ritest/benchmarks/intro.html). On a shared [real dataset example](/projects/ritest/benchmarks/colombia.html), my documentation reports approximate wall-clock times of about 220 seconds (Stata), 16.45 seconds (R), and 7.28 seconds (Python) for 5,000 permutations with a fixed-effects style specification and clustered and stratified design constraints. That said, performance is contingent on the specific computations for a given statistic.
+
+Which one should you use? Most likely, whatever you were planning to use. For most applications, it would not make sense to choose your software based on the performance of the available `ritest`. Stata is certainly not well known for its speed, but it remains my favourite language for data analysis.
+
+
+[^curiosity]: You may have noticed that my package in PyPI is listed as `ritest-python` instead of `ritest`. It is not my fault. PyPI has an automatic check preventing packages to be named in a way that may be too similar to current packages, and there is really not much you can do about it. I think the culprit is `rotest`. In any case, this is only an issue for installation, you can then use `ritest` in your script.

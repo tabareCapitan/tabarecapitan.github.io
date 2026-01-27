@@ -10,7 +10,249 @@
 <atom:link href="https://www.tabarecapitan.com/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Projects and blog on causal inference.</description>
 <generator>quarto-1.7.33</generator>
-<lastBuildDate>Thu, 15 Jan 2026 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 26 Jan 2026 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Randomisation inference in Stata, R, and Python</title>
+  <link>https://www.tabarecapitan.com/blog/0004-ritest-implementations/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<section id="intro" class="level2">
+<h2 class="anchored" data-anchor-id="intro">Intro</h2>
+<p>In this brief post I show how to do randomisation inference (RI) using three different implementations.</p>
+<p>I start with the OG, which is <a href="https://hesss.org/">Simon Heß</a>’s <a href="https://github.com/simonheb/ritest">implementation in Stata</a>. This is the one I’ve used for many years. Then I cover <a href="https://grantmcdermott.com/">Grant McDermott</a>’s <a href="https://grantmcdermott.com/ritest/">implementation in R</a>, which is described as a port of the Stata’s implementation. Finally, I present my own very recent <a href="../../projects/ritest/">implementation in Python</a>, which is as not necessarily a port, but it explicitly aims to be functionally equivalent to the preceding implementations. All three implementations share the same name: <code>ritest</code>.</p>
+<p>This is not a comprehensive list of implementations, I chose the ones that I have used. For example, in Stata, Alwyn Young has shared <a href="https://personal.lse.ac.uk/YoungA/">code</a> to do randomization inference and confidence intervals. In R, Alexander Coppock, authored <code>ri2</code>, documented <a href="https://cran.r-project.org/web/packages/ri2/vignettes/ri2_vignette.html">here</a>. And you can find more general permutation frameworks in Python.</p>
+</section>
+<section id="hypothetical-example" class="level2">
+<h2 class="anchored" data-anchor-id="hypothetical-example">Hypothetical example</h2>
+<p>Think of a product A/B test at TikTok. A new onboarding flow is rolled out to a random subset of users, and you want an <a href="../../blog/0001-inference/index.html">assignment-based uncertainty</a> statement for the treatment effect.</p>
+<ul>
+<li>unit: user</li>
+<li>treatment indicator: <code>treat</code> (1 = new onboarding, 0 = old)</li>
+<li>primary outcome: <code>activated_7d</code> (1 = activated within 7 days)</li>
+<li>pre-treatment covariates (optional, for precision): <code>pre_usage</code> (numeric), <code>device_ios</code> (0/1), <code>region_eu</code> (0/1)</li>
+</ul>
+<p>If the experiment used blocked randomisation, you also have a strata variable:</p>
+<ul>
+<li>strata / blocks: <code>strata_id</code> (e.g., country-by-device buckets used in the randomisation)</li>
+</ul>
+<p>If the experiment randomised at a higher level (say, by creator cohort or by market), you may also have:</p>
+<ul>
+<li>cluster: <code>cluster_id</code></li>
+</ul>
+<p>The statistic I will use is the treatment coefficient from</p>
+<p><img src="https://latex.codecogs.com/png.latex?activated%5C_7d%20=%20%5Calpha%20+%20%5Ctau%20%5C,%20treat%20+%20%5Cbeta_1%20pre%5C_usage%20+%20%5Cbeta_2%20device%5C_ios%20+%20%5Cbeta_3%20region%5C_eu%20+%20%5Cvarepsilon."></p>
+</section>
+<section id="stata" class="level2">
+<h2 class="anchored" data-anchor-id="stata">Stata</h2>
+<p>You can install the command <code>ritest</code> from the SSC archive:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">ssc</span> install ritest</span></code></pre></div>
+<p>Below, <code>ritest</code> permutes the assignment variable <code>treat</code>, re-runs the estimation command each time, and collects the statistic of interest. The typical pattern is:</p>
+<ul>
+<li>write the model as you usually would</li>
+<li>tell <code>ritest</code> which coefficient/statistic to track</li>
+<li>optionally enforce strata / clusters to mirror the design</li>
+</ul>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1">ritest treat _b[treat], reps(5000) <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">seed</span>(123) <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">///</span></span>
+<span id="cb2-2">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">strata</span>(strata_id) <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">cluster</span>(cluster_id) <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">nodots</span> : <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">///</span></span>
+<span id="cb2-3">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">regress</span> activated_7d treat pre_usage device_ios region_eu, <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">vce</span>(<span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">cluster</span> cluster_id)</span></code></pre></div>
+<p>Notes:</p>
+<ul>
+<li>The <code>cluster()</code> option in <code>ritest</code> refers to the randomisation unit if assignment is clustered; the <code>vce(cluster ...)</code> inside <code>regress</code> is a modelling choice for conventional standard errors, not the RI itself. The latter does not have implications for randomisation inference.</li>
+<li>If you did not randomise within strata, drop <code>strata(strata_id)</code>. If you did not cluster assignment, drop <code>cluster(cluster_id)</code>.</li>
+</ul>
+</section>
+<section id="r" class="level1">
+<h1>R</h1>
+<p>You can install the package <code>ritest</code> from GitHub</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1">remotes<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install_github</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"grantmcdermott/ritest"</span>)</span></code></pre></div>
+<p>In R, the pattern is usually:</p>
+<ol type="1">
+<li>fit a model object (often <code>lm()</code> or <code>fixest::feols()</code>)</li>
+<li>pass the fitted object to <code>ritest()</code>, specifying the resampling variable and (optionally) strata/cluster structure</li>
+</ol>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ritest)</span>
+<span id="cb4-2"></span>
+<span id="cb4-3">fit <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(</span>
+<span id="cb4-4">  activated_7d <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> treat <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> pre_usage <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> device_ios <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> region_eu,</span>
+<span id="cb4-5">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> df</span>
+<span id="cb4-6">)</span>
+<span id="cb4-7"></span>
+<span id="cb4-8">ri <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ritest</span>(</span>
+<span id="cb4-9">  fit,</span>
+<span id="cb4-10">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">resampvar =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"treat"</span>,</span>
+<span id="cb4-11">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">reps =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5000</span>,</span>
+<span id="cb4-12">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">strata =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"strata_id"</span>,</span>
+<span id="cb4-13">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">cluster =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cluster_id"</span>,</span>
+<span id="cb4-14">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">seed =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">123</span></span>
+<span id="cb4-15">)</span>
+<span id="cb4-16"></span>
+<span id="cb4-17">ri</span></code></pre></div>
+<p>This mirrors the Stata workflow: the statistic is defined through a fitted model object, and RI is performed by permuting the assignment in a way that respects the experimental design.</p>
+<section id="python" class="level2">
+<h2 class="anchored" data-anchor-id="python">Python</h2>
+<p>You can install the package from PyPI<sup>1</sup></p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">pip</span> install ritest-python</span></code></pre></div>
+<p>The Python interface follows the same conceptual pattern:</p>
+<ul>
+<li>specify what to permute (<code>permute_var="treat"</code>)</li>
+<li>specify the statistic through a formula and the coefficient name (<code>stat="treat"</code>)</li>
+<li>optionally pass <code>strata</code> and <code>cluster</code> to respect the design</li>
+</ul>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> ritest <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> ritest</span>
+<span id="cb6-2"></span>
+<span id="cb6-3">res <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> ritest(</span>
+<span id="cb6-4">    df<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>df,</span>
+<span id="cb6-5">    permute_var<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"treat"</span>,</span>
+<span id="cb6-6">    formula<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"activated_7d ~ treat + pre_usage + device_ios + region_eu"</span>,</span>
+<span id="cb6-7">    stat<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"treat"</span>,</span>
+<span id="cb6-8">    strata<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"strata_id"</span>,</span>
+<span id="cb6-9">    cluster<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cluster_id"</span>,</span>
+<span id="cb6-10">    reps<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5000</span>,</span>
+<span id="cb6-11">    seed<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">123</span>,</span>
+<span id="cb6-12">)</span>
+<span id="cb6-13"></span>
+<span id="cb6-14"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(res.summary())</span></code></pre></div>
+</section>
+</section>
+<section id="notes" class="level1">
+<h1>Notes</h1>
+<p>I think that the sequential development of these implementations has made it very convenient for a user to move around the three different languages. They all support very similar features and usage patterns, including ways to define generic statistics.</p>
+<p>Despite these functional similarities, there are significant implementation differences. Some are necessary differences imposed by the software environment, and others reflect deliberate design and implementation choices. Because randomisation inference is, at its core, repeated re-estimation of the statistic, these differences can have a significant <a href="../../projects/ritest/benchmarks/intro.html">impact on performance</a>. On a shared <a href="../../projects/ritest/benchmarks/colombia.html">real dataset example</a>, my documentation reports approximate wall-clock times of about 220 seconds (Stata), 16.45 seconds (R), and 7.28 seconds (Python) for 5,000 permutations with a fixed-effects style specification and clustered and stratified design constraints. That said, performance is contingent on the specific computations for a given statistic.</p>
+<p>Which one should you use? Most likely, whatever you were planning to use. For most applications, it would not make sense to choose your software based on the performance of the available <code>ritest</code>. Stata is certainly not well known for its speed, but it remains my favourite language for data analysis.</p>
+
+
+</section>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>You may have noticed that my package in PyPI is listed as <code>ritest-python</code> instead of <code>ritest</code>. It is not my fault. PyPI has an automatic check preventing packages to be named in a way that may be too similar to current packages, and there is really not much you can do about it. I think the culprit is <code>rotest</code>. In any case, this is only an issue for installation, you can then use <code>ritest</code> in your script.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>statistics</category>
+  <category>software</category>
+  <guid>https://www.tabarecapitan.com/blog/0004-ritest-implementations/</guid>
+  <pubDate>Mon, 26 Jan 2026 23:00:00 GMT</pubDate>
+</item>
 <item>
   <title>The economics of the WNBA</title>
   <link>https://www.tabarecapitan.com/blog/0003-wnba/</link>
@@ -21,7 +263,9 @@
 
 
 
-<p>It is an exciting time for the WNBA, albeit seemingly puzzling. On the one hand, the league boasts record viewership, signed a new media deal worth over $2 billion (~$200 million per year), and negotiated over $1 billion in expected expansion fees. On the other hand, the league positions itself as, effectively, a charity, running at a loss for the last 29 years for the benefit of the players.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>It is an exciting time for the WNBA, albeit seemingly puzzling. On the one hand, the league boasts record viewership, has signed a new media deal worth over $2 billion (roughly $200 million per year), and has negotiated more than $1 billion in expected expansion fees. On the other hand, the league continues to present itself as operating closer to a charitable venture, running at a loss for nearly three decades for the benefit of the players.</p>
 <p>These conflicted views are currently facing each other as the league negotiates the new collective bargaining agreement with the players. It is not going well: the third deadline expired on January 9th, there is <a href="https://sports.yahoo.com/articles/does-wnba-moratorium-agreement-mean-142838476.html?guccounter=1">now a moratorium</a>, and players <a href="https://www.espn.com/wnba/story/_/id/47348578/wnbpa-says-members-voted-strike-necessary">have voted to authorise calling a strike “when necessary”</a>.</p>
 <p><a href="https://www.espn.com/wnba/story/_/id/47348578/wnbpa-says-members-voted-strike-necessary">The latest proposal by the WNBA</a>, reportedly, includes an almost four-fold increase in the minimum and average yearly salary (around $250,000 and $500,000); which the players did not accept.</p>
 <p>At first glance, rejecting such an offer may seem hard to reconcile with the league’s long-running narrative of financial losses. But that reaction implicitly assumes that player pay in professional sports should be anchored to reported operating profits. In this post, I argue that this is a misleading frame. To understand the current negotiations, it is necessary to look at how professional leagues actually set wages, how operating losses relate to investor returns, and how value is created and distributed over time. Once those pieces are in place, the players’ position appears far less puzzling.</p>
@@ -31,6 +275,7 @@
 <figcaption>Photo by <a href="https://www.flickr.com/photos/mesohungry/3629347913/">Jason Lam</a>, CC BY-SA 2.0, <a href="https://commons.wikimedia.org/w/index.php?curid=15821278">wikimedia</a></figcaption>
 </figure>
 </div>
+</section>
 <section id="theory" class="level2">
 <h2 class="anchored" data-anchor-id="theory">Theory</h2>
 <p>Professional leagues like the WNBA are best understood as a legally constrained joint venture that functions as a monopoly platform in the market for top-tier basketball while also operating as a dominant buyer of elite basketball labour. Because a league season is a joint product—teams are rivals on the court but complements in production—many core choices are centralised: rules of play, scheduling, media-rights packaging, revenue sharing, and restrictions on labour mobility. As a result, wages do not emerge from decentralised market clearing. They are set inside an administered internal labour market shaped by league governance (draft assignment, rookie scale, restricted free agency, salary cap and maximum contracts), which both manages competitive balance (a demand-side feature of the product) and compresses the set of feasible contracts relative to an open auction.</p>
@@ -44,7 +289,10 @@
 <p>After a lifetime of hard work, very few players make it to the WNBA. Most of them get to the league after <a href="https://www.espn.com/wnba/story/_/id/43625067/who-eligible-enter-wnba-draft-rules-know">a (sort of) mandatory period of four years in college</a>—where they played for no salary. Congratulations, you’ve made it. Here is what you can expect.</p>
 <p>Even if you are arguably the greatest prospect ever, Caitlin Clark, you will be paid under <a href="https://www.sportingnews.com/us/wnba/indiana-fever/news/caitlin-clark-salary-breakdown-reveals-how-underpaid-she-wnba/b2faa9f4c5319c4f3df07f21">$80,000.</a> If you are an average drafted player, you are likely getting under <a href="https://www.sportingnews.com/us/wnba/news/wnba-highest-paid-average-salary-rookie-deals-2024/def661966f0f9625d5427326">$70,000</a>. You can also count on a housing stipend, reportedly <a href="https://highposthoops.com/wnba-cba-negotiations-are-revealing-hidden-truths-about-league">ranging from ~$1,100 in Las Vegas to ~$2,500 in New York</a>. Unless you choose to live in housing provided by your team, typically a one-bedroom apartment. So you have housing covered, one way or another. Except that it is only during the season and, if you make it, postseason. And only if you are not suddenly cut. In practice, it is a bit of a nomad lifestyle.</p>
 <p>Alright, you got used to your housing situation. It is what it is. Training camp went great. It is time for the regular season. If you are starting in 2025, you are in luck. You will get charter flights and single rooms at hotels for away games. For those who started before last year, commercial flight was on the menu. And for those who started before 2020, shared rooms for non-veterans were the norm. There is progress, for sure. But it is far from the lifestyle you were hoping to experience at the very top league in the world.</p>
-<p>Well, at least you only work half of the year! Your friends may say. If only. You cannot afford to simply take off. It takes a lot of time and resources to stay in shape and ready for the next season. LeBron James, an obvious outlier, reportedly spends about <a href="https://fortune.com/well/article/lebron-james-biohacking-regimen-routine/">$1.5 million</a> per year to stay sharp, and he has a human body just like you. Nevermind… you are likely not going on vacation, it is time to travel abroad for the second season of the year. ### The league loses money every year</p>
+<p>Well, at least you only work half of the year! Your friends may say. If only. You cannot afford to simply take off. It takes a lot of time and resources to stay in shape and ready for the next season. LeBron James, an obvious outlier, reportedly spends about <a href="https://fortune.com/well/article/lebron-james-biohacking-regimen-routine/">$1.5 million</a> per year to stay sharp, and he has a human body just like you. Nevermind… you are likely not going on vacation, it is time to travel abroad for the second season of the year.</p>
+</section>
+<section id="the-league-loses-money-every-year" class="level3">
+<h3 class="anchored" data-anchor-id="the-league-loses-money-every-year">The league loses money every year</h3>
 <p>As far as I know, there is no publicly available, standardised, audited, line-by-line WNBA income statement for outsiders to observe. We only have informal reports, two in particular. In 2018, the NBA commissioner, Adam Silver, mentioned that the WNBA has historically lost money; around <a href="https://apnews.com/wnba-crossroads-league-looks-to-cut-losses-hire-president-75e117e82df7470c94784438048171d1">$10 million per year</a>. Other sources report losses of around <a href="https://www.si.com/onsi/womens-fastbreak/news/adam-silver-addresses-report-nba-owners-are-frustrated-with-wnba-financial-losses-01jbdbg0b84y">$40-50 million in 2024</a>.</p>
 <p>What exactly does it mean for the league to “lose money”? It means that what the league accounts for as operating expenses is higher than what the league accounts for as operating revenue. So, what are we talking about? The main operating expenses are travel, team and league operations (such as coaches, training staff, medical staff, facilities), game operations (arena staff and other costs), marketing and league administration, and player compensation. And the main revenue sources are media rights, sponsorships, ticketing, and merch (or licensing).</p>
 <p>Because of this operating loss, many people conclude that players cannot expect to be paid well. After all, the league reports losses; there must simply be no money to pay them more.<sup>1</sup> Implicit in this view is the idea that owners are subsidising the league so that players can participate at all—and that players should therefore be grateful for the platform itself. But this framing conflates operating losses with investor returns.</p>
