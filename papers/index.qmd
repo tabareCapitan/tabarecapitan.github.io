@@ -114,9 +114,9 @@ generally.
 
 <div style="font-size: 0.80em;">coauthored with Thunström, Van ‘t Veld, Nordström, and Shogren (<em>Journal of Risk and Uncertainty, 2026</em>)
 <br>
-[<b>journal (OA)</b>](https://doi.org/10.31235/osf.io/vy6af)
+[<b>journal (OA)</b>](https://link.springer.com/article/10.1007/s11166-025-09471-9)
 ,
-[<b>pdf</b>](https://link.springer.com/article/10.1007/s11166-025-09471-9)
+[<b>pdf</b>](https://doi.org/10.31235/osf.io/vy6af)
 </div>
 :::
 
