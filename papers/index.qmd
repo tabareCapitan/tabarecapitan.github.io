@@ -117,6 +117,9 @@ generally.
 [<b>journal (OA)</b>](https://link.springer.com/article/10.1007/s11166-025-09471-9)
 ,
 [<b>pdf</b>](https://doi.org/10.31235/osf.io/vy6af)
+,
+[<b>replication package</b>](https://github.com/tabareCapitan/jru-2026)
+
 </div>
 :::
 
