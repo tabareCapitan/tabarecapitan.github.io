@@ -1,0 +1,145 @@
+---
+title: "Confidence intervals in randomisation inference"
+date: 2026-02-02
+categories: [statistics]
+draft: false
+---
+
+## Intro
+
+When you do randomisation inference (RI), your output typically shows the observed statistic, as well as a $p$-value, a standard error, and a confidence interval. This looks very similar to what you get from a regression where, say, for a given coefficient, your output shows the point estimate, as well as a standard error, a $t$-statistic, a $p$-value, and a confidence interval.
+
+But these outputs, other than the observed statistic or point estimate, are conceptually very different. In this post I try to make sense of the output of randomisation inference.
+
+## $p$-values
+
+[Randomisation inference (RI)](/blog/0001-inference/index.qmd) starts from a statistic $T(\cdot)$: a difference in means, a regression coefficient, a median difference, or anything else you care about. The design (the assignment mechanism) induces a randomisation distribution for that statistic *under a null hypothesis*.
+
+Under a sharp null, the randomisation $p$-value is a tail probability under the assignment mechanism:
+$$
+p \;=\; \Pr\!\left(|T| \ge |T_{\text{obs}}| \;\middle|\; H_0,\; \text{design}\right).
+$$
+
+If you can enumerate every valid assignment, you can compute $p$ exactly, in the design-based sense. In most real problems there are too many valid assignments and it is not worth it to go through all of them, so you sample $R$ valid reassignments.
+
+Let $c$ be the number of assignments in which the statistic is more extreme than the observed statistic:
+$$
+c \;=\; \sum_{r=1}^R \mathbf{1}\{|T_r| \ge |T_{\text{obs}}|\}.
+$$
+A common Monte Carlo estimator is[^adjustment]
+$$
+\hat p \;=\; \frac{c}{R}.
+$$
+
+At this point it is no longer correct to treat the reported $p$-value as a fixed number. It has Monte Carlo error because $R$ is finite. In contrast, in an OLS regression, the $p$-value is a deterministic function of the data, given the modelling assumptions. So there is no Monte Carlo uncertainty.
+
+It is worth pointing out that $p$-values, both in RI and the regression context, only make sense in the context of a hypothesis test. *A $p$-value is not a generic measure of ‘signal strength’; it is defined relative to a null hypothesis and a reference distribution for the statistic.* In RI, both are explicit: the null is sharp, and the reference distribution comes from the assignment mechanism. In the regression context, the null is typically weak and the reference distribution is introduced analytically (often via asymptotic arguments).
+
+## Confidence intervals
+
+We now have our Randomisation inference (RI) $p$-value, which is an estimate with Monte Carlo error. Then, it is natural to represent this error with a confidence interval (CI) *for the $p$-value itself*.
+
+Conditional on the observed data and the null, each reassignment either lands in the tail or it does not. That makes $c$ behave like a binomial count:
+$$
+c \sim \operatorname{Binomial}(R, p).
+$$
+Then, you can build a $(1-\alpha)$ interval for $p$ from this binomial model (there are several standard choices).
+
+The interpretation is narrow but clean. The RI confidence interval of the $p$-value:
+
+- quantifies uncertainty from *simulation*, not from (theoretically) drawing a new dataset,
+- shrinks as $R$ grows, and
+- tells you when a ‘statistical significance’ call is robust versus when you are basically flipping a coin near a threshold.
+
+Now let’s get back to the regression setting, say, for an A/B test. How do we build a confidence interval?
+
+To be concrete, define the finite-sample average treatment effect
+$$
+\tau_{\text{ATE}} \;=\; \frac{1}{N}\sum_{i=1}^N \big(Y_i(1)-Y_i(0)\big).
+$$
+
+If you estimate the effect as a treated–control difference in means, or as the coefficient on a treatment indicator in an OLS regression with an intercept, you are targeting $\tau_{\text{ATE}}$ on the outcome scale. A standard regression confidence interval takes the form
+$$
+\hat\tau \pm z_{1-\alpha/2}\,\widehat{SE}(\hat\tau),
+$$
+with details depending on how you estimate the variance.
+
+The key thing is what that CI is *trying* to cover. In the usual regression presentation, the motivation is based on repeated sampling (often asymptotic): if we reran ‘the relevant randomness’ many times, the interval would cover the target parameter with frequency $1-\alpha$. The ‘not significant if the CI includes 0’ common saying is shorthand for not rejecting a weak null like
+$$
+H_0^{\text{weak}}:\; \tau_{\text{ATE}} = 0,
+$$
+under that sampling-based uncertainty and approximation. That is an uncertainty statement about an average effect.
+
+Let’s take a moment for the distinction to sink in. The confidence interval in a typical regression table reflects uncertainty around the coefficient, while the (default) confidence interval in randomisation inference reflects uncertainty around the $p$-value. They are not at all comparable.
+
+## Confidence set
+
+It looks like we are missing a piece in randomisation inference. *Is there no confidence interval for the coefficient?* Well… sort of. At least in spirit. But we need to do much more work, both to build it and to interpret it.
+
+A randomisation test needs a null that lets you impute missing potential outcomes. The canonical ‘no effect’ sharp null is
+$$
+H_0:\; Y_i(1)=Y_i(0)\;\;\forall i.
+$$
+That is stronger than ‘the average effect is 0’—the ‘weak‘ null. It says nobody is affected.
+
+To get an interval for an effect size, RI typically inverts a *family* of sharp nulls indexed by a candidate constant additive effect:
+$$
+H_0(\tau_0):\quad Y_i(1) = Y_i(0) + \tau_0 \;\;\text{for all } i.
+$$
+
+For each $\tau_0$ you compute a randomisation $p$-value $p(\tau_0)$. Then you invert the tests:
+$$
+\mathcal{C}_{1-\alpha} \;=\; \{\tau_0:\; p(\tau_0) > \alpha\}.
+$$
+
+In other words: A ‘confidence interval’ for the coefficient under randomisation inference is the set of constant additive effects that you do not reject under design-based uncertainty.
+
+That is what it means mechanically, and it is also the safest way to interpret it.
+
+Everything else—especially ‘is it an ATE interval?’—depends on whether the constant-effect assumption is a defensible approximation for your application.
+
+Note that the ‘confidence interval’ in randomisation inference is literally defined as a set, which explains that in randomisation inference we call the boundaries of that set the ‘confidence bounds’ instead of ‘confidence interval’. In addition, we call the whole set  a ‘confidence band’. This keeps the whole inversion visible: plot the curve $\tau_0 \mapsto p(\tau_0)$ and draw the horizontal line at $\alpha$. The confidence set is where the curve sits above the line. I like bands because they answer questions the bounds cannot, such as
+
+- do the endpoints come from a sharp crossing or a curve that barely grazes $\alpha$?
+- is the acceptable region a single chunk, or does it fragment?
+- if $p(\tau_0)$ is computed by Monte Carlo, is the crossing stable once you acknowledge simulation noise?
+
+### Interpretation
+
+I did say that there is much work to do to interpret RI confidence bounds. The object itself is unambiguous: $\mathcal{C}_{1-\alpha}$ it is the set of $\tau_0$ values for which the constant-additive-effect null $H_0(\tau_0)$ is not rejected at level $\alpha$.
+
+Now the interpretation splits.
+
+If effects are (approximately) constant and additive, so that
+$$
+Y_i(1)=Y_i(0)+\tau \quad \forall i,
+$$
+then $\tau$ is approximately equal to $\tau_{\text{ATE}}$, and $\mathcal{C}_{1-\alpha}$ is naturally read as a confidence set for the ATE under design-based uncertainty. In that world, the confidence bound carries essentially the meaning people expect.
+
+If effects are heterogeneous, $H_0(\tau_0)$ is a strong claim: it says $\tau_i=\tau_0$ for everyone. Then:
+
+- $0 \in \mathcal{C}_{1-\alpha}$ means you did not reject “everyone’s effect is exactly 0” (given your statistic and design).
+- $0 \notin \mathcal{C}_{1-\alpha}$ means you rejected that claim.
+
+What it does *not* automatically mean is ‘the ATE might be 0’ or ‘the ATE is nonzero’, because those are weak-null statements about an average, and the inverted tests are about a constant effect for every unit.
+
+So under heterogeneity, in practice, you can read RI confidence bounds as a compatibility check for a simple constant-effect model, not as a replacement for an ATE interval.
+
+### Computation
+
+I also said that we had to do much work to build the confidence bounds. And we do. Much more work.
+
+A single randomisation test uses $R$ reassignments. Test inversion uses many randomisation tests—one for each candidate $\tau_0$ you evaluate—so the computation is ‘RI, repeated’. A band is even more demanding because you are deliberately evaluating $p(\tau_0)$ across a grid.
+
+### Discussion
+
+So randomisation inference (sort of) have confidence intervals for the coefficient. But they are much harder to build and to interpret. It almost feels pointless. In a regression setting, confidence intervals feel more immediately useful: they are designed to speak directly about an average effect on the outcome scale under a weak-null framing.
+
+Still, I think that RI confidence bounds and bands can (sometimes) be useful. They are just useful in a different way: as a transparent, design-grounded way to ask ‘what constant-effect stories are compatible with what we saw?’
+
+Or perhaps we are simply very used to thinking in terms of weak nulls. *A statement like $\tau_{\text{ATE}}=0$ is convenient and often relevant for decisions, but it can also be uninformative.* If effects differ in sign, the average can be zero even though treatment has substantial consequences for many units. In that sense, a weak null can hide structure rather than reveal it.
+
+Sharp nulls force a different discipline. They ask whether any effect at all is compatible with the design-based evidence, or whether a simple, homogeneous effect could plausibly summarise what happened. That is a stronger question. But it is also a clarifying one. Seen this way, RI confidence bounds are not really ‘competing’ with regression confidence intervals. They are probing a different dimension: not ‘how large is the average effect?’, but ‘how simple a story about effects can we still defend?’.
+
+
+[^adjustment]: Some implementations use small finite-sample adjustments; the point here is the same either way.

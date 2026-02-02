@@ -6,7 +6,7 @@
   </url>
   <url>
     <loc>https://www.tabarecapitan.com/index.html</loc>
-    <lastmod>2026-01-27T07:32:09.752Z</lastmod>
+    <lastmod>2026-02-02T09:05:53.954Z</lastmod>
   </url>
   <url>
     <loc>https://www.tabarecapitan.com/blog/0004-ritest-implementations/index.html</loc>
@@ -115,5 +115,9 @@
   <url>
     <loc>https://www.tabarecapitan.com/blog/index.html</loc>
     <lastmod>2026-01-05T08:01:44.730Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.tabarecapitan.com/blog/0005-ritest-ci/index.html</loc>
+    <lastmod>2026-02-02T09:05:17.303Z</lastmod>
   </url>
 </urlset>
