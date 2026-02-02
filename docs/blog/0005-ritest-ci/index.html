@@ -338,7 +338,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">2026-02-02</p>
+        <p class="date">February 2, 2026</p>
       </div>
     </div>
     
@@ -362,15 +362,6 @@ window.Quarto = {
   <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
   <li><a href="#computation" id="toc-computation" class="nav-link" data-scroll-target="#computation">Computation</a></li>
   <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
-  </ul></li>
-  <li><a href="#intro-1" id="toc-intro-1" class="nav-link" data-scroll-target="#intro-1">Intro</a></li>
-  <li><a href="#p-values-1" id="toc-p-values-1" class="nav-link" data-scroll-target="#p-values-1"><span class="math inline">\(p\)</span>-values</a></li>
-  <li><a href="#confidence-intervals-1" id="toc-confidence-intervals-1" class="nav-link" data-scroll-target="#confidence-intervals-1">Confidence intervals</a></li>
-  <li><a href="#confidence-set-1" id="toc-confidence-set-1" class="nav-link" data-scroll-target="#confidence-set-1">Confidence set</a>
-  <ul class="collapse">
-  <li><a href="#interpretation-1" id="toc-interpretation-1" class="nav-link" data-scroll-target="#interpretation-1">Interpretation</a></li>
-  <li><a href="#computation-1" id="toc-computation-1" class="nav-link" data-scroll-target="#computation-1">Computation</a></li>
-  <li><a href="#discussion-1" id="toc-discussion-1" class="nav-link" data-scroll-target="#discussion-1">Discussion</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -478,106 +469,12 @@ Y_i(1)=Y_i(0)+\tau \quad \forall i,
 
 </section>
 </section>
-<section id="intro-1" class="level2">
-<h2 class="anchored" data-anchor-id="intro-1">Intro</h2>
-<p>When you do randomisation inference (RI), your output typically shows the observed statistic, as well as a <span class="math inline">\(p\)</span>-value, a standard error, and a confidence interval. This looks very similar to what you get from a regression where, say, for a given coefficient, your output shows the point estimate, as well as a standard error, a <span class="math inline">\(t\)</span>-statistic, a <span class="math inline">\(p\)</span>-value, and a confidence interval.</p>
-<p>But these outputs, other than the observed statistic or point estimate, are conceptually very different. In this post I try to make sense of the output of randomisation inference.</p>
-</section>
-<section id="p-values-1" class="level2">
-<h2 class="anchored" data-anchor-id="p-values-1"><span class="math inline">\(p\)</span>-values</h2>
-<p><a href="../../blog/0001-inference/index.html">Randomisation inference (RI)</a> starts from a statistic <span class="math inline">\(T(\cdot)\)</span>: a difference in means, a regression coefficient, a median difference, or anything else you care about. The design (the assignment mechanism) induces a randomisation distribution for that statistic <em>under a null hypothesis</em>.</p>
-<p>Under a sharp null, the randomisation <span class="math inline">\(p\)</span>-value is a tail probability under the assignment mechanism: <span class="math display">\[
-p \;=\; \Pr\!\left(|T| \ge |T_{\text{obs}}| \;\middle|\; H_0,\; \text{design}\right).
-\]</span></p>
-<p>If you can enumerate every valid assignment, you can compute <span class="math inline">\(p\)</span> exactly, in the design-based sense. In most real problems there are too many valid assignments and it is not worth it to go through all of them, so you sample <span class="math inline">\(R\)</span> valid reassignments.</p>
-<p>Let <span class="math inline">\(c\)</span> be the number of assignments in which the statistic is more extreme than the observed statistic: <span class="math display">\[
-c \;=\; \sum_{r=1}^R \mathbf{1}\{|T_r| \ge |T_{\text{obs}}|\}.
-\]</span> A common Monte Carlo estimator is<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <span class="math display">\[
-\hat p \;=\; \frac{c}{R}.
-\]</span></p>
-<p>At this point it is no longer correct to treat the reported <span class="math inline">\(p\)</span>-value as a fixed number. It has Monte Carlo error because <span class="math inline">\(R\)</span> is finite. In contrast, in an OLS regression, the <span class="math inline">\(p\)</span>-value is a deterministic function of the data, given the modelling assumptions. So there is no Monte Carlo uncertainty.</p>
-<p>It is worth pointing out that <span class="math inline">\(p\)</span>-values, both in RI and the regression context, only make sense in the context of a hypothesis test. <em>A <span class="math inline">\(p\)</span>-value is not a generic measure of ‘signal strength’; it is defined relative to a null hypothesis and a reference distribution for the statistic.</em> In RI, both are explicit: the null is sharp, and the reference distribution comes from the assignment mechanism. In the regression context, the null is typically weak and the reference distribution is introduced analytically (often via asymptotic arguments).</p>
-</section>
-<section id="confidence-intervals-1" class="level2">
-<h2 class="anchored" data-anchor-id="confidence-intervals-1">Confidence intervals</h2>
-<p>We now have our Randomisation inference (RI) <span class="math inline">\(p\)</span>-value, which is an estimate with Monte Carlo error. Then, it is natural to represent this error with a confidence interval (CI) <em>for the <span class="math inline">\(p\)</span>-value itself</em>.</p>
-<p>Conditional on the observed data and the null, each reassignment either lands in the tail or it does not. That makes <span class="math inline">\(c\)</span> behave like a binomial count: <span class="math display">\[
-c \sim \operatorname{Binomial}(R, p).
-\]</span> Then, you can build a <span class="math inline">\((1-\alpha)\)</span> interval for <span class="math inline">\(p\)</span> from this binomial model (there are several standard choices).</p>
-<p>The interpretation is narrow but clean. The RI confidence interval of the <span class="math inline">\(p\)</span>-value:</p>
-<ul>
-<li>quantifies uncertainty from <em>simulation</em>, not from (theoretically) drawing a new dataset,</li>
-<li>shrinks as <span class="math inline">\(R\)</span> grows, and</li>
-<li>tells you when a ‘statistical significance’ call is robust versus when you are basically flipping a coin near a threshold.</li>
-</ul>
-<p>Now let’s get back to the regression setting, say, for an A/B test. How do we build a confidence interval?</p>
-<p>To be concrete, define the finite-sample average treatment effect <span class="math display">\[
-\tau_{\text{ATE}} \;=\; \frac{1}{N}\sum_{i=1}^N \big(Y_i(1)-Y_i(0)\big).
-\]</span></p>
-<p>If you estimate the effect as a treated–control difference in means, or as the coefficient on a treatment indicator in an OLS regression with an intercept, you are targeting <span class="math inline">\(\tau_{\text{ATE}}\)</span> on the outcome scale. A standard regression confidence interval takes the form <span class="math display">\[
-\hat\tau \pm z_{1-\alpha/2}\,\widehat{SE}(\hat\tau),
-\]</span> with details depending on how you estimate the variance.</p>
-<p>The key thing is what that CI is <em>trying</em> to cover. In the usual regression presentation, the motivation is based on repeated sampling (often asymptotic): if we reran ‘the relevant randomness’ many times, the interval would cover the target parameter with frequency <span class="math inline">\(1-\alpha\)</span>. The ‘not significant if the CI includes 0’ common saying is shorthand for not rejecting a weak null like <span class="math display">\[
-H_0^{\text{weak}}:\; \tau_{\text{ATE}} = 0,
-\]</span> under that sampling-based uncertainty and approximation. That is an uncertainty statement about an average effect.</p>
-<p>Let’s take a moment for the distinction to sink in. The confidence interval in a typical regression table reflects uncertainty around the coefficient, while the (default) confidence interval in randomisation inference reflects uncertainty around the <span class="math inline">\(p\)</span>-value. They are not at all comparable.</p>
-</section>
-<section id="confidence-set-1" class="level2">
-<h2 class="anchored" data-anchor-id="confidence-set-1">Confidence set</h2>
-<p>It looks like we are missing a piece in randomisation inference. <em>Is there no confidence interval for the coefficient?</em> Well… sort of. At least in spirit. But we need to do much more work, both to build it and to interpret it.</p>
-<p>A randomisation test needs a null that lets you impute missing potential outcomes. The canonical ‘no effect’ sharp null is <span class="math display">\[
-H_0:\; Y_i(1)=Y_i(0)\;\;\forall i.
-\]</span> That is stronger than ‘the average effect is 0’—the ’weak‘ null. It says nobody is affected.</p>
-<p>To get an interval for an effect size, RI typically inverts a <em>family</em> of sharp nulls indexed by a candidate constant additive effect: <span class="math display">\[
-H_0(\tau_0):\quad Y_i(1) = Y_i(0) + \tau_0 \;\;\text{for all } i.
-\]</span></p>
-<p>For each <span class="math inline">\(\tau_0\)</span> you compute a randomisation <span class="math inline">\(p\)</span>-value <span class="math inline">\(p(\tau_0)\)</span>. Then you invert the tests: <span class="math display">\[
-\mathcal{C}_{1-\alpha} \;=\; \{\tau_0:\; p(\tau_0) &gt; \alpha\}.
-\]</span></p>
-<p>In other words: A ‘confidence interval’ for the coefficient under randomisation inference is the set of constant additive effects that you do not reject under design-based uncertainty.</p>
-<p>That is what it means mechanically, and it is also the safest way to interpret it.</p>
-<p>Everything else—especially ‘is it an ATE interval?’—depends on whether the constant-effect assumption is a defensible approximation for your application.</p>
-<p>Note that the ‘confidence interval’ in randomisation inference is literally defined as a set, which explains that in randomisation inference we call the boundaries of that set the ‘confidence bounds’ instead of ‘confidence interval’. In addition, we call the whole set a ‘confidence band’. This keeps the whole inversion visible: plot the curve <span class="math inline">\(\tau_0 \mapsto p(\tau_0)\)</span> and draw the horizontal line at <span class="math inline">\(\alpha\)</span>. The confidence set is where the curve sits above the line. I like bands because they answer questions the bounds cannot, such as</p>
-<ul>
-<li>do the endpoints come from a sharp crossing or a curve that barely grazes <span class="math inline">\(\alpha\)</span>?</li>
-<li>is the acceptable region a single chunk, or does it fragment?</li>
-<li>if <span class="math inline">\(p(\tau_0)\)</span> is computed by Monte Carlo, is the crossing stable once you acknowledge simulation noise?</li>
-</ul>
-<section id="interpretation-1" class="level3">
-<h3 class="anchored" data-anchor-id="interpretation-1">Interpretation</h3>
-<p>I did say that there is much work to do to interpret RI confidence bounds. The object itself is unambiguous: <span class="math inline">\(\mathcal{C}_{1-\alpha}\)</span> it is the set of <span class="math inline">\(\tau_0\)</span> values for which the constant-additive-effect null <span class="math inline">\(H_0(\tau_0)\)</span> is not rejected at level <span class="math inline">\(\alpha\)</span>.</p>
-<p>Now the interpretation splits.</p>
-<p>If effects are (approximately) constant and additive, so that <span class="math display">\[
-Y_i(1)=Y_i(0)+\tau \quad \forall i,
-\]</span> then <span class="math inline">\(\tau\)</span> is approximately equal to <span class="math inline">\(\tau_{\text{ATE}}\)</span>, and <span class="math inline">\(\mathcal{C}_{1-\alpha}\)</span> is naturally read as a confidence set for the ATE under design-based uncertainty. In that world, the confidence bound carries essentially the meaning people expect.</p>
-<p>If effects are heterogeneous, <span class="math inline">\(H_0(\tau_0)\)</span> is a strong claim: it says <span class="math inline">\(\tau_i=\tau_0\)</span> for everyone. Then:</p>
-<ul>
-<li><span class="math inline">\(0 \in \mathcal{C}_{1-\alpha}\)</span> means you did not reject “everyone’s effect is exactly 0” (given your statistic and design).</li>
-<li><span class="math inline">\(0 \notin \mathcal{C}_{1-\alpha}\)</span> means you rejected that claim.</li>
-</ul>
-<p>What it does <em>not</em> automatically mean is ‘the ATE might be 0’ or ‘the ATE is nonzero’, because those are weak-null statements about an average, and the inverted tests are about a constant effect for every unit.</p>
-<p>So under heterogeneity, in practice, you can read RI confidence bounds as a compatibility check for a simple constant-effect model, not as a replacement for an ATE interval.</p>
-</section>
-<section id="computation-1" class="level3">
-<h3 class="anchored" data-anchor-id="computation-1">Computation</h3>
-<p>I also said that we had to do much work to build the confidence bounds. And we do. Much more work.</p>
-<p>A single randomisation test uses <span class="math inline">\(R\)</span> reassignments. Test inversion uses many randomisation tests—one for each candidate <span class="math inline">\(\tau_0\)</span> you evaluate—so the computation is ‘RI, repeated’. A band is even more demanding because you are deliberately evaluating <span class="math inline">\(p(\tau_0)\)</span> across a grid.</p>
-</section>
-<section id="discussion-1" class="level3">
-<h3 class="anchored" data-anchor-id="discussion-1">Discussion</h3>
-<p>So randomisation inference (sort of) have confidence intervals for the coefficient. But they are much harder to build and to interpret. It almost feels pointless. In a regression setting, confidence intervals feel more immediately useful: they are designed to speak directly about an average effect on the outcome scale under a weak-null framing.</p>
-<p>Still, I think that RI confidence bounds and bands can (sometimes) be useful. They are just useful in a different way: as a transparent, design-grounded way to ask ‘what constant-effect stories are compatible with what we saw?’</p>
-<p>Or perhaps we are simply very used to thinking in terms of weak nulls. <em>A statement like <span class="math inline">\(\tau_{\text{ATE}}=0\)</span> is convenient and often relevant for decisions, but it can also be uninformative.</em> If effects differ in sign, the average can be zero even though treatment has substantial consequences for many units. In that sense, a weak null can hide structure rather than reveal it.</p>
-<p>Sharp nulls force a different discipline. They ask whether any effect at all is compatible with the design-based evidence, or whether a simple, homogeneous effect could plausibly summarise what happened. That is a stronger question. But it is also a clarifying one. Seen this way, RI confidence bounds are not really ‘competing’ with regression confidence intervals. They are probing a different dimension: not ‘how large is the average effect?’, but ‘how simple a story about effects can we still defend?’.</p>
-</section>
-</section>
 
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p>Some implementations use small finite-sample adjustments; the point here is the same either way.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Some implementations use small finite-sample adjustments; the point here is the same either way.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script defer="" src="../../assets/picture-swap.js"></script>
