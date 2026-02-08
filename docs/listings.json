@@ -10,6 +10,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/0006-ritest-pypi/index.html",
       "/blog/0005-ritest-ci/index.html",
       "/blog/0004-ritest-implementations/index.html",
       "/blog/0003-wnba/index.html",

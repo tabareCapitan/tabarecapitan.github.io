@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-02-08">
 
-<title>Blog – Tabaré Capitán</title>
+<title>My first package in Python – Tabaré Capitán</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,33 +21,66 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-a3d0a7fdf15d1fe6f80c8c0950fcbe23.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-cbc183ec3f772a387ac335ef28a3b8e2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,35 +108,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-reading-time','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog-listing'] = new List('listing-blog-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -134,9 +142,9 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../styles.css">
-<link rel="alternate" type="application/rss+xml" title="Tabaré Capitán" href="index.xml" data-external="1"><meta property="og:title" content="Blog – Tabaré Capitán">
-<meta property="og:description" content="Mostly related to causal inference">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="My first package in Python – Tabaré Capitán">
+<meta property="og:description" content="Projects and blog on causal inference.">
 <meta property="og:site_name" content="Tabaré Capitán">
 </head>
 
@@ -309,10 +317,10 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../assets/images/sun.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/images/sun.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Tabaré Capitán</span>
     </a>
   </div>
@@ -323,23 +331,23 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../blog/index.html"> 
 <span class="menu-text">blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/index.html"> 
+    <a class="nav-link" href="../../projects/index.html"> 
 <span class="menu-text">projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../papers/index.html"> 
+    <a class="nav-link" href="../../papers/index.html"> 
 <span class="menu-text">papers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../tools/index.html"> 
+    <a class="nav-link" href="../../tools/index.html"> 
 <span class="menu-text">tools</span></a>
   </li>  
 </ul>
@@ -354,15 +362,23 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Blog</h1>
-            <p class="subtitle lead">Mostly related to causal inference</p>
-                      </div>
+      <h1 class="title">My first package in Python</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">software</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 8, 2026</p>
+      </div>
+    </div>
     
       
     </div>
@@ -371,8 +387,27 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#intro" id="toc-intro" class="nav-link active" data-scroll-target="#intro">Intro</a></li>
+  <li><a href="#design" id="toc-design" class="nav-link" data-scroll-target="#design">Design</a></li>
+  <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools">Tools</a>
+  <ul class="collapse">
+  <li><a href="#version-control" id="toc-version-control" class="nav-link" data-scroll-target="#version-control">Version control</a></li>
+  <li><a href="#hooks" id="toc-hooks" class="nav-link" data-scroll-target="#hooks">Hooks</a></li>
+  <li><a href="#testing" id="toc-testing" class="nav-link" data-scroll-target="#testing">Testing</a></li>
+  <li><a href="#continuous-integration-ci" id="toc-continuous-integration-ci" class="nav-link" data-scroll-target="#continuous-integration-ci">Continuous integration (CI)</a></li>
+  <li><a href="#build-and-release-tooling" id="toc-build-and-release-tooling" class="nav-link" data-scroll-target="#build-and-release-tooling">Build and release tooling</a></li>
+  </ul></li>
+  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a></li>
+  <li><a href="#packaging-and-release-on-pypi" id="toc-packaging-and-release-on-pypi" class="nav-link" data-scroll-target="#packaging-and-release-on-pypi">Packaging and release on PyPI</a></li>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
+  <li><a href="#one-last-word" id="toc-one-last-word" class="nav-link" data-scroll-target="#one-last-word">One last word</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -382,119 +417,133 @@ window.Quarto = {
 
 
 
-<!-- Neither causality nor inference is something we observe directly; both are conceptual constructions, made rigorous by design, assumptions, and mathematics. -->
-<div id="listing-blog-listing" class="quarto-listing quarto-listing-container-table">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
+<section id="intro" class="level2">
+<h2 class="anchored" data-anchor-id="intro">Intro</h2>
+<p>A few months ago I was analysing a product adoption A/B test and wanted to use randomisation inference (RI), which I’ve done many times in Stata using <code>ritest</code>. But I did not find a functional equivalent in Python. ‘Not a problem’, I thought. I could code my own RI implementation; it is simply a function to permute the assignment and refit OLS inside a <code>for</code> loop.</p>
+<p>Long story short: it took me a few months to call this project ‘done’.</p>
+<p>Indeed the logic of RI is simple; it was not hard to get a working version. The point estimate and <span class="math inline">\(p\)</span>-value matched Stata closely. I could have moved on. But I was a bit disappointed. I expected randomisation inference to be fast in Python, or at least faster than in Stata.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> But that first version was much slower than Stata’s <code>ritest</code>. And I was familiar with R’s <code>ritest</code>, so I had an idea for what was possible.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>In retrospect, it was naive of me to expect faster than Stata performance. I wrote that first version entirely with pandas and repeated calls to <code>statsmodels</code>; each iteration rebuilt the model and design matrix. Most of the runtime was overhead: rebuilding model objects and shuffling DataFrames, not the OLS itself. In terms of the data structures, pandas adds a lot of high-level machinery (indexing, alignment, copying) on top of NumPy arrays. And in terms of the estimation, <code>statsmodels</code> is great, but for this loop it was doing far more setup than needed.</p>
+<p>I knew exactly what I had to do next: push the linear algebra closer to NumPy, avoid rebuilding objects unnecessarily, and use more specialised tools. As expected, my code got much faster. Since I’ve done so much work already, I naturally wanted to make sure my <code>ritest</code> would be ready for the next time I needed. In fact, wouldn’t it be nice to at least match Stata’s <code>ritest</code> features?</p>
+<p>This post is about what I learned while following this very specific rabbit hole. Most of what I present in this post is obvious for those familiar with software development, but I am just an economist trying to use the right tools. Perhaps there are more like me out there, maybe in other fields, people who get distracted well beyond their original problem and convince themselves that it is time to write their first Python package.</p>
+</section>
+<section id="design" class="level2">
+<h2 class="anchored" data-anchor-id="design">Design</h2>
+<p>I think this is the most important step. You should know what you want.</p>
+<p>My first priority was to achieve the same convenience I have had using Stata’s <code>ritest</code>, which required a simple public API. My second priority was flexibility, which was again a design concept taken from Stata’s <code>ritest</code>. This is what would end up being the ‘linear’ and ‘generic’ path. Finally, my last priority was speed, which is at odds with the second priority. Conveniently, the separation between ‘linear’ and ‘generic’ path provided a natural solution. I would guarantee speed on the linear path.</p>
+</section>
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools</h2>
+<p>This section is a description of the tools that I used. This is not a tutorial on how to install or use these tools; I’m not the right person to do so. The section simply sets the stage for the next sections, in which I precisely describe my development workflow. You can safely skip this section if you are familiar with <a href="https://en.wikipedia.org/wiki/DevOps">DevOps</a>.</p>
+<section id="version-control" class="level3">
+<h3 class="anchored" data-anchor-id="version-control">Version control</h3>
+<p>I used Git for basic version control for a single-developer workflow. I mostly used <code>add</code>, <code>commit</code>, <code>checkout</code>, <code>branch</code>, and <code>push</code>.</p>
+</section>
+<section id="hooks" class="level3">
+<h3 class="anchored" data-anchor-id="hooks">Hooks</h3>
+<p><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">Git hooks</a> are scripts that run automatically at certain points in the git workflow (for example, before a commit is created). In practice, this meant that a basic standard was enforced <em>before</em> anything became a commit. It is very easy to set everything up using <a href="https://github.com/pre-commit"><code>pre-commit</code></a>.</p>
+<p>My hooks, declared in <a href="https://github.com/tabareCapitan/ritest/blob/master/.pre-commit-config.yaml"><code>.pre-commit-config.yaml</code></a> , include:</p>
+<ul>
+<li><strong><a href="https://docs.astral.sh/ruff/linter/">Ruff Linter</a></strong>: a fast <a href="https://en.wikipedia.org/wiki/Lint_(software)">linter</a> that catches common mistakes and, importantly, can fix many of them automatically.</li>
+<li><strong><a href="https://docs.astral.sh/ruff/formatter/">Ruff Formatter</a></strong>: format the code into a consistent style so formatting decisions stop being a recurring discussion.</li>
+<li><strong>end-of-file-fixer</strong>: ensures files end with a newline.</li>
+<li><strong>trailing-whitespace</strong>: removes stray whitespace at the end of lines.</li>
+</ul>
+<p>Hooks are not intended to affect program logic; they mostly enforce style and catch common mistakes. Their job is to keep the codebase clean and quiet.</p>
+</section>
+<section id="testing" class="level3">
+<h3 class="anchored" data-anchor-id="testing">Testing</h3>
+<p>Economics was not my first choice for my BA, I started in Computer Science and transferred after a few semesters. One of the things I learned was that you should always write tests. So I did. In Python, you can use <a href="https://docs.pytest.org/en/stable/"><code>pytest</code></a>.</p>
+<p>When I did not have a working version of the code, I was doing <a href="https://en.wikipedia.org/wiki/Unit_testing">unit testing</a>: testing very specific units of the codebase. Once I started putting the pieces together, I moved on to <a href="https://en.wikipedia.org/wiki/Integration_testing">integration testing</a>, which is when you check that units interact as expected. Despite all of these tests, I was very much relieved when I was able to do <a href="https://en.wikipedia.org/wiki/System_testing">end-to-end testing</a> to verify that I was indeed getting the correct results.</p>
+<p>I should say that this is one of the cases in which I found <a href="https://en.wikipedia.org/wiki/Large_language_model">LLMs</a> to be most helpful. You still need to supervise and check the code, but the task of writing unit tests provided a script is very well suited.</p>
+</section>
+<section id="continuous-integration-ci" class="level3">
+<h3 class="anchored" data-anchor-id="continuous-integration-ci">Continuous integration (CI)</h3>
+<p>Since I was coding by myself, it did not matter to have a remote repository during development. Still, I kept pushing because I wanted <a href="https://github.com/features/actions">GitHub Actions</a>.</p>
+<p>A test may pass on my computer but not somewhere else. I could create a new virtual environment, but I was still on my computer. And it was not convenient. I wanted to install the package in a fresh environment and run the test suite. Well, this is precisely what continuous integration (CI) does, and you can do it for free (if the repository is public) using GitHub Actions.</p>
+<p>In essence, the CI does one thing: it installs the package in a fresh environment and runs the test suite. This happens automatically on pushes and pull requests, and it runs across the Python versions that the package claims to support.</p>
+</section>
+<section id="build-and-release-tooling" class="level3">
+<h3 class="anchored" data-anchor-id="build-and-release-tooling">Build and release tooling</h3>
+<p>I used (what I think is) the standard approach . Once the code was ready to be released, I built the distribution artefacts locally: a source distribution (<code>sdist</code>) and a built distribution (<code>wheel</code>). This step forces you to confront packaging issues early, because it exercises exactly the same metadata and configuration that users rely on when installing the package. I then uploaded these artefacts using <code>twine</code>.</p>
+</section>
+</section>
+<section id="workflow" class="level2">
+<h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
+<p>Now that I’ve described the tools, I can tell you about my (solo) development workflow. It represents the workflow for a new feature or change, for a very minor change or at earlier stages, you can just skip the new branch.</p>
+<p>By the way, I wrote <code>ritest</code> during 2025 with support from Open AI’s Codex. Things may have changed with the new models, but at the time, Codex needed close oversight and made lots of mistakes. Not to say it was not a great tool; this package would be worse (or even a never completed project) without LLMs. Like all the tools mentioned in this post, it is just another way to make the job easier.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+  A[Create branch] --&gt; B[Edit code]
+  B --&gt; C[Run pre-commit]
+  C --&gt; D{Hooks changed files?}
+  D -- yes --&gt; E[git add -A]
+  E --&gt; F[Commit]
+  D -- no --&gt; F[Commit]
+  F --&gt; G[Run tests: pytest]
+  G --&gt; H{Tests pass?}
+  H -- no --&gt; B
+  H -- yes --&gt; I[Merge into main/master]
+  I --&gt; J[Push]
+  J --&gt; K{CI green?}
+  K -- no --&gt; B
+  K -- yes --&gt; L[Done]
 
-<th>
-Title
-</th>
-
-<th>
-Reading Time
-</th>
-
-<th>
-Categories
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-categories="c29mdHdhcmU=" data-listing-date-sort="1770505200000" data-listing-file-modified-sort="1770579908608" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1624" data-listing-title-sort="My first package in Python" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../blog/0006-ritest-pypi/index.html" class="title listing-title">My first package in Python</a>
-</td>
-<td>
-<span class="listing-reading-time">9 min</span>
-</td>
-<td>
-<span class="listing-categories">software</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-categories="c3RhdGlzdGljcw==" data-listing-date-sort="1769986800000" data-listing-file-modified-sort="1770023117303" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1497" data-listing-title-sort="Confidence intervals in randomisation inference" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../blog/0005-ritest-ci/index.html" class="title listing-title">Confidence intervals in randomisation inference</a>
-</td>
-<td>
-<span class="listing-reading-time">8 min</span>
-</td>
-<td>
-<span class="listing-categories">statistics</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-categories="c3RhdGlzdGljcyUyQ3NvZnR3YXJl" data-listing-date-sort="1769468400000" data-listing-file-modified-sort="1769499007046" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="865" data-listing-title-sort="Randomisation inference in Stata, R, and Python" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../blog/0004-ritest-implementations/index.html" class="title listing-title">Randomisation inference in Stata, R, and Python</a>
-</td>
-<td>
-<span class="listing-reading-time">5 min</span>
-</td>
-<td>
-<span class="listing-categories">statistics, software</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-categories="ZWNvbm9taWNzJTJDYmFza2V0YmFsbA==" data-listing-date-sort="1768518000000" data-listing-file-modified-sort="1768560200620" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2678" data-listing-title-sort="The economics of the WNBA" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../blog/0003-wnba/index.html" class="title listing-title">The economics of the WNBA</a>
-</td>
-<td>
-<span class="listing-reading-time">14 min</span>
-</td>
-<td>
-<span class="listing-categories">economics, basketball</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-categories="c3RhdGlzdGljcyUyQ3NvZnR3YXJl" data-listing-date-sort="1767654000000" data-listing-file-modified-sort="1767623447739" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="993" data-listing-title-sort="Introducing `ritest`: randomisation inference in Python" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../blog/0002-ritest-intro/index.html" class="title listing-title">Introducing <code>ritest</code>: randomisation inference in Python</a>
-</td>
-<td>
-<span class="listing-reading-time">5 min</span>
-</td>
-<td>
-<span class="listing-categories">statistics, software</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-categories="c3RhdGlzdGljcw==" data-listing-date-sort="1766962800000" data-listing-file-modified-sort="1767600121556" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1900" data-listing-title-sort="On inference" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../blog/0001-inference/index.html" class="title listing-title">On inference</a>
-</td>
-<td>
-<span class="listing-reading-time">10 min</span>
-</td>
-<td>
-<span class="listing-categories">statistics</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
+</pre>
 </div>
-<div class="text-center small">
-<p>Subscribe via <a href="index.xml">RSS</a></p>
+<p></p></figure><p></p>
 </div>
+</div>
+</div>
+<p>The workflow corresponds to:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> feat/x</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># edit code</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pre-commit</span> run <span class="at">--all-files</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pytest</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="at">-A</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"message"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge feat/x</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="packaging-and-release-on-pypi" class="level2">
+<h2 class="anchored" data-anchor-id="packaging-and-release-on-pypi">Packaging and release on PyPI</h2>
+<p>Once you are ready to ship, you need a <code>pyproject.toml</code> file. This is where you tell Python tools what your project is and how it should be built. It declares project metadata (name, version, description, URLs), minimum Python version, and runtime dependencies.</p>
+<p>To release on PyPI, you can follow these steps:</p>
+<ul>
+<li>build wheel + sdist locally</li>
+<li>upload to <a href="https://test.pypi.org/">TestPyPI</a> with <code>twine</code> (this is ‘rehearsal’)</li>
+<li>install into a clean environment and actually use it</li>
+<li>upload the same artefacts to <a href="https://pypi.org/">PyPI</a></li>
+<li>bump version + tag release</li>
+<li>Done!</li>
+</ul>
+</section>
+<section id="documentation" class="level2">
+<h2 class="anchored" data-anchor-id="documentation">Documentation</h2>
+<p>The second lesson I took from my time as a CS student is that you must write proper documentation. So I also did that. And it takes much longer than what I thought.</p>
+<p>Beyond proper in-code documentation, I think, at the very least, you need a <code>README</code> file for your GitHub repository. It describes what the package does, how to install it, and how to use it. Then, you need a <code>CHANGELOG</code> file to keep track of changes. For me, the real work was to write a comprehensive documentation site, built with Quarto and deployed via GitHub Pages. This is where I show basic and advanced use, examples, technical notes, and the reference API.</p>
+</section>
+<section id="one-last-word" class="level2">
+<h2 class="anchored" data-anchor-id="one-last-word">One last word</h2>
+<p>I hope that I’ve clearly conveyed that this is not a “how it is done” post. I just did it for the first time.I am sharing this post for selfish reasons. I would like to hear from people who have done this many times. Am I missing something that would make the process easier, faster, or more robust? Please <a href="https://tabarecapitan.com/">reach out</a> if you have something to say.</p>
+<p>And if you are thinking about releasing your first package, you may find this post useful, just keep in mind that this is in no way an authoritative guide.</p>
 
 
+</section>
 
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
-<script defer="" src="../assets/picture-swap.js"></script>
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>I can’t guarantee this is correct. I don’t know much about Stata’s MATA language for linear algebra. This is just what you may call an ‘informed hunch’.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>In R’s <code>ritest</code> documentation, Grant McDermott presents <a href="https://grantmcdermott.com/ritest/articles/ritest.html#example-ii-real-life-data">a case</a> in which the runtime goes down from 183 seconds in Stata, to 6.58 seconds in R.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script defer="" src="../../assets/picture-swap.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

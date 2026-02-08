@@ -10,7 +10,175 @@
 <atom:link href="https://www.tabarecapitan.com/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Projects and blog on causal inference.</description>
 <generator>quarto-1.7.33</generator>
-<lastBuildDate>Sun, 01 Feb 2026 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 07 Feb 2026 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>My first package in Python</title>
+  <link>https://www.tabarecapitan.com/blog/0006-ritest-pypi/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<section id="intro" class="level2">
+<h2 class="anchored" data-anchor-id="intro">Intro</h2>
+<p>A few months ago I was analysing a product adoption A/B test and wanted to use randomisation inference (RI), which I’ve done many times in Stata using <code>ritest</code>. But I did not find a functional equivalent in Python. ‘Not a problem’, I thought. I could code my own RI implementation; it is simply a function to permute the assignment and refit OLS inside a <code>for</code> loop.</p>
+<p>Long story short: it took me a few months to call this project ‘done’.</p>
+<p>Indeed the logic of RI is simple; it was not hard to get a working version. The point estimate and <img src="https://latex.codecogs.com/png.latex?p">-value matched Stata closely. I could have moved on. But I was a bit disappointed. I expected randomisation inference to be fast in Python, or at least faster than in Stata.<sup>1</sup> But that first version was much slower than Stata’s <code>ritest</code>. And I was familiar with R’s <code>ritest</code>, so I had an idea for what was possible.<sup>2</sup></p>
+<p>In retrospect, it was naive of me to expect faster than Stata performance. I wrote that first version entirely with pandas and repeated calls to <code>statsmodels</code>; each iteration rebuilt the model and design matrix. Most of the runtime was overhead: rebuilding model objects and shuffling DataFrames, not the OLS itself. In terms of the data structures, pandas adds a lot of high-level machinery (indexing, alignment, copying) on top of NumPy arrays. And in terms of the estimation, <code>statsmodels</code> is great, but for this loop it was doing far more setup than needed.</p>
+<p>I knew exactly what I had to do next: push the linear algebra closer to NumPy, avoid rebuilding objects unnecessarily, and use more specialised tools. As expected, my code got much faster. Since I’ve done so much work already, I naturally wanted to make sure my <code>ritest</code> would be ready for the next time I needed. In fact, wouldn’t it be nice to at least match Stata’s <code>ritest</code> features?</p>
+<p>This post is about what I learned while following this very specific rabbit hole. Most of what I present in this post is obvious for those familiar with software development, but I am just an economist trying to use the right tools. Perhaps there are more like me out there, maybe in other fields, people who get distracted well beyond their original problem and convince themselves that it is time to write their first Python package.</p>
+</section>
+<section id="design" class="level2">
+<h2 class="anchored" data-anchor-id="design">Design</h2>
+<p>I think this is the most important step. You should know what you want.</p>
+<p>My first priority was to achieve the same convenience I have had using Stata’s <code>ritest</code>, which required a simple public API. My second priority was flexibility, which was again a design concept taken from Stata’s <code>ritest</code>. This is what would end up being the ‘linear’ and ‘generic’ path. Finally, my last priority was speed, which is at odds with the second priority. Conveniently, the separation between ‘linear’ and ‘generic’ path provided a natural solution. I would guarantee speed on the linear path.</p>
+</section>
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools</h2>
+<p>This section is a description of the tools that I used. This is not a tutorial on how to install or use these tools; I’m not the right person to do so. The section simply sets the stage for the next sections, in which I precisely describe my development workflow. You can safely skip this section if you are familiar with <a href="https://en.wikipedia.org/wiki/DevOps">DevOps</a>.</p>
+<section id="version-control" class="level3">
+<h3 class="anchored" data-anchor-id="version-control">Version control</h3>
+<p>I used Git for basic version control for a single-developer workflow. I mostly used <code>add</code>, <code>commit</code>, <code>checkout</code>, <code>branch</code>, and <code>push</code>.</p>
+</section>
+<section id="hooks" class="level3">
+<h3 class="anchored" data-anchor-id="hooks">Hooks</h3>
+<p><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">Git hooks</a> are scripts that run automatically at certain points in the git workflow (for example, before a commit is created). In practice, this meant that a basic standard was enforced <em>before</em> anything became a commit. It is very easy to set everything up using <a href="https://github.com/pre-commit"><code>pre-commit</code></a>.</p>
+<p>My hooks, declared in <a href="https://github.com/tabareCapitan/ritest/blob/master/.pre-commit-config.yaml"><code>.pre-commit-config.yaml</code></a> , include:</p>
+<ul>
+<li><strong><a href="https://docs.astral.sh/ruff/linter/">Ruff Linter</a></strong>: a fast <a href="https://en.wikipedia.org/wiki/Lint_(software)">linter</a> that catches common mistakes and, importantly, can fix many of them automatically.</li>
+<li><strong><a href="https://docs.astral.sh/ruff/formatter/">Ruff Formatter</a></strong>: format the code into a consistent style so formatting decisions stop being a recurring discussion.</li>
+<li><strong>end-of-file-fixer</strong>: ensures files end with a newline.</li>
+<li><strong>trailing-whitespace</strong>: removes stray whitespace at the end of lines.</li>
+</ul>
+<p>Hooks are not intended to affect program logic; they mostly enforce style and catch common mistakes. Their job is to keep the codebase clean and quiet.</p>
+</section>
+<section id="testing" class="level3">
+<h3 class="anchored" data-anchor-id="testing">Testing</h3>
+<p>Economics was not my first choice for my BA, I started in Computer Science and transferred after a few semesters. One of the things I learned was that you should always write tests. So I did. In Python, you can use <a href="https://docs.pytest.org/en/stable/"><code>pytest</code></a>.</p>
+<p>When I did not have a working version of the code, I was doing <a href="https://en.wikipedia.org/wiki/Unit_testing">unit testing</a>: testing very specific units of the codebase. Once I started putting the pieces together, I moved on to <a href="https://en.wikipedia.org/wiki/Integration_testing">integration testing</a>, which is when you check that units interact as expected. Despite all of these tests, I was very much relieved when I was able to do <a href="https://en.wikipedia.org/wiki/System_testing">end-to-end testing</a> to verify that I was indeed getting the correct results.</p>
+<p>I should say that this is one of the cases in which I found <a href="https://en.wikipedia.org/wiki/Large_language_model">LLMs</a> to be most helpful. You still need to supervise and check the code, but the task of writing unit tests provided a script is very well suited.</p>
+</section>
+<section id="continuous-integration-ci" class="level3">
+<h3 class="anchored" data-anchor-id="continuous-integration-ci">Continuous integration (CI)</h3>
+<p>Since I was coding by myself, it did not matter to have a remote repository during development. Still, I kept pushing because I wanted <a href="https://github.com/features/actions">GitHub Actions</a>.</p>
+<p>A test may pass on my computer but not somewhere else. I could create a new virtual environment, but I was still on my computer. And it was not convenient. I wanted to install the package in a fresh environment and run the test suite. Well, this is precisely what continuous integration (CI) does, and you can do it for free (if the repository is public) using GitHub Actions.</p>
+<p>In essence, the CI does one thing: it installs the package in a fresh environment and runs the test suite. This happens automatically on pushes and pull requests, and it runs across the Python versions that the package claims to support.</p>
+</section>
+<section id="build-and-release-tooling" class="level3">
+<h3 class="anchored" data-anchor-id="build-and-release-tooling">Build and release tooling</h3>
+<p>I used (what I think is) the standard approach . Once the code was ready to be released, I built the distribution artefacts locally: a source distribution (<code>sdist</code>) and a built distribution (<code>wheel</code>). This step forces you to confront packaging issues early, because it exercises exactly the same metadata and configuration that users rely on when installing the package. I then uploaded these artefacts using <code>twine</code>.</p>
+</section>
+</section>
+<section id="workflow" class="level2">
+<h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
+<p>Now that I’ve described the tools, I can tell you about my (solo) development workflow. It represents the workflow for a new feature or change, for a very minor change or at earlier stages, you can just skip the new branch.</p>
+<p>By the way, I wrote <code>ritest</code> during 2025 with support from Open AI’s Codex. Things may have changed with the new models, but at the time, Codex needed close oversight and made lots of mistakes. Not to say it was not a great tool; this package would be worse (or even a never completed project) without LLMs. Like all the tools mentioned in this post, it is just another way to make the job easier.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+  A[Create branch] --&gt; B[Edit code]
+  B --&gt; C[Run pre-commit]
+  C --&gt; D{Hooks changed files?}
+  D -- yes --&gt; E[git add -A]
+  E --&gt; F[Commit]
+  D -- no --&gt; F[Commit]
+  F --&gt; G[Run tests: pytest]
+  G --&gt; H{Tests pass?}
+  H -- no --&gt; B
+  H -- yes --&gt; I[Merge into main/master]
+  I --&gt; J[Push]
+  J --&gt; K{CI green?}
+  K -- no --&gt; B
+  K -- yes --&gt; L[Done]
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The workflow corresponds to:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> checkout <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-b</span> feat/x</span>
+<span id="cb1-2"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># edit code</span></span>
+<span id="cb1-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">pre-commit</span> run <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--all-files</span></span>
+<span id="cb1-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">pytest</span></span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> add <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-A</span></span>
+<span id="cb1-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> commit <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-m</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"message"</span></span>
+<span id="cb1-7"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> checkout main</span>
+<span id="cb1-8"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> merge feat/x</span>
+<span id="cb1-9"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> push</span></code></pre></div>
+</section>
+<section id="packaging-and-release-on-pypi" class="level2">
+<h2 class="anchored" data-anchor-id="packaging-and-release-on-pypi">Packaging and release on PyPI</h2>
+<p>Once you are ready to ship, you need a <code>pyproject.toml</code> file. This is where you tell Python tools what your project is and how it should be built. It declares project metadata (name, version, description, URLs), minimum Python version, and runtime dependencies.</p>
+<p>To release on PyPI, you can follow these steps:</p>
+<ul>
+<li>build wheel + sdist locally</li>
+<li>upload to <a href="https://test.pypi.org/">TestPyPI</a> with <code>twine</code> (this is ‘rehearsal’)</li>
+<li>install into a clean environment and actually use it</li>
+<li>upload the same artefacts to <a href="https://pypi.org/">PyPI</a></li>
+<li>bump version + tag release</li>
+<li>Done!</li>
+</ul>
+</section>
+<section id="documentation" class="level2">
+<h2 class="anchored" data-anchor-id="documentation">Documentation</h2>
+<p>The second lesson I took from my time as a CS student is that you must write proper documentation. So I also did that. And it takes much longer than what I thought.</p>
+<p>Beyond proper in-code documentation, I think, at the very least, you need a <code>README</code> file for your GitHub repository. It describes what the package does, how to install it, and how to use it. Then, you need a <code>CHANGELOG</code> file to keep track of changes. For me, the real work was to write a comprehensive documentation site, built with Quarto and deployed via GitHub Pages. This is where I show basic and advanced use, examples, technical notes, and the reference API.</p>
+</section>
+<section id="one-last-word" class="level2">
+<h2 class="anchored" data-anchor-id="one-last-word">One last word</h2>
+<p>I hope that I’ve clearly conveyed that this is not a “how it is done” post. I just did it for the first time.I am sharing this post for selfish reasons. I would like to hear from people who have done this many times. Am I missing something that would make the process easier, faster, or more robust? Please <a href="https://tabarecapitan.com/">reach out</a> if you have something to say.</p>
+<p>And if you are thinking about releasing your first package, you may find this post useful, just keep in mind that this is in no way an authoritative guide.</p>
+
+
+</section>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>I can’t guarantee this is correct. I don’t know much about Stata’s MATA language for linear algebra. This is just what you may call an ‘informed hunch’.↩︎</p></li>
+<li id="fn2"><p>In R’s <code>ritest</code> documentation, Grant McDermott presents <a href="https://grantmcdermott.com/ritest/articles/ritest.html#example-ii-real-life-data">a case</a> in which the runtime goes down from 183 seconds in Stata, to 6.58 seconds in R.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>software</category>
+  <guid>https://www.tabarecapitan.com/blog/0006-ritest-pypi/</guid>
+  <pubDate>Sat, 07 Feb 2026 23:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Confidence intervals in randomisation inference</title>
   <link>https://www.tabarecapitan.com/blog/0005-ritest-ci/</link>

@@ -1,0 +1,142 @@
+---
+title: "My first package in Python"
+date: 2026-02-08
+categories: [software]
+draft: false
+---
+
+## Intro
+
+A few months ago I was analysing a product adoption A/B test and wanted to use randomisation inference (RI), which I’ve done many times in Stata using `ritest`. But I did not find a functional equivalent in Python. ‘Not a problem’, I thought. I could code my own RI implementation; it is simply a function to permute the assignment and refit OLS inside a `for` loop.
+
+Long story short: it took me a few months to call this project ‘done’.
+
+Indeed the logic of RI is simple; it was not hard to get a working version. The point estimate and $p$-value matched Stata closely. I could have moved on. But I was a bit disappointed. I expected randomisation inference to be fast in Python, or at least faster than in Stata.[^stata-vs-python] But that first version was much slower than Stata's `ritest`. And I was familiar with R’s `ritest`, so I had an idea for what was possible.[^comparison-runtime]
+
+In retrospect, it was naive of me to expect faster than Stata performance. I wrote that first version entirely with pandas and repeated calls to `statsmodels`; each iteration rebuilt the model and design matrix. Most of the runtime was overhead: rebuilding model objects and shuffling DataFrames, not the OLS itself. In terms of the data structures, pandas adds a lot of high-level machinery (indexing, alignment, copying) on top of NumPy arrays. And in terms of the estimation, `statsmodels` is great, but for this loop it was doing far more setup than needed.
+
+I knew exactly what I had to do next:  push the linear algebra closer to NumPy, avoid rebuilding objects unnecessarily, and use more specialised tools. As expected, my code got much faster. Since I've done so much work already, I naturally wanted to make sure my `ritest` would be ready for the next time I needed. In fact, wouldn’t it be nice to at least match Stata’s `ritest` features?
+
+This post is about what I learned while following this very specific rabbit hole. Most of what I present in this post is obvious for those familiar with software development, but I am just an economist trying to use the right tools. Perhaps there are more like me out there, maybe in other fields, people who get distracted well beyond their original problem and convince themselves that it is time to write their first Python package.
+
+
+## Design
+
+I think this is the most important step. You should know what you want.
+
+My first priority was to achieve the same convenience I have had using Stata’s `ritest`, which required a simple public API. My second priority was flexibility, which was again a design concept taken from Stata’s `ritest`. This is what would end up being the ‘linear’ and ‘generic’ path. Finally, my last priority was speed, which is at odds with the second priority. Conveniently, the separation between ‘linear’ and ‘generic’ path provided a natural solution. I would guarantee speed on the linear path.
+
+## Tools
+
+This section is a description of the tools that I used. This is not a tutorial on how to install or use these tools; I’m not the right person to do so. The section simply sets the stage for the next sections, in which I precisely describe my development workflow. You can safely skip this section if you are familiar with [DevOps](https://en.wikipedia.org/wiki/DevOps).
+
+
+### Version control
+
+I used Git for basic version control for a single-developer workflow. I mostly used `add`, `commit`, `checkout`, `branch`, and `push`.
+
+
+### Hooks
+
+[Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) are scripts that run automatically at certain points in the git workflow (for example, before a commit is created). In practice, this meant that a basic standard was enforced *before* anything became a commit. It is very easy to set everything up using [`pre-commit`](https://github.com/pre-commit).
+
+My hooks, declared in [`.pre-commit-config.yaml`](https://github.com/tabareCapitan/ritest/blob/master/.pre-commit-config.yaml) , include:
+
+- **[Ruff Linter](https://docs.astral.sh/ruff/linter/)**: a fast [linter](https://en.wikipedia.org/wiki/Lint_(software)) that catches common mistakes and, importantly, can fix many of them automatically.
+- **[Ruff Formatter](https://docs.astral.sh/ruff/formatter/)**: format the code into a consistent style so formatting decisions stop being a recurring discussion.
+- **end-of-file-fixer**: ensures files end with a newline.
+- **trailing-whitespace**: removes stray whitespace at the end of lines.
+
+Hooks are not intended to affect program logic; they mostly enforce style and catch common mistakes. Their job is to keep the codebase clean and quiet.
+
+### Testing
+
+Economics was not my first choice for my BA, I started in Computer Science and transferred after a few semesters. One of the things I learned was that you should always write tests. So I did. In Python, you can use [`pytest`](https://docs.pytest.org/en/stable/).
+
+When I did not have a working version of the code, I was doing [unit testing](https://en.wikipedia.org/wiki/Unit_testing): testing very specific units of the codebase.  Once I started putting the pieces together, I moved on to [integration testing](https://en.wikipedia.org/wiki/Integration_testing), which is when you check that units interact as expected. Despite all of these tests, I was very much relieved when I was able to do [end-to-end testing](https://en.wikipedia.org/wiki/System_testing) to verify that I was indeed getting the correct results.
+
+I should say that this is one of the cases in which I found [LLMs](https://en.wikipedia.org/wiki/Large_language_model) to be most helpful. You still need to supervise and check the code, but the task of writing unit tests provided a script is very well suited.
+
+### Continuous integration (CI)
+
+Since I was coding by myself, it did not matter to have a remote repository during development. Still, I kept pushing because I wanted [GitHub Actions](https://github.com/features/actions).
+
+A test may pass on my computer but not somewhere else. I could create a new virtual environment, but I was still on my computer. And it was not convenient. I wanted to install the package in a fresh environment and run the test suite. Well, this is precisely what continuous integration (CI) does, and you can do it for free (if the repository is public) using GitHub Actions.
+
+In essence, the CI does one thing: it installs the package in a fresh environment and runs the test suite. This happens automatically on pushes and pull requests, and it runs across the Python versions that the package claims to support.
+
+### Build and release tooling
+
+I used (what I think is) the standard approach . Once the code was ready to be released, I built the distribution artefacts locally: a source distribution (`sdist`) and a built distribution (`wheel`). This step forces you to confront packaging issues early, because it exercises exactly the same metadata and configuration that users rely on when installing the package. I then uploaded these artefacts using `twine`.
+
+## Workflow
+
+Now that I’ve described the tools, I can tell you about my (solo) development workflow. It represents the workflow for a new feature or change, for a very minor change or at earlier stages, you can just skip the new branch.
+
+By the way, I wrote `ritest` during 2025 with support from Open AI's Codex. Things may have changed with the new models, but at the time, Codex needed close oversight and made lots of mistakes. Not to say it was not a great tool; this package would be worse (or even a never completed project) without LLMs. Like all the tools mentioned in this post, it is just another way to make the job easier.
+
+
+```{mermaid}
+flowchart TD
+  A[Create branch] --> B[Edit code]
+  B --> C[Run pre-commit]
+  C --> D{Hooks changed files?}
+  D -- yes --> E[git add -A]
+  E --> F[Commit]
+  D -- no --> F[Commit]
+  F --> G[Run tests: pytest]
+  G --> H{Tests pass?}
+  H -- no --> B
+  H -- yes --> I[Merge into main/master]
+  I --> J[Push]
+  J --> K{CI green?}
+  K -- no --> B
+  K -- yes --> L[Done]
+
+```
+
+The workflow corresponds to:
+
+```bash
+git checkout -b feat/x
+# edit code
+pre-commit run --all-files
+pytest
+git add -A
+git commit -m "message"
+git checkout main
+git merge feat/x
+git push
+
+```
+
+## Packaging and release on PyPI
+
+Once you are ready to ship, you need a `pyproject.toml` file. This is where you tell Python tools what your project is and how it should be built. It declares project metadata (name, version, description, URLs), minimum Python version, and runtime dependencies.
+
+To release on PyPI, you can follow these steps:
+
+- build wheel + sdist locally
+- upload to [TestPyPI](https://test.pypi.org/) with `twine` (this is ‘rehearsal’)
+- install into a clean environment and actually use it
+- upload the same artefacts to [PyPI](https://pypi.org/)
+- bump version + tag release
+- Done!
+
+## Documentation
+
+The second lesson I took from my time as a CS student is that you must write proper documentation. So I also did that. And it takes much longer than what I thought.
+
+Beyond proper in-code documentation, I think, at the very least, you need a `README` file for your GitHub repository. It describes what the package does, how to install it, and how to use it. Then, you need a `CHANGELOG` file to keep track of changes. For me, the real work was to write a comprehensive documentation site, built with Quarto and deployed via GitHub Pages. This is where I show basic and advanced use, examples, technical notes, and the reference API.
+
+
+## One last word
+
+I hope that I’ve clearly conveyed that this is not a “how it is done” post. I just did it for the first time.I am sharing this post for selfish reasons. I would like to hear from people who have done this many times. Am I missing something that would make the process easier, faster, or more robust? Please [reach out](https://tabarecapitan.com/) if you have something to say.
+
+And if you are thinking about releasing your first package, you may find this post useful, just keep in mind that this is in no way an authoritative guide.
+
+
+
+[^stata-vs-python]: I can’t guarantee this is correct. I don’t know much about Stata’s MATA language for linear algebra. This is just what you may call an ‘informed hunch’.
+[^comparison-runtime]: In R’s `ritest` documentation, Grant McDermott presents [a case](https://grantmcdermott.com/ritest/articles/ritest.html#example-ii-real-life-data) in which the runtime goes down from 183 seconds in Stata, to 6.58 seconds in R.
