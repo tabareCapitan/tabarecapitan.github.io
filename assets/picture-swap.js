@@ -64,7 +64,7 @@
 
     function updateAll() {
         updateAboutImage();
-        updateNavbarLogo();
+        // updateNavbarLogo();  // uncomment to re-enable sun/moon swap
     }
 
     document.addEventListener("DOMContentLoaded", () => {

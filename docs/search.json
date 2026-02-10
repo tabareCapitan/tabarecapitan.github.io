@@ -1550,5 +1550,47 @@
     "title": "Blog",
     "section": "",
     "text": "Title\n\n\n\nReading Time\n\n\n\nCategories\n\n\n\n\n\n\n\n\nMy first package in Python\n\n\n9 min\n\n\nsoftware\n\n\n\n\n\n\nConfidence intervals in randomisation inference\n\n\n8 min\n\n\nstatistics\n\n\n\n\n\n\nRandomisation inference in Stata, R, and Python\n\n\n5 min\n\n\nstatistics, software\n\n\n\n\n\n\nThe economics of the WNBA\n\n\n14 min\n\n\neconomics, basketball\n\n\n\n\n\n\nIntroducing ritest: randomisation inference in Python\n\n\n5 min\n\n\nstatistics, software\n\n\n\n\n\n\nOn inference\n\n\n10 min\n\n\nstatistics\n\n\n\n\n\n\nNo matching items\n\n\nSubscribe via RSS\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "CLAUDE.html",
+    "href": "CLAUDE.html",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.\nCreated 2026-02-10 from a working version.\n\n\nPersonal website for Tabaré Capitán (https://www.tabarecapitan.com/) built with Quarto. The site covers causal inference, experimentation, and data science projects.\n\n\n\nquarto render    # Build site to docs/ directory\nquarto preview   # Local development server with live reload\nOutput goes to docs/ for GitHub Pages deployment.\n\n\n\nContent Structure: - index.qmd - Home/about page - blog/ - Technical blog posts (numbered directories like 0001-inference/) - projects/ - Project documentation (ritest, mpa, insects) - papers/ - Academic publications - tools/ - Utility tools\nConfiguration: - _quarto.yml - Main site config (navbar, sidebar, themes) - styles.css - Custom CSS with light/dark theme variables - assets/ - Static images and theme toggle script\nKey Features: - Light/dark theme toggle (Flatly/Darkly themes) - Sidebar navigation for ritest project documentation - freeze: auto for caching long-running computations - RSS feed for blog posts\n\n\n\nAll content is in Quarto markdown (.qmd) files with YAML front matter. Blog posts use category tags and the blog listing automatically generates from blog/_metadata.yml.\n\n\n\nClaude should never attribute authorship to Claude in git commits. Just use a descriptive message."
+  },
+  {
+    "objectID": "CLAUDE.html#project-overview",
+    "href": "CLAUDE.html#project-overview",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "Personal website for Tabaré Capitán (https://www.tabarecapitan.com/) built with Quarto. The site covers causal inference, experimentation, and data science projects."
+  },
+  {
+    "objectID": "CLAUDE.html#build-commands",
+    "href": "CLAUDE.html#build-commands",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "quarto render    # Build site to docs/ directory\nquarto preview   # Local development server with live reload\nOutput goes to docs/ for GitHub Pages deployment."
+  },
+  {
+    "objectID": "CLAUDE.html#architecture",
+    "href": "CLAUDE.html#architecture",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "Content Structure: - index.qmd - Home/about page - blog/ - Technical blog posts (numbered directories like 0001-inference/) - projects/ - Project documentation (ritest, mpa, insects) - papers/ - Academic publications - tools/ - Utility tools\nConfiguration: - _quarto.yml - Main site config (navbar, sidebar, themes) - styles.css - Custom CSS with light/dark theme variables - assets/ - Static images and theme toggle script\nKey Features: - Light/dark theme toggle (Flatly/Darkly themes) - Sidebar navigation for ritest project documentation - freeze: auto for caching long-running computations - RSS feed for blog posts"
+  },
+  {
+    "objectID": "CLAUDE.html#content-format",
+    "href": "CLAUDE.html#content-format",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "All content is in Quarto markdown (.qmd) files with YAML front matter. Blog posts use category tags and the blog listing automatically generates from blog/_metadata.yml."
+  },
+  {
+    "objectID": "CLAUDE.html#version-control",
+    "href": "CLAUDE.html#version-control",
+    "title": "CLAUDE.md",
+    "section": "",
+    "text": "Claude should never attribute authorship to Claude in git commits. Just use a descriptive message."
   }
 ]

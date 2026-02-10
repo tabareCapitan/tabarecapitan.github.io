@@ -465,7 +465,7 @@ body:not(.quarto-dark) .callout.callout-style-simple {
 }
 
 /* =============== logo ==================== */
-/* navbar logo sizing */
+/* uncomment to re-enable sun/moon swap
 .navbar-brand img {
     height: 28px;
     width: auto;
@@ -480,7 +480,7 @@ body:not(.quarto-dark) .navbar-brand img {
     transform: scale(1);
 }
 
-/* tiny optical alignment tweak */
 .navbar-brand {
     gap: 0.4rem;
 }
+*/

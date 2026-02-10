@@ -19,7 +19,7 @@ website:
   reader-mode: false
   navbar:
     search: true
-    logo: assets/images/sun.png
+    # logo: assets/images/sun.png  # uncomment to re-enable sun/moon swap
 
     left:
       - href: index.qmd
